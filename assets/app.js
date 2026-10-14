@@ -14,7 +14,8 @@
   // Index: category filter, search, list/grid
   var rows = document.getElementById('rows');
   if (rows) {
-    var items = Array.prototype.slice.call(rows.children);
+    var items = Array.prototype.slice.call(rows.querySelectorAll('.row'));
+    var heads = Array.prototype.slice.call(rows.querySelectorAll('.chapter'));
     var q = document.getElementById('q');
     var showing = document.getElementById('showing');
     var empty = document.getElementById('empty');
@@ -24,11 +25,14 @@
     function apply() {
       var term = q.value.trim().toLowerCase();
       var shown = 0;
+      function inCat(li) { return !cat || li.dataset.cat === cat || li.dataset.parent === cat; }
       items.forEach(function (li) {
-        var ok = (!cat || li.dataset.cat === cat) && (!term || li.dataset.search.indexOf(term) !== -1);
+        var ok = inCat(li) && (!term || li.dataset.search.indexOf(term) !== -1);
         li.hidden = !ok;
         if (ok) shown++;
       });
+      // Chapter headings show while browsing, not while searching.
+      heads.forEach(function (li) { li.hidden = !!term || !inCat(li); });
       catButtons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.cat === cat)); });
       showing.textContent = 'Showing ' + shown + ' of ' + items.length;
       empty.hidden = shown !== 0;

@@ -316,3 +316,20 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
 .related h2 { margin-top: 0 !important; }
 .row-stats .tag { font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent-ink); border: 1px solid var(--hair-2); padding: 4px 6px; }
 .callout-icon { display: inline-block; width: 1.6em; }
+
+/* UX Methods: chapter headings in the list, nested sub-chapter in the sidebar */
+.rows .chapter { padding: 30px 0 12px; border-bottom: 1px solid var(--hair-2); }
+.rows .chapter:first-child { padding-top: 18px; }
+.rows .chapter[hidden] { display: none; }
+.chapter-name { margin: 0; font: 700 13px/1.3 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink); }
+.chapter-name .sep { color: var(--muted); margin: 0 4px; }
+.chapter-blurb { margin: 6px 0 0; font-size: 14px; color: var(--ink-soft); }
+.rows.grid .chapter { grid-column: 1 / -1; border: 0; padding: 18px 0 0; }
+.cats li.sub button { padding-left: 26px; font-size: 13px; }
+.cats li.sub button::before { content: "↳"; position: absolute; margin-left: -16px; color: var(--muted); }
+@media (max-width: 860px) {
+  .cats li.sub button { padding-left: 10px; }
+  .cats li.sub button::before { display: none; }
+}
+.row-stats span { white-space: nowrap; }
+.prose .h-icon { display: inline-block; margin-right: .4em; }

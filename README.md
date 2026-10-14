@@ -1,11 +1,12 @@
 # cornerstones
 It's notes for me to teach my stuents - UX LEarning resource for Barcelona Code School
 
-A static website in three sections, each with its own contents page:
+A static website in four sections, each with its own contents page:
 
 | Section | Contents page | Pages | Source in Notion |
 | --- | --- | --- | --- |
 | UX Lectures | `index.html` | `lectures/` | Cornerstones |
+| UX Methods (Discovery → Retrospective) | `methods.html` | `methods/` | Google Sprint + Team Sprint databases (one bank, briefs and duplicates removed) |
 | UI Lectures (Figma Guides, UI Theory) | `ui.html` | `ui/` | Bootcamp UI → UI Starter Pack, UI Theory |
 | Exercises (Replica Challenges, Daily UI) | `exercises.html` | `exercises/` | Bootcamp UI → everything else (except Daily UI: Template) |
 
@@ -13,7 +14,7 @@ A static website in three sections, each with its own contents page:
 
 - `assets/` – stylesheet and script
 - `content/<section>/<slug>/index.md` – page text and images; `content/<section>.json` – order, categories, sub-lessons
-- `tools/import_notion.py` – turns a Notion Markdown export into `content/` (UX categories and the UI/exercise split are set at the top)
+- `tools/import_notion.py` – turns a Notion Markdown export into `content/` (UX categories, the UI/exercise split and the UX Methods chapter list are set at the top)
 - `tools/build.py` – renders `content/` into the site (cross-links and hand-written summaries are set at the top)
 
 ## Updating
@@ -24,6 +25,7 @@ Edit `content/<section>/<slug>/index.md` (or re-export from Notion and re-import
 pip install markdown
 ditto -x -k export.zip export/                                  # only when re-importing; plain unzip breaks curly quotes
 python3 tools/import_notion.py "export/Private & Shared"        # Cornerstones or Bootcamp UI export
+python3 tools/import_notion.py "gs/Private & Shared" "ts/Private & Shared"   # UX Methods: both sprint exports together
 python3 tools/build.py
 ```
 

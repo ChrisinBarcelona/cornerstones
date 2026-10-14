@@ -1,12 +1,13 @@
 """Import a Notion "Markdown & CSV" export into content/.
 
 Usage:
-    python3 tools/import_notion.py "/path/to/unzipped/Private & Shared"
+    python3 tools/import_notion.py "/path/to/unzipped/Private & Shared" [more export dirs...]
 
-Recognises two exports and splits them into the site's three tracks:
+Recognises these exports and splits them into the site's tracks:
   - "Cornerstones"  -> ux         (UX lectures)
   - "Bootcamp UI"   -> ui         (UI Starter Pack + UI Theory lectures)
                     -> exercises  (Replica challenges + Daily UI briefs)
+  - "Google Sprint" + "Team Sprint" databases -> methods (UX Methods; pass both exports at once)
 
 Each track gets content/<track>/<slug>/index.md (+ optimised images) and
 content/<track>.json. Notion hash suffixes are stripped, internal links become
@@ -43,6 +44,34 @@ UX_CATEGORIES = {
 # Bootcamp UI: these hub pages become UI lecture categories; every other link is an exercise.
 UI_GROUPS = {"UI Starter Pack": "Figma Guides", "UI Theory": "UI Theory"}
 EXCLUDE = {"Daily UI: Template"}
+
+# UX Methods: one bank of methods drawn from the Google Sprint and Team Sprint databases, by chapter.
+# Briefs (Talk To Me, Sprint Brief) and sprint introductions are left out. Where both sprints have the same
+# method, the fuller Team Sprint version is used; these were dropped as duplicates:
+#   Google Sprint: Competitive Analysis, Hi-Fi, Paper Wireframes, User Persona, Sprint Retrospective,
+#                  Validate Problem Statement (= Problem Statement), Make A Map (= User Journey Map),
+#                  Validate (= Usability Test), Conduct Interviews (one line), User Stories (brief-specific)
+#   Team Sprint:   Mid-Fi (an unedited copy of Lo-Fi)
+METHOD_CHAPTERS = [
+    ("Discovery", [("Team Sprint", "Lean UX Canvas"), ("Google Sprint", "Long Term Goal"),
+                   ("Team Sprint", "Research Goal"), ("Team Sprint", "Research Questions"),
+                   ("Team Sprint", "User Survey"), ("Team Sprint", "User Interview"),
+                   ("Team Sprint", "Discovery Summary")]),
+    ("Define", [("Team Sprint", "Problem Statement"), ("Team Sprint", "User Persona"),
+                ("Team Sprint", "Competitive Analysis"), ("Google Sprint", "How Might We"),
+                ("Team Sprint", "Pick a Target"), ("Team Sprint", "User Journey Map")]),
+    ("Information Architecture", [("Team Sprint", "Task Flows")]),
+    ("Ideation", [("Google Sprint", "Crazy 8’s"), ("Google Sprint", "Crazy 8’s with AI"),
+                  ("Google Sprint", "Solution Sketch"), ("Google Sprint", "Converge / Diverge"),
+                  ("Google Sprint", "Vote"), ("Team Sprint", "Mood Board"), ("Team Sprint", "Style Guide"),
+                  ("Team Sprint", "Paper Wireframes"), ("Team Sprint", "Lo-Fi"), ("Team Sprint", "Hi-Fi")]),
+    ("Validation", [("Team Sprint", "Usability Test"), ("Google Sprint", "Create your Script"),
+                    ("Google Sprint", "Facilitator Format"), ("Google Sprint", "Limited Intervention Technique"),
+                    ("Google Sprint", "Notetaker Format"), ("Team Sprint", "Design Iteration")]),
+    ("Retrospective", [("Team Sprint", "Sprint Retrospective")]),
+]
+# Notion database properties written at the top of each page; not content.
+PROPERTY_RE = re.compile(r"\A\s*(?:(?:Activity Number|Created by|Day|Sprint Phase|Status|Parent item|Sub-item|Student[^:\n]*):[^\n]*\n\s*)+")
 
 
 def clean_title(text):
@@ -111,7 +140,12 @@ def fix_tables(text):
 
 def fix_bold(text):
     """Tidy Notion's bold artefacts: drop empty '****' and split a bold run that spans two paragraphs."""
-    paras = text.replace("****", "").split("\n\n")
+    text = text.replace("****", "")
+    # A heading whose bold run continues onto the next line ("## **5. Buttons\nExercise →**"): drop the markers.
+    text = re.sub(r"(?m)^(#+ )\*\*([^*\n]+)\n([^*\n]+)\*\*$", r"\1\2\n\n\3", text)
+    # "**bold.***" closing bold and italic together trips up Markdown; spell the bold out.
+    text = re.sub(r"(?<!\*)\*\*([^*\n]+)\*\*\*", r"<strong>\1</strong>*", text)
+    paras = text.split("\n\n")
     for i in range(len(paras) - 1):
         if paras[i].count("**") % 2 and paras[i + 1].count("**") % 2:
             paras[i] = paras[i].rstrip() + "**"
@@ -122,7 +156,7 @@ def fix_bold(text):
 def read_page(md_path):
     lines = md_path.read_text(encoding="utf-8").split("\n")
     title = clean_title(lines[0][2:]) if lines and lines[0].startswith("# ") else ""
-    return title, "\n".join(lines[1:]).strip("\n")
+    return title, PROPERTY_RE.sub("", "\n".join(lines[1:])).strip("\n")
 
 
 def links_in(md_path):
@@ -177,7 +211,7 @@ class Track:
                 return m.group(0)
             path = (base / unquote(target)).resolve()
             if not path.exists():
-                return m.group(0)
+                return clean_title(label) if target.endswith(".md") and not bang else m.group(0)
             if path.suffix == ".md":
                 # A link to another top-level item (or Notion's duplicate of one, like Mental Models/Data).
                 top = path if path in self.top_paths else self.top_by_slug.get(file_slug(path))
@@ -238,17 +272,43 @@ def import_bootcamp_ui(root_md):
     ex.save(["Replica Challenges", "Daily UI"])
 
 
-def main(export_dir):
-    export_dir = Path(export_dir)
+def import_methods(databases):
+    """databases: {"Google Sprint": folder, "Team Sprint": folder} of database page exports."""
+    pages = {}
+    for name, folder in databases.items():
+        for md in folder.glob("*.md"):
+            pages[(name, slugify(read_page(md)[0] or HASH_RE.sub("", md.stem)))] = md
+    methods = Track("methods", title_slugs=True)
+    methods.top_paths, methods.top_by_slug = set(), {}
+    for chapter, items in METHOD_CHAPTERS:
+        for db, title in items:
+            md = pages.get((db, slugify(title)))
+            if md is None:
+                sys.exit(f"UX Methods: '{title}' not found in the {db} export")
+            methods.add(md, chapter)
+    methods.save([c for c, _ in METHOD_CHAPTERS])
+
+
+def main(export_dirs):
     CONTENT.mkdir(exist_ok=True)
     found = False
-    for pattern, fn in (("Cornerstones *.md", import_cornerstones), ("Bootcamp UI *.md", import_bootcamp_ui)):
-        for root_md in export_dir.glob(pattern):
-            fn(root_md)
-            found = True
+    databases = {}
+    for export_dir in map(Path, export_dirs):
+        for pattern, fn in (("Cornerstones *.md", import_cornerstones), ("Bootcamp UI *.md", import_bootcamp_ui)):
+            for root_md in export_dir.glob(pattern):
+                fn(root_md)
+                found = True
+        for name in ("Google Sprint", "Team Sprint"):
+            if (export_dir / name).is_dir():
+                databases[name] = export_dir / name
+    if databases:
+        if len(databases) < 2:
+            sys.exit("UX Methods needs both the Google Sprint and Team Sprint exports in one run")
+        import_methods(databases)
+        found = True
     if not found:
-        sys.exit(f"No Cornerstones or Bootcamp UI page found in {export_dir}")
+        sys.exit(f"No Cornerstones, Bootcamp UI or sprint database export found in {export_dirs}")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1:])

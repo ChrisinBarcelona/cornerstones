@@ -1,0 +1,261 @@
+{
+  "categories": [
+    "Discovery",
+    "Define",
+    "Information Architecture",
+    "Ideation",
+    "Validation",
+    "Retrospective"
+  ],
+  "lectures": [
+    {
+      "slug": "lean-ux-canvas",
+      "title": "Lean UX Canvas",
+      "parent": null,
+      "children": [],
+      "number": 1,
+      "category": "Discovery"
+    },
+    {
+      "slug": "long-term-goal",
+      "title": "Long Term Goal",
+      "parent": null,
+      "children": [],
+      "number": 2,
+      "category": "Discovery"
+    },
+    {
+      "slug": "research-goal",
+      "title": "Research Goal",
+      "parent": null,
+      "children": [],
+      "number": 3,
+      "category": "Discovery"
+    },
+    {
+      "slug": "research-questions",
+      "title": "Research Questions",
+      "parent": null,
+      "children": [],
+      "number": 4,
+      "category": "Discovery"
+    },
+    {
+      "slug": "user-survey",
+      "title": "User Survey",
+      "parent": null,
+      "children": [],
+      "number": 5,
+      "category": "Discovery"
+    },
+    {
+      "slug": "user-interview",
+      "title": "User Interview",
+      "parent": null,
+      "children": [],
+      "number": 6,
+      "category": "Discovery"
+    },
+    {
+      "slug": "discovery-summary",
+      "title": "Discovery Summary",
+      "parent": null,
+      "children": [],
+      "number": 7,
+      "category": "Discovery"
+    },
+    {
+      "slug": "problem-statement",
+      "title": "Problem Statement",
+      "parent": null,
+      "children": [],
+      "number": 8,
+      "category": "Define"
+    },
+    {
+      "slug": "user-persona",
+      "title": "User Persona",
+      "parent": null,
+      "children": [],
+      "number": 9,
+      "category": "Define"
+    },
+    {
+      "slug": "competitive-analysis",
+      "title": "Competitive Analysis",
+      "parent": null,
+      "children": [],
+      "number": 10,
+      "category": "Define"
+    },
+    {
+      "slug": "how-might-we",
+      "title": "How Might We",
+      "parent": null,
+      "children": [],
+      "number": 11,
+      "category": "Define"
+    },
+    {
+      "slug": "pick-a-target",
+      "title": "Pick a Target",
+      "parent": null,
+      "children": [],
+      "number": 12,
+      "category": "Define"
+    },
+    {
+      "slug": "user-journey-map",
+      "title": "User Journey Map",
+      "parent": null,
+      "children": [],
+      "number": 13,
+      "category": "Define"
+    },
+    {
+      "slug": "task-flows",
+      "title": "Task Flows",
+      "parent": null,
+      "children": [],
+      "number": 14,
+      "category": "Information Architecture"
+    },
+    {
+      "slug": "crazy-8s",
+      "title": "Crazy 8’s",
+      "parent": null,
+      "children": [],
+      "number": 15,
+      "category": "Ideation"
+    },
+    {
+      "slug": "crazy-8s-with-ai",
+      "title": "Crazy 8’s with AI",
+      "parent": null,
+      "children": [],
+      "number": 16,
+      "category": "Ideation"
+    },
+    {
+      "slug": "solution-sketch",
+      "title": "Solution Sketch",
+      "parent": null,
+      "children": [],
+      "number": 17,
+      "category": "Ideation"
+    },
+    {
+      "slug": "converge-diverge",
+      "title": "Converge / Diverge",
+      "parent": null,
+      "children": [],
+      "number": 18,
+      "category": "Ideation"
+    },
+    {
+      "slug": "vote",
+      "title": "Vote",
+      "parent": null,
+      "children": [],
+      "number": 19,
+      "category": "Ideation"
+    },
+    {
+      "slug": "mood-board",
+      "title": "Mood Board",
+      "parent": null,
+      "children": [],
+      "number": 20,
+      "category": "Ideation"
+    },
+    {
+      "slug": "style-guide",
+      "title": "Style Guide",
+      "parent": null,
+      "children": [],
+      "number": 21,
+      "category": "Ideation"
+    },
+    {
+      "slug": "paper-wireframes",
+      "title": "Paper Wireframes",
+      "parent": null,
+      "children": [],
+      "number": 22,
+      "category": "Ideation"
+    },
+    {
+      "slug": "lo-fi",
+      "title": "Lo-Fi",
+      "parent": null,
+      "children": [],
+      "number": 23,
+      "category": "Ideation"
+    },
+    {
+      "slug": "hi-fi",
+      "title": "Hi-Fi",
+      "parent": null,
+      "children": [],
+      "number": 24,
+      "category": "Ideation"
+    },
+    {
+      "slug": "usability-test",
+      "title": "Usability Test",
+      "parent": null,
+      "children": [],
+      "number": 25,
+      "category": "Validation"
+    },
+    {
+      "slug": "create-your-script",
+      "title": "Create your Script",
+      "parent": null,
+      "children": [],
+      "number": 26,
+      "category": "Validation"
+    },
+    {
+      "slug": "facilitator-format",
+      "title": "Facilitator Format",
+      "parent": null,
+      "children": [],
+      "number": 27,
+      "category": "Validation"
+    },
+    {
+      "slug": "limited-intervention-technique",
+      "title": "Limited Intervention Technique",
+      "parent": null,
+      "children": [],
+      "number": 28,
+      "category": "Validation"
+    },
+    {
+      "slug": "notetaker-format",
+      "title": "Notetaker Format",
+      "parent": null,
+      "children": [],
+      "number": 29,
+      "category": "Validation"
+    },
+    {
+      "slug": "design-iteration",
+      "title": "Design Iteration",
+      "parent": null,
+      "children": [],
+      "number": 30,
+      "category": "Validation"
+    },
+    {
+      "slug": "sprint-retrospective",
+      "title": "Sprint Retrospective",
+      "parent": null,
+      "children": [],
+      "number": 31,
+      "category": "Retrospective"
+    }
+  ],
+  "subpages": []
+}

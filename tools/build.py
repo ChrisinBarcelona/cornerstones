@@ -25,6 +25,18 @@ TRACKS = [
     {"id": "ux", "out": "lectures", "index": "index.html", "label": "UX Lectures", "noun": "Lecture",
      "eyebrow": "UX Learning Resource", "h1": "Cornerstones of UX Design, in order",
      "intro": "{n} lectures and {s} sub-lessons on the history, psychology and practice of user experience design. Pick any lecture to open the full notes."},
+    {"id": "methods", "out": "methods", "index": "methods.html", "label": "UX Methods", "noun": "Method",
+     "eyebrow": "Sprint Toolkit", "h1": "UX methods for any moment in a sprint",
+     "intro": "{n} methods you can reach for whenever a sprint needs them, grouped into the chapters of the design process: from discovery research through to the retrospective. Each one says what it's for, how to run it and roughly how long it takes.",
+     "chapters": {
+         "Discovery": "Generative research: find out what the problem really is, and who has it.",
+         "Define": "Turn research into a clear problem, a target user and a direction.",
+         "Information Architecture": "Part of Define: structure the steps users take to reach their goal.",
+         "Ideation": "Diverge on many ideas, decide on one, then design it from paper to high fidelity.",
+         "Validation": "Test the prototype with real users and iterate on what you learn.",
+         "Retrospective": "Reflect on the sprint and capture the lessons for your case study.",
+     },
+     "parent": {"Information Architecture": "Define"}},
     {"id": "ui", "out": "ui", "index": "ui.html", "label": "UI Lectures", "noun": "Lecture",
      "eyebrow": "UI Learning Resource", "h1": "UI Design, from Figma basics to theory",
      "intro": "{n} lectures on building interfaces. Figma Guides are hands-on, step-by-step tutorials to follow in order; UI Theory covers the concepts behind colour, type, spacing and systems. New to UI? Read <a href=\"lectures/what-is-ui-design.html\">What is UI Design</a> in the UX track first."},
@@ -55,6 +67,22 @@ RELATED = [
     ("exercises/youtube-challenge", "ui/beginners-guide-to-components"),
     ("exercises/ux-x-ai", "exercises/make-an-ai-interface"),
     ("exercises/glovo-replica-challenge", "exercises/youtube-challenge"),
+    ("methods/limited-intervention-technique", "ux/non-directive-interview-technique"),
+    ("methods/user-interview", "ux/non-directive-interview-technique"),
+    ("methods/facilitator-format", "ux/interviewer-format"),
+    ("methods/notetaker-format", "ux/interview-taking-notes"),
+    ("methods/pick-a-target", "ux/target-mvp"),
+    ("methods/paper-wireframes", "ui/paper-wireframes"),
+    ("methods/style-guide", "ui/style-guides"),
+    ("methods/style-guide", "ui/dynamic-buttons-part-one"),
+    ("methods/lo-fi", "ux/stages-of-wireframes"),
+    ("methods/hi-fi", "ux/stages-of-wireframes"),
+    ("methods/research-goal", "methods/research-questions"),
+    ("methods/crazy-8s", "methods/crazy-8s-with-ai"),
+    ("methods/mood-board", "methods/style-guide"),
+    ("methods/user-journey-map", "methods/task-flows"),
+    ("methods/usability-test", "methods/design-iteration"),
+    ("methods/usability-test", "methods/facilitator-format"),
 ]
 
 # Hand-written summaries where a page's first paragraph doesn't describe it well.
@@ -188,7 +216,10 @@ def render_markdown(track, slug, text, titles):
     body = re.sub(r"(<hr\s*/?>\s*){2,}", "<hr>\n", body)
     body = re.sub(r"(<hr\s*/?>\s*)+$", "", body.strip())
     body = re.sub(r"<p>\s*(\*\*\*\*)?\s*</p>", "", body)
-    toc = [(lvl, hid, plain(txt)) for lvl, hid, txt in H_RE.findall(body) if plain(txt)]
+    # Notion section headings start with an emoji ("🪜 Stage"); give it room, and leave it out of the contents list.
+    body = re.sub(r'(<h[23] id="[^"]+">)([^\w<\s(]+)\s*', r'\1<span class="h-icon">\2</span>', body)
+    toc = [(lvl, hid, re.sub(r"^[^\w(]+", "", plain(txt))) for lvl, hid, txt in H_RE.findall(body)]
+    toc = [x for x in toc if x[2]]
     return body, toc
 
 
@@ -223,6 +254,13 @@ def load():
             p["images"] = len(re.findall(r"!\[", text))
             stars = DIFFICULTY_RE.search(text)
             p["difficulty"] = stars.group(1).count("⭐") if stars else 0
+            # "Estimated Duration" / "Duration" section: first line after the heading, e.g. "30–40 minutes".
+            dur = re.search(r"^#+ .*Duration\**\s*\n+\s*(?:-\s*)?([^\n]+)", text, re.M)
+            p["duration"] = re.sub(r"\s*\(.*$", "", dur.group(1)).strip(" ~*") if dur else ""
+            p["duration"] = re.sub(r"\s*(?:minutes?|mins?)\b\.?", " min", p["duration"], flags=re.I)
+            p["duration"] = re.sub(r"\s*hours?\b", " hr", p["duration"], flags=re.I)
+            if dur and ":" in dur.group(1):  # broken into stages ("Preparation: 30 min, Each test: …") – see the page
+                p["duration"] = "In stages"
             p["text"] = text
         for p in every:
             if p["description"]:
@@ -285,6 +323,8 @@ def build_track(t, data):
             meta.append(f'Difficulty {meter(p["difficulty"])}')
         elif t["id"] == "exercises":
             meta.append("Multi-session project")
+        if p.get("duration"):
+            meta.append(f'Takes {esc(p["duration"].lower() if p["duration"] == "In stages" else p["duration"])}')
         meta.append(f'{ICON_CLOCK}{p["minutes"]} min read')
         if p["images"]:
             meta.append(f'{ICON_IMG}{p["images"]} image{"s" if p["images"] != 1 else ""}')
@@ -350,25 +390,38 @@ def build_track(t, data):
     # Contents page for the track
     cats = d["categories"]
     counts = {c: sum(1 for l in lectures if l["category"] == c) for c in cats}
+    parent_of = t.get("parent", {})
+    chapters = t.get("chapters", {})
+    for c, parent in parent_of.items():
+        counts[parent] += counts[c]
     cat_links = "".join(
-        f'<li><button type="button" data-cat="{esc(c)}"><span>{esc(c)}</span><span class="count">{counts[c]}</span></button></li>'
+        f'<li{" class=sub" if c in parent_of else ""}><button type="button" data-cat="{esc(c)}"><span>{esc(c)}</span><span class="count">{counts[c]}</span></button></li>'
         for c in cats)
     is_ex = t["id"] == "exercises"
     rows = []
     for l in lectures:
+        cat = l["category"]
+        parent_attr = f' data-parent="{esc(parent_of[cat])}"' if cat in parent_of else ""
+        if chapters and (not rows or l is next(x for x in lectures if x["category"] == cat)):
+            name = f'{esc(parent_of[cat])} <span class="sep">›</span> {esc(cat)}' if cat in parent_of else esc(cat)
+            rows.append(f'<li class="chapter" data-cat="{esc(cat)}"{parent_attr}><h2 class="chapter-name">{name}</h2>'
+                        f'<p class="chapter-blurb">{esc(chapters.get(cat, ""))}</p></li>')
         subs = ""
         if l["children"]:
             subs = '<div class="row-subs">' + "".join(
                 f'<a href="{t["out"]}/{s}.html">{esc(short(by_slug[s]["title"]))}</a>' for s in l["children"]) + "</div>"
         search = " ".join([l["title"], l["category"], l["description"]] + [by_slug[s]["title"] for s in l["children"]]).lower()
-        if is_ex:
+        if chapters:
+            stats = (f'<span>{ICON_CLOCK}{esc(l["duration"])}</span>' if l["duration"]
+                     else f'<span class="muted">{l["minutes"]}m read</span>')
+        elif is_ex:
             level = meter(l["difficulty"]) if l["difficulty"] else '<span class="tag">Project</span>'
             stats = f'<span>{level}</span><span>{ICON_CLOCK}{l["minutes"]}m read</span>'
         else:
             stats = f'<span>{ICON_CLOCK}{l["minutes"]}m</span>'
             if l["images"]:
                 stats += f'<span>{ICON_IMG}{l["images"]}</span>'
-        rows.append(f"""<li class="row" data-cat="{esc(l['category'])}" data-search="{esc(search)}">
+        rows.append(f"""<li class="row" data-cat="{esc(l['category'])}"{parent_attr} data-search="{esc(search)}">
   <span class="row-num">{l['number']}</span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="{t['out']}/{l['slug']}.html">{esc(l['title'])}</a>{f'<span class="pill">{len(l["children"])} parts</span>' if l["children"] else ''}</div>
@@ -422,7 +475,7 @@ def build_track(t, data):
             <button type="button" data-view="grid" aria-pressed="false" aria-label="Grid view"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg></button>
           </div>
         </div>
-        <div class="list-head mono"><span>#</span><span>{t['noun']}</span><span class="right">{'Difficulty' if is_ex else 'Length'}</span></div>
+        <div class="list-head mono"><span>#</span><span>{t['noun']}</span><span class="right">{'Difficulty' if is_ex else 'Time' if chapters else 'Length'}</span></div>
         <ol class="rows" id="rows">
 {''.join(rows)}
         </ol>
