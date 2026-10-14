@@ -1,0 +1,438 @@
+{
+  "categories": [
+    "Foundations",
+    "Psychology",
+    "Process",
+    "Interface",
+    "Case Studies",
+    "Research",
+    "Career"
+  ],
+  "lectures": [
+    {
+      "slug": "design-origins",
+      "title": "Design Origins",
+      "parent": null,
+      "children": [],
+      "number": 1,
+      "category": "Foundations"
+    },
+    {
+      "slug": "starting-point",
+      "title": "Starting Point",
+      "parent": null,
+      "children": [],
+      "number": 2,
+      "category": "Foundations"
+    },
+    {
+      "slug": "what-is-ux-design",
+      "title": "What is UX Design",
+      "parent": null,
+      "children": [],
+      "number": 3,
+      "category": "Foundations"
+    },
+    {
+      "slug": "the-father-of-ux",
+      "title": "The Father of UX",
+      "parent": null,
+      "children": [],
+      "number": 4,
+      "category": "Foundations"
+    },
+    {
+      "slug": "the-bias-of-beauty",
+      "title": "The Bias of Beauty",
+      "parent": null,
+      "children": [],
+      "number": 5,
+      "category": "Psychology"
+    },
+    {
+      "slug": "bias",
+      "title": "Bias",
+      "parent": null,
+      "children": [
+        "01-bias-authority-bias",
+        "01-bias-optimism-bias",
+        "02-bias-availability-bias",
+        "03-bias-anchoring-bias",
+        "04-bias-bandwagon-effect",
+        "05-bias-barnum-effect",
+        "06-bias-false-consensus-effect",
+        "07-bias-framing-effect",
+        "08-bias-overconfidence-bias",
+        "09-bias-scarcity-effect",
+        "10-bias-survivorship-bias"
+      ],
+      "number": 6,
+      "category": "Psychology"
+    },
+    {
+      "slug": "mental-models",
+      "title": "Mental Models",
+      "parent": null,
+      "children": [],
+      "number": 7,
+      "category": "Psychology"
+    },
+    {
+      "slug": "data",
+      "title": "Data",
+      "parent": null,
+      "children": [],
+      "number": 8,
+      "category": "Process"
+    },
+    {
+      "slug": "what-is-design-thinking",
+      "title": "What is Design Thinking",
+      "parent": null,
+      "children": [],
+      "number": 9,
+      "category": "Process"
+    },
+    {
+      "slug": "laws-of-ux",
+      "title": "Laws of UX",
+      "parent": null,
+      "children": [],
+      "number": 10,
+      "category": "Psychology"
+    },
+    {
+      "slug": "design-psychology",
+      "title": "Design Psychology",
+      "parent": null,
+      "children": [],
+      "number": 11,
+      "category": "Psychology"
+    },
+    {
+      "slug": "bad-user-experience",
+      "title": "Bad User Experience",
+      "parent": null,
+      "children": [],
+      "number": 12,
+      "category": "Case Studies"
+    },
+    {
+      "slug": "a-case-of-genius",
+      "title": "A Case of Genius",
+      "parent": null,
+      "children": [],
+      "number": 13,
+      "category": "Case Studies"
+    },
+    {
+      "slug": "what-is-ui-design",
+      "title": "What is UI Design",
+      "parent": null,
+      "children": [
+        "icons",
+        "colors",
+        "typography",
+        "grid",
+        "design-systems"
+      ],
+      "number": 14,
+      "category": "Interface"
+    },
+    {
+      "slug": "the-death-of-kodak",
+      "title": "The Death of Kodak",
+      "parent": null,
+      "children": [],
+      "number": 15,
+      "category": "Case Studies"
+    },
+    {
+      "slug": "wicked-problem",
+      "title": "Wicked Problem",
+      "parent": null,
+      "children": [],
+      "number": 16,
+      "category": "Process"
+    },
+    {
+      "slug": "stages-of-wireframes",
+      "title": "Stages of Wireframes",
+      "parent": null,
+      "children": [],
+      "number": 17,
+      "category": "Process"
+    },
+    {
+      "slug": "target-mvp",
+      "title": "Target MVP",
+      "parent": null,
+      "children": [],
+      "number": 18,
+      "category": "Process"
+    },
+    {
+      "slug": "key-figures",
+      "title": "Key Figures",
+      "parent": null,
+      "children": [
+        "key-figures-daniel-kahneman",
+        "key-figures-max-wertheimer",
+        "key-figures-don-norman",
+        "key-figures-shigeru-miyamoto",
+        "key-figures-taiichi-ohno",
+        "key-figures-frederick-winslow-taylor",
+        "key-figures-jakob-neilson",
+        "key-figures-tim-brown",
+        "key-figures-jony-ive",
+        "key-figures-henry-ford",
+        "key-figures-walt-disney",
+        "key-figures-walt-disney-1"
+      ],
+      "number": 19,
+      "category": "Foundations"
+    },
+    {
+      "slug": "key-roles",
+      "title": "Key Roles",
+      "parent": null,
+      "children": [],
+      "number": 20,
+      "category": "Foundations"
+    },
+    {
+      "slug": "neilson-heuristics",
+      "title": "Neilson Heuristics",
+      "parent": null,
+      "children": [],
+      "number": 21,
+      "category": "Psychology"
+    },
+    {
+      "slug": "gestures",
+      "title": "Gestures",
+      "parent": null,
+      "children": [],
+      "number": 22,
+      "category": "Interface"
+    },
+    {
+      "slug": "haptics",
+      "title": "Haptics",
+      "parent": null,
+      "children": [],
+      "number": 23,
+      "category": "Interface"
+    },
+    {
+      "slug": "non-directive-interview-technique",
+      "title": "Non-Directive Interview Technique",
+      "parent": null,
+      "children": [],
+      "number": 24,
+      "category": "Research"
+    },
+    {
+      "slug": "interviewer-format",
+      "title": "Interviewer Format",
+      "parent": null,
+      "children": [],
+      "number": 25,
+      "category": "Research"
+    },
+    {
+      "slug": "interview-taking-notes",
+      "title": "Interview Taking Notes",
+      "parent": null,
+      "children": [],
+      "number": 26,
+      "category": "Research"
+    },
+    {
+      "slug": "portfolio",
+      "title": "Portfolio",
+      "parent": null,
+      "children": [],
+      "number": 27,
+      "category": "Career"
+    },
+    {
+      "slug": "scripts",
+      "title": "Scripts",
+      "parent": null,
+      "children": [],
+      "number": 28,
+      "category": "Career"
+    }
+  ],
+  "subpages": [
+    {
+      "slug": "01-bias-authority-bias",
+      "title": "01. Bias: Authority Bias",
+      "parent": "bias",
+      "children": []
+    },
+    {
+      "slug": "01-bias-optimism-bias",
+      "title": "01. Bias: Optimism Bias",
+      "parent": "bias",
+      "children": []
+    },
+    {
+      "slug": "02-bias-availability-bias",
+      "title": "02. Bias: Availability Bias",
+      "parent": "bias",
+      "children": []
+    },
+    {
+      "slug": "03-bias-anchoring-bias",
+      "title": "03. Bias: Anchoring Bias",
+      "parent": "bias",
+      "children": []
+    },
+    {
+      "slug": "04-bias-bandwagon-effect",
+      "title": "04. Bias: Bandwagon Effect",
+      "parent": "bias",
+      "children": []
+    },
+    {
+      "slug": "05-bias-barnum-effect",
+      "title": "05. Bias: Barnum Effect",
+      "parent": "bias",
+      "children": []
+    },
+    {
+      "slug": "06-bias-false-consensus-effect",
+      "title": "06. Bias: False Consensus Effect",
+      "parent": "bias",
+      "children": []
+    },
+    {
+      "slug": "07-bias-framing-effect",
+      "title": "07. Bias: Framing Effect",
+      "parent": "bias",
+      "children": []
+    },
+    {
+      "slug": "08-bias-overconfidence-bias",
+      "title": "08. Bias: Overconfidence Bias",
+      "parent": "bias",
+      "children": []
+    },
+    {
+      "slug": "09-bias-scarcity-effect",
+      "title": "09. Bias: Scarcity Effect",
+      "parent": "bias",
+      "children": []
+    },
+    {
+      "slug": "10-bias-survivorship-bias",
+      "title": "10. Bias: Survivorship Bias",
+      "parent": "bias",
+      "children": []
+    },
+    {
+      "slug": "icons",
+      "title": "Icons",
+      "parent": "what-is-ui-design",
+      "children": []
+    },
+    {
+      "slug": "colors",
+      "title": "Colors",
+      "parent": "what-is-ui-design",
+      "children": []
+    },
+    {
+      "slug": "typography",
+      "title": "Typography",
+      "parent": "what-is-ui-design",
+      "children": []
+    },
+    {
+      "slug": "grid",
+      "title": "Grid",
+      "parent": "what-is-ui-design",
+      "children": []
+    },
+    {
+      "slug": "design-systems",
+      "title": "Design Systems",
+      "parent": "what-is-ui-design",
+      "children": []
+    },
+    {
+      "slug": "key-figures-daniel-kahneman",
+      "title": "Key Figures: Daniel Kahneman",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-max-wertheimer",
+      "title": "Key Figures: Max Wertheimer",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-don-norman",
+      "title": "Key Figures: Don Norman",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-shigeru-miyamoto",
+      "title": "Key Figures: Shigeru Miyamoto",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-taiichi-ohno",
+      "title": "Key Figures: Taiichi Ohno",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-frederick-winslow-taylor",
+      "title": "Key Figures: Frederick Winslow Taylor",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-jakob-neilson",
+      "title": "Key Figures: Jakob Neilson",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-tim-brown",
+      "title": "Key Figures: Tim Brown",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-jony-ive",
+      "title": "Key Figures: Jony Ive",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-henry-ford",
+      "title": "Key Figures: Henry Ford",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-walt-disney",
+      "title": "Key Figures: Walt Disney",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-walt-disney-1",
+      "title": "Key Figures: Walt Disney (1)",
+      "parent": "key-figures",
+      "children": []
+    }
+  ]
+}
