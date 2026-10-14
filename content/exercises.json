@@ -1,0 +1,137 @@
+{
+  "categories": [
+    "Replica Challenges",
+    "Daily UI"
+  ],
+  "lectures": [
+    {
+      "slug": "glovo-replica-challenge",
+      "title": "Glovo Replica Challenge",
+      "parent": null,
+      "children": [],
+      "number": 1,
+      "category": "Replica Challenges"
+    },
+    {
+      "slug": "youtube-challenge",
+      "title": "YouTube Challenge",
+      "parent": null,
+      "children": [],
+      "number": 2,
+      "category": "Replica Challenges"
+    },
+    {
+      "slug": "ux-x-ai",
+      "title": "UX x AI",
+      "parent": null,
+      "children": [],
+      "number": 3,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "sidebar",
+      "title": "Sidebar",
+      "parent": null,
+      "children": [],
+      "number": 4,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "friends-list",
+      "title": "Friends List",
+      "parent": null,
+      "children": [],
+      "number": 5,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "new-notification",
+      "title": "New Notification",
+      "parent": null,
+      "children": [],
+      "number": 6,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "bottom-sheet",
+      "title": "Bottom Sheet",
+      "parent": null,
+      "children": [],
+      "number": 7,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "sign-in",
+      "title": "Sign In",
+      "parent": null,
+      "children": [],
+      "number": 8,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "cc-checkout",
+      "title": "CC Checkout",
+      "parent": null,
+      "children": [],
+      "number": 9,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "video-player",
+      "title": "Video Player",
+      "parent": null,
+      "children": [],
+      "number": 10,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "choose-a-movie",
+      "title": "Choose A Movie",
+      "parent": null,
+      "children": [],
+      "number": 11,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "music-player",
+      "title": "Music Player",
+      "parent": null,
+      "children": [],
+      "number": 12,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "home-monitor-dash",
+      "title": "Home Monitor Dash",
+      "parent": null,
+      "children": [],
+      "number": 13,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "user-profile-page",
+      "title": "User Profile Page",
+      "parent": null,
+      "children": [],
+      "number": 14,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "make-an-ai-interface",
+      "title": "Make an AI Interface",
+      "parent": null,
+      "children": [],
+      "number": 15,
+      "category": "Daily UI"
+    },
+    {
+      "slug": "product-card",
+      "title": "Product Card",
+      "parent": null,
+      "children": [],
+      "number": 16,
+      "category": "Daily UI"
+    }
+  ],
+  "subpages": []
+}

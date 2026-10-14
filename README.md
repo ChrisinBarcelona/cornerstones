@@ -1,23 +1,29 @@
 # cornerstones
 It's notes for me to teach my stuents - UX LEarning resource for Barcelona Code School
 
-A static website: `index.html` lists every lecture, and each lecture opens at `lectures/<slug>.html`.
+A static website in three sections, each with its own contents page:
+
+| Section | Contents page | Pages | Source in Notion |
+| --- | --- | --- | --- |
+| UX Lectures | `index.html` | `lectures/` | Cornerstones |
+| UI Lectures (Figma Guides, UI Theory) | `ui.html` | `ui/` | Bootcamp UI → UI Starter Pack, UI Theory |
+| Exercises (Replica Challenges, Daily UI) | `exercises.html` | `exercises/` | Bootcamp UI → everything else (except Daily UI: Template) |
 
 ## Layout
 
-- `index.html`, `lectures/` – the generated site (open `index.html` or serve the folder)
 - `assets/` – stylesheet and script
-- `content/` – lecture source: one folder per page with `index.md` and its images, plus `lectures.json` (order, categories, sub-lessons)
-- `tools/import_notion.py` – turns a Notion Markdown export into `content/`
-- `tools/build.py` – renders `content/` into the site
+- `content/<section>/<slug>/index.md` – page text and images; `content/<section>.json` – order, categories, sub-lessons
+- `tools/import_notion.py` – turns a Notion Markdown export into `content/` (UX categories and the UI/exercise split are set at the top)
+- `tools/build.py` – renders `content/` into the site (cross-links and hand-written summaries are set at the top)
 
 ## Updating
 
-Edit `content/<slug>/index.md` (or re-export from Notion and re-import), then rebuild:
+Edit `content/<section>/<slug>/index.md` (or re-export from Notion and re-import), then rebuild:
 
 ```bash
 pip install markdown
-python3 tools/import_notion.py "/path/to/unzipped/Private & Shared"   # only when re-importing from Notion
+ditto -x -k export.zip export/                                  # only when re-importing; plain unzip breaks curly quotes
+python3 tools/import_notion.py "export/Private & Shared"        # Cornerstones or Bootcamp UI export
 python3 tools/build.py
 ```
 
@@ -25,4 +31,4 @@ Preview locally with `python3 -m http.server` and open http://localhost:8000.
 
 ## Publishing
 
-Settings → Pages → Deploy from branch `main`, folder `/ (root)`.
+GitHub Pages deploys `main` from the repository root: https://chrisinbarcelona.github.io/cornerstones/

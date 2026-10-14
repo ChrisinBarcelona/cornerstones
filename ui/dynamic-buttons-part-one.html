@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dynamic Buttons Part One · Cornerstones</title>
+<meta name="description" content="Build a reusable button component in Figma with text properties, appearance booleans and swaps.">
+<script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">C</span>
+      <span class="brand-text"><span class="brand-name">CORNERSTONES</span><span class="brand-sub">UX &amp; UI at Barcelona Code School</span></span>
+    </a>
+    <nav class="nav-links"><a href="../index.html">UX Lectures</a><a href="../ui.html" aria-current=page>UI Lectures</a><a href="../exercises.html">Exercises</a><a href="https://github.com/ChrisinBarcelona/cornerstones">GitHub</a></nav>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+  </div>
+</header>
+
+<main class="lecture track-ui">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../ui.html">UI Lectures</a> <span class="sep">/</span> <a href="../ui.html#category=Figma Guides">Figma Guides</a> <span class="sep">/</span> <span>Dynamic Buttons Part One</span></nav>
+    <header class="lecture-head">
+      <div class="eyebrow">Lecture 08 · Figma Guides</div>
+      <h1>Dynamic Buttons Part One</h1>
+      <p class="lede">Build a reusable button component in Figma with text properties, appearance booleans and swaps.</p>
+      <div class="meta"><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 min read</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>29 images</span></div>
+    </header>
+    <div class="lecture-grid">
+      <aside class="rail"><div class="rail-sticky"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl3"><a href="#intro">Intro:</a></li><li class="lvl3"><a href="#apply-text-property">Apply Text Property</a></li><li class="lvl3"><a href="#appearance-booleans">Appearance Booleans</a></li><li class="lvl3"><a href="#swaps">Swaps</a></li><li class="lvl2"><a href="#all-done">All Done!</a></li></ol></div><div class="rail-block"><div class="rail-label">Figma Guides</div><ol class="toc family"><li><a href="choose-your-frame.html">Choose your Frame</a></li><li><a href="starting-in-figma.html">Starting in Figma</a></li><li><a href="beginners-guide-to-grids.html">Beginner’s Guide to Grids</a></li><li><a href="beginners-guide-to-nesting.html">Beginner’s Guide to Nesting</a></li><li><a href="beginners-guide-auto-layout.html">Beginner’s Guide Auto Layout</a></li><li><a href="beginners-guide-to-8-point-grid-system.html">Beginner’s Guide to 8 Point Grid System</a></li><li><a href="beginners-guide-to-components.html">Beginner’s Guide to Components</a></li><li><a href="dynamic-buttons-part-one.html" aria-current=page>Dynamic Buttons Part One</a></li></ol></div></div></aside>
+      <article class="prose">
+<h3 id="intro">Intro:</h3>
+<p>This is an easy lesson but <strong>the first thing</strong> is that it requires understanding three key principals.</p>
+<ul>
+<li><strong>Text Property</strong></li>
+<li><strong>Appearance Booleans</strong></li>
+<li><strong>Swaps</strong></li>
+</ul>
+<p><strong>The second thing</strong> you have to understand is that the parent component and the child component are very different. The rule is that the parent is where you load in the properties and the child is what you use.</p>
+<p>On the right hand panel of Figma you will see two very different CSM’s: for all parents and children</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Parent.jpg" loading="lazy" decoding="async"></figure>
+<p>This is the parent</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Child.jpg" loading="lazy" decoding="async"></figure>
+<p>The is the child</p>
+<p>That being said, let’s get into it.</p>
+<ol>
+<li>
+<p>Use the text element and write out the word ‘Button’</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_15.59.33.png" loading="lazy" decoding="async"></figure>
+<p>Screenshot 2026-01-06 at 15.59.33.png</p>
+</li>
+<li>
+<p>Press <code>Shift + A</code> to wrap an auto layout frame around the text. Change the title to Button</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_15.59.55.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Add a stroke to the button</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.01.59.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Open the actions panel from the bottom of Figma and run <strong>Phosphors Icons</strong></p>
+</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.02.47.png" loading="lazy" decoding="async"></figure>
+<p>Screenshot 2026-01-06 at 16.02.47.png</p>
+<ol>
+<li>Import <strong>8 Icons</strong>
+- House
+- User Circle
+- Gear
+- PlusCircle
+- ArrowCircleUp
+- ArrowCircleDown
+- ArrowCircleRight
+- ArrowCircleLeft</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.05.25.png" loading="lazy" decoding="async"></figure>
+<ol>
+<li>
+<p>Select all icons and create ’<strong>Multiple Components’</strong>. Be careful not to make just one component or a component set.</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.08.31.png" loading="lazy" decoding="async"></figure>
+</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.09.41.png" loading="lazy" decoding="async"></figure>
+<ol>
+<li>
+<p>Pressing <code>Command + G</code> on mac or <code>Control + G</code> on windows, make two groups, changing the name on the left hand panel to
+- Navbar Icons
+- Orientation Icons</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.11.18.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Drop an Icon from each set before and after the text</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.13.48.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Turn to a component</p>
+<p>This concludes the build. Now we will apply the text property.</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.14.52.png" loading="lazy" decoding="async"></figure>
+<p>This concludes the build. Now we will apply the text property.</p>
+<h3 id="apply-text-property">Apply Text Property</h3>
+<p>This means we specifically target the text on the <strong>parent.</strong></p>
+<p><strong>10. Press the ‘Apply variable/property’</strong></p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.18.25.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Press the <strong>+</strong> icon which will make a new variable/property</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.18.33.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Create the following property:
+- Name: <strong>Label</strong>
+- Value: <strong>Continue</strong></p>
+</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.22.41.png" loading="lazy" decoding="async"></figure>
+<ol>
+<li>You will know you have <strong>successfully applied the property if</strong> the word ‘Button’ has changed to ‘Continue’</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.23.58.png" loading="lazy" decoding="async"></figure>
+<p>It’s important to know that you have applied the text property to the parent component. The child component will look like this:</p>
+<figure class="media"><img alt="Parent component has a frame tag with 4 purple diamonds. Child has no frame tag title." src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.25.37.png" loading="lazy" decoding="async"></figure>
+<p>Parent component has a frame tag with 4 purple diamonds. Child has no frame tag title.</p>
+<h3 id="appearance-booleans">Appearance Booleans</h3>
+<p>⚠️ Working on the parent component ⚠️</p>
+<ol>
+<li>Select the text element. We are going to apply another property but this time it will be on the appearance.</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.28.18.png" loading="lazy" decoding="async"></figure>
+<ol>
+<li>Press the plus Icon and make the following property.</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.29.17.png" loading="lazy" decoding="async"></figure>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.29.42.png" loading="lazy" decoding="async"></figure>
+<ol>
+<li>
+<p>Test on the child component to make sure the appearance boolean has been applied correctly.</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.30.53.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Repeat this process on both icons until you are left with this property panel on the child element.</p>
+</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.35.06.png" loading="lazy" decoding="async"></figure>
+<h3 id="swaps">Swaps</h3>
+<p>This is the last part of the exercise. We are going to apply a swap property to both icons, again, ⚠️ Working on the parent component ⚠️</p>
+<ol>
+<li>Select the Back Icon and create instance swap property</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.37.21.png" loading="lazy" decoding="async"></figure>
+<ol>
+<li>Give the name ‘<strong>Back Icon</strong>’</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.38.05.png" loading="lazy" decoding="async"></figure>
+<ol>
+<li>Repeat the process on the front icon but calling the swap property <strong>‘- Front Icon’</strong></li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.39.07.png" loading="lazy" decoding="async"></figure>
+<p>The child component should look a little something like this:</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.40.11.png" loading="lazy" decoding="async"></figure>
+<ol>
+<li>Select the parent and switch the order on properties</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.42.03.png" loading="lazy" decoding="async"></figure>
+<p>Order on child element should look like this:</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.42.34.png" loading="lazy" decoding="async"></figure>
+<h2 id="all-done">All Done!</h2>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.43.54.png" loading="lazy" decoding="async"></figure>
+      </article>
+    </div>
+    <nav class="pagers"><a class="pager prev" href="beginners-guide-to-components.html"><span class="pager-label">Previous</span><span class="pager-title">Beginner’s Guide to Components</span></a><a class="pager next" href="colour-values.html"><span class="pager-label">Next</span><span class="pager-title">Colour Values</span></a></nav>
+  </div>
+</main>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<footer class="foot"><div class="foot-inner"><span>Cornerstones · UX & UI learning resource for Barcelona Code School</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -273,9 +273,46 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
   .side-stat { display: none; }
   .search { flex: 1; }
   .showing { display: none; }
-  .row, .list-head { grid-template-columns: 28px 1fr 56px; gap: 8px; }
+  .row, .list-head { grid-template-columns: 28px minmax(0, 1fr) auto; gap: 8px; }
   .lecture-head { padding: 32px 0 24px; }
   .prose { font-size: 16.5px; }
   .pagers { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Section tabs on the contents pages */
+.track-tabs { display: flex; gap: 0; margin-top: 24px; border-bottom: 1px solid var(--hair-2); overflow-x: auto; }
+.track-tab {
+  display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px 11px; white-space: nowrap;
+  font: 500 13px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; text-decoration: none;
+  color: var(--ink-soft); border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: color .15s var(--ease), border-color .15s var(--ease);
+}
+.track-tab:hover { color: var(--ink); }
+.track-tab[aria-current] { color: var(--ink); border-bottom-color: var(--accent); }
+.track-tab .count { font-size: 11px; color: var(--muted); }
+.home .hero { padding-top: 40px; }
+
+/* Difficulty meter */
+.meter { display: inline-flex; gap: 3px; vertical-align: middle; }
+.meter i { width: 8px; height: 8px; border: 1px solid var(--hair-2); background: transparent; }
+.meter i.on { background: var(--accent); border-color: var(--accent); }
+.meta .meter { margin-left: 4px; }
+.row-stats .meter { line-height: 1; padding-top: 7px; }
+.diff-row { display: flex; align-items: center; justify-content: space-between; padding: 5px 0; }
+.diff-row .count { font: 500 12px var(--mono); color: var(--muted); }
+
+/* Notion callouts, Figma embeds, related links */
+.prose .callout {
+  display: flex; gap: 12px; margin: 0 0 10px; padding: 14px 16px;
+  background: var(--paper-2); border: 1px solid var(--hair); border-left: 2px solid var(--accent);
+  font-size: 16px; line-height: 1.55;
+}
+.prose .callout p { margin: 0; }
+.prose .callout + :not(.callout) { margin-top: 1.6em; }
+.prose .figma { aspect-ratio: 4 / 3; background: var(--paper-2); }
+.embed-link { display: inline-flex; align-items: center; gap: 6px; margin: -0.8em 0 1.6em; font: 500 13px var(--mono); }
+.related { margin-top: 3em; padding-top: .5em; }
+.related h2 { margin-top: 0 !important; }
+.row-stats .tag { font: 500 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent-ink); border: 1px solid var(--hair-2); padding: 4px 6px; }
+.callout-icon { display: inline-block; width: 1.6em; }

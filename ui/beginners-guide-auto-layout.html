@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beginner’s Guide Auto Layout · Cornerstones</title>
+<meta name="description" content="Auto Layout is arguably the most best thing you can do if you want to engage in rapid prototyping.">
+<script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">C</span>
+      <span class="brand-text"><span class="brand-name">CORNERSTONES</span><span class="brand-sub">UX &amp; UI at Barcelona Code School</span></span>
+    </a>
+    <nav class="nav-links"><a href="../index.html">UX Lectures</a><a href="../ui.html" aria-current=page>UI Lectures</a><a href="../exercises.html">Exercises</a><a href="https://github.com/ChrisinBarcelona/cornerstones">GitHub</a></nav>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+  </div>
+</header>
+
+<main class="lecture track-ui">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../ui.html">UI Lectures</a> <span class="sep">/</span> <a href="../ui.html#category=Figma Guides">Figma Guides</a> <span class="sep">/</span> <span>Beginner’s Guide Auto Layout</span></nav>
+    <header class="lecture-head">
+      <div class="eyebrow">Lecture 05 · Figma Guides</div>
+      <h1>Beginner’s Guide Auto Layout</h1>
+      
+      <div class="meta"><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>4 min read</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>36 images</span></div>
+    </header>
+    <div class="lecture-grid">
+      <aside class="rail"><div class="rail-sticky"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#1-make-a-frame">1. Make a Frame</a></li><li class="lvl2"><a href="#2-add-auto-layout">2. Add Auto layout</a></li><li class="lvl2"><a href="#3-add-text">3. Add Text</a></li><li class="lvl2"><a href="#4-adjust-padding">4. Adjust Padding</a></li><li class="lvl2"><a href="#5-add-plugin-phosphors-icons">5. Add Plugin: Phosphors Icons</a></li><li class="lvl2"><a href="#6-add-icon-to-button-layer">6. Add Icon to Button Layer</a></li><li class="lvl2"><a href="#7-change-container-layout-arrangement">7. Change Container Layout Arrangement</a></li><li class="lvl2"><a href="#7-convert-button-to-component">7. Convert Button to Component</a></li><li class="lvl2"><a href="#0-well-done-job-completed">0. Well Done! Job Completed!</a></li></ol></div><div class="rail-block"><div class="rail-label">Figma Guides</div><ol class="toc family"><li><a href="choose-your-frame.html">Choose your Frame</a></li><li><a href="starting-in-figma.html">Starting in Figma</a></li><li><a href="beginners-guide-to-grids.html">Beginner’s Guide to Grids</a></li><li><a href="beginners-guide-to-nesting.html">Beginner’s Guide to Nesting</a></li><li><a href="beginners-guide-auto-layout.html" aria-current=page>Beginner’s Guide Auto Layout</a></li><li><a href="beginners-guide-to-8-point-grid-system.html">Beginner’s Guide to 8 Point Grid System</a></li><li><a href="beginners-guide-to-components.html">Beginner’s Guide to Components</a></li><li><a href="dynamic-buttons-part-one.html">Dynamic Buttons Part One</a></li></ol></div></div></aside>
+      <article class="prose">
+<p>Auto Layout is arguably the most best thing you can do if you want to engage in rapid prototyping. </p>
+<p>It’s a major step in understanding how to create amazing uniformity.</p>
+<p>We’ll be depending on the 8 Point Grid System for this so please familiarise yourself with that guideline.</p>
+<p>Auto layout is closely correlated to components building but we will get to that step shortly. For now let’s learn the basics;</p>
+<p>Jesse Showalter is one of the best teachers on Figma I’ve seen and in this video he does an amazing job of bringing you through the process, but if you don’t want to watch it;</p>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/Do6HJBj984I" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<p>I’ll be going through the process as well;</p>
+<p>So let’s go!</p>
+<h2 id="1-make-a-frame">1. Make a Frame</h2>
+<p>Let’s make a new frame;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_15.47.49.png" loading="lazy" decoding="async"></figure>
+<p>And change the name to Button;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_15.47.57.png" loading="lazy" decoding="async"></figure>
+<p>Cool! Next we’ll activate <strong>Auto layout;</strong></p>
+<h2 id="2-add-auto-layout">2. Add Auto layout</h2>
+<p><strong>Click the plus icon (+)</strong></p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_15.51.58.png" loading="lazy" decoding="async"></figure>
+<p>Woo! That was easy! Let’s explain a few things;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_15.51.12.png" loading="lazy" decoding="async"></figure>
+<p>Notice here at the bottom we are no longer seeing pixels but rather <strong>Hug x Hug</strong> </p>
+<p>Well, that’s because, with <strong>Auto layout active</strong>, the pixel count size will be determined by the content which we place inside the frame. </p>
+<p>Let’s add some text!</p>
+<h2 id="3-add-text">3. Add Text</h2>
+<p>So we’re going click on our frame and then click the text icon;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_15.55.16.png" loading="lazy" decoding="async"></figure>
+<p>Or optionally click frame and </p>
+<ul>
+<li>Text: <strong><code>T</code></strong></li>
+</ul>
+<p>and voilà! Our entire frame has wrapped around our text!</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_15.58.11.png" loading="lazy" decoding="async"></figure>
+<p>Let’s type out the word button and change padding!</p>
+<h2 id="4-adjust-padding">4. Adjust Padding</h2>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_15.58.23.png" loading="lazy" decoding="async"></figure>
+<p>Nearly there! Hover over the padding in our new Button and see that there has been <strong>default padding added of 10px;</strong></p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_16.01.52.png" loading="lazy" decoding="async"></figure>
+<p>Let’s change that! Navigate over to the right hand sidebar and let’s align our text content from centre;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_16.03.57.png" loading="lazy" decoding="async"></figure>
+<p>Next we’ll change the <strong>horizontal</strong> padding to 16px;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_16.05.14.png" loading="lazy" decoding="async"></figure>
+<p>And now the <strong>vertical</strong> padding to 8px;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_16.06.12.png" loading="lazy" decoding="async"></figure>
+<p>Well Done! <strong>Basically that’s it</strong>. But let’s step a little further to comprehend some more tools. Let’s change the text and fill colour to give us a cooler look. </p>
+<p>Let’s Jazz it up! 😎</p>
+<p>I’ve gone with;</p>
+<p>Text: Roboto Regular: ‘Share’ </p>
+<p>Text Colour; White</p>
+<p>Fill: #0057FF </p>
+<p>But it can be anything; </p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_16.16.07.png" loading="lazy" decoding="async"></figure>
+<p>We need to access the plugins library, Phosphor Icons;</p>
+<h2 id="5-add-plugin-phosphors-icons">5. Add Plugin: Phosphors Icons</h2>
+<p>Right Click to access options panel;</p>
+<p>On Windows: </p>
+<ul>
+<li>Right Click: <strong><code>Shift + F10</code></strong></li>
+</ul>
+<p>On Mac: </p>
+<ul>
+<li>Right Click: <strong><code>Control + Click</code></strong></li>
+</ul>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_16.19.59.png" loading="lazy" decoding="async"></figure>
+<p>Hover over <strong>Plugins</strong>;</p>
+<p>Or optionally; Select the Plugins tab from the navigation bar;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_16.24.54.png" loading="lazy" decoding="async"></figure>
+<p>We are looking for a plugin called <strong>Phosphor Icons;</strong></p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_16.26.16.png" loading="lazy" decoding="async"></figure>
+<p>Once you have found it <strong>run the plugin</strong>;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_16.26.29.png" loading="lazy" decoding="async"></figure>
+<p>At this stage, you’ll see an icons panel appear; </p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_16.26.41.png" loading="lazy" decoding="async"></figure>
+<p>Let’s select the ‘share’ icon;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-26_at_16.29.12.png" loading="lazy" decoding="async"></figure>
+<p>You’ll end up with a position like this;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_10.59.01.png" loading="lazy" decoding="async"></figure>
+<h2 id="6-add-icon-to-button-layer">6. Add Icon to Button Layer</h2>
+<p>You’ll see on the left hierarchical side menu, the icon has been added; </p>
+<p>For best practise, let’s <strong>rename it</strong> to ‘Share Icon’</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.03.00.png" loading="lazy" decoding="async"></figure>
+<p>And drag our ‘Share Icon’ into the button container;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.03.19.png" loading="lazy" decoding="async"></figure>
+<p>Finally, <strong>delete the ‘ShareNetwork’ layer</strong></p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.06.16.png" loading="lazy" decoding="async"></figure>
+<p>We don’t need it! Well done!</p>
+<h2 id="7-change-container-layout-arrangement">7. Change Container Layout Arrangement</h2>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.07.50.png" loading="lazy" decoding="async"></figure>
+<p>Voilà! You’re are nearly there; let’s change the alignment from <strong>horizontal</strong> to <strong>vertical</strong>;</p>
+<p>Make sure your button layer is active;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.08.53.png" loading="lazy" decoding="async"></figure>
+<p>And change from the vertical ⬇</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.08.58.png" loading="lazy" decoding="async"></figure>
+<p>to the horizontal ➡️</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.13.58.png" loading="lazy" decoding="async"></figure>
+<p>Well Done! Let’s change some properties; </p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.17.08.png" loading="lazy" decoding="async"></figure>
+<p>Change to;</p>
+<ol>
+<li>‘Share’ Icon color: White: <strong>#FFFFF</strong></li>
+<li>‘Share’ Icon size: <strong>w15px x h17px</strong></li>
+<li>Text weight: <strong>Semi Bold</strong></li>
+<li>Button corner radius: <strong>3px</strong></li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.23.40.png" loading="lazy" decoding="async"></figure>
+<p>Nearly there; let’s just <strong>readjust</strong> the horizontal padding from <strong>16px to 12px</strong>;</p>
+<p><strong>Hover over the empty space</strong> on the left to activate left padding;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.25.30.png" loading="lazy" decoding="async"></figure>
+<p>and <strong>drag your mouse away from centre</strong> to reduce to <strong>12px</strong>;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.29.04.png" loading="lazy" decoding="async"></figure>
+<p><strong>Repeat</strong> on the right hand side;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.29.34.png" loading="lazy" decoding="async"></figure>
+<p>That’s better! As you can see, you have just reset the left and right padding which are are now set to <strong>12px</strong>;</p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.32.04.png" loading="lazy" decoding="async"></figure>
+<p>Optionally, you could have used the <strong>Auto layout inputs.</strong> Both work!</p>
+<h2 id="7-convert-button-to-component">7. Convert Button to Component</h2>
+<p>For best practise, let’s just change our button to a component </p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.40.11.png" loading="lazy" decoding="async"></figure>
+<p>Or On Windows:</p>
+<ul>
+<li>Convert to Component: <strong><code>Ctrl + Alt + K</code></strong></li>
+</ul>
+<p>On Mac: </p>
+<ul>
+<li>Convert to Component: <strong><code>Option + Cmd + K</code></strong></li>
+</ul>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.34.34.png" loading="lazy" decoding="async"></figure>
+<p><strong>And you’re all done!</strong> </p>
+<p>One last thing; On the left hand panel change from Layers Mode</p>
+<p><strong>Change to Assets Mode</strong> </p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.40.47.png" loading="lazy" decoding="async"></figure>
+<p><strong>Drag your component</strong> from your assets panel. Always Remember to Work Non Destructively 🍀; </p>
+<figure class="media"><img alt="" src="../content/ui/beginners-guide-auto-layout/Screenshot_2023-05-27_at_11.45.37.png" loading="lazy" decoding="async"></figure>
+<p><strong>Always preserve the original master component</strong> and edit copied versions only;</p>
+<h2 id="0-well-done-job-completed">0. Well Done! Job Completed!</h2>
+<p>Auto layout is a great lessons to learn in Figma. It will speed up your workflow by months and ensure  great crisp symmetry for all your assets  </p>
+<p>Now why not get creative! <strong>Go have some fun 🤗.</strong> Change make some cool components using auto layout!</p>
+<section class="related"><h2 id="related">Related</h2><ul class="cards"><li><a class="card" href="../exercises/glovo-replica-challenge.html"><span class="card-title">Glovo Replica Challenge</span><span class="card-desc">Exercises · Replica Challenges</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li><li><a class="card" href="../exercises/youtube-challenge.html"><span class="card-title">YouTube Challenge</span><span class="card-desc">Exercises · Replica Challenges</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li></ul></section>
+      </article>
+    </div>
+    <nav class="pagers"><a class="pager prev" href="beginners-guide-to-nesting.html"><span class="pager-label">Previous</span><span class="pager-title">Beginner’s Guide to Nesting</span></a><a class="pager next" href="beginners-guide-to-8-point-grid-system.html"><span class="pager-label">Next</span><span class="pager-title">Beginner’s Guide to 8 Point Grid System</span></a></nav>
+  </div>
+</main>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<footer class="foot"><div class="foot-inner"><span>Cornerstones · UX & UI learning resource for Barcelona Code School</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

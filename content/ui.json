@@ -1,0 +1,137 @@
+{
+  "categories": [
+    "Figma Guides",
+    "UI Theory"
+  ],
+  "lectures": [
+    {
+      "slug": "choose-your-frame",
+      "title": "Choose your Frame",
+      "parent": null,
+      "children": [],
+      "number": 1,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "starting-in-figma",
+      "title": "Starting in Figma",
+      "parent": null,
+      "children": [],
+      "number": 2,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "beginners-guide-to-grids",
+      "title": "Beginner’s Guide to Grids",
+      "parent": null,
+      "children": [],
+      "number": 3,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "beginners-guide-to-nesting",
+      "title": "Beginner’s Guide to Nesting",
+      "parent": null,
+      "children": [],
+      "number": 4,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "beginners-guide-auto-layout",
+      "title": "Beginner’s Guide Auto Layout",
+      "parent": null,
+      "children": [],
+      "number": 5,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "beginners-guide-to-8-point-grid-system",
+      "title": "Beginner’s Guide to 8 Point Grid System",
+      "parent": null,
+      "children": [],
+      "number": 6,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "beginners-guide-to-components",
+      "title": "Beginner’s Guide to Components",
+      "parent": null,
+      "children": [],
+      "number": 7,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "dynamic-buttons-part-one",
+      "title": "Dynamic Buttons Part One",
+      "parent": null,
+      "children": [],
+      "number": 8,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "colour-values",
+      "title": "Colour Values",
+      "parent": null,
+      "children": [],
+      "number": 9,
+      "category": "UI Theory"
+    },
+    {
+      "slug": "atomic-design-methodology",
+      "title": "Atomic Design Methodology",
+      "parent": null,
+      "children": [],
+      "number": 10,
+      "category": "UI Theory"
+    },
+    {
+      "slug": "file-types",
+      "title": "File Types",
+      "parent": null,
+      "children": [],
+      "number": 11,
+      "category": "UI Theory"
+    },
+    {
+      "slug": "spacing-grids",
+      "title": "Spacing & Grids",
+      "parent": null,
+      "children": [],
+      "number": 12,
+      "category": "UI Theory"
+    },
+    {
+      "slug": "typography",
+      "title": "Typography",
+      "parent": null,
+      "children": [],
+      "number": 13,
+      "category": "UI Theory"
+    },
+    {
+      "slug": "style-guides",
+      "title": "Style Guides",
+      "parent": null,
+      "children": [],
+      "number": 14,
+      "category": "UI Theory"
+    },
+    {
+      "slug": "icons",
+      "title": "Icons",
+      "parent": null,
+      "children": [],
+      "number": 15,
+      "category": "UI Theory"
+    },
+    {
+      "slug": "paper-wireframes",
+      "title": "Paper Wireframes",
+      "parent": null,
+      "children": [],
+      "number": 16,
+      "category": "UI Theory"
+    }
+  ],
+  "subpages": []
+}
