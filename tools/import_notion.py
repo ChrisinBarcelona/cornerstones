@@ -8,9 +8,12 @@ Recognises these exports and splits them into the site's tracks:
   - "Bootcamp UI"   -> ui         (UI Starter Pack + UI Theory lectures)
                     -> exercises  (Replica challenges + Daily UI briefs)
   - "Google Sprint" + "Team Sprint" databases -> methods (UX Methods; pass both exports at once)
+  - "Master"        -> ui         (later Figma guides + UI Theory: Typeface, Case Studies)
 
-Each track gets content/<track>/<slug>/index.md (+ optimised images) and
-content/<track>.json. Notion hash suffixes are stripped, internal links become
+Each export writes content/<track>/<slug>/index.md (+ optimised images) and its own
+index, content/<track>.json (or content/<track>.<part>.json when a track has several
+sources). Re-importing an export replaces only the pages that export made.
+Order and categories within each track are set in tools/build.py (ORDER). Notion hash suffixes are stripped, internal links become
 <slug>.html, and large images are resized with macOS `sips`.
 Unzip exports with `ditto -x -k export.zip dest` – plain `unzip` mangles curly quotes.
 """
@@ -43,7 +46,10 @@ UX_CATEGORIES = {
 }
 # Bootcamp UI: these hub pages become UI lecture categories; every other link is an exercise.
 UI_GROUPS = {"UI Starter Pack": "Figma Guides", "UI Theory": "UI Theory"}
-EXCLUDE = {"Daily UI: Template"}
+# Templates, left out wherever they appear.
+EXCLUDE = {"Daily UI: Template", "Boiler Plate"}
+# Bootcamp UI pages replaced by newer versions in the Master export (Typeface, Dynamic Buttons Part One).
+UI_REPLACED = {"Typography", "07. UI Guidelines: Dynamic Button"}
 
 # UX Methods: one bank of methods drawn from the Google Sprint and Team Sprint databases, by chapter.
 # Briefs (Talk To Me, Sprint Brief) and sprint introductions are left out. Where both sprints have the same
@@ -80,7 +86,8 @@ def clean_title(text):
 
 def short_title(title):
     """Drop series prefixes: '03. UI Guidelines: Beginner's Guide to Grids' -> 'Beginner's Guide to Grids'."""
-    title = re.sub(r"^\d+\.\s*UI Guidelines\s*[:.]\s*", "", title)
+    title = re.sub(r"^\d+\s*[.:]\s*UI (?:Guidelines|Theory)\s*[:.]\s*", "", title)
+    title = {"TypeFace": "Typeface"}.get(title, title)
     title = re.sub(r"^Daily UI:\s*", "", title)
     return re.sub(r"\s+", " ", title).strip()
 
@@ -135,12 +142,18 @@ def fix_tables(text):
             out.append(line)
     if buf is not None:
         out.append(buf)
+    # A table followed directly by text (no blank line) swallows it; separate them.
+    for i in range(len(out) - 1, 0, -1):
+        if out[i - 1].startswith("|") and out[i].strip() and not out[i].startswith("|"):
+            out.insert(i, "")
     return "\n".join(out)
 
 
 def fix_bold(text):
     """Tidy Notion's bold artefacts: drop empty '****' and split a bold run that spans two paragraphs."""
     text = text.replace("****", "")
+    # "**- item**": bold wrapped around a list marker; move it inside.
+    text = re.sub(r"(?m)^(\s*)\*\*- (.+?)\*\*\s*$", r"\1- **\2**", text)
     # A heading whose bold run continues onto the next line ("## **5. Buttons\nExercise →**"): drop the markers.
     text = re.sub(r"(?m)^(#+ )\*\*([^*\n]+)\n([^*\n]+)\*\*$", r"\1\2\n\n\3", text)
     # "**bold.***" closing bold and italic together trips up Markdown; spell the bold out.
@@ -168,12 +181,16 @@ def links_in(md_path):
 class Track:
     """Imports a set of top-level Notion pages (and the pages they link to) into content/<name>/."""
 
-    def __init__(self, name, title_slugs=False, shorten=False):
+    def __init__(self, name, part=None, title_slugs=False, shorten=False):
         self.name, self.title_slugs, self.shorten = name, title_slugs, shorten
         self.dir = CONTENT / name
-        if self.dir.exists():
-            shutil.rmtree(self.dir)
-        self.dir.mkdir(parents=True)
+        self.index = CONTENT / (f"{name}.{part}.json" if part else f"{name}.json")
+        # Remove what this export imported last time; other sources in the same track are left alone.
+        if self.index.exists():
+            old = json.loads(self.index.read_text(encoding="utf-8"))
+            for p in old["lectures"] + old["subpages"]:
+                shutil.rmtree(self.dir / p["slug"], ignore_errors=True)
+        self.dir.mkdir(parents=True, exist_ok=True)
         self.pages, self.order, self.by_path, self.items = {}, [], {}, []
 
     def add(self, md_path, category, link_title=""):
@@ -195,7 +212,7 @@ class Track:
         if self.shorten:
             title = short_title(title)
         slug = slugify(title) if self.title_slugs else file_slug(md_path)
-        while slug in self.pages:
+        while slug in self.pages or (self.dir / slug).exists():
             slug += "-2"
         self.by_path[md_path] = self.by_path[orig_path] = slug
         out_dir = self.dir / slug
@@ -212,6 +229,8 @@ class Track:
             path = (base / unquote(target)).resolve()
             if not path.exists():
                 return clean_title(label) if target.endswith(".md") and not bang else m.group(0)
+            if path.suffix == ".md" and clean_title(read_page(path)[0] or label) in EXCLUDE:
+                return ""
             if path.suffix == ".md":
                 # A link to another top-level item (or Notion's duplicate of one, like Mental Models/Data).
                 top = path if path in self.top_paths else self.top_by_slug.get(file_slug(path))
@@ -222,9 +241,12 @@ class Track:
                     record["children"].append(child)
                 return f"[{self.pages[child]['title']}]({child}.html)"
             if bang or path.suffix.lower() in IMAGE_EXT:
-                label = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", label).replace("*", "")
+                label = " ".join(re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", label).replace("*", "").split())
                 return f"![{label}]({copy_image(path, out_dir)})"
-            return m.group(0)
+            # Any other attachment (e.g. a .zip of assets) is copied next to the page.
+            name = re.sub(r"[^A-Za-z0-9._-]+", "-", path.name).strip("-")
+            shutil.copyfile(path, out_dir / name)
+            return f"[{label}]({name})"
 
         body = LINK_RE.sub(repl, fix_bold(fix_tables(body)))
         (out_dir / "index.md").write_text(f"# {title}\n\n{body}\n", encoding="utf-8")
@@ -234,7 +256,7 @@ class Track:
         items = [self.pages[s] for s in self.items]
         subpages = [self.pages[s] for s in self.order if self.pages[s]["parent"]]
         data = {"categories": categories, "lectures": items, "subpages": subpages}
-        (CONTENT / f"{self.name}.json").write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        self.index.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print(f"{self.name}: {len(items)} pages and {len(subpages)} sub-pages")
 
 
@@ -256,7 +278,7 @@ def import_bootcamp_ui(root_md):
     for label, path in links_in(root_md):
         title = read_page(path)[0] or label
         if title in UI_GROUPS:
-            groups.append((UI_GROUPS[title], links_in(path)))
+            groups.append((UI_GROUPS[title], [(l, p) for l, p in links_in(path) if (read_page(p)[0] or l) not in EXCLUDE | UI_REPLACED]))
         elif title not in EXCLUDE:
             exercises.append((label, path, title))
     ui.top_paths = {p for _, pages in groups for _, p in pages}
@@ -270,6 +292,15 @@ def import_bootcamp_ui(root_md):
     for label, path, title in exercises:
         ex.add(path, "Daily UI" if title.startswith("Daily UI") else "Replica Challenges", label)
     ex.save(["Replica Challenges", "Daily UI"])
+
+
+def import_master(root_md):
+    ui = Track("ui", part="master", title_slugs=True, shorten=True)
+    links = links_in(root_md)
+    ui.top_paths, ui.top_by_slug = {p for _, p in links}, {}
+    for label, path in links:
+        ui.add(path, "UI Theory" if "UI Theory" in (read_page(path)[0] or label) else "Figma Guides", label)
+    ui.save(["Figma Guides", "UI Theory"])
 
 
 def import_methods(databases):
@@ -294,7 +325,8 @@ def main(export_dirs):
     found = False
     databases = {}
     for export_dir in map(Path, export_dirs):
-        for pattern, fn in (("Cornerstones *.md", import_cornerstones), ("Bootcamp UI *.md", import_bootcamp_ui)):
+        for pattern, fn in (("Cornerstones *.md", import_cornerstones), ("Bootcamp UI *.md", import_bootcamp_ui),
+                            ("Master.md", import_master), ("Master *.md", import_master)):
             for root_md in export_dir.glob(pattern):
                 fn(root_md)
                 found = True
@@ -307,7 +339,7 @@ def main(export_dirs):
         import_methods(databases)
         found = True
     if not found:
-        sys.exit(f"No Cornerstones, Bootcamp UI or sprint database export found in {export_dirs}")
+        sys.exit(f"No Cornerstones, Bootcamp UI, Master or sprint database export found in {export_dirs}")
 
 
 if __name__ == "__main__":

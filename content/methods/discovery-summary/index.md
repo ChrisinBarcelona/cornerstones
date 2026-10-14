@@ -35,6 +35,7 @@ By the end of this activity, you will be able to **synthesise your discovery res
 | Insight / Finding | Why it matters | Evidence / Observation | Next Steps / What’s missing? |
 | --- | --- | --- | --- |
 |  |  |  |  |
+
 1. Reflect on your summary: Are there any gaps? Does this give a clear picture of your findings?
 
 # ⏱️ **Estimated Duration**

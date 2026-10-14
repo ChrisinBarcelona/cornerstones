@@ -1,0 +1,160 @@
+{
+  "categories": [
+    "Figma Guides",
+    "UI Theory"
+  ],
+  "lectures": [
+    {
+      "slug": "variable-modes",
+      "title": "Variable Modes",
+      "parent": null,
+      "children": [],
+      "number": 1,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "case-studies-and-how-to-tell-a-good-story",
+      "title": "Case Studies and How to tell a Good Story",
+      "parent": null,
+      "children": [],
+      "number": 2,
+      "category": "UI Theory"
+    },
+    {
+      "slug": "string-variables",
+      "title": "String Variables",
+      "parent": null,
+      "children": [],
+      "number": 3,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "number-variables",
+      "title": "Number Variables",
+      "parent": null,
+      "children": [],
+      "number": 4,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "color-variables",
+      "title": "Color Variables",
+      "parent": null,
+      "children": [],
+      "number": 5,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "typeface",
+      "title": "Typeface",
+      "parent": null,
+      "children": [
+        "gothic-blackletter",
+        "garamond",
+        "didot",
+        "caslon-egyptian",
+        "futura",
+        "times-new-roman",
+        "helvetica",
+        "roboto",
+        "san-francisco",
+        "google-sans",
+        "comic-sans"
+      ],
+      "number": 6,
+      "category": "UI Theory"
+    },
+    {
+      "slug": "dynamic-buttons-part-one",
+      "title": "Dynamic Buttons Part One",
+      "parent": null,
+      "children": [],
+      "number": 7,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "navbar",
+      "title": "Navbar",
+      "parent": null,
+      "children": [],
+      "number": 8,
+      "category": "Figma Guides"
+    },
+    {
+      "slug": "dynamic-buttons-part-deux",
+      "title": "Dynamic Buttons Part Deux",
+      "parent": null,
+      "children": [],
+      "number": 9,
+      "category": "Figma Guides"
+    }
+  ],
+  "subpages": [
+    {
+      "slug": "gothic-blackletter",
+      "title": "Gothic (Blackletter)",
+      "parent": "typeface",
+      "children": []
+    },
+    {
+      "slug": "garamond",
+      "title": "Garamond",
+      "parent": "typeface",
+      "children": []
+    },
+    {
+      "slug": "didot",
+      "title": "Didot",
+      "parent": "typeface",
+      "children": []
+    },
+    {
+      "slug": "caslon-egyptian",
+      "title": "Caslon Egyptian",
+      "parent": "typeface",
+      "children": []
+    },
+    {
+      "slug": "futura",
+      "title": "Futura",
+      "parent": "typeface",
+      "children": []
+    },
+    {
+      "slug": "times-new-roman",
+      "title": "Times New Roman",
+      "parent": "typeface",
+      "children": []
+    },
+    {
+      "slug": "helvetica",
+      "title": "Helvetica",
+      "parent": "typeface",
+      "children": []
+    },
+    {
+      "slug": "roboto",
+      "title": "Roboto",
+      "parent": "typeface",
+      "children": []
+    },
+    {
+      "slug": "san-francisco",
+      "title": "San Francisco",
+      "parent": "typeface",
+      "children": []
+    },
+    {
+      "slug": "google-sans",
+      "title": "Google Sans",
+      "parent": "typeface",
+      "children": []
+    },
+    {
+      "slug": "comic-sans",
+      "title": "Comic Sans",
+      "parent": "typeface",
+      "children": []
+    }
+  ]
+}

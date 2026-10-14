@@ -25,35 +25,34 @@
 
 <main class="lecture track-ui">
   <div class="wrap">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="../ui.html">UI Lectures</a> <span class="sep">/</span> <a href="../ui.html#category=Figma Guides">Figma Guides</a> <span class="sep">/</span> <span>Dynamic Buttons Part One</span></nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../ui.html">UI Lectures</a> <span class="sep">/</span> <a href="../ui.html#category=Components &amp; Variables">Components &amp; Variables</a> <span class="sep">/</span> <span>Dynamic Buttons Part One</span></nav>
     <header class="lecture-head">
-      <div class="eyebrow">Lecture 08 · Figma Guides</div>
+      <div class="eyebrow">Lecture 09 · Components &amp; Variables</div>
       <h1>Dynamic Buttons Part One</h1>
       <p class="lede">Build a reusable button component in Figma with text properties, appearance booleans and swaps.</p>
-      <div class="meta"><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 min read</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>29 images</span></div>
+      <div class="meta"><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>2 min read</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>29 images</span></div>
     </header>
     <div class="lecture-grid">
-      <aside class="rail"><div class="rail-sticky"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl3"><a href="#intro">Intro:</a></li><li class="lvl3"><a href="#apply-text-property">Apply Text Property</a></li><li class="lvl3"><a href="#appearance-booleans">Appearance Booleans</a></li><li class="lvl3"><a href="#swaps">Swaps</a></li><li class="lvl2"><a href="#all-done">All Done!</a></li></ol></div><div class="rail-block"><div class="rail-label">Figma Guides</div><ol class="toc family"><li><a href="choose-your-frame.html">Choose your Frame</a></li><li><a href="starting-in-figma.html">Starting in Figma</a></li><li><a href="beginners-guide-to-grids.html">Beginner’s Guide to Grids</a></li><li><a href="beginners-guide-to-nesting.html">Beginner’s Guide to Nesting</a></li><li><a href="beginners-guide-auto-layout.html">Beginner’s Guide Auto Layout</a></li><li><a href="beginners-guide-to-8-point-grid-system.html">Beginner’s Guide to 8 Point Grid System</a></li><li><a href="beginners-guide-to-components.html">Beginner’s Guide to Components</a></li><li><a href="dynamic-buttons-part-one.html" aria-current=page>Dynamic Buttons Part One</a></li></ol></div></div></aside>
+      <aside class="rail"><div class="rail-sticky"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl3"><a href="#intro">Intro:</a></li><li class="lvl3"><a href="#apply-text-property">Apply Text Property</a></li><li class="lvl3"><a href="#appearance-booleans">Appearance Booleans</a></li><li class="lvl3"><a href="#swaps">Swaps</a></li><li class="lvl2"><a href="#all-done">All Done!</a></li></ol></div><div class="rail-block"><div class="rail-label">Components &amp; Variables</div><ol class="toc family"><li><a href="beginners-guide-to-components.html">Beginner’s Guide to Components</a></li><li><a href="navbar.html">Navbar</a></li><li><a href="dynamic-buttons-part-one.html" aria-current=page>Dynamic Buttons Part One</a></li><li><a href="dynamic-buttons-part-deux.html">Dynamic Buttons Part Deux</a></li><li><a href="color-variables.html">Color Variables</a></li><li><a href="number-variables.html">Number Variables</a></li><li><a href="string-variables.html">String Variables</a></li><li><a href="variable-modes.html">Variable Modes</a></li></ol></div></div></aside>
       <article class="prose">
 <h3 id="intro">Intro:</h3>
-<p>This is an easy lesson but <strong>the first thing</strong> is that it requires understanding three key principals.</p>
+<p>This is an easy lesson but <strong>the first thing</strong> is that it requires understanding three key principals. </p>
 <ul>
 <li><strong>Text Property</strong></li>
 <li><strong>Appearance Booleans</strong></li>
 <li><strong>Swaps</strong></li>
 </ul>
-<p><strong>The second thing</strong> you have to understand is that the parent component and the child component are very different. The rule is that the parent is where you load in the properties and the child is what you use.</p>
-<p>On the right hand panel of Figma you will see two very different CSM’s: for all parents and children</p>
-<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Parent.jpg" loading="lazy" decoding="async"></figure>
+<p><strong>The second thing</strong> you have to understand is that the parent component and the child component are very different. The rule is that the parent is where you load in the properties and the child is what you use. </p>
+<p>On the right hand panel of Figma you will see two very different CSM’s: for all parents and children </p>
+<figure class="media"><img alt="This is the parent" src="../content/ui/dynamic-buttons-part-one/Parent.jpg" loading="lazy" decoding="async"></figure>
 <p>This is the parent</p>
-<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Child.jpg" loading="lazy" decoding="async"></figure>
+<figure class="media"><img alt="The is the child" src="../content/ui/dynamic-buttons-part-one/Child.jpg" loading="lazy" decoding="async"></figure>
 <p>The is the child</p>
-<p>That being said, let’s get into it.</p>
+<p>That being said, let’s get into it. </p>
 <ol>
 <li>
 <p>Use the text element and write out the word ‘Button’</p>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_15.59.33.png" loading="lazy" decoding="async"></figure>
-<p>Screenshot 2026-01-06 at 15.59.33.png</p>
 </li>
 <li>
 <p>Press <code>Shift + A</code> to wrap an auto layout frame around the text. Change the title to Button</p>
@@ -68,42 +67,50 @@
 </li>
 </ol>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.02.47.png" loading="lazy" decoding="async"></figure>
-<p>Screenshot 2026-01-06 at 16.02.47.png</p>
-<ol>
-<li>Import <strong>8 Icons</strong>
-- House
-- User Circle
-- Gear
-- PlusCircle
-- ArrowCircleUp
-- ArrowCircleDown
-- ArrowCircleRight
-- ArrowCircleLeft</li>
+<ol start="5">
+<li>Import <strong>8 Icons</strong></li>
 </ol>
+<ul>
+<li>House</li>
+<li>User Circle</li>
+<li>Gear</li>
+<li>
+<p>PlusCircle</p>
+</li>
+<li>
+<p>ArrowCircleUp</p>
+</li>
+<li>ArrowCircleDown</li>
+<li>ArrowCircleRight</li>
+<li>ArrowCircleLeft</li>
+</ul>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.05.25.png" loading="lazy" decoding="async"></figure>
 <ol>
 <li>
-<p>Select all icons and create ’<strong>Multiple Components’</strong>. Be careful not to make just one component or a component set.</p>
+<p>Select all icons and create ‘<strong>Multiple Components’</strong>. Be careful not to make just one component or a component set. </p>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.08.31.png" loading="lazy" decoding="async"></figure>
 </li>
 </ol>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.09.41.png" loading="lazy" decoding="async"></figure>
 <ol>
+<li>Pressing <code>Command + G</code> on mac or <code>Control + G</code> on windows, make two groups, changing the name on the left hand panel to </li>
+</ol>
+<ul>
+<li>Navbar Icons</li>
 <li>
-<p>Pressing <code>Command + G</code> on mac or <code>Control + G</code> on windows, make two groups, changing the name on the left hand panel to
-- Navbar Icons
-- Orientation Icons</p>
+<p>Orientation Icons</p>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.11.18.png" loading="lazy" decoding="async"></figure>
 </li>
+</ul>
+<ol>
 <li>
 <p>Drop an Icon from each set before and after the text</p>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.13.48.png" loading="lazy" decoding="async"></figure>
 </li>
 <li>
 <p>Turn to a component</p>
-<p>This concludes the build. Now we will apply the text property.</p>
-<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.14.52.png" loading="lazy" decoding="async"></figure>
-<p>This concludes the build. Now we will apply the text property.</p>
+<figure class="media"><img alt="This concludes the build. Now we will apply the text property." src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.14.52.png" loading="lazy" decoding="async"></figure>
+<p>This concludes the build. Now we will apply the text property. </p>
 <h3 id="apply-text-property">Apply Text Property</h3>
 <p>This means we specifically target the text on the <strong>parent.</strong></p>
 <p><strong>10. Press the ‘Apply variable/property’</strong></p>
@@ -114,33 +121,35 @@
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.18.33.png" loading="lazy" decoding="async"></figure>
 </li>
 <li>
-<p>Create the following property:
-- Name: <strong>Label</strong>
-- Value: <strong>Continue</strong></p>
+<p>Create the following property: </p>
 </li>
 </ol>
+<ul>
+<li>Name: <strong>Label</strong></li>
+<li>Value: <strong>Continue</strong></li>
+</ul>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.22.41.png" loading="lazy" decoding="async"></figure>
-<ol>
+<ol start="13">
 <li>You will know you have <strong>successfully applied the property if</strong> the word ‘Button’ has changed to ‘Continue’</li>
 </ol>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.23.58.png" loading="lazy" decoding="async"></figure>
-<p>It’s important to know that you have applied the text property to the parent component. The child component will look like this:</p>
+<p>It’s important to know that you have applied the text property to the parent component. The child component will look like this: </p>
 <figure class="media"><img alt="Parent component has a frame tag with 4 purple diamonds. Child has no frame tag title." src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.25.37.png" loading="lazy" decoding="async"></figure>
-<p>Parent component has a frame tag with 4 purple diamonds. Child has no frame tag title.</p>
+<p>Parent component has a frame tag with 4 purple diamonds. Child has no frame tag title. </p>
 <h3 id="appearance-booleans">Appearance Booleans</h3>
-<p>⚠️ Working on the parent component ⚠️</p>
-<ol>
-<li>Select the text element. We are going to apply another property but this time it will be on the appearance.</li>
+<p>⚠️ Working on the parent component ⚠️ </p>
+<ol start="14">
+<li>Select the text element. We are going to apply another property but this time it will be on the appearance. </li>
 </ol>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.28.18.png" loading="lazy" decoding="async"></figure>
-<ol>
+<ol start="15">
 <li>Press the plus Icon and make the following property.</li>
 </ol>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.29.17.png" loading="lazy" decoding="async"></figure>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.29.42.png" loading="lazy" decoding="async"></figure>
 <ol>
 <li>
-<p>Test on the child component to make sure the appearance boolean has been applied correctly.</p>
+<p>Test on the child component to make sure the appearance boolean has been applied correctly. </p>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.30.53.png" loading="lazy" decoding="async"></figure>
 </li>
 <li>
@@ -149,33 +158,33 @@
 </ol>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.35.06.png" loading="lazy" decoding="async"></figure>
 <h3 id="swaps">Swaps</h3>
-<p>This is the last part of the exercise. We are going to apply a swap property to both icons, again, ⚠️ Working on the parent component ⚠️</p>
-<ol>
+<p>This is the last part of the exercise. We are going to apply a swap property to both icons, again, ⚠️ Working on the parent component ⚠️ </p>
+<ol start="18">
 <li>Select the Back Icon and create instance swap property</li>
 </ol>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.37.21.png" loading="lazy" decoding="async"></figure>
-<ol>
-<li>Give the name ‘<strong>Back Icon</strong>’</li>
+<ol start="19">
+<li>Give the name ‘<strong>- Back Icon</strong>’</li>
 </ol>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.38.05.png" loading="lazy" decoding="async"></figure>
-<ol>
+<ol start="20">
 <li>Repeat the process on the front icon but calling the swap property <strong>‘- Front Icon’</strong></li>
 </ol>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.39.07.png" loading="lazy" decoding="async"></figure>
-<p>The child component should look a little something like this:</p>
+<p>The child component should look a little something like this: </p>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.40.11.png" loading="lazy" decoding="async"></figure>
-<ol>
-<li>Select the parent and switch the order on properties</li>
+<ol start="21">
+<li>Select the parent and switch the order on properties </li>
 </ol>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.42.03.png" loading="lazy" decoding="async"></figure>
 <p>Order on child element should look like this:</p>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.42.34.png" loading="lazy" decoding="async"></figure>
 <h2 id="all-done">All Done!</h2>
 <figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.43.54.png" loading="lazy" decoding="async"></figure>
-<section class="related"><h2 id="related">Related</h2><ul class="cards"><li><a class="card" href="../methods/style-guide.html"><span class="card-title">Style Guide</span><span class="card-desc">UX Methods · Ideation</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li></ul></section>
+<section class="related"><h2 id="related">Related</h2><ul class="cards"><li><a class="card" href="../ui/navbar.html"><span class="card-title">Navbar</span><span class="card-desc">UI Lectures · Components &amp; Variables</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li><li><a class="card" href="../ui/dynamic-buttons-part-deux.html"><span class="card-title">Dynamic Buttons Part Deux</span><span class="card-desc">UI Lectures · Components &amp; Variables</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li><li><a class="card" href="../exercises/stage-play.html"><span class="card-title">Stage Play</span><span class="card-desc">Exercises · Team Projects</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li><li><a class="card" href="../methods/style-guide.html"><span class="card-title">Style Guide</span><span class="card-desc">UX Methods · Ideation</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li></ul></section>
       </article>
     </div>
-    <nav class="pagers"><a class="pager prev" href="beginners-guide-to-components.html"><span class="pager-label">Previous</span><span class="pager-title">Beginner’s Guide to Components</span></a><a class="pager next" href="colour-values.html"><span class="pager-label">Next</span><span class="pager-title">Colour Values</span></a></nav>
+    <nav class="pagers"><a class="pager prev" href="navbar.html"><span class="pager-label">Previous</span><span class="pager-title">Navbar</span></a><a class="pager next" href="dynamic-buttons-part-deux.html"><span class="pager-label">Next</span><span class="pager-title">Dynamic Buttons Part Deux</span></a></nav>
   </div>
 </main>
 <div class="lightbox" id="lightbox" hidden><img alt=""></div>

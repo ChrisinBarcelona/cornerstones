@@ -1,0 +1,7 @@
+{
+  "categories": ["Team Projects"],
+  "lectures": [
+    {"slug": "stage-play", "title": "Stage Play", "parent": null, "children": [], "number": 1, "category": "Team Projects"}
+  ],
+  "subpages": []
+}

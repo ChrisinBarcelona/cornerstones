@@ -244,9 +244,10 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
 .pager-label { font: 500 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 .pager-title { font-weight: 700; font-size: 16px; }
 
-.lightbox { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 24px; background: rgba(0, 0, 0, .85); cursor: zoom-out; }
+.lightbox { position: fixed; inset: 0; z-index: 50; display: grid; padding: 24px; overflow: auto; background: rgba(0, 0, 0, .85); cursor: zoom-out; }
 .lightbox[hidden] { display: none; }
-.lightbox img { max-width: 100%; max-height: 100%; border: 0; }
+/* Wide images fit the screen; tall ones (like a full schema) keep their width and scroll. */
+.lightbox img { max-width: 100%; margin: auto; border: 0; }
 
 .foot { border-top: 1px solid var(--hair); }
 .foot-inner { max-width: var(--wide); margin: 0 auto; padding: 24px 32px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }

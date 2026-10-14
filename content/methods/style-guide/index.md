@@ -182,7 +182,7 @@ Students can expand their style guide over time by adding grids, spacing, do not
 
 # 🏞️ Template
 
-[RamenGo-Styleguide-v2.pdf](Style%20Guide/RamenGo-Styleguide-v2.pdf)
+[RamenGo-Styleguide-v2.pdf](RamenGo-Styleguide-v2.pdf)
 
 # ⚡ Tips
 

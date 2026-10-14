@@ -20,7 +20,7 @@ But until the invention of the printing press all books were created by hand. Cl
 
 With the invention of the printing press by Johannes Gutenberg in the 15th century the first typeface was made and the first book was printed — a Bible. Of course this font was mimicking the hand-written blackletter. 
 
-![Reconstructed Gutenberg press, placed at the Department of Typography and Graphic Communication at the University of Reading, UK. Photo by Ben Mitchell](01_NYC-Press_Ben-Mitchell-1024x683.png)
+![Reconstructed Gutenberg press, placed at the Department of Typography and Graphic Communication at the University of Reading, UK. Photo by Ben Mitchell](01_NYC-Press_Ben-Mitchell-1024x683.png)
 
 Reconstructed Gutenberg press, placed at the Department of Typography and Graphic Communication at the University of Reading, UK. Photo by [**Ben Mitchell**](https://www.flickr.com/photos/ohbendy/with/5942489307/)
 

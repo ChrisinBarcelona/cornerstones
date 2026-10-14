@@ -39,17 +39,50 @@ TRACKS = [
      "parent": {"Information Architecture": "Define"}},
     {"id": "ui", "out": "ui", "index": "ui.html", "label": "UI Lectures", "noun": "Lecture",
      "eyebrow": "UI Learning Resource", "h1": "UI Design, from Figma basics to theory",
-     "intro": "{n} lectures on building interfaces. Figma Guides are hands-on, step-by-step tutorials to follow in order; UI Theory covers the concepts behind colour, type, spacing and systems. New to UI? Read <a href=\"lectures/what-is-ui-design.html\">What is UI Design</a> in the UX track first."},
+     "intro": "{n} lectures on building interfaces. Figma Basics and Components & Variables are hands-on, step-by-step tutorials to follow in order; UI Theory covers the concepts behind colour, type, spacing and systems. New to UI? Read <a href=\"lectures/what-is-ui-design.html\">What is UI Design</a> in the UX track first."},
     {"id": "exercises", "out": "exercises", "index": "exercises.html", "label": "Exercises", "noun": "Exercise",
      "eyebrow": "Practice", "h1": "Exercises & design challenges",
-     "intro": "{n} briefs to practise with in Figma. Replica Challenges are long, pixel-perfect copies of real apps; Daily UI briefs are single-screen designs for one session. Each one is rated for difficulty."},
+     "intro": "{n} briefs to practise with in Figma. Daily UI briefs are single-screen designs for one session, rated for difficulty. Projects come last: Replica Challenges are long, pixel-perfect copies of real apps, and Team Projects are multi-day builds from a schema."},
 ]
 TRACK = {t["id"]: t for t in TRACKS}
+
+# Order and categories for tracks fed by more than one source. Every page in content/<track>*.json must be listed.
+ORDER = {
+    "ui": {
+        "Figma Basics": ["choose-your-frame", "starting-in-figma", "beginners-guide-to-grids",
+                         "beginners-guide-to-nesting", "beginners-guide-auto-layout",
+                         "beginners-guide-to-8-point-grid-system"],
+        "Components & Variables": ["beginners-guide-to-components", "navbar", "dynamic-buttons-part-one",
+                                   "dynamic-buttons-part-deux", "color-variables", "number-variables",
+                                   "string-variables", "variable-modes"],
+        "UI Theory": ["colour-values", "atomic-design-methodology", "file-types", "spacing-grids", "typeface",
+                      "style-guides", "icons", "paper-wireframes", "case-studies-and-how-to-tell-a-good-story"],
+    },
+    "exercises": {
+        "Daily UI": ["sidebar", "friends-list", "new-notification", "bottom-sheet", "sign-in", "cc-checkout",
+                     "video-player", "choose-a-movie", "music-player", "home-monitor-dash", "user-profile-page",
+                     "make-an-ai-interface", "product-card", "ux-x-ai"],
+        "Replica Challenges": ["glovo-replica-challenge", "youtube-challenge"],
+        "Team Projects": ["stage-play"],
+    },
+}
 
 # Cross-links shown at the end of a page as "Related". Each pair is linked both ways.
 RELATED = [
     ("ui/icons", "ux/icons"),
-    ("ui/typography", "ux/typography"),
+    ("ui/typeface", "ux/typography"),
+    ("ui/navbar", "ui/dynamic-buttons-part-one"),
+    ("ui/dynamic-buttons-part-one", "ui/dynamic-buttons-part-deux"),
+    ("ui/color-variables", "ui/colour-values"),
+    ("ui/color-variables", "ui/number-variables"),
+    ("ui/number-variables", "ui/string-variables"),
+    ("ui/string-variables", "ui/variable-modes"),
+    ("ui/number-variables", "ui/beginners-guide-to-8-point-grid-system"),
+    ("exercises/stage-play", "ui/beginners-guide-to-8-point-grid-system"),
+    ("exercises/stage-play", "ui/beginners-guide-to-nesting"),
+    ("exercises/stage-play", "ui/beginners-guide-auto-layout"),
+    ("exercises/stage-play", "ui/beginners-guide-to-components"),
+    ("exercises/stage-play", "ui/dynamic-buttons-part-one"),
     ("ui/colour-values", "ux/colors"),
     ("ui/spacing-grids", "ux/grid"),
     ("ui/spacing-grids", "ui/beginners-guide-to-grids"),
@@ -87,6 +120,14 @@ RELATED = [
 
 # Hand-written summaries where a page's first paragraph doesn't describe it well.
 SUMMARIES = {
+    "ui/navbar": "Build a navbar component from Phosphor icon sets with on and off states, then prototype it across four screens.",
+    "ui/dynamic-buttons-part-deux": "Turn your button into a component set with seven variants: default, hover, pressed, stroke, disabled and glass.",
+    "ui/color-variables": "Create colour variables from a Grabient gradient and organise them into collections.",
+    "ui/number-variables": "Record your phone's frame, content areas, gaps and radii as number variables you can reuse.",
+    "ui/string-variables": "Store text in string variables and update it everywhere from one place.",
+    "ui/variable-modes": "Use variable modes and a prototype interaction to switch a product's colour on hover.",
+    "ui/case-studies-and-how-to-tell-a-good-story": "How to structure a case study so it tells the story of your design process.",
+    "exercises/stage-play": "Working as a team, build the Stage Play app in Figma from a component schema, using master components, nesting, auto layout and properties.",
     "ui/choose-your-frame": "How to pick a Figma frame size for the device you'll design and prototype on, and why aspect ratio matters.",
     "ui/dynamic-buttons-part-one": "Build a reusable button component in Figma with text properties, appearance booleans and swaps.",
     "ui/file-types": "When to use JPG, PNG, GIF, SVG, WEBP and TIFF in interface work.",
@@ -98,7 +139,7 @@ SUMMARIES = {
 
 YOUTUBE_RE = re.compile(
     r'<p><a href="(https?://(?:www\.)?(?:youtube\.com/(?:watch\?v=|embed/)|youtu\.be/)([\w-]{11})[^"]*)">[^<]*</a></p>')
-FIGMA_RE = re.compile(r'<p><a href="(https://www\.figma\.com/embed\?[^"]+)">[^<]*</a></p>')
+FIGMA_RE = re.compile(r'<p><a href="(https://(?:www\.figma\.com/embed\?|embed\.figma\.com/)[^"]+)">[^<]*</a></p>')
 LECTURE_LINK_RE = re.compile(r'<p><a href="([a-z0-9-]+)\.html">(.*?)</a></p>')
 IMG_P_RE = re.compile(r'<p>(<img [^>]+>)</p>')
 IMG_RE = re.compile(r'<img alt="([^"]*)" src="([^"]+)"\s*/?>')
@@ -187,6 +228,8 @@ def render_markdown(track, slug, text, titles):
     # Pull the leading emoji of a callout into its own column.
     body = re.sub(r'(<div class="callout">\s*<p>)([^\w<\s]+)\s*', r'\1<span class="callout-icon">\2</span>', body)
     body = IMG_RE.sub(fix_img, body)
+    # Attachments (zip, pdf…) live next to the page's markdown, not next to the HTML.
+    body = re.sub(r'href="(?![a-z]+:|#|\.\./)([^"/]+\.(?!html")[a-z0-9]+)"', rf'href="../content/{track}/{slug}/\1" download', body)
     body = IMG_P_RE.sub(r'<figure class="media">\1</figure>', body)
     body = YOUTUBE_RE.sub(
         lambda m: f'<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/{m.group(2)}" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>',
@@ -194,8 +237,13 @@ def render_markdown(track, slug, text, titles):
 
     def figma(m):
         embed = html.unescape(m.group(1))
-        file_url = parse_qs(urlparse(embed).query).get("url", [""])[0]
-        embed = re.sub(r"embed_host=[^&]+", "embed_host=share", embed)
+        u = urlparse(embed)
+        if u.netloc == "embed.figma.com":  # new style: the file path is in the URL itself
+            file_url = f"https://www.figma.com{u.path}"
+            embed = re.sub(r"embed-host=[^&]+", "embed-host=share", embed)
+        else:
+            file_url = parse_qs(u.query).get("url", [""])[0]
+            embed = re.sub(r"embed_host=[^&]+", "embed_host=share", embed)
         link = f'<a class="embed-link" href="{esc(file_url)}" target="_blank" rel="noopener">Open in Figma {ICON_EXT}</a>' if file_url else ""
         return (f'<figure class="video figma"><iframe src="{esc(embed)}" title="Figma file" loading="lazy" allowfullscreen></iframe></figure>{link}')
 
@@ -233,6 +281,10 @@ def describe(text):
         if len(b) < 40:
             continue
         return b if len(b) <= 180 else b[:177].rsplit(" ", 1)[0] + "…"
+    quote = re.search(r"^> *(\S.{39,})$", text, re.M)
+    if quote:
+        b = re.sub(r"[*_`]", "", quote.group(1)).strip()
+        return b if len(b) <= 180 else b[:177].rsplit(" ", 1)[0] + "…"
     return ""
 
 
@@ -240,7 +292,27 @@ def load():
     """Load every track and compute per-page stats."""
     data = {}
     for t in TRACKS:
-        d = json.loads((CONTENT / f"{t['id']}.json").read_text(encoding="utf-8"))
+        d = {"categories": [], "lectures": [], "subpages": []}
+        for f in [CONTENT / f"{t['id']}.json"] + sorted(CONTENT.glob(f"{t['id']}.*.json")):
+            part = json.loads(f.read_text(encoding="utf-8"))
+            d["categories"] += [c for c in part["categories"] if c not in d["categories"]]
+            d["lectures"] += part["lectures"]
+            d["subpages"] += part["subpages"]
+        if t["id"] in ORDER:
+            by = {l["slug"]: l for l in d["lectures"]}
+            listed = [s for slugs in ORDER[t["id"]].values() for s in slugs]
+            missing = set(by) - set(listed)
+            if missing or set(listed) - set(by):
+                raise SystemExit(f"ORDER[{t['id']!r}] is out of date. Not listed: {sorted(missing)}; "
+                                 f"no such page: {sorted(set(listed) - set(by))}")
+            d["categories"] = list(ORDER[t["id"]])
+            d["lectures"] = []
+            for cat, slugs in ORDER[t["id"]].items():
+                for slug in slugs:
+                    by[slug]["category"] = cat
+                    d["lectures"].append(by[slug])
+            for i, l in enumerate(d["lectures"], 1):
+                l["number"] = i
         every = d["lectures"] + d["subpages"]
         by_slug = {p["slug"]: p for p in every}
         for p in every:
@@ -248,7 +320,8 @@ def load():
             text = (CONTENT / t["id"] / p["slug"] / "index.md").read_text(encoding="utf-8")
             words = len(re.findall(r"\w+", re.sub(r"!\[[^\]]*\]\([^)]*\)|\([^)]*\)", "", text)))
             summary = SUMMARIES.get(f'{t["id"]}/{p["slug"]}')
-            p["description"] = summary or describe(text)
+            quote = re.search(r"^> *(\S[^\n]{39,})", text, re.M)  # sub-pages (e.g. typefaces) summarised by a one-line quote
+            p["description"] = summary or (re.sub(r"[*_`]", "", quote.group(1)).strip() if quote and p["parent"] else describe(text))
             p["lede"] = not p["description"] or bool(summary)  # only show a lede when it won't repeat the first paragraph
             p["minutes"] = max(1, round(words / 200))
             p["images"] = len(re.findall(r"!\[", text))
