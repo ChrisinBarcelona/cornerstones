@@ -676,3 +676,8 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
 .tracker-all:hover { background: var(--accent-soft); }
 .celebrate-badge { gap: 8px; }
 .celebrate-badge .badge-art + .badge-art { margin-left: -6px; }
+
+/* Timetable: lecture, Daily UI and project cards */
+.tt-card.kind-lecture { border-left: 3px solid #7c5cd6; }
+.tt-card.kind-daily { border-left: 3px solid #e0802c; }
+.tt-card.kind-project { border-left: 3px solid #d9467a; }

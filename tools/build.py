@@ -827,8 +827,36 @@ def tt_card(cid, kind, icon, title, props=(), text="", tags="", sub=""):
 </article>"""
 
 
+def page_tags(keys, data):
+    """Linked tags for pages on this site, by their short titles."""
+    out = []
+    for key in keys:
+        track, slug = key.split("/")
+        title = short(data[track]["by_slug"][slug]["title"]).replace("Beginner’s Guide to ", "").replace("Beginner’s Guide ", "")
+        out.append(tag(title, key, data))
+    return "".join(out)
+
+
+def check_timetable_coverage(tt, data):
+    """Every UX lecture, UI lecture, Figma lesson and exercise should be scheduled exactly once."""
+    seen = []
+    for w in tt["weeks"]:
+        if w.get("project_exercise"):
+            seen.append(w["project_exercise"])
+        for d in w["days"]:
+            seen += d.get("lectures", []) + d.get("ui", []) + ([d["daily"]] if d.get("daily") else [])
+            seen += (d.get("workshop") or {}).get("lessons", [])
+    wanted = [f"{k}/{l['slug']}" for k in ("ux", "ui", "figma", "exercises") for l in data[k]["lectures"]]
+    missing = [k for k in wanted if k not in seen]
+    twice = sorted({k for k in seen if seen.count(k) > 1})
+    if missing or twice:
+        print(f"timetable: not scheduled: {missing}; scheduled more than once: {twice}")
+    return len(wanted) - len(missing)
+
+
 def build_timetable(data):
     tt = json.loads((CONTENT / "timetable.json").read_text(encoding="utf-8"))
+    covered = check_timetable_coverage(tt, data)
     r = tt["routine"]
     days = tt["days"]
     head = "".join(f'<div class="tt-colhead"><span class="tt-daypill d{i}">Day {i}</span><span>{d}</span></div>'
@@ -846,9 +874,19 @@ def build_timetable(data):
                 cards.append(tt_card(f"{cid}-sprint", "sprint", "🚀", f'{w["code"]} | {w["theme"]}', sub=name,
                                      text=f'{esc(w["summary"])}<span class="tt-ai"><b>AI in this sprint:</b> {esc(w["ai"])}</span>',
                                      tags="".join(tag(t) for t in w["tools"])))
+            if d_i == 1 and w.get("project_exercise"):
+                cards.append(tt_card(f"{cid}-project", "project", "🧩", "Project this week",
+                                     text="Work on it in the afternoons, alongside the sprint.",
+                                     tags=page_tags([w["project_exercise"]], data)))
             if day.get("checkpoint"):
                 cards.append(tt_card(f"{cid}-checkpoint", "checkpoint", "🏁", "Check Point", ("11:00", "5 min per presentation"),
                                      text="Informal presentations by students, with feedback from the teacher."))
+            if day.get("lectures"):
+                cards.append(tt_card(f"{cid}-lecture", "lecture", "🏛️",
+                                     "Cornerstone Lecture" + ("s" if len(day["lectures"]) > 1 else ""),
+                                     tags=page_tags(day["lectures"], data)))
+            if day.get("ui"):
+                cards.append(tt_card(f"{cid}-ui", "lecture", "📐", "UI Theory", tags=page_tags(day["ui"], data)))
             cards.append(tt_card(f"{cid}-activities", "activities", "🤸", "Activities for the Day",
                                  tags="".join(tag(a["label"], a.get("link"), data) for a in day["activities"])))
             if day.get("workshop"):
@@ -866,6 +904,12 @@ def build_timetable(data):
                 else:
                     ws_tags = tag(ws.get("tag") or "Portfolio site", ws.get("link"), data)
                 cards.append(tt_card(f"{cid}-workshop", "workshop", icon, ws["title"], tags=ws_tags))
+            if day.get("daily"):
+                track, slug = day["daily"].split("/")
+                level = data[track]["by_slug"][slug]["difficulty"]
+                cards.append(tt_card(f"{cid}-daily", "daily", "✏️", "Daily UI",
+                                     props=(f"Difficulty {level} of 5",) if level else (),
+                                     tags=page_tags([day["daily"]], data)))
             cards.append(tt_card(f"{cid}-lunch", "routine", r["lunch"]["icon"], r["lunch"]["title"], (r["lunch"]["time"],)))
             if day.get("presentation"):
                 cards.append(tt_card(f"{cid}-presentation", "presentation", "🎤", day["presentation"]))
@@ -887,7 +931,7 @@ def build_timetable(data):
       <div>
         <div class="eyebrow">In-Person Bootcamp · UX Day by Day</div>
         <h1>Timetable</h1>
-        <p class="lede">Nine weeks, {esc(tt["hours"].replace("Monday to Friday, ", "Monday to Friday, "))}. Every week is a sprint: a brief on Monday, a presentation on Friday. Tags with an arrow open the matching lesson or method.</p>
+        <p class="lede">Nine weeks covering all {covered} lectures, lessons and exercises on this site, {esc(tt["hours"])}. Every week is a sprint: a brief on Monday, a presentation on Friday. Tags with an arrow open the matching lesson or method.</p>
       </div>
       <div class="tt-tools">
         <span class="tt-overall" id="tt-overall"></span>

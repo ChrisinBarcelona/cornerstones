@@ -1,139 +1,853 @@
 {
-  "_note": "The 9-week timetable. Week titles, summaries, daily activities, AI notes and tools come from barcelonacodeschool.com/ux-design-bootcamp-in-barcelona-code-school/. The daily routine, Figma/Framer workshops and Check Points come from the Notion 'UX Day by Day' board; each Figma workshop lists the Figma lessons it covers, and the Week 7 Variables workshop is a suggested placement. A tag's 'link' is a page on this site (section/slug).",
+  "_note": "The 9-week timetable. Week titles, summaries, daily activities, AI notes and tools come from barcelonacodeschool.com/ux-design-bootcamp-in-barcelona-code-school/. The daily routine, Figma/Framer workshops and Check Points come from the Notion 'UX Day by Day' board; each Figma workshop lists the Figma lessons it covers, and the Week 7 Variables workshop is a suggested placement. A tag's 'link' is a page on this site (section/slug). Cornerstone (UX) lectures, UI Theory lectures, Daily UI briefs, weekly projects and the extra method links on each day are a suggested schedule so every lecture and exercise is covered once across the nine weeks.",
   "hours": "Monday to Friday, 10:00–17:00 CET",
-  "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+  "days": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+  ],
   "routine": {
-    "standup": {"title": "Daily Stand Up", "icon": "☀️", "time": "10:00", "length": "15 min", "text": "Morning scrum that gives focus for the day ahead."},
-    "lunch": {"title": "Lunch Break", "icon": "🍔", "time": "12:30–13:30"},
-    "checkout": {"title": "Daily Check Out", "icon": "🌙", "time": "16:00–16:30", "length": "15–30 min", "text": "Evening scrum that gives closure for the day past."}
+    "standup": {
+      "title": "Daily Stand Up",
+      "icon": "☀️",
+      "time": "10:00",
+      "length": "15 min",
+      "text": "Morning scrum that gives focus for the day ahead."
+    },
+    "lunch": {
+      "title": "Lunch Break",
+      "icon": "🍔",
+      "time": "12:30–13:30"
+    },
+    "checkout": {
+      "title": "Daily Check Out",
+      "icon": "🌙",
+      "time": "16:00–16:30",
+      "length": "15–30 min",
+      "text": "Evening scrum that gives closure for the day past."
+    }
   },
   "weeks": [
     {
-      "code": "W01", "theme": "Discovery", "project": "Service Design", "part": "Part One",
+      "code": "W01",
+      "theme": "Discovery",
+      "project": "Service Design",
+      "part": "Part One",
       "summary": "A two-week service design sprint. Go out into the real world, map how a service actually behaves today, and build the evidence base for redesigning it.",
       "ai": "Claude for desk research synthesis and benchmarking matrices; multimodal inspiration loops for moodboarding.",
-      "tools": ["Figma", "FigJam", "Claude"],
+      "tools": [
+        "Figma",
+        "FigJam",
+        "Claude"
+      ],
       "days": [
-        {"activities": [{"label": "Sprint brief"}, {"label": "Site visit"}, {"label": "'As-Is' customer journey mapping", "link": "methods/user-journey-map"}],
-         "workshop": {"title": "Figma Workshop (1)", "tag": "Basics", "lessons": ["figma/choose-your-frame", "figma/starting-in-figma", "figma/beginners-guide-to-grids"]}},
-        {"activities": [{"label": "Service design blueprint"}],
-         "workshop": {"title": "Figma Workshop (2)", "tag": "Auto Layout", "lessons": ["figma/beginners-guide-to-nesting", "figma/beginners-guide-auto-layout", "figma/beginners-guide-to-8-point-grid-system"]}},
-        {"activities": [{"label": "Indirect benchmarking", "link": "methods/competitive-analysis"}],
-         "workshop": {"title": "Figma Workshop (3)", "tag": "Components", "lessons": ["figma/beginners-guide-to-components", "figma/navbar"]}},
-        {"activities": [{"label": "Inspiration"}, {"label": "Moodboard", "link": "methods/mood-board"}, {"label": "Brand pack"}, {"label": "AI-assisted multimodal visual loops"}],
-         "workshop": {"title": "Figma Workshop (4)", "tag": "Properties", "lessons": ["figma/dynamic-buttons-part-one", "figma/dynamic-buttons-part-deux"]}},
-        {"activities": [{"label": "Checkpoint presentation"}], "checkpoint": true,
-         "workshop": {"title": "Figma Workshop (5)", "tag": "App Replica", "link": "exercises/glovo-replica-challenge"}}
+        {
+          "activities": [
+            {
+              "label": "Sprint brief"
+            },
+            {
+              "label": "Site visit"
+            },
+            {
+              "label": "'As-Is' customer journey mapping",
+              "link": "methods/user-journey-map"
+            }
+          ],
+          "workshop": {
+            "title": "Figma Workshop (1)",
+            "tag": "Basics",
+            "lessons": [
+              "figma/choose-your-frame",
+              "figma/starting-in-figma",
+              "figma/beginners-guide-to-grids"
+            ]
+          },
+          "lectures": [
+            "ux/design-origins",
+            "ux/starting-point"
+          ],
+          "daily": "exercises/sidebar"
+        },
+        {
+          "activities": [
+            {
+              "label": "Service design blueprint"
+            }
+          ],
+          "workshop": {
+            "title": "Figma Workshop (2)",
+            "tag": "Auto Layout",
+            "lessons": [
+              "figma/beginners-guide-to-nesting",
+              "figma/beginners-guide-auto-layout",
+              "figma/beginners-guide-to-8-point-grid-system"
+            ]
+          },
+          "lectures": [
+            "ux/what-is-ux-design"
+          ],
+          "daily": "exercises/friends-list"
+        },
+        {
+          "activities": [
+            {
+              "label": "Indirect benchmarking",
+              "link": "methods/competitive-analysis"
+            }
+          ],
+          "workshop": {
+            "title": "Figma Workshop (3)",
+            "tag": "Components",
+            "lessons": [
+              "figma/beginners-guide-to-components",
+              "figma/navbar"
+            ]
+          },
+          "lectures": [
+            "ux/the-father-of-ux"
+          ],
+          "daily": "exercises/new-notification"
+        },
+        {
+          "activities": [
+            {
+              "label": "Inspiration"
+            },
+            {
+              "label": "Moodboard",
+              "link": "methods/mood-board"
+            },
+            {
+              "label": "Brand pack"
+            },
+            {
+              "label": "AI-assisted multimodal visual loops"
+            }
+          ],
+          "workshop": {
+            "title": "Figma Workshop (4)",
+            "tag": "Properties",
+            "lessons": [
+              "figma/dynamic-buttons-part-one",
+              "figma/dynamic-buttons-part-deux"
+            ]
+          },
+          "lectures": [
+            "ux/what-is-ui-design"
+          ],
+          "ui": [
+            "ui/colour-values"
+          ],
+          "daily": "exercises/bottom-sheet"
+        },
+        {
+          "activities": [
+            {
+              "label": "Checkpoint presentation"
+            }
+          ],
+          "checkpoint": true,
+          "workshop": {
+            "title": "Figma Workshop (5)",
+            "tag": "App Replica",
+            "link": "exercises/glovo-replica-challenge"
+          },
+          "lectures": [
+            "ux/key-roles"
+          ],
+          "daily": "exercises/sign-in"
+        }
       ]
     },
     {
-      "code": "W02", "theme": "Business Week", "project": "Lean Startup Project", "part": "Part One",
+      "code": "W02",
+      "theme": "Business Week",
+      "project": "Lean Startup Project",
+      "part": "Part One",
       "summary": "A startup business and design sprint that goes beyond UX into high-level market decisions. Learn to argue for a design in the language a business actually uses.",
       "ai": "Structured prompting to pressure-test assumptions, generate survey drafts you then edit as a researcher, and cluster open-ended responses.",
-      "tools": ["Claude", "Figma", "FigJam", "Google Forms"],
+      "tools": [
+        "Claude",
+        "Figma",
+        "FigJam",
+        "Google Forms"
+      ],
       "days": [
-        {"activities": [{"label": "Sprint brief"}, {"label": "Lean UX Canvas built with Claude", "link": "methods/lean-ux-canvas"}]},
-        {"activities": [{"label": "Research questions", "link": "methods/research-questions"}, {"label": "Research goals", "link": "methods/research-goal"}, {"label": "Business Model Canvas"}]},
-        {"activities": [{"label": "User survey design and distribution", "link": "methods/user-survey"}]},
-        {"activities": [{"label": "User interviews", "link": "methods/user-interview"}, {"label": "Customer persona building", "link": "methods/user-persona"}]},
-        {"activities": [{"label": "Checkpoint presentation"}], "checkpoint": true}
-      ]
+        {
+          "activities": [
+            {
+              "label": "Sprint brief"
+            },
+            {
+              "label": "Lean UX Canvas built with Claude",
+              "link": "methods/lean-ux-canvas"
+            },
+            {
+              "label": "Long term goal",
+              "link": "methods/long-term-goal"
+            },
+            {
+              "label": "How might we",
+              "link": "methods/how-might-we"
+            }
+          ],
+          "lectures": [
+            "ux/key-figures"
+          ],
+          "daily": "exercises/cc-checkout"
+        },
+        {
+          "activities": [
+            {
+              "label": "Research questions",
+              "link": "methods/research-questions"
+            },
+            {
+              "label": "Research goals",
+              "link": "methods/research-goal"
+            },
+            {
+              "label": "Business Model Canvas"
+            }
+          ],
+          "lectures": [
+            "ux/what-is-design-thinking"
+          ],
+          "daily": "exercises/video-player"
+        },
+        {
+          "activities": [
+            {
+              "label": "User survey design and distribution",
+              "link": "methods/user-survey"
+            }
+          ],
+          "lectures": [
+            "ux/data"
+          ],
+          "daily": "exercises/choose-a-movie"
+        },
+        {
+          "activities": [
+            {
+              "label": "User interviews",
+              "link": "methods/user-interview"
+            },
+            {
+              "label": "Customer persona building",
+              "link": "methods/user-persona"
+            }
+          ],
+          "lectures": [
+            "ux/non-directive-interview-technique",
+            "ux/interview-taking-notes"
+          ],
+          "daily": "exercises/music-player"
+        },
+        {
+          "activities": [
+            {
+              "label": "Checkpoint presentation"
+            }
+          ],
+          "checkpoint": true,
+          "lectures": [
+            "ux/the-death-of-kodak",
+            "ux/a-case-of-genius"
+          ],
+          "daily": "exercises/home-monitor-dash"
+        }
+      ],
+      "project_exercise": "exercises/glovo-replica-challenge"
     },
     {
-      "code": "W03", "theme": "Test the Design", "project": "Service Design", "part": "Part Two",
+      "code": "W03",
+      "theme": "Test the Design",
+      "project": "Service Design",
+      "part": "Part Two",
       "summary": "Back to week one's service design sprint, ending by putting your design decisions in front of real prospective users – in public, not in a classroom.",
       "ai": "Prompt-to-prototype for mid-fidelity screens, then AI-assisted synthesis of testing notes into themes you verify against the raw data.",
-      "tools": ["Figma", "Claude", "Claude Design"],
+      "tools": [
+        "Figma",
+        "Claude",
+        "Claude Design"
+      ],
       "days": [
-        {"activities": [{"label": "Paper wireframes", "link": "methods/paper-wireframes"}]},
-        {"activities": [{"label": "Mid-fi prototyping with AI"}]},
-        {"activities": [{"label": "Hi-fi prototyping", "link": "methods/hi-fi"}]},
-        {"activities": [{"label": "Usability testing sessions", "link": "methods/usability-test"}, {"label": "Data synthesis with AI"}]},
-        {"activities": [{"label": "General audience-style presentation"}], "presentation": "General audience-style presentation"}
-      ]
+        {
+          "activities": [
+            {
+              "label": "Paper wireframes",
+              "link": "methods/paper-wireframes"
+            },
+            {
+              "label": "Lo-fi",
+              "link": "methods/lo-fi"
+            }
+          ],
+          "lectures": [
+            "ux/stages-of-wireframes"
+          ],
+          "ui": [
+            "ui/paper-wireframes"
+          ],
+          "daily": "exercises/user-profile-page"
+        },
+        {
+          "activities": [
+            {
+              "label": "Mid-fi prototyping with AI"
+            }
+          ],
+          "lectures": [
+            "ux/mental-models"
+          ],
+          "ui": [
+            "ui/spacing-grids"
+          ],
+          "daily": "exercises/make-an-ai-interface"
+        },
+        {
+          "activities": [
+            {
+              "label": "Hi-fi prototyping",
+              "link": "methods/hi-fi"
+            }
+          ],
+          "lectures": [
+            "ux/laws-of-ux"
+          ],
+          "ui": [
+            "ui/typeface"
+          ],
+          "daily": "exercises/product-card"
+        },
+        {
+          "activities": [
+            {
+              "label": "Usability testing sessions",
+              "link": "methods/usability-test"
+            },
+            {
+              "label": "Data synthesis with AI"
+            },
+            {
+              "label": "Create your script",
+              "link": "methods/create-your-script"
+            },
+            {
+              "label": "Facilitator format",
+              "link": "methods/facilitator-format"
+            },
+            {
+              "label": "Notetaker format",
+              "link": "methods/notetaker-format"
+            },
+            {
+              "label": "Limited intervention technique",
+              "link": "methods/limited-intervention-technique"
+            }
+          ],
+          "lectures": [
+            "ux/interviewer-format",
+            "ux/neilson-heuristics"
+          ],
+          "daily": "exercises/ux-x-ai"
+        },
+        {
+          "activities": [
+            {
+              "label": "General audience-style presentation"
+            }
+          ],
+          "presentation": "General audience-style presentation"
+        }
+      ],
+      "project_exercise": "exercises/youtube-challenge"
     },
     {
-      "code": "W04", "theme": "App Design", "project": "Lean Startup Project", "part": "Part Two",
+      "code": "W04",
+      "theme": "App Design",
+      "project": "Lean Startup Project",
+      "part": "Part Two",
       "summary": "Back to the startup project to work out the core purpose and functionality of an app. Know what your users need – and, harder, what they don't.",
       "ai": "Design-system-aware generation, AI affinity clustering, and Desirability–Viability–Feasibility analysis with an AI sparring partner.",
-      "tools": ["Figma", "Claude", "Claude Design"],
+      "tools": [
+        "Figma",
+        "Claude",
+        "Claude Design"
+      ],
       "days": [
-        {"activities": [{"label": "Paper wireframes", "link": "methods/paper-wireframes"}]},
-        {"activities": [{"label": "Mid-fi prototyping"}, {"label": "Usability testing", "link": "methods/usability-test"}]},
-        {"activities": [{"label": "Moodboard", "link": "methods/mood-board"}, {"label": "Brand pack"}, {"label": "Affinity synthesis"}, {"label": "Preference testing"}]},
-        {"activities": [{"label": "Hi-fi prototyping", "link": "methods/hi-fi"}, {"label": "Usability testing sessions", "link": "methods/usability-test"}, {"label": "DVF analysis"}]},
-        {"activities": [{"label": "General audience-style presentation"}], "presentation": "General audience-style presentation"}
+        {
+          "activities": [
+            {
+              "label": "Paper wireframes",
+              "link": "methods/paper-wireframes"
+            },
+            {
+              "label": "Pick a target",
+              "link": "methods/pick-a-target"
+            }
+          ],
+          "lectures": [
+            "ux/target-mvp"
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Mid-fi prototyping"
+            },
+            {
+              "label": "Usability testing",
+              "link": "methods/usability-test"
+            }
+          ],
+          "lectures": [
+            "ux/design-psychology"
+          ],
+          "ui": [
+            "ui/icons"
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Moodboard",
+              "link": "methods/mood-board"
+            },
+            {
+              "label": "Brand pack"
+            },
+            {
+              "label": "Affinity synthesis"
+            },
+            {
+              "label": "Preference testing"
+            }
+          ],
+          "lectures": [
+            "ux/the-bias-of-beauty"
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Hi-fi prototyping",
+              "link": "methods/hi-fi"
+            },
+            {
+              "label": "Usability testing sessions",
+              "link": "methods/usability-test"
+            },
+            {
+              "label": "DVF analysis"
+            }
+          ],
+          "lectures": [
+            "ux/gestures",
+            "ux/haptics"
+          ],
+          "ui": [
+            "ui/file-types"
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "General audience-style presentation"
+            }
+          ],
+          "presentation": "General audience-style presentation",
+          "lectures": [
+            "ux/bad-user-experience"
+          ]
+        }
       ]
     },
     {
-      "code": "W05", "theme": "Write-Up Week", "project": "Case Study", "part": "",
+      "code": "W05",
+      "theme": "Write-Up Week",
+      "project": "Case Study",
+      "part": "",
       "summary": "A full week to turn two finished sprints into written case studies – the week most bootcamps skip, and the reason most junior portfolios never get read past the first screen.",
       "ai": "Using AI as an editor and critic, not a ghostwriter. Quality rubrics that keep your voice and kill generic AI-written filler.",
-      "tools": ["Claude", "Notion", "Figma"],
+      "tools": [
+        "Claude",
+        "Notion",
+        "Figma"
+      ],
       "days": [
-        {"activities": [{"label": "Storyframing and outlining case studies", "link": "ui/case-studies-and-how-to-tell-a-good-story"}, {"label": "Service design and lean startup projects"}]},
-        {"activities": [{"label": "Synthesising and cataloguing artifacts from all prior projects"}]},
-        {"activities": [{"label": "Problem statements", "link": "methods/problem-statement"}, {"label": "Process narratives"}, {"label": "Solution impact"}]},
-        {"activities": [{"label": "Peer review"}, {"label": "Feedback cross-checks"}, {"label": "Iteration"}]},
-        {"activities": [{"label": "Final case study polish"}, {"label": "Multi-project portfolio submission"}]}
-      ]
+        {
+          "activities": [
+            {
+              "label": "Storyframing and outlining case studies",
+              "link": "ui/case-studies-and-how-to-tell-a-good-story"
+            },
+            {
+              "label": "Service design and lean startup projects"
+            },
+            {
+              "label": "Sprint retrospective",
+              "link": "methods/sprint-retrospective"
+            }
+          ],
+          "ui": [
+            "ui/case-studies-and-how-to-tell-a-good-story"
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Synthesising and cataloguing artifacts from all prior projects"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Problem statements",
+              "link": "methods/problem-statement"
+            },
+            {
+              "label": "Process narratives"
+            },
+            {
+              "label": "Solution impact"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Peer review"
+            },
+            {
+              "label": "Feedback cross-checks"
+            },
+            {
+              "label": "Iteration"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Final case study polish"
+            },
+            {
+              "label": "Multi-project portfolio submission"
+            }
+          ]
+        }
+      ],
+      "project_exercise": "exercises/stage-play"
     },
     {
-      "code": "W06", "theme": "The Wicked Project", "project": "High-Stakes Sprint", "part": "",
+      "code": "W06",
+      "theme": "The Wicked Project",
+      "project": "High-Stakes Sprint",
+      "part": "",
       "summary": "A high-stakes challenge with no clean answer. Using Claude Code and Claude Design, deep-dive into design thinking as a method for tackling genuinely messy, systemic problems.",
       "ai": "Claude Code and Claude Design for building working concept prototypes in hours instead of weeks; context engineering for long, complex research threads.",
-      "tools": ["Claude Code", "Claude Design", "Figma"],
+      "tools": [
+        "Claude Code",
+        "Claude Design",
+        "Figma"
+      ],
       "days": [
-        {"activities": [{"label": "Choose a wicked topic", "link": "ux/wicked-problem"}]},
-        {"activities": [{"label": "Wicked problem mapping"}]},
-        {"activities": [{"label": "Desk research"}, {"label": "Problem definition", "link": "methods/problem-statement"}]},
-        {"activities": [{"label": "Rapid iteration"}, {"label": "Concept prototyping"}]},
-        {"activities": [{"label": "Solution pitch"}, {"label": "Concept design review"}], "presentation": "Solution pitch and concept design review"}
+        {
+          "activities": [
+            {
+              "label": "Choose a wicked topic",
+              "link": "ux/wicked-problem"
+            }
+          ],
+          "lectures": [
+            "ux/wicked-problem"
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Wicked problem mapping"
+            }
+          ],
+          "lectures": [
+            "ux/bias"
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Desk research"
+            },
+            {
+              "label": "Problem definition",
+              "link": "methods/problem-statement"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Rapid iteration"
+            },
+            {
+              "label": "Concept prototyping"
+            },
+            {
+              "label": "Crazy 8's",
+              "link": "methods/crazy-8s"
+            },
+            {
+              "label": "Crazy 8's with AI",
+              "link": "methods/crazy-8s-with-ai"
+            },
+            {
+              "label": "Converge / diverge",
+              "link": "methods/converge-diverge"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Solution pitch"
+            },
+            {
+              "label": "Concept design review"
+            },
+            {
+              "label": "Solution sketch",
+              "link": "methods/solution-sketch"
+            },
+            {
+              "label": "Vote",
+              "link": "methods/vote"
+            }
+          ],
+          "presentation": "Solution pitch and concept design review"
+        }
       ]
     },
     {
-      "code": "W07", "theme": "Research and Definition", "project": "Personal Project", "part": "Part One",
+      "code": "W07",
+      "theme": "Research and Definition",
+      "project": "Personal Project",
+      "part": "Part One",
       "summary": "A two-week personal project – your first chance to develop and defend your own UX methodology. Choose the topic: something entirely your own, or a continuation of an earlier sprint.",
       "ai": "Building your own reusable AI workflow – Claude.md and Skill.md project files so the model knows your product, your users and your standards.",
-      "tools": ["Figma", "FigJam", "Claude", "Claude Code"],
+      "tools": [
+        "Figma",
+        "FigJam",
+        "Claude",
+        "Claude Code"
+      ],
       "days": [
-        {"activities": [{"label": "Pitch"}, {"label": "Choose your UX research methods", "link": "methods"}]},
-        {"activities": [{"label": "Field research"}, {"label": "Primary data collection", "link": "methods/user-interview"}]},
-        {"activities": [{"label": "Synthesis", "link": "methods/discovery-summary"}, {"label": "Definition phase", "link": "methods/problem-statement"}]},
-        {"activities": [{"label": "Information architecture", "link": "methods/task-flows"}]},
-        {"activities": [{"label": "Design system and branding", "link": "methods/style-guide"}],
-         "workshop": {"title": "Figma Workshop: Variables", "tag": "Variables", "lessons": ["figma/color-variables", "figma/number-variables", "figma/string-variables", "figma/variable-modes"]}}
+        {
+          "activities": [
+            {
+              "label": "Pitch"
+            },
+            {
+              "label": "Choose your UX research methods",
+              "link": "methods"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Field research"
+            },
+            {
+              "label": "Primary data collection",
+              "link": "methods/user-interview"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Synthesis",
+              "link": "methods/discovery-summary"
+            },
+            {
+              "label": "Definition phase",
+              "link": "methods/problem-statement"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Information architecture",
+              "link": "methods/task-flows"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Design system and branding",
+              "link": "methods/style-guide"
+            }
+          ],
+          "workshop": {
+            "title": "Figma Workshop: Variables",
+            "tag": "Variables",
+            "lessons": [
+              "figma/color-variables",
+              "figma/number-variables",
+              "figma/string-variables",
+              "figma/variable-modes"
+            ]
+          },
+          "ui": [
+            "ui/atomic-design-methodology",
+            "ui/style-guides"
+          ]
+        }
       ]
     },
     {
-      "code": "W08", "theme": "Build and Test", "project": "Personal Project", "part": "Part Two",
+      "code": "W08",
+      "theme": "Build and Test",
+      "project": "Personal Project",
+      "part": "Part Two",
       "summary": "The second half of the personal project: from paper to a high-fidelity, tested product, with the before-and-after evidence that hiring managers ask for.",
       "ai": "Automated verification and LLM-as-a-judge testing loops to catch accessibility, consistency and content errors before your users do.",
-      "tools": ["Figma", "Claude", "Claude Design"],
+      "tools": [
+        "Figma",
+        "Claude",
+        "Claude Design"
+      ],
       "days": [
-        {"activities": [{"label": "Paper wireframes", "link": "methods/paper-wireframes"}]},
-        {"activities": [{"label": "High-fidelity prototyping", "link": "methods/hi-fi"}]},
-        {"activities": [{"label": "High-fidelity usability testing", "link": "methods/usability-test"}]},
-        {"activities": [{"label": "Iteration: 'before and after' screens", "link": "methods/design-iteration"}]},
-        {"activities": [{"label": "General audience-style presentation"}], "presentation": "General audience-style presentation"}
+        {
+          "activities": [
+            {
+              "label": "Paper wireframes",
+              "link": "methods/paper-wireframes"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "High-fidelity prototyping",
+              "link": "methods/hi-fi"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "High-fidelity usability testing",
+              "link": "methods/usability-test"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Iteration: 'before and after' screens",
+              "link": "methods/design-iteration"
+            }
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "General audience-style presentation"
+            }
+          ],
+          "presentation": "General audience-style presentation"
+        }
       ]
     },
     {
-      "code": "W09", "theme": "Portfolio Week", "project": "Ship It", "part": "",
+      "code": "W09",
+      "theme": "Portfolio Week",
+      "project": "Ship It",
+      "part": "",
       "summary": "Use the latest AI tools to build and ship your own portfolio website. Leave with skills, theory, case studies and a live portfolio – ready to start applying.",
       "ai": "Shipping a real, hosted site with Framer AI or Claude Code – plus how to talk about your AI workflow in an interview without sounding like you outsourced your thinking.",
-      "tools": ["Framer AI", "Claude Code", "Figma"],
+      "tools": [
+        "Framer AI",
+        "Claude Code",
+        "Figma"
+      ],
       "days": [
-        {"activities": [{"label": "Case study write-up review", "link": "ui/case-studies-and-how-to-tell-a-good-story"}],
-         "workshop": {"title": "Framer Workshop (1)", "link": "ux/portfolio"}},
-        {"activities": [{"label": "Site mapping"}],
-         "workshop": {"title": "Framer Workshop (2)", "link": "ux/portfolio"}},
-        {"activities": [{"label": "Paper wireframes", "link": "methods/paper-wireframes"}, {"label": "Style guide", "link": "methods/style-guide"}],
-         "workshop": {"title": "Framer Workshop (3)", "link": "ux/portfolio"}},
-        {"activities": [{"label": "Website development with Framer AI, or Claude Code with GitHub and React.js", "link": "ux/portfolio"}],
-         "workshop": {"title": "Framer Workshop (4)", "link": "ux/portfolio"}},
-        {"activities": [{"label": "Final portfolio presentation"}], "presentation": "Final Presentation",
-         "workshop": {"title": "Framer Workshop (5)", "link": "ux/portfolio"}}
+        {
+          "activities": [
+            {
+              "label": "Case study write-up review",
+              "link": "ui/case-studies-and-how-to-tell-a-good-story"
+            }
+          ],
+          "workshop": {
+            "title": "Framer Workshop (1)",
+            "link": "ux/portfolio"
+          },
+          "lectures": [
+            "ux/portfolio",
+            "ux/scripts"
+          ]
+        },
+        {
+          "activities": [
+            {
+              "label": "Site mapping"
+            }
+          ],
+          "workshop": {
+            "title": "Framer Workshop (2)",
+            "link": "ux/portfolio"
+          }
+        },
+        {
+          "activities": [
+            {
+              "label": "Paper wireframes",
+              "link": "methods/paper-wireframes"
+            },
+            {
+              "label": "Style guide",
+              "link": "methods/style-guide"
+            }
+          ],
+          "workshop": {
+            "title": "Framer Workshop (3)",
+            "link": "ux/portfolio"
+          }
+        },
+        {
+          "activities": [
+            {
+              "label": "Website development with Framer AI, or Claude Code with GitHub and React.js",
+              "link": "ux/portfolio"
+            }
+          ],
+          "workshop": {
+            "title": "Framer Workshop (4)",
+            "link": "ux/portfolio"
+          }
+        },
+        {
+          "activities": [
+            {
+              "label": "Final portfolio presentation"
+            }
+          ],
+          "presentation": "Final Presentation",
+          "workshop": {
+            "title": "Framer Workshop (5)",
+            "link": "ux/portfolio"
+          }
+        }
       ]
     }
   ]
