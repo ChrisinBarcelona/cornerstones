@@ -462,7 +462,8 @@
             "ux/bad-user-experience"
           ]
         }
-      ]
+      ],
+      "project_exercise": "exercises/airbnb-replica-challenge"
     },
     {
       "code": "W05",

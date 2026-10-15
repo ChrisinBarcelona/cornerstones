@@ -1,7 +1,25 @@
 {
-  "categories": ["Team Projects"],
+  "categories": [
+    "Replica Challenges",
+    "Team Projects"
+  ],
   "lectures": [
-    {"slug": "stage-play", "title": "Stage Play", "parent": null, "children": [], "number": 1, "category": "Team Projects"}
+    {
+      "slug": "airbnb-replica-challenge",
+      "title": "Airbnb Replica Challenge",
+      "parent": null,
+      "children": [],
+      "number": 1,
+      "category": "Replica Challenges"
+    },
+    {
+      "slug": "stage-play",
+      "title": "Stage Play",
+      "parent": null,
+      "children": [],
+      "number": 1,
+      "category": "Team Projects"
+    }
   ],
   "subpages": []
 }
