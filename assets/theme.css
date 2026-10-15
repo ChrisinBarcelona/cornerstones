@@ -359,8 +359,8 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .tracker-note { border-top: 0; }
 .celebrate-card { border: 0; border-radius: var(--r-xl); background: var(--paper); }
 .login-submit { border-radius: var(--r-pill); background: var(--ink); color: var(--paper); }
-.login-page { background: radial-gradient(900px 500px at 15% 0%, color-mix(in srgb, var(--c-methods) 35%, transparent), transparent 70%),
-  radial-gradient(900px 500px at 100% 100%, color-mix(in srgb, var(--c-figma) 30%, transparent), transparent 70%), var(--paper); }
+.login-page { background: radial-gradient(900px 520px at 15% 0%, rgba(0, 98, 255, .22), transparent 70%),
+  radial-gradient(900px 520px at 100% 100%, rgba(0, 43, 113, .2), transparent 70%), var(--paper); }
 .login-card { border: 0; border-radius: var(--r-xl); }
 .field input { border-radius: var(--r-pill); border: 0; background: var(--paper); padding: 0 18px; }
 .pw-toggle { font-family: var(--font); text-transform: none; letter-spacing: 0; right: 10px; color: var(--ink); }
@@ -397,9 +397,12 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .logo-text { display: flex; flex-direction: column; line-height: 1; }
 .logo-name { font: 800 19px/1 var(--display); letter-spacing: -.02em; }
 .logo-sub { margin-top: 4px; font: 500 12px/1.1 var(--font); color: var(--ink-soft); letter-spacing: .005em; }
-.login-brand.logo { justify-content: center; }
-.login-brand .logo-mark { width: 44px; height: 44px; }
-.login-brand .logo-name { font-size: 22px; }
+/* Login: the hexagon is the centrepiece, with the name underneath. */
+.login-brand.logo { flex-direction: column; justify-content: center; text-align: center; gap: 14px; }
+.login-brand .logo-mark { width: 96px; height: 96px; filter: drop-shadow(0 14px 22px rgba(0, 43, 113, .28)); }
+.login-brand .logo-text { align-items: center; }
+.login-brand .logo-name { font-size: 30px; }
+.login-brand .logo-sub { font-size: 14px; }
 @media (max-width: 1100px) { .nav-links a { padding: 7px 8px; font-size: 13px; } .nav-inner { gap: 12px; } }
 @media (max-width: 420px) { .nav .logo-name { font-size: 17px; } .nav .logo-sub { font-size: 11px; } .nav .logo { gap: 9px; } .nav .logo-mark { width: 32px; height: 32px; } }
 @media (max-width: 330px) { .nav .logo-sub { display: none; } }
