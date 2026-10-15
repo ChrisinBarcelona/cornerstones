@@ -1,6 +1,8 @@
 """Render content/ into the static site.
 
-    index.html      UX lectures        -> lectures/<slug>.html
+    index.html      Course home: the four sections, a suggested route and a search of everything
+    ux.html         UX lectures        -> lectures/<slug>.html
+    methods.html    UX methods         -> methods/<slug>.html
     ui.html         UI lectures        -> ui/<slug>.html
     exercises.html  Exercises          -> exercises/<slug>.html
 
@@ -22,12 +24,23 @@ SITE = "Cornerstones"
 TAGLINE = "UX & UI learning resource for Barcelona Code School"
 
 TRACKS = [
-    {"id": "ux", "out": "lectures", "index": "index.html", "label": "UX Lectures", "noun": "Lecture",
-     "eyebrow": "UX Learning Resource", "h1": "Cornerstones of UX Design, in order",
-     "intro": "{n} lectures and {s} sub-lessons on the history, psychology and practice of user experience design. Pick any lecture to open the full notes."},
+    {"id": "ux", "out": "lectures", "index": "ux.html", "label": "UX Lectures", "noun": "Lecture",
+     "eyebrow": "UX Learning Resource", "h1": "UX Lectures",
+     "blurb": "The history, psychology and practice of user experience design.",
+     "intro": "{n} lectures on the history, psychology and practice of UX, grouped by topic.",
+     "chapters": {
+         "Foundations": "Where UX comes from, what it is, and the people and roles behind it.",
+         "Psychology": "How people perceive, decide and behave, and the laws and heuristics that follow.",
+         "Process": "How design thinking works, from data and wicked problems to MVPs and wireframes.",
+         "Interface": "UI basics, and how people physically interact: gestures and haptics.",
+         "Case Studies": "Real products that got UX very right, or very wrong.",
+         "Research": "How to interview users and take notes that are useful.",
+         "Career": "Building your portfolio.",
+     }},
     {"id": "methods", "out": "methods", "index": "methods.html", "label": "UX Methods", "noun": "Method",
-     "eyebrow": "Sprint Toolkit", "h1": "UX methods for any moment in a sprint",
-     "intro": "{n} methods you can reach for whenever a sprint needs them, grouped into the chapters of the design process: from discovery research through to the retrospective. Each one says what it's for, how to run it and roughly how long it takes.",
+     "eyebrow": "Sprint Toolkit", "h1": "UX Methods",
+     "blurb": "Practical methods to reach for at any point in a sprint.",
+     "intro": "{n} methods to reach for at any point in a sprint, in the order you'd usually use them. Each one opens with what it's for and how long it takes.",
      "chapters": {
          "Discovery": "Generative research: find out what the problem really is, and who has it.",
          "Define": "Turn research into a clear problem, a target user and a direction.",
@@ -38,11 +51,31 @@ TRACKS = [
      },
      "parent": {"Information Architecture": "Define"}},
     {"id": "ui", "out": "ui", "index": "ui.html", "label": "UI Lectures", "noun": "Lecture",
-     "eyebrow": "UI Learning Resource", "h1": "UI Design, from Figma basics to theory",
-     "intro": "{n} lectures on building interfaces. Figma Basics and Components & Variables are hands-on, step-by-step tutorials to follow in order; UI Theory covers the concepts behind colour, type, spacing and systems. New to UI? Read <a href=\"lectures/what-is-ui-design.html\">What is UI Design</a> in the UX track first."},
+     "eyebrow": "UI Learning Resource", "h1": "UI Lectures",
+     "blurb": "Hands-on Figma tutorials, and the theory behind good interfaces.",
+     "intro": "{n} lessons on building interfaces: step-by-step Figma tutorials to follow in order, then the theory behind them. New to UI? Start with <a href=\"lectures/what-is-ui-design.html\">What is UI Design</a>.",
+     "chapters": {
+         "Figma Basics": "Start here: frames, grids, nesting, Auto Layout and the 8 point grid.",
+         "Components & Variables": "Reusable components, properties and variables, the building blocks of a design system.",
+         "UI Theory": "The concepts behind interfaces: colour, type, spacing, icons and systems.",
+     }},
     {"id": "exercises", "out": "exercises", "index": "exercises.html", "label": "Exercises", "noun": "Exercise",
-     "eyebrow": "Practice", "h1": "Exercises & design challenges",
-     "intro": "{n} briefs to practise with in Figma. Daily UI briefs are single-screen designs for one session, rated for difficulty. Projects come last: Replica Challenges are long, pixel-perfect copies of real apps, and Team Projects are multi-day builds from a schema."},
+     "eyebrow": "Practice", "h1": "Exercises",
+     "blurb": "Briefs to practise in Figma, from one-session Daily UIs to multi-day projects.",
+     "intro": "{n} briefs to practise in Figma, from one-session Daily UIs to multi-day projects.",
+     "chapters": {
+         "Daily UI": "Single-screen briefs for one session, rated for difficulty.",
+         "Replica Challenges": "Copy real apps pixel for pixel to build fluency in Figma.",
+         "Team Projects": "Multi-day team builds from a schema.",
+     }},
+]
+# The suggested route on the home page: (step, why, section id, page slug).
+ROUTE = [
+    ("Understand UX", "Start with the foundations: where UX comes from and what it really is.", "ux", "design-origins"),
+    ("Learn Figma", "Work through Figma Basics in order before anything else in UI.", "ui", "choose-your-frame"),
+    ("Practise every day", "Pick a Daily UI brief each session, starting with Sidebar.", "exercises", "sidebar"),
+    ("Run a sprint", "Use UX Methods chapter by chapter, from Discovery to Retrospective.", "methods", "lean-ux-canvas"),
+    ("Build something bigger", "Finish with a replica challenge and the Stage Play team project.", "exercises", "glovo-replica-challenge"),
 ]
 TRACK = {t["id"]: t for t in TRACKS}
 
@@ -118,24 +151,13 @@ RELATED = [
     ("methods/usability-test", "methods/facilitator-format"),
 ]
 
-# Hand-written summaries where a page's first paragraph doesn't describe it well.
-SUMMARIES = {
-    "ui/navbar": "Build a navbar component from Phosphor icon sets with on and off states, then prototype it across four screens.",
-    "ui/dynamic-buttons-part-deux": "Turn your button into a component set with seven variants: default, hover, pressed, stroke, disabled and glass.",
-    "ui/color-variables": "Create colour variables from a Grabient gradient and organise them into collections.",
-    "ui/number-variables": "Record your phone's frame, content areas, gaps and radii as number variables you can reuse.",
-    "ui/string-variables": "Store text in string variables and update it everywhere from one place.",
-    "ui/variable-modes": "Use variable modes and a prototype interaction to switch a product's colour on hover.",
-    "ui/case-studies-and-how-to-tell-a-good-story": "How to structure a case study so it tells the story of your design process.",
-    "exercises/stage-play": "Working as a team, build the Stage Play app in Figma from a component schema, using master components, nesting, auto layout and properties.",
-    "ui/choose-your-frame": "How to pick a Figma frame size for the device you'll design and prototype on, and why aspect ratio matters.",
-    "ui/dynamic-buttons-part-one": "Build a reusable button component in Figma with text properties, appearance booleans and swaps.",
-    "ui/file-types": "When to use JPG, PNG, GIF, SVG, WEBP and TIFF in interface work.",
-    "exercises/glovo-replica-challenge": "Recreate the Glovo app screen by screen in Figma: by hand first, then rebuilt with Auto Layout and components.",
-    "exercises/youtube-challenge": "Recreate the YouTube app screen by screen in Figma: by hand first, then rebuilt with Auto Layout and components.",
-    "exercises/choose-a-movie": "Design a movie trailer intro page for a streaming service that invites people to press play.",
-    "exercises/video-player": "Design a simple, instantly recognisable video player for a streaming service.",
-}
+# Hand-written one-line summaries, keyed "section/slug" (edit content/summaries.json).
+SUMMARIES = {k: v for k, v in json.loads((CONTENT / "summaries.json").read_text(encoding="utf-8")).items()
+             if not k.startswith("_")}
+
+# Method sections shown in the quick-reference card or folded away, matched on heading text.
+METHOD_DROP = ("stage",)                    # repeats the chapter, which the page already shows
+METHOD_FOLD = ("extra notes", "resources", "tips", "checklist", "summary", "media", "template", "ai assist")
 
 YOUTUBE_RE = re.compile(
     r'<p><a href="(https?://(?:www\.)?(?:youtube\.com/(?:watch\?v=|embed/)|youtu\.be/)([\w-]{11})[^"]*)">[^<]*</a></p>')
@@ -262,6 +284,9 @@ def render_markdown(track, slug, text, titles):
     body = body.replace("<table>", '<div class="table-wrap"><table>').replace("</table>", "</table></div>")
     body = re.sub(r'<p><a href="https://app\.notion\.com"></a></p>', "", body)
     body = re.sub(r"(<hr\s*/?>\s*){2,}", "<hr>\n", body)
+    # Two or more images in a row become a gallery grid (click any one to see it full size).
+    body = re.sub(r'(?:<figure class="media"><img [^>]+></figure>\s*){2,}',
+                  lambda m: f'<div class="gallery">{m.group(0)}</div>\n', body)
     body = re.sub(r"(<hr\s*/?>\s*)+$", "", body.strip())
     body = re.sub(r"<p>\s*(\*\*\*\*)?\s*</p>", "", body)
     # Notion section headings start with an emoji ("🪜 Stage"); give it room, and leave it out of the contents list.
@@ -269,6 +294,49 @@ def render_markdown(track, slug, text, titles):
     toc = [(lvl, hid, re.sub(r"^[^\w(]+", "", plain(txt))) for lvl, hid, txt in H_RE.findall(body)]
     toc = [x for x in toc if x[2]]
     return body, toc
+
+
+def md_plain(s):
+    s = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", s)
+    s = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", s)
+    return re.sub(r"[*_`]|<[^>]+>", "", s).strip()
+
+
+def method_goal(text):
+    """The 'Goal / Learning outcome' section of a method, as up to four short points."""
+    m = re.search(r"^#+ [^\n]*(?:Goal\s*/|Learning [Oo]utcome)[^\n]*\n(.*?)(?=^#|\Z)", text, re.M | re.S)
+    if not m:
+        return []
+    block = m.group(1)
+    items = [md_plain(i) for i in re.findall(r"^\s*(?:[-*]|\d+\.)\s+(.+)$", block, re.M)]
+    if not items:
+        para = md_plain(" ".join(block.split()))
+        items = [para] if para else []
+    # "By the end of this activity, students will have …" is the same on every page; keep what follows.
+    lead = (r"^(?:By the end of this (?:activity|exercise),?\s*)?(?:students\s+)?(?:you\s+)?"
+            r"(?:should have,?\s*)?(?:students\s+)?(?:will\s+)?(?:have\s+|be able to\s+)?")
+    items = [re.sub(lead, "", i, flags=re.I) for i in items]
+    return [i[:1].upper() + i[1:] for i in items if i][:4]
+
+
+def fold_sections(body, drop, fold, remove=()):
+    """Split at h2s: trim the heading and first paragraph of 'drop' sections, delete 'remove' sections,
+    and fold 'fold' sections into <details>."""
+    out = []
+    for part in re.split(r'(?=<h2 id=")', body):
+        m = re.match(r'<h2 id="[^"]+">(.*?)</h2>\s*', part, re.S)
+        name = re.sub(r"^[^\w(]+", "", plain(m.group(1))) if m else ""
+        key = name.lower()
+        if m and remove and key.startswith(remove):
+            continue
+        if m and key.startswith(drop):
+            rest = re.sub(r"^<p>.*?</p>\s*", "", part[m.end():], count=1, flags=re.S)
+            out.append(rest)
+        elif m and any(key.startswith(f) for f in fold) and part[m.end():].strip():
+            out.append(f'<details class="more"><summary>{esc(name)}</summary>\n{part[m.end():]}</details>\n')
+        else:
+            out.append(part)
+    return "".join(out)
 
 
 def describe(text):
@@ -311,6 +379,10 @@ def load():
                 for slug in slugs:
                     by[slug]["category"] = cat
                     d["lectures"].append(by[slug])
+            for i, l in enumerate(d["lectures"], 1):
+                l["number"] = i
+        elif t.get("chapters"):
+            d["lectures"].sort(key=lambda l: d["categories"].index(l["category"]))
             for i, l in enumerate(d["lectures"], 1):
                 l["number"] = i
         every = d["lectures"] + d["subpages"]
@@ -399,11 +471,24 @@ def build_track(t, data):
         if p.get("duration"):
             meta.append(f'Takes {esc(p["duration"].lower() if p["duration"] == "In stages" else p["duration"])}')
         meta.append(f'{ICON_CLOCK}{p["minutes"]} min read')
-        if p["images"]:
-            meta.append(f'{ICON_IMG}{p["images"]} image{"s" if p["images"] != 1 else ""}')
         if p["children"]:
             meta.append(f'{len(p["children"])} sub-lessons')
 
+        quick = ""
+        if t["id"] == "methods":
+            # The time is in the card, so a plain duration section is removed (staged ones stay, for the breakdown).
+            body = fold_sections(body, METHOD_DROP, METHOD_FOLD,
+                                 remove=("estimated duration", "duration") if p["duration"] not in ("", "In stages") else ())
+            toc = [x for x in toc if f'id="{x[1]}"' in body and not re.search(rf'<details class="more">(?:(?!</details>).)*id="{x[1]}"', body, re.S)]
+            goal = method_goal(p["text"])
+            rows_q = [("When", f'{esc(p["category"])}: {esc(t["chapters"].get(p["category"], ""))}')]
+            if p["duration"]:
+                rows_q.append(("Time", esc(p["duration"].lower() if p["duration"] == "In stages" else p["duration"])))
+            if goal:
+                rows_q.append(("Goal", "<ul>" + "".join(f"<li>{esc(g)}</li>" for g in goal) + "</ul>"
+                               if len(goal) > 1 else esc(goal[0])))
+            quick = ('<div class="quickref">' + "".join(f'<div class="qr-row"><div class="qr-label">{a}</div><div class="qr-value">{b}</div></div>'
+                                                        for a, b in rows_q) + "</div>\n")
         toc_html = "".join(
             f'<li class="lvl{lvl}"><a href="#{hid}">{esc(txt)}</a></li>' for lvl, hid, txt in toc if lvl in ("2", "3"))
         rail = ""
@@ -423,6 +508,10 @@ def build_track(t, data):
                 f'<li><a href="{l["slug"]}.html"{" aria-current=page" if l is p else ""}>{esc(l["title"])}</a></li>' for l in same)
             if len(same) > 1:
                 rail += f'<div class="rail-block"><div class="rail-label">{esc(p["category"])}</div><ol class="toc family">{items}</ol></div>'
+
+        toc_mobile = (f'<details class="toc-mobile"><summary>On this page</summary><ol class="toc">{toc_html}</ol></details>\n'
+                      if toc_html else "")
+        body = quick + toc_mobile + body
 
         rel = [lookup(k) for k in related.get(f'{t["id"]}/{p["slug"]}', [])]
         if rel:
@@ -484,25 +573,20 @@ def build_track(t, data):
             subs = '<div class="row-subs">' + "".join(
                 f'<a href="{t["out"]}/{s}.html">{esc(short(by_slug[s]["title"]))}</a>' for s in l["children"]) + "</div>"
         search = " ".join([l["title"], l["category"], l["description"]] + [by_slug[s]["title"] for s in l["children"]]).lower()
-        if chapters:
-            stats = (f'<span>{ICON_CLOCK}{esc(l["duration"])}</span>' if l["duration"]
-                     else f'<span class="muted">{l["minutes"]}m read</span>')
+        if t["id"] == "methods":
+            stats = f'<span>{ICON_CLOCK}{esc(l["duration"])}</span>' if l["duration"] else ""
         elif is_ex:
-            level = meter(l["difficulty"]) if l["difficulty"] else '<span class="tag">Project</span>'
-            stats = f'<span>{level}</span><span>{ICON_CLOCK}{l["minutes"]}m read</span>'
+            stats = f'<span>{meter(l["difficulty"]) if l["difficulty"] else "<span class=tag>Project</span>"}</span>'
         else:
-            stats = f'<span>{ICON_CLOCK}{l["minutes"]}m</span>'
-            if l["images"]:
-                stats += f'<span>{ICON_IMG}{l["images"]}</span>'
-        rows.append(f"""<li class="row" data-cat="{esc(l['category'])}"{parent_attr} data-search="{esc(search)}">
+            stats = ""
+        rows.append(f"""<li class="row{' no-stats' if not stats else ''}" data-cat="{esc(l['category'])}"{parent_attr} data-search="{esc(search)}">
   <span class="row-num">{l['number']}</span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="{t['out']}/{l['slug']}.html">{esc(l['title'])}</a>{f'<span class="pill">{len(l["children"])} parts</span>' if l["children"] else ''}</div>
     <p class="row-desc">{esc(l['description'])}</p>
-    <div class="row-tag">[{esc(l['category'].upper())}]</div>
     {subs}
   </div>
-  <div class="row-stats">{stats}</div>
+  {f'<div class="row-stats">{stats}</div>' if stats else ''}
 </li>""")
 
     tabs = "".join(
@@ -515,7 +599,7 @@ def build_track(t, data):
                                for n in range(5, 0, -1) if any(l["difficulty"] == n for l in lectures))
                      + "</div>")
     else:
-        side_stat = f'<div class="side-stat"><div class="side-label">Reading time</div><div class="big">{f"{total_min // 60}h " if total_min >= 60 else ""}{total_min % 60}m</div><div class="muted mono">across every page</div></div>'
+        side_stat = ""
     noun = t["noun"].lower()
     intro = t["intro"].format(n=len(lectures), s=len(d["subpages"]))
     index_body = f"""
@@ -542,13 +626,13 @@ def build_track(t, data):
       <section class="listing">
         <div class="toolbar">
           <label class="search"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search {noun}s…" autocomplete="off"></label>
-          <span class="showing mono" id="showing">Showing {len(lectures)} of {len(lectures)}</span>
+          <span class="showing" id="showing">Showing {len(lectures)} of {len(lectures)}</span>
           <div class="view-toggle" role="group" aria-label="Layout">
             <button type="button" data-view="list" aria-pressed="true" aria-label="List view"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
             <button type="button" data-view="grid" aria-pressed="false" aria-label="Grid view"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg></button>
           </div>
         </div>
-        <div class="list-head mono"><span>#</span><span>{t['noun']}</span><span class="right">{'Difficulty' if is_ex else 'Time' if chapters else 'Length'}</span></div>
+        {f'<div class="list-head"><span></span><span></span><span class="right">{"Difficulty" if is_ex else "Time"}</span></div>' if t["id"] in ("methods", "exercises") else ""}
         <ol class="rows" id="rows">
 {''.join(rows)}
         </ol>
@@ -562,10 +646,63 @@ def build_track(t, data):
     print(f"{t['index']}: {len(lectures)} {noun}s, {len(every)} pages in {t['out']}/")
 
 
+def build_home(data):
+    """index.html: what the course is, the four sections, a suggested route and a search of every page."""
+    cards = []
+    for t in TRACKS:
+        d = data[t["id"]]
+        n = len(d["lectures"])
+        cats = " · ".join(esc(c) for c in d["categories"])
+        cards.append(f"""<a class="section-card" href="{t['index']}">
+  <span class="section-count">{n} {t['noun'].lower()}s</span>
+  <span class="section-name">{t['label']}</span>
+  <span class="section-blurb">{esc(t['blurb'])}</span>
+  <span class="section-cats">{cats}</span>
+  <span class="section-go">Open {ICON_ARROW}</span>
+</a>""")
+    steps = []
+    for i, (step, why, track, slug) in enumerate(ROUTE, 1):
+        t, target = TRACK[track], data[track]["by_slug"].get(slug)
+        if target is None:
+            raise SystemExit(f"ROUTE points at missing page {track}/{slug}")
+        steps.append(f"""<li class="route-step">
+  <span class="route-num">{i}</span>
+  <div><h3>{esc(step)}</h3><p>{esc(why)}</p>
+  <a href="{t['out']}/{slug}.html">{t['label']}: {esc(target['title'])} {ICON_ARROW}</a></div>
+</li>""")
+    index = [{"t": p["title"], "d": p["description"], "s": t["label"], "u": f"{t['out']}/{p['slug']}.html"}
+             for t in TRACKS for p in data[t["id"]]["every"]]
+    index_json = json.dumps(index, ensure_ascii=False).replace("</", "<\\/")
+    body = f"""
+<main class="home course">
+  <div class="wrap">
+    <header class="hero hero-home">
+      <div>
+        <div class="eyebrow">Barcelona Code School · UX &amp; UI Bootcamp</div>
+        <h1>Everything for the bootcamp, in one place</h1>
+        <p class="lede">Lectures to read, methods to use in your sprints, Figma lessons and briefs to practise with. Pick a section, or follow the suggested route.</p>
+      </div>
+      <label class="search search-all"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q-all" type="search" placeholder="Search all {len(index)} pages…" autocomplete="off"></label>
+    </header>
+    <ul class="cards search-results" id="results" hidden></ul>
+    <section class="sections" aria-label="Sections">{''.join(cards)}</section>
+    <section class="route">
+      <h2>Suggested route</h2>
+      <p class="route-intro">Not sure where to start? This is one way through. Dip into UX Methods whenever your sprint needs one.</p>
+      <ol class="route-steps">{''.join(steps)}</ol>
+    </section>
+  </div>
+</main>
+<script type="application/json" id="search-index">{index_json}</script>"""
+    (ROOT / "index.html").write_text(page(f"{SITE} · UX & UI Bootcamp", TAGLINE, body, 0, "home"), encoding="utf-8")
+    print(f"index.html: home, {len(index)} pages searchable")
+
+
 def main():
     data = load()
     for t in TRACKS:
         build_track(t, data)
+    build_home(data)
 
 
 if __name__ == "__main__":

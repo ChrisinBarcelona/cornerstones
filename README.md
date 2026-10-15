@@ -1,11 +1,11 @@
 # cornerstones
 It's notes for me to teach my stuents - UX LEarning resource for Barcelona Code School
 
-A static website in four sections, each with its own contents page:
+A static website. `index.html` is the course home (the four sections, a suggested route and a search of every page); each section has its own contents page:
 
 | Section | Contents page | Pages | Source in Notion |
 | --- | --- | --- | --- |
-| UX Lectures | `index.html` | `lectures/` | Cornerstones |
+| UX Lectures | `ux.html` | `lectures/` | Cornerstones |
 | UX Methods (Discovery → Retrospective) | `methods.html` | `methods/` | Google Sprint + Team Sprint databases (one bank, briefs and duplicates removed) |
 | UI Lectures (Figma Basics, Components & Variables, UI Theory) | `ui.html` | `ui/` | Bootcamp UI → UI Starter Pack, UI Theory; Master |
 | Exercises (Daily UI, Replica Challenges, Team Projects) | `exercises.html` | `exercises/` | Bootcamp UI → everything else (except Daily UI: Template); Stage Play is hand-written |
@@ -16,7 +16,8 @@ A static website in four sections, each with its own contents page:
 - `content/<section>/<slug>/index.md` – page text and images
 - `content/<section>.json` (and `<section>.<part>.json` when a section has several sources) – the pages each import produced. `content/exercises.manual.json` lists hand-written pages such as Stage Play, which no import touches.
 - `tools/import_notion.py` – turns a Notion Markdown export into `content/` (UX categories, the UI/exercise split and the UX Methods chapter list are set at the top)
-- `tools/build.py` – renders `content/` into the site. At the top: page order and categories for UI Lectures and Exercises (`ORDER` – a new page must be added there), cross-links and hand-written summaries
+- `content/summaries.json` – the one-line summary for each page, shown in the lists and at the top of the page. Edit freely.
+- `tools/build.py` – renders `content/` into the site. At the top: section intros and chapter descriptions, the home page's suggested route (`ROUTE`), page order and categories for UI Lectures and Exercises (`ORDER` – a new page must be added there) and cross-links
 
 ## Updating
 

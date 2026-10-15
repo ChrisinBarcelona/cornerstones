@@ -92,3 +92,25 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') box.hidden = true; });
   }
 })();
+
+// Home: search every page in the site
+(function () {
+  var input = document.getElementById('q-all');
+  var data = document.getElementById('search-index');
+  if (!input || !data) return;
+  var pages = JSON.parse(data.textContent);
+  var results = document.getElementById('results');
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  input.addEventListener('input', function () {
+    var term = input.value.trim().toLowerCase();
+    if (!term) { results.hidden = true; results.innerHTML = ''; return; }
+    var hits = pages.filter(function (p) { return (p.t + ' ' + p.d).toLowerCase().indexOf(term) !== -1; })
+      .sort(function (a, b) { return (b.t.toLowerCase().indexOf(term) !== -1) - (a.t.toLowerCase().indexOf(term) !== -1); })
+      .slice(0, 12);
+    results.innerHTML = hits.length ? hits.map(function (p) {
+      return '<li><a class="card" href="' + p.u + '"><span class="card-title">' + esc(p.t) + '</span>' +
+        '<span class="card-desc">' + esc(p.s) + (p.d ? ' · ' + esc(p.d) : '') + '</span><span class="card-go">→</span></a></li>';
+    }).join('') : '<li class="empty">Nothing matches that search.</li>';
+    results.hidden = false;
+  });
+})();
