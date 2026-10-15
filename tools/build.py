@@ -270,6 +270,8 @@ def page(title, description, body, depth, active):
     <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme">{ICON_SUN}</button>
     <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="{prefix}login.html">{ICON_LOGOUT}<span>Log out</span></button>
   </div>
+  <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+  <div class="course-row"><a class="course-label" href="{prefix}index.html#badges-title">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></a></div>
 </header>
 {body}
 <footer class="foot"><div class="foot-inner"><span>{SITE} · {TAGLINE}</span><span class="mono">Notes by Chris Kelly</span></div></footer>
@@ -574,7 +576,7 @@ def build_track(t, data):
             body += f"""
 <section class="complete" data-key="{t['id']}/{p['slug']}">
   <div class="complete-text"><b>Finished this {noun_page}?</b>{parts}</div>
-  <button type="button" class="complete-btn" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
+  <button type="button" class="complete-btn" data-complete="{t['id']}/{p['slug']}" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
 </section>"""
 
         rel = [lookup(k) for k in related.get(f'{t["id"]}/{p["slug"]}', [])]
@@ -590,13 +592,15 @@ def build_track(t, data):
                 return "<span></span>"
             return f'<a class="pager {cls}" href="{q["slug"]}.html"><span class="pager-label">{label}</span><span class="pager-title">{esc(q["title"])}</span></a>'
 
+        head_btn = (f'<button type="button" class="complete-btn head-complete" data-complete="{t["id"]}/{p["slug"]}" aria-pressed="false">'
+                    '<span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>') if t["id"] in PROGRESS else ""
         body_html = f"""
 <main class="lecture track-{t['id']}" data-key="{t['id']}/{p['slug']}">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb">{' <span class="sep">/</span> '.join(crumbs)}</nav>
     <header class="lecture-head">
       <div class="eyebrow">{esc(eyebrow)}</div>
-      <h1>{esc(p['title'])}</h1>
+      <div class="title-row"><h1>{esc(p['title'])}</h1>{head_btn}</div>
       {f'<p class="lede">{esc(p["description"])}</p>' if p["lede"] and p["description"] else ''}
       <div class="meta">{''.join(f'<span>{m}</span>' for m in meta)}</div>
     </header>

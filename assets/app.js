@@ -278,12 +278,30 @@
       el.classList.toggle('earned', st.pct === 100);
       el.querySelector('.badge-state').textContent = st.pct === 100 ? 'Earned' : st.pct + '%';
     });
-    // The page's own button
+    // The page's own buttons (beside the title and at the end)
+    document.querySelectorAll('[data-complete]').forEach(function (btn) {
+      var on = !!done[btn.dataset.complete];
+      btn.classList.toggle('is-complete', on);
+      btn.setAttribute('aria-pressed', String(on));
+    });
+    // Whole-course progress in the header: every tracked item across all sections
+    var all = 0, finished = 0, parts = [];
+    Object.keys(TRACKS).forEach(function (t) {
+      var st = stats(t);
+      all += st.total; finished += st.done;
+      parts.push(TRACKS[t].badge + ' ' + st.done + '/' + st.total);
+    });
+    var pct = all ? Math.round(finished / all * 100) : 0;
+    var bar = document.querySelector('.course-bar');
+    if (bar) {
+      bar.querySelector('span').style.width = pct + '%';
+      bar.setAttribute('aria-valuenow', pct);
+      document.getElementById('course-pct').textContent = pct + '%';
+      document.getElementById('course-detail').textContent = ' · ' + parts.join(' · ');
+    }
     var box = document.querySelector('.complete[data-key]');
     if (box) {
-      var on = !!done[box.dataset.key];
-      box.classList.toggle('is-complete', on);
-      box.querySelector('.complete-btn').setAttribute('aria-pressed', String(on));
+      box.classList.toggle('is-complete', !!done[box.dataset.key]);
       var parts = box.querySelector('[data-parts]');
       if (parts) {
         var item = findItem(box.dataset.key);
@@ -316,12 +334,14 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
   }
 
-  var box = document.querySelector('.complete[data-key]');
-  if (box) box.querySelector('.complete-btn').addEventListener('click', function () {
-    if (done[box.dataset.key]) delete done[box.dataset.key]; else done[box.dataset.key] = 1;
-    write(KEY, done);
-    render();
-    checkBadges();
+  document.querySelectorAll('[data-complete]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var key = btn.dataset.complete;
+      if (done[key]) delete done[key]; else done[key] = 1;
+      write(KEY, done);
+      render();
+      checkBadges();
+    });
   });
   render();
   // Badges already earned before this feature existed shouldn't pop up out of nowhere on load.
