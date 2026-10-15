@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Starting in Figma · Cornerstones</title>
+<meta name="description" content="Your first Figma walkthrough: set up frames, then build and style the shapes for an animated button.">
+<meta name="robots" content="noindex, nofollow">
+<script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
+<script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=1e716abef8">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">C</span>
+      <span class="brand-text"><span class="brand-name">CORNERSTONES</span><span class="brand-sub">UX &amp; UI at Barcelona Code School</span></span>
+    </a>
+    <nav class="nav-links"><a href="../ux.html">UX Lectures</a><a href="../methods.html">UX Methods</a><a href="../ui.html">UI Lectures</a><a href="../figma.html" aria-current=page>Figma</a><a href="../exercises.html">Exercises</a><a href="../timetable.html">Timetable</a></nav>
+    <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg></button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="../login.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Log out</span></button>
+  </div>
+  <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></button>
+    <a class="mini-badges" id="mini-badges" href="../index.html#badges-title" aria-label="Your badges"></a></div>
+</header>
+
+<main class="lecture track-figma" data-key="figma/starting-in-figma">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../figma.html">Figma</a> <span class="sep">/</span> <a href="../figma.html#category=Figma Basics">Figma Basics</a> <span class="sep">/</span> <span>Starting in Figma</span></nav>
+    <header class="lecture-head">
+      <div class="eyebrow">Lesson 02 · Figma Basics</div>
+      <div class="title-row"><h1>Starting in Figma</h1><button type="button" class="complete-btn head-complete" data-complete="figma/starting-in-figma" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button></div>
+      <p class="lede">Your first Figma walkthrough: set up frames, then build and style the shapes for an animated button.</p>
+      <div class="meta"><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>8 min read</span></div>
+    </header>
+    <div class="lecture-grid">
+      <aside class="rail"><div class="rail-sticky"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#1-make-a-figma-account">1. Make a Figma Account</a></li><li class="lvl2"><a href="#2-select-canvas-iphone-14">2. Select Canvas: iPhone 14</a></li><li class="lvl2"><a href="#3-name-your-frame">3. Name Your Frame</a></li><li class="lvl2"><a href="#4-copy-your-frame">4. Copy Your Frame</a></li><li class="lvl2"><a href="#5-add-fill-colour">5. Add Fill Colour</a></li><li class="lvl2"><a href="#6-add-shape-layer">6. Add Shape Layer</a></li><li class="lvl2"><a href="#7-give-your-shape-a-name">7. Give Your Shape a Name</a></li><li class="lvl2"><a href="#8-align-shape-to-centre">8. Align Shape to Centre</a></li><li class="lvl2"><a href="#9-add-fill-colour-to-your-shape-layer">9. Add Fill Colour to Your Shape Layer</a></li><li class="lvl2"><a href="#10-add-stroke-to-shape">10. Add Stroke to Shape</a></li><li class="lvl2"><a href="#11-change-stroke-colour-on-shape">11. Change Stroke Colour on Shape</a></li><li class="lvl2"><a href="#12-increase-stroke-thickness-on-shape">12. Increase Stroke Thickness on Shape</a></li><li class="lvl2"><a href="#13-add-shadow-to-shape">13. Add Shadow to Shape</a></li><li class="lvl2"><a href="#14-change-shape-radius">14. Change Shape Radius</a></li><li class="lvl2"><a href="#15-copy-shape-layer">15. Copy Shape Layer</a></li><li class="lvl2"><a href="#16-change-to-prototype-mode">16. Change to Prototype Mode</a></li><li class="lvl2"><a href="#17-create-a-connection">17. Create a Connection</a></li><li class="lvl2"><a href="#18-activate-smart-animate">18. Activate Smart Animate</a></li><li class="lvl2"><a href="#19-repeat-the-process">19. Repeat the Process</a></li><li class="lvl2"><a href="#20-play-your-prototype">20. Play Your Prototype</a></li><li class="lvl2"><a href="#21-well-done-job-completed">21. Well Done! Job Completed!</a></li></ol></div><div class="rail-block"><div class="rail-label">Figma Basics</div><ol class="toc family"><li><a href="choose-your-frame.html">Choose your Frame</a></li><li><a href="starting-in-figma.html" aria-current=page>Starting in Figma</a></li><li><a href="beginners-guide-to-grids.html">Beginner’s Guide to Grids</a></li><li><a href="beginners-guide-to-nesting.html">Beginner’s Guide to Nesting</a></li><li><a href="beginners-guide-auto-layout.html">Beginner’s Guide Auto Layout</a></li><li><a href="beginners-guide-to-8-point-grid-system.html">Beginner’s Guide to 8 Point Grid System</a></li></ol></div></div></aside>
+      <article class="prose">
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#1-make-a-figma-account">1. Make a Figma Account</a></li><li class="lvl2"><a href="#2-select-canvas-iphone-14">2. Select Canvas: iPhone 14</a></li><li class="lvl2"><a href="#3-name-your-frame">3. Name Your Frame</a></li><li class="lvl2"><a href="#4-copy-your-frame">4. Copy Your Frame</a></li><li class="lvl2"><a href="#5-add-fill-colour">5. Add Fill Colour</a></li><li class="lvl2"><a href="#6-add-shape-layer">6. Add Shape Layer</a></li><li class="lvl2"><a href="#7-give-your-shape-a-name">7. Give Your Shape a Name</a></li><li class="lvl2"><a href="#8-align-shape-to-centre">8. Align Shape to Centre</a></li><li class="lvl2"><a href="#9-add-fill-colour-to-your-shape-layer">9. Add Fill Colour to Your Shape Layer</a></li><li class="lvl2"><a href="#10-add-stroke-to-shape">10. Add Stroke to Shape</a></li><li class="lvl2"><a href="#11-change-stroke-colour-on-shape">11. Change Stroke Colour on Shape</a></li><li class="lvl2"><a href="#12-increase-stroke-thickness-on-shape">12. Increase Stroke Thickness on Shape</a></li><li class="lvl2"><a href="#13-add-shadow-to-shape">13. Add Shadow to Shape</a></li><li class="lvl2"><a href="#14-change-shape-radius">14. Change Shape Radius</a></li><li class="lvl2"><a href="#15-copy-shape-layer">15. Copy Shape Layer</a></li><li class="lvl2"><a href="#16-change-to-prototype-mode">16. Change to Prototype Mode</a></li><li class="lvl2"><a href="#17-create-a-connection">17. Create a Connection</a></li><li class="lvl2"><a href="#18-activate-smart-animate">18. Activate Smart Animate</a></li><li class="lvl2"><a href="#19-repeat-the-process">19. Repeat the Process</a></li><li class="lvl2"><a href="#20-play-your-prototype">20. Play Your Prototype</a></li><li class="lvl2"><a href="#21-well-done-job-completed">21. Well Done! Job Completed!</a></li></ol></details>
+<p>So to go over the absolute basics, we are going to do a simple exercise on how to make an animated button. This exercise covers about 99.9% of everything you would actually need to know in order to create a full prototype in Figma, so if your an absolute beginner, let’s get started! </p>
+<p>In this tutorial you will learn how to:</p>
+<ol>
+<li><strong>Make An Account</strong></li>
+<li><strong>Create A Canvas</strong></li>
+<li><strong>Name A Frame</strong></li>
+<li><strong>Copy A Frame</strong></li>
+<li><strong>Add Fill Colour</strong></li>
+<li><strong>Add Shape Layer</strong></li>
+<li><strong>Give Shape A Name</strong></li>
+<li><strong>Align Shape to Centre</strong></li>
+<li><strong>Add Fill Colour to Shape Layer</strong></li>
+<li><strong>Add Stroke to Shape</strong></li>
+<li><strong>Change Stroke Colour on Shape</strong></li>
+<li><strong>Increase Stroke Thickness on Shape</strong></li>
+<li><strong>Add Shadow to Shape</strong></li>
+<li><strong>Change Shape Radius</strong></li>
+<li><strong>Copy Shape Layer</strong></li>
+<li><strong>Change to Prototype Mode</strong></li>
+<li><strong>Create Connections between Frames</strong></li>
+<li><strong>Activate Smart Animation</strong></li>
+<li><strong>Repeat the Process</strong></li>
+<li><strong>Play Prototype</strong></li>
+</ol>
+<p>Let’s Go!</p>
+<h2 id="1-make-a-figma-account">1. Make a Figma Account</h2>
+<p>Navigate to <a href="https://www.figma.com/">https://www.figma.com</a> and create an account.</p>
+<p>Click on New Design File</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-24_at_17.52.34.png" loading="lazy" decoding="async"></figure>
+<p>Now you should see an Interface that looks something like this; the example below. </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_09.55.25.png" loading="lazy" decoding="async"></figure>
+<p>Now it’s time to make your first frame. On your keyboard press;</p>
+<ul>
+<li>Make Frame: <strong><code>F</code></strong></li>
+</ul>
+<p>You’ll see a panel has opened up on the right hand side;</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_09.55.50.png" loading="lazy" decoding="async"></figure>
+<h2 id="2-select-canvas-iphone-14">2. Select Canvas: iPhone 14</h2>
+<p>For this demonstration we will be using an iPhone 14. For more information on choosing the right frame see here</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_09.54.18.png" loading="lazy" decoding="async"></figure>
+<p>Congratulations! You have now created your very first frame and used your first keyboard shortcut! Well done! </p>
+<p>That’s a little big! Let’s Zoom Out!</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_09.53.08.png" loading="lazy" decoding="async"></figure>
+<p>Zoom Out:</p>
+<p>On Windows: </p>
+<ul>
+<li>Zoom In: <strong><code>Ctrl + Plus sign (+)</code></strong></li>
+<li>Zoom Out: <strong><code>Ctrl + Minus sign (-)</code></strong></li>
+</ul>
+<p>On Mac: </p>
+<ul>
+<li>Zoom In: <strong><code>Cmd + Plus sign (+)</code></strong></li>
+<li>Zoom Out: <strong><code>Cmd + Minus sign (-)</code></strong></li>
+</ul>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.00.09.png" loading="lazy" decoding="async"></figure>
+<p>That’s better! Now we can see. Let’s <strong>give your frame a new name</strong> by clicking on the title.</p>
+<hr />
+<h2 id="3-name-your-frame">3. Name Your Frame</h2>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.00.42.png" loading="lazy" decoding="async"></figure>
+<p>You’ll notice on the left hand side the, the file name has changed too.</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.03.45.png" loading="lazy" decoding="async"></figure>
+<p>Now we should copy the frame; this is a popular shortcut and you will probably be familiar with it. </p>
+<hr />
+<h2 id="4-copy-your-frame">4. Copy Your Frame</h2>
+<p><strong>Click your new label</strong> ‘My First Frame’ and <strong>copy it</strong>.  </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.05.25.png" loading="lazy" decoding="async"></figure>
+<p>On Windows:</p>
+<ul>
+<li>Copy: <strong><code>Ctrl + C</code></strong></li>
+<li>Paste: <strong><code>Ctrl + V</code></strong></li>
+</ul>
+<p>On Mac: </p>
+<ul>
+<li>Copy: <strong><code>Cmd + C</code></strong></li>
+<li>Paste: <strong><code>Cmd + V</code></strong></li>
+</ul>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.05.36.png" loading="lazy" decoding="async"></figure>
+<p>Great, let’s name the new frame ‘<strong>My Second Frame</strong>’    </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.09.02.png" loading="lazy" decoding="async"></figure>
+<p><strong>Click off canvas</strong> to de-activate the selected frame.</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.10.20.png" loading="lazy" decoding="async"></figure>
+<hr />
+<h2 id="5-add-fill-colour">5. Add Fill Colour</h2>
+<p>Now we are going to add colour I’ll be using two colours only: their <strong>Hex Values</strong> are</p>
+<p>Beige: <strong><code>#F2C0A2</code></strong></p>
+<p>Maroon: <strong><code>#F24738</code></strong></p>
+<p>Activate your first frame. remember, just <strong>click the label</strong> ‘My First Frame’.</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.17.28.png" loading="lazy" decoding="async"></figure>
+<p>Navigate to the right hand sidebar to <strong>Fill</strong>. </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.16.51.png" loading="lazy" decoding="async"></figure>
+<p><strong>Click the white thumbnail</strong> beside FFFFFF to open the colour palette.</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.20.24.png" loading="lazy" decoding="async"></figure>
+<p>Change FFFFFF to Beige: <strong><code>#F2C0A2</code></strong></p>
+<div class="gallery"><figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.40.13.png" loading="lazy" decoding="async"></figure>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.40.21.png" loading="lazy" decoding="async"></figure>
+</div>
+<p>Repeat the process for your second frame but this time; change FFFFFF to Maroon: <strong><code>#F24738</code></strong></p>
+<div class="gallery"><figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.45.56.png" loading="lazy" decoding="async"></figure>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_10.42.32.png" loading="lazy" decoding="async"></figure>
+</div>
+<p><strong>Click off canvas</strong> to close the colour palette.</p>
+<hr />
+<h2 id="6-add-shape-layer">6. Add Shape Layer</h2>
+<p>Now we are going to make some awesome shapes and later on, give them some cool motion animation so let’s get started! </p>
+<p>Activate ‘<strong>My First Frame</strong>’</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.01.31.png" loading="lazy" decoding="async"></figure>
+<p>Now we are going to;</p>
+<ul>
+<li>Make a Rectangle: <strong><code>R</code></strong></li>
+</ul>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.04.33.png" loading="lazy" decoding="async"></figure>
+<p>and increase the size to <strong>150px x 150px</strong>; </p>
+<p>by clicking on the edge and scaling up;</p>
+<p>Scale out: <strong><code>shift + drag out</code></strong> </p>
+<p>Scale in: <strong><code>shift + drag in</code></strong> </p>
+<hr />
+<h2 id="7-give-your-shape-a-name">7. Give Your Shape a Name</h2>
+<p>Now let’s <strong>change the name</strong> to ‘My First Button’ </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.04.54.png" loading="lazy" decoding="async"></figure>
+<hr />
+<h2 id="8-align-shape-to-centre">8. Align Shape to Centre</h2>
+<p>and <strong>align shape to centre</strong> of the frame; </p>
+<p>On Windows:</p>
+<ul>
+<li>Align vertical centres: <strong><code>Alt + V</code></strong></li>
+<li>Align horizontal centres: <strong><code>Alt + H</code></strong></li>
+</ul>
+<p>On Mac: </p>
+<ul>
+<li>Align vertical centres: <strong><code>Option ⌥ + V</code></strong></li>
+<li>Align horizontal centres: <strong><code>Option ⌥ + H</code></strong></li>
+</ul>
+<p>Optionally, you can <strong>use the align buttons</strong> at the top of the right hand sidebar;</p>
+<p>Align vertical centres;</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.15.08.png" loading="lazy" decoding="async"></figure>
+<p>Align horizontal centres;</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.15.18.png" loading="lazy" decoding="async"></figure>
+<hr />
+<h2 id="9-add-fill-colour-to-your-shape-layer">9. Add Fill Colour to Your Shape Layer</h2>
+<p>Now, let’s add some fill colour to our brand new layer!</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.22.12.png" loading="lazy" decoding="async"></figure>
+<p>Select the layer: ‘<strong>My First Button</strong>’;</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.24.06.png" loading="lazy" decoding="async"></figure>
+<p>Navigate to the Fill tab on the right hand side bar;</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.22.44.png" loading="lazy" decoding="async"></figure>
+<p><strong>Change</strong> D9D9D9 to Maroon: <strong><code>#F24738</code></strong></p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.26.38.png" loading="lazy" decoding="async"></figure>
+<p><strong>Optionally,</strong> you could have used the document colours:</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.26.55.png" loading="lazy" decoding="async"></figure>
+<p><strong>Close</strong> to close the colour palette.</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.44.11.png" loading="lazy" decoding="async"></figure>
+<p><strong>Click off canvas</strong> to deactivate the active shape layer.</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.30.27.png" loading="lazy" decoding="async"></figure>
+<hr />
+<h2 id="10-add-stroke-to-shape">10. Add Stroke to Shape</h2>
+<p>Select the layer: ‘<strong>My First Button</strong>’;</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.35.38.png" loading="lazy" decoding="async"></figure>
+<p>Navigate over to the right hand side panel and click <strong>Stroke</strong>; </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.35.52.png" loading="lazy" decoding="async"></figure>
+<p>This will put a default stroke value of black #000000 with stroke thickness of 1px but we will want to change that and so;</p>
+<hr />
+<h2 id="11-change-stroke-colour-on-shape">11. Change Stroke Colour on Shape</h2>
+<p><strong>Click the Black Thumbnail</strong> beside 000000. This will activate the colour palette;</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.35.59.png" loading="lazy" decoding="async"></figure>
+<p>In the colour palette, <strong>drag the colour picker</strong> node all the way to the <strong>top left hand corner</strong>. </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.40.38.png" loading="lazy" decoding="async"></figure>
+<p>This will change the stroke colour to White. </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.41.04.png" loading="lazy" decoding="async"></figure>
+<hr />
+<h2 id="12-increase-stroke-thickness-on-shape">12. Increase Stroke Thickness on Shape</h2>
+<p>Return to the Stroke side panel and <strong>increase stroke thickness</strong> to <strong>3px</strong>.</p>
+<div class="gallery"><figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.46.13.png" loading="lazy" decoding="async"></figure>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_11.46.26.png" loading="lazy" decoding="async"></figure>
+</div>
+<p><strong>Click off canvas</strong> to close the colour palette.</p>
+<hr />
+<h2 id="13-add-shadow-to-shape">13. Add Shadow to Shape</h2>
+<p>Navigate to the right hand panel and <strong>Effects</strong> </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_12.22.37.png" loading="lazy" decoding="async"></figure>
+<p><strong>Click Effects.</strong> This will put a default shadow of black #000000 with an opacity of 25%. But we will want to change that and so;</p>
+<p><strong>Click on the Sun Icon</strong> located beside Drop shadow. </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_12.22.44.png" loading="lazy" decoding="async"></figure>
+<p>This will open <strong>Effects Settings</strong>. Click on Shadow Opacity Percentage and change the value to 8% </p>
+<div class="gallery"><figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_12.22.55.png" loading="lazy" decoding="async"></figure>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_12.23.06.png" loading="lazy" decoding="async"></figure>
+</div>
+<p><strong>Click off canvas</strong> to close the effects panel.</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_12.37.57.png" loading="lazy" decoding="async"></figure>
+<p>Nice one! We’ve just added a shadow to our button! Let’s add a little radius. </p>
+<hr />
+<h2 id="14-change-shape-radius">14. Change Shape Radius</h2>
+<p>What we have to do to start is <strong>click on our shape layer;</strong></p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_12.43.13.png" loading="lazy" decoding="async"></figure>
+<p>Navigate to the right hand panel. Near the top, you will see the properties panel. The last button is the radius tool. This is how you can make a shape round or square. </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_12.43.21.png" loading="lazy" decoding="async"></figure>
+<p><strong>Let’s change the value</strong> from <strong>0 to 30.</strong>  </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_12.43.42.png" loading="lazy" decoding="async"></figure>
+<p>Voilà! Well done! You now have rounded corners. </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_12.50.00.png" loading="lazy" decoding="async"></figure>
+<hr />
+<h2 id="15-copy-shape-layer">15. Copy Shape Layer</h2>
+<p>Now taking everything we have learned so far, we are going to repeat the process</p>
+<ol>
+<li>Copy ‘My First Button’ shape</li>
+<li>Drag new shape it into ‘My Second Frame’</li>
+<li>Change the width and height property to <strong>200px x 200px</strong></li>
+<li>Align new shape horizontally and vertically</li>
+<li>Change Fill colour to Beige: <strong><code>#F2C0A2</code></strong></li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_12.51.58.png" loading="lazy" decoding="async"></figure>
+<p>Well done! For this next stage, it is important that our button has <strong>the exact same name</strong> on both frames. </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_12.52.56.png" loading="lazy" decoding="async"></figure>
+<hr />
+<h2 id="16-change-to-prototype-mode">16. Change to Prototype Mode</h2>
+<p>Let’s navigate to the <strong>top of the right hand side panel</strong> and change Figma from <strong>Design Mode to Prototype Mode</strong></p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_13.04.31.png" loading="lazy" decoding="async"></figure>
+<p><strong>Change to Prototype Mode</strong> </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_13.04.40.png" loading="lazy" decoding="async"></figure>
+<p>You will now be in Prototype Mode.</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_13.15.43.png" loading="lazy" decoding="async"></figure>
+<p>Double check your prototype is set to <strong>iPhone 14</strong> as, if you recall, our canvas size is for an iPhone 14. </p>
+<p>iPhone 14 measurements: <strong>w 390 x h 844 px</strong></p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_13.47.16.png" loading="lazy" decoding="async"></figure>
+<hr />
+<h2 id="17-create-a-connection">17. Create a Connection</h2>
+<p>Select the button on ‘My First Frame’</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_13.51.35.png" loading="lazy" decoding="async"></figure>
+<p>Hover over the right hand edge; You will see a <strong>plus + node</strong>.</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_13.52.39.png" loading="lazy" decoding="async"></figure>
+<p><strong>Drag the plus node</strong> across to ‘My Second Frame’. You will know the connection is made when you see a <strong>blue arrow</strong>. </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_13.54.00.png" loading="lazy" decoding="async"></figure>
+<p>Once the connection is made, at the same time, a panel called <strong>Interaction Details</strong> will pop up;</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_13.54.20.png" loading="lazy" decoding="async"></figure>
+<p>Under Animation, Click <strong>Instant</strong> and change to <strong>Smart Animate.</strong></p>
+<hr />
+<h2 id="18-activate-smart-animate">18. Activate Smart Animate</h2>
+<p>Figma is super intelligent! With <strong>Smart Animate</strong> activated, Figma takes  layers on different frames and transitions their properties from frame to frame, as long as <strong>both of those layers share the exact same name.</strong> Let’s see!</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_12.52.56-1.png" loading="lazy" decoding="async"></figure>
+<p>both ‘My First Button’ layers share the same name but <strong>different properties on each Frame</strong> </p>
+<p><strong><code>My First Frame</code></strong>: My First Button</p>
+<p>Size: <strong><code>150px x 150px</code></strong> </p>
+<p>Colour: Maroon; <strong><code>#F24738</code></strong> </p>
+<hr />
+<p><strong><code>My Second Frame</code></strong>: My First Button</p>
+<p>Size: <strong><code>200px x 200px</code></strong> </p>
+<p>Colour: Beige: <strong><code>#F2C0A2</code></strong></p>
+<p>Smart Animate will transition those properties from one state to another. Let’s do that now, if you haven’t already done so;</p>
+<p>Under Animation, Click <strong>Instant</strong> </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_13.54.20.png" loading="lazy" decoding="async"></figure>
+<p>Click <strong>Instant change to Smart Animate</strong> </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_14.00.45.png" loading="lazy" decoding="async"></figure>
+<hr />
+<h2 id="19-repeat-the-process">19. Repeat the Process</h2>
+<p>Select ‘My First Button’ on ‘My Second Frame’;</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_14.26.24.png" loading="lazy" decoding="async"></figure>
+<p>Hover over the right hand edge until you see the <strong>+ plus sign;</strong></p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_14.28.03.png" loading="lazy" decoding="async"></figure>
+<p>Drag the arrow across until you have connected it to the edge of ‘My First Frame’ </p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_14.23.15.png" loading="lazy" decoding="async"></figure>
+<p><strong>Again</strong>, we will want to <strong>change the animation type to Smart Animate;</strong></p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_14.00.45-1.png" loading="lazy" decoding="async"></figure>
+<p>Voilà! You are all done! Now it’s time to <strong>play the prototype;</strong> </p>
+<h2 id="20-play-your-prototype">20. Play Your Prototype</h2>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_14.43.50.png" loading="lazy" decoding="async"></figure>
+<p>You can use the keyboard shortcut; </p>
+<p>On Windows:</p>
+<ul>
+<li>Play Prototype: <strong><code>Ctrl + period</code></strong></li>
+</ul>
+<p>On Mac: </p>
+<ul>
+<li>Play Prototype: <strong><code>Option ⌥ + Cmd + Return</code></strong></li>
+</ul>
+<p>Or <strong>Just Push Play</strong> Button located in the top right hand side of the Figma interface;</p>
+<figure class="media"><img alt="" src="../content/ui/starting-in-figma/Screenshot_2023-05-25_at_14.46.36.png" loading="lazy" decoding="async"></figure>
+<p>And here we are;</p>
+<figure class="video figma"><iframe src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fx2npExG9KVKjYzrYN84qku%2FBeginners-Guide%3Ftype%3Ddesign%26node-id%3D2-2%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D25%253A21" title="Figma file" loading="lazy" allowfullscreen></iframe></figure><a class="embed-link" href="https://www.figma.com/proto/x2npExG9KVKjYzrYN84qku/Beginners-Guide?type=design&amp;node-id=2-2&amp;scaling=scale-down&amp;page-id=0%3A1&amp;starting-point-node-id=25%3A21" target="_blank" rel="noopener">Open in Figma <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg></a>
+<h2 id="21-well-done-job-completed">21. Well Done! Job Completed!</h2>
+<p>Now why not get creative! <strong>Go have some fun 🤗.</strong> Change some properties from frame to frame. </p>
+<ul>
+<li>Change the radius on the first screen, watch how it shifts to the next!</li>
+<li>Change the color, alignment, change the shadows and strokes!</li>
+<li>Get comfortable with these basic principals and you will be off to a great start!</li>
+<li>Always remember when animating, you must keep <strong>same name on all layers</strong>!</li>
+<li>99.99% of everything you need to know to produce great prototypes, you have just completed!</li>
+</ul>
+<h2 id="section"></h2>
+<section class="complete" data-key="figma/starting-in-figma">
+  <div class="complete-text"><b>Finished this lecture?</b></div>
+  <button type="button" class="complete-btn" data-complete="figma/starting-in-figma" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
+</section>
+      </article>
+    </div>
+    <nav class="pagers"><a class="pager prev" href="choose-your-frame.html"><span class="pager-label">Previous</span><span class="pager-title">Choose your Frame</span></a><a class="pager next" href="beginners-guide-to-grids.html"><span class="pager-label">Next</span><span class="pager-title">Beginner’s Guide to Grids</span></a></nav>
+  </div>
+</main>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<footer class="foot"><div class="foot-inner"><span>Cornerstones · UX & UI learning resource for Barcelona Code School</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<div class="celebrate" id="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="celebrate-title">
+  <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
+  <h2 id="celebrate-title"></h2><p class="celebrate-text"></p><button type="button" class="login-submit" id="celebrate-close">Nice!</button></div>
+</div>
+<script src="../assets/progress-data.js?v=1e716abef8"></script>
+<script src="../assets/app.js?v=1e716abef8"></script>
+</body>
+</html>

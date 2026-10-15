@@ -345,7 +345,9 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
 .search-all { flex: 0 1 340px; }
 .search-results { list-style: none; padding: 0; margin: 0 0 32px; border-top: 1px solid var(--hair-2); }
 .search-results .empty { padding: 20px 4px; text-align: left; }
-.sections { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.sections { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 1100px) { .sections { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .sections { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .section-card {
   display: flex; flex-direction: column; gap: 8px; padding: 22px 20px 18px; min-height: 230px;
   border: 1px solid var(--hair-2); background: var(--raised); text-decoration: none;
@@ -397,7 +399,7 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
   .toc-mobile > summary { cursor: pointer; padding: 12px 16px; font: 500 12px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
   .toc-mobile .toc { padding: 0 16px 12px; }
 }
-@media (max-width: 1000px) { .sections { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
 @media (max-width: 860px) {
   .track-tabs { flex-wrap: wrap; overflow: visible; }
   .track-tab { padding: 10px 12px 9px; }
@@ -562,7 +564,7 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
 
 .badges { margin: 56px 0 0; max-width: 860px; }
 .badges h2 { font-size: 28px; letter-spacing: -.02em; margin: 0 0 6px; }
-.badge-shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.badge-shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; }
 .badge-item { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 22px 12px 18px; border: 1px solid var(--hair-2); background: var(--raised); text-align: center; }
 .badge-item:not(.earned) .badge-art { filter: grayscale(1); opacity: .35; }
 .badge-name { font-weight: 600; }

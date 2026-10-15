@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dynamic Buttons Part One · Cornerstones</title>
+<meta name="description" content="Build a reusable button component with text properties, appearance booleans and icon swaps.">
+<meta name="robots" content="noindex, nofollow">
+<script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
+<script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=1e716abef8">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">C</span>
+      <span class="brand-text"><span class="brand-name">CORNERSTONES</span><span class="brand-sub">UX &amp; UI at Barcelona Code School</span></span>
+    </a>
+    <nav class="nav-links"><a href="../ux.html">UX Lectures</a><a href="../methods.html">UX Methods</a><a href="../ui.html">UI Lectures</a><a href="../figma.html" aria-current=page>Figma</a><a href="../exercises.html">Exercises</a><a href="../timetable.html">Timetable</a></nav>
+    <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg></button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="../login.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Log out</span></button>
+  </div>
+  <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></button>
+    <a class="mini-badges" id="mini-badges" href="../index.html#badges-title" aria-label="Your badges"></a></div>
+</header>
+
+<main class="lecture track-figma" data-key="figma/dynamic-buttons-part-one">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../figma.html">Figma</a> <span class="sep">/</span> <a href="../figma.html#category=Figma Advanced">Figma Advanced</a> <span class="sep">/</span> <span>Dynamic Buttons Part One</span></nav>
+    <header class="lecture-head">
+      <div class="eyebrow">Lesson 09 · Figma Advanced</div>
+      <div class="title-row"><h1>Dynamic Buttons Part One</h1><button type="button" class="complete-btn head-complete" data-complete="figma/dynamic-buttons-part-one" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button></div>
+      <p class="lede">Build a reusable button component with text properties, appearance booleans and icon swaps.</p>
+      <div class="meta"><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>2 min read</span></div>
+    </header>
+    <div class="lecture-grid">
+      <aside class="rail"><div class="rail-sticky"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl3"><a href="#intro">Intro:</a></li><li class="lvl3"><a href="#apply-text-property">Apply Text Property</a></li><li class="lvl3"><a href="#appearance-booleans">Appearance Booleans</a></li><li class="lvl3"><a href="#swaps">Swaps</a></li><li class="lvl2"><a href="#all-done">All Done!</a></li></ol></div><div class="rail-block"><div class="rail-label">Figma Advanced</div><ol class="toc family"><li><a href="beginners-guide-to-components.html">Beginner’s Guide to Components</a></li><li><a href="navbar.html">Navbar</a></li><li><a href="dynamic-buttons-part-one.html" aria-current=page>Dynamic Buttons Part One</a></li><li><a href="dynamic-buttons-part-deux.html">Dynamic Buttons Part Deux</a></li><li><a href="color-variables.html">Color Variables</a></li><li><a href="number-variables.html">Number Variables</a></li><li><a href="string-variables.html">String Variables</a></li><li><a href="variable-modes.html">Variable Modes</a></li></ol></div></div></aside>
+      <article class="prose">
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl3"><a href="#intro">Intro:</a></li><li class="lvl3"><a href="#apply-text-property">Apply Text Property</a></li><li class="lvl3"><a href="#appearance-booleans">Appearance Booleans</a></li><li class="lvl3"><a href="#swaps">Swaps</a></li><li class="lvl2"><a href="#all-done">All Done!</a></li></ol></details>
+<h3 id="intro">Intro:</h3>
+<p>This is an easy lesson but <strong>the first thing</strong> is that it requires understanding three key principals. </p>
+<ul>
+<li><strong>Text Property</strong></li>
+<li><strong>Appearance Booleans</strong></li>
+<li><strong>Swaps</strong></li>
+</ul>
+<p><strong>The second thing</strong> you have to understand is that the parent component and the child component are very different. The rule is that the parent is where you load in the properties and the child is what you use. </p>
+<p>On the right hand panel of Figma you will see two very different CSM’s: for all parents and children </p>
+<figure class="media"><img alt="This is the parent" src="../content/ui/dynamic-buttons-part-one/Parent.jpg" loading="lazy" decoding="async"></figure>
+<p>This is the parent</p>
+<figure class="media"><img alt="The is the child" src="../content/ui/dynamic-buttons-part-one/Child.jpg" loading="lazy" decoding="async"></figure>
+<p>The is the child</p>
+<p>That being said, let’s get into it. </p>
+<ol>
+<li>
+<p>Use the text element and write out the word ‘Button’</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_15.59.33.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Press <code>Shift + A</code> to wrap an auto layout frame around the text. Change the title to Button</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_15.59.55.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Add a stroke to the button</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.01.59.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Open the actions panel from the bottom of Figma and run <strong>Phosphors Icons</strong></p>
+</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.02.47.png" loading="lazy" decoding="async"></figure>
+<ol start="5">
+<li>Import <strong>8 Icons</strong></li>
+</ol>
+<ul>
+<li>House</li>
+<li>User Circle</li>
+<li>Gear</li>
+<li>
+<p>PlusCircle</p>
+</li>
+<li>
+<p>ArrowCircleUp</p>
+</li>
+<li>ArrowCircleDown</li>
+<li>ArrowCircleRight</li>
+<li>ArrowCircleLeft</li>
+</ul>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.05.25.png" loading="lazy" decoding="async"></figure>
+<ol>
+<li>
+<p>Select all icons and create ‘<strong>Multiple Components’</strong>. Be careful not to make just one component or a component set. </p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.08.31.png" loading="lazy" decoding="async"></figure>
+</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.09.41.png" loading="lazy" decoding="async"></figure>
+<ol>
+<li>Pressing <code>Command + G</code> on mac or <code>Control + G</code> on windows, make two groups, changing the name on the left hand panel to </li>
+</ol>
+<ul>
+<li>Navbar Icons</li>
+<li>
+<p>Orientation Icons</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.11.18.png" loading="lazy" decoding="async"></figure>
+</li>
+</ul>
+<ol>
+<li>
+<p>Drop an Icon from each set before and after the text</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.13.48.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Turn to a component</p>
+<figure class="media"><img alt="This concludes the build. Now we will apply the text property." src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.14.52.png" loading="lazy" decoding="async"></figure>
+<p>This concludes the build. Now we will apply the text property. </p>
+<h3 id="apply-text-property">Apply Text Property</h3>
+<p>This means we specifically target the text on the <strong>parent.</strong></p>
+<p><strong>10. Press the ‘Apply variable/property’</strong></p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.18.25.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Press the <strong>+</strong> icon which will make a new variable/property</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.18.33.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Create the following property: </p>
+</li>
+</ol>
+<ul>
+<li>Name: <strong>Label</strong></li>
+<li>Value: <strong>Continue</strong></li>
+</ul>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.22.41.png" loading="lazy" decoding="async"></figure>
+<ol start="13">
+<li>You will know you have <strong>successfully applied the property if</strong> the word ‘Button’ has changed to ‘Continue’</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.23.58.png" loading="lazy" decoding="async"></figure>
+<p>It’s important to know that you have applied the text property to the parent component. The child component will look like this: </p>
+<figure class="media"><img alt="Parent component has a frame tag with 4 purple diamonds. Child has no frame tag title." src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.25.37.png" loading="lazy" decoding="async"></figure>
+<p>Parent component has a frame tag with 4 purple diamonds. Child has no frame tag title. </p>
+<h3 id="appearance-booleans">Appearance Booleans</h3>
+<p>⚠️ Working on the parent component ⚠️ </p>
+<ol start="14">
+<li>Select the text element. We are going to apply another property but this time it will be on the appearance. </li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.28.18.png" loading="lazy" decoding="async"></figure>
+<ol start="15">
+<li>Press the plus Icon and make the following property.</li>
+</ol>
+<div class="gallery"><figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.29.17.png" loading="lazy" decoding="async"></figure>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.29.42.png" loading="lazy" decoding="async"></figure>
+</div>
+<ol>
+<li>
+<p>Test on the child component to make sure the appearance boolean has been applied correctly. </p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.30.53.png" loading="lazy" decoding="async"></figure>
+</li>
+<li>
+<p>Repeat this process on both icons until you are left with this property panel on the child element.</p>
+</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.35.06.png" loading="lazy" decoding="async"></figure>
+<h3 id="swaps">Swaps</h3>
+<p>This is the last part of the exercise. We are going to apply a swap property to both icons, again, ⚠️ Working on the parent component ⚠️ </p>
+<ol start="18">
+<li>Select the Back Icon and create instance swap property</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.37.21.png" loading="lazy" decoding="async"></figure>
+<ol start="19">
+<li>Give the name ‘<strong>- Back Icon</strong>’</li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.38.05.png" loading="lazy" decoding="async"></figure>
+<ol start="20">
+<li>Repeat the process on the front icon but calling the swap property <strong>‘- Front Icon’</strong></li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.39.07.png" loading="lazy" decoding="async"></figure>
+<p>The child component should look a little something like this: </p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.40.11.png" loading="lazy" decoding="async"></figure>
+<ol start="21">
+<li>Select the parent and switch the order on properties </li>
+</ol>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.42.03.png" loading="lazy" decoding="async"></figure>
+<p>Order on child element should look like this:</p>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.42.34.png" loading="lazy" decoding="async"></figure>
+<h2 id="all-done">All Done!</h2>
+<figure class="media"><img alt="" src="../content/ui/dynamic-buttons-part-one/Screenshot_2026-01-06_at_16.43.54.png" loading="lazy" decoding="async"></figure>
+<section class="complete" data-key="figma/dynamic-buttons-part-one">
+  <div class="complete-text"><b>Finished this lecture?</b></div>
+  <button type="button" class="complete-btn" data-complete="figma/dynamic-buttons-part-one" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
+</section>
+<section class="related"><h2 id="related">Related</h2><ul class="cards"><li><a class="card" href="../figma/navbar.html"><span class="card-title">Navbar</span><span class="card-desc">Figma · Figma Advanced</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li><li><a class="card" href="../figma/dynamic-buttons-part-deux.html"><span class="card-title">Dynamic Buttons Part Deux</span><span class="card-desc">Figma · Figma Advanced</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li><li><a class="card" href="../exercises/stage-play.html"><span class="card-title">Stage Play</span><span class="card-desc">Exercises · Team Projects</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li><li><a class="card" href="../methods/style-guide.html"><span class="card-title">Style Guide</span><span class="card-desc">UX Methods · Ideation</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li></ul></section>
+      </article>
+    </div>
+    <nav class="pagers"><a class="pager prev" href="navbar.html"><span class="pager-label">Previous</span><span class="pager-title">Navbar</span></a><a class="pager next" href="dynamic-buttons-part-deux.html"><span class="pager-label">Next</span><span class="pager-title">Dynamic Buttons Part Deux</span></a></nav>
+  </div>
+</main>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<footer class="foot"><div class="foot-inner"><span>Cornerstones · UX & UI learning resource for Barcelona Code School</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<div class="celebrate" id="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="celebrate-title">
+  <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
+  <h2 id="celebrate-title"></h2><p class="celebrate-text"></p><button type="button" class="login-submit" id="celebrate-close">Nice!</button></div>
+</div>
+<script src="../assets/progress-data.js?v=1e716abef8"></script>
+<script src="../assets/app.js?v=1e716abef8"></script>
+</body>
+</html>

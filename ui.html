@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=fed9f57c81">
+<link rel="stylesheet" href="assets/style.css?v=1e716abef8">
 </head>
 <body>
 <header class="nav">
@@ -20,7 +20,7 @@
       <span class="brand-mark">C</span>
       <span class="brand-text"><span class="brand-name">CORNERSTONES</span><span class="brand-sub">UX &amp; UI at Barcelona Code School</span></span>
     </a>
-    <nav class="nav-links"><a href="ux.html">UX Lectures</a><a href="methods.html">UX Methods</a><a href="ui.html" aria-current=page>UI Lectures</a><a href="exercises.html">Exercises</a><a href="timetable.html">Timetable</a></nav>
+    <nav class="nav-links"><a href="ux.html">UX Lectures</a><a href="methods.html">UX Methods</a><a href="ui.html" aria-current=page>UI Lectures</a><a href="figma.html">Figma</a><a href="exercises.html">Exercises</a><a href="timetable.html">Timetable</a></nav>
     <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg></button>
     <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
     <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="login.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Log out</span></button>
@@ -32,14 +32,14 @@
 
 <main class="home">
   <div class="wrap">
-    <nav class="track-tabs" aria-label="Sections"><a class="track-tab" href="ux.html"><span>UX Lectures</span><span class="count">28</span></a><a class="track-tab" href="methods.html"><span>UX Methods</span><span class="count">31</span></a><a class="track-tab" href="ui.html" aria-current=page><span>UI Lectures</span><span class="count">23</span></a><a class="track-tab" href="exercises.html"><span>Exercises</span><span class="count">17</span></a></nav>
+    <nav class="track-tabs" aria-label="Sections"><a class="track-tab" href="ux.html"><span>UX Lectures</span><span class="count">28</span></a><a class="track-tab" href="methods.html"><span>UX Methods</span><span class="count">31</span></a><a class="track-tab" href="ui.html" aria-current=page><span>UI Lectures</span><span class="count">9</span></a><a class="track-tab" href="figma.html"><span>Figma</span><span class="count">14</span></a><a class="track-tab" href="exercises.html"><span>Exercises</span><span class="count">17</span></a></nav>
     <header class="hero">
       <div>
         <div class="eyebrow">UI Learning Resource</div>
         <h1>UI Lectures</h1>
-        <p class="lede">23 lessons on building interfaces: step-by-step Figma tutorials to follow in order, then the theory behind them. New to UI? Start with <a href="lectures/what-is-ui-design.html">What is UI Design</a>.</p>
+        <p class="lede">9 lectures on the theory behind interfaces. New to UI? Start with <a href="lectures/what-is-ui-design.html">What is UI Design</a>. For hands-on tutorials, see <a href="figma.html">Figma</a>.</p>
       </div>
-      <a class="hero-link" href="ui/choose-your-frame.html">Start with Choose your Frame <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="hero-link" href="ui/colour-values.html">Start with Colour Values <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </header>
     <div class="progress" data-track="ui">
   <div class="progress-row"><span class="progress-label">Your progress</span><span class="progress-count">–</span></div>
@@ -55,15 +55,15 @@
       <aside class="sidebar">
         <div class="side-label">Category</div>
         <ul class="cats">
-          <li><button type="button" data-cat="" aria-pressed="true"><span>All lectures</span><span class="count">23</span></button></li>
-          <li><button type="button" data-cat="Figma Basics"><span>Figma Basics</span><span class="count">6</span></button></li><li><button type="button" data-cat="Components &amp; Variables"><span>Components &amp; Variables</span><span class="count">8</span></button></li><li><button type="button" data-cat="UI Theory"><span>UI Theory</span><span class="count">9</span></button></li>
+          <li><button type="button" data-cat="" aria-pressed="true"><span>All lectures</span><span class="count">9</span></button></li>
+          <li><button type="button" data-cat="UI Theory"><span>UI Theory</span><span class="count">9</span></button></li>
         </ul>
         
       </aside>
       <section class="listing">
         <div class="toolbar">
           <label class="search"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search lectures…" autocomplete="off"></label>
-          <span class="showing" id="showing">Showing 23 of 23</span>
+          <span class="showing" id="showing">Showing 9 of 9</span>
           <div class="view-toggle" role="group" aria-label="Layout">
             <button type="button" data-view="list" aria-pressed="true" aria-label="List view"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
             <button type="button" data-view="grid" aria-pressed="false" aria-label="Grid view"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg></button>
@@ -71,120 +71,8 @@
         </div>
         
         <ol class="rows" id="rows">
-<li class="chapter" data-cat="Figma Basics"><h2 class="chapter-name">Figma Basics</h2><p class="chapter-blurb">Start here: frames, grids, nesting, Auto Layout and the 8 point grid.</p></li><li class="row no-stats" data-key="ui/choose-your-frame" data-cat="Figma Basics" data-search="choose your frame figma basics how to pick a figma frame size for the device you&#x27;ll design and prototype on, and why aspect ratio matters.">
+<li class="chapter" data-cat="UI Theory"><h2 class="chapter-name">UI Theory</h2><p class="chapter-blurb">The concepts behind interfaces: colour, type, spacing, icons and systems.</p></li><li class="row no-stats" data-key="ui/colour-values" data-cat="UI Theory" data-search="colour values ui theory the colour formats designers use, hex, rgb, cmyk and hsl, and where each one fits.">
   <span class="row-num">1</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/choose-your-frame.html">Choose your Frame</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">How to pick a Figma frame size for the device you&#x27;ll design and prototype on, and why aspect ratio matters.</p>
-    
-  </div>
-  
-</li><li class="row no-stats" data-key="ui/starting-in-figma" data-cat="Figma Basics" data-search="starting in figma figma basics your first figma walkthrough: set up frames, then build and style the shapes for an animated button.">
-  <span class="row-num">2</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/starting-in-figma.html">Starting in Figma</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Your first Figma walkthrough: set up frames, then build and style the shapes for an animated button.</p>
-    
-  </div>
-  
-</li><li class="row no-stats" data-key="ui/beginners-guide-to-grids" data-cat="Figma Basics" data-search="beginner’s guide to grids figma basics set up columns, rows, gutters and margins in figma to build a grid layout.">
-  <span class="row-num">3</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/beginners-guide-to-grids.html">Beginner’s Guide to Grids</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Set up columns, rows, gutters and margins in Figma to build a grid layout.</p>
-    
-  </div>
-  
-</li><li class="row no-stats" data-key="ui/beginners-guide-to-nesting" data-cat="Figma Basics" data-search="beginner’s guide to nesting figma basics nest one container inside another using grids and margins.">
-  <span class="row-num">4</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/beginners-guide-to-nesting.html">Beginner’s Guide to Nesting</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Nest one container inside another using grids and margins.</p>
-    
-  </div>
-  
-</li><li class="row no-stats" data-key="ui/beginners-guide-auto-layout" data-cat="Figma Basics" data-search="beginner’s guide auto layout figma basics use auto layout to build a button with padding and an icon, then turn it into a component.">
-  <span class="row-num">5</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/beginners-guide-auto-layout.html">Beginner’s Guide Auto Layout</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Use Auto Layout to build a button with padding and an icon, then turn it into a component.</p>
-    
-  </div>
-  
-</li><li class="row no-stats" data-key="ui/beginners-guide-to-8-point-grid-system" data-cat="Figma Basics" data-search="beginner’s guide to 8 point grid system figma basics why spacing everything in multiples of 8 keeps layouts consistent, with a timed exercise.">
-  <span class="row-num">6</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/beginners-guide-to-8-point-grid-system.html">Beginner’s Guide to 8 Point Grid System</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Why spacing everything in multiples of 8 keeps layouts consistent, with a timed exercise.</p>
-    
-  </div>
-  
-</li><li class="chapter" data-cat="Components &amp; Variables"><h2 class="chapter-name">Components &amp; Variables</h2><p class="chapter-blurb">Reusable components, properties and variables, the building blocks of a design system.</p></li><li class="row no-stats" data-key="ui/beginners-guide-to-components" data-cat="Components &amp; Variables" data-search="beginner’s guide to components components &amp; variables go from a list of components to a reusable library, and build your own.">
-  <span class="row-num">7</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/beginners-guide-to-components.html">Beginner’s Guide to Components</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Go from a list of components to a reusable library, and build your own.</p>
-    
-  </div>
-  
-</li><li class="row no-stats" data-key="ui/navbar" data-cat="Components &amp; Variables" data-search="navbar components &amp; variables build a navbar component from phosphor icon sets with on and off states, then prototype it across four screens.">
-  <span class="row-num">8</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/navbar.html">Navbar</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Build a navbar component from Phosphor icon sets with on and off states, then prototype it across four screens.</p>
-    
-  </div>
-  
-</li><li class="row no-stats" data-key="ui/dynamic-buttons-part-one" data-cat="Components &amp; Variables" data-search="dynamic buttons part one components &amp; variables build a reusable button component with text properties, appearance booleans and icon swaps.">
-  <span class="row-num">9</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/dynamic-buttons-part-one.html">Dynamic Buttons Part One</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Build a reusable button component with text properties, appearance booleans and icon swaps.</p>
-    
-  </div>
-  
-</li><li class="row no-stats" data-key="ui/dynamic-buttons-part-deux" data-cat="Components &amp; Variables" data-search="dynamic buttons part deux components &amp; variables turn your button into a component set with seven variants: default, hover, pressed, stroke, disabled and glass.">
-  <span class="row-num">10</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/dynamic-buttons-part-deux.html">Dynamic Buttons Part Deux</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Turn your button into a component set with seven variants: default, hover, pressed, stroke, disabled and glass.</p>
-    
-  </div>
-  
-</li><li class="row no-stats" data-key="ui/color-variables" data-cat="Components &amp; Variables" data-search="color variables components &amp; variables create colour variables from a grabient gradient and organise them into collections.">
-  <span class="row-num">11</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/color-variables.html">Color Variables</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Create colour variables from a Grabient gradient and organise them into collections.</p>
-    
-  </div>
-  
-</li><li class="row no-stats" data-key="ui/number-variables" data-cat="Components &amp; Variables" data-search="number variables components &amp; variables record your phone&#x27;s frame, content areas, gaps and radii as number variables you can reuse.">
-  <span class="row-num">12</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/number-variables.html">Number Variables</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Record your phone&#x27;s frame, content areas, gaps and radii as number variables you can reuse.</p>
-    
-  </div>
-  
-</li><li class="row no-stats" data-key="ui/string-variables" data-cat="Components &amp; Variables" data-search="string variables components &amp; variables store text in string variables and update it everywhere from one place.">
-  <span class="row-num">13</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/string-variables.html">String Variables</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Store text in string variables and update it everywhere from one place.</p>
-    
-  </div>
-  
-</li><li class="row no-stats" data-key="ui/variable-modes" data-cat="Components &amp; Variables" data-search="variable modes components &amp; variables use variable modes and a prototype interaction to switch a product&#x27;s colour on hover.">
-  <span class="row-num">14</span>
-  <div class="row-body">
-    <div class="row-head"><a class="row-title" href="ui/variable-modes.html">Variable Modes</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
-    <p class="row-desc">Use variable modes and a prototype interaction to switch a product&#x27;s colour on hover.</p>
-    
-  </div>
-  
-</li><li class="chapter" data-cat="UI Theory"><h2 class="chapter-name">UI Theory</h2><p class="chapter-blurb">The concepts behind interfaces: colour, type, spacing, icons and systems.</p></li><li class="row no-stats" data-key="ui/colour-values" data-cat="UI Theory" data-search="colour values ui theory the colour formats designers use, hex, rgb, cmyk and hsl, and where each one fits.">
-  <span class="row-num">15</span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="ui/colour-values.html">Colour Values</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">The colour formats designers use, HEX, RGB, CMYK and HSL, and where each one fits.</p>
@@ -192,7 +80,7 @@
   </div>
   
 </li><li class="row no-stats" data-key="ui/atomic-design-methodology" data-cat="UI Theory" data-search="atomic design methodology ui theory brad frost&#x27;s atomic design: build interfaces from atoms and molecules up to organisms, templates and pages.">
-  <span class="row-num">16</span>
+  <span class="row-num">2</span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="ui/atomic-design-methodology.html">Atomic Design Methodology</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">Brad Frost&#x27;s atomic design: build interfaces from atoms and molecules up to organisms, templates and pages.</p>
@@ -200,7 +88,7 @@
   </div>
   
 </li><li class="row no-stats" data-key="ui/file-types" data-cat="UI Theory" data-search="file types ui theory when to use jpg, png, gif, svg, webp and tiff in interface work.">
-  <span class="row-num">17</span>
+  <span class="row-num">3</span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="ui/file-types.html">File Types</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">When to use JPG, PNG, GIF, SVG, WEBP and TIFF in interface work.</p>
@@ -208,7 +96,7 @@
   </div>
   
 </li><li class="row no-stats" data-key="ui/spacing-grids" data-cat="UI Theory" data-search="spacing &amp; grids ui theory a short history of grids, and how column grids, responsiveness and the 8-point system work in ui.">
-  <span class="row-num">18</span>
+  <span class="row-num">4</span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="ui/spacing-grids.html">Spacing &amp; Grids</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">A short history of grids, and how column grids, responsiveness and the 8-point system work in UI.</p>
@@ -216,7 +104,7 @@
   </div>
   
 </li><li class="row no-stats" data-key="ui/typeface" data-cat="UI Theory" data-search="typeface ui theory key type terms and the major typeface classifications, plus 11 typefaces and the stories behind them. gothic (blackletter) garamond didot caslon egyptian futura times new roman helvetica roboto san francisco google sans comic sans">
-  <span class="row-num">19</span>
+  <span class="row-num">5</span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="ui/typeface.html">Typeface</a><span class="pill" data-parts-of="11">11 parts</span><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">Key type terms and the major typeface classifications, plus 11 typefaces and the stories behind them.</p>
@@ -224,7 +112,7 @@
   </div>
   
 </li><li class="row no-stats" data-key="ui/style-guides" data-cat="UI Theory" data-search="style guides ui theory what a style tile or style guide is, and how it communicates colour, type and graphic styles.">
-  <span class="row-num">20</span>
+  <span class="row-num">6</span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="ui/style-guides.html">Style Guides</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">What a style tile or style guide is, and how it communicates colour, type and graphic styles.</p>
@@ -232,7 +120,7 @@
   </div>
   
 </li><li class="row no-stats" data-key="ui/icons" data-cat="UI Theory" data-search="icons ui theory icon types, and how to use icons well: add labels, keep the geometry consistent and keep them simple.">
-  <span class="row-num">21</span>
+  <span class="row-num">7</span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="ui/icons.html">Icons</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">Icon types, and how to use icons well: add labels, keep the geometry consistent and keep them simple.</p>
@@ -240,7 +128,7 @@
   </div>
   
 </li><li class="row no-stats" data-key="ui/paper-wireframes" data-cat="UI Theory" data-search="paper wireframes ui theory sketch your ui on paper to think it through before you open figma.">
-  <span class="row-num">22</span>
+  <span class="row-num">8</span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="ui/paper-wireframes.html">Paper Wireframes</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">Sketch your UI on paper to think it through before you open Figma.</p>
@@ -248,7 +136,7 @@
   </div>
   
 </li><li class="row no-stats" data-key="ui/case-studies-and-how-to-tell-a-good-story" data-cat="UI Theory" data-search="case studies and how to tell a good story ui theory how to structure a case study so it tells the story of your design process.">
-  <span class="row-num">23</span>
+  <span class="row-num">9</span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="ui/case-studies-and-how-to-tell-a-good-story.html">Case Studies and How to tell a Good Story</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">How to structure a case study so it tells the story of your design process.</p>
@@ -267,7 +155,7 @@
   <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
   <h2 id="celebrate-title"></h2><p class="celebrate-text"></p><button type="button" class="login-submit" id="celebrate-close">Nice!</button></div>
 </div>
-<script src="assets/progress-data.js?v=fed9f57c81"></script>
-<script src="assets/app.js?v=fed9f57c81"></script>
+<script src="assets/progress-data.js?v=1e716abef8"></script>
+<script src="assets/app.js?v=1e716abef8"></script>
 </body>
 </html>

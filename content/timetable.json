@@ -15,13 +15,13 @@
       "tools": ["Figma", "FigJam", "Claude"],
       "days": [
         {"activities": [{"label": "Sprint brief"}, {"label": "Site visit"}, {"label": "'As-Is' customer journey mapping", "link": "methods/user-journey-map"}],
-         "workshop": {"title": "Figma Workshop (1)", "tag": "Basics", "link": "ui/starting-in-figma"}},
+         "workshop": {"title": "Figma Workshop (1)", "tag": "Basics", "link": "figma/starting-in-figma"}},
         {"activities": [{"label": "Service design blueprint"}],
-         "workshop": {"title": "Figma Workshop (2)", "tag": "Auto Layout", "link": "ui/beginners-guide-auto-layout"}},
+         "workshop": {"title": "Figma Workshop (2)", "tag": "Auto Layout", "link": "figma/beginners-guide-auto-layout"}},
         {"activities": [{"label": "Indirect benchmarking", "link": "methods/competitive-analysis"}],
-         "workshop": {"title": "Figma Workshop (3)", "tag": "Components", "link": "ui/beginners-guide-to-components"}},
+         "workshop": {"title": "Figma Workshop (3)", "tag": "Components", "link": "figma/beginners-guide-to-components"}},
         {"activities": [{"label": "Inspiration"}, {"label": "Moodboard", "link": "methods/mood-board"}, {"label": "Brand pack"}, {"label": "AI-assisted multimodal visual loops"}],
-         "workshop": {"title": "Figma Workshop (4)", "tag": "Properties", "link": "ui/dynamic-buttons-part-one"}},
+         "workshop": {"title": "Figma Workshop (4)", "tag": "Properties", "link": "figma/dynamic-buttons-part-one"}},
         {"activities": [{"label": "Checkpoint presentation"}], "checkpoint": true,
          "workshop": {"title": "Figma Workshop (5)", "tag": "App Replica", "link": "exercises/glovo-replica-challenge"}}
       ]

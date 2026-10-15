@@ -5,6 +5,7 @@
     ux.html         UX lectures        -> lectures/<slug>.html
     methods.html    UX methods         -> methods/<slug>.html
     ui.html         UI lectures        -> ui/<slug>.html
+    figma.html      Figma tutorials    -> figma/<slug>.html   (content shared with UI: content/ui/)
     exercises.html  Exercises          -> exercises/<slug>.html
 
 Usage:
@@ -61,12 +62,18 @@ TRACKS = [
      "parent": {"Information Architecture": "Define"}},
     {"id": "ui", "out": "ui", "index": "ui.html", "label": "UI Lectures", "noun": "Lecture",
      "eyebrow": "UI Learning Resource", "h1": "UI Lectures",
-     "blurb": "Hands-on Figma tutorials, and the theory behind good interfaces.",
-     "intro": "{n} lessons on building interfaces: step-by-step Figma tutorials to follow in order, then the theory behind them. New to UI? Start with <a href=\"lectures/what-is-ui-design.html\">What is UI Design</a>.",
+     "blurb": "The theory behind good interfaces: colour, type, spacing, icons and systems.",
+     "intro": "{n} lectures on the theory behind interfaces. New to UI? Start with <a href=\"lectures/what-is-ui-design.html\">What is UI Design</a>. For hands-on tutorials, see <a href=\"figma.html\">Figma</a>.",
+     "chapters": {
+         "UI Theory": "The concepts behind interfaces: colour, type, spacing, icons and systems.",
+     }},
+    {"id": "figma", "content": "ui", "out": "figma", "index": "figma.html", "label": "Figma", "noun": "Lesson",
+     "eyebrow": "Hands-on Tutorials", "h1": "Figma",
+     "blurb": "Step-by-step Figma tutorials, from your first frame to components and variables.",
+     "intro": "{n} step-by-step Figma tutorials. Work through Figma Basics in order, then move on to Figma Advanced.",
      "chapters": {
          "Figma Basics": "Start here: frames, grids, nesting, Auto Layout and the 8 point grid.",
-         "Components & Variables": "Reusable components, properties and variables, the building blocks of a design system.",
-         "UI Theory": "The concepts behind interfaces: colour, type, spacing, icons and systems.",
+         "Figma Advanced": "Reusable components, properties and variables, the building blocks of a design system.",
      }},
     {"id": "exercises", "out": "exercises", "index": "exercises.html", "label": "Exercises", "noun": "Exercise",
      "eyebrow": "Practice", "h1": "Exercises",
@@ -83,6 +90,7 @@ TRACKS = [
 PROGRESS = {
     "ux": {"badge": "UX Lectures", "short": "UX", "colour": "#0891b2", "done": "You've finished every UX lecture."},
     "ui": {"badge": "UI Lectures", "short": "UI", "colour": "#7c5cd6", "done": "You've finished every UI lecture."},
+    "figma": {"badge": "Figma", "short": "FG", "colour": "#d9467a", "done": "You've finished every Figma lesson."},
     "exercises": {"badge": "Exercises", "short": "EX", "colour": "#e0802c", "done": "You've completed every exercise."},
 }
 
@@ -110,24 +118,27 @@ def progress_panel(track, compact=False):
 # The suggested route on the home page: (step, why, section id, page slug).
 ROUTE = [
     ("Understand UX", "Start with the foundations: where UX comes from and what it really is.", "ux", "design-origins"),
-    ("Learn Figma", "Work through Figma Basics in order before anything else in UI.", "ui", "choose-your-frame"),
+    ("Learn Figma", "Work through Figma Basics in order, then Figma Advanced.", "figma", "choose-your-frame"),
     ("Practise every day", "Pick a Daily UI brief each session, starting with Sidebar.", "exercises", "sidebar"),
     ("Run a sprint", "Use UX Methods chapter by chapter, from Discovery to Retrospective.", "methods", "lean-ux-canvas"),
     ("Build something bigger", "Finish with a replica challenge and the Stage Play team project.", "exercises", "glovo-replica-challenge"),
 ]
 TRACK = {t["id"]: t for t in TRACKS}
 
-# Order and categories for tracks fed by more than one source. Every page in content/<track>*.json must be listed.
+# Order and categories for tracks fed by more than one source, or sharing content with another track
+# ("content" in TRACKS). Every page in a content source must be listed by exactly one track.
 ORDER = {
     "ui": {
+        "UI Theory": ["colour-values", "atomic-design-methodology", "file-types", "spacing-grids", "typeface",
+                      "style-guides", "icons", "paper-wireframes", "case-studies-and-how-to-tell-a-good-story"],
+    },
+    "figma": {
         "Figma Basics": ["choose-your-frame", "starting-in-figma", "beginners-guide-to-grids",
                          "beginners-guide-to-nesting", "beginners-guide-auto-layout",
                          "beginners-guide-to-8-point-grid-system"],
-        "Components & Variables": ["beginners-guide-to-components", "navbar", "dynamic-buttons-part-one",
-                                   "dynamic-buttons-part-deux", "color-variables", "number-variables",
-                                   "string-variables", "variable-modes"],
-        "UI Theory": ["colour-values", "atomic-design-methodology", "file-types", "spacing-grids", "typeface",
-                      "style-guides", "icons", "paper-wireframes", "case-studies-and-how-to-tell-a-good-story"],
+        "Figma Advanced": ["beginners-guide-to-components", "navbar", "dynamic-buttons-part-one",
+                           "dynamic-buttons-part-deux", "color-variables", "number-variables",
+                           "string-variables", "variable-modes"],
     },
     "exercises": {
         "Daily UI": ["sidebar", "friends-list", "new-notification", "bottom-sheet", "sign-in", "cc-checkout",
@@ -142,33 +153,33 @@ ORDER = {
 RELATED = [
     ("ui/icons", "ux/icons"),
     ("ui/typeface", "ux/typography"),
-    ("ui/navbar", "ui/dynamic-buttons-part-one"),
-    ("ui/dynamic-buttons-part-one", "ui/dynamic-buttons-part-deux"),
-    ("ui/color-variables", "ui/colour-values"),
-    ("ui/color-variables", "ui/number-variables"),
-    ("ui/number-variables", "ui/string-variables"),
-    ("ui/string-variables", "ui/variable-modes"),
-    ("ui/number-variables", "ui/beginners-guide-to-8-point-grid-system"),
-    ("exercises/stage-play", "ui/beginners-guide-to-8-point-grid-system"),
-    ("exercises/stage-play", "ui/beginners-guide-to-nesting"),
-    ("exercises/stage-play", "ui/beginners-guide-auto-layout"),
-    ("exercises/stage-play", "ui/beginners-guide-to-components"),
-    ("exercises/stage-play", "ui/dynamic-buttons-part-one"),
+    ("figma/navbar", "figma/dynamic-buttons-part-one"),
+    ("figma/dynamic-buttons-part-one", "figma/dynamic-buttons-part-deux"),
+    ("figma/color-variables", "ui/colour-values"),
+    ("figma/color-variables", "figma/number-variables"),
+    ("figma/number-variables", "figma/string-variables"),
+    ("figma/string-variables", "figma/variable-modes"),
+    ("figma/number-variables", "figma/beginners-guide-to-8-point-grid-system"),
+    ("exercises/stage-play", "figma/beginners-guide-to-8-point-grid-system"),
+    ("exercises/stage-play", "figma/beginners-guide-to-nesting"),
+    ("exercises/stage-play", "figma/beginners-guide-auto-layout"),
+    ("exercises/stage-play", "figma/beginners-guide-to-components"),
+    ("exercises/stage-play", "figma/dynamic-buttons-part-one"),
     ("ui/colour-values", "ux/colors"),
     ("ui/spacing-grids", "ux/grid"),
-    ("ui/spacing-grids", "ui/beginners-guide-to-grids"),
-    ("ui/spacing-grids", "ui/beginners-guide-to-8-point-grid-system"),
+    ("ui/spacing-grids", "figma/beginners-guide-to-grids"),
+    ("ui/spacing-grids", "figma/beginners-guide-to-8-point-grid-system"),
     ("ui/style-guides", "ux/design-systems"),
     ("ui/atomic-design-methodology", "ux/design-systems"),
-    ("ui/atomic-design-methodology", "ui/beginners-guide-to-components"),
+    ("ui/atomic-design-methodology", "figma/beginners-guide-to-components"),
     ("ui/paper-wireframes", "ux/stages-of-wireframes"),
-    ("ui/choose-your-frame", "ux/what-is-ui-design"),
-    ("exercises/glovo-replica-challenge", "ui/beginners-guide-to-nesting"),
-    ("exercises/glovo-replica-challenge", "ui/beginners-guide-auto-layout"),
-    ("exercises/glovo-replica-challenge", "ui/beginners-guide-to-components"),
-    ("exercises/youtube-challenge", "ui/beginners-guide-to-nesting"),
-    ("exercises/youtube-challenge", "ui/beginners-guide-auto-layout"),
-    ("exercises/youtube-challenge", "ui/beginners-guide-to-components"),
+    ("figma/choose-your-frame", "ux/what-is-ui-design"),
+    ("exercises/glovo-replica-challenge", "figma/beginners-guide-to-nesting"),
+    ("exercises/glovo-replica-challenge", "figma/beginners-guide-auto-layout"),
+    ("exercises/glovo-replica-challenge", "figma/beginners-guide-to-components"),
+    ("exercises/youtube-challenge", "figma/beginners-guide-to-nesting"),
+    ("exercises/youtube-challenge", "figma/beginners-guide-auto-layout"),
+    ("exercises/youtube-challenge", "figma/beginners-guide-to-components"),
     ("exercises/ux-x-ai", "exercises/make-an-ai-interface"),
     ("exercises/glovo-replica-challenge", "exercises/youtube-challenge"),
     ("methods/limited-intervention-technique", "ux/non-directive-interview-technique"),
@@ -178,7 +189,7 @@ RELATED = [
     ("methods/pick-a-target", "ux/target-mvp"),
     ("methods/paper-wireframes", "ui/paper-wireframes"),
     ("methods/style-guide", "ui/style-guides"),
-    ("methods/style-guide", "ui/dynamic-buttons-part-one"),
+    ("methods/style-guide", "figma/dynamic-buttons-part-one"),
     ("methods/lo-fi", "ux/stages-of-wireframes"),
     ("methods/hi-fi", "ux/stages-of-wireframes"),
     ("methods/research-goal", "methods/research-questions"),
@@ -423,7 +434,8 @@ def load():
     data = {}
     for t in TRACKS:
         d = {"categories": [], "lectures": [], "subpages": []}
-        for f in [CONTENT / f"{t['id']}.json"] + sorted(CONTENT.glob(f"{t['id']}.*.json")):
+        src = t.get("content", t["id"])
+        for f in [CONTENT / f"{src}.json"] + sorted(CONTENT.glob(f"{src}.*.json")):
             part = json.loads(f.read_text(encoding="utf-8"))
             d["categories"] += [c for c in part["categories"] if c not in d["categories"]]
             d["lectures"] += part["lectures"]
@@ -431,7 +443,9 @@ def load():
         if t["id"] in ORDER:
             by = {l["slug"]: l for l in d["lectures"]}
             listed = [s for slugs in ORDER[t["id"]].values() for s in slugs]
-            missing = set(by) - set(listed)
+            claimed = {s for x in TRACKS if x.get("content", x["id"]) == src and x["id"] in ORDER
+                       for slugs in ORDER[x["id"]].values() for s in slugs}
+            missing = set(by) - claimed
             if missing or set(listed) - set(by):
                 raise SystemExit(f"ORDER[{t['id']!r}] is out of date. Not listed: {sorted(missing)}; "
                                  f"no such page: {sorted(set(listed) - set(by))}")
@@ -443,6 +457,8 @@ def load():
                     d["lectures"].append(by[slug])
             for i, l in enumerate(d["lectures"], 1):
                 l["number"] = i
+            # Sub-pages go with whichever track has their parent.
+            d["subpages"] = [sp for sp in d["subpages"] if sp["parent"] in set(listed)]
         elif t.get("chapters"):
             d["lectures"].sort(key=lambda l: d["categories"].index(l["category"]))
             for i, l in enumerate(d["lectures"], 1):
@@ -451,7 +467,7 @@ def load():
         by_slug = {p["slug"]: p for p in every}
         for p in every:
             p["track"] = t["id"]
-            text = (CONTENT / t["id"] / p["slug"] / "index.md").read_text(encoding="utf-8")
+            text = (CONTENT / src / p["slug"] / "index.md").read_text(encoding="utf-8")
             words = len(re.findall(r"\w+", re.sub(r"!\[[^\]]*\]\([^)]*\)|\([^)]*\)", "", text)))
             summary = SUMMARIES.get(f'{t["id"]}/{p["slug"]}')
             quote = re.search(r"^> *(\S[^\n]{39,})", text, re.M)  # sub-pages (e.g. typefaces) summarised by a one-line quote
@@ -507,7 +523,7 @@ def build_track(t, data):
 
     reading_order = [s for l in lectures for s in [l["slug"]] + l["children"]]
     for p in every:
-        body, toc = render_markdown(t["id"], p["slug"], p["text"], by_slug)
+        body, toc = render_markdown(t.get("content", t["id"]), p["slug"], p["text"], by_slug)
         parent = by_slug.get(p["parent"]) if p["parent"] else None
         top = parent or p
         siblings = parent["children"] if parent else []
@@ -939,7 +955,30 @@ def write_progress_data(data):
     (ROOT / "assets" / "progress-data.js").write_text(
         "// Generated by tools/build.py: the pages that make up each section's progress, for the tracker and badges.\n"
         "window.CS_ROOT = document.currentScript.src.replace(/assets\\/progress-data\\.js.*$/, '');\n"
-        "window.CS_PROGRESS = " + json.dumps(tracks, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
+        "window.CS_PROGRESS = " + json.dumps(tracks, ensure_ascii=False, separators=(",", ":")) + ";\n"
+        "// Pages that moved section: old progress key -> new one.\n"
+        "window.CS_MOVED = " + json.dumps(moved_pages(data), separators=(",", ":")) + ";\n", encoding="utf-8")
+
+
+def moved_pages(data):
+    """Pages shown by a track that shares another track's content used to live in that track."""
+    moved = {}
+    for t in TRACKS:
+        src = t.get("content")
+        if src and src != t["id"]:
+            for p in data[t["id"]]["every"]:
+                moved[f"{src}/{p['slug']}"] = f"{t['id']}/{p['slug']}"
+    return moved
+
+
+def write_redirects(data):
+    for old, new in moved_pages(data).items():
+        o, n = old.split("/"), new.split("/")
+        target = f"../{TRACK[n[0]]['out']}/{n[1]}.html"
+        (ROOT / TRACK[o[0]]["out"] / f"{o[1]}.html").write_text(
+            f'<!doctype html><meta charset="utf-8"><title>Moved</title><meta name="robots" content="noindex">'
+            f'<meta http-equiv="refresh" content="0; url={target}"><link rel="canonical" href="{target}">'
+            f'<p>This page has moved to <a href="{target}">{target}</a>.</p>\n', encoding="utf-8")
 
 
 def main():
@@ -953,6 +992,7 @@ def main():
     build_home(data)
     build_timetable(data)
     build_login()
+    write_redirects(data)
 
 
 if __name__ == "__main__":

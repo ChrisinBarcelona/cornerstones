@@ -234,6 +234,12 @@
   function write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   var done = read(KEY);
+  // Pages that moved to another section keep their ticks.
+  var moved = window.CS_MOVED || {}, migrated = false;
+  Object.keys(moved).forEach(function (oldKey) {
+    if (done[oldKey]) { done[moved[oldKey]] = 1; delete done[oldKey]; migrated = true; }
+  });
+  if (migrated) write(KEY, done);
 
   // A page with parts is complete only when it and all of its parts are done…
   function partsDone(item) { return item.children.filter(function (c) { return done[c.key]; }).length; }
