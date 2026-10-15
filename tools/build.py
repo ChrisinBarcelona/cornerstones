@@ -195,7 +195,8 @@ SUMMARIES = {k: v for k, v in json.loads((CONTENT / "summaries.json").read_text(
 
 # Method sections shown in the quick-reference card or folded away, matched on heading text.
 METHOD_DROP = ("stage",)                    # repeats the chapter, which the page already shows
-METHOD_FOLD = ("extra notes", "resources", "tips", "checklist", "summary", "media", "template", "ai assist")
+# Media (the videos) is never folded: watching them matters.
+METHOD_FOLD = ("extra notes", "resources", "tips", "checklist", "summary", "template", "ai assist")
 
 YOUTUBE_RE = re.compile(
     r'<p><a href="(https?://(?:www\.)?(?:youtube\.com/(?:watch\?v=|embed/)|youtu\.be/)([\w-]{11})[^"]*)">[^<]*</a></p>')
