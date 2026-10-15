@@ -405,3 +405,21 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 /* One calm tag style on the timetable; linked ones underline on hover */
 .tt-tag[class*=" c"], [data-theme="dark"] .tt-tag[class*=" c"] { background: var(--paper); color: var(--ink); }
 .tt-tag.linked:hover { background: var(--paper-2); text-decoration: underline; text-underline-offset: 2px; }
+
+/* Timetable icons in place of the coloured dot */
+.tt-kind .tt-icon { font-size: 15px; line-height: 1; width: auto; }
+.tt-kind:has(.tt-icon)::before { content: none; }
+.tt-kind { gap: 7px; color: var(--ink); }
+
+/* Definition box above "On this page" (UX methods); the side column becomes two white cards */
+.rail-sticky { background: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.rail-box, .definition { background: var(--raised); border-radius: var(--r-lg); padding: 20px 18px 18px; }
+.definition p { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--ink-soft); }
+.definition p b { display: block; margin-bottom: 4px; color: var(--ink); font-weight: 700; }
+.definition .rail-label { color: var(--tc-text); }
+.definition-mobile { display: none; }
+@media (max-width: 1000px) {
+  .definition-mobile { display: block; margin: 0 0 1.4em; }
+  .rail .definition { display: none; }
+  .rail-box { background: none; padding: 0; }
+}

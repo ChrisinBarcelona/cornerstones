@@ -23,7 +23,7 @@ import markdown
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
-SITE = "UX/UI Design"
+SITE = "Cornerstones"
 SCHOOL = "Barcelona Code School"
 # The logo mark: four tiles in the section colours; the top-left "cornerstone" is a quarter circle.
 LOGO_MARK = ('<svg class="logo-mark" viewBox="0 0 40 40" width="38" height="38" aria-hidden="true">'
@@ -33,8 +33,8 @@ LOGO_MARK = ('<svg class="logo-mark" viewBox="0 0 40 40" width="38" height="38" 
              '<rect x="21" y="21" width="19" height="19" rx="5" fill="#00aa3c"/></svg>')
 FAVICON = "data:image/svg+xml," + __import__("urllib.parse").parse.quote(
     LOGO_MARK.replace('class="logo-mark" ', 'xmlns="http://www.w3.org/2000/svg" ').replace(' aria-hidden="true"', ''))
-LOGO = (f'{LOGO_MARK}<span class="logo-text"><span class="logo-name">UX/UI Design</span>'
-        f'<span class="logo-sub">at {SCHOOL}</span></span>')
+LOGO = (f'{LOGO_MARK}<span class="logo-text"><span class="logo-name">Cornerstones</span>'
+        f'<span class="logo-sub">UX/UI Design at {SCHOOL}</span></span>')
 ASSET_V = ""  # set in main(): a content hash appended to asset URLs so browsers never mix old and new files
 TAGLINE = "UX & UI learning resource for Barcelona Code School"
 
@@ -208,6 +208,10 @@ RELATED = [
 SUMMARIES = {k: v for k, v in json.loads((CONTENT / "summaries.json").read_text(encoding="utf-8")).items()
              if not k.startswith("_")}
 
+# Quick definitions for the Definition box on UX method pages (edit content/definitions.json).
+DEFINITIONS = {k: v for k, v in json.loads((CONTENT / "definitions.json").read_text(encoding="utf-8")).items()
+               if not k.startswith("_")}
+
 # Method sections shown in the quick-reference card or folded away, matched on heading text.
 METHOD_DROP = ("stage",)                    # repeats the chapter, which the page already shows
 # Media (the videos) is never folded: watching them matters.
@@ -283,7 +287,7 @@ def page(title, description, body, depth, active):
 <body class="t-{active}">
 <header class="nav">
   <div class="nav-inner">
-    <a class="brand logo" href="{prefix}index.html" aria-label="UX/UI Design at {SCHOOL}, home">{LOGO}
+    <a class="brand logo" href="{prefix}index.html" aria-label="Cornerstones, UX/UI Design at {SCHOOL}, home">{LOGO}
     </a>
     <nav class="nav-links">{links}<a href="{prefix}timetable.html"{" aria-current=page" if active == "timetable" else ""}>Timetable</a></nav>
     <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker">{ICON_TRACKER}</button>
@@ -593,7 +597,10 @@ def build_track(t, data):
 
         toc_mobile = (f'<details class="toc-mobile"><summary>On this page</summary><ol class="toc">{toc_html}</ol></details>\n'
                       if toc_html else "")
-        body = quick + toc_mobile + body
+        defn = DEFINITIONS.get(f'{t["id"]}/{p["slug"]}')
+        def_html = (f'<div class="definition"><div class="rail-label">Definition</div>'
+                    f'<p><b>{esc(defn["q"])}</b> {esc(defn["a"])}</p></div>') if defn else ""
+        body = (def_html.replace('class="definition"', 'class="definition definition-mobile"') if defn else "") + quick + toc_mobile + body
         if t["id"] in PROGRESS:
             noun_page = "exercise" if t["id"] == "exercises" else ("part" if parent else "lecture")
             parts = (f'<span class="complete-parts">This lecture has {len(p["children"])} parts. It counts as complete once '
@@ -631,7 +638,7 @@ def build_track(t, data):
       <div class="meta">{''.join(f'<span>{m}</span>' for m in meta)}</div>
     </header>
     <div class="lecture-grid{' no-rail' if not rail else ''}">
-      {f'<aside class="rail"><div class="rail-sticky">{rail}</div></aside>' if rail else ''}
+      {f'<aside class="rail"><div class="rail-sticky">{def_html}<div class="rail-box">{rail}</div></div></aside>' if rail else ''}
       <article class="prose">
 {body}
       </article>
@@ -819,9 +826,16 @@ def tag(label, link=None, data=None):
     return f'<a class="tt-tag c{colour} linked" href="{href}">{esc(label)}</a>'
 
 
-def tt_card(cid, kind, label, heading="", time="", tags="", sub="", more=""):
+# Icon for each kind of timetable card (a workshop's icon depends on the tool).
+TT_ICONS = {"routine-standup": "☀️", "sprint": "🚀", "project": "🧩", "checkpoint": "🏁", "lecture": "🏛️", "ui": "📐",
+            "activities": "🤸", "workshop-figma": "🎨", "workshop-framer": "🖥️", "daily": "✏️", "routine-lunch": "🍔",
+            "presentation": "🎤", "routine-checkout": "🌙"}
+
+
+def tt_card(cid, kind, label, heading="", time="", tags="", sub="", more="", icon_key=""):
+    icon = TT_ICONS.get(icon_key or kind, "")
     return f"""<article class="tt-card kind-{kind}" data-id="{cid}">
-  <div class="tt-top"><span class="tt-kind">{esc(label)}</span>{f'<span class="tt-time">{esc(time)}</span>' if time else ''}
+  <div class="tt-top"><span class="tt-kind">{f'<span class="tt-icon" aria-hidden="true">{icon}</span>' if icon else ''}{esc(label)}</span>{f'<span class="tt-time">{esc(time)}</span>' if time else ''}
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark {esc(heading or label)} as complete"></label></div>
   {f'<h4 class="tt-heading">{esc(heading)}</h4>' if heading else ''}
   {f'<div class="tt-sub">{esc(sub)}</div>' if sub else ''}
@@ -870,7 +884,7 @@ def build_timetable(data):
         cols = []
         for d_i, day in enumerate(w["days"], 1):
             cid = f"w{w_i}d{d_i}"
-            cards = [tt_card(f"{cid}-standup", "routine", "Stand up", time=r["standup"]["time"])]
+            cards = [tt_card(f"{cid}-standup", "routine", "Stand up", time=r["standup"]["time"], icon_key="routine-standup")]
             if d_i == 1:
                 about = (f'<details class="tt-about"><summary>About this sprint</summary><p>{esc(w["summary"])}</p>'
                          f'<p><b>AI in this sprint:</b> {esc(w["ai"])}</p><div class="tt-tags">{"".join(tag(t) for t in w["tools"])}</div></details>')
@@ -898,16 +912,17 @@ def build_timetable(data):
                     ws_tags = "".join(tag(n, k, data) for n, k in names)
                 else:
                     ws_tags = tag(ws.get("tag") or "Portfolio site", ws.get("link"), data)
-                cards.append(tt_card(f"{cid}-workshop", "workshop", kind_label, tags=ws_tags))
+                cards.append(tt_card(f"{cid}-workshop", "workshop", kind_label, tags=ws_tags,
+                                     icon_key="workshop-figma" if kind_label.startswith("Figma") else "workshop-framer"))
             if day.get("daily"):
                 track, slug = day["daily"].split("/")
                 level = data[track]["by_slug"][slug]["difficulty"]
                 cards.append(tt_card(f"{cid}-daily", "daily", "Daily UI", time=f"{level}/5" if level else "",
                                      tags=page_tags([day["daily"]], data)))
-            cards.append(tt_card(f"{cid}-lunch", "routine", "Lunch", time=r["lunch"]["time"]))
+            cards.append(tt_card(f"{cid}-lunch", "routine", "Lunch", time=r["lunch"]["time"], icon_key="routine-lunch"))
             if day.get("presentation"):
                 cards.append(tt_card(f"{cid}-presentation", "presentation", "Presentation", heading=day["presentation"]))
-            cards.append(tt_card(f"{cid}-checkout", "routine", "Check out", time=r["checkout"]["time"]))
+            cards.append(tt_card(f"{cid}-checkout", "routine", "Check out", time=r["checkout"]["time"], icon_key="routine-checkout"))
             cols.append(f'<div class="tt-col"><div class="tt-col-label">{days[d_i - 1]} <span>Day {d_i}</span></div>{"".join(cards)}</div>')
         weeks_html.append(f"""<section class="tt-week" id="week-{w_i}">
   <details{' open' if w_i == 1 else ''}>

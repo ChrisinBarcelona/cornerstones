@@ -1,0 +1,40 @@
+{
+  "_note": "Quick definitions shown in the Definition box on each UX method page. Keyed by methods/slug. Keep each under about 50 words.",
+
+  "methods/lean-ux-canvas": {"q": "What is a Lean UX Canvas?", "a": "A one-page framework the team fills in together before designing anything, to agree on the business problem, who it affects, what success would look like and the value users stand to gain."},
+  "methods/long-term-goal": {"q": "What is a Long Term Goal?", "a": "An optimistic statement of the best-case future for your users, written at the start of a sprint so that every later decision can be checked against it."},
+  "methods/research-goal": {"q": "What is a Research Goal?", "a": "One broad statement of what the team wants to learn, and why, set before any data is gathered so the whole investigation has a clear purpose."},
+  "methods/research-questions": {"q": "What is a Research Question?", "a": "An evaluative query set at the beginning of a project sprint and revisited throughout, to keep the research focused and guide the investigation to completion."},
+  "methods/user-survey": {"q": "What is a User Survey?", "a": "A structured set of questions sent to many people at once, to gather quick, comparable evidence about their behaviour, needs and opinions."},
+  "methods/user-interview": {"q": "What is a User Interview?", "a": "A one-to-one conversation with a real or potential user early in a project, to understand their experiences, needs and pain points in their own words."},
+  "methods/discovery-summary": {"q": "What is a Discovery Summary?", "a": "A short write-up at the end of discovery that pulls all the research together into the key insights, patterns and surprises that will shape the design."},
+
+  "methods/problem-statement": {"q": "What is a Problem Statement?", "a": "A concise description of the main problem users face, written from their point of view and deliberately free of any solution."},
+  "methods/user-persona": {"q": "What is a User Persona?", "a": "A semi-fictional profile of a typical user, built from research, that keeps the team designing for real goals, needs and frustrations rather than its own assumptions."},
+  "methods/competitive-analysis": {"q": "What is a Competitive Analysis?", "a": "A structured review of how direct and indirect competitors already solve the problem, to spot common patterns, gaps and opportunities for your own design."},
+  "methods/how-might-we": {"q": "What is a How Might We?", "a": "A reframing technique that turns problems and fears into open questions starting 'How might we…', inviting ideas without prescribing a solution."},
+  "methods/pick-a-target": {"q": "What is Picking a Target?", "a": "The moment the team commits to a focus: the Minimum Viable Product, the Most Valuable Person it serves, and the Minimum Desirable Product that would delight them."},
+  "methods/user-journey-map": {"q": "What is a User Journey Map?", "a": "A visual timeline of the steps a user takes to reach a goal, showing what they do, think and feel at each stage, and where the pain points and opportunities lie."},
+  "methods/converge-diverge": {"q": "What is Converge / Diverge?", "a": "The team's decision on whether to combine the best ideas into one prototype (converge) or develop competing ideas and test them against each other (diverge)."},
+  "methods/vote": {"q": "What is a Vote?", "a": "A quick, structured way for the team to choose which sketches or features to take forward, so the decision is shared rather than argued."},
+
+  "methods/task-flows": {"q": "What is a Task Flow?", "a": "A simple diagram of the exact steps a user takes to complete one task in the product, from the entry point to the finish, with nothing extra."},
+
+  "methods/crazy-8s": {"q": "What is Crazy 8's?", "a": "A fast sketching exercise: fold a sheet into eight panels and sketch eight different ideas in eight minutes, to push past the obvious first idea."},
+  "methods/crazy-8s-with-ai": {"q": "What is Crazy 8's with AI?", "a": "Crazy 8's with an AI sparring partner: the AI suggests variations on your brief one at a time and you sketch each one, widening the range of ideas."},
+  "methods/solution-sketch": {"q": "What is a Solution Sketch?", "a": "A detailed sketch of one idea, clear enough to explain itself, presented to the team gallery-style so everyone can understand and critique it."},
+  "methods/mood-board": {"q": "What is a Mood Board?", "a": "A collage of colours, type, imagery and textures that captures the look and feel you are aiming for, before any interface is designed."},
+  "methods/style-guide": {"q": "What is a Style Guide?", "a": "A practical document that fixes a product's visual rules, its logo, typography, colours, icons and buttons, so every screen stays consistent."},
+  "methods/paper-wireframes": {"q": "What are Paper Wireframes?", "a": "Quick black-and-white sketches of the main screens on paper, used to work out layout and flow cheaply before moving into Figma."},
+  "methods/lo-fi": {"q": "What is a Lo-Fi Wireframe?", "a": "A simple digital wireframe in Figma, built from boxes, text and placeholders, that shows structure and flow without any visual design."},
+  "methods/hi-fi": {"q": "What is a Hi-Fi Prototype?", "a": "A polished, interactive prototype that looks and behaves close to the final product, with real content, branding and clickable flows."},
+
+  "methods/usability-test": {"q": "What is a Usability Test?", "a": "A session in which real users try to complete tasks with your prototype while you observe, to find where the design works and where it fails."},
+  "methods/create-your-script": {"q": "What is a Test Script?", "a": "The written guide a facilitator follows during a test session, from welcome to wrap-up, so every participant gets the same neutral experience."},
+  "methods/facilitator-format": {"q": "What is the Facilitator Format?", "a": "The role and running order of the person leading a test: putting the participant at ease, setting the task and drawing out their thinking without leading them."},
+  "methods/limited-intervention-technique": {"q": "What is the Limited Intervention Technique?", "a": "A way of running interviews and tests in which the facilitator stays neutral and steps in as little as possible, offering clues rather than answers."},
+  "methods/notetaker-format": {"q": "What is the Notetaker Format?", "a": "The role of the second person in a test session, who silently records what the participant says and does, and the non-verbal signs of what they think and feel."},
+  "methods/design-iteration": {"q": "What is Design Iteration?", "a": "Turning what you learned in testing into a few targeted design changes, shown as before-and-after screens and backed by evidence."},
+
+  "methods/sprint-retrospective": {"q": "What is a Sprint Retrospective?", "a": "A structured look back at the sprint, what went well, what was hard and what you learned, which becomes the opening page of your case study."}
+}
