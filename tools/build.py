@@ -23,7 +23,18 @@ import markdown
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
-SITE = "Cornerstones"
+SITE = "UX/UI Design"
+SCHOOL = "Barcelona Code School"
+# The logo mark: four tiles in the section colours; the top-left "cornerstone" is a quarter circle.
+LOGO_MARK = ('<svg class="logo-mark" viewBox="0 0 40 40" width="38" height="38" aria-hidden="true">'
+             '<path d="M0 19A19 19 0 0 1 19 0V19Z" fill="#0072e3"/>'
+             '<rect x="21" width="19" height="19" rx="5" fill="#ffb200"/>'
+             '<rect y="21" width="19" height="19" rx="5" fill="#ab54f7"/>'
+             '<rect x="21" y="21" width="19" height="19" rx="5" fill="#00aa3c"/></svg>')
+FAVICON = "data:image/svg+xml," + __import__("urllib.parse").parse.quote(
+    LOGO_MARK.replace('class="logo-mark" ', 'xmlns="http://www.w3.org/2000/svg" ').replace(' aria-hidden="true"', ''))
+LOGO = (f'{LOGO_MARK}<span class="logo-text"><span class="logo-name">UX/UI Design</span>'
+        f'<span class="logo-sub">at {SCHOOL}</span></span>')
 ASSET_V = ""  # set in main(): a content hash appended to asset URLs so browsers never mix old and new files
 TAGLINE = "UX & UI learning resource for Barcelona Code School"
 
@@ -63,7 +74,7 @@ TRACKS = [
     {"id": "ui", "out": "ui", "index": "ui.html", "label": "UI Lectures", "noun": "Lecture",
      "eyebrow": "UI Learning Resource", "h1": "UI Lectures",
      "blurb": "The theory behind good interfaces: colour, type, spacing, icons and systems.",
-     "intro": "{n} lectures on the theory behind interfaces. New to UI? Start with <a href=\"lectures/what-is-ui-design.html\">What is UI Design</a>. For hands-on tutorials, see <a href=\"figma.html\">Figma</a>.",
+     "intro": "{n} lectures on the theory behind interfaces. For hands-on tutorials, see <a href=\"figma.html\">Figma</a>.",
      "chapters": {
          "UI Theory": "The concepts behind interfaces: colour, type, spacing, icons and systems.",
      }},
@@ -151,8 +162,6 @@ ORDER = {
 
 # Cross-links shown at the end of a page as "Related". Each pair is linked both ways.
 RELATED = [
-    ("ui/icons", "ux/icons"),
-    ("ui/typeface", "ux/typography"),
     ("figma/navbar", "figma/dynamic-buttons-part-one"),
     ("figma/dynamic-buttons-part-one", "figma/dynamic-buttons-part-deux"),
     ("figma/color-variables", "ui/colour-values"),
@@ -165,15 +174,10 @@ RELATED = [
     ("exercises/stage-play", "figma/beginners-guide-auto-layout"),
     ("exercises/stage-play", "figma/beginners-guide-to-components"),
     ("exercises/stage-play", "figma/dynamic-buttons-part-one"),
-    ("ui/colour-values", "ux/colors"),
-    ("ui/spacing-grids", "ux/grid"),
     ("ui/spacing-grids", "figma/beginners-guide-to-grids"),
     ("ui/spacing-grids", "figma/beginners-guide-to-8-point-grid-system"),
-    ("ui/style-guides", "ux/design-systems"),
-    ("ui/atomic-design-methodology", "ux/design-systems"),
     ("ui/atomic-design-methodology", "figma/beginners-guide-to-components"),
     ("ui/paper-wireframes", "ux/stages-of-wireframes"),
-    ("figma/choose-your-frame", "ux/what-is-ui-design"),
     ("exercises/glovo-replica-challenge", "figma/beginners-guide-to-nesting"),
     ("exercises/glovo-replica-challenge", "figma/beginners-guide-auto-layout"),
     ("exercises/glovo-replica-challenge", "figma/beginners-guide-to-components"),
@@ -267,6 +271,7 @@ def page(title, description, body, depth, active):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="{FAVICON}">
 {gate(prefix)}
 <script>try{{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}}catch(e){{}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -278,9 +283,7 @@ def page(title, description, body, depth, active):
 <body class="t-{active}">
 <header class="nav">
   <div class="nav-inner">
-    <a class="brand" href="{prefix}index.html">
-      <span class="brand-mark">C</span>
-      <span class="brand-text"><span class="brand-name">{SITE.upper()}</span><span class="brand-sub">UX &amp; UI at Barcelona Code School</span></span>
+    <a class="brand logo" href="{prefix}index.html" aria-label="UX/UI Design at {SCHOOL}, home">{LOGO}
     </a>
     <nav class="nav-links">{links}<a href="{prefix}timetable.html"{" aria-current=page" if active == "timetable" else ""}>Timetable</a></nav>
     <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker">{ICON_TRACKER}</button>
@@ -710,8 +713,8 @@ def build_track(t, data):
       <aside class="sidebar">
         <div class="side-label">Category</div>
         <ul class="cats">
-          <li><button type="button" data-cat="" aria-pressed="true"><span>All {noun}s</span><span class="count">{len(lectures)}</span></button></li>
           {cat_links}
+          <li class="cat-all"><button type="button" data-cat="" aria-pressed="true"><span>All {noun}s</span><span class="count">{len(lectures)}</span></button></li>
         </ul>
         {side_stat}
       </aside>
@@ -774,7 +777,7 @@ def build_home(data):
     <header class="hero hero-home">
       <div>
         <div class="eyebrow">Barcelona Code School · UX &amp; UI Bootcamp</div>
-        <h1>Everything for the bootcamp, in one place</h1>
+        <h1>Welcome, student</h1>
         <p class="lede">Lectures to read, methods to use in your sprints, Figma lessons and briefs to practise with. Pick a section, follow the suggested route, or see <a href="timetable.html">the nine-week timetable</a>.</p>
       </div>
       <label class="search search-all"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q-all" type="search" placeholder="Search all {len(index)} pages…" autocomplete="off"></label>
@@ -794,7 +797,7 @@ def build_home(data):
   </div>
 </main>
 <script type="application/json" id="search-index">{index_json}</script>"""
-    (ROOT / "index.html").write_text(page(f"{SITE} · UX & UI Bootcamp", TAGLINE, body, 0, "home"), encoding="utf-8")
+    (ROOT / "index.html").write_text(page(f"{SITE} · {SCHOOL}", TAGLINE, body, 0, "home"), encoding="utf-8")
     print(f"index.html: home, {len(index)} pages searchable")
 
 
@@ -816,15 +819,14 @@ def tag(label, link=None, data=None):
     return f'<a class="tt-tag c{colour} linked" href="{href}">{esc(label)}</a>'
 
 
-def tt_card(cid, kind, icon, title, props=(), text="", tags="", sub=""):
-    props_html = "".join(f"<span>{esc(x)}</span>" for x in props if x)
+def tt_card(cid, kind, label, heading="", time="", tags="", sub="", more=""):
     return f"""<article class="tt-card kind-{kind}" data-id="{cid}">
-  <h4 class="tt-title"><span class="tt-icon" aria-hidden="true">{icon}</span><span>{esc(title)}</span></h4>
+  <div class="tt-top"><span class="tt-kind">{esc(label)}</span>{f'<span class="tt-time">{esc(time)}</span>' if time else ''}
+    <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark {esc(heading or label)} as complete"></label></div>
+  {f'<h4 class="tt-heading">{esc(heading)}</h4>' if heading else ''}
   {f'<div class="tt-sub">{esc(sub)}</div>' if sub else ''}
-  {f'<div class="tt-props">{props_html}</div>' if props_html else ''}
-  {f'<p class="tt-text">{text}</p>' if text else ''}
   {f'<div class="tt-tags">{tags}</div>' if tags else ''}
-  <label class="tt-done"><input type="checkbox"><span>Mark as complete</span></label>
+  {more}
 </article>"""
 
 
@@ -860,8 +862,7 @@ def build_timetable(data):
     covered = check_timetable_coverage(tt, data)
     r = tt["routine"]
     days = tt["days"]
-    head = "".join(f'<div class="tt-colhead"><span class="tt-daypill d{i}">Day {i}</span><span>{d}</span></div>'
-                   for i, d in enumerate(days, 1))
+    head = "".join(f'<div class="tt-colhead">{d} <span>Day {i}</span></div>' for i, d in enumerate(days, 1))
     weeks_html, chips = [], []
     for w_i, w in enumerate(tt["weeks"], 1):
         name = f'{w["project"]}{" – " + w["part"] if w["part"] else ""}'
@@ -869,54 +870,45 @@ def build_timetable(data):
         cols = []
         for d_i, day in enumerate(w["days"], 1):
             cid = f"w{w_i}d{d_i}"
-            cards = [tt_card(f"{cid}-standup", "routine", r["standup"]["icon"], r["standup"]["title"],
-                             (r["standup"]["time"], r["standup"]["length"]))]
+            cards = [tt_card(f"{cid}-standup", "routine", "Stand up", time=r["standup"]["time"])]
             if d_i == 1:
-                cards.append(tt_card(f"{cid}-sprint", "sprint", "🚀", f'{w["code"]} | {w["theme"]}', sub=name,
-                                     text=f'{esc(w["summary"])}<span class="tt-ai"><b>AI in this sprint:</b> {esc(w["ai"])}</span>',
-                                     tags="".join(tag(t) for t in w["tools"])))
+                about = (f'<details class="tt-about"><summary>About this sprint</summary><p>{esc(w["summary"])}</p>'
+                         f'<p><b>AI in this sprint:</b> {esc(w["ai"])}</p><div class="tt-tags">{"".join(tag(t) for t in w["tools"])}</div></details>')
+                cards.append(tt_card(f"{cid}-sprint", "sprint", f'Sprint {w["code"][1:]}', heading=w["theme"], sub=name, more=about))
             if d_i == 1 and w.get("project_exercise"):
-                cards.append(tt_card(f"{cid}-project", "project", "🧩", "Project this week",
-                                     text="Work on it in the afternoons, alongside the sprint.",
-                                     tags=page_tags([w["project_exercise"]], data)))
+                cards.append(tt_card(f"{cid}-project", "project", "Project this week", tags=page_tags([w["project_exercise"]], data)))
             if day.get("checkpoint"):
-                cards.append(tt_card(f"{cid}-checkpoint", "checkpoint", "🏁", "Check Point", ("11:00", "5 min per presentation"),
-                                     text="Informal presentations by students, with feedback from the teacher."))
+                cards.append(tt_card(f"{cid}-checkpoint", "checkpoint", "Check point", heading="Informal presentations", time="11:00"))
             if day.get("lectures"):
-                cards.append(tt_card(f"{cid}-lecture", "lecture", "🏛️",
-                                     "Cornerstone Lecture" + ("s" if len(day["lectures"]) > 1 else ""),
+                cards.append(tt_card(f"{cid}-lecture", "lecture", "Lecture" + ("s" if len(day["lectures"]) > 1 else ""),
                                      tags=page_tags(day["lectures"], data)))
             if day.get("ui"):
-                cards.append(tt_card(f"{cid}-ui", "lecture", "📐", "UI Theory", tags=page_tags(day["ui"], data)))
-            cards.append(tt_card(f"{cid}-activities", "activities", "🤸", "Activities for the Day",
+                cards.append(tt_card(f"{cid}-ui", "ui", "UI theory", tags=page_tags(day["ui"], data)))
+            cards.append(tt_card(f"{cid}-activities", "activities", "Activities",
                                  tags="".join(tag(a["label"], a.get("link"), data) for a in day["activities"])))
             if day.get("workshop"):
                 ws = day["workshop"]
-                icon = "🎨" if ws["title"].startswith("Figma") else "🖥️"
+                kind_label = "Figma workshop" if ws["title"].startswith("Figma") else "Framer workshop"
                 if ws.get("lessons"):
-                    # The topic, then each Figma lesson the workshop covers, linked.
                     names = []
                     for key in ws["lessons"]:
                         track, slug = key.split("/")
                         lesson = short(data[track]["by_slug"][slug]["title"])
                         names.append((lesson.replace("Beginner’s Guide to ", "").replace("Beginner’s Guide ", ""), key))
-                    topic = "" if any(n == ws["tag"] for n, _ in names) else tag(ws["tag"])
-                    ws_tags = topic + "".join(tag(n, k, data) for n, k in names)
+                    ws_tags = "".join(tag(n, k, data) for n, k in names)
                 else:
                     ws_tags = tag(ws.get("tag") or "Portfolio site", ws.get("link"), data)
-                cards.append(tt_card(f"{cid}-workshop", "workshop", icon, ws["title"], tags=ws_tags))
+                cards.append(tt_card(f"{cid}-workshop", "workshop", kind_label, tags=ws_tags))
             if day.get("daily"):
                 track, slug = day["daily"].split("/")
                 level = data[track]["by_slug"][slug]["difficulty"]
-                cards.append(tt_card(f"{cid}-daily", "daily", "✏️", "Daily UI",
-                                     props=(f"Difficulty {level} of 5",) if level else (),
+                cards.append(tt_card(f"{cid}-daily", "daily", "Daily UI", time=f"{level}/5" if level else "",
                                      tags=page_tags([day["daily"]], data)))
-            cards.append(tt_card(f"{cid}-lunch", "routine", r["lunch"]["icon"], r["lunch"]["title"], (r["lunch"]["time"],)))
+            cards.append(tt_card(f"{cid}-lunch", "routine", "Lunch", time=r["lunch"]["time"]))
             if day.get("presentation"):
-                cards.append(tt_card(f"{cid}-presentation", "presentation", "🎤", day["presentation"]))
-            cards.append(tt_card(f"{cid}-checkout", "routine", r["checkout"]["icon"], r["checkout"]["title"],
-                                 (r["checkout"]["time"], r["checkout"]["length"])))
-            cols.append(f'<div class="tt-col"><div class="tt-col-label"><span class="tt-daypill d{d_i}">Day {d_i}</span> {days[d_i - 1]}</div>{"".join(cards)}</div>')
+                cards.append(tt_card(f"{cid}-presentation", "presentation", "Presentation", heading=day["presentation"]))
+            cards.append(tt_card(f"{cid}-checkout", "routine", "Check out", time=r["checkout"]["time"]))
+            cols.append(f'<div class="tt-col"><div class="tt-col-label">{days[d_i - 1]} <span>Day {d_i}</span></div>{"".join(cards)}</div>')
         weeks_html.append(f"""<section class="tt-week" id="week-{w_i}">
   <details{' open' if w_i == 1 else ''}>
     <summary><span class="tt-caret" aria-hidden="true"></span><span class="tt-weekpill">Week {w_i}</span>
@@ -932,15 +924,16 @@ def build_timetable(data):
       <div>
         <div class="eyebrow">In-Person Bootcamp · UX Day by Day</div>
         <h1>Timetable</h1>
-        <p class="lede">Nine weeks covering all {covered} lectures, lessons and exercises on this site, {esc(tt["hours"])}. Every week is a sprint: a brief on Monday, a presentation on Friday. Tags with an arrow open the matching lesson or method.</p>
+        <p class="lede">Nine weeks covering all {covered} lectures, lessons and exercises on this site, {esc(tt["hours"])}. Every week is a sprint: a brief on Monday, a presentation on Friday.</p>
       </div>
       <div class="tt-tools">
         <span class="tt-overall" id="tt-overall"></span>
-        <label class="tt-toggle"><input type="checkbox" id="tt-routine" checked> Show daily routine</label>
+        <label class="tt-toggle"><input type="checkbox" id="tt-routine"> Show daily routine</label>
         <button type="button" class="tt-btn" id="tt-expand">Expand all</button>
       </div>
     </header>
     <nav class="tt-chips" aria-label="Weeks">{"".join(chips)}</nav>
+    <p class="tt-routine-line"><b>Every day:</b> Stand up {r["standup"]["time"]} · Lunch {r["lunch"]["time"]} · Check out {r["checkout"]["time"]}</p>
     <div class="tt-board">
       <div class="tt-head">{head}</div>
       {"".join(weeks_html)}
@@ -962,6 +955,7 @@ def build_login():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sign in · {SITE}</title>
 <meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="{FAVICON}">
 <script>try{{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t;
 if(localStorage.getItem('cs-auth')==='{LOGIN_HASH}')location.replace('index.html')}}catch(e){{}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -972,9 +966,7 @@ if(localStorage.getItem('cs-auth')==='{LOGIN_HASH}')location.replace('index.html
 </head>
 <body class="login-page">
 <main class="login">
-  <div class="login-brand">
-    <span class="brand-mark">C</span>
-    <span class="brand-text"><span class="brand-name">{SITE.upper()}</span><span class="brand-sub">UX &amp; UI at Barcelona Code School</span></span>
+  <div class="login-brand logo">{LOGO}
   </div>
   <form class="login-card" id="login-form" data-hash="{LOGIN_HASH}" novalidate>
     <div class="eyebrow">Student access</div>
@@ -1027,7 +1019,16 @@ def moved_pages(data):
     return moved
 
 
+# Pages taken off the site: old address -> where to send visitors instead.
+REMOVED = {f"lectures/{s}.html": "../ui.html" for s in ("what-is-ui-design", "icons", "colors", "typography", "grid", "design-systems")}
+
+
 def write_redirects(data):
+    for path, target in REMOVED.items():
+        (ROOT / path).write_text(
+            f'<!doctype html><meta charset="utf-8"><title>Moved</title><meta name="robots" content="noindex">'
+            f'<meta http-equiv="refresh" content="0; url={target}"><p>This page has moved to <a href="{target}">{target}</a>.</p>\n',
+            encoding="utf-8")
     for old, new in moved_pages(data).items():
         o, n = old.split("/"), new.split("/")
         target = f"../{TRACK[n[0]]['out']}/{n[1]}.html"

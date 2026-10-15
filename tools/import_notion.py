@@ -39,11 +39,13 @@ UX_CATEGORIES = {
     "Psychology": ["the-bias-of-beauty", "bias", "mental-models", "design-psychology", "laws-of-ux",
                    "neilson-heuristics"],
     "Process": ["data", "what-is-design-thinking", "wicked-problem", "stages-of-wireframes", "target-mvp"],
-    "Interface": ["what-is-ui-design", "gestures", "haptics"],
+    "Interface": ["gestures", "haptics"],
     "Case Studies": ["bad-user-experience", "a-case-of-genius", "the-death-of-kodak"],
     "Research": ["non-directive-interview-technique", "interviewer-format", "interview-taking-notes"],
     "Career": ["portfolio", "scripts"],
 }
+# UX lectures taken off the site (What is UI Design and its parts now live in UI Lectures and Figma).
+UX_REMOVED = {"what-is-ui-design"}
 # Bootcamp UI: these hub pages become UI lecture categories; every other link is an exercise.
 UI_GROUPS = {"UI Starter Pack": "Figma Guides", "UI Theory": "UI Theory"}
 # Templates and duplicates, left out wherever they appear.
@@ -267,6 +269,8 @@ def import_cornerstones(root_md):
     ux.top_paths = {p for _, p in links}
     ux.top_by_slug = {file_slug(p): p for p in ux.top_paths}
     for label, path in links:
+        if file_slug(path) in UX_REMOVED:
+            continue
         ux.add(path, category_of.get(file_slug(path), "Other"), label)
     ux.save(list(UX_CATEGORIES))
 

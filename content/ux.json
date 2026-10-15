@@ -126,20 +126,6 @@
       "category": "Case Studies"
     },
     {
-      "slug": "what-is-ui-design",
-      "title": "What is UI Design",
-      "parent": null,
-      "children": [
-        "icons",
-        "colors",
-        "typography",
-        "grid",
-        "design-systems"
-      ],
-      "number": 14,
-      "category": "Interface"
-    },
-    {
       "slug": "the-death-of-kodak",
       "title": "The Death of Kodak",
       "parent": null,
@@ -329,36 +315,6 @@
       "slug": "10-bias-survivorship-bias",
       "title": "10. Bias: Survivorship Bias",
       "parent": "bias",
-      "children": []
-    },
-    {
-      "slug": "icons",
-      "title": "Icons",
-      "parent": "what-is-ui-design",
-      "children": []
-    },
-    {
-      "slug": "colors",
-      "title": "Colors",
-      "parent": "what-is-ui-design",
-      "children": []
-    },
-    {
-      "slug": "typography",
-      "title": "Typography",
-      "parent": "what-is-ui-design",
-      "children": []
-    },
-    {
-      "slug": "grid",
-      "title": "Grid",
-      "parent": "what-is-ui-design",
-      "children": []
-    },
-    {
-      "slug": "design-systems",
-      "title": "Design Systems",
-      "parent": "what-is-ui-design",
       "children": []
     },
     {

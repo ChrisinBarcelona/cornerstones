@@ -158,7 +158,7 @@
   }
   var stored = null;
   try { stored = localStorage.getItem('cs-tt-routine'); } catch (e) {}
-  setRoutine(stored !== '0');
+  setRoutine(stored === '1');  // hidden unless the student turns it on
   routine.addEventListener('change', function () { setRoutine(routine.checked); });
 
   var weeks = board.querySelectorAll('.tt-week details');
