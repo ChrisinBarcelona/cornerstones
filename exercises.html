@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=3876fd9836">
+<link rel="stylesheet" href="assets/style.css?v=fed9f57c81">
 </head>
 <body>
 <header class="nav">
@@ -26,7 +26,7 @@
     <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="login.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Log out</span></button>
   </div>
   <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
-  <div class="course-row"><a class="course-label" href="index.html#badges-title">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></a>
+  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></button>
     <a class="mini-badges" id="mini-badges" href="index.html#badges-title" aria-label="Your badges"></a></div>
 </header>
 
@@ -219,7 +219,7 @@
   <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
   <h2 id="celebrate-title"></h2><p class="celebrate-text"></p><button type="button" class="login-submit" id="celebrate-close">Nice!</button></div>
 </div>
-<script src="assets/progress-data.js?v=3876fd9836"></script>
-<script src="assets/app.js?v=3876fd9836"></script>
+<script src="assets/progress-data.js?v=fed9f57c81"></script>
+<script src="assets/app.js?v=fed9f57c81"></script>
 </body>
 </html>

@@ -366,6 +366,7 @@
     }).join('');
     body.innerHTML = html;
     var pct = courseStats();
+    tracker.querySelector('[data-all]').textContent = pct === 100 ? 'Unmark all' : 'Mark all as complete';
     tracker.querySelector('.tracker-total b').textContent = pct + '%';
     tracker.querySelector('.tracker-bar span').style.width = pct + '%';
   }
@@ -380,12 +381,14 @@
       '<div class="tracker-top"><div><div class="eyebrow">Your progress</div><h2 id="tracker-title">Course tracker</h2></div>' +
       '<button type="button" class="icon-btn" data-close aria-label="Close the tracker">✕</button></div>' +
       '<div class="tracker-total">Course progress · <b>0%</b> complete</div><div class="tracker-bar"><span></span></div>' +
+      '<div class="tracker-actions"><button type="button" class="tracker-all" data-all></button></div>' +
       '<div class="tracker-body"></div>' +
       '<p class="tracker-note">Tick a page to mark it complete, or untick it to undo. Lectures with parts count once every part is done. Saved in this browser.</p>' +
       '</aside>';
     document.body.appendChild(tracker);
     tracker.addEventListener('click', function (e) {
       if (e.target.closest('[data-close]')) return closeTracker();
+      if (e.target.closest('[data-all]')) return markAll(courseStats() !== 100);
       var head = e.target.closest('.tk-head');
       if (head) {
         var list = head.nextElementSibling, open = list.hidden;
@@ -405,6 +408,23 @@
       }
     });
   }
+  // Every page in every tracked section, parts included.
+  function allKeys() {
+    var keys = [];
+    Object.keys(TRACKS).forEach(function (t) {
+      TRACKS[t].items.forEach(function (i) { keys.push(i.key); i.children.forEach(function (c) { keys.push(c.key); }); });
+    });
+    return keys;
+  }
+  function markAll(on) {
+    var msg = on ? 'Mark every UX lecture, UI lecture and exercise as complete?'
+                 : 'Unmark everything? This clears all of your progress in this browser.';
+    if (!window.confirm(msg)) return;
+    allKeys().forEach(function (k) { if (on) done[k] = 1; else delete done[k]; });
+    write(KEY, done);
+    render();
+    checkBadges();
+  }
   function openTracker() {
     if (!tracker) buildTracker();
     renderTracker();
@@ -422,28 +442,34 @@
     tracker.hidden = true;
     document.documentElement.classList.remove('tracker-is-open');
     opener.setAttribute('aria-expanded', 'false');
-    opener.focus();
+    (lastOpener || opener).focus();
   }
-  if (opener) opener.addEventListener('click', openTracker);
+  var lastOpener = null;
+  [opener, document.getElementById('course-open')].forEach(function (btn) {
+    if (btn) btn.addEventListener('click', function () { lastOpener = btn; openTracker(); });
+  });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeTracker(); });
 
   // ---- Badge celebration: once, the moment a section is finished (re-arms if a page is unticked) ----
   var dialog = document.getElementById('celebrate');
   function checkBadges() {
-    var seen = read(SEEN);
+    var seen = read(SEEN), fresh = [];
     Object.keys(TRACKS).forEach(function (track) {
       var full = stats(track).full;
-      if (full && !seen[track] && dialog) {
-        closeTracker();
-        dialog.querySelector('.celebrate-badge').innerHTML = TRACKS[track].svg;
-        dialog.querySelector('#celebrate-title').textContent = TRACKS[track].badge;
-        dialog.querySelector('.celebrate-text').textContent = TRACKS[track].done;
-        dialog.hidden = false;
-        document.getElementById('celebrate-close').focus();
-      }
+      if (full && !seen[track]) fresh.push(track);
       if (full) seen[track] = 1; else delete seen[track];
     });
     write(SEEN, seen);
+    if (!fresh.length || !dialog) return;
+    closeTracker();
+    dialog.querySelector('.celebrate-badge').innerHTML = fresh.map(function (t) { return TRACKS[t].svg; }).join('');
+    dialog.querySelector('#celebrate-title').textContent = fresh.length === 1 ? TRACKS[fresh[0]].badge
+      : fresh.map(function (t) { return TRACKS[t].badge; }).join(', ').replace(/, ([^,]*)$/, ' and $1');
+    dialog.querySelector('.celebrate-text').textContent = fresh.length === 1 ? TRACKS[fresh[0]].done
+      : 'You\'ve earned ' + fresh.length + ' badges at once.';
+    dialog.querySelector('.eyebrow').textContent = fresh.length === 1 ? 'Badge unlocked' : 'Badges unlocked';
+    dialog.hidden = false;
+    document.getElementById('celebrate-close').focus();
   }
   if (dialog) {
     var closeDialog = function () { dialog.hidden = true; };

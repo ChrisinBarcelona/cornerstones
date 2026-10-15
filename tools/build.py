@@ -275,7 +275,7 @@ def page(title, description, body, depth, active):
     <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="{prefix}login.html">{ICON_LOGOUT}<span>Log out</span></button>
   </div>
   <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
-  <div class="course-row"><a class="course-label" href="{prefix}index.html#badges-title">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></a>
+  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></button>
     <a class="mini-badges" id="mini-badges" href="{prefix}index.html#badges-title" aria-label="Your badges"></a></div>
 </header>
 {body}

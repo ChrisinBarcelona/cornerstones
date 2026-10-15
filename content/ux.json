@@ -186,8 +186,7 @@
         "key-figures-tim-brown",
         "key-figures-jony-ive",
         "key-figures-henry-ford",
-        "key-figures-walt-disney",
-        "key-figures-walt-disney-1"
+        "key-figures-walt-disney"
       ],
       "number": 19,
       "category": "Foundations"
@@ -425,12 +424,6 @@
     {
       "slug": "key-figures-walt-disney",
       "title": "Key Figures: Walt Disney",
-      "parent": "key-figures",
-      "children": []
-    },
-    {
-      "slug": "key-figures-walt-disney-1",
-      "title": "Key Figures: Walt Disney (1)",
       "parent": "key-figures",
       "children": []
     }

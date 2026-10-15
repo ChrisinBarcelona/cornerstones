@@ -22,4 +22,3 @@
 
 [Key Figures: Walt Disney](key-figures-walt-disney.html)
 
-[Key Figures: Walt Disney (1)](key-figures-walt-disney-1.html)

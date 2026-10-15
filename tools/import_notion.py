@@ -46,8 +46,8 @@ UX_CATEGORIES = {
 }
 # Bootcamp UI: these hub pages become UI lecture categories; every other link is an exercise.
 UI_GROUPS = {"UI Starter Pack": "Figma Guides", "UI Theory": "UI Theory"}
-# Templates, left out wherever they appear.
-EXCLUDE = {"Daily UI: Template", "Boiler Plate"}
+# Templates and duplicates, left out wherever they appear.
+EXCLUDE = {"Daily UI: Template", "Boiler Plate", "Key Figures: Walt Disney (1)"}
 # Bootcamp UI pages replaced by newer versions in the Master export (Typeface, Dynamic Buttons Part One).
 UI_REPLACED = {"Typography", "07. UI Guidelines: Dynamic Button"}
 
