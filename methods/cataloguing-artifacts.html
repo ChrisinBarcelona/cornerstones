@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cataloguing Artifacts · Cornerstones</title>
+<meta name="description" content="Gather, label and sort every artifact from your projects, and choose the strongest for your case studies.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2040%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M0%2019A19%2019%200%200%201%2019%200V19Z%22%20fill%3D%22%230072e3%22/%3E%3Crect%20x%3D%2221%22%20width%3D%2219%22%20height%3D%2219%22%20rx%3D%225%22%20fill%3D%22%23ffb200%22/%3E%3Crect%20y%3D%2221%22%20width%3D%2219%22%20height%3D%2219%22%20rx%3D%225%22%20fill%3D%22%23ab54f7%22/%3E%3Crect%20x%3D%2221%22%20y%3D%2221%22%20width%3D%2219%22%20height%3D%2219%22%20rx%3D%225%22%20fill%3D%22%2300aa3c%22/%3E%3C/svg%3E">
+<script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
+<script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=2e8a089601">
+<link rel="stylesheet" href="../assets/theme.css?v=2e8a089601">
+</head>
+<body class="t-methods">
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand logo" href="../index.html" aria-label="Cornerstones, UX/UI Design at Barcelona Code School, home"><svg class="logo-mark" viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><path d="M0 19A19 19 0 0 1 19 0V19Z" fill="#0072e3"/><rect x="21" width="19" height="19" rx="5" fill="#ffb200"/><rect y="21" width="19" height="19" rx="5" fill="#ab54f7"/><rect x="21" y="21" width="19" height="19" rx="5" fill="#00aa3c"/></svg><span class="logo-text"><span class="logo-name">Cornerstones</span><span class="logo-sub">UX/UI Design at Barcelona Code School</span></span>
+    </a>
+    <nav class="nav-links"><a href="../ux.html">UX Lectures</a><a href="../methods.html" aria-current=page>UX Methods</a><a href="../ui.html">UI Lectures</a><a href="../figma.html">Figma</a><a href="../exercises.html">Exercises</a><a href="../timetable.html">Timetable</a></nav>
+    <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg></button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="../login.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Log out</span></button>
+  </div>
+  <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></button>
+    <a class="mini-badges" id="mini-badges" href="../index.html#badges-title" aria-label="Your badges"></a></div>
+</header>
+
+<main class="lecture track-methods" data-key="methods/cataloguing-artifacts">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../methods.html">UX Methods</a> <span class="sep">/</span> <a href="../methods.html#category=Retrospective">Retrospective</a> <span class="sep">/</span> <span>Cataloguing Artifacts</span></nav>
+    <header class="lecture-head">
+      <div class="eyebrow">Method 43 · Retrospective</div>
+      <div class="title-row"><h1>Cataloguing Artifacts</h1></div>
+      <p class="lede">Gather, label and sort every artifact from your projects, and choose the strongest for your case studies.</p>
+      <div class="meta"><span>Takes 3 hr</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 min read</span></div>
+    </header>
+    <div class="lecture-grid">
+      <aside class="rail"><div class="rail-sticky"><div class="definition"><div class="rail-label">Definition</div><p><b>What is Cataloguing Artifacts?</b> Collecting, labelling and sorting every sketch, map, wireframe and test result from past projects into one archive, so you can choose the strongest evidence for your case studies.</p></div><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#context">Context</a></li><li class="lvl2"><a href="#goal-learning-outcome">Goal / Learning Outcome</a></li><li class="lvl2"><a href="#main-exercise">Main Exercise</a></li><li class="lvl2"><a href="#media">Media</a></li></ol></div><div class="rail-block"><div class="rail-label">Retrospective</div><ol class="toc family"><li><a href="sprint-retrospective.html">Sprint Retrospective</a></li><li><a href="cataloguing-artifacts.html" aria-current=page>Cataloguing Artifacts</a></li><li><a href="process-narrative.html">Process Narrative</a></li></ol></div></div></div></aside>
+      <article class="prose">
+<div class="definition definition-mobile"><div class="rail-label">Definition</div><p><b>What is Cataloguing Artifacts?</b> Collecting, labelling and sorting every sketch, map, wireframe and test result from past projects into one archive, so you can choose the strongest evidence for your case studies.</p></div><div class="quickref"><div class="qr-row"><div class="qr-label">When</div><div class="qr-value">Retrospective: Reflect on the sprint and capture the lessons for your case study.</div></div><div class="qr-row"><div class="qr-label">Time</div><div class="qr-value">3 hr</div></div><div class="qr-row"><div class="qr-label">Goal</div><div class="qr-value"><ul><li>Collect every artifact from all your projects into one organised place.</li><li>Label each artifact with its project, method, stage and date.</li><li>Choose the projects, and the artifacts, that best show your process and strengths.</li><li>Set up a habit of saving artifacts as you go.</li></ul></div></div></div>
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#context">Context</a></li><li class="lvl2"><a href="#goal-learning-outcome">Goal / Learning Outcome</a></li><li class="lvl2"><a href="#main-exercise">Main Exercise</a></li><li class="lvl2"><a href="#media">Media</a></li></ol></details>
+<h2 id="context"><span class="h-icon">👋</span>Context</h2>
+<p>A case study is only as good as the evidence behind it. Nielsen Norman Group's advice on UX portfolios is that hiring managers want to see <strong>how you work</strong>, not just your final screens. That means early sketches, whiteboard photos, research notes, maps, test results and iterations.</p>
+<p>The problem: after four sprints, that evidence is scattered across FigJam boards, Figma files, phones, notebooks and group chats. Before you can write a single case study, you need to <strong>find it, sort it and choose</strong>.</p>
+<p>NN/g's first step to a portfolio is to <strong>take inventory</strong> of all your projects, then pick the 3–5 that best show the work you want to do next. This exercise does exactly that, for every project you've done on the course.</p>
+<h2 id="goal-learning-outcome"><span class="h-icon">🎯</span>Goal / Learning Outcome</h2>
+<ul>
+<li>Collect every artifact from all your projects into one organised place.</li>
+<li>Label each artifact with its project, method, stage and date.</li>
+<li>Choose the projects, and the artifacts, that best show your process and strengths.</li>
+<li>Set up a habit of saving artifacts as you go.</li>
+</ul>
+<h2 id="main-exercise"><span class="h-icon">🛠️</span>Main Exercise</h2>
+<ol>
+<li><strong>Make one home.</strong> Create a Figma (or FigJam) file called "Portfolio Archive" with one page per project.</li>
+<li><strong>Hunt and gather.</strong> Go through each project and pull in everything: briefs, research questions, survey results, interview notes, site-visit photos, personas, journey maps, blueprints, affinity maps, sketches, wireframes, prototypes, test notes, before/after screens, retrospectives.</li>
+<li><strong>Label each one.</strong> Under every artifact, write: <strong>project · method · stage · date · what it shows</strong>.</li>
+<li><strong>Sort by the case-study outline.</strong> Group each project's artifacts under: the problem, your role, research, ideas (including abandoned ones), the solution, testing and impact, and what you learned.</li>
+<li><strong>Take inventory.</strong> For each project answer: Which skills does it show best? What did I enjoy? Where did I add the most value? What did I learn? Is there a good story?</li>
+<li><strong>Choose.</strong> Pick the 3–5 projects that best match the job you want, and star the 5–8 strongest artifacts in each. Note any gaps (e.g. "no photo of the paper sketches") and fill them now while you can.</li>
+</ol>
+<details class="more"><summary>Template</summary>
+<p>For each artifact:</p>
+<ul>
+<li>🗂️ Project</li>
+<li>🛠️ Method</li>
+<li>🪜 Stage</li>
+<li>📅 Date</li>
+<li>💡 What it shows</li>
+</ul>
+</details>
+<details class="more"><summary>Tips</summary>
+<ul>
+<li>Keep the messy stuff. Crumpled sketches and sticky-note walls prove the process.</li>
+<li>Photograph physical work in good light, straight on.</li>
+<li>Check permissions: blur participants' faces and names, and ask before using client or team material.</li>
+<li>Note who did what on team projects, so you can describe your role honestly.</li>
+<li>From now on, save artifacts at the end of every day, not at the end of the project.</li>
+</ul>
+</details>
+<h2 id="media"><span class="h-icon">🎥</span>Media</h2>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/KJ0TFywHdvM" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/QQgm4VPJCdU" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<details class="more"><summary>Resources</summary>
+<p><a href="https://www.nngroup.com/articles/ux-design-portfolios/">5 Steps to Creating a UX-Design Portfolio – Nielsen Norman Group</a></p>
+</details>
+<details class="more"><summary>Checklist</summary>
+<p>☐ Created one archive with a page per project</p>
+<p>☐ Gathered and labelled every artifact</p>
+<p>☐ Sorted artifacts by the case-study outline</p>
+<p>☐ Chose 3–5 projects and starred the strongest artifacts</p>
+</details>
+<details class="more"><summary>Summary</summary>
+<p><strong>Cataloguing artifacts</strong> is the groundwork of every case study. Collecting, labelling and sorting everything you made lets you see your work as a whole, choose the projects that show you best, and back every claim in your case study with real evidence of your process.</p></details>
+
+<section class="related"><h2 id="related">Related</h2><ul class="cards"><li><a class="card" href="../methods/process-narrative.html"><span class="card-title">Process Narrative</span><span class="card-desc">UX Methods · Retrospective</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li></ul></section>
+      </article>
+    </div>
+    <nav class="pagers"><a class="pager prev" href="sprint-retrospective.html"><span class="pager-label">Previous</span><span class="pager-title">Sprint Retrospective</span></a><a class="pager next" href="process-narrative.html"><span class="pager-label">Next</span><span class="pager-title">Process Narrative</span></a></nav>
+  </div>
+</main>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<footer class="foot"><div class="foot-inner"><span>Cornerstones · UX & UI learning resource for Barcelona Code School</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<div class="celebrate" id="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="celebrate-title">
+  <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
+  <h2 id="celebrate-title"></h2><p class="celebrate-text"></p><button type="button" class="login-submit" id="celebrate-close">Nice!</button></div>
+</div>
+<script src="../assets/progress-data.js?v=2e8a089601"></script>
+<script src="../assets/app.js?v=2e8a089601"></script>
+</body>
+</html>

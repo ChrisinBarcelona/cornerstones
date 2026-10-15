@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wicked Problem Mapping · Cornerstones</title>
+<meta name="description" content="Map a wicked problem as a web of causes and actors, then find one leverage point small enough to design for.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2040%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M0%2019A19%2019%200%200%201%2019%200V19Z%22%20fill%3D%22%230072e3%22/%3E%3Crect%20x%3D%2221%22%20width%3D%2219%22%20height%3D%2219%22%20rx%3D%225%22%20fill%3D%22%23ffb200%22/%3E%3Crect%20y%3D%2221%22%20width%3D%2219%22%20height%3D%2219%22%20rx%3D%225%22%20fill%3D%22%23ab54f7%22/%3E%3Crect%20x%3D%2221%22%20y%3D%2221%22%20width%3D%2219%22%20height%3D%2219%22%20rx%3D%225%22%20fill%3D%22%2300aa3c%22/%3E%3C/svg%3E">
+<script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
+<script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=2e8a089601">
+<link rel="stylesheet" href="../assets/theme.css?v=2e8a089601">
+</head>
+<body class="t-methods">
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand logo" href="../index.html" aria-label="Cornerstones, UX/UI Design at Barcelona Code School, home"><svg class="logo-mark" viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><path d="M0 19A19 19 0 0 1 19 0V19Z" fill="#0072e3"/><rect x="21" width="19" height="19" rx="5" fill="#ffb200"/><rect y="21" width="19" height="19" rx="5" fill="#ab54f7"/><rect x="21" y="21" width="19" height="19" rx="5" fill="#00aa3c"/></svg><span class="logo-text"><span class="logo-name">Cornerstones</span><span class="logo-sub">UX/UI Design at Barcelona Code School</span></span>
+    </a>
+    <nav class="nav-links"><a href="../ux.html">UX Lectures</a><a href="../methods.html" aria-current=page>UX Methods</a><a href="../ui.html">UI Lectures</a><a href="../figma.html">Figma</a><a href="../exercises.html">Exercises</a><a href="../timetable.html">Timetable</a></nav>
+    <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg></button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="../login.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Log out</span></button>
+  </div>
+  <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></button>
+    <a class="mini-badges" id="mini-badges" href="../index.html#badges-title" aria-label="Your badges"></a></div>
+</header>
+
+<main class="lecture track-methods" data-key="methods/wicked-problem-mapping">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../methods.html">UX Methods</a> <span class="sep">/</span> <a href="../methods.html#category=Define">Define</a> <span class="sep">/</span> <span>Wicked Problem Mapping</span></nav>
+    <header class="lecture-head">
+      <div class="eyebrow">Method 15 · Define</div>
+      <div class="title-row"><h1>Wicked Problem Mapping</h1></div>
+      <p class="lede">Map a wicked problem as a web of causes and actors, then find one leverage point small enough to design for.</p>
+      <div class="meta"><span>Takes 1.5 hr</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 min read</span></div>
+    </header>
+    <div class="lecture-grid">
+      <aside class="rail"><div class="rail-sticky"><div class="definition"><div class="rail-label">Definition</div><p><b>What is Wicked Problem Mapping?</b> A way of making a complex, systemic problem visible by turning chains of &#x27;5 Whys&#x27; into a web of causes and actors, to find one leverage point small enough to design for.</p></div><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#context">Context</a></li><li class="lvl2"><a href="#goal-learning-outcome">Goal / Learning Outcome</a></li><li class="lvl2"><a href="#main-exercise">Main Exercise</a></li><li class="lvl2"><a href="#media">Media</a></li></ol></div><div class="rail-block"><div class="rail-label">Define</div><ol class="toc family"><li><a href="affinity-mapping.html">Affinity Mapping</a></li><li><a href="data-synthesis-with-ai.html">Data Synthesis with AI</a></li><li><a href="problem-statement.html">Problem Statement</a></li><li><a href="user-persona.html">User Persona</a></li><li><a href="competitive-analysis.html">Competitive Analysis</a></li><li><a href="business-model-canvas.html">Business Model Canvas</a></li><li><a href="wicked-problem-mapping.html" aria-current=page>Wicked Problem Mapping</a></li><li><a href="how-might-we.html">How Might We</a></li><li><a href="pick-a-target.html">Pick a Target</a></li><li><a href="user-journey-map.html">User Journey Map</a></li><li><a href="service-design-blueprint.html">Service Design Blueprint</a></li><li><a href="dvf-analysis.html">DVF Analysis</a></li><li><a href="converge-diverge.html">Converge / Diverge</a></li><li><a href="vote.html">Vote</a></li></ol></div></div></div></aside>
+      <article class="prose">
+<div class="definition definition-mobile"><div class="rail-label">Definition</div><p><b>What is Wicked Problem Mapping?</b> A way of making a complex, systemic problem visible by turning chains of &#x27;5 Whys&#x27; into a web of causes and actors, to find one leverage point small enough to design for.</p></div><div class="quickref"><div class="qr-row"><div class="qr-label">When</div><div class="qr-value">Define: Turn research into a clear problem, a target user and a direction.</div></div><div class="qr-row"><div class="qr-label">Time</div><div class="qr-value">1.5 hr</div></div><div class="qr-row"><div class="qr-label">Goal</div><div class="qr-value"><ul><li>Break a wicked problem into causes, effects and actors.</li><li>Show how causes connect and feed each other, rather than as a straight line.</li><li>Identify the people and organisations involved and how close they are to the user.</li><li>Choose one specific, designable area to focus on.</li></ul></div></div></div>
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#context">Context</a></li><li class="lvl2"><a href="#goal-learning-outcome">Goal / Learning Outcome</a></li><li class="lvl2"><a href="#main-exercise">Main Exercise</a></li><li class="lvl2"><a href="#media">Media</a></li></ol></details>
+<h2 id="context"><span class="h-icon">👋</span>Context</h2>
+<p>A wicked problem, like food waste, loneliness or over-tourism, has no single cause and no single solution. Solving one part can make another part worse. (See the Wicked Problem lecture.)</p>
+<p>You can't design for something you can't see, so the first step is to <strong>map</strong> it. This method combines two tools:</p>
+<ul>
+<li><strong>The 5 Whys</strong>, to dig from a symptom down to its deeper causes.</li>
+<li><strong>An ecosystem map</strong>, which Nielsen Norman Group recommends early in discovery, when there are many unknowns: the user in the centre, surrounded by the people, organisations, products and services that affect them.</li>
+</ul>
+<p>Together they produce a <strong>non-linear map of causes and actors</strong>. It was developed by a former student investigating world hunger, who turned her 5 Whys into a web of causality instead of a straight line. The map won't solve the problem, but it will show you where a small, well-placed design can make a dent.</p>
+<figure class="media"><img alt="Example of wicked problem mapping" src="../content/methods/wicked-problem-mapping/wickedproblemmapping.png" loading="lazy" decoding="async"></figure>
+<h2 id="goal-learning-outcome"><span class="h-icon">🎯</span>Goal / Learning Outcome</h2>
+<ul>
+<li>Break a wicked problem into causes, effects and actors.</li>
+<li>Show how causes connect and feed each other, rather than as a straight line.</li>
+<li>Identify the people and organisations involved and how close they are to the user.</li>
+<li>Choose one specific, designable area to focus on.</li>
+</ul>
+<h2 id="main-exercise"><span class="h-icon">🛠️</span>Main Exercise</h2>
+<p>Use <strong>FigJam</strong> or <strong>Miro</strong>, or flipchart paper and sticky notes.</p>
+<ol>
+<li><strong>Name the problem space</strong> in the middle of the board, e.g. "Food waste in Barcelona households".</li>
+<li><strong>5 Whys, several times.</strong> Start from 3–4 different symptoms. For each, ask "why?" five times and write each answer on a note.</li>
+<li><strong>Turn the lines into a web.</strong> Where causes from different chains are the same or linked, connect them. Draw arrows for "causes" and mark loops where effects feed back into causes.</li>
+<li><strong>Add the ecosystem.</strong> Around the map, place the actors: people, organisations, products and services. Put the most influential closest to the user.</li>
+<li><strong>Spot the leverage points.</strong> Circle 2–3 places where many arrows meet, or where one actor has a lot of influence.</li>
+<li><strong>Zoom in.</strong> Choose one leverage point that is small enough to design for, and write it as a draft problem statement.</li>
+</ol>
+<details class="more"><summary>Tips</summary>
+<ul>
+<li>Stay low-fidelity. A messy map invites people to change it.</li>
+<li>Use desk research to check your causes; don't rely only on what you believe.</li>
+<li>Different colours help: causes, effects, actors, leverage points.</li>
+<li>Expect the map to change as you learn more. Update it after each research debrief.</li>
+<li>You will not solve the whole problem. Aim for a meaningful dent.</li>
+</ul>
+</details>
+<h2 id="media"><span class="h-icon">🎥</span>Media</h2>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/rMj-NuZoEYI" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/2YpC3R1zNdA" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<details class="more"><summary>Resources</summary>
+<p><a href="https://www.nngroup.com/articles/mapping-in-discovery/">Why Map in Discovery: 3 Mapping Methods – Nielsen Norman Group</a></p>
+<p><a href="https://www.nngroup.com/articles/stakeholder-analysis/">Stakeholder Analysis for UX Projects – Nielsen Norman Group</a></p>
+</details>
+<details class="more"><summary>Checklist</summary>
+<p>☐ Named the problem space</p>
+<p>☐ Ran the 5 Whys from at least three symptoms</p>
+<p>☐ Connected the causes into a web and added the actors</p>
+<p>☐ Circled leverage points and chose one to focus on</p>
+</details>
+<details class="more"><summary>Summary</summary>
+<p><strong>Wicked problem mapping</strong> makes a complex, systemic problem visible. Chains of "why?" become a web of causes, and an ecosystem of actors shows who is involved. From the map you can choose one specific leverage point: a problem small enough to design for, inside a problem too big to solve.</p></details>
+
+<section class="related"><h2 id="related">Related</h2><ul class="cards"><li><a class="card" href="../lectures/wicked-problem.html"><span class="card-title">Wicked Problem</span><span class="card-desc">UX Lectures · Process</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li><li><a class="card" href="../methods/problem-statement.html"><span class="card-title">Problem Statement</span><span class="card-desc">UX Methods · Define</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li></ul></section>
+      </article>
+    </div>
+    <nav class="pagers"><a class="pager prev" href="business-model-canvas.html"><span class="pager-label">Previous</span><span class="pager-title">Business Model Canvas</span></a><a class="pager next" href="how-might-we.html"><span class="pager-label">Next</span><span class="pager-title">How Might We</span></a></nav>
+  </div>
+</main>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<footer class="foot"><div class="foot-inner"><span>Cornerstones · UX & UI learning resource for Barcelona Code School</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<div class="celebrate" id="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="celebrate-title">
+  <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
+  <h2 id="celebrate-title"></h2><p class="celebrate-text"></p><button type="button" class="login-submit" id="celebrate-close">Nice!</button></div>
+</div>
+<script src="../assets/progress-data.js?v=2e8a089601"></script>
+<script src="../assets/app.js?v=2e8a089601"></script>
+</body>
+</html>

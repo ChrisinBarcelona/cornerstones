@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site Visit · Cornerstones</title>
+<meta name="description" content="Go to the place where the problem happens and observe quietly, to pick up cues users would never mention.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2040%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M0%2019A19%2019%200%200%201%2019%200V19Z%22%20fill%3D%22%230072e3%22/%3E%3Crect%20x%3D%2221%22%20width%3D%2219%22%20height%3D%2219%22%20rx%3D%225%22%20fill%3D%22%23ffb200%22/%3E%3Crect%20y%3D%2221%22%20width%3D%2219%22%20height%3D%2219%22%20rx%3D%225%22%20fill%3D%22%23ab54f7%22/%3E%3Crect%20x%3D%2221%22%20y%3D%2221%22%20width%3D%2219%22%20height%3D%2219%22%20rx%3D%225%22%20fill%3D%22%2300aa3c%22/%3E%3C/svg%3E">
+<script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
+<script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=2e8a089601">
+<link rel="stylesheet" href="../assets/theme.css?v=2e8a089601">
+</head>
+<body class="t-methods">
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand logo" href="../index.html" aria-label="Cornerstones, UX/UI Design at Barcelona Code School, home"><svg class="logo-mark" viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><path d="M0 19A19 19 0 0 1 19 0V19Z" fill="#0072e3"/><rect x="21" width="19" height="19" rx="5" fill="#ffb200"/><rect y="21" width="19" height="19" rx="5" fill="#ab54f7"/><rect x="21" y="21" width="19" height="19" rx="5" fill="#00aa3c"/></svg><span class="logo-text"><span class="logo-name">Cornerstones</span><span class="logo-sub">UX/UI Design at Barcelona Code School</span></span>
+    </a>
+    <nav class="nav-links"><a href="../ux.html">UX Lectures</a><a href="../methods.html" aria-current=page>UX Methods</a><a href="../ui.html">UI Lectures</a><a href="../figma.html">Figma</a><a href="../exercises.html">Exercises</a><a href="../timetable.html">Timetable</a></nav>
+    <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg></button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="../login.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Log out</span></button>
+  </div>
+  <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></button>
+    <a class="mini-badges" id="mini-badges" href="../index.html#badges-title" aria-label="Your badges"></a></div>
+</header>
+
+<main class="lecture track-methods" data-key="methods/site-visit">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../methods.html">UX Methods</a> <span class="sep">/</span> <a href="../methods.html#category=Discovery">Discovery</a> <span class="sep">/</span> <span>Site Visit</span></nav>
+    <header class="lecture-head">
+      <div class="eyebrow">Method 05 · Discovery</div>
+      <div class="title-row"><h1>Site Visit</h1></div>
+      <p class="lede">Go to the place where the problem happens and observe quietly, to pick up cues users would never mention.</p>
+      <div class="meta"><span>Takes 1.5 hr</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 min read</span></div>
+    </header>
+    <div class="lecture-grid">
+      <aside class="rail"><div class="rail-sticky"><div class="definition"><div class="rail-label">Definition</div><p><b>What is a Site Visit?</b> A short field visit to the place where your users live or work, to observe the environment, tools, workarounds and emotions first hand, before designing anything.</p></div><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#context">Context</a></li><li class="lvl2"><a href="#goal-learning-outcome">Goal / Learning Outcome</a></li><li class="lvl2"><a href="#main-exercise">Main Exercise</a></li><li class="lvl2"><a href="#media">Media</a></li></ol></div><div class="rail-block"><div class="rail-label">Discovery</div><ol class="toc family"><li><a href="lean-ux-canvas.html">Lean UX Canvas</a></li><li><a href="long-term-goal.html">Long Term Goal</a></li><li><a href="research-goal.html">Research Goal</a></li><li><a href="research-questions.html">Research Questions</a></li><li><a href="site-visit.html" aria-current=page>Site Visit</a></li><li><a href="user-survey.html">User Survey</a></li><li><a href="user-interview.html">User Interview</a></li><li><a href="discovery-summary.html">Discovery Summary</a></li></ol></div></div></div></aside>
+      <article class="prose">
+<div class="definition definition-mobile"><div class="rail-label">Definition</div><p><b>What is a Site Visit?</b> A short field visit to the place where your users live or work, to observe the environment, tools, workarounds and emotions first hand, before designing anything.</p></div><div class="quickref"><div class="qr-row"><div class="qr-label">When</div><div class="qr-value">Discovery: Generative research: find out what the problem really is, and who has it.</div></div><div class="qr-row"><div class="qr-label">Time</div><div class="qr-value">1.5 hr</div></div><div class="qr-row"><div class="qr-label">Goal</div><div class="qr-value"><ul><li>Experience the environment your users are in, first hand.</li><li>Spot cues that users would never mention: workarounds, interruptions, signage, tools and emotions.</li><li>Come back with evidence (notes, sketches, photos) rather than assumptions.</li><li>Turn what you saw into better research questions for the rest of the sprint.</li></ul></div></div></div>
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#context">Context</a></li><li class="lvl2"><a href="#goal-learning-outcome">Goal / Learning Outcome</a></li><li class="lvl2"><a href="#main-exercise">Main Exercise</a></li><li class="lvl2"><a href="#media">Media</a></li></ol></details>
+<h2 id="context"><span class="h-icon">👋</span>Context</h2>
+<p>You can read about a market, a bakery queue or a hospital waiting room, but you will only <em>feel</em> it by standing in it. A site visit is a short piece of field research: you go to the environment your users live and work in and watch what really happens there.</p>
+<p>Nielsen Norman Group's point about field studies is simple: context reveals things you would never think to ask about. People forget their workarounds, the noise, the interruptions, the sticky note on the till. They do not forget them on purpose; they simply stop noticing. You will notice, because it is all new to you.</p>
+<p>A site visit is not an interview and it is not a test. Your main job is to <strong>observe</strong>, to pick up on cues, and to get a feel for the subject matter before you start designing.</p>
+<h2 id="goal-learning-outcome"><span class="h-icon">🎯</span>Goal / Learning Outcome</h2>
+<ul>
+<li>Experience the environment your users are in, first hand.</li>
+<li>Spot cues that users would never mention: workarounds, interruptions, signage, tools and emotions.</li>
+<li>Come back with evidence (notes, sketches, photos) rather than assumptions.</li>
+<li>Turn what you saw into better research questions for the rest of the sprint.</li>
+</ul>
+<h2 id="main-exercise"><span class="h-icon">🛠️</span>Main Exercise</h2>
+<ol>
+<li><strong>Prepare (10 min).</strong> Write down two or three things you want to learn, taken from your Research Questions. Decide where you will go and when the place is at its most typical. Ask permission if it is a private space.</li>
+<li><strong>Observe quietly (30–45 min).</strong> Find a spot where you can see without getting in the way. Look for:<ul>
+<li><strong>The environment:</strong> noise, light, crowding, queues, signage.</li>
+<li><strong>Artefacts:</strong> the objects, screens, paper and tools people use, and the ones they make for themselves.</li>
+<li><strong>Workarounds:</strong> extra steps, shortcuts and anything done "the wrong way" that works.</li>
+<li><strong>Interruptions:</strong> what breaks people's flow and how they recover.</li>
+<li><strong>Emotion:</strong> where people look relaxed, rushed, confused or pleased.</li>
+</ul>
+</li>
+<li><strong>Capture.</strong> Write notes, sketch layouts and take photos of places and objects (never photograph people without their consent).</li>
+<li><strong>Talk to one or two people (optional).</strong> If the moment is right, ask a short open question such as "What's the hardest part of this for you?" Don't lead them.</li>
+<li><strong>Debrief straight away (15 min).</strong> While it is fresh, write your top five observations, one surprise, and three new questions you now want to answer.</li>
+</ol>
+<details class="more"><summary>Tips</summary>
+<ul>
+<li>Observe first, ask later. Asking questions too early changes what people do.</li>
+<li>Write down what you <strong>see</strong>, not what you think it means. Interpretation comes in the debrief.</li>
+<li>Go at a typical time. A café at 3 p.m. on a Tuesday is not the café at 9 a.m. on a Monday.</li>
+<li>Go in pairs if you can: one watches, one writes.</li>
+<li>Be respectful and invisible. You are a guest in someone else's space.</li>
+</ul>
+</details>
+<h2 id="media"><span class="h-icon">🎥</span>Media</h2>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/GvYjOrwM2fI" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/nC47ktX4U2I" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<details class="more"><summary>Resources</summary>
+<p><a href="https://www.nngroup.com/articles/field-studies/">Field Studies – Nielsen Norman Group</a></p>
+<p><a href="https://www.nngroup.com/articles/contextual-inquiry/">Contextual Inquiry – Nielsen Norman Group</a></p>
+</details>
+<details class="more"><summary>Checklist</summary>
+<p>☐ Chose a place and time linked to your research questions</p>
+<p>☐ Observed for at least 30 minutes</p>
+<p>☐ Captured notes, sketches or photos (with consent)</p>
+<p>☐ Wrote five observations, one surprise and three new questions</p>
+</details>
+<details class="more"><summary>Summary</summary>
+<p>A <strong>site visit</strong> puts you in your users' world. By watching quietly and noting the environment, the tools, the workarounds and the emotions, you pick up cues that no survey or interview would give you. It builds empathy, grounds the sprint in reality and sharpens the questions you ask next.</p></details>
+
+<section class="related"><h2 id="related">Related</h2><ul class="cards"><li><a class="card" href="../methods/research-questions.html"><span class="card-title">Research Questions</span><span class="card-desc">UX Methods · Discovery</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li><li><a class="card" href="../lectures/non-directive-interview-technique.html"><span class="card-title">Non-Directive Interview Technique</span><span class="card-desc">UX Lectures · Research</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li></ul></section>
+      </article>
+    </div>
+    <nav class="pagers"><a class="pager prev" href="research-questions.html"><span class="pager-label">Previous</span><span class="pager-title">Research Questions</span></a><a class="pager next" href="user-survey.html"><span class="pager-label">Next</span><span class="pager-title">User Survey</span></a></nav>
+  </div>
+</main>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<footer class="foot"><div class="foot-inner"><span>Cornerstones · UX & UI learning resource for Barcelona Code School</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<div class="celebrate" id="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="celebrate-title">
+  <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
+  <h2 id="celebrate-title"></h2><p class="celebrate-text"></p><button type="button" class="login-submit" id="celebrate-close">Nice!</button></div>
+</div>
+<script src="../assets/progress-data.js?v=2e8a089601"></script>
+<script src="../assets/app.js?v=2e8a089601"></script>
+</body>
+</html>

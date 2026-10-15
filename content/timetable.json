@@ -49,7 +49,8 @@
               "label": "Sprint brief"
             },
             {
-              "label": "Site visit"
+              "label": "Site visit",
+              "link": "methods/site-visit"
             },
             {
               "label": "'As-Is' customer journey mapping",
@@ -74,7 +75,8 @@
         {
           "activities": [
             {
-              "label": "Service design blueprint"
+              "label": "Service design blueprint",
+              "link": "methods/service-design-blueprint"
             }
           ],
           "workshop": {
@@ -121,10 +123,12 @@
               "link": "methods/mood-board"
             },
             {
-              "label": "Brand pack"
+              "label": "Brand pack",
+              "link": "methods/brand-pack"
             },
             {
-              "label": "AI-assisted multimodal visual loops"
+              "label": "AI-assisted multimodal visual loops",
+              "link": "methods/mood-board-with-ai"
             }
           ],
           "workshop": {
@@ -207,7 +211,8 @@
               "link": "methods/research-goal"
             },
             {
-              "label": "Business Model Canvas"
+              "label": "Business Model Canvas",
+              "link": "methods/business-model-canvas"
             }
           ],
           "lectures": [
@@ -280,8 +285,8 @@
               "link": "methods/paper-wireframes"
             },
             {
-              "label": "Lo-fi",
-              "link": "methods/lo-fi"
+              "label": "Mid-fi",
+              "link": "methods/mid-fi"
             }
           ],
           "lectures": [
@@ -295,7 +300,8 @@
         {
           "activities": [
             {
-              "label": "Mid-fi prototyping with AI"
+              "label": "Mid-fi prototyping with AI",
+              "link": "methods/mid-fi"
             }
           ],
           "lectures": [
@@ -328,7 +334,8 @@
               "link": "methods/usability-test"
             },
             {
-              "label": "Data synthesis with AI"
+              "label": "Data synthesis with AI",
+              "link": "methods/data-synthesis-with-ai"
             },
             {
               "label": "Create your script",
@@ -395,7 +402,8 @@
         {
           "activities": [
             {
-              "label": "Mid-fi prototyping"
+              "label": "Mid-fi prototyping",
+              "link": "methods/mid-fi"
             },
             {
               "label": "Usability testing",
@@ -416,13 +424,16 @@
               "link": "methods/mood-board"
             },
             {
-              "label": "Brand pack"
+              "label": "Brand pack",
+              "link": "methods/brand-pack"
             },
             {
-              "label": "Affinity synthesis"
+              "label": "Affinity synthesis",
+              "link": "methods/affinity-mapping"
             },
             {
-              "label": "Preference testing"
+              "label": "A/B test",
+              "link": "methods/ab-test"
             }
           ],
           "lectures": [
@@ -440,7 +451,8 @@
               "link": "methods/usability-test"
             },
             {
-              "label": "DVF analysis"
+              "label": "DVF analysis",
+              "link": "methods/dvf-analysis"
             }
           ],
           "lectures": [
@@ -482,7 +494,7 @@
           "activities": [
             {
               "label": "Storyframing and outlining case studies",
-              "link": "ui/case-studies-and-how-to-tell-a-good-story"
+              "link": "methods/process-narrative"
             },
             {
               "label": "Service design and lean startup projects"
@@ -491,15 +503,13 @@
               "label": "Sprint retrospective",
               "link": "methods/sprint-retrospective"
             }
-          ],
-          "ui": [
-            "ui/case-studies-and-how-to-tell-a-good-story"
           ]
         },
         {
           "activities": [
             {
-              "label": "Synthesising and cataloguing artifacts from all prior projects"
+              "label": "Synthesising and cataloguing artifacts from all prior projects",
+              "link": "methods/cataloguing-artifacts"
             }
           ]
         },
@@ -510,23 +520,28 @@
               "link": "methods/problem-statement"
             },
             {
-              "label": "Process narratives"
+              "label": "Process narratives",
+              "link": "methods/process-narrative"
             },
             {
-              "label": "Solution impact"
+              "label": "Solution impact",
+              "link": "methods/design-iteration"
             }
           ]
         },
         {
           "activities": [
             {
-              "label": "Peer review"
+              "label": "Peer review",
+              "link": "methods/design-iteration"
             },
             {
-              "label": "Feedback cross-checks"
+              "label": "Feedback cross-checks",
+              "link": "methods/design-iteration"
             },
             {
-              "label": "Iteration"
+              "label": "Iteration",
+              "link": "methods/design-iteration"
             }
           ]
         },
@@ -570,7 +585,8 @@
         {
           "activities": [
             {
-              "label": "Wicked problem mapping"
+              "label": "Wicked problem mapping",
+              "link": "methods/wicked-problem-mapping"
             }
           ],
           "lectures": [
@@ -591,10 +607,20 @@
         {
           "activities": [
             {
-              "label": "Rapid iteration"
+              "label": "Paper wireframes",
+              "link": "methods/paper-wireframes"
             },
             {
-              "label": "Concept prototyping"
+              "label": "Mid-fi",
+              "link": "methods/mid-fi"
+            },
+            {
+              "label": "Hi-fi prototyping",
+              "link": "methods/hi-fi"
+            },
+            {
+              "label": "Usability testing",
+              "link": "methods/usability-test"
             },
             {
               "label": "Crazy 8's",
@@ -684,6 +710,10 @@
             {
               "label": "Information architecture",
               "link": "methods/task-flows"
+            },
+            {
+              "label": "Sitemap",
+              "link": "methods/sitemap"
             }
           ]
         },
@@ -783,7 +813,7 @@
           "activities": [
             {
               "label": "Case study write-up review",
-              "link": "ui/case-studies-and-how-to-tell-a-good-story"
+              "link": "methods/process-narrative"
             }
           ],
           "workshop": {
@@ -798,7 +828,8 @@
         {
           "activities": [
             {
-              "label": "Site mapping"
+              "label": "Site mapping",
+              "link": "methods/sitemap"
             }
           ],
           "workshop": {

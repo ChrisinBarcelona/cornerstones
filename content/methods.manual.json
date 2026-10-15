@@ -1,0 +1,118 @@
+{
+  "categories": [],
+  "lectures": [
+    {
+      "slug": "site-visit",
+      "title": "Site Visit",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Discovery"
+    },
+    {
+      "slug": "affinity-mapping",
+      "title": "Affinity Mapping",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Define"
+    },
+    {
+      "slug": "data-synthesis-with-ai",
+      "title": "Data Synthesis with AI",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Define"
+    },
+    {
+      "slug": "business-model-canvas",
+      "title": "Business Model Canvas",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Define"
+    },
+    {
+      "slug": "wicked-problem-mapping",
+      "title": "Wicked Problem Mapping",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Define"
+    },
+    {
+      "slug": "service-design-blueprint",
+      "title": "Service Design Blueprint",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Define"
+    },
+    {
+      "slug": "dvf-analysis",
+      "title": "DVF Analysis",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Define"
+    },
+    {
+      "slug": "sitemap",
+      "title": "Sitemap",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Information Architecture"
+    },
+    {
+      "slug": "mood-board-with-ai",
+      "title": "Mood Board with AI",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Ideation"
+    },
+    {
+      "slug": "brand-pack",
+      "title": "Brand Pack",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Ideation"
+    },
+    {
+      "slug": "mid-fi",
+      "title": "Medium Fidelity (Mid-Fi)",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Ideation"
+    },
+    {
+      "slug": "ab-test",
+      "title": "A/B Test",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Validation"
+    },
+    {
+      "slug": "cataloguing-artifacts",
+      "title": "Cataloguing Artifacts",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Retrospective"
+    },
+    {
+      "slug": "process-narrative",
+      "title": "Process Narrative",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Retrospective"
+    }
+  ],
+  "subpages": []
+}

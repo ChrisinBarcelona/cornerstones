@@ -49,7 +49,8 @@ UX_REMOVED = {"what-is-ui-design"}
 # Bootcamp UI: these hub pages become UI lecture categories; every other link is an exercise.
 UI_GROUPS = {"UI Starter Pack": "Figma Guides", "UI Theory": "UI Theory"}
 # Templates and duplicates, left out wherever they appear.
-EXCLUDE = {"Daily UI: Template", "Boiler Plate", "Key Figures: Walt Disney (1)"}
+# Case Studies was remade as the Process Narrative method (content/methods.manual.json).
+EXCLUDE = {"Daily UI: Template", "Boiler Plate", "Key Figures: Walt Disney (1)", "Case Studies and How to tell a Good Story"}
 # Bootcamp UI pages replaced by newer versions in the Master export (Typeface, Dynamic Buttons Part One).
 UI_REPLACED = {"Typography", "07. UI Guidelines: Dynamic Button"}
 
@@ -60,6 +61,8 @@ UI_REPLACED = {"Typography", "07. UI Guidelines: Dynamic Button"}
 #                  Validate Problem Statement (= Problem Statement), Make A Map (= User Journey Map),
 #                  Validate (= Usability Test), Conduct Interviews (one line), User Stories (brief-specific)
 #   Team Sprint:   Mid-Fi (an unedited copy of Lo-Fi)
+# Lo-Fi was really a mid-fi exercise; it is now maintained by hand as Medium Fidelity (Mid-Fi), with the
+# methods written for the site (Site Visit, Sitemap, A/B Test…), in content/methods.manual.json.
 METHOD_CHAPTERS = [
     ("Discovery", [("Team Sprint", "Lean UX Canvas"), ("Google Sprint", "Long Term Goal"),
                    ("Team Sprint", "Research Goal"), ("Team Sprint", "Research Questions"),
@@ -72,7 +75,7 @@ METHOD_CHAPTERS = [
     ("Information Architecture", [("Team Sprint", "Task Flows")]),
     ("Ideation", [("Google Sprint", "Crazy 8’s"), ("Google Sprint", "Crazy 8’s with AI"),
                   ("Google Sprint", "Solution Sketch"), ("Team Sprint", "Mood Board"), ("Team Sprint", "Style Guide"),
-                  ("Team Sprint", "Paper Wireframes"), ("Team Sprint", "Lo-Fi"), ("Team Sprint", "Hi-Fi")]),
+                  ("Team Sprint", "Paper Wireframes"), ("Team Sprint", "Hi-Fi")]),
     ("Validation", [("Team Sprint", "Usability Test"), ("Google Sprint", "Create your Script"),
                     ("Google Sprint", "Facilitator Format"), ("Google Sprint", "Limited Intervention Technique"),
                     ("Google Sprint", "Notetaker Format"), ("Team Sprint", "Design Iteration")]),

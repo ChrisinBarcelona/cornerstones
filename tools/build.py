@@ -141,7 +141,21 @@ TRACK = {t["id"]: t for t in TRACKS}
 ORDER = {
     "ui": {
         "UI Theory": ["colour-values", "atomic-design-methodology", "file-types", "spacing-grids", "typeface",
-                      "style-guides", "icons", "paper-wireframes", "case-studies-and-how-to-tell-a-good-story"],
+                      "style-guides", "icons", "paper-wireframes"],
+    },
+    "methods": {
+        "Discovery": ["lean-ux-canvas", "long-term-goal", "research-goal", "research-questions", "site-visit",
+                      "user-survey", "user-interview", "discovery-summary"],
+        "Define": ["affinity-mapping", "data-synthesis-with-ai", "problem-statement", "user-persona",
+                   "competitive-analysis", "business-model-canvas", "wicked-problem-mapping", "how-might-we",
+                   "pick-a-target", "user-journey-map", "service-design-blueprint", "dvf-analysis",
+                   "converge-diverge", "vote"],
+        "Information Architecture": ["task-flows", "sitemap"],
+        "Ideation": ["crazy-8s", "crazy-8s-with-ai", "solution-sketch", "mood-board", "mood-board-with-ai",
+                     "brand-pack", "style-guide", "paper-wireframes", "mid-fi", "hi-fi"],
+        "Validation": ["usability-test", "create-your-script", "facilitator-format",
+                       "limited-intervention-technique", "notetaker-format", "ab-test", "design-iteration"],
+        "Retrospective": ["sprint-retrospective", "cataloguing-artifacts", "process-narrative"],
     },
     "figma": {
         "Figma Basics": ["choose-your-frame", "starting-in-figma", "beginners-guide-to-grids",
@@ -199,7 +213,28 @@ RELATED = [
     ("methods/paper-wireframes", "ui/paper-wireframes"),
     ("methods/style-guide", "ui/style-guides"),
     ("methods/style-guide", "figma/dynamic-buttons-part-one"),
-    ("methods/lo-fi", "ux/stages-of-wireframes"),
+    ("methods/mid-fi", "ux/stages-of-wireframes"),
+    ("methods/paper-wireframes", "methods/mid-fi"),
+    ("methods/mid-fi", "methods/hi-fi"),
+    ("methods/site-visit", "methods/research-questions"),
+    ("methods/site-visit", "ux/non-directive-interview-technique"),
+    ("methods/affinity-mapping", "methods/data-synthesis-with-ai"),
+    ("methods/affinity-mapping", "methods/discovery-summary"),
+    ("methods/service-design-blueprint", "methods/user-journey-map"),
+    ("methods/business-model-canvas", "methods/lean-ux-canvas"),
+    ("methods/business-model-canvas", "methods/dvf-analysis"),
+    ("methods/wicked-problem-mapping", "ux/wicked-problem"),
+    ("methods/wicked-problem-mapping", "methods/problem-statement"),
+    ("methods/dvf-analysis", "methods/vote"),
+    ("methods/sitemap", "methods/task-flows"),
+    ("methods/sitemap", "ux/portfolio"),
+    ("methods/mood-board", "methods/mood-board-with-ai"),
+    ("methods/mood-board", "methods/brand-pack"),
+    ("methods/brand-pack", "methods/style-guide"),
+    ("methods/ab-test", "methods/usability-test"),
+    ("methods/cataloguing-artifacts", "methods/process-narrative"),
+    ("methods/sprint-retrospective", "methods/process-narrative"),
+    ("methods/process-narrative", "ux/portfolio"),
     ("methods/hi-fi", "ux/stages-of-wireframes"),
     ("methods/research-goal", "methods/research-questions"),
     ("methods/crazy-8s", "methods/crazy-8s-with-ai"),
@@ -1068,6 +1103,8 @@ def moved_pages(data):
 
 # Pages taken off the site: old address -> where to send visitors instead.
 REMOVED = {f"lectures/{s}.html": "../ui.html" for s in ("what-is-ui-design", "icons", "colors", "typography", "grid", "design-systems")}
+REMOVED["methods/lo-fi.html"] = "mid-fi.html"
+REMOVED["ui/case-studies-and-how-to-tell-a-good-story.html"] = "../methods/process-narrative.html"
 
 
 def write_redirects(data):
