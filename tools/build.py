@@ -24,6 +24,12 @@ CONTENT = ROOT / "content"
 SITE = "Cornerstones"
 TAGLINE = "UX & UI learning resource for Barcelona Code School"
 
+# Course login. Only a SHA-256 hash of "username:password" is stored, never the password itself.
+# To change it:  python3 -c "import hashlib; print(hashlib.sha256(b'user:newpassword').hexdigest())"
+# Changing it signs everyone out. Note: this is a browser-side gate on a static site; it keeps casual
+# visitors out but is not real security (the files themselves stay publicly reachable).
+LOGIN_HASH = "c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202"
+
 TRACKS = [
     {"id": "ux", "out": "lectures", "index": "ux.html", "label": "UX Lectures", "noun": "Lecture",
      "eyebrow": "UX Learning Resource", "h1": "UX Lectures",
@@ -195,6 +201,16 @@ def meter(level, out_of=5):
             + "".join(f'<i class="{"on" if i < level else ""}"></i>' for i in range(out_of)) + "</span>")
 
 
+ICON_LOGOUT = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg>'
+
+
+def gate(prefix):
+    """Inline head script: send visitors who haven't signed in to the login page, remembering where they were."""
+    return (f"<script>try{{if(localStorage.getItem('cs-auth')!=='{LOGIN_HASH}')"
+            f"location.replace('{prefix}login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}}"
+            f"catch(e){{}}</script>")
+
+
 def page(title, description, body, depth, active):
     prefix = "../" * depth
     links = "".join(
@@ -206,6 +222,8 @@ def page(title, description, body, depth, active):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
+<meta name="robots" content="noindex, nofollow">
+{gate(prefix)}
 <script>try{{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}}catch(e){{}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -221,6 +239,7 @@ def page(title, description, body, depth, active):
     </a>
     <nav class="nav-links">{links}<a href="{prefix}timetable.html"{" aria-current=page" if active == "timetable" else ""}>Timetable</a></nav>
     <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme">{ICON_SUN}</button>
+    <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="{prefix}login.html">{ICON_LOGOUT}<span>Log out</span></button>
   </div>
 </header>
 {body}
@@ -800,12 +819,58 @@ def build_timetable(data):
     print(f"timetable.html: {len(tt['weeks'])} weeks")
 
 
+def build_login():
+    """login.html: the one page that isn't gated."""
+    html_ = f"""<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in · {SITE}</title>
+<meta name="robots" content="noindex, nofollow">
+<script>try{{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t;
+if(localStorage.getItem('cs-auth')==='{LOGIN_HASH}')location.replace('index.html')}}catch(e){{}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="login-page">
+<main class="login">
+  <div class="login-brand">
+    <span class="brand-mark">C</span>
+    <span class="brand-text"><span class="brand-name">{SITE.upper()}</span><span class="brand-sub">UX &amp; UI at Barcelona Code School</span></span>
+  </div>
+  <form class="login-card" id="login-form" data-hash="{LOGIN_HASH}" novalidate>
+    <div class="eyebrow">Student access</div>
+    <h1>Sign in to the course</h1>
+    <p class="login-intro">Lectures, methods, exercises and the timetable for the UX &amp; UI bootcamp.</p>
+    <label class="field"><span>Username</span>
+      <input id="login-user" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required></label>
+    <label class="field"><span>Password</span>
+      <span class="pw"><input id="login-pass" name="password" type="password" autocomplete="current-password" required>
+      <button type="button" class="pw-toggle" id="pw-toggle" aria-label="Show password" aria-pressed="false">Show</button></span></label>
+    <p class="login-error" id="login-error" role="alert" hidden>That username and password don't match. Check with your teacher.</p>
+    <button type="submit" class="login-submit">Sign in</button>
+    <p class="login-help">Don't have the login? Ask your teacher at Barcelona Code School.</p>
+  </form>
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>
+"""
+    (ROOT / "login.html").write_text(html_, encoding="utf-8")
+    (ROOT / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
+    print("login.html")
+
+
 def main():
     data = load()
     for t in TRACKS:
         build_track(t, data)
     build_home(data)
     build_timetable(data)
+    build_login()
 
 
 if __name__ == "__main__":

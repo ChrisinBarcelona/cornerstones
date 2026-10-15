@@ -34,6 +34,16 @@ python3 tools/build.py
 
 Preview locally with `python3 -m http.server` and open http://localhost:8000.
 
+## Login
+
+Every page sends visitors to `login.html` until they sign in, and the header has a Log out button. Only a SHA-256 hash of `username:password` is stored (`LOGIN_HASH` in `tools/build.py`). To change the login, generate a new hash, paste it in and rebuild; that signs everyone out:
+
+```bash
+python3 -c "import hashlib; print(hashlib.sha256(b'username:newpassword').hexdigest())"
+```
+
+This runs in the browser, so it keeps casual visitors out but is not real security: anyone who knows a file's address can still open it, and the site's files are public on GitHub. `robots.txt` and a `noindex` tag keep the site out of search engines.
+
 ## Publishing
 
 GitHub Pages deploys `main` from the repository root: https://chrisinbarcelona.github.io/cornerstones/

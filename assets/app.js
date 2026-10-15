@@ -176,3 +176,50 @@
   window.addEventListener('hashchange', openFromHash);
   openFromHash();
 })();
+
+// Course login (browser-side): sign in, show/hide password, log out
+(function () {
+  var form = document.getElementById('login-form');
+  if (form) {
+    var user = document.getElementById('login-user');
+    var pass = document.getElementById('login-pass');
+    var error = document.getElementById('login-error');
+    var toggle = document.getElementById('pw-toggle');
+    toggle.addEventListener('click', function () {
+      var show = pass.type === 'password';
+      pass.type = show ? 'text' : 'password';
+      toggle.textContent = show ? 'Hide' : 'Show';
+      toggle.setAttribute('aria-pressed', String(show));
+      toggle.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+    });
+    function sha256(text) {
+      return crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)).then(function (buf) {
+        return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+      });
+    }
+    // Only return to a page on this site.
+    function nextUrl() {
+      var next = new URLSearchParams(location.search).get('next') || '';
+      return /^\/(?!\/)/.test(next) ? next : 'index.html';
+    }
+    [user, pass].forEach(function (el) { el.addEventListener('input', function () { error.hidden = true; }); });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      sha256(user.value.trim().toLowerCase() + ':' + pass.value).then(function (hash) {
+        if (hash === form.dataset.hash) {
+          try { localStorage.setItem('cs-auth', hash); } catch (err) {}
+          location.replace(nextUrl());
+        } else {
+          error.hidden = false;
+          pass.select();
+        }
+      });
+    });
+    user.focus();
+  }
+  var logout = document.getElementById('logout');
+  if (logout) logout.addEventListener('click', function () {
+    try { localStorage.removeItem('cs-auth'); } catch (e) {}
+    location.replace(logout.dataset.login);
+  });
+})();
