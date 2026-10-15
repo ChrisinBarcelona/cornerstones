@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=2e8a089601">
-<link rel="stylesheet" href="assets/theme.css?v=2e8a089601">
+<link rel="stylesheet" href="assets/style.css?v=a7278a252a">
+<link rel="stylesheet" href="assets/theme.css?v=a7278a252a">
 </head>
 <body class="t-home">
 <header class="nav">
@@ -36,11 +36,50 @@
       <div>
         <div class="eyebrow">Barcelona Code School · UX &amp; UI Bootcamp</div>
         <h1>Welcome, student</h1>
-        <p class="lede">Lectures to read, methods to use in your sprints, Figma lessons and briefs to practise with. Pick a section, follow the suggested route, or see <a href="timetable.html">the nine-week timetable</a>.</p>
+        <p class="lede">Lectures to read, Figma lessons and briefs to practise with, plus a bank of methods to pick from in your sprints. Follow the suggested route, or see <a href="timetable.html">the nine-week timetable</a>.</p>
       </div>
       <label class="search search-all"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q-all" type="search" placeholder="Search all 145 pages…" autocomplete="off"></label>
     </header>
     <ul class="cards search-results" id="results" hidden></ul>
+    <section class="method-bank t-methods" aria-labelledby="bank-title">
+      <div class="bank-intro">
+        <div class="eyebrow">Pick and choose · not a checklist</div>
+        <h2 id="bank-title">Your method bank</h2>
+        <p class="bank-lede">45 UX methods for different types of problems. Unlike the sections below, there's nothing to complete here: you won't use every method, and you shouldn't. Start from the problem in front of you and pick the method that fits.</p>
+        <a class="bank-go" href="methods.html">Browse all 45 methods <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <ul class="bank-tiles"><li class="bank-tile">
+  <span class="bank-when">When…</span>
+  <p class="bank-problem">I don&#x27;t understand the problem, or the people who have it, yet.</p>
+  <ul class="bank-picks"><li><a href="methods/site-visit.html">Site Visit</a></li><li><a href="methods/desk-research.html">Desk Research</a></li><li><a href="methods/user-interview.html">User Interview</a></li><li><a href="methods/user-survey.html">User Survey</a></li></ul>
+  <a class="bank-more" href="methods.html#category=Discovery">Discovery · 9 methods <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</li><li class="bank-tile">
+  <span class="bank-when">When…</span>
+  <p class="bank-problem">I have lots of research and need to make sense of it.</p>
+  <ul class="bank-picks"><li><a href="methods/affinity-mapping.html">Affinity Mapping</a></li><li><a href="methods/problem-statement.html">Problem Statement</a></li><li><a href="methods/user-persona.html">User Persona</a></li><li><a href="methods/wicked-problem-mapping.html">Wicked Problem Mapping</a></li></ul>
+  <a class="bank-more" href="methods.html#category=Define">Define · 14 methods <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</li><li class="bank-tile">
+  <span class="bank-when">When…</span>
+  <p class="bank-problem">I need to organise pages, content or the steps of a task.</p>
+  <ul class="bank-picks"><li><a href="methods/task-flows.html">Task Flows</a></li><li><a href="methods/sitemap.html">Sitemap</a></li></ul>
+  <a class="bank-more" href="methods.html#category=Information%20Architecture">Information Architecture · 2 methods <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</li><li class="bank-tile">
+  <span class="bank-when">When…</span>
+  <p class="bank-problem">I need ideas, a visual direction or something to show.</p>
+  <ul class="bank-picks"><li><a href="methods/crazy-8s.html">Crazy 8’s</a></li><li><a href="methods/mood-board.html">Mood Board</a></li><li><a href="methods/brand-pack.html">Brand Pack</a></li><li><a href="methods/mid-fi.html">Medium Fidelity (Mid-Fi)</a></li></ul>
+  <a class="bank-more" href="methods.html#category=Ideation">Ideation · 10 methods <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</li><li class="bank-tile">
+  <span class="bank-when">When…</span>
+  <p class="bank-problem">I need to know whether my design actually works.</p>
+  <ul class="bank-picks"><li><a href="methods/usability-test.html">Usability Test</a></li><li><a href="methods/ab-test.html">A/B Test</a></li><li><a href="methods/design-iteration.html">Design Iteration</a></li></ul>
+  <a class="bank-more" href="methods.html#category=Validation">Validation · 7 methods <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</li><li class="bank-tile">
+  <span class="bank-when">When…</span>
+  <p class="bank-problem">I need to look back and tell the story of my project.</p>
+  <ul class="bank-picks"><li><a href="methods/sprint-retrospective.html">Sprint Retrospective</a></li><li><a href="methods/cataloguing-artifacts.html">Cataloguing Artifacts</a></li><li><a href="methods/process-narrative.html">Process Narrative</a></li></ul>
+  <a class="bank-more" href="methods.html#category=Retrospective">Retrospective · 3 methods <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</li></ul>
+    </section>
     <section class="sections" aria-label="Sections"><a class="section-card t-ux" href="ux.html">
   <span class="section-count">27 lectures</span>
   <span class="section-name">UX Lectures</span>
@@ -51,13 +90,6 @@
   <div class="progress-bar" role="progressbar" aria-label="UX Lectures progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
   
 </div>
-  <span class="section-go">Open <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-</a><a class="section-card t-methods" href="methods.html">
-  <span class="section-count">45 methods</span>
-  <span class="section-name">UX Methods</span>
-  <span class="section-blurb">Practical methods to reach for at any point in a sprint.</span>
-  <span class="section-cats">Discovery · Define · Information Architecture · Ideation · Validation · Retrospective</span>
-  
   <span class="section-go">Open <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
 </a><a class="section-card t-ui" href="ui.html">
   <span class="section-count">8 lectures</span>
@@ -124,7 +156,7 @@
     </section>
     <section class="route">
       <h2>Suggested route</h2>
-      <p class="route-intro">Not sure where to start? This is one way through. Dip into UX Methods whenever your sprint needs one.</p>
+      <p class="route-intro">Not sure where to start? This is one way through. Dip into the method bank whenever your sprint needs a method.</p>
       <ol class="route-steps"><li class="route-step">
   <span class="route-num">1</span>
   <div><h3>Understand UX</h3><p>Start with the foundations: where UX comes from and what it really is.</p>
@@ -139,7 +171,7 @@
   <a href="exercises/sidebar.html">Exercises: Sidebar <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </li><li class="route-step">
   <span class="route-num">4</span>
-  <div><h3>Run a sprint</h3><p>Use UX Methods chapter by chapter, from Discovery to Retrospective.</p>
+  <div><h3>Run a sprint</h3><p>Pick from the method bank whatever your sprint&#x27;s problem needs. Many teams start with a Lean UX Canvas.</p>
   <a href="methods/lean-ux-canvas.html">UX Methods: Lean UX Canvas <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </li><li class="route-step">
   <span class="route-num">5</span>
@@ -155,7 +187,7 @@
   <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
   <h2 id="celebrate-title"></h2><p class="celebrate-text"></p><button type="button" class="login-submit" id="celebrate-close">Nice!</button></div>
 </div>
-<script src="assets/progress-data.js?v=2e8a089601"></script>
-<script src="assets/app.js?v=2e8a089601"></script>
+<script src="assets/progress-data.js?v=a7278a252a"></script>
+<script src="assets/app.js?v=a7278a252a"></script>
 </body>
 </html>

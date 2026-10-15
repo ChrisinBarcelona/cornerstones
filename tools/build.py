@@ -17,7 +17,7 @@ import html
 import json
 import re
 from pathlib import Path
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, quote, urlparse
 
 import markdown
 
@@ -60,8 +60,8 @@ TRACKS = [
      }},
     {"id": "methods", "out": "methods", "index": "methods.html", "label": "UX Methods", "noun": "Method",
      "eyebrow": "Sprint Toolkit", "h1": "UX Methods",
-     "blurb": "Practical methods to reach for at any point in a sprint.",
-     "intro": "{n} methods to reach for at any point in a sprint, in the order you'd usually use them. Each one opens with what it's for and how long it takes.",
+     "blurb": "Your bank of methods for different types of problems.",
+     "intro": "Your bank of {n} methods for different types of problems. Pick and choose: there's nothing to complete here, and no sprint uses them all. Find the stage you're at, then the method that fits your problem. Each one opens with what it's for and how long it takes.",
      "chapters": {
          "Discovery": "Generative research: find out what the problem really is, and who has it.",
          "Define": "Turn research into a clear problem, a target user and a direction.",
@@ -131,7 +131,7 @@ ROUTE = [
     ("Understand UX", "Start with the foundations: where UX comes from and what it really is.", "ux", "design-origins"),
     ("Learn Figma", "Work through Figma Basics in order, then Figma Advanced.", "figma", "choose-your-frame"),
     ("Practise every day", "Pick a Daily UI brief each session, starting with Sidebar.", "exercises", "sidebar"),
-    ("Run a sprint", "Use UX Methods chapter by chapter, from Discovery to Retrospective.", "methods", "lean-ux-canvas"),
+    ("Run a sprint", "Pick from the method bank whatever your sprint's problem needs. Many teams start with a Lean UX Canvas.", "methods", "lean-ux-canvas"),
     ("Build something bigger", "Finish with a replica challenge and the Stage Play team project.", "exercises", "glovo-replica-challenge"),
 ]
 TRACK = {t["id"]: t for t in TRACKS}
@@ -817,10 +817,52 @@ def build_track(t, data):
     print(f"{t['index']}: {len(lectures)} {noun}s, {len(every)} pages in {t['out']}/")
 
 
+# The method bank on the home page: the kind of problem a student has, and a few methods to start from.
+METHOD_BANK = [
+    ("Discovery", "I don't understand the problem, or the people who have it, yet.",
+     ["site-visit", "desk-research", "user-interview", "user-survey"]),
+    ("Define", "I have lots of research and need to make sense of it.",
+     ["affinity-mapping", "problem-statement", "user-persona", "wicked-problem-mapping"]),
+    ("Information Architecture", "I need to organise pages, content or the steps of a task.",
+     ["task-flows", "sitemap"]),
+    ("Ideation", "I need ideas, a visual direction or something to show.",
+     ["crazy-8s", "mood-board", "brand-pack", "mid-fi"]),
+    ("Validation", "I need to know whether my design actually works.",
+     ["usability-test", "ab-test", "design-iteration"]),
+    ("Retrospective", "I need to look back and tell the story of my project.",
+     ["sprint-retrospective", "cataloguing-artifacts", "process-narrative"]),
+]
+
+
+def method_bank(data):
+    d = data["methods"]
+    n = {c: sum(1 for l in d["lectures"] if l["category"] == c) for c in d["categories"]}
+    tiles = []
+    for cat, problem, slugs in METHOD_BANK:
+        links = "".join(f'<li><a href="methods/{s}.html">{esc(d["by_slug"][s]["title"])}</a></li>' for s in slugs)
+        tiles.append(f"""<li class="bank-tile">
+  <span class="bank-when">When…</span>
+  <p class="bank-problem">{esc(problem)}</p>
+  <ul class="bank-picks">{links}</ul>
+  <a class="bank-more" href="methods.html#category={quote(cat)}">{esc(cat)} · {n[cat]} methods {ICON_ARROW}</a>
+</li>""")
+    return f"""<section class="method-bank t-methods" aria-labelledby="bank-title">
+      <div class="bank-intro">
+        <div class="eyebrow">Pick and choose · not a checklist</div>
+        <h2 id="bank-title">Your method bank</h2>
+        <p class="bank-lede">{len(d["lectures"])} UX methods for different types of problems. Unlike the sections below, there's nothing to complete here: you won't use every method, and you shouldn't. Start from the problem in front of you and pick the method that fits.</p>
+        <a class="bank-go" href="methods.html">Browse all {len(d["lectures"])} methods {ICON_ARROW}</a>
+      </div>
+      <ul class="bank-tiles">{''.join(tiles)}</ul>
+    </section>"""
+
+
 def build_home(data):
-    """index.html: what the course is, the four sections, a suggested route and a search of every page."""
+    """index.html: what the course is, the method bank, the four sections, a suggested route and a search of every page."""
     cards = []
     for t in TRACKS:
+        if t["id"] == "methods":  # not a course to complete: it gets the method bank instead
+            continue
         d = data[t["id"]]
         n = len(d["lectures"])
         cats = " · ".join(esc(c) for c in d["categories"])
@@ -854,11 +896,12 @@ def build_home(data):
       <div>
         <div class="eyebrow">Barcelona Code School · UX &amp; UI Bootcamp</div>
         <h1>Welcome, student</h1>
-        <p class="lede">Lectures to read, methods to use in your sprints, Figma lessons and briefs to practise with. Pick a section, follow the suggested route, or see <a href="timetable.html">the nine-week timetable</a>.</p>
+        <p class="lede">Lectures to read, Figma lessons and briefs to practise with, plus a bank of methods to pick from in your sprints. Follow the suggested route, or see <a href="timetable.html">the nine-week timetable</a>.</p>
       </div>
       <label class="search search-all"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q-all" type="search" placeholder="Search all {len(index)} pages…" autocomplete="off"></label>
     </header>
     <ul class="cards search-results" id="results" hidden></ul>
+    {method_bank(data)}
     <section class="sections" aria-label="Sections">{''.join(cards)}</section>
     <section class="badges" aria-labelledby="badges-title">
       <h2 id="badges-title">Your badges</h2>
@@ -867,7 +910,7 @@ def build_home(data):
     </section>
     <section class="route">
       <h2>Suggested route</h2>
-      <p class="route-intro">Not sure where to start? This is one way through. Dip into UX Methods whenever your sprint needs one.</p>
+      <p class="route-intro">Not sure where to start? This is one way through. Dip into the method bank whenever your sprint needs a method.</p>
       <ol class="route-steps">{''.join(steps)}</ol>
     </section>
   </div>
