@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Haptics · Cornerstones</title>
-<meta name="description" content="Haptics: how touch and vibration give users feedback when they use technology.">
+<meta name="description" content="Designing for touch: what haptics are for, how they should feel, the principles behind good haptics and how to spec them in your designs.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2238%2040%20739%20739%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M221%2090H590L777%20409H38Z%22%20fill%3D%22%23004ecd%22/%3E%3Cpath%20d%3D%22M38%20409H777L590%20728H221Z%22%20fill%3D%22%230062ff%22/%3E%3Cpath%20d%3D%22M374%20254H688L777%20409H286Z%22%20fill%3D%22%23002b71%22/%3E%3Cpath%20d%3D%22M286%20409H777L688%20564H374Z%22%20fill%3D%22%23003ea2%22/%3E%3C/svg%3E">
 <script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
@@ -36,41 +36,177 @@
     <header class="lecture-head">
       <div class="eyebrow">Lecture 22 · Interface</div>
       <div class="title-row"><h1>Haptics</h1><button type="button" class="complete-btn head-complete" data-complete="ux/haptics" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button></div>
-      <p class="lede">Haptics: how touch and vibration give users feedback when they use technology.</p>
-      <div class="meta"><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 min read</span></div>
+      <p class="lede">Designing for touch: what haptics are for, how they should feel, the principles behind good haptics and how to spec them in your designs.</p>
+      <div class="meta"><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>7 min read</span></div>
     </header>
     <div class="lecture-grid">
-      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl3"><a href="#derived-from-the-greek-word-haptikos-meaning-able-to-touch-or-perceive">Derived from the Greek word &quot;haptikos,&quot; meaning &quot;able to touch or perceive”.</a></li></ol></div><div class="rail-block"><div class="rail-label">Interface</div><ol class="toc family"><li><a href="gestures.html">Gestures</a></li><li><a href="haptics.html" aria-current=page>Haptics</a></li></ol></div></div></div></aside>
+      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#why-haptics-matter">Why haptics matter</a></li><li class="lvl2"><a href="#from-buzz-to-click-a-very-short-history">From buzz to click: a very short history</a></li><li class="lvl2"><a href="#the-three-jobs-of-a-haptic">The three jobs of a haptic</a></li><li class="lvl2"><a href="#how-haptics-feel">How haptics feel</a></li><li class="lvl2"><a href="#apple-s-haptic-vocabulary">Apple&#x27;s haptic vocabulary</a></li><li class="lvl2"><a href="#principles-of-good-haptic-design">Principles of good haptic design</a></li><li class="lvl2"><a href="#haptics-in-the-wild">Haptics in the wild</a></li><li class="lvl2"><a href="#designing-haptics-as-a-ux-ui-designer">Designing haptics as a UX/UI designer</a></li><li class="lvl2"><a href="#exercise-a-haptic-audit-15-minutes">Exercise: a haptic audit (15 minutes)</a></li><li class="lvl2"><a href="#media">Media</a></li><li class="lvl2"><a href="#resources">Resources</a></li><li class="lvl2"><a href="#summary">Summary</a></li></ol></div><div class="rail-block"><div class="rail-label">Interface</div><ol class="toc family"><li><a href="gestures.html">Gestures</a></li><li><a href="haptics.html" aria-current=page>Haptics</a></li></ol></div></div></div></aside>
       <article class="prose">
-<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl3"><a href="#derived-from-the-greek-word-haptikos-meaning-able-to-touch-or-perceive">Derived from the Greek word &quot;haptikos,&quot; meaning &quot;able to touch or perceive”.</a></li></ol></details>
-<figure class="media"><img alt="" src="../content/ux/haptics/651736f9958f4d4ac42eeb21_image_-2-.jpg" loading="lazy" decoding="async"></figure>
-<p>Haptics refers to the science and technology of transmitting and understanding information through touch. It encompasses a range of applications, from simple mechanical vibrations to complex tactile feedback systems. </p>
-<h3 id="derived-from-the-greek-word-haptikos-meaning-able-to-touch-or-perceive">Derived from the Greek word "haptikos," meaning "able to touch or perceive”.</h3>
-<p>Haptics formulate the key part of how humans interact with technology and are primarily part of the feedback heuristic. Common haptics we all take for granted are things like: </p>
-<p><strong>Haptics</strong></p>
-<p>Morning Alarm Clock Sound </p>
-<p>Microwave End Alert</p>
-<p>Oven Timer Alert</p>
-<p>Washing Machine Cycle Completion</p>
-<p>Dishwasher End-of-Cycle Signal</p>
-<p>Car Seatbelt Reminder</p>
-<p>Haptics plays a crucial role in enhancing user experiences across various fields by providing a more intuitive and engaging way to interact with digital systems and devices and with apps, we will frequently integrate haptics like: </p>
-<p><strong>Audio</strong></p>
-<p>Locking device click</p>
-<p>Deleting items swoosh (email, messages)</p>
-<p>Scrolling clicks </p>
-<p>Keyboard keypress click </p>
-<p>Sent ding 🛎️ </p>
-<p><strong>Vibration</strong></p>
-<p>Incoming Call Vibration</p>
-<p>Text Message Vibration</p>
-<p>Notification Vibration</p>
-<p>Subtle Keyboard Feedback</p>
-<p>Alarm Vibration</p>
-<p>Silent Mode Activation</p>
-<p>Camera Shutter Vibration</p>
-<p>Gesture Feedback</p>
-<p>Generally it’s good to know what haptics are and how they play a vital role in human computer interaction. There is an entire field devoted to haptic design and whilst we don’t necessarily have the technology in Figma to include haptics, when you are building your portfolio websites, Framer very much includes this technology.</p>
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#why-haptics-matter">Why haptics matter</a></li><li class="lvl2"><a href="#from-buzz-to-click-a-very-short-history">From buzz to click: a very short history</a></li><li class="lvl2"><a href="#the-three-jobs-of-a-haptic">The three jobs of a haptic</a></li><li class="lvl2"><a href="#how-haptics-feel">How haptics feel</a></li><li class="lvl2"><a href="#apple-s-haptic-vocabulary">Apple&#x27;s haptic vocabulary</a></li><li class="lvl2"><a href="#principles-of-good-haptic-design">Principles of good haptic design</a></li><li class="lvl2"><a href="#haptics-in-the-wild">Haptics in the wild</a></li><li class="lvl2"><a href="#designing-haptics-as-a-ux-ui-designer">Designing haptics as a UX/UI designer</a></li><li class="lvl2"><a href="#exercise-a-haptic-audit-15-minutes">Exercise: a haptic audit (15 minutes)</a></li><li class="lvl2"><a href="#media">Media</a></li><li class="lvl2"><a href="#resources">Resources</a></li><li class="lvl2"><a href="#summary">Summary</a></li></ol></details>
+<figure class="media"><img alt="A human finger and a robot finger about to touch" src="../content/ux/haptics/651736f9958f4d4ac42eeb21_image_-2-.jpg" loading="lazy" decoding="async"></figure>
+<p><strong>Haptics</strong> is designing for the sense of touch: the taps, clicks, pulses and vibrations a device makes so that you can <em>feel</em> an interface, not just see and hear it. The word comes from the Greek <em>haptikos</em>, "able to touch or perceive".</p>
+<p>Haptics are easy to confuse with sound. The ding when a message sends, or the beep when the microwave finishes, is <strong>audio</strong> feedback. The buzz in your pocket for that message, or the tiny "click" you feel when you flick a picker wheel, is <strong>haptic</strong> feedback. The best products design the two together, so a moment looks, sounds and feels like one single event.</p>
+<h2 id="why-haptics-matter">Why haptics matter</h2>
+<ul>
+<li><strong>Feedback without looking.</strong> Nielsen's first usability heuristic, <em>visibility of system status</em>, says people should always know what the system is doing. A haptic confirms an action even when your eyes are somewhere else: Apple Pay's double tap when a payment goes through, or the buzz when a timer ends.</li>
+<li><strong>Glass has no buttons.</strong> A touchscreen is a flat sheet of glass. There is no key travel and no click, so it is hard to know whether a touch "landed". Nielsen Norman Group points out that touch typing is impossible without tactile cues. Haptics give some of that physical certainty back.</li>
+<li><strong>Eyes-free moments.</strong> Phones live in pockets and watches sit on wrists. NN/g recommends that most guiding interactions on a smartwatch use haptics, because watches are often on silent and people are busy doing something else. Their example: a guitarist who preferred his metronome app to vibrate rather than beep.</li>
+<li><strong>Accessibility.</strong> Vibration helps people who can't hear an alert or can't see the screen. It must never be the <em>only</em> signal, though: some people switch haptics off, some devices have none, and some users are sensitive to vibration.</li>
+</ul>
+<h2 id="from-buzz-to-click-a-very-short-history">From buzz to click: a very short history</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Moment</th>
+<th>Why it mattered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1990s</td>
+<td>Pagers and early phones</td>
+<td>A small motor with an off-centre weight (an <strong>ERM</strong> motor) spins up and buzzes: loud, slow and blunt.</td>
+</tr>
+<tr>
+<td>1997</td>
+<td>Nintendo 64 Rumble Pak</td>
+<td>Games make you <em>feel</em> a crash or an explosion.</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>Apple Watch and the Force Touch trackpad</td>
+<td>A <strong>linear actuator</strong> (Apple calls it the Taptic Engine) makes short, crisp taps. On the trackpad, the "click" is entirely simulated: the glass barely moves.</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>iPhone 7 home button</td>
+<td>The physical button is replaced by a solid button that feels like it clicks, thanks to haptics.</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>PlayStation 5 DualSense</td>
+<td>Rich, detailed haptics and triggers that push back.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The lesson: haptics went from <em>buzzing</em> to <em>clicking</em>. Modern haptics are short, precise and meaningful, not a long vibration.</p>
+<h2 id="the-three-jobs-of-a-haptic">The three jobs of a haptic</h2>
+<p>Android's design guidelines sort haptics into three jobs. Every haptic you design should do one of them.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Job</th>
+<th>What it does</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Notify</strong></td>
+<td>Get attention for something that needs it</td>
+<td>An incoming call, a text, a calendar alert, a tap on the wrist to turn left</td>
+</tr>
+<tr>
+<td><strong>Confirm</strong></td>
+<td>Tell the user an action worked, or didn't</td>
+<td>A payment succeeds, a fingerprint is accepted or rejected, a wrong passcode</td>
+</tr>
+<tr>
+<td><strong>Delight</strong></td>
+<td>Make an interaction feel physical and satisfying</td>
+<td>A slider snapping into place, ticks as you scroll a picker, a pull-to-refresh that "catches"</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="how-haptics-feel">How haptics feel</h2>
+<p>Android also describes three qualities of haptic:</p>
+<ul>
+<li><strong>Clear:</strong> crisp, clean and short, like a mechanical click or tick. Use these for buttons, toggles and selections.</li>
+<li><strong>Rich:</strong> expressive textures, such as a flutter, a heavy thud or a bounce. Good for special moments, but not every device can play them, so always plan a simpler fallback.</li>
+<li><strong>Buzzy:</strong> noisy, long and tingly, like an old pager. Avoid it for touch feedback. Android's advice is that if the choice is between a buzzy haptic and none, choose <strong>none</strong>.</li>
+</ul>
+<h2 id="apple-s-haptic-vocabulary">Apple's haptic vocabulary</h2>
+<p>iPhone apps share a small set of standard haptics, so they feel the same across the system. Designers should know them by name:</p>
+<ul>
+<li><strong>Notification:</strong> <em>success</em>, <em>warning</em> and <em>error</em>, for the outcome of a task. Think of a payment going through or a form failing.</li>
+<li><strong>Impact:</strong> <em>light</em>, <em>medium</em> and <em>heavy</em> (also <em>soft</em> and <em>rigid</em>), to suggest physical contact: something landing, snapping or colliding.</li>
+<li><strong>Selection:</strong> a light tick each time a value changes, like the clicks you feel spinning a date-picker wheel.</li>
+</ul>
+<h2 id="principles-of-good-haptic-design">Principles of good haptic design</h2>
+<p>Apple's audio-haptic design team (WWDC 2019) sums it up in three principles. Android's guidelines add a few practical rules.</p>
+<ol>
+<li><strong>Causality.</strong> It should be obvious what caused the feeling. A haptic that arrives late, or for no visible reason, feels like a fault.</li>
+<li><strong>Harmony.</strong> Touch, sound and visuals should feel like one event: in sync, and matched in character. A big, heavy animation with a tiny tick feels wrong.</li>
+<li><strong>Utility.</strong> Only add a haptic where it brings real value. <strong>Less is more</strong>: too many vibrations become annoying, numb the hand, and lead people to switch them off completely.</li>
+<li><strong>Match strength to importance and frequency.</strong> Things that happen constantly, like scrolling, get the faintest tick. Important moments, like submitting a form, get something stronger.</li>
+<li><strong>Be consistent.</strong> Use the same haptic for the same kind of event, and match the system (keyboards, pickers, switches) so people don't have to learn a new language.</li>
+<li><strong>Never rely on haptics alone.</strong> Always pair them with something visible, and make sure the experience still works with haptics turned off.</li>
+</ol>
+<h2 id="haptics-in-the-wild">Haptics in the wild</h2>
+<ul>
+<li><strong>Phone:</strong> the call buzz in your pocket, keyboard clicks (an option in iOS settings), the error buzz on a wrong passcode, and selection ticks on pickers.</li>
+<li><strong>Watch:</strong> taps on the wrist for notifications, and different tap patterns for left and right turns in Apple Maps, so you can navigate without looking.</li>
+<li><strong>Laptop:</strong> the trackpad "click" on recent MacBooks, which is a haptic, not a moving button.</li>
+<li><strong>Games:</strong> controller rumble, and the PlayStation 5's triggers that stiffen when you draw a bow.</li>
+<li><strong>Cars:</strong> a steering wheel or seat that vibrates when you drift out of your lane.</li>
+</ul>
+<h2 id="designing-haptics-as-a-ux-ui-designer">Designing haptics as a UX/UI designer</h2>
+<p>You can't feel haptics in a Figma prototype, but you can still design them.</p>
+<ol>
+<li><strong>Annotate them.</strong> Add a haptics note to your Hi-Fi screens for each moment that needs one: what triggers it, which haptic, how strong, and what sound and visual go with it.</li>
+<li><strong>Use the platform's names.</strong> Write "iOS: notification success" or "Android: confirm" so developers know exactly what to build.</li>
+<li><strong>Prototype on a real device when it matters.</strong> Tools such as ProtoPie can trigger vibration on a phone, which is the only way to judge how a haptic really feels.</li>
+<li><strong>Know the web's limits.</strong> The browser Vibration API works on Android but not in Safari on iPhone, so haptics on websites, including portfolio sites built in Framer, are very limited. Design for them in apps, not on the web.</li>
+</ol>
+<p><strong>Example haptics note</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Moment</th>
+<th>Trigger</th>
+<th>Haptic</th>
+<th>Paired with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payment complete</td>
+<td>Payment succeeds</td>
+<td>iOS: notification success</td>
+<td>Green tick animation, "Paid" sound</td>
+</tr>
+<tr>
+<td>Wrong PIN</td>
+<td>Third digit mismatch</td>
+<td>iOS: notification error</td>
+<td>Field shake, red message</td>
+</tr>
+<tr>
+<td>Choose a time</td>
+<td>Picker value changes</td>
+<td>iOS: selection</td>
+<td>Picker wheel moves</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="exercise-a-haptic-audit-15-minutes">Exercise: a haptic audit (15 minutes)</h2>
+<ol>
+<li>Open two apps you use every day and slowly use their main features.</li>
+<li>Every time you <strong>feel</strong> something, write down the moment, its job (notify, confirm or delight) and its quality (clear, rich or buzzy).</li>
+<li>Find one moment that <strong>should</strong> have a haptic but doesn't, and one that has a haptic it doesn't need.</li>
+<li>Write a haptics note (like the table above) for three key moments in your current project.</li>
+</ol>
+<h2 id="media"><span class="h-icon">🎥</span>Media</h2>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/-hvClUdSlhA" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/cTtc90jCULU" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/ZBLRzsmLy5w" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<h2 id="resources"><span class="h-icon">📚</span>Resources</h2>
+<p><a href="https://developer.apple.com/design/human-interface-guidelines/playing-haptics">Playing haptics – Apple Human Interface Guidelines</a></p>
+<p><a href="https://developer.android.com/develop/ui/views/haptics/haptics-principles">Haptics design principles – Android Developers</a></p>
+<p><a href="https://www.nngroup.com/articles/smartwatch-interactions/">6 Types of Useful Smartwatch Interactions – Nielsen Norman Group</a></p>
+<h2 id="summary">Summary</h2>
+<p>Haptics let people <strong>feel</strong> an interface. Done well, they are short, crisp and meaningful: they notify, confirm or delight, they match what you see and hear, and they are used sparingly. As a designer, you choose the moments, name the haptic in your specs, and always make sure the experience works without them.</p>
 <section class="complete" data-key="ux/haptics">
   <div class="complete-text"><b>Finished this lecture?</b></div>
   <button type="button" class="complete-btn" data-complete="ux/haptics" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
