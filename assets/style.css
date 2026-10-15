@@ -528,3 +528,54 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
 .login-submit { width: 100%; height: 48px; border: 0; background: var(--accent); color: #f7f5ef; cursor: pointer; font: 600 16px var(--font); transition: filter .15s var(--ease); }
 .login-submit:hover { filter: brightness(1.08); }
 .login-help { margin: 16px 0 0; text-align: center; font-size: 13.5px; color: var(--muted); }
+
+/* ---- Progress: page completion, progress bars, badges ---- */
+.complete { display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap;
+  margin: 3em 0 0; padding: 20px 22px; border: 1px solid var(--hair-2); background: var(--raised); }
+.complete-text { display: flex; flex-direction: column; gap: 4px; font-size: 16px; }
+.complete-parts { font-size: 14px; color: var(--ink-soft); }
+.complete-btn { height: 44px; padding: 0 18px; border: 1px solid var(--accent); background: transparent; color: var(--accent-ink);
+  cursor: pointer; font: 600 15px var(--font); transition: background .15s var(--ease), color .15s var(--ease); }
+.complete-btn:hover { background: var(--accent-soft); }
+.complete-btn .on, .complete.is-complete .complete-btn .off { display: none; }
+.complete.is-complete .complete-btn .on { display: inline; }
+.complete.is-complete .complete-btn { background: var(--accent); color: #f7f5ef; }
+.complete.is-complete { border-color: var(--accent); }
+
+.progress { margin: 0 0 28px; padding: 16px 18px; border: 1px solid var(--hair-2); background: var(--raised); }
+.progress-row { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.progress-label { font: 500 12px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.progress-count { font: 500 13px var(--mono); color: var(--ink); }
+.progress-bar { height: 8px; background: var(--paper-2); border: 1px solid var(--hair); overflow: hidden; }
+.progress-bar span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .5s var(--ease); }
+.progress-badge { display: flex; align-items: center; gap: 12px; margin-top: 12px; font-size: 14px; color: var(--ink-soft); }
+.progress:not(.is-complete) .progress-badge .badge-art { filter: grayscale(1); opacity: .45; }
+.progress.compact { margin: 6px 0 0; padding: 0; border: 0; background: none; }
+.progress.compact .progress-row { margin-bottom: 6px; }
+.progress.compact .progress-label { font-size: 11px; white-space: nowrap; }
+.progress.compact .progress-count { white-space: nowrap; }
+.progress.compact .progress-count { font-size: 12px; color: var(--ink-soft); }
+
+.row-done { display: none; font: 600 12px var(--mono); color: var(--accent-ink); border: 1px solid var(--accent); padding: 3px 6px; }
+.row.is-complete .row-done { display: inline-block; }
+.row.is-complete .row-num { color: var(--accent-ink); }
+
+.badges { margin: 56px 0 0; max-width: 860px; }
+.badges h2 { font-size: 28px; letter-spacing: -.02em; margin: 0 0 6px; }
+.badge-shelf { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.badge-item { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 22px 12px 18px; border: 1px solid var(--hair-2); background: var(--raised); text-align: center; }
+.badge-item:not(.earned) .badge-art { filter: grayscale(1); opacity: .35; }
+.badge-name { font-weight: 600; }
+.badge-state { font: 500 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.badge-item.earned { border-color: var(--accent); }
+.badge-item.earned .badge-state { color: var(--accent-ink); }
+
+.celebrate { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 24px; background: rgba(0, 0, 0, .6); }
+.celebrate[hidden] { display: none; }
+.celebrate-card { width: 100%; max-width: 380px; padding: 32px 28px 26px; text-align: center; background: var(--raised); border: 1px solid var(--hair-2); }
+.celebrate-badge { display: flex; justify-content: center; margin-bottom: 16px; animation: badge-pop .6s cubic-bezier(.2, 1.4, .4, 1) both; }
+.celebrate-card h2 { margin: 0 0 6px; font-size: 26px; letter-spacing: -.02em; }
+.celebrate-text { margin: 0 0 22px; color: var(--ink-soft); }
+@keyframes badge-pop { from { transform: scale(.3) rotate(-12deg); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .celebrate-badge { animation: none; } }
+@media (max-width: 560px) { .badge-shelf { grid-template-columns: 1fr; } .complete-btn { width: 100%; } }

@@ -34,6 +34,10 @@ python3 tools/build.py
 
 Preview locally with `python3 -m http.server` and open http://localhost:8000.
 
+## Progress and badges
+
+UX Lectures, UI Lectures and Exercises pages end with a **Mark as complete** button. Each section's contents page and the home page show progress, and finishing a whole section unlocks its badge. A lecture with parts counts as one item, complete only once the page and every part are done. Progress is saved in the student's browser (`localStorage`), so it stays on that device. The sections and badges are set in `PROGRESS` in `tools/build.py`.
+
 ## Login
 
 Every page sends visitors to `login.html` until they sign in, and the header has a Log out button. Only a SHA-256 hash of `username:password` is stored (`LOGIN_HASH` in `tools/build.py`). To change the login, generate a new hash, paste it in and rebuild; that signs everyone out:

@@ -223,3 +223,109 @@
     location.replace(logout.dataset.login);
   });
 })();
+
+// Progress: mark pages complete (saved in this browser), section progress bars, badges
+(function () {
+  var TRACKS = window.CS_PROGRESS;
+  if (!TRACKS) return;
+  var KEY = 'cs-progress', SEEN = 'cs-badges-seen';
+  function read(k) { try { return JSON.parse(localStorage.getItem(k) || '{}'); } catch (e) { return {}; } }
+  function write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  var done = read(KEY);
+
+  // A page with parts is complete only when it and all of its parts are done.
+  function itemDone(item) { return !!done[item.key] && item.children.every(function (c) { return done[c]; }); }
+  function stats(track) {
+    var items = TRACKS[track].items, n = items.filter(itemDone).length;
+    return { done: n, total: items.length, pct: Math.round(n / items.length * 100) };
+  }
+  function findItem(key) {
+    var track = key.split('/')[0], items = (TRACKS[track] || {}).items || [];
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].key === key || items[i].children.indexOf(key) !== -1) return items[i];
+    }
+    return null;
+  }
+
+  function render() {
+    // Progress panels (contents pages and home cards)
+    document.querySelectorAll('.progress[data-track]').forEach(function (el) {
+      var st = stats(el.dataset.track);
+      el.querySelector('.progress-count').textContent = el.classList.contains('compact')
+        ? st.done + ' / ' + st.total + ' · ' + st.pct + '%'
+        : st.done + ' of ' + st.total + ' complete · ' + st.pct + '%';
+      el.querySelector('.progress-bar span').style.width = st.pct + '%';
+      el.querySelector('.progress-bar').setAttribute('aria-valuenow', st.pct);
+      el.classList.toggle('is-complete', st.pct === 100);
+      var text = el.querySelector('.progress-badge-text');
+      if (text) text.textContent = st.pct === 100 ? 'Badge earned: ' + TRACKS[el.dataset.track].badge + '.'
+        : 'Finish them all to earn the ' + TRACKS[el.dataset.track].badge + ' badge.';
+    });
+    // Rows on contents pages
+    document.querySelectorAll('.row[data-key]').forEach(function (row) {
+      var item = findItem(row.dataset.key);
+      if (!item) return;
+      row.classList.toggle('is-complete', itemDone(item));
+      var pill = row.querySelector('[data-parts-of]');
+      if (pill) {
+        var n = item.children.filter(function (c) { return done[c]; }).length;
+        pill.textContent = n ? n + ' / ' + item.children.length + ' parts' : item.children.length + ' parts';
+      }
+    });
+    // Badge shelf on the home page
+    document.querySelectorAll('.badge-item[data-track]').forEach(function (el) {
+      var st = stats(el.dataset.track);
+      el.classList.toggle('earned', st.pct === 100);
+      el.querySelector('.badge-state').textContent = st.pct === 100 ? 'Earned' : st.pct + '%';
+    });
+    // The page's own button
+    var box = document.querySelector('.complete[data-key]');
+    if (box) {
+      var on = !!done[box.dataset.key];
+      box.classList.toggle('is-complete', on);
+      box.querySelector('.complete-btn').setAttribute('aria-pressed', String(on));
+      var parts = box.querySelector('[data-parts]');
+      if (parts) {
+        var item = findItem(box.dataset.key);
+        parts.textContent = item.children.filter(function (c) { return done[c]; }).length;
+      }
+    }
+  }
+
+  // Celebrate the moment a section reaches 100% (once; it re-arms if the student un-ticks something).
+  var dialog = document.getElementById('celebrate');
+  function checkBadges() {
+    var seen = read(SEEN);
+    Object.keys(TRACKS).forEach(function (track) {
+      var full = stats(track).pct === 100;
+      if (full && !seen[track] && dialog) {
+        dialog.querySelector('.celebrate-badge').innerHTML = TRACKS[track].svg;
+        dialog.querySelector('#celebrate-title').textContent = TRACKS[track].badge;
+        dialog.querySelector('.celebrate-text').textContent = TRACKS[track].done;
+        dialog.hidden = false;
+        document.getElementById('celebrate-close').focus();
+      }
+      if (full) seen[track] = 1; else delete seen[track];
+    });
+    write(SEEN, seen);
+  }
+  if (dialog) {
+    var close = function () { dialog.hidden = true; };
+    document.getElementById('celebrate-close').addEventListener('click', close);
+    dialog.addEventListener('click', function (e) { if (e.target === dialog) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  }
+
+  var box = document.querySelector('.complete[data-key]');
+  if (box) box.querySelector('.complete-btn').addEventListener('click', function () {
+    if (done[box.dataset.key]) delete done[box.dataset.key]; else done[box.dataset.key] = 1;
+    write(KEY, done);
+    render();
+    checkBadges();
+  });
+  render();
+  // Badges already earned before this feature existed shouldn't pop up out of nowhere on load.
+  var seen = read(SEEN);
+  Object.keys(TRACKS).forEach(function (t) { if (stats(t).pct === 100) seen[t] = 1; });
+  write(SEEN, seen);
+})();

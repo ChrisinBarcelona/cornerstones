@@ -76,6 +76,35 @@ TRACKS = [
          "Team Projects": "Multi-day team builds from a schema.",
      }},
 ]
+# Sections with progress tracking and a badge for finishing them. A page with sub-lessons counts as one item,
+# complete only when the page and every sub-lesson are done.
+PROGRESS = {
+    "ux": {"badge": "UX Lectures", "short": "UX", "colour": "#0891b2", "done": "You've finished every UX lecture."},
+    "ui": {"badge": "UI Lectures", "short": "UI", "colour": "#7c5cd6", "done": "You've finished every UI lecture."},
+    "exercises": {"badge": "Exercises", "short": "EX", "colour": "#e0802c", "done": "You've completed every exercise."},
+}
+
+
+def badge_svg(track, size=96):
+    b = PROGRESS[track]
+    return f"""<svg class="badge-art" viewBox="0 0 96 112" width="{size}" height="{round(size * 112 / 96)}" aria-hidden="true">
+  <path d="M30 70 18 108l16-8 10 12 8-34z" fill="{b['colour']}" opacity=".75"/><path d="M66 70l12 38-16-8-10 12-8-34z" fill="{b['colour']}" opacity=".75"/>
+  <circle cx="48" cy="46" r="40" fill="{b['colour']}"/><circle cx="48" cy="46" r="32" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2" stroke-dasharray="3 4"/>
+  <circle cx="48" cy="46" r="26" fill="#fff" fill-opacity=".16"/>
+  <text x="48" y="54" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" fill="#fff">{b['short']}</text>
+</svg>"""
+
+
+def progress_panel(track, compact=False):
+    """Filled in by app.js from the student's saved progress."""
+    b = PROGRESS[track]
+    return f"""<div class="progress{' compact' if compact else ''}" data-track="{track}">
+  <div class="progress-row"><span class="progress-label">Your progress</span><span class="progress-count">–</span></div>
+  <div class="progress-bar" role="progressbar" aria-label="{b['badge']} progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+  {'' if compact else f'<div class="progress-badge">{badge_svg(track, 44)}<span class="progress-badge-text">Finish them all to earn the {b["badge"]} badge.</span></div>'}
+</div>"""
+
+
 # The suggested route on the home page: (step, why, section id, page slug).
 ROUTE = [
     ("Understand UX", "Start with the foundations: where UX comes from and what it really is.", "ux", "design-origins"),
@@ -244,6 +273,11 @@ def page(title, description, body, depth, active):
 </header>
 {body}
 <footer class="foot"><div class="foot-inner"><span>{SITE} · {TAGLINE}</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<div class="celebrate" id="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="celebrate-title">
+  <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
+  <h2 id="celebrate-title"></h2><p class="celebrate-text"></p><button type="button" class="login-submit" id="celebrate-close">Nice!</button></div>
+</div>
+<script src="{prefix}assets/progress-data.js"></script>
 <script src="{prefix}assets/app.js"></script>
 </body>
 </html>
@@ -532,6 +566,16 @@ def build_track(t, data):
         toc_mobile = (f'<details class="toc-mobile"><summary>On this page</summary><ol class="toc">{toc_html}</ol></details>\n'
                       if toc_html else "")
         body = quick + toc_mobile + body
+        if t["id"] in PROGRESS:
+            noun_page = "exercise" if t["id"] == "exercises" else ("part" if parent else "lecture")
+            parts = (f'<span class="complete-parts">This lecture has {len(p["children"])} parts. It counts as complete once '
+                     f'you\'ve finished this page and all {len(p["children"])} parts: <b data-parts>0</b> of {len(p["children"])} done.</span>'
+                     if p["children"] else "")
+            body += f"""
+<section class="complete" data-key="{t['id']}/{p['slug']}">
+  <div class="complete-text"><b>Finished this {noun_page}?</b>{parts}</div>
+  <button type="button" class="complete-btn" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
+</section>"""
 
         rel = [lookup(k) for k in related.get(f'{t["id"]}/{p["slug"]}', [])]
         if rel:
@@ -547,7 +591,7 @@ def build_track(t, data):
             return f'<a class="pager {cls}" href="{q["slug"]}.html"><span class="pager-label">{label}</span><span class="pager-title">{esc(q["title"])}</span></a>'
 
         body_html = f"""
-<main class="lecture track-{t['id']}">
+<main class="lecture track-{t['id']}" data-key="{t['id']}/{p['slug']}">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb">{' <span class="sep">/</span> '.join(crumbs)}</nav>
     <header class="lecture-head">
@@ -599,10 +643,10 @@ def build_track(t, data):
             stats = f'<span>{meter(l["difficulty"]) if l["difficulty"] else "<span class=tag>Project</span>"}</span>'
         else:
             stats = ""
-        rows.append(f"""<li class="row{' no-stats' if not stats else ''}" data-cat="{esc(l['category'])}"{parent_attr} data-search="{esc(search)}">
+        rows.append(f"""<li class="row{' no-stats' if not stats else ''}" data-key="{t['id']}/{l['slug']}" data-cat="{esc(l['category'])}"{parent_attr} data-search="{esc(search)}">
   <span class="row-num">{l['number']}</span>
   <div class="row-body">
-    <div class="row-head"><a class="row-title" href="{t['out']}/{l['slug']}.html">{esc(l['title'])}</a>{f'<span class="pill">{len(l["children"])} parts</span>' if l["children"] else ''}</div>
+    <div class="row-head"><a class="row-title" href="{t['out']}/{l['slug']}.html">{esc(l['title'])}</a>{f'<span class="pill" data-parts-of="{len(l["children"])}">{len(l["children"])} parts</span>' if l["children"] else ''}<span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">{esc(l['description'])}</p>
     {subs}
   </div>
@@ -634,6 +678,7 @@ def build_track(t, data):
       </div>
       <a class="hero-link" href="{t['out']}/{lectures[0]['slug']}.html">Start with {esc(lectures[0]['title'])} {ICON_ARROW}</a>
     </header>
+    {progress_panel(t['id']) if t['id'] in PROGRESS else ''}
     <div class="layout">
       <aside class="sidebar">
         <div class="side-label">Category</div>
@@ -678,6 +723,7 @@ def build_home(data):
   <span class="section-name">{t['label']}</span>
   <span class="section-blurb">{esc(t['blurb'])}</span>
   <span class="section-cats">{cats}</span>
+  {progress_panel(t['id'], compact=True) if t['id'] in PROGRESS else ''}
   <span class="section-go">Open {ICON_ARROW}</span>
 </a>""")
     steps = []
@@ -692,6 +738,8 @@ def build_home(data):
 </li>""")
     index = [{"t": p["title"], "d": p["description"], "s": t["label"], "u": f"{t['out']}/{p['slug']}.html"}
              for t in TRACKS for p in data[t["id"]]["every"]]
+    badges = "".join(f"""<li class="badge-item" data-track="{k}">{badge_svg(k, 72)}
+  <span class="badge-name">{b['badge']}</span><span class="badge-state">Locked</span></li>""" for k, b in PROGRESS.items())
     index_json = json.dumps(index, ensure_ascii=False).replace("</", "<\\/")
     body = f"""
 <main class="home course">
@@ -706,6 +754,11 @@ def build_home(data):
     </header>
     <ul class="cards search-results" id="results" hidden></ul>
     <section class="sections" aria-label="Sections">{''.join(cards)}</section>
+    <section class="badges" aria-labelledby="badges-title">
+      <h2 id="badges-title">Your badges</h2>
+      <p class="route-intro">Finish every page in a section to earn its badge. Lectures with parts count once you've done all of their parts. Progress is saved in this browser.</p>
+      <ul class="badge-shelf">{badges}</ul>
+    </section>
     <section class="route">
       <h2>Suggested route</h2>
       <p class="route-intro">Not sure where to start? This is one way through. Dip into UX Methods whenever your sprint needs one.</p>
@@ -870,6 +923,12 @@ def main():
         build_track(t, data)
     build_home(data)
     build_timetable(data)
+    tracks = {k: {"badge": b["badge"], "done": b["done"], "svg": badge_svg(k, 120),
+                  "items": [{"key": f"{k}/{l['slug']}", "children": [f"{k}/{c}" for c in l["children"]]}
+                            for l in data[k]["lectures"]]} for k, b in PROGRESS.items()}
+    (ROOT / "assets" / "progress-data.js").write_text(
+        "// Generated by tools/build.py: which pages make up each section's progress.\nwindow.CS_PROGRESS = "
+        + json.dumps(tracks, separators=(",", ":")) + ";\n", encoding="utf-8")
     build_login()
 
 
