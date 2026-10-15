@@ -208,6 +208,33 @@ RELATED = [
 SUMMARIES = {k: v for k, v in json.loads((CONTENT / "summaries.json").read_text(encoding="utf-8")).items()
              if not k.startswith("_")}
 
+# A line icon for each Figma lesson (24px grid, 2px stroke, currentColor), shown on the Figma cards.
+FIGMA_ICONS = {
+    "choose-your-frame": '<rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 18.5h3"/><path d="M3 6V3h3M21 6V3h-3M3 18v3h3M21 18v3h-3"/>',
+    "starting-in-figma": '<path d="M12 20l7-7-3-3-7 7z"/><path d="M16 10l-1.5-5.5L4 2l2.5 10.5L12 14"/><path d="M4 2l6.5 6.5"/><circle cx="11.5" cy="9.5" r="1.5"/>',
+    "beginners-guide-to-grids": '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18"/>',
+    "beginners-guide-to-nesting": '<rect x="3" y="3" width="18" height="18" rx="2.5"/><rect x="7.5" y="7.5" width="9" height="9" rx="1.5"/>',
+    "beginners-guide-auto-layout": '<rect x="4" y="3" width="16" height="4.5" rx="1.5"/><rect x="4" y="16.5" width="16" height="4.5" rx="1.5"/><path d="M12 9.5v5M10 11l2-1.5 2 1.5M10 13l2 1.5 2-1.5"/>',
+    "beginners-guide-to-8-point-grid-system": '<circle cx="5" cy="5" r="1.3"/><circle cx="12" cy="5" r="1.3"/><circle cx="19" cy="5" r="1.3"/><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/><circle cx="5" cy="19" r="1.3"/><circle cx="12" cy="19" r="1.3"/><circle cx="19" cy="19" r="1.3"/>',
+    "beginners-guide-to-components": '<path d="M12 2.5l3 3-3 3-3-3z"/><path d="M12 15.5l3 3-3 3-3-3z"/><path d="M5.5 9l3 3-3 3-3-3z"/><path d="M18.5 9l3 3-3 3-3-3z"/>',
+    "navbar": '<rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 16h18"/><circle cx="7.5" cy="18.5" r=".8"/><circle cx="12" cy="18.5" r=".8"/><circle cx="16.5" cy="18.5" r=".8"/>',
+    "dynamic-buttons-part-one": '<rect x="2.5" y="6" width="16" height="7" rx="3.5"/><path d="M14 14l1.5 7 2-3 3 2.5 1-1.5-3-2.5 3-1.5z"/>',
+    "dynamic-buttons-part-deux": '<rect x="3" y="3" width="18" height="5" rx="2.5"/><rect x="3" y="9.5" width="18" height="5" rx="2.5"/><rect x="3" y="16" width="18" height="5" rx="2.5"/>',
+    "color-variables": '<path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 2-2 0-1.5-1.5-2-1.5-3.5S13.5 13 15 13h2.5c2 0 3.5-1.5 3.5-3.5C21 6 17 3 12 3z"/><circle cx="7.5" cy="11.5" r="1.2"/><circle cx="10" cy="7.5" r="1.2"/><circle cx="15" cy="7.5" r="1.2"/>',
+    "number-variables": '<rect x="2.5" y="8" width="19" height="8" rx="1.5"/><path d="M6.5 8v3M10 8v2M13.5 8v3M17 8v2"/>',
+    "string-variables": '<path d="M4 7V5h11v2M9.5 5v14M7.5 19h4"/><path d="M15 12h6M18 12v7M16.5 19h3"/>',
+    "variable-modes": '<rect x="2.5" y="7" width="19" height="10" rx="5"/><circle cx="16.5" cy="12" r="3.2"/><path d="M6.5 10.5v3M5 12h3"/>',
+}
+
+
+def figma_icon(slug, size=24):
+    paths = FIGMA_ICONS.get(slug)
+    if not paths:
+        return ""
+    return (f'<svg viewBox="0 0 24 24" width="{size}" height="{size}" fill="none" stroke="currentColor" stroke-width="1.8" '
+            f'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{paths}</svg>')
+
+
 # Quick definitions for the Definition box on UX method pages (edit content/definitions.json).
 DEFINITIONS = {k: v for k, v in json.loads((CONTENT / "definitions.json").read_text(encoding="utf-8")).items()
                if not k.startswith("_")}
@@ -681,7 +708,7 @@ def build_track(t, data):
         else:
             stats = ""
         rows.append(f"""<li class="row{' no-stats' if not stats else ''}" data-key="{t['id']}/{l['slug']}" data-cat="{esc(l['category'])}"{parent_attr} data-search="{esc(search)}">
-  <span class="row-num">{l['number']}</span>
+  {f'<span class="row-icon" title="Lesson {l["number"]}">{figma_icon(l["slug"])}</span>' if t["id"] == "figma" and l["slug"] in FIGMA_ICONS else f'<span class="row-num">{l["number"]}</span>'}
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="{t['out']}/{l['slug']}.html">{esc(l['title'])}</a>{f'<span class="pill" data-parts-of="{len(l["children"])}">{len(l["children"])} parts</span>' if l["children"] else ''}<span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">{esc(l['description'])}</p>

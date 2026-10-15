@@ -423,3 +423,16 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
   .rail .definition { display: none; }
   .rail-box { background: none; padding: 0; }
 }
+
+/* Figma lessons: an icon tile in place of the number */
+.t-figma .row, .t-figma .row.no-stats { grid-template-columns: 52px minmax(0, 1fr); align-items: start; }
+.row-icon {
+  display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px;
+  background: color-mix(in srgb, var(--c-figma) 14%, var(--raised)); color: var(--c-figma-text);
+  transition: background .15s var(--ease), color .15s var(--ease);
+}
+.row:hover .row-icon { background: var(--c-figma); color: #fff; }
+.row.is-complete .row-icon { background: var(--c-figma); color: #fff; }
+.rows.grid .row-icon { width: 56px; height: 56px; border-radius: 16px; margin-bottom: 6px; }
+.rows.grid .row-icon svg { width: 28px; height: 28px; }
+@media (max-width: 860px) { .t-figma .row, .t-figma .row.no-stats { grid-template-columns: 48px minmax(0, 1fr); } .row-icon { width: 40px; height: 40px; } }
