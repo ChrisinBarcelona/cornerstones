@@ -2,6 +2,14 @@
   "categories": [],
   "lectures": [
     {
+      "slug": "desk-research",
+      "title": "Desk Research",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Discovery"
+    },
+    {
       "slug": "site-visit",
       "title": "Site Visit",
       "parent": null,

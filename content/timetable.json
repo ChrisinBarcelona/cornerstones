@@ -116,7 +116,8 @@
         {
           "activities": [
             {
-              "label": "Inspiration"
+              "label": "Inspiration",
+              "link": "methods/mood-board"
             },
             {
               "label": "Moodboard",
@@ -497,7 +498,8 @@
               "link": "methods/process-narrative"
             },
             {
-              "label": "Service design and lean startup projects"
+              "label": "Service design and lean startup projects",
+              "link": "methods/cataloguing-artifacts"
             },
             {
               "label": "Sprint retrospective",
@@ -548,7 +550,8 @@
         {
           "activities": [
             {
-              "label": "Final case study polish"
+              "label": "Final case study polish",
+              "link": "methods/process-narrative"
             },
             {
               "label": "Multi-project portfolio submission"
@@ -596,11 +599,24 @@
         {
           "activities": [
             {
-              "label": "Desk research"
+              "label": "Desk research",
+              "link": "methods/desk-research"
             },
             {
               "label": "Problem definition",
               "link": "methods/problem-statement"
+            },
+            {
+              "label": "Crazy 8's",
+              "link": "methods/crazy-8s"
+            },
+            {
+              "label": "Crazy 8's with AI",
+              "link": "methods/crazy-8s-with-ai"
+            },
+            {
+              "label": "Converge / diverge",
+              "link": "methods/converge-diverge"
             }
           ]
         },
@@ -621,18 +637,6 @@
             {
               "label": "Usability testing",
               "link": "methods/usability-test"
-            },
-            {
-              "label": "Crazy 8's",
-              "link": "methods/crazy-8s"
-            },
-            {
-              "label": "Crazy 8's with AI",
-              "link": "methods/crazy-8s-with-ai"
-            },
-            {
-              "label": "Converge / diverge",
-              "link": "methods/converge-diverge"
             }
           ]
         },
@@ -685,7 +689,8 @@
         {
           "activities": [
             {
-              "label": "Field research"
+              "label": "Field research",
+              "link": "methods/site-visit"
             },
             {
               "label": "Primary data collection",

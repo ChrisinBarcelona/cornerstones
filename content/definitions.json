@@ -36,6 +36,7 @@
   "methods/notetaker-format": {"q": "What is the Notetaker Format?", "a": "The role of the second person in a test session, who silently records what the participant says and does, and the non-verbal signs of what they think and feel."},
   "methods/design-iteration": {"q": "What is Design Iteration?", "a": "Turning what you learned in testing into a few targeted design changes, shown as before-and-after screens and backed by evidence."},
 
+  "methods/desk-research": {"q": "What is Desk Research?", "a": "Also called secondary research: gathering and critically reviewing existing studies, reports and data about a problem before starting your own research, to focus the scope and avoid starting from scratch."},
   "methods/site-visit": {"q": "What is a Site Visit?", "a": "A short field visit to the place where your users live or work, to observe the environment, tools, workarounds and emotions first hand, before designing anything."},
   "methods/affinity-mapping": {"q": "What is Affinity Mapping?", "a": "A team method for organising research findings, one per sticky note, into clusters of related notes, then naming those clusters as themes and prioritising them."},
   "methods/data-synthesis-with-ai": {"q": "What is Data Synthesis with AI?", "a": "Using AI as an assistant for the first pass of research analysis, transcribing, summarising and suggesting codes, while the designer verifies every result and writes the final themes."},

@@ -144,7 +144,7 @@ ORDER = {
                       "style-guides", "icons", "paper-wireframes"],
     },
     "methods": {
-        "Discovery": ["lean-ux-canvas", "long-term-goal", "research-goal", "research-questions", "site-visit",
+        "Discovery": ["lean-ux-canvas", "long-term-goal", "research-goal", "research-questions", "desk-research", "site-visit",
                       "user-survey", "user-interview", "discovery-summary"],
         "Define": ["affinity-mapping", "data-synthesis-with-ai", "problem-statement", "user-persona",
                    "competitive-analysis", "business-model-canvas", "wicked-problem-mapping", "how-might-we",
@@ -217,6 +217,8 @@ RELATED = [
     ("methods/paper-wireframes", "methods/mid-fi"),
     ("methods/mid-fi", "methods/hi-fi"),
     ("methods/site-visit", "methods/research-questions"),
+    ("methods/desk-research", "methods/site-visit"),
+    ("methods/desk-research", "methods/wicked-problem-mapping"),
     ("methods/site-visit", "ux/non-directive-interview-technique"),
     ("methods/affinity-mapping", "methods/data-synthesis-with-ai"),
     ("methods/affinity-mapping", "methods/discovery-summary"),
