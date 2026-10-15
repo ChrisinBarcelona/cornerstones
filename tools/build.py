@@ -26,11 +26,11 @@ CONTENT = ROOT / "content"
 SITE = "Cornerstones"
 SCHOOL = "Barcelona Code School"
 # The logo mark: four tiles in the section colours; the top-left "cornerstone" is a quarter circle.
-LOGO_MARK = ('<svg class="logo-mark" viewBox="0 0 40 40" width="38" height="38" aria-hidden="true">'
-             '<path d="M0 19A19 19 0 0 1 19 0V19Z" fill="#0072e3"/>'
-             '<rect x="21" width="19" height="19" rx="5" fill="#ffb200"/>'
-             '<rect y="21" width="19" height="19" rx="5" fill="#ab54f7"/>'
-             '<rect x="21" y="21" width="19" height="19" rx="5" fill="#00aa3c"/></svg>')
+LOGO_MARK = ('<svg class="logo-mark" viewBox="38 40 739 739" width="38" height="38" aria-hidden="true">'
+             '<path d="M221 90H590L777 409H38Z" fill="#004ecd"/>'
+             '<path d="M38 409H777L590 728H221Z" fill="#0062ff"/>'
+             '<path d="M374 254H688L777 409H286Z" fill="#002b71"/>'
+             '<path d="M286 409H777L688 564H374Z" fill="#003ea2"/></svg>')
 FAVICON = "data:image/svg+xml," + __import__("urllib.parse").parse.quote(
     LOGO_MARK.replace('class="logo-mark" ', 'xmlns="http://www.w3.org/2000/svg" ').replace(' aria-hidden="true"', ''))
 LOGO = (f'{LOGO_MARK}<span class="logo-text"><span class="logo-name">Cornerstones</span>'
@@ -403,6 +403,10 @@ def render_markdown(track, slug, text, titles):
     # Attachments (zip, pdf…) live next to the page's markdown, not next to the HTML.
     body = re.sub(r'href="(?![a-z]+:|#|\.\./)([^"/]+\.(?!html")[a-z0-9]+)"', rf'href="../content/{track}/{slug}/\1" download', body)
     body = IMG_P_RE.sub(r'<figure class="media">\1</figure>', body)
+    # A stitched, scrolling screenshot (name.tall.webp) scrolls inside a phone-sized frame.
+    body = re.sub(r'<figure class="media">(<img [^>]*src="[^"]+\.tall\.[a-z]+"[^>]*>)</figure>',
+                  r'<figure class="media tall"><div class="tall-frame" tabindex="0">\1</div>'
+                  r'<figcaption>Scroll inside the screen to see all of it</figcaption></figure>', body)
     body = YOUTUBE_RE.sub(
         lambda m: f'<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/{m.group(2)}" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>',
         body)

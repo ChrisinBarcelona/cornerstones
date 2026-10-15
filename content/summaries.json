@@ -66,7 +66,7 @@
   "exercises/make-an-ai-interface": "Design an AI assistant interface that feels smart and human but still matches what users expect.",
   "exercises/product-card": "Design a product card that showcases a wallpaper in an online shop or magazine.",
   "exercises/ux-x-ai": "Use AI tools to help you design, prototype and test an app idea in one afternoon.",
-  "exercises/airbnb-replica-challenge": "Recreate four Airbnb screens in Figma, from the search pill to the sticky Reserve bar: by hand first, then with Auto Layout and components.",
+  "exercises/airbnb-replica-challenge": "Trace seven real Airbnb screens in Figma, from the first notification prompt to Confirm and pay: by hand first, then with Auto Layout and components.",
   "exercises/glovo-replica-challenge": "Recreate the Glovo app screen by screen in Figma: by hand first, then rebuilt with Auto Layout and components.",
   "exercises/youtube-challenge": "Recreate the YouTube app screen by screen in Figma: by hand first, then rebuilt with Auto Layout and components.",
   "exercises/stage-play": "As a team, build the Stage Play app in Figma from a component schema, using master components, nesting, auto layout and properties.",

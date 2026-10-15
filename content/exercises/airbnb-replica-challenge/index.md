@@ -32,31 +32,53 @@ As the saying goes, "practice makes perfect," and this lesson exemplifies that p
 
 ## The Screens
 
-Start with these four screens. Each reference below names the parts to rebuild; take your own screenshots in the Airbnb app (iPhone, light mode) to match them pixel for pixel.
+Seven real screens from the Airbnb iPhone app, in the order you meet them when you book a stay. Long pages have been stitched into one tall screenshot, so you can trace each page in one go.
 
-### 1. Explore
+**How to trace:** in Figma, create an **iPhone 16** frame (393 × 852). Drag a screenshot in and scale it to **393 px wide**: a single screen then fits the frame exactly. For a stitched screen, make the frame as tall as the image. Lock the screenshot, lower its opacity to about 40% and build on top of it. Hide it when you're done and compare.
 
-The home feed: a search pill, a row of category tabs, large photo cards and the tab bar.
+### 1. Turn on notifications
 
-![Explore screen: search pill, category tabs, listing card, listing details and tab bar](explore.svg)
+A bottom sheet over the dimmed Explore screen: a close button, a bold centred title, a toggle row in a grey card and one full-width black button.
 
-### 2. Search
+![Turn on notifications bottom sheet over the Explore screen](1-notifications.webp)
 
-The search panel that opens from the pill: one expanded step (Where), the collapsed steps below it, and a footer with the main action.
+### 2. Cookie consent
 
-![Search panel: expanded Where step, region tiles, collapsed When and Who steps, and footer actions](search.svg)
+A full-screen text page: a large left-aligned heading, a paragraph with an underlined link, and three stacked actions at the bottom.
 
-### 3. Listing
+![Cookie consent screen with Accept all, Only necessary and Manage preferences](2-cookies.webp)
 
-A listing's detail page: a full-bleed photo, a sheet that slides over it, highlights, the host and amenities, and a sticky Reserve bar.
+### 3. Explore
 
-![Listing page: photo gallery, title block, highlights row, host row, amenities and sticky reserve bar](listing.svg)
+The home feed: the search pill, category chips with 3D icons, rows of listing cards that scroll sideways, each with a heading and an arrow button, and the tab bar.
 
-### 4. Wishlists
+![Explore screen with search pill, category chips, rows of listing cards and the tab bar](3-explore.webp)
 
-Saved collections in a two-column grid of photo mosaics.
+### 4. Listing (stitched)
 
-![Wishlists screen: title, two-column grid of collection cards with photo mosaics, and tab bar](wishlists.svg)
+The full listing page, top to bottom: the photo with round buttons and a counter, the sheet that overlaps it, highlights, host, amenities, the map, reviews, the host card and Things to know, with the sticky Reserve bar at the bottom.
+
+![Full listing page, stitched from top to bottom](4-listing.tall.webp)
+
+### 5. Review and continue
+
+Step one of checkout: a summary card with a thumbnail, rows with grey Change buttons, a payment choice with radio buttons, a three-part progress bar and the Next button.
+
+![Review and continue screen](5-review-and-continue.webp)
+
+### 6. Add travel insurance
+
+Step two: a single grey option card with a checkbox, lots of white space and the same progress bar and Next button.
+
+![Add travel insurance screen](6-travel-insurance.webp)
+
+### 7. Confirm and pay (stitched)
+
+The final step: the summary card again, outlined rows with chevrons, payment logos, the insurance option, price details and the pink Confirm and pay button.
+
+![Confirm and pay screen, stitched from top to bottom](7-confirm-and-pay.tall.webp)
+
+*Screenshots are for teaching only. The card number has been blurred.*
 
 ## The Journey Ahead: Manual Replication (Step 1)
 

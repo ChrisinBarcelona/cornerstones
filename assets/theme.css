@@ -478,3 +478,12 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .rows.grid .row-icon { width: 56px; height: 56px; border-radius: 16px; margin-bottom: 6px; }
 .rows.grid .row-icon svg { width: 28px; height: 28px; }
 @media (max-width: 860px) { .t-figma .row, .t-figma .row.no-stats { grid-template-columns: 48px minmax(0, 1fr); } .row-icon { width: 40px; height: 40px; } }
+
+/* Stitched phone screenshots: shown at the same size as a single screen, scrolling inside. */
+.prose figure.media.tall { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.prose .tall-frame {
+  width: min(calc(80vh * 923 / 2000), 100%); height: 80vh; overflow-y: auto; overscroll-behavior: contain;
+  border-radius: var(--r-md);
+}
+.prose figure.media.tall img { width: 100%; height: auto; max-height: none; border-radius: 0; }
+.prose figure.media.tall figcaption { font-size: 13px; opacity: .7; }
