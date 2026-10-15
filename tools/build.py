@@ -11,6 +11,7 @@ Usage:
     pip install markdown
     python3 tools/build.py
 """
+import hashlib
 import html
 import json
 import re
@@ -22,6 +23,7 @@ import markdown
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
 SITE = "Cornerstones"
+ASSET_V = ""  # set in main(): a content hash appended to asset URLs so browsers never mix old and new files
 TAGLINE = "UX & UI learning resource for Barcelona Code School"
 
 # Course login. Only a SHA-256 hash of "username:password" is stored, never the password itself.
@@ -230,6 +232,7 @@ def meter(level, out_of=5):
             + "".join(f'<i class="{"on" if i < level else ""}"></i>' for i in range(out_of)) + "</span>")
 
 
+ICON_TRACKER = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg>'
 ICON_LOGOUT = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg>'
 
 
@@ -257,7 +260,7 @@ def page(title, description, body, depth, active):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="{prefix}assets/style.css">
+<link rel="stylesheet" href="{prefix}assets/style.css?v={ASSET_V}">
 </head>
 <body>
 <header class="nav">
@@ -267,11 +270,13 @@ def page(title, description, body, depth, active):
       <span class="brand-text"><span class="brand-name">{SITE.upper()}</span><span class="brand-sub">UX &amp; UI at Barcelona Code School</span></span>
     </a>
     <nav class="nav-links">{links}<a href="{prefix}timetable.html"{" aria-current=page" if active == "timetable" else ""}>Timetable</a></nav>
+    <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker">{ICON_TRACKER}</button>
     <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme">{ICON_SUN}</button>
     <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="{prefix}login.html">{ICON_LOGOUT}<span>Log out</span></button>
   </div>
   <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
-  <div class="course-row"><a class="course-label" href="{prefix}index.html#badges-title">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></a></div>
+  <div class="course-row"><a class="course-label" href="{prefix}index.html#badges-title">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></a>
+    <a class="mini-badges" id="mini-badges" href="{prefix}index.html#badges-title" aria-label="Your badges"></a></div>
 </header>
 {body}
 <footer class="foot"><div class="foot-inner"><span>{SITE} · {TAGLINE}</span><span class="mono">Notes by Chris Kelly</span></div></footer>
@@ -279,8 +284,8 @@ def page(title, description, body, depth, active):
   <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
   <h2 id="celebrate-title"></h2><p class="celebrate-text"></p><button type="button" class="login-submit" id="celebrate-close">Nice!</button></div>
 </div>
-<script src="{prefix}assets/progress-data.js"></script>
-<script src="{prefix}assets/app.js"></script>
+<script src="{prefix}assets/progress-data.js?v={ASSET_V}"></script>
+<script src="{prefix}assets/app.js?v={ASSET_V}"></script>
 </body>
 </html>
 """
@@ -890,7 +895,7 @@ if(localStorage.getItem('cs-auth')==='{LOGIN_HASH}')location.replace('index.html
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v={ASSET_V}">
 </head>
 <body class="login-page">
 <main class="login">
@@ -912,7 +917,7 @@ if(localStorage.getItem('cs-auth')==='{LOGIN_HASH}')location.replace('index.html
     <p class="login-help">Don't have the login? Ask your teacher at Barcelona Code School.</p>
   </form>
 </main>
-<script src="assets/app.js"></script>
+<script src="assets/app.js?v={ASSET_V}"></script>
 </body>
 </html>
 """
@@ -921,18 +926,31 @@ if(localStorage.getItem('cs-auth')==='{LOGIN_HASH}')location.replace('index.html
     print("login.html")
 
 
+def write_progress_data(data):
+    def entry(k, page):
+        return {"key": f"{k}/{page['slug']}", "title": page["title"], "url": f"{TRACK[k]['out']}/{page['slug']}.html"}
+    tracks = {k: {"badge": b["badge"], "done": b["done"], "short": b["short"], "label": TRACK[k]["label"],
+                  "index": TRACK[k]["index"], "svg": badge_svg(k, 120),
+                  "items": [{**entry(k, l), "category": l["category"],
+                             "children": [{**entry(k, data[k]["by_slug"][c]), "title": short(data[k]["by_slug"][c]["title"])}
+                                          for c in l["children"]]}
+                            for l in data[k]["lectures"]]} for k, b in PROGRESS.items()}
+    (ROOT / "assets" / "progress-data.js").write_text(
+        "// Generated by tools/build.py: the pages that make up each section's progress, for the tracker and badges.\n"
+        "window.CS_ROOT = document.currentScript.src.replace(/assets\\/progress-data\\.js.*$/, '');\n"
+        "window.CS_PROGRESS = " + json.dumps(tracks, ensure_ascii=False, separators=(",", ":")) + ";\n", encoding="utf-8")
+
+
 def main():
+    global ASSET_V
     data = load()
+    write_progress_data(data)
+    ASSET_V = hashlib.sha1(b"".join((ROOT / "assets" / f).read_bytes()
+                                    for f in ("style.css", "app.js", "progress-data.js"))).hexdigest()[:10]
     for t in TRACKS:
         build_track(t, data)
     build_home(data)
     build_timetable(data)
-    tracks = {k: {"badge": b["badge"], "done": b["done"], "svg": badge_svg(k, 120),
-                  "items": [{"key": f"{k}/{l['slug']}", "children": [f"{k}/{c}" for c in l["children"]]}
-                            for l in data[k]["lectures"]]} for k, b in PROGRESS.items()}
-    (ROOT / "assets" / "progress-data.js").write_text(
-        "// Generated by tools/build.py: which pages make up each section's progress.\nwindow.CS_PROGRESS = "
-        + json.dumps(tracks, separators=(",", ":")) + ";\n", encoding="utf-8")
     build_login()
 
 

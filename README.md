@@ -36,7 +36,7 @@ Preview locally with `python3 -m http.server` and open http://localhost:8000.
 
 ## Progress and badges
 
-UX Lectures, UI Lectures and Exercises pages end with a **Mark as complete** button. Each section's contents page and the home page show progress, and finishing a whole section unlocks its badge. A lecture with parts counts as one item, complete only once the page and every part are done. Progress is saved in the student's browser (`localStorage`), so it stays on that device. The sections and badges are set in `PROGRESS` in `tools/build.py`.
+UX Lectures, UI Lectures and Exercises pages end with a **Mark as complete** button. Each section's contents page and the home page show progress, and finishing a whole section unlocks its badge. A lecture with parts counts as one item, complete only once the page and every part are done. Every ticked page moves the bars along, so a lecture with parts gives partial credit as its parts are done. The header shows overall course progress and the three badges on every page, and the checklist button in the header opens a tracker sidebar listing every lecture, part and exercise, where pages can be ticked or unticked. Progress is saved in the student's browser (`localStorage`), so it stays on that device. The sections and badges are set in `PROGRESS` in `tools/build.py`.
 
 ## Login
 

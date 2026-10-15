@@ -224,31 +224,56 @@
   });
 })();
 
-// Progress: mark pages complete (saved in this browser), section progress bars, badges
+// Progress: mark pages complete (saved in this browser), progress bars, badges and the tracker sidebar
 (function () {
   var TRACKS = window.CS_PROGRESS;
   if (!TRACKS) return;
-  var KEY = 'cs-progress', SEEN = 'cs-badges-seen';
+  var ROOT = window.CS_ROOT || '';
+  var KEY = 'cs-progress', SEEN = 'cs-badges-seen', OPEN = 'cs-tracker-open';
   function read(k) { try { return JSON.parse(localStorage.getItem(k) || '{}'); } catch (e) { return {}; } }
   function write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   var done = read(KEY);
 
-  // A page with parts is complete only when it and all of its parts are done.
-  function itemDone(item) { return !!done[item.key] && item.children.every(function (c) { return done[c]; }); }
+  // A page with parts is complete only when it and all of its parts are done…
+  function partsDone(item) { return item.children.filter(function (c) { return done[c.key]; }).length; }
+  function itemDone(item) { return !!done[item.key] && partsDone(item) === item.children.length; }
+  // …but every ticked page still moves the bar along.
+  function itemShare(item) { return ((done[item.key] ? 1 : 0) + partsDone(item)) / (1 + item.children.length); }
+  // 100% only when everything is done; any progress at all shows at least 1%.
+  function percent(part, whole, full) {
+    if (full) return 100;
+    if (!part) return 0;
+    return Math.max(1, Math.min(99, Math.round(part / whole * 100)));
+  }
   function stats(track) {
-    var items = TRACKS[track].items, n = items.filter(itemDone).length;
-    return { done: n, total: items.length, pct: Math.round(n / items.length * 100) };
+    var items = TRACKS[track].items, share = 0, n = 0;
+    items.forEach(function (i) { share += itemShare(i); if (itemDone(i)) n++; });
+    var full = n === items.length;
+    return { done: n, total: items.length, share: share, pct: percent(share, items.length, full), full: full };
+  }
+  function courseStats() {
+    var share = 0, all = 0, full = true;
+    Object.keys(TRACKS).forEach(function (t) { var st = stats(t); share += st.share; all += st.total; full = full && st.full; });
+    return percent(share, all, full);
   }
   function findItem(key) {
-    var track = key.split('/')[0], items = (TRACKS[track] || {}).items || [];
+    var items = (TRACKS[key.split('/')[0]] || {}).items || [];
     for (var i = 0; i < items.length; i++) {
-      if (items[i].key === key || items[i].children.indexOf(key) !== -1) return items[i];
+      if (items[i].key === key || items[i].children.some(function (c) { return c.key === key; })) return items[i];
     }
     return null;
   }
+  function toggle(key, on) {
+    if (on === undefined) on = !done[key];
+    if (on) done[key] = 1; else delete done[key];
+    write(KEY, done);
+    render();
+    checkBadges();
+  }
 
   function render() {
-    // Progress panels (contents pages and home cards)
+    // Section panels (contents pages) and section cards (home)
     document.querySelectorAll('.progress[data-track]').forEach(function (el) {
       var st = stats(el.dataset.track);
       el.querySelector('.progress-count').textContent = el.classList.contains('compact')
@@ -256,9 +281,9 @@
         : st.done + ' of ' + st.total + ' complete · ' + st.pct + '%';
       el.querySelector('.progress-bar span').style.width = st.pct + '%';
       el.querySelector('.progress-bar').setAttribute('aria-valuenow', st.pct);
-      el.classList.toggle('is-complete', st.pct === 100);
+      el.classList.toggle('is-complete', st.full);
       var text = el.querySelector('.progress-badge-text');
-      if (text) text.textContent = st.pct === 100 ? 'Badge earned: ' + TRACKS[el.dataset.track].badge + '.'
+      if (text) text.textContent = st.full ? 'Badge earned: ' + TRACKS[el.dataset.track].badge + '.'
         : 'Finish them all to earn the ' + TRACKS[el.dataset.track].badge + ' badge.';
     });
     // Rows on contents pages
@@ -268,55 +293,148 @@
       row.classList.toggle('is-complete', itemDone(item));
       var pill = row.querySelector('[data-parts-of]');
       if (pill) {
-        var n = item.children.filter(function (c) { return done[c]; }).length;
+        var n = partsDone(item);
         pill.textContent = n ? n + ' / ' + item.children.length + ' parts' : item.children.length + ' parts';
       }
     });
-    // Badge shelf on the home page
+    // Badge shelf (home)
     document.querySelectorAll('.badge-item[data-track]').forEach(function (el) {
       var st = stats(el.dataset.track);
-      el.classList.toggle('earned', st.pct === 100);
-      el.querySelector('.badge-state').textContent = st.pct === 100 ? 'Earned' : st.pct + '%';
+      el.classList.toggle('earned', st.full);
+      el.querySelector('.badge-state').textContent = st.full ? 'Earned' : st.pct + '%';
     });
-    // The page's own buttons (beside the title and at the end)
+    // This page's buttons, beside the title and at the end
     document.querySelectorAll('[data-complete]').forEach(function (btn) {
       var on = !!done[btn.dataset.complete];
       btn.classList.toggle('is-complete', on);
       btn.setAttribute('aria-pressed', String(on));
     });
-    // Whole-course progress in the header: every tracked item across all sections
-    var all = 0, finished = 0, parts = [];
-    Object.keys(TRACKS).forEach(function (t) {
-      var st = stats(t);
-      all += st.total; finished += st.done;
-      parts.push(TRACKS[t].badge + ' ' + st.done + '/' + st.total);
-    });
-    var pct = all ? Math.round(finished / all * 100) : 0;
+    var box = document.querySelector('.complete[data-key]');
+    if (box) {
+      box.classList.toggle('is-complete', !!done[box.dataset.key]);
+      var parts = box.querySelector('[data-parts]');
+      if (parts) parts.textContent = partsDone(findItem(box.dataset.key));
+    }
+    // Header: whole-course bar, breakdown and mini badges
+    var detail = Object.keys(TRACKS).map(function (t) { var st = stats(t); return TRACKS[t].badge + ' ' + st.done + '/' + st.total; });
+    var pct = courseStats();
     var bar = document.querySelector('.course-bar');
     if (bar) {
       bar.querySelector('span').style.width = pct + '%';
       bar.setAttribute('aria-valuenow', pct);
       document.getElementById('course-pct').textContent = pct + '%';
-      document.getElementById('course-detail').textContent = ' · ' + parts.join(' · ');
+      document.getElementById('course-detail').textContent = ' · ' + detail.join(' · ');
     }
-    var box = document.querySelector('.complete[data-key]');
-    if (box) {
-      box.classList.toggle('is-complete', !!done[box.dataset.key]);
-      var parts = box.querySelector('[data-parts]');
-      if (parts) {
-        var item = findItem(box.dataset.key);
-        parts.textContent = item.children.filter(function (c) { return done[c]; }).length;
-      }
-    }
+    var minis = document.getElementById('mini-badges');
+    if (minis) minis.innerHTML = Object.keys(TRACKS).map(function (t) {
+      var st = stats(t);
+      return '<span class="mini-badge' + (st.full ? ' earned' : '') + '" title="' + esc(TRACKS[t].badge) + ': ' +
+        (st.full ? 'badge earned' : st.pct + '%') + '">' + TRACKS[t].svg + '</span>';
+    }).join('');
+    renderTracker();
   }
 
-  // Celebrate the moment a section reaches 100% (once; it re-arms if the student un-ticks something).
+  // ---- Tracker sidebar ----
+  var opener = document.getElementById('tracker-open');
+  var tracker = null, openSections = read(OPEN);
+  var currentKey = (document.querySelector('main[data-key]') || {}).dataset ? document.querySelector('main[data-key]').dataset.key : '';
+  function check(key, title, url, cls) {
+    var current = key === currentKey ? ' aria-current="page"' : '';
+    return '<li class="' + cls + (done[key] ? ' is-done' : '') + '"' + current + '>' +
+      '<input type="checkbox" id="tk-' + esc(key) + '" data-key="' + esc(key) + '"' + (done[key] ? ' checked' : '') +
+      ' aria-label="Mark ' + esc(title) + ' as complete">' +
+      '<a href="' + ROOT + url + '">' + esc(title) + '</a></li>';
+  }
+  function renderTracker() {
+    if (!tracker) return;
+    var body = tracker.querySelector('.tracker-body');
+    var html = Object.keys(TRACKS).map(function (t) {
+      var tr = TRACKS[t], st = stats(t);
+      var isOpen = openSections[t] !== undefined ? !!openSections[t] : (currentKey ? currentKey.indexOf(t + '/') === 0 : t === 'ux');
+      var items = tr.items.map(function (i) {
+        var row = check(i.key, i.title, i.url, 'tk-item' + (itemDone(i) ? ' item-complete' : ''));
+        if (!i.children.length) return row;
+        return row.replace('</li>', '<span class="tk-parts">' + partsDone(i) + ' / ' + i.children.length + ' parts</span>' +
+          '<ol class="tk-children">' + i.children.map(function (c) { return check(c.key, c.title, c.url, 'tk-child'); }).join('') + '</ol></li>');
+      }).join('');
+      return '<section class="tk-section' + (st.full ? ' earned' : '') + '">' +
+        '<button type="button" class="tk-head" data-track="' + t + '" aria-expanded="' + isOpen + '">' +
+        '<span class="tk-badge">' + tr.svg + '</span><span class="tk-name">' + esc(tr.label) +
+        '<span class="tk-count">' + st.done + ' / ' + st.total + ' complete · ' + st.pct + '%</span>' +
+        '<span class="tk-bar"><span style="width:' + st.pct + '%"></span></span></span><span class="tk-caret" aria-hidden="true"></span></button>' +
+        '<ol class="tk-items"' + (isOpen ? '' : ' hidden') + '>' + items + '</ol></section>';
+    }).join('');
+    body.innerHTML = html;
+    var pct = courseStats();
+    tracker.querySelector('.tracker-total b').textContent = pct + '%';
+    tracker.querySelector('.tracker-bar span').style.width = pct + '%';
+  }
+  function buildTracker() {
+    tracker = document.createElement('div');
+    tracker.className = 'tracker';
+    tracker.id = 'tracker';
+    tracker.hidden = true;
+    tracker.innerHTML =
+      '<div class="tracker-scrim" data-close></div>' +
+      '<aside class="tracker-panel" role="dialog" aria-modal="true" aria-labelledby="tracker-title">' +
+      '<div class="tracker-top"><div><div class="eyebrow">Your progress</div><h2 id="tracker-title">Course tracker</h2></div>' +
+      '<button type="button" class="icon-btn" data-close aria-label="Close the tracker">✕</button></div>' +
+      '<div class="tracker-total">Course progress · <b>0%</b> complete</div><div class="tracker-bar"><span></span></div>' +
+      '<div class="tracker-body"></div>' +
+      '<p class="tracker-note">Tick a page to mark it complete, or untick it to undo. Lectures with parts count once every part is done. Saved in this browser.</p>' +
+      '</aside>';
+    document.body.appendChild(tracker);
+    tracker.addEventListener('click', function (e) {
+      if (e.target.closest('[data-close]')) return closeTracker();
+      var head = e.target.closest('.tk-head');
+      if (head) {
+        var list = head.nextElementSibling, open = list.hidden;
+        list.hidden = !open;
+        head.setAttribute('aria-expanded', String(open));
+        openSections[head.dataset.track] = open ? 1 : 0;
+        write(OPEN, openSections);
+      }
+    });
+    tracker.addEventListener('change', function (e) {
+      if (e.target.matches('input[data-key]')) {
+        var y = tracker.querySelector('.tracker-body').scrollTop;
+        toggle(e.target.dataset.key, e.target.checked);
+        tracker.querySelector('.tracker-body').scrollTop = y;
+        var again = tracker.querySelector('input[data-key="' + e.target.dataset.key + '"]');
+        if (again) again.focus();
+      }
+    });
+  }
+  function openTracker() {
+    if (!tracker) buildTracker();
+    renderTracker();
+    tracker.classList.add('entering');
+    tracker.hidden = false;
+    setTimeout(function () { tracker.classList.remove('entering'); }, 20);
+    document.documentElement.classList.add('tracker-is-open');
+    opener.setAttribute('aria-expanded', 'true');
+    var here = tracker.querySelector('[aria-current="page"]');
+    if (here) here.scrollIntoView({ block: 'center' });
+    tracker.querySelector('[data-close].icon-btn').focus();
+  }
+  function closeTracker() {
+    if (!tracker || tracker.hidden) return;
+    tracker.hidden = true;
+    document.documentElement.classList.remove('tracker-is-open');
+    opener.setAttribute('aria-expanded', 'false');
+    opener.focus();
+  }
+  if (opener) opener.addEventListener('click', openTracker);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeTracker(); });
+
+  // ---- Badge celebration: once, the moment a section is finished (re-arms if a page is unticked) ----
   var dialog = document.getElementById('celebrate');
   function checkBadges() {
     var seen = read(SEEN);
     Object.keys(TRACKS).forEach(function (track) {
-      var full = stats(track).pct === 100;
+      var full = stats(track).full;
       if (full && !seen[track] && dialog) {
+        closeTracker();
         dialog.querySelector('.celebrate-badge').innerHTML = TRACKS[track].svg;
         dialog.querySelector('#celebrate-title').textContent = TRACKS[track].badge;
         dialog.querySelector('.celebrate-text').textContent = TRACKS[track].done;
@@ -328,24 +446,18 @@
     write(SEEN, seen);
   }
   if (dialog) {
-    var close = function () { dialog.hidden = true; };
-    document.getElementById('celebrate-close').addEventListener('click', close);
-    dialog.addEventListener('click', function (e) { if (e.target === dialog) close(); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    var closeDialog = function () { dialog.hidden = true; };
+    document.getElementById('celebrate-close').addEventListener('click', closeDialog);
+    dialog.addEventListener('click', function (e) { if (e.target === dialog) closeDialog(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDialog(); });
   }
 
   document.querySelectorAll('[data-complete]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var key = btn.dataset.complete;
-      if (done[key]) delete done[key]; else done[key] = 1;
-      write(KEY, done);
-      render();
-      checkBadges();
-    });
+    btn.addEventListener('click', function () { toggle(btn.dataset.complete); });
   });
   render();
-  // Badges already earned before this feature existed shouldn't pop up out of nowhere on load.
+  // Badges already earned before this page loaded shouldn't pop up on load.
   var seen = read(SEEN);
-  Object.keys(TRACKS).forEach(function (t) { if (stats(t).pct === 100) seen[t] = 1; });
+  Object.keys(TRACKS).forEach(function (t) { if (stats(t).full) seen[t] = 1; });
   write(SEEN, seen);
 })();
