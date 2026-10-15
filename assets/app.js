@@ -252,12 +252,17 @@
     if (!part) return 0;
     return Math.max(1, Math.min(99, Math.round(part / whole * 100)));
   }
-  function stats(track) {
-    var items = TRACKS[track].items, share = 0, n = 0;
+  function stats(track, milestone) {
+    var items = TRACKS[track].items.filter(function (i) { return !milestone || i.category === milestone; }), share = 0, n = 0;
     items.forEach(function (i) { share += itemShare(i); if (itemDone(i)) n++; });
     var full = n === items.length;
     return { done: n, total: items.length, share: share, pct: percent(share, items.length, full), full: full };
   }
+  // Milestones are a section's sub-sections; awards are whole sections; the certificate needs every award.
+  function milestones(track) { return TRACKS[track].milestones || []; }
+  function awardsEarned() { return Object.keys(TRACKS).filter(function (t) { return stats(t).full; }).length; }
+  function certEarned() { return awardsEarned() === Object.keys(TRACKS).length; }
+  var CERT = window.CS_CERT || {}, CERT_DATE = 'cs-cert-date';
   function courseStats() {
     var share = 0, all = 0, full = true;
     Object.keys(TRACKS).forEach(function (t) { var st = stats(t); share += st.share; all += st.total; full = full && st.full; });
@@ -289,8 +294,9 @@
       el.querySelector('.progress-bar').setAttribute('aria-valuenow', st.pct);
       el.classList.toggle('is-complete', st.full);
       var text = el.querySelector('.progress-badge-text');
-      if (text) text.textContent = st.full ? 'Badge earned: ' + TRACKS[el.dataset.track].badge + '.'
-        : 'Finish them all to earn the ' + TRACKS[el.dataset.track].badge + ' badge.';
+      if (text) text.textContent = st.full ? 'Award won: ' + TRACKS[el.dataset.track].badge + '.'
+        : (TRACKS[el.dataset.track].milestones.length ? 'Reach every milestone below to win the ' : 'Finish them all to win the ')
+          + TRACKS[el.dataset.track].badge + ' award.';
     });
     // Rows on contents pages
     document.querySelectorAll('.row[data-key]').forEach(function (row) {
@@ -309,6 +315,20 @@
       el.classList.toggle('earned', st.full);
       el.querySelector('.badge-state').textContent = st.full ? 'Earned' : st.pct + '%';
     });
+    // Milestone badges (home, contents pages)
+    document.querySelectorAll('[data-milestone]').forEach(function (el) {
+      var parts = el.dataset.milestone.split(':'), st = stats(parts[0], parts.slice(1).join(':'));
+      el.classList.toggle('earned', st.full);
+      el.querySelector('.milestone-state').textContent = st.full ? 'Earned' : st.done + ' / ' + st.total;
+    });
+    // Certificate tiles and page
+    var won = awardsEarned(), all = Object.keys(TRACKS).length;
+    document.querySelectorAll('[data-cert]').forEach(function (el) {
+      el.classList.toggle('earned', won === all);
+      var s = el.querySelector('.badge-state');
+      if (s) s.textContent = won === all ? 'Unlocked' : won + ' of ' + all + ' awards';
+    });
+    renderCertificate();
     // This page's buttons, beside the title and at the end
     document.querySelectorAll('[data-complete]').forEach(function (btn) {
       var on = !!done[btn.dataset.complete];
@@ -335,7 +355,7 @@
     if (minis) minis.innerHTML = Object.keys(TRACKS).map(function (t) {
       var st = stats(t);
       return '<span class="mini-badge' + (st.full ? ' earned' : '') + '" title="' + esc(TRACKS[t].badge) + ': ' +
-        (st.full ? 'badge earned' : st.pct + '%') + '">' + TRACKS[t].svg + '</span>';
+        (st.full ? 'award won' : st.pct + '%') + '">' + TRACKS[t].svg + '</span>';
     }).join('');
     renderTracker();
   }
@@ -357,8 +377,16 @@
     var html = Object.keys(TRACKS).map(function (t) {
       var tr = TRACKS[t], st = stats(t);
       var isOpen = openSections[t] !== undefined ? !!openSections[t] : (currentKey ? currentKey.indexOf(t + '/') === 0 : t === 'ux');
+      var lastCat = null;
       var items = tr.items.map(function (i) {
-        var row = check(i.key, i.title, i.url, 'tk-item' + (itemDone(i) ? ' item-complete' : ''));
+        var head = '';
+        if (milestones(t).length && i.category !== lastCat) {
+          lastCat = i.category;
+          var ms = milestones(t).filter(function (m) { return m.name === i.category; })[0], mst = stats(t, i.category);
+          if (ms) head = '<li class="tk-ms' + (mst.full ? ' earned' : '') + '"><span class="tk-ms-badge">' + ms.svg + '</span>' +
+            '<span class="tk-ms-name">' + esc(ms.name) + '</span><span class="tk-ms-count">' + (mst.full ? 'Milestone earned' : mst.done + ' / ' + mst.total) + '</span></li>';
+        }
+        var row = head + check(i.key, i.title, i.url, 'tk-item' + (itemDone(i) ? ' item-complete' : ''));
         if (!i.children.length) return row;
         return row.replace('</li>', '<span class="tk-parts">' + partsDone(i) + ' / ' + i.children.length + ' parts</span>' +
           '<ol class="tk-children">' + i.children.map(function (c) { return check(c.key, c.title, c.url, 'tk-child'); }).join('') + '</ol></li>');
@@ -370,6 +398,10 @@
         '<span class="tk-bar"><span style="width:' + st.pct + '%"></span></span></span><span class="tk-caret" aria-hidden="true"></span></button>' +
         '<ol class="tk-items"' + (isOpen ? '' : ' hidden') + '>' + items + '</ol></section>';
     }).join('');
+    var won = awardsEarned(), all = Object.keys(TRACKS).length;
+    html += '<a class="tk-cert' + (won === all ? ' earned' : '') + '" href="' + ROOT + 'certificate.html">' +
+      '<span class="tk-badge">' + (CERT.svg || '') + '</span><span class="tk-name">Certificate' +
+      '<span class="tk-count">' + (won === all ? 'Unlocked: see your certificate' : won + ' of ' + all + ' awards earned') + '</span></span></a>';
     body.innerHTML = html;
     var pct = courseStats();
     tracker.querySelector('[data-all]').textContent = pct === 100 ? 'Unmark all' : 'Mark all as complete';
@@ -423,7 +455,7 @@
     return keys;
   }
   function markAll(on) {
-    var msg = on ? 'Mark every UX lecture, UI lecture and exercise as complete?'
+    var msg = on ? 'Mark every UX Theory and UI Theory lecture, Figma lesson and exercise as complete?'
                  : 'Unmark everything? This clears all of your progress in this browser.';
     if (!window.confirm(msg)) return;
     allKeys().forEach(function (k) { if (on) done[k] = 1; else delete done[k]; });
@@ -456,27 +488,88 @@
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeTracker(); });
 
-  // ---- Badge celebration: once, the moment a section is finished (re-arms if a page is unticked) ----
+  // ---- Celebration: once, the moment a milestone, award or the certificate is earned (re-arms if a page is unticked) ----
   var dialog = document.getElementById('celebrate');
+  function earnedNow() {
+    var list = [];
+    Object.keys(TRACKS).forEach(function (t) {
+      milestones(t).forEach(function (m) { list.push({ key: 'ms:' + t + ':' + m.name, kind: 'milestone', track: t, m: m, full: stats(t, m.name).full }); });
+      list.push({ key: t, kind: 'award', track: t, full: stats(t).full });
+    });
+    list.push({ key: 'cert', kind: 'cert', full: certEarned() });
+    return list;
+  }
+  function andList(names) { return names.join(', ').replace(/, ([^,]*)$/, ' and $1'); }
   function checkBadges() {
     var seen = read(SEEN), fresh = [];
-    Object.keys(TRACKS).forEach(function (track) {
-      var full = stats(track).full;
-      if (full && !seen[track]) fresh.push(track);
-      if (full) seen[track] = 1; else delete seen[track];
+    earnedNow().forEach(function (b) {
+      if (b.full && !seen[b.key]) fresh.push(b);
+      if (b.full) seen[b.key] = 1; else delete seen[b.key];
     });
     write(SEEN, seen);
+    if (certEarned() && !read(CERT_DATE).d) write(CERT_DATE, { d: new Date().toISOString() });
     if (!fresh.length || !dialog) return;
     closeTracker();
-    dialog.querySelector('.celebrate-badge').innerHTML = fresh.map(function (t) { return TRACKS[t].svg; }).join('');
-    dialog.querySelector('#celebrate-title').textContent = fresh.length === 1 ? TRACKS[fresh[0]].badge
-      : fresh.map(function (t) { return TRACKS[t].badge; }).join(', ').replace(/, ([^,]*)$/, ' and $1');
-    dialog.querySelector('.celebrate-text').textContent = fresh.length === 1 ? TRACKS[fresh[0]].done
-      : 'You\'ve earned ' + fresh.length + ' badges at once.';
-    dialog.querySelector('.eyebrow').textContent = fresh.length === 1 ? 'Badge unlocked' : 'Badges unlocked';
+    var cert = fresh.filter(function (b) { return b.kind === 'cert'; }),
+        awards = fresh.filter(function (b) { return b.kind === 'award'; }),
+        miles = fresh.filter(function (b) { return b.kind === 'milestone'; });
+    var art, eyebrow, title, text;
+    if (cert.length) {
+      art = CERT.svg; eyebrow = 'Certificate unlocked'; title = CERT.name;
+      text = 'You\'ve earned every award. ' + CERT.school + ' awards you your certificate.';
+    } else if (awards.length) {
+      art = awards.map(function (b) { return TRACKS[b.track].svg; }).join('');
+      eyebrow = awards.length === 1 ? 'Award unlocked' : 'Awards unlocked';
+      title = andList(awards.map(function (b) { return TRACKS[b.track].badge; }));
+      var left = Object.keys(TRACKS).length - awardsEarned();
+      text = (awards.length === 1 ? TRACKS[awards[0].track].done + ' ' : '') +
+        (left ? left + (left === 1 ? ' award' : ' awards') + ' to go until your certificate.' : '');
+    } else {
+      art = miles.map(function (b) { return b.m.svg; }).join('');
+      eyebrow = miles.length === 1 ? 'Milestone reached' : 'Milestones reached';
+      title = andList(miles.map(function (b) { return b.m.name; }));
+      var tr = miles[0].track, got = milestones(tr).filter(function (m) { return stats(tr, m.name).full; }).length;
+      text = miles.length === 1
+        ? 'You\'ve finished every page in ' + miles[0].m.name + '. ' + got + ' of ' + milestones(tr).length + ' milestones towards the ' + TRACKS[tr].badge + ' award.'
+        : 'You\'ve reached ' + miles.length + ' milestones at once.';
+    }
+    dialog.querySelector('.celebrate-badge').innerHTML = art;
+    dialog.querySelector('.eyebrow').textContent = eyebrow;
+    dialog.querySelector('#celebrate-title').textContent = title;
+    dialog.querySelector('.celebrate-text').textContent = text;
+    var link = dialog.querySelector('.celebrate-link');
+    if (link) link.hidden = !cert.length;
+    dialog.classList.toggle('is-cert', !!cert.length);
     dialog.hidden = false;
     document.getElementById('celebrate-close').focus();
   }
+
+  // ---- Certificate page ----
+  function renderCertificate() {
+    var pageEl = document.querySelector('[data-cert-page]');
+    if (!pageEl) return;
+    var open = certEarned();
+    pageEl.dataset.state = open ? 'unlocked' : 'locked';
+    if (!open) return;
+    var when = read(CERT_DATE).d;
+    if (!when) { when = new Date().toISOString(); write(CERT_DATE, { d: when }); }
+    var dateEl = pageEl.querySelector('[data-cert-date]');
+    if (dateEl) dateEl.textContent = new Date(when).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  }
+  (function () {
+    var input = document.getElementById('cert-name-input'), out = document.getElementById('cert-name');
+    if (!input || !out) return;
+    var NAME = 'cs-cert-name';
+    function show() { out.textContent = input.value.trim() || 'Your name'; out.classList.toggle('is-empty', !input.value.trim()); }
+    try { input.value = localStorage.getItem(NAME) || ''; } catch (e) {}
+    show();
+    input.addEventListener('input', function () { try { localStorage.setItem(NAME, input.value); } catch (e) {} show(); });
+    var printBtn = document.getElementById('cert-print');
+    if (printBtn) printBtn.addEventListener('click', function () {
+      if (!input.value.trim()) { input.focus(); input.classList.add('needs-name'); return; }
+      window.print();
+    });
+  })();
   if (dialog) {
     var closeDialog = function () { dialog.hidden = true; };
     document.getElementById('celebrate-close').addEventListener('click', closeDialog);
@@ -490,6 +583,7 @@
   render();
   // Badges already earned before this page loaded shouldn't pop up on load.
   var seen = read(SEEN);
-  Object.keys(TRACKS).forEach(function (t) { if (stats(t).full) seen[t] = 1; });
+  earnedNow().forEach(function (b) { if (b.full) seen[b.key] = 1; });
   write(SEEN, seen);
+  if (certEarned() && !read(CERT_DATE).d) write(CERT_DATE, { d: new Date().toISOString() });
 })();

@@ -2,9 +2,9 @@
 
     index.html      Course home: the four sections, a suggested route and a search of everything
     timetable.html  The 9-week timetable board (content/timetable.json)
-    ux.html         UX lectures        -> lectures/<slug>.html
+    ux.html         UX Theory          -> lectures/<slug>.html
     methods.html    UX methods         -> methods/<slug>.html
-    ui.html         UI lectures        -> ui/<slug>.html
+    ui.html         UI Theory          -> ui/<slug>.html
     figma.html      Figma tutorials    -> figma/<slug>.html   (content shared with UI: content/ui/)
     exercises.html  Exercises          -> exercises/<slug>.html
 
@@ -45,8 +45,8 @@ TAGLINE = "UX & UI learning resource for Barcelona Code School"
 LOGIN_HASH = "c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202"
 
 TRACKS = [
-    {"id": "ux", "out": "lectures", "index": "ux.html", "label": "UX Lectures", "noun": "Lecture",
-     "eyebrow": "UX Learning Resource", "h1": "UX Lectures",
+    {"id": "ux", "out": "lectures", "index": "ux.html", "label": "UX Theory", "noun": "Lecture",
+     "eyebrow": "UX Learning Resource", "h1": "UX Theory",
      "blurb": "The history, psychology and practice of user experience design.",
      "intro": "{n} lectures on the history, psychology and practice of UX, grouped by topic.",
      "chapters": {
@@ -69,8 +69,8 @@ TRACKS = [
          "Retrospective": "Reflect on the sprint and capture the lessons for your case study.",
      },
      "parent": {"Information Architecture": "Define"}},
-    {"id": "ui", "out": "ui", "index": "ui.html", "label": "UI Lectures", "noun": "Lecture",
-     "eyebrow": "UI Learning Resource", "h1": "UI Lectures",
+    {"id": "ui", "out": "ui", "index": "ui.html", "label": "UI Theory", "noun": "Lecture",
+     "eyebrow": "UI Learning Resource", "h1": "UI Theory",
      "blurb": "The theory behind good interfaces: colour, type, spacing, icons and systems.",
      "intro": "{n} lectures on the theory behind interfaces. For hands-on tutorials, see <a href=\"figma.html\">Figma</a>.",
      "chapters": {
@@ -94,23 +94,50 @@ TRACKS = [
          "Team Projects": "Multi-day team builds from a schema.",
      }},
 ]
-# Sections with progress tracking and a badge for finishing them. A page with sub-lessons counts as one item,
-# complete only when the page and every sub-lesson are done.
+# Sections with progress tracking. Finishing every page of a sub-section earns its milestone badge; finishing every
+# milestone (every page) earns the section's award; all four awards unlock the certificate. A page with sub-lessons
+# counts as one item, complete only when the page and every sub-lesson are done.
 PROGRESS = {
-    "ux": {"badge": "UX Lectures", "short": "UX", "colour": "#0891b2", "done": "You've finished every UX lecture."},
-    "ui": {"badge": "UI Lectures", "short": "UI", "colour": "#7c5cd6", "done": "You've finished every UI lecture."},
-    "figma": {"badge": "Figma", "short": "FG", "colour": "#d9467a", "done": "You've finished every Figma lesson."},
-    "exercises": {"badge": "Exercises", "short": "EX", "colour": "#e0802c", "done": "You've completed every exercise."},
+    "ux": {"badge": "UX Theory", "short": "UX", "colour": "#0072e3", "done": "You've finished every UX Theory lecture.",
+           "milestones": {"Foundations": "🏛️", "Psychology": "🧠", "Process": "🔁", "Case Studies": "🔍", "Interface": "👆"}},
+    "ui": {"badge": "UI Theory", "short": "UI", "colour": "#ff6100", "done": "You've finished every UI Theory lecture.",
+           "milestones": {}},
+    "figma": {"badge": "Figma", "short": "FG", "colour": "#ab54f7", "done": "You've finished every Figma lesson.",
+              "milestones": {"Figma Basics": "🧱", "Figma Advanced": "🚀"}},
+    "exercises": {"badge": "Exercises", "short": "EX", "colour": "#00aa3c", "done": "You've completed every exercise.",
+                  "milestones": {"Daily UI": "✏️", "Replica Challenges": "🪞", "Team Projects": "🤝"}},
 }
+CERTIFICATE = "UX/UI Design Bootcamp"
 
 
 def badge_svg(track, size=96):
+    """A section's award: a rosette with ribbons."""
     b = PROGRESS[track]
     return f"""<svg class="badge-art" viewBox="0 0 96 112" width="{size}" height="{round(size * 112 / 96)}" aria-hidden="true">
   <path d="M30 70 18 108l16-8 10 12 8-34z" fill="{b['colour']}" opacity=".75"/><path d="M66 70l12 38-16-8-10 12-8-34z" fill="{b['colour']}" opacity=".75"/>
   <circle cx="48" cy="46" r="40" fill="{b['colour']}"/><circle cx="48" cy="46" r="32" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2" stroke-dasharray="3 4"/>
   <circle cx="48" cy="46" r="26" fill="#fff" fill-opacity=".16"/>
-  <text x="48" y="54" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" fill="#fff">{b['short']}</text>
+  <text x="48" y="54" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="24" fill="#fff">{b['short']}</text>
+</svg>"""
+
+
+def milestone_svg(track, cat, size=56):
+    """A milestone: a hexagon (like the logo) in the section's colour, with the sub-section's icon."""
+    colour, icon = PROGRESS[track]["colour"], PROGRESS[track]["milestones"][cat]
+    return f"""<svg class="badge-art milestone-art" viewBox="0 0 64 64" width="{size}" height="{size}" aria-hidden="true">
+  <path d="M18 5h28l15 27-15 27H18L3 32z" fill="{colour}"/><path d="M3 32h58L46 59H18z" fill="#000" fill-opacity=".14"/>
+  <path d="M21 11h22l12 21-12 21H21L9 32z" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
+  <text x="32" y="41" text-anchor="middle" font-size="24">{icon}</text>
+</svg>"""
+
+
+def certificate_svg(size=96):
+    """The final award: a seal in the Cornerstones blues."""
+    return f"""<svg class="badge-art cert-art" viewBox="0 0 96 112" width="{size}" height="{round(size * 112 / 96)}" aria-hidden="true">
+  <path d="M30 70 18 108l16-8 10 12 8-34z" fill="#002b71"/><path d="M66 70l12 38-16-8-10 12-8-34z" fill="#002b71"/>
+  <path d="M48 4l9 7 11-2 4 10 10 5-2 11 7 9-7 9 2 11-10 5-4 10-11-2-9 7-9-7-11 2-4-10-10-5 2-11-7-9 7-9-2-11 10-5 4-10 11 2z" fill="#0062ff"/>
+  <circle cx="48" cy="46" r="27" fill="#004ecd"/><circle cx="48" cy="46" r="22" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.5"/>
+  <path d="M37 47l8 8 15-17" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>"""
 
 
@@ -120,8 +147,15 @@ def progress_panel(track, compact=False):
     return f"""<div class="progress{' compact' if compact else ''}" data-track="{track}">
   <div class="progress-row"><span class="progress-label">Your progress</span><span class="progress-count">–</span></div>
   <div class="progress-bar" role="progressbar" aria-label="{b['badge']} progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
-  {'' if compact else f'<div class="progress-badge">{badge_svg(track, 44)}<span class="progress-badge-text">Finish them all to earn the {b["badge"]} badge.</span></div>'}
+  {'' if compact else f'<div class="progress-badge">{badge_svg(track, 44)}<span class="progress-badge-text">Finish them all to earn the {b["badge"]} award.</span></div>'}
+  {'' if compact or not b["milestones"] else '<ul class="milestones">' + "".join(milestone_item(track, c, 34) for c in b["milestones"]) + '</ul>'}
 </div>"""
+
+
+def milestone_item(track, cat, size):
+    """A milestone badge with its name and count; app.js marks it earned."""
+    return (f'<li class="milestone" data-milestone="{track}:{esc(cat)}">{milestone_svg(track, cat, size)}'
+            f'<span class="milestone-name">{esc(cat)}</span><span class="milestone-state">–</span></li>')
 
 
 # The suggested route on the home page: (step, why, section id, page slug).
@@ -362,7 +396,9 @@ def page(title, description, body, depth, active):
 <footer class="foot"><div class="foot-inner"><span>{SITE} · {TAGLINE}</span><span class="mono">Notes by Chris Kelly</span></div></footer>
 <div class="celebrate" id="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="celebrate-title">
   <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
-  <h2 id="celebrate-title"></h2><p class="celebrate-text"></p><button type="button" class="login-submit" id="celebrate-close">Nice!</button></div>
+  <h2 id="celebrate-title"></h2><p class="celebrate-text"></p>
+  <div class="celebrate-actions"><a class="login-submit celebrate-link" href="{prefix}certificate.html" hidden>See your certificate</a>
+  <button type="button" class="login-submit" id="celebrate-close">Nice!</button></div></div>
 </div>
 <script src="{prefix}assets/progress-data.js?v={ASSET_V}"></script>
 <script src="{prefix}assets/app.js?v={ASSET_V}"></script>
@@ -881,8 +917,13 @@ def build_home(data):
 </li>""")
     index = [{"t": p["title"], "d": p["description"], "s": t["label"], "u": f"{t['out']}/{p['slug']}.html"}
              for t in TRACKS for p in data[t["id"]]["every"]]
-    badges = "".join(f"""<li class="badge-item" data-track="{k}">{badge_svg(k, 72)}
-  <span class="badge-name">{b['badge']}</span><span class="badge-state">Locked</span></li>""" for k, b in PROGRESS.items())
+    badges = "".join(f"""<li class="award-card t-{k}">
+  <div class="badge-item" data-track="{k}">{badge_svg(k, 72)}<span class="badge-name">{b['badge']} award</span><span class="badge-state">Locked</span></div>
+  {'<ul class="milestones">' + "".join(milestone_item(k, c, 40) for c in b["milestones"]) + '</ul>' if b["milestones"]
+   else '<p class="award-note">One award for the whole section.</p>'}
+</li>""" for k, b in PROGRESS.items())
+    badges += f"""<li class="award-card cert-card"><a class="badge-item" data-cert href="certificate.html">{certificate_svg(72)}
+  <span class="badge-name">Certificate</span><span class="cert-sub">{CERTIFICATE} · {SCHOOL}</span><span class="badge-state">Locked</span></a></li>"""
     index_json = json.dumps(index, ensure_ascii=False).replace("</", "<\\/")
     body = f"""
 <main class="home course">
@@ -900,7 +941,7 @@ def build_home(data):
     <section class="sections" aria-label="Sections">{''.join(cards)}</section>
     <section class="badges" aria-labelledby="badges-title">
       <h2 id="badges-title">Your badges</h2>
-      <p class="route-intro">Finish every page in a section to earn its badge. Lectures with parts count once you've done all of their parts. Progress is saved in this browser.</p>
+      <p class="route-intro">Celebrate every step. Finish every page in a sub-section to reach its <b>milestone</b>. Reach every milestone in a section to win its <b>award</b>. Win all four awards and {SCHOOL} awards you a <b>certificate</b> in the {CERTIFICATE}. Lectures with parts count once you've done all of their parts. Progress is saved in this browser.</p>
       <ul class="badge-shelf">{badges}</ul>
     </section>
     <section class="route">
@@ -1068,6 +1109,55 @@ def build_timetable(data):
     print(f"timetable.html: {len(tt['weeks'])} weeks")
 
 
+def build_certificate():
+    """certificate.html: locked until every award is earned, then a printable certificate with the student's name."""
+    awards = "".join(f"""<li class="badge-item" data-track="{k}">{badge_svg(k, 64)}<span class="badge-name">{b['badge']}</span>
+  <span class="badge-state">Locked</span></li>""" for k, b in PROGRESS.items())
+    seals = "".join(f'<li>{badge_svg(k, 54)}<span>{b["badge"]}</span></li>' for k, b in PROGRESS.items())
+    body = f"""
+<main class="certificate-page" data-cert-page data-state="locked">
+  <div class="wrap">
+    <section class="cert-locked">
+      <div class="cert-lock-art">{certificate_svg(110)}</div>
+      <div class="eyebrow">{SCHOOL}</div>
+      <h1>Your certificate</h1>
+      <p class="lede">Win all four awards to unlock your certificate in the {CERTIFICATE}. Each award comes from reaching every milestone in its section.</p>
+      <ul class="badge-shelf cert-awards">{awards}</ul>
+      <p class="cert-back"><a href="index.html#badges-title">See your milestones and awards</a></p>
+    </section>
+    <section class="cert-open">
+      <div class="cert-controls">
+        <div><div class="eyebrow">Certificate unlocked</div><h1>Congratulations!</h1>
+        <p class="lede">Add your name as you'd like it to appear, then print it or save it as a PDF.</p></div>
+        <label class="field cert-field"><span>Your full name</span>
+          <input id="cert-name-input" type="text" autocomplete="name" maxlength="60" placeholder="e.g. Alex García"></label>
+        <button type="button" class="login-submit" id="cert-print">Print or save as PDF</button>
+      </div>
+      <div class="cert-sheet" id="cert">
+        <div class="cert-frame">
+          <div class="cert-head">{LOGO_MARK.replace('width="38" height="38"', 'width="64" height="64"')}
+            <div><div class="cert-school">{SCHOOL}</div><div class="cert-programme">{CERTIFICATE}</div></div></div>
+          <div class="cert-kicker">Certificate of completion</div>
+          <p class="cert-line">This certifies that</p>
+          <div class="cert-name" id="cert-name">Your name</div>
+          <p class="cert-line">has completed every UX Theory and UI Theory lecture, Figma lesson and exercise of the
+            <b>{CERTIFICATE}</b> learning path, earning all four awards.</p>
+          <ul class="cert-seals">{seals}</ul>
+          <div class="cert-foot">
+            <div><span class="cert-date" data-cert-date></span><span class="cert-caption">Date</span></div>
+            <div class="cert-seal">{certificate_svg(70)}</div>
+            <div><span class="cert-sign">{SCHOOL}</span><span class="cert-caption">{CERTIFICATE}</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>"""
+    (ROOT / "certificate.html").write_text(page(f"Certificate · {SITE}", f"Your {CERTIFICATE} certificate.", body, 0, "certificate"),
+                                           encoding="utf-8")
+    print("certificate.html")
+
+
 def build_login():
     """login.html: the one page that isn't gated."""
     html_ = f"""<!doctype html>
@@ -1114,10 +1204,14 @@ if(localStorage.getItem('cs-auth')==='{LOGIN_HASH}')location.replace('index.html
 
 
 def write_progress_data(data):
+    for k, b in PROGRESS.items():
+        if b["milestones"] and list(b["milestones"]) != data[k]["categories"]:
+            raise SystemExit(f"PROGRESS[{k!r}] milestones {list(b['milestones'])} don't match its sub-sections {data[k]['categories']}")
     def entry(k, page):
         return {"key": f"{k}/{page['slug']}", "title": page["title"], "url": f"{TRACK[k]['out']}/{page['slug']}.html"}
     tracks = {k: {"badge": b["badge"], "done": b["done"], "short": b["short"], "label": TRACK[k]["label"],
                   "index": TRACK[k]["index"], "svg": badge_svg(k, 120),
+                  "milestones": [{"name": c, "svg": milestone_svg(k, c, 96)} for c in b["milestones"]],
                   "items": [{**entry(k, l), "category": l["category"],
                              "children": [{**entry(k, data[k]["by_slug"][c]), "title": short(data[k]["by_slug"][c]["title"])}
                                           for c in l["children"]]}
@@ -1126,6 +1220,8 @@ def write_progress_data(data):
         "// Generated by tools/build.py: the pages that make up each section's progress, for the tracker and badges.\n"
         "window.CS_ROOT = document.currentScript.src.replace(/assets\\/progress-data\\.js.*$/, '');\n"
         "window.CS_PROGRESS = " + json.dumps(tracks, ensure_ascii=False, separators=(",", ":")) + ";\n"
+        "window.CS_CERT = " + json.dumps({"name": CERTIFICATE, "school": SCHOOL, "svg": certificate_svg(120)},
+                                         ensure_ascii=False, separators=(",", ":")) + ";\n"
         "// Pages that moved section: old progress key -> new one.\n"
         "window.CS_MOVED = " + json.dumps(moved_pages(data), separators=(",", ":")) + ";\n", encoding="utf-8")
 
@@ -1179,6 +1275,7 @@ def main():
         build_track(t, data)
     build_home(data)
     build_timetable(data)
+    build_certificate()
     build_login()
     write_redirects(data)
 
