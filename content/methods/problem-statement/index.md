@@ -6,7 +6,7 @@ Defining the problem
 
 # 👋 **Context**
 
-Let’s begin the formative part of our sprint with a defined problem statement that’s built of the the solid foundation of our earlier research. A problem statement is **a clear, concise description of the main issue or challenge that users face.** 
+Let’s begin the formative part of our sprint with a defined problem statement that’s built on the solid foundation of our earlier research. A problem statement is **a clear, concise description of the main issue or challenge that users face.** 
 
 Hopefully, by now, you will have learned much more about our user behaviour and as a result, our early assumption has been challenged enough that you can create an informed statement which summarises the problem and perhaps, because of our user interviews, even why it’s happening.  
 
