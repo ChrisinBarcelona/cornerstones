@@ -260,7 +260,7 @@ def page(title, description, body, depth, active):
     links = "".join(
         f'<a href="{prefix}{t["index"]}"{" aria-current=page" if t["id"] == active else ""}>{t["label"]}</a>' for t in TRACKS)
     return f"""<!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -271,10 +271,11 @@ def page(title, description, body, depth, active):
 <script>try{{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}}catch(e){{}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 <link rel="stylesheet" href="{prefix}assets/style.css?v={ASSET_V}">
+<link rel="stylesheet" href="{prefix}assets/theme.css?v={ASSET_V}">
 </head>
-<body>
+<body class="t-{active}">
 <header class="nav">
   <div class="nav-inner">
     <a class="brand" href="{prefix}index.html">
@@ -744,7 +745,7 @@ def build_home(data):
         d = data[t["id"]]
         n = len(d["lectures"])
         cats = " · ".join(esc(c) for c in d["categories"])
-        cards.append(f"""<a class="section-card" href="{t['index']}">
+        cards.append(f"""<a class="section-card t-{t['id']}" href="{t['index']}">
   <span class="section-count">{n} {t['noun'].lower()}s</span>
   <span class="section-name">{t['label']}</span>
   <span class="section-blurb">{esc(t['blurb'])}</span>
@@ -955,7 +956,7 @@ def build_timetable(data):
 def build_login():
     """login.html: the one page that isn't gated."""
     html_ = f"""<!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -965,8 +966,9 @@ def build_login():
 if(localStorage.getItem('cs-auth')==='{LOGIN_HASH}')location.replace('index.html')}}catch(e){{}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 <link rel="stylesheet" href="assets/style.css?v={ASSET_V}">
+<link rel="stylesheet" href="assets/theme.css?v={ASSET_V}">
 </head>
 <body class="login-page">
 <main class="login">
@@ -1040,7 +1042,7 @@ def main():
     data = load()
     write_progress_data(data)
     ASSET_V = hashlib.sha1(b"".join((ROOT / "assets" / f).read_bytes()
-                                    for f in ("style.css", "app.js", "progress-data.js"))).hexdigest()[:10]
+                                    for f in ("style.css", "theme.css", "app.js", "progress-data.js"))).hexdigest()[:10]
     for t in TRACKS:
         build_track(t, data)
     build_home(data)
