@@ -41,6 +41,14 @@
       var m = location.hash.match(/category=([^&]+)/);
       cat = m ? decodeURIComponent(m[1]) : '';
       apply();
+      // Arriving from a milestone (or the method bank): bring the filtered list into view.
+      if (cat) {
+        var go = function (smooth) {
+          var top = rows.getBoundingClientRect().top + window.pageYOffset - 200;
+          if (Math.abs(window.pageYOffset - top) > 40) window.scrollTo({ top: top, behavior: smooth ? 'smooth' : 'auto' });
+        };
+        if (document.readyState === 'complete') go(true); else window.addEventListener('load', function () { setTimeout(go, 50); });
+      }
     }
     catButtons.forEach(function (b) {
       b.addEventListener('click', function () {
@@ -384,7 +392,7 @@
           lastCat = i.category;
           var ms = milestones(t).filter(function (m) { return m.name === i.category; })[0], mst = stats(t, i.category);
           if (ms) head = '<li class="tk-ms' + (mst.full ? ' earned' : '') + '"><span class="tk-ms-badge">' + ms.svg + '</span>' +
-            '<span class="tk-ms-name">' + esc(ms.name) + '</span><span class="tk-ms-count">' + (mst.full ? 'Milestone earned' : mst.done + ' / ' + mst.total) + '</span></li>';
+            '<a class="tk-ms-name" href="' + ROOT + tr.index + '#category=' + encodeURIComponent(ms.name) + '">' + esc(ms.name) + '</a><span class="tk-ms-count">' + (mst.full ? 'Milestone earned' : mst.done + ' / ' + mst.total) + '</span></li>';
         }
         var row = head + check(i.key, i.title, i.url, 'tk-item' + (itemDone(i) ? ' item-complete' : ''));
         if (!i.children.length) return row;
@@ -425,7 +433,7 @@
       '</aside>';
     document.body.appendChild(tracker);
     tracker.addEventListener('click', function (e) {
-      if (e.target.closest('[data-close]')) return closeTracker();
+      if (e.target.closest('[data-close]') || e.target.closest('.tk-ms-name')) return closeTracker();
       if (e.target.closest('[data-all]')) return markAll(courseStats() !== 100);
       var head = e.target.closest('.tk-head');
       if (head) {

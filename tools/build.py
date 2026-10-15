@@ -153,9 +153,10 @@ def progress_panel(track, compact=False):
 
 
 def milestone_item(track, cat, size):
-    """A milestone badge with its name and count; app.js marks it earned."""
-    return (f'<li class="milestone" data-milestone="{track}:{esc(cat)}">{milestone_svg(track, cat, size)}'
-            f'<span class="milestone-name">{esc(cat)}</span><span class="milestone-state">–</span></li>')
+    """A milestone badge with its name and count, linking to just that sub-section; app.js marks it earned."""
+    return (f'<li class="milestone" data-milestone="{track}:{esc(cat)}"><a class="milestone-link" '
+            f'href="{TRACK[track]["index"]}#category={quote(cat)}" title="Show the {esc(cat)} pages">{milestone_svg(track, cat, size)}'
+            f'<span class="milestone-name">{esc(cat)}</span><span class="milestone-state">–</span></a></li>')
 
 
 # The suggested route on the home page: (step, why, section id, page slug).

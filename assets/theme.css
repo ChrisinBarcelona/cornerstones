@@ -588,3 +588,12 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 @media (max-width: 560px) { .cert-card .badge-item { grid-template-columns: 1fr; text-align: center; justify-items: center; } .cert-card .badge-art { grid-row: auto; } }
 .celebrate-badge .milestone-art { width: 112px; height: 112px; }
 .cert-field input { background: var(--raised); }
+
+/* Milestones link to just their sub-section */
+.milestone-link { display: flex; flex-direction: column; align-items: center; gap: 3px; width: 100%; padding: 4px 2px;
+  border-radius: var(--r-sm, 10px); color: inherit; text-decoration: none; transition: transform .15s, background .15s; }
+.milestone-link:hover { transform: translateY(-2px); background: color-mix(in srgb, var(--tc) 10%, transparent); }
+.milestone-link:hover .milestone-name { text-decoration: underline; }
+.milestone-link:focus-visible { outline: 2px solid var(--tc); outline-offset: 2px; }
+.tk-ms-name { color: inherit; text-decoration: none; }
+.tk-ms-name:hover { text-decoration: underline; }
