@@ -83,8 +83,8 @@ TRACKS = [
      "blurb": "Step-by-step Figma tutorials, from your first frame to components and variables.",
      "intro": "{n} step-by-step Figma tutorials. Work through Figma Basics in order, then move on to Figma Advanced.",
      "chapters": {
-         "Figma Basics": "Start here: frames, grids, nesting, Auto Layout and the 8 point grid.",
-         "Figma Advanced": "Reusable components, properties and variables, the building blocks of a design system.",
+         "Figma Basics": "Start here: frames, grids, nesting, Auto Layout, the 8 point grid and your first components.",
+         "Figma Advanced": "Component properties and variables, the building blocks of a design system.",
      }},
     {"id": "exercises", "out": "exercises", "index": "exercises.html", "label": "Exercises", "noun": "Exercise",
      "eyebrow": "Practice", "h1": "Exercises",
@@ -146,8 +146,8 @@ ORDER = {
     "figma": {
         "Figma Basics": ["choose-your-frame", "starting-in-figma", "beginners-guide-to-grids",
                          "beginners-guide-to-nesting", "beginners-guide-auto-layout",
-                         "beginners-guide-to-8-point-grid-system"],
-        "Figma Advanced": ["beginners-guide-to-components", "navbar", "dynamic-buttons-part-one",
+                         "beginners-guide-to-8-point-grid-system", "beginners-guide-to-components"],
+        "Figma Advanced": ["navbar", "dynamic-buttons-part-one",
                            "dynamic-buttons-part-deux", "color-variables", "number-variables",
                            "string-variables", "variable-modes"],
     },
