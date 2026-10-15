@@ -854,8 +854,18 @@ def build_timetable(data):
             if day.get("workshop"):
                 ws = day["workshop"]
                 icon = "🎨" if ws["title"].startswith("Figma") else "🖥️"
-                cards.append(tt_card(f"{cid}-workshop", "workshop", icon, ws["title"],
-                                     tags=tag(ws.get("tag") or "Portfolio site", ws.get("link"), data)))
+                if ws.get("lessons"):
+                    # The topic, then each Figma lesson the workshop covers, linked.
+                    names = []
+                    for key in ws["lessons"]:
+                        track, slug = key.split("/")
+                        lesson = short(data[track]["by_slug"][slug]["title"])
+                        names.append((lesson.replace("Beginner’s Guide to ", "").replace("Beginner’s Guide ", ""), key))
+                    topic = "" if any(n == ws["tag"] for n, _ in names) else tag(ws["tag"])
+                    ws_tags = topic + "".join(tag(n, k, data) for n, k in names)
+                else:
+                    ws_tags = tag(ws.get("tag") or "Portfolio site", ws.get("link"), data)
+                cards.append(tt_card(f"{cid}-workshop", "workshop", icon, ws["title"], tags=ws_tags))
             cards.append(tt_card(f"{cid}-lunch", "routine", r["lunch"]["icon"], r["lunch"]["title"], (r["lunch"]["time"],)))
             if day.get("presentation"):
                 cards.append(tt_card(f"{cid}-presentation", "presentation", "🎤", day["presentation"]))

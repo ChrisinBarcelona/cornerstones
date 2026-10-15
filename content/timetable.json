@@ -1,5 +1,5 @@
 {
-  "_note": "The 9-week timetable. Week titles, summaries, daily activities, AI notes and tools come from barcelonacodeschool.com/ux-design-bootcamp-in-barcelona-code-school/. The daily routine, Figma/Framer workshops and Check Points come from the Notion 'UX Day by Day' board. A tag's 'link' is a page on this site (section/slug).",
+  "_note": "The 9-week timetable. Week titles, summaries, daily activities, AI notes and tools come from barcelonacodeschool.com/ux-design-bootcamp-in-barcelona-code-school/. The daily routine, Figma/Framer workshops and Check Points come from the Notion 'UX Day by Day' board; each Figma workshop lists the Figma lessons it covers, and the Week 7 Variables workshop is a suggested placement. A tag's 'link' is a page on this site (section/slug).",
   "hours": "Monday to Friday, 10:00–17:00 CET",
   "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
   "routine": {
@@ -15,13 +15,13 @@
       "tools": ["Figma", "FigJam", "Claude"],
       "days": [
         {"activities": [{"label": "Sprint brief"}, {"label": "Site visit"}, {"label": "'As-Is' customer journey mapping", "link": "methods/user-journey-map"}],
-         "workshop": {"title": "Figma Workshop (1)", "tag": "Basics", "link": "figma/starting-in-figma"}},
+         "workshop": {"title": "Figma Workshop (1)", "tag": "Basics", "lessons": ["figma/choose-your-frame", "figma/starting-in-figma", "figma/beginners-guide-to-grids"]}},
         {"activities": [{"label": "Service design blueprint"}],
-         "workshop": {"title": "Figma Workshop (2)", "tag": "Auto Layout", "link": "figma/beginners-guide-auto-layout"}},
+         "workshop": {"title": "Figma Workshop (2)", "tag": "Auto Layout", "lessons": ["figma/beginners-guide-to-nesting", "figma/beginners-guide-auto-layout", "figma/beginners-guide-to-8-point-grid-system"]}},
         {"activities": [{"label": "Indirect benchmarking", "link": "methods/competitive-analysis"}],
-         "workshop": {"title": "Figma Workshop (3)", "tag": "Components", "link": "figma/beginners-guide-to-components"}},
+         "workshop": {"title": "Figma Workshop (3)", "tag": "Components", "lessons": ["figma/beginners-guide-to-components", "figma/navbar"]}},
         {"activities": [{"label": "Inspiration"}, {"label": "Moodboard", "link": "methods/mood-board"}, {"label": "Brand pack"}, {"label": "AI-assisted multimodal visual loops"}],
-         "workshop": {"title": "Figma Workshop (4)", "tag": "Properties", "link": "figma/dynamic-buttons-part-one"}},
+         "workshop": {"title": "Figma Workshop (4)", "tag": "Properties", "lessons": ["figma/dynamic-buttons-part-one", "figma/dynamic-buttons-part-deux"]}},
         {"activities": [{"label": "Checkpoint presentation"}], "checkpoint": true,
          "workshop": {"title": "Figma Workshop (5)", "tag": "App Replica", "link": "exercises/glovo-replica-challenge"}}
       ]
@@ -101,7 +101,8 @@
         {"activities": [{"label": "Field research"}, {"label": "Primary data collection", "link": "methods/user-interview"}]},
         {"activities": [{"label": "Synthesis", "link": "methods/discovery-summary"}, {"label": "Definition phase", "link": "methods/problem-statement"}]},
         {"activities": [{"label": "Information architecture", "link": "methods/task-flows"}]},
-        {"activities": [{"label": "Design system and branding", "link": "methods/style-guide"}]}
+        {"activities": [{"label": "Design system and branding", "link": "methods/style-guide"}],
+         "workshop": {"title": "Figma Workshop: Variables", "tag": "Variables", "lessons": ["figma/color-variables", "figma/number-variables", "figma/string-variables", "figma/variable-modes"]}}
       ]
     },
     {
