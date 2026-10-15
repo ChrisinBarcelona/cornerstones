@@ -23,11 +23,6 @@
   "ux/bad-user-experience": "Real examples of bad UX, from the Willy Wonka Experience to coercive design, poor accessibility and unclear signs.",
   "ux/a-case-of-genius": "The Trunki ride-on suitcase as a case study in designing for a real user need.",
   "ux/the-death-of-kodak": "Why Kodak failed to adapt to digital, and what that teaches about rapid prototyping and design thinking.",
-  "ux/non-directive-interview-technique": "How to run a non-directive interview: let the participant lead and don't steer their answers.",
-  "ux/interviewer-format": "The step-by-step structure for running a prototype interview, from the welcome to the debrief.",
-  "ux/interview-taking-notes": "What the note-taker records: who the user is, what they say and do, and what they think and feel.",
-  "ux/portfolio": "A sprint plan for building your portfolio site in Framer, with the videos to watch in each phase.",
-  "ux/scripts": "The phase-by-phase plan for the portfolio sprint, as a single table.",
 
   "figma/choose-your-frame": "How to pick a Figma frame size for the device you'll design and prototype on, and why aspect ratio matters.",
   "figma/starting-in-figma": "Your first Figma walkthrough: set up frames, then build and style the shapes for an animated button.",

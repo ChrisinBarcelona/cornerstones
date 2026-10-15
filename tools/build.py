@@ -53,10 +53,8 @@ TRACKS = [
          "Foundations": "Where UX comes from, what it is, and the people and roles behind it.",
          "Psychology": "How people perceive, decide and behave, and the laws and heuristics that follow.",
          "Process": "How design thinking works, from data and wicked problems to MVPs and wireframes.",
-         "Interface": "UI basics, and how people physically interact: gestures and haptics.",
          "Case Studies": "Real products that got UX very right, or very wrong.",
-         "Research": "How to interview users and take notes that are useful.",
-         "Career": "Building your portfolio.",
+         "Interface": "UI basics, and how people physically interact: gestures and haptics.",
      }},
     {"id": "methods", "out": "methods", "index": "methods.html", "label": "UX Methods", "noun": "Method",
      "eyebrow": "Sprint Toolkit", "h1": "UX Methods",
@@ -205,10 +203,6 @@ RELATED = [
     ("exercises/airbnb-replica-challenge", "figma/beginners-guide-to-components"),
     ("exercises/airbnb-replica-challenge", "exercises/glovo-replica-challenge"),
     ("exercises/airbnb-replica-challenge", "exercises/youtube-challenge"),
-    ("methods/limited-intervention-technique", "ux/non-directive-interview-technique"),
-    ("methods/user-interview", "ux/non-directive-interview-technique"),
-    ("methods/facilitator-format", "ux/interviewer-format"),
-    ("methods/notetaker-format", "ux/interview-taking-notes"),
     ("methods/pick-a-target", "ux/target-mvp"),
     ("methods/paper-wireframes", "ui/paper-wireframes"),
     ("methods/style-guide", "ui/style-guides"),
@@ -219,7 +213,6 @@ RELATED = [
     ("methods/site-visit", "methods/research-questions"),
     ("methods/desk-research", "methods/site-visit"),
     ("methods/desk-research", "methods/wicked-problem-mapping"),
-    ("methods/site-visit", "ux/non-directive-interview-technique"),
     ("methods/affinity-mapping", "methods/data-synthesis-with-ai"),
     ("methods/affinity-mapping", "methods/discovery-summary"),
     ("methods/service-design-blueprint", "methods/user-journey-map"),
@@ -229,14 +222,12 @@ RELATED = [
     ("methods/wicked-problem-mapping", "methods/problem-statement"),
     ("methods/dvf-analysis", "methods/vote"),
     ("methods/sitemap", "methods/task-flows"),
-    ("methods/sitemap", "ux/portfolio"),
     ("methods/mood-board", "methods/mood-board-with-ai"),
     ("methods/mood-board", "methods/brand-pack"),
     ("methods/brand-pack", "methods/style-guide"),
     ("methods/ab-test", "methods/usability-test"),
     ("methods/cataloguing-artifacts", "methods/process-narrative"),
     ("methods/sprint-retrospective", "methods/process-narrative"),
-    ("methods/process-narrative", "ux/portfolio"),
     ("methods/hi-fi", "ux/stages-of-wireframes"),
     ("methods/research-goal", "methods/research-questions"),
     ("methods/crazy-8s", "methods/crazy-8s-with-ai"),
@@ -1153,6 +1144,13 @@ def moved_pages(data):
 # Pages taken off the site: old address -> where to send visitors instead.
 REMOVED = {f"lectures/{s}.html": "../ui.html" for s in ("what-is-ui-design", "icons", "colors", "typography", "grid", "design-systems")}
 REMOVED["methods/lo-fi.html"] = "mid-fi.html"
+REMOVED.update({
+    "lectures/non-directive-interview-technique.html": "../methods/limited-intervention-technique.html",
+    "lectures/interviewer-format.html": "../methods/facilitator-format.html",
+    "lectures/interview-taking-notes.html": "../methods/notetaker-format.html",
+    "lectures/portfolio.html": "../methods/process-narrative.html",
+    "lectures/scripts.html": "../ux.html",
+})
 REMOVED["ui/case-studies-and-how-to-tell-a-good-story.html"] = "../methods/process-narrative.html"
 
 

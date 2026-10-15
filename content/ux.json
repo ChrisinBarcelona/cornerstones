@@ -3,10 +3,8 @@
     "Foundations",
     "Psychology",
     "Process",
-    "Interface",
     "Case Studies",
-    "Research",
-    "Career"
+    "Interface"
   ],
   "lectures": [
     {
@@ -208,46 +206,6 @@
       "children": [],
       "number": 23,
       "category": "Interface"
-    },
-    {
-      "slug": "non-directive-interview-technique",
-      "title": "Non-Directive Interview Technique",
-      "parent": null,
-      "children": [],
-      "number": 24,
-      "category": "Research"
-    },
-    {
-      "slug": "interviewer-format",
-      "title": "Interviewer Format",
-      "parent": null,
-      "children": [],
-      "number": 25,
-      "category": "Research"
-    },
-    {
-      "slug": "interview-taking-notes",
-      "title": "Interview Taking Notes",
-      "parent": null,
-      "children": [],
-      "number": 26,
-      "category": "Research"
-    },
-    {
-      "slug": "portfolio",
-      "title": "Portfolio",
-      "parent": null,
-      "children": [],
-      "number": 27,
-      "category": "Career"
-    },
-    {
-      "slug": "scripts",
-      "title": "Scripts",
-      "parent": null,
-      "children": [],
-      "number": 28,
-      "category": "Career"
     }
   ],
   "subpages": [

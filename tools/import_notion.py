@@ -39,13 +39,13 @@ UX_CATEGORIES = {
     "Psychology": ["the-bias-of-beauty", "bias", "mental-models", "design-psychology", "laws-of-ux",
                    "neilson-heuristics"],
     "Process": ["data", "what-is-design-thinking", "wicked-problem", "stages-of-wireframes", "target-mvp"],
-    "Interface": ["gestures", "haptics"],
     "Case Studies": ["bad-user-experience", "a-case-of-genius", "the-death-of-kodak"],
-    "Research": ["non-directive-interview-technique", "interviewer-format", "interview-taking-notes"],
-    "Career": ["portfolio", "scripts"],
+    "Interface": ["gestures", "haptics"],
 }
-# UX lectures taken off the site (What is UI Design and its parts now live in UI Lectures and Figma).
-UX_REMOVED = {"what-is-ui-design"}
+# UX lectures taken off the site: What is UI Design (now in UI Lectures and Figma), the interviewing lectures
+# (covered by the UX Methods) and the Career lectures (Portfolio, Scripts).
+UX_REMOVED = {"what-is-ui-design", "non-directive-interview-technique", "interviewer-format", "interview-taking-notes",
+              "portfolio", "scripts"}
 # Bootcamp UI: these hub pages become UI lecture categories; every other link is an exercise.
 UI_GROUPS = {"UI Starter Pack": "Figma Guides", "UI Theory": "UI Theory"}
 # Templates and duplicates, left out wherever they appear.

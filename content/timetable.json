@@ -244,10 +244,6 @@
               "link": "methods/user-persona"
             }
           ],
-          "lectures": [
-            "ux/non-directive-interview-technique",
-            "ux/interview-taking-notes"
-          ],
           "daily": "exercises/music-player"
         },
         {
@@ -356,7 +352,6 @@
             }
           ],
           "lectures": [
-            "ux/interviewer-format",
             "ux/neilson-heuristics"
           ],
           "daily": "exercises/ux-x-ai"
@@ -822,13 +817,8 @@
             }
           ],
           "workshop": {
-            "title": "Framer Workshop (1)",
-            "link": "ux/portfolio"
-          },
-          "lectures": [
-            "ux/portfolio",
-            "ux/scripts"
-          ]
+            "title": "Framer Workshop (1)"
+          }
         },
         {
           "activities": [
@@ -838,8 +828,7 @@
             }
           ],
           "workshop": {
-            "title": "Framer Workshop (2)",
-            "link": "ux/portfolio"
+            "title": "Framer Workshop (2)"
           }
         },
         {
@@ -854,20 +843,17 @@
             }
           ],
           "workshop": {
-            "title": "Framer Workshop (3)",
-            "link": "ux/portfolio"
+            "title": "Framer Workshop (3)"
           }
         },
         {
           "activities": [
             {
-              "label": "Website development with Framer AI, or Claude Code with GitHub and React.js",
-              "link": "ux/portfolio"
+              "label": "Website development with Framer AI, or Claude Code with GitHub and React.js"
             }
           ],
           "workshop": {
-            "title": "Framer Workshop (4)",
-            "link": "ux/portfolio"
+            "title": "Framer Workshop (4)"
           }
         },
         {
@@ -878,8 +864,7 @@
           ],
           "presentation": "Final Presentation",
           "workshop": {
-            "title": "Framer Workshop (5)",
-            "link": "ux/portfolio"
+            "title": "Framer Workshop (5)"
           }
         }
       ]
