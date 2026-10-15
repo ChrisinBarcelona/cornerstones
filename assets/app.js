@@ -114,3 +114,65 @@
     results.hidden = false;
   });
 })();
+
+// Timetable: tick cards off (saved in this browser), per-week progress, routine toggle, expand all
+(function () {
+  var board = document.querySelector('.timetable');
+  if (!board) return;
+  var KEY = 'cs-timetable-done';
+  var done = {};
+  try { done = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) {} }
+  var cards = board.querySelectorAll('.tt-card');
+
+  function progress() {
+    var total = 0, ticked = 0;
+    board.querySelectorAll('.tt-week').forEach(function (week) {
+      var cs = week.querySelectorAll('.tt-card');
+      var n = 0;
+      cs.forEach(function (c) { if (done[c.dataset.id]) n++; });
+      var el = week.querySelector('.tt-progress');
+      el.textContent = n + ' / ' + cs.length + ' done';
+      el.classList.toggle('full', n === cs.length);
+      total += cs.length; ticked += n;
+    });
+    document.getElementById('tt-overall').textContent = ticked + ' of ' + total + ' complete';
+  }
+  cards.forEach(function (card) {
+    var box = card.querySelector('.tt-done input');
+    box.checked = !!done[card.dataset.id];
+    card.classList.toggle('is-done', box.checked);
+    box.addEventListener('change', function () {
+      if (box.checked) done[card.dataset.id] = 1; else delete done[card.dataset.id];
+      card.classList.toggle('is-done', box.checked);
+      save(); progress();
+    });
+  });
+  progress();
+
+  var routine = document.getElementById('tt-routine');
+  function setRoutine(show) {
+    board.classList.toggle('hide-routine', !show);
+    routine.checked = show;
+    try { localStorage.setItem('cs-tt-routine', show ? '1' : '0'); } catch (e) {}
+  }
+  var stored = null;
+  try { stored = localStorage.getItem('cs-tt-routine'); } catch (e) {}
+  setRoutine(stored !== '0');
+  routine.addEventListener('change', function () { setRoutine(routine.checked); });
+
+  var weeks = board.querySelectorAll('.tt-week details');
+  var expand = document.getElementById('tt-expand');
+  expand.addEventListener('click', function () {
+    var open = expand.textContent === 'Expand all';
+    weeks.forEach(function (d) { d.open = open; });
+    expand.textContent = open ? 'Collapse all' : 'Expand all';
+  });
+  // Jumping to a week opens it.
+  function openFromHash() {
+    var target = location.hash && document.querySelector(location.hash + ' details');
+    if (target) target.open = true;
+  }
+  window.addEventListener('hashchange', openFromHash);
+  openFromHash();
+})();

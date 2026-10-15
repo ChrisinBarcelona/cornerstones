@@ -1,6 +1,7 @@
 """Render content/ into the static site.
 
     index.html      Course home: the four sections, a suggested route and a search of everything
+    timetable.html  The 9-week timetable board (content/timetable.json)
     ux.html         UX lectures        -> lectures/<slug>.html
     methods.html    UX methods         -> methods/<slug>.html
     ui.html         UI lectures        -> ui/<slug>.html
@@ -218,7 +219,7 @@ def page(title, description, body, depth, active):
       <span class="brand-mark">C</span>
       <span class="brand-text"><span class="brand-name">{SITE.upper()}</span><span class="brand-sub">UX &amp; UI at Barcelona Code School</span></span>
     </a>
-    <nav class="nav-links">{links}<a href="https://github.com/ChrisinBarcelona/cornerstones">GitHub</a></nav>
+    <nav class="nav-links">{links}<a href="{prefix}timetable.html"{" aria-current=page" if active == "timetable" else ""}>Timetable</a></nav>
     <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme">{ICON_SUN}</button>
   </div>
 </header>
@@ -680,7 +681,7 @@ def build_home(data):
       <div>
         <div class="eyebrow">Barcelona Code School · UX &amp; UI Bootcamp</div>
         <h1>Everything for the bootcamp, in one place</h1>
-        <p class="lede">Lectures to read, methods to use in your sprints, Figma lessons and briefs to practise with. Pick a section, or follow the suggested route.</p>
+        <p class="lede">Lectures to read, methods to use in your sprints, Figma lessons and briefs to practise with. Pick a section, follow the suggested route, or see <a href="timetable.html">the nine-week timetable</a>.</p>
       </div>
       <label class="search search-all"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q-all" type="search" placeholder="Search all {len(index)} pages…" autocomplete="off"></label>
     </header>
@@ -698,11 +699,113 @@ def build_home(data):
     print(f"index.html: home, {len(index)} pages searchable")
 
 
+TAG_COLOURS = 7
+
+
+def tag(label, link=None, data=None):
+    """A Notion-style coloured tag; linked tags point at a page on this site ("section/slug" or a section)."""
+    colour = sum(map(ord, label.lower())) % TAG_COLOURS
+    if not link:
+        return f'<span class="tt-tag c{colour}">{esc(label)}</span>'
+    track, _, slug = link.partition("/")
+    if slug:
+        if slug not in data[track]["by_slug"]:
+            raise SystemExit(f"timetable.json links to missing page {link}")
+        href = f'{TRACK[track]["out"]}/{slug}.html'
+    else:
+        href = TRACK[track]["index"]
+    return f'<a class="tt-tag c{colour} linked" href="{href}">{esc(label)}</a>'
+
+
+def tt_card(cid, kind, icon, title, props=(), text="", tags="", sub=""):
+    props_html = "".join(f"<span>{esc(x)}</span>" for x in props if x)
+    return f"""<article class="tt-card kind-{kind}" data-id="{cid}">
+  <h4 class="tt-title"><span class="tt-icon" aria-hidden="true">{icon}</span><span>{esc(title)}</span></h4>
+  {f'<div class="tt-sub">{esc(sub)}</div>' if sub else ''}
+  {f'<div class="tt-props">{props_html}</div>' if props_html else ''}
+  {f'<p class="tt-text">{text}</p>' if text else ''}
+  {f'<div class="tt-tags">{tags}</div>' if tags else ''}
+  <label class="tt-done"><input type="checkbox"><span>Mark as complete</span></label>
+</article>"""
+
+
+def build_timetable(data):
+    tt = json.loads((CONTENT / "timetable.json").read_text(encoding="utf-8"))
+    r = tt["routine"]
+    days = tt["days"]
+    head = "".join(f'<div class="tt-colhead"><span class="tt-daypill d{i}">Day {i}</span><span>{d}</span></div>'
+                   for i, d in enumerate(days, 1))
+    weeks_html, chips = [], []
+    for w_i, w in enumerate(tt["weeks"], 1):
+        name = f'{w["project"]}{" – " + w["part"] if w["part"] else ""}'
+        chips.append(f'<a class="tt-chip" href="#week-{w_i}"><b>Week {w_i}</b><span>{esc(w["theme"])}</span></a>')
+        cols = []
+        for d_i, day in enumerate(w["days"], 1):
+            cid = f"w{w_i}d{d_i}"
+            cards = [tt_card(f"{cid}-standup", "routine", r["standup"]["icon"], r["standup"]["title"],
+                             (r["standup"]["time"], r["standup"]["length"]))]
+            if d_i == 1:
+                cards.append(tt_card(f"{cid}-sprint", "sprint", "🚀", f'{w["code"]} | {w["theme"]}', sub=name,
+                                     text=f'{esc(w["summary"])}<span class="tt-ai"><b>AI in this sprint:</b> {esc(w["ai"])}</span>',
+                                     tags="".join(tag(t) for t in w["tools"])))
+            if day.get("checkpoint"):
+                cards.append(tt_card(f"{cid}-checkpoint", "checkpoint", "🏁", "Check Point", ("11:00", "5 min per presentation"),
+                                     text="Informal presentations by students, with feedback from the teacher."))
+            cards.append(tt_card(f"{cid}-activities", "activities", "🤸", "Activities for the Day",
+                                 tags="".join(tag(a["label"], a.get("link"), data) for a in day["activities"])))
+            if day.get("workshop"):
+                ws = day["workshop"]
+                icon = "🎨" if ws["title"].startswith("Figma") else "🖥️"
+                cards.append(tt_card(f"{cid}-workshop", "workshop", icon, ws["title"],
+                                     tags=tag(ws.get("tag") or "Portfolio site", ws.get("link"), data)))
+            cards.append(tt_card(f"{cid}-lunch", "routine", r["lunch"]["icon"], r["lunch"]["title"], (r["lunch"]["time"],)))
+            if day.get("presentation"):
+                cards.append(tt_card(f"{cid}-presentation", "presentation", "🎤", day["presentation"]))
+            cards.append(tt_card(f"{cid}-checkout", "routine", r["checkout"]["icon"], r["checkout"]["title"],
+                                 (r["checkout"]["time"], r["checkout"]["length"])))
+            cols.append(f'<div class="tt-col"><div class="tt-col-label"><span class="tt-daypill d{d_i}">Day {d_i}</span> {days[d_i - 1]}</div>{"".join(cards)}</div>')
+        weeks_html.append(f"""<section class="tt-week" id="week-{w_i}">
+  <details{' open' if w_i == 1 else ''}>
+    <summary><span class="tt-caret" aria-hidden="true"></span><span class="tt-weekpill">Week {w_i}</span>
+      <span class="tt-weekname">{esc(w["theme"])} <span>· {esc(name)}</span></span>
+      <span class="tt-progress" data-week="{w_i}"></span></summary>
+    <div class="tt-grid">{"".join(cols)}</div>
+  </details>
+</section>""")
+    body = f"""
+<main class="timetable">
+  <div class="wrap">
+    <header class="hero tt-hero">
+      <div>
+        <div class="eyebrow">In-Person Bootcamp · UX Day by Day</div>
+        <h1>Timetable</h1>
+        <p class="lede">Nine weeks, {esc(tt["hours"].replace("Monday to Friday, ", "Monday to Friday, "))}. Every week is a sprint: a brief on Monday, a presentation on Friday. Tags with an arrow open the matching lesson or method.</p>
+      </div>
+      <div class="tt-tools">
+        <span class="tt-overall" id="tt-overall"></span>
+        <label class="tt-toggle"><input type="checkbox" id="tt-routine" checked> Show daily routine</label>
+        <button type="button" class="tt-btn" id="tt-expand">Expand all</button>
+      </div>
+    </header>
+    <nav class="tt-chips" aria-label="Weeks">{"".join(chips)}</nav>
+    <div class="tt-board">
+      <div class="tt-head">{head}</div>
+      {"".join(weeks_html)}
+    </div>
+    <p class="tt-note">Ticks are saved in this browser only.</p>
+  </div>
+</main>"""
+    (ROOT / "timetable.html").write_text(page(f"{SITE} · Timetable", "The nine-week UX/UI bootcamp, day by day.", body, 0, "timetable"),
+                                         encoding="utf-8")
+    print(f"timetable.html: {len(tt['weeks'])} weeks")
+
+
 def main():
     data = load()
     for t in TRACKS:
         build_track(t, data)
     build_home(data)
+    build_timetable(data)
 
 
 if __name__ == "__main__":
