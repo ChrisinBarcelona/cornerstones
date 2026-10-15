@@ -1,5 +1,5 @@
 # cornerstones
-It's notes for me to teach my stuents - UX LEarning resource for Barcelona Code School
+UX Learning resource for Barcelona Code School
 
 A static website. `index.html` is the course home (the four sections, a suggested route and a search of every page); each section has its own contents page:
 
