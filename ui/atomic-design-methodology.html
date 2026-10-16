@@ -37,28 +37,53 @@
       <div class="eyebrow">Lecture 02 · UI Theory</div>
       <div class="title-row"><h1>Atomic Design Methodology</h1><button type="button" class="complete-btn head-complete" data-complete="ui/atomic-design-methodology" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button></div>
       <p class="lede">Brad Frost&#x27;s atomic design: build interfaces from atoms and molecules up to organisms, templates and pages.</p>
-      <div class="meta"><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 min read</span></div>
+      <div class="meta"><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>2 min read</span></div>
     </header>
     <div class="lecture-grid">
-      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#atoms">Atoms</a></li><li class="lvl2"><a href="#molecules">Molecules</a></li><li class="lvl2"><a href="#organisms">Organisms</a></li><li class="lvl2"><a href="#template">Template</a></li><li class="lvl2"><a href="#pages">Pages</a></li></ol></div><div class="rail-block"><div class="rail-label">UI Theory</div><ol class="toc family"><li><a href="colour-values.html">Colour Values</a></li><li><a href="atomic-design-methodology.html" aria-current=page>Atomic Design Methodology</a></li><li><a href="file-types.html">File Types</a></li><li><a href="spacing-grids.html">Spacing &amp; Grids</a></li><li><a href="typeface.html">Typeface</a></li><li><a href="style-guides.html">Style Guides</a></li><li><a href="icons.html">Icons</a></li><li><a href="paper-wireframes.html">Paper Wireframes Tips</a></li></ol></div></div></div></aside>
+      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#atoms">Atoms</a></li><li class="lvl2"><a href="#molecules">Molecules</a></li><li class="lvl2"><a href="#organisms">Organisms</a></li><li class="lvl2"><a href="#templates">Templates</a></li><li class="lvl2"><a href="#pages">Pages</a></li><li class="lvl2"><a href="#why-it-matters-for-ux">Why it matters for UX</a></li><li class="lvl2"><a href="#try-it-break-a-screen-into-atoms-30-minutes">Try it: break a screen into atoms (30 minutes)</a></li><li class="lvl2"><a href="#media">Media</a></li><li class="lvl2"><a href="#resources">Resources</a></li><li class="lvl2"><a href="#key-takeaways">Key takeaways</a></li></ol></div><div class="rail-block"><div class="rail-label">UI Theory</div><ol class="toc family"><li><a href="colour-values.html">Colour Values</a></li><li><a href="atomic-design-methodology.html" aria-current=page>Atomic Design Methodology</a></li><li><a href="file-types.html">File Types</a></li><li><a href="spacing-grids.html">Spacing &amp; Grids</a></li><li><a href="typeface.html">Typeface</a></li><li><a href="style-guides.html">Style Guides</a></li><li><a href="icons.html">Icons</a></li><li><a href="paper-wireframes.html">Paper Wireframes Tips</a></li></ol></div></div></div></aside>
       <article class="prose">
-<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#atoms">Atoms</a></li><li class="lvl2"><a href="#molecules">Molecules</a></li><li class="lvl2"><a href="#organisms">Organisms</a></li><li class="lvl2"><a href="#template">Template</a></li><li class="lvl2"><a href="#pages">Pages</a></li></ol></details>
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#atoms">Atoms</a></li><li class="lvl2"><a href="#molecules">Molecules</a></li><li class="lvl2"><a href="#organisms">Organisms</a></li><li class="lvl2"><a href="#templates">Templates</a></li><li class="lvl2"><a href="#pages">Pages</a></li><li class="lvl2"><a href="#why-it-matters-for-ux">Why it matters for UX</a></li><li class="lvl2"><a href="#try-it-break-a-screen-into-atoms-30-minutes">Try it: break a screen into atoms (30 minutes)</a></li><li class="lvl2"><a href="#media">Media</a></li><li class="lvl2"><a href="#resources">Resources</a></li><li class="lvl2"><a href="#key-takeaways">Key takeaways</a></li></ol></details>
 <div class="callout">
 <p><span class="callout-icon">📝</span>A <strong>design system</strong> is a complete set of standards intended to manage design at scale using reusable components and patterns.</p>
 </div>
 <p><strong>Atomic design is not a linear process</strong>, but rather a mental model to help us think of our user interfaces as both a cohesive whole and a collection of parts <em>at the same time</em>. Each of the five stages plays a key role in the hierarchy of our interface design systems. Let’s dive into each stage in a bit more detail.</p>
 <figure class="media"><img alt="" src="../content/ui/atomic-design-methodology/Untitled.png" loading="lazy" decoding="async"></figure>
-<p><a href="https://atomicdesign.bradfrost.com/chapter-2/">https://atomicdesign.bradfrost.com/chapter-2/</a></p>
-<h2 id="atoms"><strong>Atoms</strong></h2>
+<h2 id="atoms">Atoms</h2>
+<p>The smallest building blocks: a label, an input, a button, a colour, an icon. On their own they do little, but every interface is made of them. In Figma, atoms are your base components and styles.</p>
 <figure class="media"><img alt="" src="../content/ui/atomic-design-methodology/Untitled-1.png" loading="lazy" decoding="async"></figure>
 <h2 id="molecules">Molecules</h2>
+<p>Small groups of atoms that work together as a unit: a label, an input and a button become a search form. Molecules should do one job, and do it well.</p>
 <figure class="media"><img alt="" src="../content/ui/atomic-design-methodology/Untitled-2.png" loading="lazy" decoding="async"></figure>
 <h2 id="organisms">Organisms</h2>
+<p>Larger sections built from molecules and atoms: a header with a logo, navigation and search; a product card grid; a footer. Organisms are where your interface starts to look like a product.</p>
 <figure class="media"><img alt="" src="../content/ui/atomic-design-methodology/Untitled-3.png" loading="lazy" decoding="async"></figure>
-<h2 id="template">Template</h2>
+<h2 id="templates">Templates</h2>
+<p>Page-level layouts that place organisms on the grid and show the content structure, using placeholder content. A template is the skeleton of a page.</p>
 <figure class="media"><img alt="" src="../content/ui/atomic-design-methodology/Untitled-4.png" loading="lazy" decoding="async"></figure>
 <h2 id="pages">Pages</h2>
+<p>Templates filled with real content: real images, real copy, real data. Pages are where you test the system, because real content breaks things placeholder content never will.</p>
 <figure class="media"><img alt="" src="../content/ui/atomic-design-methodology/Untitled-5.png" loading="lazy" decoding="async"></figure>
+<hr />
+<h2 id="why-it-matters-for-ux">Why it matters for UX</h2>
+<p>Atomic design is how you think about a design system: build small, reusable parts, combine them into bigger ones, and every screen stays consistent. It maps directly onto Figma components and variants, and onto how developers build interfaces in code.</p>
+<h2 id="try-it-break-a-screen-into-atoms-30-minutes">Try it: break a screen into atoms (30 minutes)</h2>
+<ol>
+<li>Take a screenshot of an app's home screen.</li>
+<li>Circle and label every atom (buttons, icons, labels, inputs).</li>
+<li>Group them into molecules and organisms, and draw the template underneath.</li>
+<li>Rebuild one molecule in Figma as a component made of atom components.</li>
+</ol>
+<h2 id="media">Media</h2>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/PK_PICNTgAg" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<h2 id="resources">Resources</h2>
+<p><a href="https://atomicdesign.bradfrost.com/chapter-2/">Atomic Design, Chapter 2 – Brad Frost</a></p>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/5BgKwkpJQdE" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<h2 id="key-takeaways">Key takeaways</h2>
+<ul>
+<li>Atomic design builds interfaces from atoms, molecules, organisms, templates and pages.</li>
+<li>It's a mental model, not a linear process: think of parts and the whole at once.</li>
+<li>In Figma, it maps onto styles, components and nested instances.</li>
+</ul>
 <section class="complete" data-key="ui/atomic-design-methodology">
   <div class="complete-text"><b>Finished this lecture?</b></div>
   <button type="button" class="complete-btn" data-complete="ui/atomic-design-methodology" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>

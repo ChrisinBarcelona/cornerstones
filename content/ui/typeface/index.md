@@ -25,7 +25,9 @@ Typeface influences how meaning is constructed and interpreted in design. Though
 | **Monospaced / Fixed-width** | Every character same width | Technical, retro, coding-friendly | Code editors, terminals, typewriter-style designs | Courier, Consolas, SF Mono |
 | **Blackletter / Gothic** | Dense, ornate, medieval-inspired strokes | Historic, formal, decorative | Certificates, logos, historical reproduction | Fraktur, Old English Text |
 
-## Typeface
+## The typefaces
+
+Each of these typefaces changed what type could say. Read them in order and you read the history of typography, from the medieval scriptorium to the screen in your pocket.
 
 [Gothic (Blackletter)](gothic-blackletter.html)
 
@@ -49,4 +51,33 @@ Typeface influences how meaning is constructed and interpreted in design. Though
 
 [Comic Sans](comic-sans.html)
 
+---
 
+## Why it matters for UX
+
+Type is most of what users look at: interfaces are made of words. The typeface you choose sets the tone before anyone reads a word, and the hierarchy you build with it decides what they read first. Knowing the classifications lets you choose on purpose instead of by habit.
+
+## Try it: build a type hierarchy (30 minutes)
+
+1. Pick one sans-serif from the cheat sheet on the Comic Sans page, and one serif or display face to pair with it.
+2. In Figma, create text styles for H1, H2, H3, body and caption.
+3. Set the same short article in your styles, then swap only the typeface and compare how the tone changes.
+4. Write two sentences on which version fits a banking app, and which a festival app.
+
+## Media
+
+[https://www.youtube.com/watch?v=wOgIkxAfJsk](https://www.youtube.com/watch?v=wOgIkxAfJsk)
+
+[https://www.youtube.com/watch?v=mEAmAFgzQd4](https://www.youtube.com/watch?v=mEAmAFgzQd4)
+
+## Resources
+
+[Google Fonts Knowledge](https://fonts.google.com/knowledge)
+
+[Typography – Material Design 3](https://m3.material.io/styles/typography/overview)
+
+## Key takeaways
+
+- A typeface is the design; a font is one version of it (weight, style, size).
+- Each classification carries a tone: serif feels traditional, sans-serif neutral, display expressive.
+- Hierarchy, built with size, weight and spacing, decides what users read first.

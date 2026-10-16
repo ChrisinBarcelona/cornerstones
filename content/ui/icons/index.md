@@ -22,19 +22,19 @@ These icons have solid shapes or elements that are **filled with color**. They p
 
 ![Untitled](Untitled-2.png)
 
-### **Outlined Icons**
+### Outlined Icons
 
 ![Untitled](Untitled-3.png)
 
 Outlined icons consist of thin **lines or strokes** that form the shape of the icon. The interior of the shape is typically transparent or unfilled, resulting in a minimalistic and lightweight look.
 
-### **3D Icons**
+### 3D Icons
 
 ![Untitled](Untitled-4.jpg)
 
 3D icons **mimic real-world objects** and materials, incorporating textures, shadows, and gradients to create a sense of realism. They aim to replicate the look and feel of physical objects within a digital interface.
 
-### **Hand-drawn Icons**
+### Hand-drawn Icons
 
 ![Untitled](Untitled-5.jpg)
 
@@ -62,7 +62,7 @@ One of the most important things to remember is to maintain consistent geometry 
 
 ![Screenshot 2022-10-10 at 23.50.06.png](Screenshot_2022-10-10_at_23.50.06.png)
 
-Use round shaped ones with round shaped ones + Use icons from same family 
+Use rounded icons with rounded icons, and take every icon from the same family. 
 
 ### Make icons simple
 
@@ -76,7 +76,7 @@ Not all icons are created equal, so it’s important to wrap containers around t
 
 ![Screenshot 2022-10-10 at 23.51.26.png](Screenshot_2022-10-10_at_23.51.26.png)
 
-### **Provide an accessible touch target to icons**
+### Provide an accessible touch target to icons
 
 Touch targets are arguably some of the most important spacing elements in an interface. When a user has to try to tap multiple times on a button to get it to work, it’s frustrating and may cause some users to simply assume your UI is broken. When tappable elements are grouped too closely together, this amplifies the problem.
 
@@ -84,7 +84,7 @@ Touch target is the on-screen area that responds to user interaction. In general
 
 ![Screenshot 2022-10-10 at 23.52.59.png](Screenshot_2022-10-10_at_23.52.59.png)
 
-### **Ensure your icons scale correctly**
+### Ensure your icons scale correctly
 
 Not all icons are the same size. That’s why it’s important to keep icon scaling in mind when designing your icon set. Smaller size icons fit fewer details while larger icons can include more detail.
 
@@ -94,7 +94,7 @@ No time to design more icons? No problem. You can always wrap smaller icons in l
 
 ![Screenshot 2022-10-10 at 23.53.45.png](Screenshot_2022-10-10_at_23.53.45.png)
 
-### **Provide balanced icon sizing**
+### Provide balanced icon sizing
 
 The size of icons used together needs to be **balanced**
 
@@ -108,14 +108,33 @@ Make sure you use consistent colors for your icons. In general, one color for th
 
 ![Screenshot 2022-10-10 at 23.55.51.png](Screenshot_2022-10-10_at_23.55.51.png)
 
-<aside>
-📝 **Extra Curricular Exercise 1 (Optional)**
+---
 
-Assess 2-3 of your favourite websites and analyse their iconography use.
+## Why it matters for UX
 
-- Ask yourself, are they easily recognisable? Do they have a same language between them / are they from same family?
-- What is the relationship between the brand/company and the icons themselves?
-- Do you like it? Why?
-</aside>
+Icons save space and speed up recognition, but only when users understand them. An ambiguous icon costs more than a word. Consistent style, clear labels and generous touch targets turn icons from decoration into usability.
 
+## Try it: an icon audit (25 minutes)
 
+1. Pick two or three of your favourite websites or apps and screenshot their main navigation.
+2. For each icon, decide: is it recognisable without a label? Is it from the same family as the others?
+3. Check the touch targets: are they at least 44 × 44 px?
+4. Note how the icons relate to the brand, and whether you like them, and why.
+
+## Media
+
+[https://www.youtube.com/watch?v=ZF_25i-be8k](https://www.youtube.com/watch?v=ZF_25i-be8k)
+
+[https://www.youtube.com/watch?v=9MRTqn9tRl8](https://www.youtube.com/watch?v=9MRTqn9tRl8)
+
+## Resources
+
+[Material Symbols – Google Fonts](https://fonts.google.com/icons)
+
+[Lucide icons](https://lucide.dev)
+
+## Key takeaways
+
+- Icons must be understood, not just seen: label any icon that isn't universal.
+- Keep one icon family, one style, one meaning per icon.
+- Give every icon a touch target of at least 44–48 px.

@@ -9,7 +9,7 @@
 
 **Designed by:**
 
- Ed Hoffman and Max Miedinger
+Eduard Hoffmann and Max Miedinger
 
 **Foundry:**
 
@@ -25,7 +25,7 @@ Haas Type Foundry
 
 ---
 
-## **Intent:**
+## Intent
 
 - Designed to be **neutral and objective**
 - Created for maximum **clarity and readability**
@@ -36,7 +36,7 @@ The goal was not to express personality, but to let the content speak without st
 
 ---
 
-## **What was happening at the time:**
+## Context
 
 - Rise of the **International Typographic Style (Swiss Style)**
 - Emphasis on grids, order, and rational design systems
@@ -47,14 +47,14 @@ Typography shifted toward **function, neutrality, and consistency**.
 
 ---
 
-## **Type classification:**
+## Type classification
 
 - Sans-serif
 - Neo-grotesque sans-serif
 
 ---
 
-## **Characterised by:**
+## Characterised by
 
 - Uniform stroke weight
 - Tight letter spacing
@@ -67,7 +67,7 @@ Often compared to more humanist sans-serifs, which feel warmer and more open.
 
 ---
 
-## **Famous examples in use:**
+## Examples in use
 
 ![download.jpg](download.jpg)
 
@@ -75,7 +75,7 @@ Often compared to more humanist sans-serifs, which feel warmer and more open.
 
 ![Screenshot 2025-12-22 at 10.53.53.png](Screenshot_2025-12-22_at_10.53.53.png)
 
-## **Why designers still use it:**
+## Why designers still use it
 
 - Extremely **versatile and reliable**
 - Conveys professionalism and authority
@@ -84,7 +84,7 @@ Often compared to more humanist sans-serifs, which feel warmer and more open.
 
 ---
 
-## **When NOT to use it (teaching note):**
+## When not to use it
 
 - Projects needing strong personality or warmth
 - Long body text at small sizes (closed apertures can reduce readability)
@@ -92,15 +92,35 @@ Often compared to more humanist sans-serifs, which feel warmer and more open.
 
 ---
 
-## **Usage:**
+## Usage
 
 > Use Helvetica when you want to communicate neutrality, clarity, and authority — but not emotion, warmth, or individuality.
-> 
+>
 
 ---
 
-If you want, I can next:
+## Why it matters for UX
 
-- Fill this template with **Arial, Univers, Akzidenz-Grotesk, or Gill Sans**
-- Create a **comparison sheet (Helvetica vs Humanist sans)**
-- Simplify it into a **student critique handout**
+Helvetica is the face of neutrality: it lets the content speak and has shaped corporate and interface design for decades. Understanding its strengths (order, clarity) and weaknesses (closed apertures at small sizes) explains why newer UI fonts like San Francisco and Inter exist.
+
+## Try it: the neutrality test (15 minutes)
+
+1. Find three brand logos set in Helvetica (American Airlines, Lufthansa, Jeep, Toyota and many more).
+2. Swap one into a typeface with strong personality, such as Futura or Didot.
+3. Write down how the brand's personality changed.
+
+## Media
+
+[https://www.youtube.com/watch?v=X80kSDxF4rg](https://www.youtube.com/watch?v=X80kSDxF4rg)
+
+## Resources
+
+[Helvetica – Wikipedia](https://en.wikipedia.org/wiki/Helvetica)
+
+[Google Fonts Knowledge](https://fonts.google.com/knowledge)
+
+## Key takeaways
+
+- Helvetica (1957) is a neo-grotesque designed to be neutral and universal.
+- It defined Swiss Style, corporate identity and early digital interfaces.
+- Its closed apertures make it less readable at small sizes than modern UI fonts.

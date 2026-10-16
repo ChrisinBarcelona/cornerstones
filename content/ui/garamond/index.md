@@ -25,14 +25,14 @@ Originally cut and cast independently in Paris
 
 ---
 
-## **Intent:**
+## Intent
 
 - Designed to improve the readability and elegance of book typography
 - Based on Roman letterforms
 - Intended to feel timeless
 - Created for long-form reading and scholarly texts
 
-## **What was happening at the time:**
+## Context
 
 - The **Renaissance** revival of classical knowledge and art
 - Renewed interest in Ancient Rome and Greece
@@ -43,14 +43,14 @@ Typography served to **preserve and transmit knowledge**, reinforcing cultural a
 
 ---
 
-## **Type classification:**
+## Type classification
 
 - Serif
 - Old-style
 
 ---
 
-## **Characterised by:**
+## Characterised by
 
 - Moderate stroke contrast
 - Diagonal stress reflecting broad-nib calligraphy
@@ -63,13 +63,13 @@ Often contrasted with grotesque sans-serifs, which reject calligraphy and classi
 
 ---
 
-## **Famous examples in use:**
+## Examples in use
 
 ![Frame 41.jpg](Frame_41.jpg)
 
 ---
 
-## **Why designers still use it:**
+## Why designers still use it
 
 - Exceptional readability in long-form text
 - Strong association with knowledge and tradition
@@ -78,7 +78,7 @@ Often contrasted with grotesque sans-serifs, which reject calligraphy and classi
 
 ---
 
-## **When NOT to use it (teaching note):**
+## When not to use it
 
 - Modernist or highly contemporary design contexts
 - Interfaces requiring extreme clarity at very small sizes
@@ -87,7 +87,35 @@ Often contrasted with grotesque sans-serifs, which reject calligraphy and classi
 
 ---
 
-## **Usage:**
+## Usage
 
 > Use Garamond when you want to communicate intellectual authority, tradition, and humanist warmth — but not radical modernity, neutrality, or rebellion.
 >
+
+---
+
+## Why it matters for UX
+
+Garamond shows what good text type does: it disappears and lets you read for hours. Its open forms and moderate contrast are the benchmark for readability, even if your interface uses a sans-serif. If your product has long-form reading, a Garamond-style serif is worth considering.
+
+## Try it: the long-read test (20 minutes)
+
+1. Set the same 300-word article in EB Garamond and in a sans-serif such as Inter, at 18px with a 1.5 line height.
+2. Read both on your phone.
+3. Note which was more comfortable to read, and which felt more modern.
+
+## Media
+
+[https://www.youtube.com/watch?v=qnqir9lio9o](https://www.youtube.com/watch?v=qnqir9lio9o)
+
+## Resources
+
+[Garamond – Wikipedia](https://en.wikipedia.org/wiki/Garamond)
+
+[EB Garamond – Google Fonts](https://fonts.google.com/specimen/EB+Garamond)
+
+## Key takeaways
+
+- Garamond is the classic Renaissance old-style serif, made for books.
+- Moderate contrast and open forms make it excellent for long reading.
+- It signals knowledge and tradition; it is not for small UI labels.

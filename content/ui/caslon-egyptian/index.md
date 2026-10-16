@@ -23,7 +23,7 @@ Caslon Foundry
 
 ---
 
-## **Intent:**
+## Intent
 
 - Designed to serve **practical, industrial communication**, not refinement
 - A clear rejection of classical Roman proportions and calligraphic tradition
@@ -38,7 +38,7 @@ Caslon Egyptian was not trying to be elegant — it was deliberately *unpolished
 
 ---
 
-## **What was happening at the time:**
+## Context
 
 - The **Industrial Revolution** was transforming society
 - Rapid growth of advertising, signage, and mass communication
@@ -51,14 +51,14 @@ Caslon Egyptian stood in direct opposition to this.
 
 ---
 
-## **Type classification:**
+## Type classification
 
 - Sans-serif
 - Early grotesque (proto-grotesque)
 
 ---
 
-## **Characterised by:**
+## Characterised by
 
 - Complete absence of serifs
 - Heavy, uneven stroke weights
@@ -71,7 +71,7 @@ Compared to later sans-serifs, Caslon Egyptian feels rough and unsophisticated �
 
 ---
 
-## **Famous examples in use:**
+## Examples in use
 
 ![942ff888145933.5dcd7f9dbfb12.png](942ff888145933.5dcd7f9dbfb12.png)
 
@@ -83,7 +83,7 @@ Compared to later sans-serifs, Caslon Egyptian feels rough and unsophisticated �
 
 ---
 
-## **Why designers still use it:**
+## Why designers still use it
 
 - Strong historical significance as one of the **first sans-serif typefaces**
 - Communicates bluntness, honesty, and anti-elitism
@@ -92,7 +92,7 @@ Compared to later sans-serifs, Caslon Egyptian feels rough and unsophisticated �
 
 ---
 
-## **When NOT to use it (teaching note):**
+## When not to use it
 
 - Long-form reading or body text
 - Projects requiring elegance or refinement
@@ -101,17 +101,45 @@ Compared to later sans-serifs, Caslon Egyptian feels rough and unsophisticated �
 
 ---
 
-## **Usage:**
+## Usage
 
 > Use Caslon Egyptian when you want to communicate rebellion, utility, and industrial bluntness — but not classical beauty, refinement, or tradition.
 > 
 
 ---
 
-### *Why it was called “grotesque” (key historical note):
+## Why it was called “grotesque”
 
 The term *grotesque* was originally **dismissive**, not descriptive.
 
 To the typographic gatekeepers of the time — who valued Roman capitals, symmetry, and calligraphic heritage — sans-serif letters looked *wrong*, unfinished, even vulgar.
 
 What they mocked as grotesque would later become one of the most important typographic categories in history.
+
+---
+
+## Why it matters for UX
+
+Caslon Egyptian is the ancestor of every sans-serif in your interface. It shows that the plain, functional type we now take for granted was once a radical choice: function over taste, commerce over the elite.
+
+## Try it: trace the family tree (15 minutes)
+
+1. Find an image of Caslon Egyptian (1816), Helvetica (1957) and Roboto (2011).
+2. Put them side by side and list three things that stayed the same and three that changed.
+3. Write one sentence on why sans-serifs won on screens.
+
+## Media
+
+[https://www.youtube.com/watch?v=dYrzYnx4Dr4](https://www.youtube.com/watch?v=dYrzYnx4Dr4)
+
+## Resources
+
+[Sans-serif – Wikipedia](https://en.wikipedia.org/wiki/Sans-serif)
+
+[Google Fonts Knowledge](https://fonts.google.com/knowledge)
+
+## Key takeaways
+
+- Caslon Egyptian (1816) is one of the first sans-serif typefaces.
+- It put function and impact before classical beauty.
+- "Grotesque" began as an insult and became a whole category of type.

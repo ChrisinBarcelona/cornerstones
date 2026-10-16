@@ -14,25 +14,6 @@
   "figma/number-variables",
   "figma/starting-in-figma",
   "figma/string-variables",
-  "figma/variable-modes",
-  "ui/atomic-design-methodology",
-  "ui/caslon-egyptian",
-  "ui/colour-values",
-  "ui/comic-sans",
-  "ui/didot",
-  "ui/file-types",
-  "ui/futura",
-  "ui/garamond",
-  "ui/google-sans",
-  "ui/gothic-blackletter",
-  "ui/helvetica",
-  "ui/icons",
-  "ui/paper-wireframes",
-  "ui/roboto",
-  "ui/san-francisco",
-  "ui/spacing-grids",
-  "ui/style-guides",
-  "ui/times-new-roman",
-  "ui/typeface"
+  "figma/variable-modes"
  ]
 }

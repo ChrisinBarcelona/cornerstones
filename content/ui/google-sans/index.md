@@ -21,20 +21,20 @@ Google
 
 **Year:**
 
-2011
+2015 (as Product Sans, Google's logo typeface)
 
 ---
 
-## **Intent:**
+## Intent
 
-- Created as a system font for Google products and Android
+- Grew out of Product Sans, the typeface drawn for the 2015 Google logo, and became the typeface of Google's products and Android
 - Designed to be neutral, readable, and adaptable across devices
 - Balances geometric structure with open, friendly letterforms
 - Optimized for digital screens and multiple sizes
 
 Google aimed for a typeface that feels modern and functional without drawing attention to itself.
 
-## **What was happening at the time:**
+## Context
 
 - Smartphone and tablet use was rapidly growing
 - Interfaces required clean, legible fonts for small screens
@@ -44,14 +44,14 @@ Typography was shifting toward screen-first, highly functional designs.
 
 ---
 
-## **Type classification:**
+## Type classification
 
 - Primary: Sans-serif
-- Secondary: Neo-grotesque / humanist-influenced
+- Secondary: Geometric sans-serif
 
 ---
 
-## **Characterised by:**
+## Characterised by
 
 - Open apertures and generous x-height
 - Low stroke contrast for clarity
@@ -62,7 +62,7 @@ Compared to Helvetica, Google Sans feels warmer, more approachable, and optimize
 
 ---
 
-## **Famous examples in use:**
+## Examples in use
 
 ![Google-Sans.avif](Google-Sans.avif)
 
@@ -74,7 +74,7 @@ Compared to Helvetica, Google Sans feels warmer, more approachable, and optimize
 
 ---
 
-## **Why designers still use it:**
+## Why designers still use it
 
 - Conveys clarity, neutrality, and modern efficiency
 - Excellent readability for UI, web, and app design
@@ -82,7 +82,7 @@ Compared to Helvetica, Google Sans feels warmer, more approachable, and optimize
 
 ---
 
-## **When NOT to use it (teaching note):**
+## When not to use it
 
 - Projects needing strong personality or emotion
 - Print-heavy, decorative, or highly expressive branding
@@ -90,7 +90,35 @@ Compared to Helvetica, Google Sans feels warmer, more approachable, and optimize
 
 ---
 
-## **Usage:**
+## Usage
 
 > Use this typeface when you want to communicate clarity, neutrality, and modern digital efficiency — but not personality or historical character.
 >
+
+---
+
+## Why it matters for UX
+
+Google Sans shows how a brand typeface can become an interface typeface: it started as a logo and now speaks in every Google product. It's a model for how a friendly geometric sans can carry brand personality into UI without hurting readability.
+
+## Try it: brand to interface (20 minutes)
+
+1. Take a screenshot of a Google app and of an Android settings screen.
+2. Mark where Google Sans is used and where a more neutral face (Roboto) is used.
+3. Write one rule for when your own product would use its brand typeface, and when a neutral one.
+
+## Media
+
+[https://www.youtube.com/watch?v=mEAmAFgzQd4](https://www.youtube.com/watch?v=mEAmAFgzQd4)
+
+## Resources
+
+[Product Sans – Wikipedia](https://en.wikipedia.org/wiki/Product_Sans)
+
+[Google Fonts Knowledge](https://fonts.google.com/knowledge)
+
+## Key takeaways
+
+- Google Sans grew out of Product Sans, the typeface drawn for Google's 2015 logo.
+- It's a friendly geometric sans that carries the brand into the interface.
+- Brand typefaces work best for headings and key UI; neutral faces for dense text.

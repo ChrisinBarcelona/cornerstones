@@ -26,7 +26,7 @@ Apple Inc.
 
 ---
 
-## **Intent:**
+## Intent
 
 - Designed as Apple’s system typeface
 - Replaced Helvetica Neue for better screen performance
@@ -41,7 +41,7 @@ Apple aimed to create a typeface that prioritizes usability over expression.
 
 ---
 
-## **What was happening at the time:**
+## Context
 
 - Rise of high-resolution screens
 - Growth of mobile-first UI design
@@ -51,14 +51,14 @@ Typography was becoming performance-driven and screen-optimized.
 
 ---
 
-## **Type classification:**
+## Type classification
 
 - Primary: Sans-serif
 - Secondary: Neo-grotesque / humanist
 
 ---
 
-## **Characterised by:**
+## Characterised by
 
 - Large x-height and open apertures
 - Subtle curves and low contrast
@@ -69,7 +69,7 @@ More open and flexible than Helvetica Neue.
 
 ---
 
-## **Examples in use:**
+## Examples in use
 
 ![cb1f82ad-db1b-493c-8a95-c6064732b645.png](cb1f82ad-db1b-493c-8a95-c6064732b645.png)
 
@@ -79,7 +79,7 @@ More open and flexible than Helvetica Neue.
 
 ---
 
-## **Why designers still use it:**
+## Why designers still use it
 
 - Communicates clarity and trust
 - Excellent for UI and UX
@@ -89,7 +89,7 @@ Common in app and system design.
 
 ---
 
-## **When NOT to use it (teaching note):**
+## When not to use it
 
 - Expressive or character-driven branding
 - Editorial or print-heavy work
@@ -97,7 +97,35 @@ Common in app and system design.
 
 ---
 
-## **Usage:**
+## Usage
 
 > Use this typeface when you want to communicate clarity and usability — but not personality or emotion.
 >
+
+---
+
+## Why it matters for UX
+
+San Francisco is the typeface iPhone users read all day, and it's designed for the screen: optical sizes, wide spacing at small sizes and tight at large. Designing for iOS with SF makes your app feel native; studying it teaches you what a UI typeface needs.
+
+## Try it: design it native (20 minutes)
+
+1. Download SF Pro from Apple's fonts page and install it.
+2. Recreate one iOS settings screen in Figma using SF Pro Text for body and SF Pro Display for titles.
+3. Compare letter spacing at 13px and at 34px, and note what changes.
+
+## Media
+
+[https://www.youtube.com/watch?v=HMwnn9iEjok](https://www.youtube.com/watch?v=HMwnn9iEjok)
+
+## Resources
+
+[Fonts – Apple Developer](https://developer.apple.com/fonts/)
+
+[San Francisco – Wikipedia](https://en.wikipedia.org/wiki/San_Francisco_(sans-serif_typeface))
+
+## Key takeaways
+
+- San Francisco (2015) is Apple's system typeface, replacing Helvetica Neue.
+- It has optical sizes (Text and Display) tuned for different scales.
+- Use it to make iOS designs feel native; it's licensed for Apple platforms.
