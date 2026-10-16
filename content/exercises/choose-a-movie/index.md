@@ -1,36 +1,62 @@
 # Choose A Movie
 
-## Movie Trailer Intro Page
+## The brief
 
-Imagine you just got a new job as a UI designer with a streaming service which shows movies! Create a simple UI which invites people to watch the movie!  
+Back at **Flicker**, the streaming service. Before people press play, they land on a film's intro page. Design a movie trailer intro page that makes people want to watch.
 
-Good UI assets are simple, recognisable, require no cognitive strain. They are universally recognised!
+![Choose A Movie](Los_domingos-922871491-large.jpg)
 
-Source: [https://dribbble.com/rebeccanoren](https://dribbble.com/rebeccanoren)
+*Source not recorded.*
 
----
+## Deliverable
 
-## Potential Inclusions
+- One film intro page in an **iPhone 16** frame (393 × 852) in Figma, on the 8-point grid.
 
-1. Movie Title
-2. Movie Details
-3. Drop Down With Further Details* PLEASE INCLUDE
-4. Director Name
-5. Star Reviews
-6. Actors Names 
-7. Watch Now Button / Play Button* PLEASE INCLUDE
-8. You May Also Like
+## Must include
+
+1. Film title
+2. Watch now / play button
+3. Drop-down (or expandable section) with further details
+
+## Nice to have
+
+- Director
+- Cast
+- Star rating or reviews
+- You may also like
 
 ## Inspiration
 
-![Los_domingos-922871491-large.jpg](Los_domingos-922871491-large.jpg)
+![Choose A Movie inspiration](Screenshot_2025-10-15_at_15.50.49.png)
 
-![Screenshot 2025-10-15 at 15.50.49.png](Screenshot_2025-10-15_at_15.50.49.png)
+*Source not recorded.*
 
-![Screenshot 2025-10-15 at 15.45.11.png](Screenshot_2025-10-15_at_15.45.11.png)
+![Choose A Movie inspiration](Screenshot_2025-10-15_at_15.45.11.png)
 
-![94aaffd79bedfebd12ca73157b4f8e98.webp](94aaffd79bedfebd12ca73157b4f8e98.webp)
+*Source not recorded.*
 
-Source: [https://dribbble.com/Atulya_26](https://dribbble.com/am-designer)
+![Choose A Movie inspiration](94aaffd79bedfebd12ca73157b4f8e98.webp)
 
-## Difficulty Level ⭐️⭐️⭐️
+Source: [https://dribbble.com/am-designer](https://dribbble.com/am-designer)
+
+## Time box
+
+**Time box:** 3 hours
+
+**Difficulty:** ⭐️⭐️⭐️
+
+## Before you submit
+
+☐ Frame is iPhone 16 (393 × 852) and spacing follows the 8-point grid
+
+☐ Every *Must include* item is on the screen
+
+☐ The play button is the most prominent element
+
+☐ Details are tucked away until the user asks for them
+
+☐ Text is readable and colour contrast passes (4.5:1 for body text)
+
+☐ Layers are named and grouped; repeated elements are components
+
+☐ Shared the Figma link and a PNG export with your instructor

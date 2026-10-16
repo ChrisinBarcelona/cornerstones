@@ -1,33 +1,61 @@
 # CC Checkout
 
-## **Credit/Debit Card Checkout**
+## The brief
 
-This one is a classic UI challenge and really helps you to become familiar with inputs and actions. Imagine you are part of a team on an e-commerce app. Put yourself in the shoes (No pun intended 😅) of a user who is buying a pair of funky tennis shoes from The Sneaker Warehouse. Imagine you are ready to purchase your cool new shoes and you just need to punch in your credit card info! Make a Payment Checkout for the brand! 
+A classic UI challenge that makes you comfortable with inputs and actions. You're on the team behind the e-commerce app for **The Sneaker Warehouse**. Put yourself in the shoes (no pun intended) of someone buying a pair of funky trainers who just needs to enter their card details. Design the card checkout.
 
-![21c0fd7da3278390366d527b1cabed38.webp](21c0fd7da3278390366d527b1cabed38.webp)
+![CC Checkout](21c0fd7da3278390366d527b1cabed38.webp)
 
 Source: [https://dribbble.com/theacheang](https://dribbble.com/theacheang)
 
-## Potential Inclusions
+## Deliverable
 
-1. Name of Card
-2. Card Number
-3. Expiry Date
-4. CVV  
-5. Pay Now Button
-6. Back Button
-7. Total
-8. Subtotal
-9. Delivery Fee 
+- One checkout screen in an **iPhone 16** frame (393 × 852) in Figma, on the 8-point grid.
+
+## Must include
+
+1. Name on card
+2. Card number
+3. Expiry date
+4. CVV
+5. Total
+6. Pay now button
+
+## Nice to have
+
+- Subtotal and delivery fee
+- Back button
+- Card preview that updates as you type
+- Saved cards
 
 ## Inspiration
 
-![iphone_x-xs-11_pro___2_2x.webp](iphone_x-xs-11_pro___2_2x.webp)
+![CC Checkout inspiration](iphone_x-xs-11_pro___2_2x.webp)
 
 Source: [https://dribbble.com/davidcollinpaul](https://dribbble.com/davidcollinpaul)
 
-![checkout_form_dribbble.webp](checkout_form_dribbble.webp)
+![CC Checkout inspiration](checkout_form_dribbble.webp)
 
 Source: [https://dribbble.com/ifrhvuiux](https://dribbble.com/ifrhvuiux)
 
-## Difficulty Level ⭐️⭐️⭐️
+## Time box
+
+**Time box:** 3 hours
+
+**Difficulty:** ⭐️⭐️⭐️
+
+## Before you submit
+
+☐ Frame is iPhone 16 (393 × 852) and spacing follows the 8-point grid
+
+☐ Every *Must include* item is on the screen
+
+☐ Fields use the right keyboard (numeric for card number and CVV)
+
+☐ The total is visible right next to the Pay button
+
+☐ Text is readable and colour contrast passes (4.5:1 for body text)
+
+☐ Layers are named and grouped; repeated elements are components
+
+☐ Shared the Figma link and a PNG export with your instructor

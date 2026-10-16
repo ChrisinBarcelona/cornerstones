@@ -1,40 +1,63 @@
 # New Notification
 
-## New Notification
+## The brief
 
-You are gonna be a caption whizz kid by the end of this challenge! Imagine you are the UI designer on a brand new social media network called Fireballs which is an online gaming community for fantasy gamers. Design a notifications panel which shows latest messages you get from your friends, fans or followers. 
+You'll be a caption whizz by the end of this one. You're the UI designer at **Fireballs**, a brand-new social network for fantasy gamers. Design the notifications panel that shows the latest messages from friends, fans and followers.
 
-![7beeeda328aaa8db4150f9568cd83d00.webp](7beeeda328aaa8db4150f9568cd83d00.webp)
+![New Notification](7beeeda328aaa8db4150f9568cd83d00.webp)
 
 Source: [https://dribbble.com/Shuma87](https://dribbble.com/Shuma87)
 
----
+## Deliverable
 
-## Potential Inclusions
+- One notifications panel in an **iPhone 16** frame (393 × 852) in Figma, on the 8-point grid, with at least five notifications of different types.
 
-1. **Notification From**
-2. Notification Action
-3. **When Sent**
-4. Notification Status (Read/Unread)
-5. Notification Attachement
-6. Sender Status (Online/Offline)
-7. Reply Input
-8. Notification Type
+## Must include
+
+1. Who it's from
+2. When it was sent
+3. Read / unread status
+4. Notification type
+
+## Nice to have
+
+- Notification action (e.g. Reply, Accept)
+- Attachment preview
+- Sender online / offline
+- Reply input
 
 ## Inspiration
 
-![Screenshot 2023-05-31 at 13.07.11.png](Screenshot_2023-05-31_at_13.07.11.png)
+![New Notification inspiration](Screenshot_2023-05-31_at_13.07.11.png)
 
-Source: [https://dribbble.com/ilnicki](https://dribbble.com/ilnicki) 
+Source: [https://dribbble.com/ilnicki](https://dribbble.com/ilnicki)
 
-![Screenshot 2023-05-31 at 13.08.22.png](Screenshot_2023-05-31_at_13.08.22.png)
+![New Notification inspiration](Screenshot_2023-05-31_at_13.08.22.png)
 
 Source: [https://dribbble.com/tranmautritam](https://dribbble.com/tranmautritam)
 
-![Screenshot 2023-05-31 at 13.09.29.png](Screenshot_2023-05-31_at_13.09.29.png)
+![New Notification inspiration](Screenshot_2023-05-31_at_13.09.29.png)
 
 Source: [https://dribbble.com/NorchStudio](https://dribbble.com/NorchStudio)
 
----
+## Time box
 
-## Difficulty Level ⭐️⭐️⭐️
+**Time box:** 3 hours
+
+**Difficulty:** ⭐️⭐️⭐️
+
+## Before you submit
+
+☐ Frame is iPhone 16 (393 × 852) and spacing follows the 8-point grid
+
+☐ Every *Must include* item is on the screen
+
+☐ Unread notifications stand out from read ones
+
+☐ Captions are short and scannable
+
+☐ Text is readable and colour contrast passes (4.5:1 for body text)
+
+☐ Layers are named and grouped; repeated elements are components
+
+☐ Shared the Figma link and a PNG export with your instructor

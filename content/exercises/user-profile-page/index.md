@@ -1,95 +1,66 @@
 # User Profile Page
 
-## Design a User Profile Page
+## The brief
 
-Your task is to design a user profile page that not only looks visually stunning but also offers a highly functional and intuitive user experience. This profile page should effectively showcase a user's personal and professional details while maintaining a clean and organised layout. Think of a brand or service and get going!
+Design the profile page for **Crew**, a professional network for freelance creatives. It should showcase a person's personal and professional details in a clean, organised layout that looks great and is easy to use.
 
-![original-939eb0b263cb8afbd5920bedc382d268.png](original-939eb0b263cb8afbd5920bedc382d268.png)
+![User Profile Page](original-939eb0b263cb8afbd5920bedc382d268.png)
 
----
+*Source not recorded.*
 
-## Potential Inclusions
+## Deliverable
 
-### **Personal Information**
+- One profile page in an **iPhone 16** frame (393 × 852) in Figma, on the 8-point grid. Scrolling is fine: make the frame as tall as you need.
 
-1. Profile Picture
-2. Full Name
-3. Username or Handle
-4. Job Title/Position
-5. Location (City, Country)
-6. Bio/Personal Statement
-7. Birthday
+## Must include
 
-### **Contact Information**
+1. Profile picture, full name and username
+2. Job title and location
+3. Short bio
+4. Edit profile button
+5. Followers / following count
 
-1. Email Address
-2. Phone Number
-3. Social Media Links (LinkedIn, Twitter, Instagram, etc.)
-4. Website/Portfolio Link
-5. Instant Messaging Handles (Skype, WhatsApp)
+## Nice to have
 
-### **Professional Information**
-
-1. Work History/Experience
-2. Education/Qualifications
-3. Skills and Endorsements
-4. Certifications
-5. Languages Spoken
-6. Professional Achievements/Awards
-
-### **User Activity**
-
-1. Recent Posts or Contributions
-2. Followers/Following Count
-3. Comments or Reviews Given
-4. Likes or Favorites
-5. Shared Content
-6. Activity Feed or Timeline
-
-### **Interactive Elements**
-
-1. Edit Profile Button
-2. Change Profile Picture
-3. Update Status or Bio
-4. Friend/Connection Requests
-5. Direct Messaging
-6. Follow/Unfollow Buttons
-
-### **Customizable Features**
-
-1. Theme Selection (Light/Dark Mode)
-2. Custom Background Image
-3. Profile Privacy Settings
-4. Notification Preferences
-5. Personalized Widgets or Sections
-
-### **Analytics & Insights**
-
-1. Profile Views Count
-2. Engagement Statistics (Likes, Shares)
-3. Connection Growth Over Time
-4. Top Interacting Users
-
-### **Additional Sections**
-
-1. Portfolio/Gallery Section
-2. Testimonials/References
-3. Badges or Milestones Achieved
-4. Favorite Quotes or Mantras
-5. Pinned Posts/Content
+- Contact and social links
+- Work history and skills
+- Recent activity
+- Portfolio or gallery
+- Badges or achievements
+- Light / dark mode
 
 ## Inspiration
 
-![original-88ccc019e98484c4c7a950d8e9306fba.png](original-88ccc019e98484c4c7a950d8e9306fba.png)
+![User Profile Page inspiration](original-88ccc019e98484c4c7a950d8e9306fba.png)
 
-Source: [Here](https://www.behance.net/search/projects/user%20profile?tracking_source=typeahead_search_direct)
+Source: [https://www.behance.net/search/projects/user%20profile](https://www.behance.net/search/projects/user%20profile)
 
-![original-a8ab24346620475b06e2e17b6b60dc8e.png](original-a8ab24346620475b06e2e17b6b60dc8e.png)
+![User Profile Page inspiration](original-a8ab24346620475b06e2e17b6b60dc8e.png)
 
-Source: [Here](https://www.behance.net/search/projects/user%20profile?tracking_source=typeahead_search_direct)
+Source: [https://www.behance.net/search/projects/user%20profile](https://www.behance.net/search/projects/user%20profile)
 
-![original-9289f81899bfb4159a0477fa455724bb.png](original-9289f81899bfb4159a0477fa455724bb.png)
+![User Profile Page inspiration](original-9289f81899bfb4159a0477fa455724bb.png)
 
-Source: [Here](https://www.behance.net/search/projects/user%20profile?tracking_source=typeahead_search_direct)
+Source: [https://www.behance.net/search/projects/user%20profile](https://www.behance.net/search/projects/user%20profile)
 
-## Difficulty Level ⭐️⭐️⭐️
+## Time box
+
+**Time box:** 3 hours
+
+**Difficulty:** ⭐️⭐️⭐️
+
+## Before you submit
+
+☐ Frame is iPhone 16 (393 × 852) and spacing follows the 8-point grid
+
+☐ Every *Must include* item is on the screen
+
+☐ The most important information is visible without scrolling
+
+☐ Sections have clear headings and consistent spacing
+
+☐ Text is readable and colour contrast passes (4.5:1 for body text)
+
+☐ Layers are named and grouped; repeated elements are components
+
+☐ Shared the Figma link and a PNG export with your instructor

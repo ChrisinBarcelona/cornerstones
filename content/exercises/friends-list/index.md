@@ -1,38 +1,63 @@
 # Friends List
 
-## Friends List
+## The brief
 
-This UI challenges preaches to us the importance of fast accessibility. We’ll be primarily focusing on designing a list here so imagine we’ve started work as a freelancer on a new product called Huddle: An app for a global community of sport enthusiasts who love to get together and play. Create a list of super accessible contacts. 
+This challenge is about fast access. You've started work as a freelancer on **Huddle**, an app for a global community of sport enthusiasts who love to get together and play. Design a list of contacts that is quick to scan and easy to act on.
 
-Why not use [this User Profile Maker](https://www.figma.com/community/plugin/749945157855564842/User-Profile) Figma plugin to get used to rapid prototyping. 
+Try the [User Profile](https://www.figma.com/community/plugin/749945157855564842/User-Profile) Figma plugin to fill your list with realistic people fast.
 
-![original-381564b00d63e19bdbff8f55bf80b7cc.webp](original-381564b00d63e19bdbff8f55bf80b7cc.webp)
+![Friends List](original-381564b00d63e19bdbff8f55bf80b7cc.webp)
 
 Source: [https://dribbble.com/jubeo](https://dribbble.com/jubeo)
 
----
+## Deliverable
 
-## Potential Inclusions
+- One friends list screen in an **iPhone 16** frame (393 × 852) in Figma, on the 8-point grid, with at least eight contacts.
+
+## Must include
 
 1. Name
-2. Status message
-3. Profile Thumbnail
-4. Online Status Indicator
+2. Profile thumbnail
+3. Online status indicator
+
+## Nice to have
+
+- Status message
+- Search or filter
+- Quick action (message or invite to play)
 
 ## Inspiration
 
-![c69fc664368989.5acfafa31c895.jpg](c69fc664368989.5acfafa31c895.jpg)
+![Friends List inspiration](c69fc664368989.5acfafa31c895.jpg)
 
 Source: [https://www.behance.net/101prithviraj](https://www.behance.net/101prithviraj)
 
-![9a5cd01da4b74f34cf288b81f305612e.webp](9a5cd01da4b74f34cf288b81f305612e.webp)
+![Friends List inspiration](9a5cd01da4b74f34cf288b81f305612e.webp)
 
 Source: [https://dribbble.com/rddstudio](https://dribbble.com/rddstudio)
 
-![original-275c6120d05fb60feb099243cff3a395.webp](original-275c6120d05fb60feb099243cff3a395.webp)
+![Friends List inspiration](original-275c6120d05fb60feb099243cff3a395.webp)
 
 Source: [https://dribbble.com/sultonhand](https://dribbble.com/sultonhand)
 
----
+## Time box
 
-## Difficulty Level ⭐️⭐️
+**Time box:** 2 hours
+
+**Difficulty:** ⭐️⭐️
+
+## Before you submit
+
+☐ Frame is iPhone 16 (393 × 852) and spacing follows the 8-point grid
+
+☐ Every *Must include* item is on the screen
+
+☐ Online status doesn't rely on colour alone
+
+☐ Each row is a component with the same height and spacing
+
+☐ Text is readable and colour contrast passes (4.5:1 for body text)
+
+☐ Layers are named and grouped; repeated elements are components
+
+☐ Shared the Figma link and a PNG export with your instructor

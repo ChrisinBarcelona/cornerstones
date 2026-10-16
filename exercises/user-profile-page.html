@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>User Profile Page · Cornerstones</title>
-<meta name="description" content="Design a profile page that presents personal and professional details in a clean, usable layout.">
+<meta name="description" content="Design a profile page for Crew, a network for freelance creatives, with personal and professional details in a clean layout.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2238%2040%20739%20739%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M221%2090H590L777%20409H38Z%22%20fill%3D%22%23004ecd%22/%3E%3Cpath%20d%3D%22M38%20409H777L590%20728H221Z%22%20fill%3D%22%230062ff%22/%3E%3Cpath%20d%3D%22M374%20254H688L777%20409H286Z%22%20fill%3D%22%23002b71%22/%3E%3Cpath%20d%3D%22M286%20409H777L688%20564H374Z%22%20fill%3D%22%23003ea2%22/%3E%3C/svg%3E">
 <script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
@@ -36,93 +36,55 @@
     <header class="lecture-head">
       <div class="eyebrow">Exercise 11 · Daily UI</div>
       <div class="title-row"><h1>User Profile Page</h1><button type="button" class="complete-btn head-complete" data-complete="exercises/user-profile-page" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button></div>
-      <p class="lede">Design a profile page that presents personal and professional details in a clean, usable layout.</p>
+      <p class="lede">Design a profile page for Crew, a network for freelance creatives, with personal and professional details in a clean layout.</p>
       <div class="meta"><span>Difficulty <span class="meter" role="img" aria-label="Difficulty 3 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 min read</span></div>
     </header>
     <div class="lecture-grid">
-      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#design-a-user-profile-page">Design a User Profile Page</a></li><li class="lvl2"><a href="#potential-inclusions">Potential Inclusions</a></li><li class="lvl3"><a href="#personal-information">Personal Information</a></li><li class="lvl3"><a href="#contact-information">Contact Information</a></li><li class="lvl3"><a href="#professional-information">Professional Information</a></li><li class="lvl3"><a href="#user-activity">User Activity</a></li><li class="lvl3"><a href="#interactive-elements">Interactive Elements</a></li><li class="lvl3"><a href="#customizable-features">Customizable Features</a></li><li class="lvl3"><a href="#analytics-insights">Analytics &amp; Insights</a></li><li class="lvl3"><a href="#additional-sections">Additional Sections</a></li><li class="lvl2"><a href="#inspiration">Inspiration</a></li></ol></div><div class="rail-block"><div class="rail-label">Daily UI</div><ol class="toc family"><li><a href="sidebar.html">Sidebar</a></li><li><a href="friends-list.html">Friends List</a></li><li><a href="new-notification.html">New Notification</a></li><li><a href="bottom-sheet.html">Bottom Sheet</a></li><li><a href="sign-in.html">Sign In</a></li><li><a href="cc-checkout.html">CC Checkout</a></li><li><a href="video-player.html">Video Player</a></li><li><a href="choose-a-movie.html">Choose A Movie</a></li><li><a href="music-player.html">Music Player</a></li><li><a href="home-monitor-dash.html">Home Monitor Dash</a></li><li><a href="user-profile-page.html" aria-current=page>User Profile Page</a></li><li><a href="make-an-ai-interface.html">Make an AI Interface</a></li><li><a href="product-card.html">Product Card</a></li><li><a href="ux-x-ai.html">UX x AI</a></li></ol></div></div></div></aside>
+      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#the-brief">The brief</a></li><li class="lvl2"><a href="#deliverable">Deliverable</a></li><li class="lvl2"><a href="#must-include">Must include</a></li><li class="lvl2"><a href="#nice-to-have">Nice to have</a></li><li class="lvl2"><a href="#inspiration">Inspiration</a></li><li class="lvl2"><a href="#time-box">Time box</a></li><li class="lvl2"><a href="#before-you-submit">Before you submit</a></li></ol></div><div class="rail-block"><div class="rail-label">Daily UI</div><ol class="toc family"><li><a href="sidebar.html">Sidebar</a></li><li><a href="friends-list.html">Friends List</a></li><li><a href="new-notification.html">New Notification</a></li><li><a href="bottom-sheet.html">Bottom Sheet</a></li><li><a href="sign-in.html">Sign In</a></li><li><a href="cc-checkout.html">CC Checkout</a></li><li><a href="video-player.html">Video Player</a></li><li><a href="choose-a-movie.html">Choose A Movie</a></li><li><a href="music-player.html">Music Player</a></li><li><a href="home-monitor-dash.html">Home Monitor Dash</a></li><li><a href="user-profile-page.html" aria-current=page>User Profile Page</a></li><li><a href="make-an-ai-interface.html">Make an AI Interface</a></li><li><a href="product-card.html">Product Card</a></li><li><a href="ux-x-ai.html">UX x AI</a></li></ol></div></div></div></aside>
       <article class="prose">
-<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#design-a-user-profile-page">Design a User Profile Page</a></li><li class="lvl2"><a href="#potential-inclusions">Potential Inclusions</a></li><li class="lvl3"><a href="#personal-information">Personal Information</a></li><li class="lvl3"><a href="#contact-information">Contact Information</a></li><li class="lvl3"><a href="#professional-information">Professional Information</a></li><li class="lvl3"><a href="#user-activity">User Activity</a></li><li class="lvl3"><a href="#interactive-elements">Interactive Elements</a></li><li class="lvl3"><a href="#customizable-features">Customizable Features</a></li><li class="lvl3"><a href="#analytics-insights">Analytics &amp; Insights</a></li><li class="lvl3"><a href="#additional-sections">Additional Sections</a></li><li class="lvl2"><a href="#inspiration">Inspiration</a></li></ol></details>
-<h2 id="design-a-user-profile-page">Design a User Profile Page</h2>
-<p>Your task is to design a user profile page that not only looks visually stunning but also offers a highly functional and intuitive user experience. This profile page should effectively showcase a user's personal and professional details while maintaining a clean and organised layout. Think of a brand or service and get going!</p>
-<figure class="media"><img alt="" src="../content/exercises/user-profile-page/original-939eb0b263cb8afbd5920bedc382d268.png" loading="lazy" decoding="async"></figure>
-<hr />
-<h2 id="potential-inclusions">Potential Inclusions</h2>
-<h3 id="personal-information"><strong>Personal Information</strong></h3>
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#the-brief">The brief</a></li><li class="lvl2"><a href="#deliverable">Deliverable</a></li><li class="lvl2"><a href="#must-include">Must include</a></li><li class="lvl2"><a href="#nice-to-have">Nice to have</a></li><li class="lvl2"><a href="#inspiration">Inspiration</a></li><li class="lvl2"><a href="#time-box">Time box</a></li><li class="lvl2"><a href="#before-you-submit">Before you submit</a></li></ol></details>
+<h2 id="the-brief">The brief</h2>
+<p>Design the profile page for <strong>Crew</strong>, a professional network for freelance creatives. It should showcase a person's personal and professional details in a clean, organised layout that looks great and is easy to use.</p>
+<figure class="media"><img alt="User Profile Page" src="../content/exercises/user-profile-page/original-939eb0b263cb8afbd5920bedc382d268.png" loading="lazy" decoding="async"></figure>
+<p><em>Source not recorded.</em></p>
+<h2 id="deliverable">Deliverable</h2>
+<ul>
+<li>One profile page in an <strong>iPhone 16</strong> frame (393 × 852) in Figma, on the 8-point grid. Scrolling is fine: make the frame as tall as you need.</li>
+</ul>
+<h2 id="must-include">Must include</h2>
 <ol>
-<li>Profile Picture</li>
-<li>Full Name</li>
-<li>Username or Handle</li>
-<li>Job Title/Position</li>
-<li>Location (City, Country)</li>
-<li>Bio/Personal Statement</li>
-<li>Birthday</li>
+<li>Profile picture, full name and username</li>
+<li>Job title and location</li>
+<li>Short bio</li>
+<li>Edit profile button</li>
+<li>Followers / following count</li>
 </ol>
-<h3 id="contact-information"><strong>Contact Information</strong></h3>
-<ol>
-<li>Email Address</li>
-<li>Phone Number</li>
-<li>Social Media Links (LinkedIn, Twitter, Instagram, etc.)</li>
-<li>Website/Portfolio Link</li>
-<li>Instant Messaging Handles (Skype, WhatsApp)</li>
-</ol>
-<h3 id="professional-information"><strong>Professional Information</strong></h3>
-<ol>
-<li>Work History/Experience</li>
-<li>Education/Qualifications</li>
-<li>Skills and Endorsements</li>
-<li>Certifications</li>
-<li>Languages Spoken</li>
-<li>Professional Achievements/Awards</li>
-</ol>
-<h3 id="user-activity"><strong>User Activity</strong></h3>
-<ol>
-<li>Recent Posts or Contributions</li>
-<li>Followers/Following Count</li>
-<li>Comments or Reviews Given</li>
-<li>Likes or Favorites</li>
-<li>Shared Content</li>
-<li>Activity Feed or Timeline</li>
-</ol>
-<h3 id="interactive-elements"><strong>Interactive Elements</strong></h3>
-<ol>
-<li>Edit Profile Button</li>
-<li>Change Profile Picture</li>
-<li>Update Status or Bio</li>
-<li>Friend/Connection Requests</li>
-<li>Direct Messaging</li>
-<li>Follow/Unfollow Buttons</li>
-</ol>
-<h3 id="customizable-features"><strong>Customizable Features</strong></h3>
-<ol>
-<li>Theme Selection (Light/Dark Mode)</li>
-<li>Custom Background Image</li>
-<li>Profile Privacy Settings</li>
-<li>Notification Preferences</li>
-<li>Personalized Widgets or Sections</li>
-</ol>
-<h3 id="analytics-insights"><strong>Analytics &amp; Insights</strong></h3>
-<ol>
-<li>Profile Views Count</li>
-<li>Engagement Statistics (Likes, Shares)</li>
-<li>Connection Growth Over Time</li>
-<li>Top Interacting Users</li>
-</ol>
-<h3 id="additional-sections"><strong>Additional Sections</strong></h3>
-<ol>
-<li>Portfolio/Gallery Section</li>
-<li>Testimonials/References</li>
-<li>Badges or Milestones Achieved</li>
-<li>Favorite Quotes or Mantras</li>
-<li>Pinned Posts/Content</li>
-</ol>
+<h2 id="nice-to-have">Nice to have</h2>
+<ul>
+<li>Contact and social links</li>
+<li>Work history and skills</li>
+<li>Recent activity</li>
+<li>Portfolio or gallery</li>
+<li>Badges or achievements</li>
+<li>Light / dark mode</li>
+</ul>
 <h2 id="inspiration">Inspiration</h2>
-<figure class="media"><img alt="" src="../content/exercises/user-profile-page/original-88ccc019e98484c4c7a950d8e9306fba.png" loading="lazy" decoding="async"></figure>
-<p>Source: <a href="https://www.behance.net/search/projects/user%20profile?tracking_source=typeahead_search_direct">Here</a></p>
-<figure class="media"><img alt="" src="../content/exercises/user-profile-page/original-a8ab24346620475b06e2e17b6b60dc8e.png" loading="lazy" decoding="async"></figure>
-<p>Source: <a href="https://www.behance.net/search/projects/user%20profile?tracking_source=typeahead_search_direct">Here</a></p>
-<figure class="media"><img alt="" src="../content/exercises/user-profile-page/original-9289f81899bfb4159a0477fa455724bb.png" loading="lazy" decoding="async"></figure>
-<p>Source: <a href="https://www.behance.net/search/projects/user%20profile?tracking_source=typeahead_search_direct">Here</a></p>
+<figure class="media"><img alt="User Profile Page inspiration" src="../content/exercises/user-profile-page/original-88ccc019e98484c4c7a950d8e9306fba.png" loading="lazy" decoding="async"></figure>
+<p>Source: <a href="https://www.behance.net/search/projects/user%20profile">https://www.behance.net/search/projects/user%20profile</a></p>
+<figure class="media"><img alt="User Profile Page inspiration" src="../content/exercises/user-profile-page/original-a8ab24346620475b06e2e17b6b60dc8e.png" loading="lazy" decoding="async"></figure>
+<p>Source: <a href="https://www.behance.net/search/projects/user%20profile">https://www.behance.net/search/projects/user%20profile</a></p>
+<figure class="media"><img alt="User Profile Page inspiration" src="../content/exercises/user-profile-page/original-9289f81899bfb4159a0477fa455724bb.png" loading="lazy" decoding="async"></figure>
+<p>Source: <a href="https://www.behance.net/search/projects/user%20profile">https://www.behance.net/search/projects/user%20profile</a></p>
+<h2 id="time-box">Time box</h2>
+<p><strong>Time box:</strong> 3 hours</p>
+<h2 id="before-you-submit">Before you submit</h2>
+<p>☐ Frame is iPhone 16 (393 × 852) and spacing follows the 8-point grid</p>
+<p>☐ Every <em>Must include</em> item is on the screen</p>
+<p>☐ The most important information is visible without scrolling</p>
+<p>☐ Sections have clear headings and consistent spacing</p>
+<p>☐ Text is readable and colour contrast passes (4.5:1 for body text)</p>
+<p>☐ Layers are named and grouped; repeated elements are components</p>
+<p>☐ Shared the Figma link and a PNG export with your instructor</p>
 <section class="complete" data-key="exercises/user-profile-page">
   <div class="complete-text"><b>Finished this exercise?</b></div>
   <button type="button" class="complete-btn" data-complete="exercises/user-profile-page" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>

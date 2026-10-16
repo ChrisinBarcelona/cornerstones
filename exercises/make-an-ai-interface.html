@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Make an AI Interface · Cornerstones</title>
-<meta name="description" content="Design an AI assistant interface that feels smart and human but still matches what users expect.">
+<meta name="description" content="Design Ada, an AI study assistant that feels smart and human but still matches what users expect from chat apps.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2238%2040%20739%20739%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M221%2090H590L777%20409H38Z%22%20fill%3D%22%23004ecd%22/%3E%3Cpath%20d%3D%22M38%20409H777L590%20728H221Z%22%20fill%3D%22%230062ff%22/%3E%3Cpath%20d%3D%22M374%20254H688L777%20409H286Z%22%20fill%3D%22%23002b71%22/%3E%3Cpath%20d%3D%22M286%20409H777L688%20564H374Z%22%20fill%3D%22%23003ea2%22/%3E%3C/svg%3E">
 <script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
@@ -36,33 +36,50 @@
     <header class="lecture-head">
       <div class="eyebrow">Exercise 12 · Daily UI</div>
       <div class="title-row"><h1>Make an AI Interface</h1><button type="button" class="complete-btn head-complete" data-complete="exercises/make-an-ai-interface" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button></div>
-      <p class="lede">Design an AI assistant interface that feels smart and human but still matches what users expect.</p>
+      <p class="lede">Design Ada, an AI study assistant that feels smart and human but still matches what users expect from chat apps.</p>
       <div class="meta"><span>Difficulty <span class="meter" role="img" aria-label="Difficulty 3 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span></span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 min read</span></div>
     </header>
     <div class="lecture-grid">
-      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#challenge-title">Challenge Title</a></li><li class="lvl2"><a href="#potential-inclusions">Potential Inclusions</a></li><li class="lvl2"><a href="#inspiration">Inspiration</a></li></ol></div><div class="rail-block"><div class="rail-label">Daily UI</div><ol class="toc family"><li><a href="sidebar.html">Sidebar</a></li><li><a href="friends-list.html">Friends List</a></li><li><a href="new-notification.html">New Notification</a></li><li><a href="bottom-sheet.html">Bottom Sheet</a></li><li><a href="sign-in.html">Sign In</a></li><li><a href="cc-checkout.html">CC Checkout</a></li><li><a href="video-player.html">Video Player</a></li><li><a href="choose-a-movie.html">Choose A Movie</a></li><li><a href="music-player.html">Music Player</a></li><li><a href="home-monitor-dash.html">Home Monitor Dash</a></li><li><a href="user-profile-page.html">User Profile Page</a></li><li><a href="make-an-ai-interface.html" aria-current=page>Make an AI Interface</a></li><li><a href="product-card.html">Product Card</a></li><li><a href="ux-x-ai.html">UX x AI</a></li></ol></div></div></div></aside>
+      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#the-brief">The brief</a></li><li class="lvl2"><a href="#deliverable">Deliverable</a></li><li class="lvl2"><a href="#must-include">Must include</a></li><li class="lvl2"><a href="#nice-to-have">Nice to have</a></li><li class="lvl2"><a href="#inspiration">Inspiration</a></li><li class="lvl2"><a href="#time-box">Time box</a></li><li class="lvl2"><a href="#before-you-submit">Before you submit</a></li></ol></div><div class="rail-block"><div class="rail-label">Daily UI</div><ol class="toc family"><li><a href="sidebar.html">Sidebar</a></li><li><a href="friends-list.html">Friends List</a></li><li><a href="new-notification.html">New Notification</a></li><li><a href="bottom-sheet.html">Bottom Sheet</a></li><li><a href="sign-in.html">Sign In</a></li><li><a href="cc-checkout.html">CC Checkout</a></li><li><a href="video-player.html">Video Player</a></li><li><a href="choose-a-movie.html">Choose A Movie</a></li><li><a href="music-player.html">Music Player</a></li><li><a href="home-monitor-dash.html">Home Monitor Dash</a></li><li><a href="user-profile-page.html">User Profile Page</a></li><li><a href="make-an-ai-interface.html" aria-current=page>Make an AI Interface</a></li><li><a href="product-card.html">Product Card</a></li><li><a href="ux-x-ai.html">UX x AI</a></li></ol></div></div></div></aside>
       <article class="prose">
-<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#challenge-title">Challenge Title</a></li><li class="lvl2"><a href="#potential-inclusions">Potential Inclusions</a></li><li class="lvl2"><a href="#inspiration">Inspiration</a></li></ol></details>
-<h2 id="challenge-title">Challenge Title</h2>
-<p>Design an <strong>AI interface</strong> that allows users to interact naturally with an intelligent assistant. Think beyond a simple chat box — how can your design make the AI feel smart, human, and useful and yet still meets users existing mental models and existing expectations. </p>
-<hr />
-<h2 id="potential-inclusions">Potential Inclusions</h2>
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#the-brief">The brief</a></li><li class="lvl2"><a href="#deliverable">Deliverable</a></li><li class="lvl2"><a href="#must-include">Must include</a></li><li class="lvl2"><a href="#nice-to-have">Nice to have</a></li><li class="lvl2"><a href="#inspiration">Inspiration</a></li><li class="lvl2"><a href="#time-box">Time box</a></li><li class="lvl2"><a href="#before-you-submit">Before you submit</a></li></ol></details>
+<h2 id="the-brief">The brief</h2>
+<p>Design <strong>Ada</strong>, an AI study assistant that students talk to naturally. Think beyond a simple chat box: how can the design make the AI feel smart, human and useful, while still matching the mental models and expectations people already have from other chat apps?</p>
+<figure class="media"><img alt="Make an AI Interface" src="../content/exercises/make-an-ai-interface/Screenshot_2025-10-13_at_15.09.05.png" loading="lazy" decoding="async"></figure>
+<p><em>Source not recorded.</em></p>
+<h2 id="deliverable">Deliverable</h2>
 <ul>
-<li><strong>Text input field</strong> — main area to type or paste prompts/questions.</li>
-<li><strong>Send button / paper-plane icon</strong> — to submit a message.</li>
-<li><strong>Conversation thread</strong> — scrollable list showing user and AI messages.</li>
-<li><strong>Message bubbles</strong> — distinct visual styles for user vs. AI responses.</li>
-<li><strong>“AI is thinking…” indicator</strong> — animated dots or pulse while processing.</li>
-<li><strong>Voice input button</strong> — optional microphone icon for voice prompts.</li>
-<li><strong>Upload / attach button</strong> — to share images, files, or documents.</li>
-<li><strong>Quick action chips</strong> — suggested follow-up actions (e.g., “Summarize,” “Explain more”).</li>
-<li><strong>Avatar or assistant icon</strong> — subtle identity marker for the AI.</li>
-<li><strong>Empty state prompt</strong> — placeholder like “Ask me anything…” when chat is blank.</li>
+<li>Two screens in an <strong>iPhone 16</strong> frame (393 × 852) in Figma, on the 8-point grid: the empty state, and a conversation in progress.</li>
+</ul>
+<h2 id="must-include">Must include</h2>
+<ol>
+<li>Text input field and send button</li>
+<li>Conversation thread with distinct user and AI messages</li>
+<li>"Thinking…" indicator</li>
+<li>Empty state prompt (e.g. "Ask me anything…")</li>
+</ol>
+<h2 id="nice-to-have">Nice to have</h2>
+<ul>
+<li>Voice input</li>
+<li>Upload or attach</li>
+<li>Quick action chips (e.g. "Summarise", "Explain more")</li>
+<li>Assistant avatar or icon</li>
 </ul>
 <h2 id="inspiration">Inspiration</h2>
-<div class="gallery"><figure class="media"><img alt="" src="../content/exercises/make-an-ai-interface/Screenshot_2025-10-13_at_15.09.05.png" loading="lazy" decoding="async"></figure>
-<figure class="media"><img alt="" src="../content/exercises/make-an-ai-interface/Screenshot_2025-10-13_at_15.09.55.png" loading="lazy" decoding="async"></figure>
-<figure class="media"><img alt="" src="../content/exercises/make-an-ai-interface/Screenshot_2025-10-14_at_15.33.10.png" loading="lazy" decoding="async"></figure></div>
+<figure class="media"><img alt="Make an AI Interface inspiration" src="../content/exercises/make-an-ai-interface/Screenshot_2025-10-13_at_15.09.55.png" loading="lazy" decoding="async"></figure>
+<p><em>Source not recorded.</em></p>
+<figure class="media"><img alt="Make an AI Interface inspiration" src="../content/exercises/make-an-ai-interface/Screenshot_2025-10-14_at_15.33.10.png" loading="lazy" decoding="async"></figure>
+<p><em>Source not recorded.</em></p>
+<h2 id="time-box">Time box</h2>
+<p><strong>Time box:</strong> 3 hours</p>
+<h2 id="before-you-submit">Before you submit</h2>
+<p>☐ Frame is iPhone 16 (393 × 852) and spacing follows the 8-point grid</p>
+<p>☐ Every <em>Must include</em> item is on the screen</p>
+<p>☐ User and AI messages are distinguishable without relying on colour alone</p>
+<p>☐ The input stays reachable when the keyboard is open</p>
+<p>☐ Text is readable and colour contrast passes (4.5:1 for body text)</p>
+<p>☐ Layers are named and grouped; repeated elements are components</p>
+<p>☐ Shared the Figma link and a PNG export with your instructor</p>
 <section class="complete" data-key="exercises/make-an-ai-interface">
   <div class="complete-text"><b>Finished this exercise?</b></div>
   <button type="button" class="complete-btn" data-complete="exercises/make-an-ai-interface" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>

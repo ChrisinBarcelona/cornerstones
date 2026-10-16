@@ -1,41 +1,65 @@
 # Home Monitor Dash
 
-## In App Smart Home Monitor
+## The brief
 
-Modular design is everywhere these days and it allows developers to do amazing things with responsive web. As a designer, it’s so helpful to think and build in a modular way. 
+Modular design is everywhere, and it lets developers do amazing things with responsive layouts, so it helps to think and build in modules. This is a real challenge that uses everything you've learned so far.
 
-You’ll have to use a combination of former skills you’ve picked up along the way because this is a real challenge!
+Design **Hearth**, a smart-home app for the modern family: a modular dashboard to track and measure the use of one or two household utilities.
 
-For this UI challenge, create a modular UI dashboard which provides a useful way to track and measure consumption of one or two household utilities.
+![Home Monitor Dash](blue_progress_dashboard.webp)
 
-Take a look at the list of potential inclusions and design an app which appeals to the modern family.   
+*Source not recorded.*
 
-![blue_progress_dashboard.webp](blue_progress_dashboard.webp)
+## Deliverable
 
----
+- The dashboard in an **iPhone 16** frame (393 × 852) in Figma, on the 8-point grid, built from reusable modules (cards).
 
-## Potential Inclusions
+## Must include
 
-1. Lighting
-2. Temperature
-3. Nanny Cams
-4. Air Conditioning
-5. Refrigeration  
-6. Gas 
-7. Electricity
+1. At least two utilities (e.g. electricity and temperature)
+2. Current usage and a trend over time
+3. One control (e.g. a thermostat or a light switch)
+
+## Nice to have
+
+- Lighting
+- Air conditioning
+- Refrigeration
+- Gas
+- Nanny cams
 
 ## Inspiration
 
-![954ad4f995c7328d115fd10097be51af.webp](954ad4f995c7328d115fd10097be51af.webp)
+![Home Monitor Dash inspiration](954ad4f995c7328d115fd10097be51af.webp)
 
 Source: [https://dribbble.com/OlgaSaff](https://dribbble.com/OlgaSaff)
 
-![smarthome_web_1.webp](smarthome_web_1.webp)
+![Home Monitor Dash inspiration](smarthome_web_1.webp)
 
 Source: [https://dribbble.com/cleveroad](https://dribbble.com/cleveroad)
 
-![original-487a89d18701e229b242723e11c43515-1.webp](original-487a89d18701e229b242723e11c43515-1.webp)
+![Home Monitor Dash inspiration](original-487a89d18701e229b242723e11c43515-1.webp)
 
 Source: [https://dribbble.com/Atulya_26](https://dribbble.com/Atulya_26)
 
-## Difficulty Level ⭐️⭐️⭐️⭐️⭐️
+## Time box
+
+**Time box:** a full day (about 6 hours)
+
+**Difficulty:** ⭐️⭐️⭐️⭐️⭐️
+
+## Before you submit
+
+☐ Frame is iPhone 16 (393 × 852) and spacing follows the 8-point grid
+
+☐ Every *Must include* item is on the screen
+
+☐ Every card is a component built with Auto Layout
+
+☐ Numbers have units, and charts have labelled axes
+
+☐ Text is readable and colour contrast passes (4.5:1 for body text)
+
+☐ Layers are named and grouped; repeated elements are components
+
+☐ Shared the Figma link and a PNG export with your instructor

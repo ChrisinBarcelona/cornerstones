@@ -356,7 +356,8 @@ IMG_RE = re.compile(r'<img alt="([^"]*)" src="([^"]+)"\s*/?>')
 H_RE = re.compile(r'<h([1-3]) id="([^"]+)">(.*?)</h\1>')
 TAG_RE = re.compile(r"<[^>]+>")
 ASIDE_RE = re.compile(r"<aside>\s*(.*?)\s*</aside>", re.S)
-DIFFICULTY_RE = re.compile(r"^#+\s*Difficulty Level\s*(.*)$", re.M)
+# Difficulty stars: a "**Difficulty:** ⭐️⭐️⭐️" line (Daily UI template) or the older "## Difficulty Level ⭐️⭐️" heading.
+DIFFICULTY_RE = re.compile(r"^(?:#+\s*Difficulty Level|\*\*Difficulty:\*\*)\s*(.*)$", re.M)
 
 ICON_SUN = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>'
 ICON_ARROW = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
