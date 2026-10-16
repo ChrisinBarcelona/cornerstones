@@ -51,13 +51,29 @@ We’ve completed the understanding phase of the sprint, and now it’s time to 
 - Aim for variety (even small variations count).
 - Keep sketches simple: boxes, arrows, stick figures.
 
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=yz4g87XapQ0](https://www.youtube.com/watch?v=yz4g87XapQ0)
+
+[https://www.youtube.com/watch?v=_ITJ5lAXQhg](https://www.youtube.com/watch?v=_ITJ5lAXQhg)
+
+# 📚 Resources
+
+[Crazy 8's – Google Design Sprint Kit](https://designsprintkit.withgoogle.com/methodology/phase3-sketch/crazy-8s)
+
+[The Design Sprint – GV](https://www.gv.com/sprint/)
+
 # ✅ Checklist
 
-- [ ]  Paper folded into 8 sections
-- [ ]  Timer set for 8 minutes
-- [ ]  Each participant sketches 8 ideas
-- [ ]  Share and discuss ideas
-- [ ]  Select preferred directions to move forward
+☐ Paper folded into 8 sections
+
+☐ Timer set for 8 minutes
+
+☐ Each participant sketches 8 ideas
+
+☐ Share and discuss ideas
+
+☐ Select preferred directions to move forward
 
 # 📝 Summary
 

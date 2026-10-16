@@ -47,6 +47,24 @@ Unlock phone 👉  Open App Store 👉  Tap search bar 👉  Type “Instagram�
 
 [https://www.youtube.com/watch?v=dsviXwJwslI](https://www.youtube.com/watch?v=dsviXwJwslI)
 
+# 📚 Resources
+
+[User Journeys vs. User Flows – Nielsen Norman Group](https://www.nngroup.com/articles/user-journeys-vs-user-flows/)
+
+[Task Analysis: Support Users in Achieving Their Goals – Nielsen Norman Group](https://www.nngroup.com/articles/task-analysis/)
+
+[Wireflows – Nielsen Norman Group](https://www.nngroup.com/articles/wireflows/)
+
+# ✅ Checklist
+
+☐ Chose one primary task from your journey map
+
+☐ Broke it into the minimum steps
+
+☐ Drew boxes and arrows from start to finish
+
+☐ Kept the flow linear and focused on one goal
+
 # 📝 Summary
 
 Task flows are a quick way to map the **logic and sequence** of a user’s actions. By focusing on one primary task, students gain clarity on what screens, inputs, and decisions need to exist. This exercise ensures designs are **user-centered, efficient, and free from unnecessary complexity** before moving into wireframes.

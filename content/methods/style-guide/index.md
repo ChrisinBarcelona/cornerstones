@@ -26,10 +26,13 @@ The primary visual identifier of a brand, serving as a consistent symbol of reco
 
 ✅ Logo **Checklist**
 
-- [ ]  Primary Logo
-- [ ]  Secondary Logo
-- [ ]  Submark
-- [ ]  Icon / Favicon
+☐ Primary Logo
+
+☐ Secondary Logo
+
+☐ Submark
+
+☐ Icon / Favicon
 
 ![58a1f05c8db67ede23fee87732c7e53b.jpg](58a1f05c8db67ede23fee87732c7e53b.jpg)
 
@@ -43,10 +46,13 @@ Defines the visual style of text, ensuring consistency, readability, and brand p
 
 ✅ Typography **Checklist**
 
-- [ ]  Heading 1
-- [ ]  Heading 2
-- [ ]  Heading 3
-- [ ]  Body
+☐ Heading 1
+
+☐ Heading 2
+
+☐ Heading 3
+
+☐ Body
 
 ![Screenshot 2025-09-01 at 13.10.44.png](Screenshot_2025-09-01_at_13.10.44.png)
 
@@ -54,11 +60,15 @@ Defines the visual style of text, ensuring consistency, readability, and brand p
 
 ✅ **Checklist (Per item)**
 
-- [ ]  Typeface Title Example (i.e, H1 Desktop)
-- [ ]  Typeface Name
-- [ ]  Weight (Bold, Semi Bold, Light, Italic)
-- [ ]  Size (in PX)
-- [ ]  [Line Height (Optional)](https://www.google.com/search?q=line+height+meaning&oq=line+height+meani&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB4yCAgJEAAYFhge0gEIMzI4MWowajeoAgiwAgE&sourceid=chrome&ie=UTF-8)
+☐ Typeface Title Example (i.e, H1 Desktop)
+
+☐ Typeface Name
+
+☐ Weight (Bold, Semi Bold, Light, Italic)
+
+☐ Size (in PX)
+
+☐ [Line Height (Optional)](https://www.google.com/search?q=line+height+meaning&oq=line+height+meani&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB4yCAgJEAAYFhge0gEIMzI4MWowajeoAgiwAgE&sourceid=chrome&ie=UTF-8)
 
 ## **3. Colour Palette**
 
@@ -66,12 +76,17 @@ Establishes the brand’s core colours, providing consistency and visual harmony
 
 ✅ Colour **Checklist**
 
-- [ ]  Primary Colour
-- [ ]  [Primary Colour Palette](https://www.youtube.com/shorts/Vk5fAJmnYzs)
-- [ ]  Secondary Colour
-- [ ]  [Secondary Colour Palette](https://www.youtube.com/shorts/Vk5fAJmnYzs)
-- [ ]  Monochrome Color
-- [ ]  [Monochrome Palette](https://www.youtube.com/shorts/Vk5fAJmnYzs)
+☐ Primary Colour
+
+☐ [Primary Colour Palette](https://www.youtube.com/shorts/Vk5fAJmnYzs)
+
+☐ Secondary Colour
+
+☐ [Secondary Colour Palette](https://www.youtube.com/shorts/Vk5fAJmnYzs)
+
+☐ Monochrome Color
+
+☐ [Monochrome Palette](https://www.youtube.com/shorts/Vk5fAJmnYzs)
 
 ![569595_color_palette.jpg](569595_color_palette.jpg)
 
@@ -83,8 +98,9 @@ Defines the brand’s iconography, ensuring clarity and recognisability across a
 
 ✅ Icons **Checklist**
 
-- [ ]  Icons Fill
-- [ ]  Icons Outline
+☐ Icons Fill
+
+☐ Icons Outline
 
 ![solid-vs-outline.png](solid-vs-outline.png)
 
@@ -96,9 +112,11 @@ Touch points that allow users to orientate their way around your site. Be sure t
 
 ✅ Buttons **Checklist**
 
-- [ ]  Default Button
-- [ ]  Hover Button
-- [ ]  Active Button
+☐ Default Button
+
+☐ Hover Button
+
+☐ Active Button
 
 ![thumbnail-1.png](thumbnail-1.png)
 
@@ -110,8 +128,9 @@ Defines the brand’s iconography, ensuring clarity and recognisability across a
 
 ✅ Textures **Checklist**
 
-- [ ]  Textured Background
-- [ ]  Alternative Background
+☐ Textured Background
+
+☐ Alternative Background
 
 ![d2a77609f5d97b9081b117c8f699bd37.jpg](e036d4cd-4bd4-4a06-b150-8e30de535f09.png)
 
@@ -123,30 +142,49 @@ Defines reusable [UI elements](https://m3.material.io/components) that ensure co
 
 ✅ Foundational Components Checklist
 
-- [ ]  Buttons
-- [ ]  Inputs (text, password, textarea)
-- [ ]  Selects / Dropdowns
-- [ ]  Checkboxes
-- [ ]  Radio buttons
-- [ ]  Toggles / Switches
-- [ ]  Sliders
-- [ ]  Date & time pickers
-- [ ]  Avatars / Badges / Chips
-- [ ]  Icons
+☐ Buttons
+
+☐ Inputs (text, password, textarea)
+
+☐ Selects / Dropdowns
+
+☐ Checkboxes
+
+☐ Radio buttons
+
+☐ Toggles / Switches
+
+☐ Sliders
+
+☐ Date & time pickers
+
+☐ Avatars / Badges / Chips
+
+☐ Icons
 
 ✅ Complex Components Checklist
 
-- [ ]  Cards
-- [ ]  Menus (context, dropdown, mega menu)
-- [ ]  Navigation (top bar, side nav, breadcrumbs)
-- [ ]  Modals / Dialogs
-- [ ]  Tooltips
-- [ ]  Tabs
-- [ ]  Accordions
-- [ ]  Pagination
-- [ ]  Tables
-- [ ]  Toasts / Alerts / Notifications
-- [ ]  Progress indicators (spinner, bar, stepper)
+☐ Cards
+
+☐ Menus (context, dropdown, mega menu)
+
+☐ Navigation (top bar, side nav, breadcrumbs)
+
+☐ Modals / Dialogs
+
+☐ Tooltips
+
+☐ Tabs
+
+☐ Accordions
+
+☐ Pagination
+
+☐ Tables
+
+☐ Toasts / Alerts / Notifications
+
+☐ Progress indicators (spinner, bar, stepper)
 
 [Components – Material Design 3](https://m3.material.io/components)
 
@@ -186,13 +224,19 @@ Students can expand their style guide over time by adding grids, spacing, do not
 
 # ✅ Checklist
 
-- [ ]  Logo
-- [ ]  Typography
-- [ ]  Colours
-- [ ]  Icons
-- [ ]  Buttons
-- [ ]  Textures (Optional)
-- [ ]  [Components (Advanced)](https://m3.material.io/components)
+☐ Logo
+
+☐ Typography
+
+☐ Colours
+
+☐ Icons
+
+☐ Buttons
+
+☐ Textures (Optional)
+
+☐ [Components (Advanced)](https://m3.material.io/components)
 
 # 📝 Summary
 

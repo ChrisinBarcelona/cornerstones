@@ -87,6 +87,14 @@ By the end of this activity, you will have identified real world reoccurring the
 - **Each interview**: 20–30 min
 - **Insight gathering:** 60 mins
 
+# ⚡ Tips
+
+- Ask about the past, not the future: "Tell me about the last time you…" beats "Would you use…?"
+- Use open questions and let silences run; people fill them with the good stuff.
+- Ask "why?" gently and often, and follow up on what *they* bring up.
+- Never pitch your idea during an interview.
+- Interview in pairs: one asks, one takes notes.
+
 # ✨ AI Assist
 
 You can record the interviews and use [Notta.ai](http://Notta.ai) to distill the main takeaways from the conversation.  
@@ -111,29 +119,39 @@ You can record the interviews and use [Notta.ai](http://Notta.ai) to distill the
 
 ### **Preparation**
 
-- [ ]  Review your research to date.
-- [ ]  Complete your [**Interview Guide**](https://www.nngroup.com/articles/interview-guide/) with open-ended and follow-up questions.
-- [ ]  Recruit **5 participants** matching your target users.
+☐ Review your research to date.
+
+☐ Complete your [**Interview Guide**](https://www.nngroup.com/articles/interview-guide/) with open-ended and follow-up questions.
+
+☐ Recruit **5 participants** matching your target users.
 
 ### **Before the Interview**
 
-- [ ]  Schedule interviews at convenient times.
-- [ ]  Prepare a **quiet setting** and check recording tools.
-- [ ]  Have **consent forms** ready (If necessary).
+☐ Schedule interviews at convenient times.
+
+☐ Prepare a **quiet setting** and check recording tools.
+
+☐ Have **consent forms** ready (If necessary).
 
 ### **During the Interview**
 
-- [ ]  Build **rapport** with participants.
-- [ ]  Follow your **guide** but stay flexible.
-- [ ]  Use **probing questions** and note non-verbal cues.
-- [ ]  Avoid **leading questions**.
+☐ Build **rapport** with participants.
+
+☐ Follow your **guide** but stay flexible.
+
+☐ Use **probing questions** and note non-verbal cues.
+
+☐ Avoid **leading questions**.
 
 ### **After the Interview**
 
-- [ ]  Thank participants and explain next steps.
-- [ ]  Review recordings/notes to **identify patterns and insights**.
-- [ ]  Summarise findings for design or research discussion.
-- [ ]  Optionally, use tools like [**Notta.ai**](http://notta.ai/) for transcription and analysis.
+☐ Thank participants and explain next steps.
+
+☐ Review recordings/notes to **identify patterns and insights**.
+
+☐ Summarise findings for design or research discussion.
+
+☐ Optionally, use tools like [**Notta.ai**](http://notta.ai/) for transcription and analysis.
 
 # 📝 Summary
 

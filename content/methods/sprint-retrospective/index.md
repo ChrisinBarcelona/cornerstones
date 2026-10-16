@@ -129,19 +129,23 @@ You can ask an AI tool:
 
 ### **Preparation**
 
-- [ ]  Collect all sprint artefacts (test notes, iteration snapshots).
-- [ ]  Identify key moments and decisions.
+☐ Collect all sprint artefacts (test notes, iteration snapshots).
+
+☐ Identify key moments and decisions.
 
 ### **During Reflection**
 
-- [ ]  Complete the 3Ls framework: Liked, Learned, Lacked.
-- [ ]  Highlight actionable next steps.
+☐ Complete the 3Ls framework: Liked, Learned, Lacked.
+
+☐ Highlight actionable next steps.
 
 ### **After Reflection**
 
-- [ ]  Draft your sprint retrospective
-- [ ]  Build up your Case Study
-- [ ]  Published Case study to Medium
+☐ Draft your sprint retrospective
+
+☐ Build up your Case Study
+
+☐ Published Case study to Medium
 
 # 📝 Summary
 

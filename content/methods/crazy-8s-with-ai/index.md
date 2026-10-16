@@ -110,6 +110,12 @@ AI gives the idea.
 
 ---
 
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=yz4g87XapQ0](https://www.youtube.com/watch?v=yz4g87XapQ0)
+
+[https://www.youtube.com/watch?v=eqGTGFSDnRQ](https://www.youtube.com/watch?v=eqGTGFSDnRQ)
+
 # 📚 Resources
 
 - Overview: *Crazy 8’s Method*
@@ -122,13 +128,19 @@ AI gives the idea.
 
 # ✅ Checklist
 
-- [ ]  Design brief written
-- [ ]  Paper folded into 8 sections
-- [ ]  AI prompt ready
-- [ ]  Timer set
-- [ ]  8 sketches completed
-- [ ]  Top ideas reviewed and discussed
-- [ ]  Strongest concepts selected for further development
+☐ Design brief written
+
+☐ Paper folded into 8 sections
+
+☐ AI prompt ready
+
+☐ Timer set
+
+☐ 8 sketches completed
+
+☐ Top ideas reviewed and discussed
+
+☐ Strongest concepts selected for further development
 
 ---
 

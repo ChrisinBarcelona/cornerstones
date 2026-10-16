@@ -75,6 +75,18 @@ You can upload your paper wireframes and ask an AI tool: ‘Make medium-fidelity
 
 [Miro](https://miro.com/)
 
+# ✅ Checklist
+
+☐ Duplicated the Mid-Fi kit or opened a Miro wireframe board
+
+☐ Rebuilt your paper wireframes for the screens in your task flow
+
+☐ Used real headings, labels and button text
+
+☐ Kept it greyscale with no brand or final images
+
+☐ Linked the screens so the flow can be clicked through
+
 # 📝 Summary
 
 Medium-fidelity wireframes bring your sketches into a digital format so they can be tested and discussed. By keeping them greyscale but getting the layout, hierarchy and real labels right, and focusing on the **core task flow**, students avoid distractions and stay focused on what matters most: learning whether their structure supports the user’s needs. This stage reinforces the principle of building **only the MVP** and treating wireframes as part of the **research and iteration process**, not as final deliverables.

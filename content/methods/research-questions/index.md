@@ -58,12 +58,27 @@ You can ask an AI tool:
 - “Here’s my research goal: ___. Suggest some related research questions.”
 - “Which of these questions are too broad or too narrow?”
 
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=O9-az6aakmY](https://www.youtube.com/watch?v=O9-az6aakmY)
+
+[https://www.youtube.com/watch?v=VKl8X16GoiY](https://www.youtube.com/watch?v=VKl8X16GoiY)
+
+# 📚 Resources
+
+[Research Plans: Organize, Document, Inform – Nielsen Norman Group](https://www.nngroup.com/articles/pm-research-plan/)
+
+[From Research Goals to Usability-Testing Scenarios – Nielsen Norman Group](https://www.nngroup.com/articles/ux-research-goals-to-scenarios/)
+
 # ✅ Checklist
 
-- [ ]  I reviewed my research goal.
-- [ ]  I drafted at least 3–5 questions.
-- [ ]  I included different types (descriptive, analytical, evaluative).
-- [ ]  My questions connect back to my research goal.
+☐ I reviewed my research goal.
+
+☐ I drafted at least 3–5 questions.
+
+☐ I included different types (descriptive, analytical, evaluative).
+
+☐ My questions connect back to my research goal.
 
 # 📝 Summary
 

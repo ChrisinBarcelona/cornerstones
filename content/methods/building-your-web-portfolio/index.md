@@ -36,6 +36,14 @@ Work through the sprint plan below. Each phase lists the goal, the tasks and the
 
 - 5 days (Portfolio Week, with the Framer workshops)
 
+# ⚡ Tips
+
+- Build the system first: styles and components, then pages.
+- Design one case-study template in the CMS and reuse it for every project.
+- Check all three breakpoints after every change, not at the end.
+- Keep the landing page short; let the case studies do the talking.
+- Publish early and share the link for feedback before the final week.
+
 # 🎥 Media
 
 The videos, grouped by the phase they belong to.

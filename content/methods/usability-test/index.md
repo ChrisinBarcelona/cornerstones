@@ -95,6 +95,14 @@ By the end of this activity, students will have facilitated five user interviews
 - **Each test**: 30–45 min
 - **Analysis & synthesis**: 60–90 min
 
+# ⚡ Tips
+
+- Test with five people per round; you'll find most of the major problems.
+- Recruit people who match your persona, not classmates.
+- Run a pilot session first to catch broken links and unclear tasks.
+- Let participants struggle: silence and patience reveal the real problems.
+- Debrief straight after each session while it's fresh.
+
 # ✨ AI Assist
 
 You can synthesise the interviews with:
@@ -120,28 +128,35 @@ You can synthesise the interviews with:
 ### **Preparation**
 
 - [x]  Define test goals and scenarios.
-- [ ]  Write neutral task instructions.
-- [ ]  Recruit **5 participants**.
+☐ Write neutral task instructions.
+
+☐ Recruit **5 participants**.
 
 ### **Before the Test**
 
-- [ ]  Test environment prepared (recording tools, consent forms).
+☐ Test environment prepared (recording tools, consent forms).
 - [x]  Ensure product/prototype is stable.
-- [ ]  Remind yourself: stay neutral.
+☐ Remind yourself: stay neutral.
 
 ### **During the Test**
 
-- [ ]  Build rapport.
-- [ ]  Present task.
-- [ ]  Encourage “think aloud.”
-- [ ]  Record behaviours, time, and issues.
+☐ Build rapport.
+
+☐ Present task.
+
+☐ Encourage “think aloud.”
+
+☐ Record behaviours, time, and issues.
 
 ### **After the Test**
 
-- [ ]  Debrief with participant.
-- [ ]  Review notes and recordings.
-- [ ]  Identify recurring usability issues.
-- [ ]  Summarise into clear, actionable insights.
+☐ Debrief with participant.
+
+☐ Review notes and recordings.
+
+☐ Identify recurring usability issues.
+
+☐ Summarise into clear, actionable insights.
 
 ---
 

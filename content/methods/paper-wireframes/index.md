@@ -46,6 +46,22 @@ Revisit your user journey, style guide and task flow. Create a step by step repr
 
 [https://www.youtube.com/watch?v=miVcrftnhzM](https://www.youtube.com/watch?v=miVcrftnhzM)
 
+# 📚 Resources
+
+[Paper Prototyping: Getting User Data Before You Code – Nielsen Norman Group](https://www.nngroup.com/articles/paper-prototyping/)
+
+[UX Prototypes: Low Fidelity vs. High Fidelity – Nielsen Norman Group](https://www.nngroup.com/articles/ux-prototype-hi-lo-fidelity/)
+
+# ✅ Checklist
+
+☐ Revisited your user journey, task flow and style guide
+
+☐ Sketched every screen in your main task flow
+
+☐ Numbered the screens in order
+
+☐ Walked a classmate through the flow and noted where they got stuck
+
 # 📝 Summary
 
-Paper wireframes are a fast and inexpensive method to explore design ideas, test flows, and identify usability issues early. By creating and iterating lo-fi prototypes, students gain confidence in their concepts and set the foundation for higher-fidelity designs.
+Paper wireframes are a fast and inexpensive method to explore design ideas, test flows, and identify usability issues early. By creating and iterating paper prototypes, students gain confidence in their concepts and set the foundation for higher-fidelity designs.

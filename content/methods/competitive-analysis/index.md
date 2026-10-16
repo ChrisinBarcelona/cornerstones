@@ -60,10 +60,13 @@ By the end of this activity, you will be able to **systematically analyse compet
 
 # ✅ Checklist
 
-- [ ]  Identified key competitors.
-- [ ]  Analysed features, strengths, and weaknesses.
-- [ ]  Noted opportunities and gaps.
-- [ ]  Linked insights to user needs and design direction.
+☐ Identified key competitors.
+
+☐ Analysed features, strengths, and weaknesses.
+
+☐ Noted opportunities and gaps.
+
+☐ Linked insights to user needs and design direction.
 
 # 📝 Summary
 

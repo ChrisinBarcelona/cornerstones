@@ -62,14 +62,21 @@ Once the survey has responses, you can ask an AI tool:
 
 # ✅ Checklist
 
-- [ ]  My survey connects to my research questions.
-- [ ]  My survey focuses on the lived experiences of the user
-- [ ]  I included [demographics](https://www.google.com/search?q=survey+demographics+meaning&sca_esv=b874bfd7680df073&ei=toWxaNS2Ea2tkdUPkJD_oAU&ved=0ahUKEwjU6aK07K-PAxWtVqQEHRDIH1QQ4dUDCBA&uact=5&oq=survey+demographics+meaning&gs_lp=Egxnd3Mtd2l6LXNlcnAiG3N1cnZleSBkZW1vZ3JhcGhpY3MgbWVhbmluZzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYR0iPGFDsAVjWFnABeAGQAQCYAX-gAeQBqgEDMC4yuAEDyAEA-AEBmAIDoAL6AcICCBAAGAoYDRgewgILEAAYgAQYhgMYigXCAggQABiABBiiBJgDAOIDBRIBMSBAiAYBkAYIkgcDMS4yoAfGCrIHAzAuMrgH8AHCBwMyLTPIBxI&sclient=gws-wiz-serp) (age, role, etc.).
-- [ ]  I avoided solution-seeking questions.
-- [ ]  My questions are multiple-choice or scaled (not overly open-ended).
-- [ ]  I tested the survey with someone for clarity.
-- [ ]  I published my survey in Google Forms and shared it with my network.
-- [ ]  I reviewed my survey looking for patterns and pain points
+☐ My survey connects to my research questions.
+
+☐ My survey focuses on the lived experiences of the user
+
+☐ I included [demographics](https://www.google.com/search?q=survey+demographics+meaning&sca_esv=b874bfd7680df073&ei=toWxaNS2Ea2tkdUPkJD_oAU&ved=0ahUKEwjU6aK07K-PAxWtVqQEHRDIH1QQ4dUDCBA&uact=5&oq=survey+demographics+meaning&gs_lp=Egxnd3Mtd2l6LXNlcnAiG3N1cnZleSBkZW1vZ3JhcGhpY3MgbWVhbmluZzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYR0iPGFDsAVjWFnABeAGQAQCYAX-gAeQBqgEDMC4yuAEDyAEA-AEBmAIDoAL6AcICCBAAGAoYDRgewgILEAAYgAQYhgMYigXCAggQABiABBiiBJgDAOIDBRIBMSBAiAYBkAYIkgcDMS4yoAfGCrIHAzAuMrgH8AHCBwMyLTPIBxI&sclient=gws-wiz-serp) (age, role, etc.).
+
+☐ I avoided solution-seeking questions.
+
+☐ My questions are multiple-choice or scaled (not overly open-ended).
+
+☐ I tested the survey with someone for clarity.
+
+☐ I published my survey in Google Forms and shared it with my network.
+
+☐ I reviewed my survey looking for patterns and pain points
 
 # 📝 Summary
 

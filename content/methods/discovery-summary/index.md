@@ -67,6 +67,12 @@ By the end of this activity, you will be able to **synthesise your discovery res
 - Think of this summary as a **bridge** between discovery and define.
 - Don’t overthink — capture what stands out most clearly from your research.
 
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=-bn2euyKhJo](https://www.youtube.com/watch?v=-bn2euyKhJo)
+
+[https://www.youtube.com/watch?v=BT-AMKSEzvA](https://www.youtube.com/watch?v=BT-AMKSEzvA)
+
 # 📚 Resources
 
 - Question prompts:
@@ -76,11 +82,15 @@ By the end of this activity, you will be able to **synthesise your discovery res
 
 # ✅ Checklist
 
-- [ ]  Reviewed all discovery phase materials.
-- [ ]  Identified key insights and patterns.
-- [ ]  Highlighted surprises and contradictions.
-- [ ]  Linked findings back to the research goal.
-- [ ]  Noted remaining questions or next steps.
+☐ Reviewed all discovery phase materials.
+
+☐ Identified key insights and patterns.
+
+☐ Highlighted surprises and contradictions.
+
+☐ Linked findings back to the research goal.
+
+☐ Noted remaining questions or next steps.
 
 # 📝 Summary
 

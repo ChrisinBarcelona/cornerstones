@@ -55,6 +55,12 @@ Use AI to:
 - Reframe your **Business Outcomes** as measurable metrics.
 - Suggest alternative **User Outcomes & Benefits** based on your draft.
 
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=zcm6eLZXiVU](https://www.youtube.com/watch?v=zcm6eLZXiVU)
+
+[https://www.youtube.com/watch?v=e6C_N1uwa58](https://www.youtube.com/watch?v=e6C_N1uwa58)
+
 # 📚 Resources
 
 - [Jeff Gothelf’s Lean UX Canvas overview](https://jeffgothelf.com/blog/lean-ux-canvas/)
@@ -62,10 +68,13 @@ Use AI to:
 
 # ✅ Checklist
 
-- [ ]  Business Problem is **clear and specific**
-- [ ]  Business Outcomes are **measurable**
-- [ ]  Users are **defined, not generic**
-- [ ]  User Outcomes describe **real value**
+☐ Business Problem is **clear and specific**
+
+☐ Business Outcomes are **measurable**
+
+☐ Users are **defined, not generic**
+
+☐ User Outcomes describe **real value**
 
 # 📝 Summary
 

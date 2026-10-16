@@ -61,14 +61,25 @@ By the end of this activity, students will:
 
 [https://www.youtube.com/watch?v=HjOdNmpGaTw](https://www.youtube.com/watch?v=HjOdNmpGaTw)
 
+# 📚 Resources
+
+[Personas Make Users Memorable – Nielsen Norman Group](https://www.nngroup.com/articles/persona/)
+
+[The Design Sprint – GV](https://www.gv.com/sprint/)
+
 # ✅ Checklist
 
-- [ ]  Reviewed research & personas
-- [ ]  Defined Most Valuable Player
-- [ ]  Defined Minimum Viable Product
-- [ ]  Wrote a Target Statement
-- [ ]  Pitched & posted target
-- [ ]  Made converge/diverge decision
+☐ Reviewed research & personas
+
+☐ Defined Most Valuable Player
+
+☐ Defined Minimum Viable Product
+
+☐ Wrote a Target Statement
+
+☐ Pitched & posted target
+
+☐ Made converge/diverge decision
 
 # 📝 Summary
 

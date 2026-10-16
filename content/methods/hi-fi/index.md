@@ -6,7 +6,7 @@ From wireframes to polished, interactive prototypes.
 
 # 👋 Context
 
-Now that you’ve built your low-fidelity wireframes, the next step is to transform them into high-fidelity prototypes in Figma. This stage focuses on visual design, branding, and realistic interactions to simulate the final product experience.
+Now that you’ve built your mid-fidelity wireframes, the next step is to transform them into high-fidelity prototypes in Figma. This stage focuses on visual design, branding, and realistic interactions to simulate the final product experience.
 
 # 🎯 Goal / Learning Outcome
 
@@ -18,7 +18,7 @@ By the end of this activity, students will have:
 
 # 🛠️ Main Exercise
 
-1. **Open Figma** and duplicate your low-fidelity wireframes.
+1. **Open Figma** and duplicate your mid-fidelity wireframes.
 2. Apply **visual design elements** (color palette, fonts, logos, spacing).
 3. Replace placeholders with **real content and images**.
 4. Add **interactivity using Figma prototyping tools** (links, transitions, animations).
@@ -39,7 +39,7 @@ By the end of this activity, students will have:
 
 ![low-fidelity-vs-high-fidelity.png](low-fidelity-vs-high-fidelity.png)
 
-*On the right hand side we can see the high fidelity version of the early lo-fi screen.*
+*On the right hand side we can see the high fidelity version of the earlier wireframe.*
 
 # ⚡ Tips
 
@@ -47,9 +47,33 @@ By the end of this activity, students will have:
 
 # ✨ AI Assist
 
-You can upload your low fidelity screen and ask stitch to: ‘Make high fidelity screens’ and export into Figma (In Beta)
+You can upload your mid-fidelity screen and ask stitch to: ‘Make high fidelity screens’ and export into Figma (In Beta)
 
 [Stitch - Design with AI](https://stitch.withgoogle.com/projects/9160201339317693902)
+
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=2tmb1fbRkJ8](https://www.youtube.com/watch?v=2tmb1fbRkJ8)
+
+[https://www.youtube.com/watch?v=ouqNCmUlnWg](https://www.youtube.com/watch?v=ouqNCmUlnWg)
+
+# 📚 Resources
+
+[UX Prototypes: Low Fidelity vs. High Fidelity – Nielsen Norman Group](https://www.nngroup.com/articles/ux-prototype-hi-lo-fidelity/)
+
+[Guide to prototyping in Figma – Figma Help Center](https://help.figma.com/hc/en-us/articles/360040314193-Guide-to-prototyping-in-Figma)
+
+# ✅ Checklist
+
+☐ Duplicated your mid-fi wireframes
+
+☐ Applied your style guide: colours, type, logo and spacing
+
+☐ Replaced placeholders with real content and images
+
+☐ Linked the full task flow as a clickable prototype
+
+☐ Clicked through it yourself before testing
 
 # 📝 Summary
 

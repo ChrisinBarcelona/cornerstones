@@ -75,14 +75,29 @@ By the end of this activity, students will have **translated usability findings 
 
 - You can reiterate just the component as opposed to an entire screen if it suits.
 
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=UYfCWkMRu88](https://www.youtube.com/watch?v=UYfCWkMRu88)
+
+[https://www.youtube.com/watch?v=JgPppwsocRU](https://www.youtube.com/watch?v=JgPppwsocRU)
+
+# 📚 Resources
+
+[Iterative Design of User Interfaces – Nielsen Norman Group](https://www.nngroup.com/articles/iterative-design/)
+
+[Parallel & Iterative Design + Competitive Testing – Nielsen Norman Group](https://www.nngroup.com/articles/parallel-and-iterative-design/)
+
 # ✅ Checklist
 
 ### **Preparation**
 
-- [ ]  Reviewed usability themes and notes.
-- [ ]  Prioritise 2–3 key issues.
-- [ ]  Created x3 updates.
-- [ ]  Set each visual before and after iteration
+☐ Reviewed usability themes and notes.
+
+☐ Prioritise 2–3 key issues.
+
+☐ Created x3 updates.
+
+☐ Set each visual before and after iteration
 
 # 📝 Summary
 

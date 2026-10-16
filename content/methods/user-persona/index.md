@@ -93,11 +93,15 @@ Students can use AI to:
 
 # ✅ Checklist
 
-- [ ]  Reviewed discovery research
-- [ ]  Grouped insights into clusters
-- [ ]  Identified 1–2 archetypes
-- [ ]  Completed persona template
-- [ ]  Presented to peers
+☐ Reviewed discovery research
+
+☐ Grouped insights into clusters
+
+☐ Identified 1–2 archetypes
+
+☐ Completed persona template
+
+☐ Presented to peers
 
 # 📝 Summary
 

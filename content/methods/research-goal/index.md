@@ -56,6 +56,12 @@ You can ask an AI tool:
 - “Help me brainstorm smaller research questions about [topic].”
 - “Rewrite my research goal so it’s clearer.”
 
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=O9-az6aakmY](https://www.youtube.com/watch?v=O9-az6aakmY)
+
+[https://www.youtube.com/watch?v=zuFOJapWy2Y](https://www.youtube.com/watch?v=zuFOJapWy2Y)
+
 # 📚 Resources
 
 - Example research goal statements (teacher-provided or from past students).
@@ -63,6 +69,16 @@ You can ask an AI tool:
     - “I want to understand why/how…”
     - “My research will help explain…”
     - “I hope to discover whether…”
+
+# ✅ Checklist
+
+☐ Wrote down a big question you're curious about
+
+☐ Broke it into smaller questions
+
+☐ Reframed it as one research goal (understand, explain or discover)
+
+☐ Got feedback from a partner
 
 # 📝 Summary
 
