@@ -1,17 +1,27 @@
 # Key Figures: Max Wertheimer
 
-Max Wertheimer was a renowned German psychologist and one of the founding figures of Gestalt psychology. 
+> A founder of Gestalt psychology, which explains how we see groups and patterns.
 
-![Daniel_Kahneman_(3283955327)_(cropped).jpg](https://lamenteesmaravillosa.com/wp-content/uploads/2019/04/max-wertheimer.png)
+![Max Wertheimer](max-wertheimer.jpg)
 
-His contributions to psychology, particularly in the field of Gestalt psychology, have had a lasting impact on Designer’s understanding of perception, cognition, and the organization of sensory experiences. His work laid the foundation for subsequent research and influenced various branches of psychology, including cognitive psychology and cognitive science.
+*Photo: public domain, via Wikimedia Commons*
 
-Field: **Psychology**
+| | |
+| --- | --- |
+| **Born** | 15 April 1880, Prague (died 1943) |
+| **Field** | Psychology |
+| **Known for** | Gestalt psychology and the principles of perceptual organisation |
+| **Key work** | *Laws of Organization in Perceptual Forms* (1923) |
 
-Major Contribution: Gestalt psychology
+## Who they are
 
-Worked: University of Frankfurt
+Wertheimer was a psychologist born in Prague who worked in Germany and, from 1933, in the United States. With Wolfgang Köhler and Kurt Koffka he founded **Gestalt psychology**, the idea that we perceive whole patterns, not separate parts: the whole is different from the sum of its parts.
 
-Era: 1880
+## Key contributions
 
-Best Quote: "Perception is not a mirror, but a creative act.”
+- **The phi phenomenon (1912):** his study of apparent motion, the illusion that makes a series of still images look like movement.
+- **Principles of grouping:** proximity, similarity, continuity, closure and more: the rules our brains use to organise what we see.
+
+## Why it matters for UX
+
+The Gestalt principles are the foundation of layout and visual hierarchy. Grouping related items with spacing (proximity), styling items the same way to show they belong together (similarity) and aligning elements (continuity) all come from his work. See the Laws of UX lecture.

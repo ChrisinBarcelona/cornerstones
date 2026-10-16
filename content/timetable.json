@@ -32,7 +32,7 @@
   "weeks": [
     {
       "code": "W01",
-      "theme": "Discovery",
+      "theme": "Honest Greens",
       "project": "Service Design",
       "part": "Part One",
       "summary": "A two-week service design sprint. Go out into the real world, map how a service actually behaves today, and build the evidence base for redesigning it.",
@@ -46,7 +46,8 @@
         {
           "activities": [
             {
-              "label": "Sprint brief"
+              "label": "Sprint brief",
+              "link": "sprints/honest-greens"
             },
             {
               "label": "Site visit",
@@ -181,7 +182,8 @@
         {
           "activities": [
             {
-              "label": "Sprint brief"
+              "label": "Sprint brief",
+              "link": "sprints/locker-room"
             },
             {
               "label": "Lean UX Canvas built with Claude",
@@ -572,6 +574,10 @@
         {
           "activities": [
             {
+              "label": "Sprint brief",
+              "link": "sprints/wicked-project"
+            },
+            {
               "label": "Choose a wicked topic",
               "link": "ux/wicked-problem"
             }
@@ -672,6 +678,10 @@
       "days": [
         {
           "activities": [
+            {
+              "label": "Sprint brief",
+              "link": "sprints/personal-project"
+            },
             {
               "label": "Pitch"
             },
@@ -794,7 +804,8 @@
           ],
           "presentation": "General audience-style presentation"
         }
-      ]
+      ],
+      "project_exercise": "exercises/balenciaga-replica-challenge"
     },
     {
       "code": "W09",
@@ -817,7 +828,8 @@
             }
           ],
           "workshop": {
-            "title": "Framer Workshop (1)"
+            "title": "Framer Workshop (1)",
+            "link": "methods/building-your-web-portfolio"
           }
         },
         {
@@ -828,7 +840,8 @@
             }
           ],
           "workshop": {
-            "title": "Framer Workshop (2)"
+            "title": "Framer Workshop (2)",
+            "link": "methods/building-your-web-portfolio"
           }
         },
         {
@@ -843,17 +856,20 @@
             }
           ],
           "workshop": {
-            "title": "Framer Workshop (3)"
+            "title": "Framer Workshop (3)",
+            "link": "methods/building-your-web-portfolio"
           }
         },
         {
           "activities": [
             {
-              "label": "Website development with Framer AI, or Claude Code with GitHub and React.js"
+              "label": "Website development with Framer AI, or Claude Code with GitHub and React.js",
+              "link": "methods/building-your-web-portfolio"
             }
           ],
           "workshop": {
-            "title": "Framer Workshop (4)"
+            "title": "Framer Workshop (4)",
+            "link": "methods/building-your-web-portfolio"
           }
         },
         {
@@ -864,7 +880,8 @@
           ],
           "presentation": "Final Presentation",
           "workshop": {
-            "title": "Framer Workshop (5)"
+            "title": "Framer Workshop (5)",
+            "link": "methods/building-your-web-portfolio"
           }
         }
       ]

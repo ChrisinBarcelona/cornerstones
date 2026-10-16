@@ -1,26 +1,28 @@
 # Key Figures: Walt Disney
 
-Relevant to User Experience design is none other than Walt Disney, the American entrepreneur, animator, and film producer.
+> The storyteller who designed entire experiences, not just films.
 
-![Taiichi Ohno.jpg](https://www.nmspacemuseum.org/wp-content/uploads/2019/03/walter_disney-768x1024.jpg)
+![Walt Disney](walt-disney.jpg)
 
-His visionary leadership and creativity transformed the entertainment industry, leaving a lasting legacy that’s felt to this day.
+*Photo: 1946, public domain, via Wikimedia Commons*
 
-With his emphasis to storytelling and creating immersive experiences has had a significant influence on the principles and practices of user experience (UX) design. Here are a few reasons why Walt Disney is important to UX design:
+| | |
+| --- | --- |
+| **Born** | 5 December 1901, Chicago, USA (died 1966) |
+| **Field** | Animation, entertainment, experience design |
+| **Known for** | Mickey Mouse, feature-length animation and Disneyland |
+| **Key work** | *Steamboat Willie* (1928); Disneyland (1955) |
 
-1. Emphasis on User Engagement: He understood that providing an enjoyable and immersive experience was key to creating a connection with viewers. 
-2. Attention to Detail: Disney was known for his meticulous attention to detail, whether it was in the animation, set design, or storytelling. He believed that even the smallest details contributed to the overall experience. 
-3. Storytelling and Narrative: Disney was a master storyteller, weaving compelling narratives that resonated with audiences. 
-4. Immersive Environments: Disney's theme parks, such as Disneyland, were designed to transport visitors into immersive and magical environments. 
+## Who they are
 
-While Walt Disney's contributions to UX design may not be direct, his philosophy and approach to creating immersive and engaging experiences have had a lasting impact on the field. UX designers draw inspiration from Disney's emphasis on user engagement, attention to detail, storytelling, and the creation of immersive environments to shape user-centric and delightful experiences.
+Disney was an American animator, film producer and entrepreneur. He co-founded what became the Walt Disney Company and, with Disneyland, created a place where every detail, from the paths to the staff's costumes, served one story.
 
-Field: **Product Design**
+## Key contributions
 
-Major Contribution: Mickey Mouse
+- **Storytelling:** every film, ride and space was designed around a story.
+- **Attention to detail:** the smallest details were treated as part of the experience.
+- **Designing the whole journey:** Disneyland was planned around how guests move, wait and feel, including hiding the "backstage" from view.
 
-Worked: Walt Disney Studios
+## Why it matters for UX
 
-Era: 1950
-
-Best Quote: "Do what you do so well that they will want to come back and bring their friends.”
+Disney thought like a service designer before the term existed. The idea of a front stage and a backstage, managing queues and emotions, and designing every touchpoint of a journey are exactly what you map in a journey map and a service blueprint.

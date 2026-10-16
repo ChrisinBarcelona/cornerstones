@@ -1,19 +1,26 @@
-# Key Figures: Jakob Neilson
+# Key Figures: Jakob Nielsen
 
-Dr. Jakob Nielsen is a recognized expert in web usability and has made significant contributions to the field.
+> The usability pioneer behind the 10 heuristics and "test with five users".
 
-![Jakob_Nielsen_1.jpeg](Jakob_Nielsen_1.jpeg)
+![Jakob Nielsen](Jakob_Nielsen_1.jpeg)
 
-He holds a Ph.D. in human-computer interaction from the Technical University of Denmark. In the 1990s, Nielsen co-founded the Nielsen Norman Group with Dr. Donald Norman. 
+| | |
+| --- | --- |
+| **Born** | 5 October 1957, Copenhagen, Denmark |
+| **Field** | Usability, human-computer interaction |
+| **Known for** | The 10 usability heuristics, discount usability engineering |
+| **Key work** | *Usability Engineering* (1993); *Designing Web Usability* (1999) |
 
-Nielsen's work focuses on providing guidelines and best practices for designing user-friendly and effective websites and digital interfaces. He emphasizes the importance of simplicity, clarity, and accessibility in web design, and his recommendations have become widely adopted in the industry.
+## Who they are
 
-Field: **Research Techniques**
+Nielsen is a Danish web usability expert with a PhD in human-computer interaction from the Technical University of Denmark. He worked at Sun Microsystems before co-founding the Nielsen Norman Group with Don Norman in 1998.
 
-Major Contribution: Usability Heuristics
+## Key contributions
 
-Worked: Nielsen Norman Group
+- **The 10 usability heuristics (1994):** a checklist of rules of thumb for interface design.
+- **Discount usability:** cheap, fast methods such as small usability tests and heuristic evaluations.
+- **"Test with five users":** a small usability test finds most of the main problems, so test early and often.
 
-Era: 1998
+## Why it matters for UX
 
-Best Quote: "A bad website is like a grumpy salesperson.”
+His heuristics are the quickest way to check a design, and his argument for small, frequent usability tests is why you test every sprint. See the Nielsen Heuristics lecture.

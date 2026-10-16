@@ -51,5 +51,6 @@
   "methods/cataloguing-artifacts": {"q": "What is Cataloguing Artifacts?", "a": "Collecting, labelling and sorting every sketch, map, wireframe and test result from past projects into one archive, so you can choose the strongest evidence for your case studies."},
   "methods/process-narrative": {"q": "What is a Process Narrative?", "a": "The story of a project told as a case study: its purpose, the challenges, when things got tough and how you recovered, and what changed, illustrated with real artifacts."},
 
+  "methods/building-your-web-portfolio": {"q": "What is a web portfolio?", "a": "Your own responsive website that presents your case studies to employers. Here you build it in Framer, with one CMS template so every case study looks and works the same."},
   "methods/sprint-retrospective": {"q": "What is a Sprint Retrospective?", "a": "A structured look back at the sprint, what went well, what was hard and what you learned, which becomes the opening page of your case study."}
 }

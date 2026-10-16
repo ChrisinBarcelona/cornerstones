@@ -45,6 +45,11 @@ TAGLINE = "UX & UI learning resource for Barcelona Code School"
 LOGIN_HASH = "c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202"
 
 TRACKS = [
+    {"id": "sprints", "out": "sprints", "index": "sprints.html", "label": "Sprint Briefs", "noun": "Brief",
+     "eyebrow": "The Projects", "h1": "Sprint Briefs",
+     "blurb": "The four sprints at the heart of the bootcamp, from real-world service design to your own project.",
+     "intro": "The {n} sprints at the heart of the bootcamp. Each brief sets out the problem, your challenge, the goals, the scope, what to deliver and how the sprint runs day by day.",
+     "chapters": {"Sprint Briefs": "Service design, a startup, a wicked problem and a project of your own."}},
     {"id": "ux", "out": "lectures", "index": "ux.html", "label": "UX Theory", "noun": "Lecture",
      "eyebrow": "UX Learning Resource", "h1": "UX Theory",
      "blurb": "The history, psychology and practice of user experience design.",
@@ -53,7 +58,7 @@ TRACKS = [
          "Foundations": "Where UX comes from, what it is, and the people and roles behind it.",
          "Psychology": "How people perceive, decide and behave, and the laws and heuristics that follow.",
          "Process": "How design thinking works, from data and wicked problems to MVPs and wireframes.",
-         "Case Studies": "Real products that got UX very right, or very wrong.",
+         "Business Case Studies": "Real products and businesses that got UX very right, or very wrong.",
          "Interface": "UI basics, and how people physically interact: gestures and haptics.",
      }},
     {"id": "methods", "out": "methods", "index": "methods.html", "label": "UX Methods", "noun": "Method",
@@ -91,7 +96,7 @@ TRACKS = [
      "chapters": {
          "Daily UI": "Single-screen briefs for one session, rated for difficulty.",
          "Replica Challenges": "Copy real apps pixel for pixel to build fluency in Figma.",
-         "Team Projects": "Multi-day team builds from a schema.",
+         "UI Team Projects": "Multi-day team UI builds from a schema.",
      }},
 ]
 # Sections with progress tracking. Finishing every page of a sub-section earns its milestone badge; finishing every
@@ -99,13 +104,13 @@ TRACKS = [
 # counts as one item, complete only when the page and every sub-lesson are done.
 PROGRESS = {
     "ux": {"badge": "UX Theory", "short": "UX", "colour": "#0072e3", "done": "You've finished every UX Theory lecture.",
-           "milestones": {"Foundations": "🏛️", "Psychology": "🧠", "Process": "🔁", "Case Studies": "🔍", "Interface": "👆"}},
+           "milestones": {"Foundations": "🏛️", "Psychology": "🧠", "Process": "🔁", "Business Case Studies": "🔍", "Interface": "👆"}},
     "ui": {"badge": "UI Theory", "short": "UI", "colour": "#ff6100", "done": "You've finished every UI Theory lecture.",
            "milestones": {}},
     "figma": {"badge": "Figma", "short": "FG", "colour": "#ab54f7", "done": "You've finished every Figma lesson.",
               "milestones": {"Figma Basics": "🧱", "Figma Advanced": "🚀"}},
     "exercises": {"badge": "Exercises", "short": "EX", "colour": "#00aa3c", "done": "You've completed every exercise.",
-                  "milestones": {"Daily UI": "✏️", "Replica Challenges": "🪞", "Team Projects": "🤝"}},
+                  "milestones": {"Daily UI": "✏️", "Replica Challenges": "🪞", "UI Team Projects": "🤝"}},
 }
 CERTIFICATE = "UX/UI Design Bootcamp"
 
@@ -188,7 +193,10 @@ ORDER = {
                      "brand-pack", "style-guide", "paper-wireframes", "mid-fi", "hi-fi"],
         "Validation": ["usability-test", "create-your-script", "facilitator-format",
                        "limited-intervention-technique", "notetaker-format", "ab-test", "design-iteration"],
-        "Retrospective": ["sprint-retrospective", "cataloguing-artifacts", "process-narrative"],
+        "Retrospective": ["sprint-retrospective", "cataloguing-artifacts", "process-narrative", "building-your-web-portfolio"],
+    },
+    "sprints": {
+        "Sprint Briefs": ["honest-greens", "locker-room", "wicked-project", "personal-project"],
     },
     "figma": {
         "Figma Basics": ["choose-your-frame", "starting-in-figma", "beginners-guide-to-grids",
@@ -202,8 +210,8 @@ ORDER = {
         "Daily UI": ["sidebar", "friends-list", "new-notification", "bottom-sheet", "sign-in", "cc-checkout",
                      "video-player", "choose-a-movie", "music-player", "home-monitor-dash", "user-profile-page",
                      "make-an-ai-interface", "product-card", "ux-x-ai"],
-        "Replica Challenges": ["glovo-replica-challenge", "youtube-challenge", "airbnb-replica-challenge"],
-        "Team Projects": ["stage-play"],
+        "Replica Challenges": ["glovo-replica-challenge", "youtube-challenge", "airbnb-replica-challenge", "balenciaga-replica-challenge"],
+        "UI Team Projects": ["stage-play"],
     },
 }
 
@@ -238,6 +246,9 @@ RELATED = [
     ("exercises/airbnb-replica-challenge", "figma/beginners-guide-to-components"),
     ("exercises/airbnb-replica-challenge", "exercises/glovo-replica-challenge"),
     ("exercises/airbnb-replica-challenge", "exercises/youtube-challenge"),
+    ("exercises/balenciaga-replica-challenge", "exercises/airbnb-replica-challenge"),
+    ("exercises/balenciaga-replica-challenge", "figma/beginners-guide-auto-layout"),
+    ("exercises/balenciaga-replica-challenge", "figma/beginners-guide-to-components"),
     ("methods/pick-a-target", "ux/target-mvp"),
     ("methods/paper-wireframes", "ui/paper-wireframes"),
     ("methods/style-guide", "ui/style-guides"),
@@ -262,6 +273,8 @@ RELATED = [
     ("methods/brand-pack", "methods/style-guide"),
     ("methods/ab-test", "methods/usability-test"),
     ("methods/cataloguing-artifacts", "methods/process-narrative"),
+    ("methods/process-narrative", "methods/building-your-web-portfolio"),
+    ("methods/sitemap", "methods/building-your-web-portfolio"),
     ("methods/sprint-retrospective", "methods/process-narrative"),
     ("methods/hi-fi", "ux/stages-of-wireframes"),
     ("methods/research-goal", "methods/research-questions"),
@@ -293,6 +306,21 @@ FIGMA_ICONS = {
     "string-variables": '<path d="M4 7V5h11v2M9.5 5v14M7.5 19h4"/><path d="M15 12h6M18 12v7M16.5 19h3"/>',
     "variable-modes": '<rect x="2.5" y="7" width="19" height="10" rx="5"/><circle cx="16.5" cy="12" r="3.2"/><path d="M6.5 10.5v3M5 12h3"/>',
 }
+
+
+# Row icons for the other sections (Lucide, ISC licence): content/icons.json, by section and page slug.
+TRACK_ICONS = {k: v for k, v in json.loads((CONTENT / "icons.json").read_text(encoding="utf-8")).items() if not k.startswith("_")}
+
+
+def row_icon(track, slug, size=24):
+    """The icon tile shown in place of a page's number in a section's list, or "" if the page has none."""
+    if track == "figma":
+        return figma_icon(slug, size)
+    icon = TRACK_ICONS.get(track, {}).get(slug)
+    if not icon:
+        return ""
+    return (f'<svg viewBox="0 0 24 24" width="{size}" height="{size}" fill="none" stroke="currentColor" stroke-width="1.8" '
+            f'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{icon["svg"]}</svg>')
 
 
 def figma_icon(slug, size=24):
@@ -782,7 +810,7 @@ def build_track(t, data):
         else:
             stats = ""
         rows.append(f"""<li class="row{' no-stats' if not stats else ''}" data-key="{t['id']}/{l['slug']}" data-cat="{esc(l['category'])}"{parent_attr} data-search="{esc(search)}">
-  {f'<span class="row-icon" title="Lesson {l["number"]}">{figma_icon(l["slug"])}</span>' if t["id"] == "figma" and l["slug"] in FIGMA_ICONS else f'<span class="row-num">{l["number"]}</span>'}
+  {f'<span class="row-icon" title="{t["noun"]} {l["number"]}">{row_icon(t["id"], l["slug"])}</span>' if row_icon(t["id"], l["slug"]) else f'<span class="row-num">{l["number"]}</span>'}
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="{t['out']}/{l['slug']}.html">{esc(l['title'])}</a>{f'<span class="pill" data-parts-of="{len(l["children"])}">{len(l["children"])} parts</span>' if l["children"] else ''}<span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">{esc(l['description'])}</p>
@@ -889,11 +917,43 @@ def method_bank(data):
     </section>"""
 
 
+# Sprint briefs featured on the home page: kind of sprint, when it runs, and an icon for briefs without a photo.
+SPRINT_META = {
+    "honest-greens": ("Service Design", "Weeks 1 & 3", "🥗"),
+    "locker-room": ("Lean Startup", "Weeks 2 & 4", "🏖️"),
+    "wicked-project": ("High-stakes sprint", "Week 6", "🌍"),
+    "personal-project": ("Personal project", "Weeks 7 & 8", "🧭"),
+}
+
+
+def sprint_feature(data):
+    d = data["sprints"]
+    cards = []
+    for l in d["lectures"]:
+        kind, when, icon = SPRINT_META[l["slug"]]
+        num, _, name = l["title"].partition(": ")
+        pics = sorted((CONTENT / "sprints" / l["slug"]).glob("*.jpg"))
+        art = (f'<img src="content/sprints/{l["slug"]}/{pics[0].name}" alt="" loading="lazy">' if pics
+               else f'<span class="sprint-icon" aria-hidden="true">{icon}</span>')
+        cards.append(f"""<a class="sprint-card" href="sprints/{l['slug']}.html">
+  <span class="sprint-art">{art}<span class="sprint-num">{esc(num)}</span></span>
+  <span class="sprint-body"><span class="sprint-kind">{esc(kind)} · {esc(when)}</span>
+  <span class="sprint-name">{esc(name)}</span><span class="sprint-desc">{esc(l['description'])}</span>
+  <span class="sprint-go">Read the brief {ICON_ARROW}</span></span>
+</a>""")
+    return f"""<section class="sprint-feature t-sprints" aria-labelledby="sprints-title">
+      <div class="sprint-head"><div><div class="eyebrow">The projects</div><h2 id="sprints-title">Sprint briefs</h2>
+      <p class="sprint-lede">Four sprints sit at the heart of the bootcamp. Each brief sets out the problem, your challenge, the scope and how the sprint runs day by day.</p></div>
+      <a class="bank-go" href="sprints.html">All sprint briefs {ICON_ARROW}</a></div>
+      <div class="sprint-grid">{''.join(cards)}</div>
+    </section>"""
+
+
 def build_home(data):
     """index.html: what the course is, the method bank, the four sections, a suggested route and a search of every page."""
     cards = []
     for t in TRACKS:
-        if t["id"] == "methods":  # not a course to complete: it gets the method bank instead
+        if t["id"] in ("methods", "sprints"):  # not courses to complete: they get their own features
             continue
         d = data[t["id"]]
         n = len(d["lectures"])
@@ -938,6 +998,7 @@ def build_home(data):
       <label class="search search-all"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q-all" type="search" placeholder="Search all {len(index)} pages…" autocomplete="off"></label>
     </header>
     <ul class="cards search-results" id="results" hidden></ul>
+    {sprint_feature(data)}
     {method_bank(data)}
     <section class="sections" aria-label="Sections">{''.join(cards)}</section>
     <section class="badges" aria-labelledby="badges-title">
@@ -1245,8 +1306,8 @@ REMOVED.update({
     "lectures/non-directive-interview-technique.html": "../methods/limited-intervention-technique.html",
     "lectures/interviewer-format.html": "../methods/facilitator-format.html",
     "lectures/interview-taking-notes.html": "../methods/notetaker-format.html",
-    "lectures/portfolio.html": "../methods/process-narrative.html",
-    "lectures/scripts.html": "../ux.html",
+    "lectures/portfolio.html": "../methods/building-your-web-portfolio.html",
+    "lectures/scripts.html": "../methods/building-your-web-portfolio.html",
 })
 REMOVED["ui/case-studies-and-how-to-tell-a-good-story.html"] = "../methods/process-narrative.html"
 

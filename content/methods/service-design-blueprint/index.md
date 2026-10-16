@@ -21,17 +21,21 @@ Blueprints are how service designers find the real root of a bad experience. Ver
 
 # 🛠️ Main Exercise
 
-Work in **FigJam** or **Miro**, starting from your As-Is journey map.
+Your job is to **fill in the blueprint**. The template is ready for you in FigJam: duplicate it and complete it for the service in your sprint brief (in Sprint 01, an Honest Greens restaurant at lunchtime), using your site-visit notes and your As-Is journey map.
 
-1. **Pick one journey and one goal.** For example "Ordering a coffee to take away" with the goal "cut the waiting time".
-2. **Customer actions (top lane).** Copy the steps from your journey map, left to right.
-3. **Frontstage actions.** Under each step, write what the customer sees and interacts with: staff, screens, kiosks, the app.
-4. **Draw the line of visibility.** Everything below it is invisible to the customer.
-5. **Backstage actions.** What staff or systems do out of sight to support each frontstage step.
-6. **Support processes (bottom lane).** The internal processes, suppliers and systems that make it all possible: stock, payments, rota, CRM.
-7. **Evidence (above the customer).** The props and places the customer touches at each step: signage, receipts, emails, the cup.
-8. **Connect with arrows.** Show which steps depend on which. Mark pain points in red.
-9. **Spot the gaps.** Circle the moments where something is repeated, slow, missing or handed over between teams.
+[Open the Service Design Blueprint template in FigJam](https://www.figma.com/board/x15yjk2PlRmRrEpglxHsq1/Figjam-Exercises--Draft-?node-id=0-1&p=f&t=w3QaLBS6lkAjTsf1-0)
+
+The template has eight columns, one per step of the customer journey, and eight lanes. Work through it in this order:
+
+1. **Customer Journey.** Fill the pink arrows with the high-level steps the customer takes, left to right (for example: arrive, queue, order, pay, wait, collect, find a seat, leave). Take them from your journey map.
+2. **Time.** In the top row, write how long each step takes on average. Use the timings from your site visit.
+3. **Evidence.** For each step, note the props and places the customer has an exchange with: signage, the menu board, the kiosk, the receipt, the collection counter, the tray.
+4. **Employee Actions** (front stage). What staff do in view of the customer at each step.
+5. **Technology** (front stage). The digital or analog tools the worker depends on to serve the customer: the till, the kiosk, the order screen, the buzzer.
+6. **Backstage Actions.** What staff do out of the customer's sight to make each step happen.
+7. **Supporting Processes.** The auxiliary actions, by people or programs, that support the workers: stock, prep, the kitchen display system, rotas, payments.
+8. **Add emotions.** Stick an emoji on the steps where the customer, the staff or the backstage team feel delight or frustration. These are your hot spots.
+9. **Read the lines.** Check what happens across each line in the template, and circle the gaps, delays and hand-offs that cause the frustrations above.
 
 # ⏱️ Estimated Duration
 
@@ -39,16 +43,19 @@ Work in **FigJam** or **Miro**, starting from your As-Is journey map.
 
 # 🏞️ Template
 
-Lanes, from top to bottom:
+The template's lanes and lines, from top to bottom, with the definitions used on the board:
 
-- 🧾 **Evidence**: props and places the customer touches
-- 🙋 **Customer actions**
-- — *Line of interaction* —
-- 🧑‍🍳 **Frontstage actions**: what the customer sees
-- — *Line of visibility* —
-- ⚙️ **Backstage actions**: what happens out of sight
-- — *Line of internal interaction* —
-- 🏗️ **Support processes**: systems, suppliers, policies
+- **Time:** the average time it takes to complete a single action.
+- **Evidence:** the props and places that anyone in the blueprint has an exchange with. *Props* are tangible or intangible things that the customer interacts with or perceives during the service journey.
+- **Customer Journey:** the high-level steps a customer takes.
+- — **Line of Interaction:** separates customer actions from worker actions.
+- **Front stage:** holds two things, employee actions and the technology used.
+  - **Employee Actions:** actions that occur directly in view of the customer, from the position of the worker.
+  - **Technology:** any digital or analog technology or tool that the worker depends on to serve the client.
+- — **Line of Visibility:** separates all service activities that are visible to the customer from those that are not.
+- **Backstage Actions:** actions that are taken outside the purview of the customer.
+- — **Line of Internal Interaction:** separates actions taken by the worker from actions taken by supporting processes.
+- **Supporting Processes:** auxiliary actions that are taken in support of the worker, by people or programs.
 
 # ⚡ Tips
 
@@ -73,13 +80,13 @@ Lanes, from top to bottom:
 
 # ✅ Checklist
 
-☐ Chose one journey and a goal
+☐ Duplicated the FigJam template
 
-☐ Mapped customer, frontstage, backstage and support lanes
+☐ Filled the customer journey, time and evidence rows
 
-☐ Drew the three lines and added evidence
+☐ Filled employee actions, technology, backstage actions and supporting processes
 
-☐ Marked dependencies, pain points and gaps
+☐ Added emotions and circled the gaps across the lines
 
 # 📝 Summary
 

@@ -1,4 +1,4 @@
-# Paper Wireframes
+# Paper Wireframes Tips
 
 Paper Wireframes allows you to slow down and really think through the UI before jumping into Figma. 
 

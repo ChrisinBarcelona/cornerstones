@@ -1,17 +1,28 @@
 # Key Figures: Don Norman
 
-Don Norman, born on December 25, 1935, is a renowned American researcher, PhD, author, and professor in the field of human-computer interaction and design
+> The cognitive scientist who popularised user experience and human-centred design.
 
-![ap19833005220_wide-3d53f8cd4704e5d9401c4110ea884e7d00a23f7a-1.jpg](https://miro.medium.com/v2/resize:fit:799/1*HGcsPJdVbsymUmRAJ5SUSw.jpeg)
+![Don Norman](don-norman.jpg)
 
-Norman's work has had a profound impact on the field of user experience (UX) design, leading to a shift towards human-centered approaches. His advocacy for intuitive and seamless interactions between people and products has influenced countless designers and organizations worldwide.
+*Photo: CC BY-SA 2.0, via Wikimedia Commons*
 
-Field: **Product Designer**
+| | |
+| --- | --- |
+| **Born** | 25 December 1935, USA |
+| **Field** | Cognitive science, design |
+| **Known for** | Coining "user experience"; affordances and signifiers; human-centred design |
+| **Key work** | *The Design of Everyday Things* (1988) |
 
-Major Contribution: Coined the term ‘User Experience’
+## Who they are
 
-Worked: Apple
+Norman is an American cognitive scientist and designer. In the 1990s he joined Apple with the job title User Experience Architect, the first time "user experience" was used in a job title, and in 1998 he co-founded the Nielsen Norman Group with Jakob Nielsen.
 
-Era: 1993
+## Key contributions
 
-Best Quote: "Good design is actually a lot harder to notice than poor design, in part because good designs fit our needs so well that the design is invisible, serving us without drawing attention to itself.”
+- **User experience:** he coined the term to cover every part of a person's experience with a product, not just the interface.
+- **Affordances and signifiers:** what an object lets you do, and the cues that tell you how.
+- **Human-centred design:** start from people's needs and abilities, and blame bad design, not users, for errors.
+
+## Why it matters for UX
+
+Norman gave UX its name and much of its vocabulary. When a door has a handle that you pull but it needs a push (a "Norman door"), you are seeing his ideas in action. *The Design of Everyday Things* remains essential reading.

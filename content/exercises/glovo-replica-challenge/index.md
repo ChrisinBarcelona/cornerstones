@@ -76,7 +76,7 @@ As the saying goes, "practice makes perfect," and this lesson exemplifies that p
 
 Navigate here: 
 
-[https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FPve52w8J7RiM5jOnvF1Pth%2FGlovo-Challenge%3Fnode-id%3D39-35%26t%3DK1K9rL5eOr0qcpeV-1](https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FPve52w8J7RiM5jOnvF1Pth%2FGlovo-Challenge%3Fnode-id%3D39-35%26t%3DK1K9rL5eOr0qcpeV-1)
+[https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FSCeC2LZ5gDAcPd5HoXuc1p%2FCornerstone--Draft-%3Fnode-id%3D7-2%26p%3Df%26t%3DiTID60LXjZQi0fd1-0](https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FSCeC2LZ5gDAcPd5HoXuc1p%2FCornerstone--Draft-%3Fnode-id%3D7-2%26p%3Df%26t%3DiTID60LXjZQi0fd1-0)
 
 ### Conclusion
 

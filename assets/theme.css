@@ -27,6 +27,7 @@
   --c-figma: #ab54f7;     --c-figma-ink: #ffffff;     --c-figma-text: #7b2bc4;
   --c-exercises: #00aa3c; --c-exercises-ink: #ffffff; --c-exercises-text: #00792b;
   --c-timetable: #ea3737; --c-timetable-ink: #ffffff; --c-timetable-text: #b8211f;
+  --c-sprints: #ff3d8b;   --c-sprints-ink: #ffffff;   --c-sprints-text: #c0145e;
   --c-home: #141210;      --c-home-ink: #f4e9e1;      --c-home-text: #141210;
 
   --tc: var(--c-home); --tc-ink: var(--c-home-ink); --tc-text: var(--c-home-text);
@@ -45,7 +46,7 @@
   --hair-2: #463d36;
   --nav-bg: rgba(25, 21, 18, .94);
   --c-ux-text: #6db3ff; --c-methods-text: #ffc94d; --c-ui-text: #ff9a5c;
-  --c-figma-text: #cfa2ff; --c-exercises-text: #4ddb7c; --c-timetable-text: #ff8080;
+  --c-figma-text: #cfa2ff; --c-exercises-text: #4ddb7c; --c-timetable-text: #ff8080; --c-sprints-text: #ff8ab8;
   --c-home: #f4e9e1; --c-home-ink: #141210; --c-home-text: #f4e9e1;
   color-scheme: dark;
 }
@@ -55,6 +56,7 @@
 .t-ui        { --tc: var(--c-ui);        --tc-ink: var(--c-ui-ink);        --tc-text: var(--c-ui-text); }
 .t-figma     { --tc: var(--c-figma);     --tc-ink: var(--c-figma-ink);     --tc-text: var(--c-figma-text); }
 .t-exercises { --tc: var(--c-exercises); --tc-ink: var(--c-exercises-ink); --tc-text: var(--c-exercises-text); }
+.t-sprints   { --tc: var(--c-sprints);   --tc-ink: var(--c-sprints-ink);   --tc-text: var(--c-sprints-text); }
 .t-timetable { --tc: var(--c-timetable); --tc-ink: var(--c-timetable-ink); --tc-text: var(--c-timetable-text); }
 /* Inside a section, its colour is the accent */
 body:not(.t-home) { --accent: var(--tc); --accent-ink: var(--tc-text); }
@@ -469,18 +471,19 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
   .rail-box { background: none; padding: 0; }
 }
 
-/* Figma lessons: an icon tile in place of the number */
-.t-figma .row, .t-figma .row.no-stats { grid-template-columns: 52px minmax(0, 1fr); align-items: start; }
+/* Icon tile in place of the number, coloured by section */
+.row:has(> .row-icon) { grid-template-columns: 52px minmax(0, 1fr) 90px; align-items: start; }
+.row.no-stats:has(> .row-icon) { grid-template-columns: 52px minmax(0, 1fr); }
 .row-icon {
   display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px;
-  background: color-mix(in srgb, var(--c-figma) 14%, var(--raised)); color: var(--c-figma-text);
+  background: color-mix(in srgb, var(--tc) 14%, var(--raised)); color: var(--tc-text);
   transition: background .15s var(--ease), color .15s var(--ease);
 }
-.row:hover .row-icon { background: var(--c-figma); color: #fff; }
-.row.is-complete .row-icon { background: var(--c-figma); color: #fff; }
+.row:hover .row-icon, .row.is-complete .row-icon { background: var(--tc); color: var(--tc-ink); }
+.rows.grid .row:has(> .row-icon) { grid-template-columns: 1fr; }
 .rows.grid .row-icon { width: 56px; height: 56px; border-radius: 16px; margin-bottom: 6px; }
 .rows.grid .row-icon svg { width: 28px; height: 28px; }
-@media (max-width: 860px) { .t-figma .row, .t-figma .row.no-stats { grid-template-columns: 48px minmax(0, 1fr); } .row-icon { width: 40px; height: 40px; } }
+@media (max-width: 860px) { .row:has(> .row-icon) { grid-template-columns: 44px minmax(0, 1fr) auto; } .row.no-stats:has(> .row-icon) { grid-template-columns: 44px minmax(0, 1fr); } .row-icon { width: 40px; height: 40px; } }
 
 /* Stitched phone screenshots: shown at the same size as a single screen, scrolling inside. */
 .prose figure.media.tall { display: flex; flex-direction: column; align-items: center; gap: 8px; }
@@ -597,3 +600,29 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .milestone-link:focus-visible { outline: 2px solid var(--tc); outline-offset: 2px; }
 .tk-ms-name { color: inherit; text-decoration: none; }
 .tk-ms-name:hover { text-decoration: underline; }
+
+/* Sprint briefs feature (home) */
+.sprint-feature { margin-top: 18px; padding: 40px 44px; border-radius: var(--r-xl); background: var(--tc); color: var(--tc-ink); }
+.sprint-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 26px; }
+.sprint-feature .eyebrow { color: inherit; }
+.sprint-feature h2 { font-size: clamp(32px, 4vw, 52px); font-weight: 800; line-height: 1; margin: 18px 0 12px; color: inherit; }
+.sprint-lede { max-width: 620px; margin: 0; font-size: 17px; line-height: 1.55; }
+.sprint-feature .bank-go { flex: none; background: #fff; color: #141210; }
+.sprint-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.sprint-card { display: flex; flex-direction: column; border-radius: var(--r-lg); overflow: hidden; background: #fff; color: #141210;
+  text-decoration: none; transition: transform .2s, box-shadow .2s; }
+.sprint-card:hover { transform: translateY(-3px); box-shadow: 0 18px 30px -18px rgba(60, 0, 30, .55); }
+.sprint-art { position: relative; aspect-ratio: 16 / 10; display: grid; place-items: center; overflow: hidden;
+  background: linear-gradient(135deg, #ffd1e4, #b9ecff); }
+.sprint-art img { width: 100%; height: 100%; object-fit: cover; }
+.sprint-icon { font-size: 54px; }
+.sprint-num { position: absolute; top: 10px; left: 10px; padding: 4px 10px; border-radius: var(--r-pill); background: #141210; color: #fff;
+  font-size: 12px; font-weight: 700; }
+.sprint-body { display: flex; flex-direction: column; gap: 6px; padding: 16px 16px 18px; flex: 1; }
+.sprint-kind { font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--c-sprints-text); }
+.sprint-name { font: 800 21px/1.1 var(--display); letter-spacing: -.02em; }
+.sprint-desc { font-size: 14px; line-height: 1.45; color: #4a433d; }
+.sprint-go { margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 14px; }
+@media (max-width: 1100px) { .sprint-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .sprint-feature { padding: 28px 22px; border-radius: var(--r-lg); } .sprint-head { flex-direction: column; align-items: flex-start; } }
+@media (max-width: 560px) { .sprint-grid { grid-template-columns: 1fr; } }

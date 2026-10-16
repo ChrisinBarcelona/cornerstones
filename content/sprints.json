@@ -1,0 +1,40 @@
+{
+  "categories": [
+    "Sprint Briefs"
+  ],
+  "lectures": [
+    {
+      "slug": "honest-greens",
+      "title": "Sprint 01: Honest Greens",
+      "parent": null,
+      "children": [],
+      "number": 1,
+      "category": "Sprint Briefs"
+    },
+    {
+      "slug": "locker-room",
+      "title": "Sprint 02: Locker Room",
+      "parent": null,
+      "children": [],
+      "number": 2,
+      "category": "Sprint Briefs"
+    },
+    {
+      "slug": "wicked-project",
+      "title": "Sprint 03: The Wicked Project",
+      "parent": null,
+      "children": [],
+      "number": 3,
+      "category": "Sprint Briefs"
+    },
+    {
+      "slug": "personal-project",
+      "title": "Sprint 04: The Personal Project",
+      "parent": null,
+      "children": [],
+      "number": 4,
+      "category": "Sprint Briefs"
+    }
+  ],
+  "subpages": []
+}

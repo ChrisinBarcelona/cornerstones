@@ -1,7 +1,7 @@
 {
   "categories": [
     "Replica Challenges",
-    "Team Projects"
+    "UI Team Projects"
   ],
   "lectures": [
     {
@@ -13,12 +13,20 @@
       "category": "Replica Challenges"
     },
     {
+      "slug": "balenciaga-replica-challenge",
+      "title": "Balenciaga Replica Challenge",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Replica Challenges"
+    },
+    {
       "slug": "stage-play",
       "title": "Stage Play",
       "parent": null,
       "children": [],
       "number": 1,
-      "category": "Team Projects"
+      "category": "UI Team Projects"
     }
   ],
   "subpages": []

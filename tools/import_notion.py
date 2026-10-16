@@ -39,7 +39,7 @@ UX_CATEGORIES = {
     "Psychology": ["the-bias-of-beauty", "bias", "mental-models", "design-psychology", "laws-of-ux",
                    "neilson-heuristics"],
     "Process": ["data", "what-is-design-thinking", "wicked-problem", "stages-of-wireframes", "target-mvp"],
-    "Case Studies": ["bad-user-experience", "a-case-of-genius", "the-death-of-kodak"],
+    "Business Case Studies": ["bad-user-experience", "a-case-of-genius", "the-death-of-kodak"],
     "Interface": ["gestures", "haptics"],
 }
 # UX lectures taken off the site: What is UI Design (now in UI Lectures and Figma), the interviewing lectures

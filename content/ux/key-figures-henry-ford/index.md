@@ -1,23 +1,26 @@
 # Key Figures: Henry Ford
 
-Henry Ford was an American industrialist, inventor, and founder of Ford Motor Company.
+> The industrialist whose moving assembly line made the car affordable for millions.
 
-![henry_ford_1919.jpg](henry_ford_1919.jpg)
+![Henry Ford](henry_ford_1919.jpg)
 
-Ford revolutionised the automobile industry with his innovations in manufacturing and production methods. 
+| | |
+| --- | --- |
+| **Born** | 30 July 1863, Michigan, USA (died 1947) |
+| **Field** | Manufacturing, industry |
+| **Known for** | The Model T and the moving assembly line |
+| **Key work** | Ford Model T (1908); the moving assembly line (1913) |
 
-Ford's manufacturing innovations increased efficiency and productivity, significantly reducing the time it took to build a car. This led to the development of a large middle class and transformed the transportation industry. 
+## Who they are
 
-Ford's introduction of the Model T and its mass production techniques made automobiles more accessible and affordable to the general public. This shift in approach recognized the importance of designing products that meet the needs and desires of a wider audience. 
+Ford was an American industrialist and the founder of the Ford Motor Company. He took the idea of standardised, efficient work and applied it to an entire factory, turning the car from a luxury into an everyday product.
 
-Ford's success can be attributed to his focus on meeting the needs and preferences of his customers. He aimed to create an automobile that was reliable, practical, and easy to use. This user-centric approach aligns with our own core principles in UX design, which prioritize understanding and addressing the needs, goals, and expectations of users. By placing the user at the center of the design process, products and services can be tailored to deliver a positive and satisfying user experience.
+## Key contributions
 
-Field: **UX Industrial Designer**
+- **The Model T (1908):** a simple, reliable car designed to be affordable.
+- **The moving assembly line (1913):** cut the time to build a car from many hours to around an hour and a half.
+- **Mass production:** high volume and low prices, which opened the car to a new middle-class market.
 
-Major Contribution: Ford Model T
+## Why it matters for UX
 
-Worked: Ford Motor Company
-
-Era: 1908
-
-Best Quote: "Whether you think you can, or you think you can't – you're right. … While there is a temptation to tailor our world to our own preferences, it is often in the diverseness of experiences and perspectives that true growth and understanding are found.”
+Ford showed how designing a whole system, not just a product, can change who a product is for. His approach also had limits: the famous line "any colour as long as it's black" shows efficiency winning over choice, a trade-off designers still balance today.

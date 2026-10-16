@@ -3,7 +3,7 @@
     "Foundations",
     "Psychology",
     "Process",
-    "Case Studies",
+    "Business Case Studies",
     "Interface"
   ],
   "lectures": [
@@ -113,7 +113,7 @@
       "parent": null,
       "children": [],
       "number": 12,
-      "category": "Case Studies"
+      "category": "Business Case Studies"
     },
     {
       "slug": "a-case-of-genius",
@@ -121,7 +121,7 @@
       "parent": null,
       "children": [],
       "number": 13,
-      "category": "Case Studies"
+      "category": "Business Case Studies"
     },
     {
       "slug": "the-death-of-kodak",
@@ -129,7 +129,7 @@
       "parent": null,
       "children": [],
       "number": 15,
-      "category": "Case Studies"
+      "category": "Business Case Studies"
     },
     {
       "slug": "wicked-problem",
@@ -160,17 +160,20 @@
       "title": "Key Figures",
       "parent": null,
       "children": [
-        "key-figures-daniel-kahneman",
-        "key-figures-max-wertheimer",
-        "key-figures-don-norman",
-        "key-figures-shigeru-miyamoto",
-        "key-figures-taiichi-ohno",
         "key-figures-frederick-winslow-taylor",
-        "key-figures-jakob-neilson",
-        "key-figures-tim-brown",
-        "key-figures-jony-ive",
         "key-figures-henry-ford",
-        "key-figures-walt-disney"
+        "key-figures-lillian-gilbreth",
+        "key-figures-taiichi-ohno",
+        "key-figures-max-wertheimer",
+        "key-figures-walt-disney",
+        "key-figures-daniel-kahneman",
+        "key-figures-don-norman",
+        "key-figures-jakob-neilson",
+        "key-figures-susan-kare",
+        "key-figures-shigeru-miyamoto",
+        "key-figures-brenda-laurel",
+        "key-figures-tim-brown",
+        "key-figures-jony-ive"
       ],
       "number": 19,
       "category": "Foundations"
@@ -185,7 +188,7 @@
     },
     {
       "slug": "neilson-heuristics",
-      "title": "Neilson Heuristics",
+      "title": "Nielsen Heuristics",
       "parent": null,
       "children": [],
       "number": 21,
@@ -276,26 +279,20 @@
       "children": []
     },
     {
-      "slug": "key-figures-daniel-kahneman",
-      "title": "Key Figures: Daniel Kahneman",
+      "slug": "key-figures-frederick-winslow-taylor",
+      "title": "Key Figures: Frederick Winslow Taylor",
       "parent": "key-figures",
       "children": []
     },
     {
-      "slug": "key-figures-max-wertheimer",
-      "title": "Key Figures: Max Wertheimer",
+      "slug": "key-figures-henry-ford",
+      "title": "Key Figures: Henry Ford",
       "parent": "key-figures",
       "children": []
     },
     {
-      "slug": "key-figures-don-norman",
-      "title": "Key Figures: Don Norman",
-      "parent": "key-figures",
-      "children": []
-    },
-    {
-      "slug": "key-figures-shigeru-miyamoto",
-      "title": "Key Figures: Shigeru Miyamoto",
+      "slug": "key-figures-lillian-gilbreth",
+      "title": "Key Figures: Lillian Gilbreth",
       "parent": "key-figures",
       "children": []
     },
@@ -306,14 +303,50 @@
       "children": []
     },
     {
-      "slug": "key-figures-frederick-winslow-taylor",
-      "title": "Key Figures: Frederick Winslow Taylor",
+      "slug": "key-figures-max-wertheimer",
+      "title": "Key Figures: Max Wertheimer",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-walt-disney",
+      "title": "Key Figures: Walt Disney",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-daniel-kahneman",
+      "title": "Key Figures: Daniel Kahneman",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-don-norman",
+      "title": "Key Figures: Don Norman",
       "parent": "key-figures",
       "children": []
     },
     {
       "slug": "key-figures-jakob-neilson",
-      "title": "Key Figures: Jakob Neilson",
+      "title": "Key Figures: Jakob Nielsen",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-susan-kare",
+      "title": "Key Figures: Susan Kare",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-shigeru-miyamoto",
+      "title": "Key Figures: Shigeru Miyamoto",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-brenda-laurel",
+      "title": "Key Figures: Brenda Laurel",
       "parent": "key-figures",
       "children": []
     },
@@ -326,18 +359,6 @@
     {
       "slug": "key-figures-jony-ive",
       "title": "Key Figures: Jony Ive",
-      "parent": "key-figures",
-      "children": []
-    },
-    {
-      "slug": "key-figures-henry-ford",
-      "title": "Key Figures: Henry Ford",
-      "parent": "key-figures",
-      "children": []
-    },
-    {
-      "slug": "key-figures-walt-disney",
-      "title": "Key Figures: Walt Disney",
       "parent": "key-figures",
       "children": []
     }

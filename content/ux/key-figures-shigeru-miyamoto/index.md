@@ -1,25 +1,26 @@
 # Key Figures: Shigeru Miyamoto
 
-Shigeru Miyamoto is a renowned Japanese video game designer and producer. He is best known for creating some of the most iconic and influential video game franchises, including Mario, Donkey Kong, and The Legend of Zelda. 
+> The game designer who made play feel intuitive.
 
-![ap19833005220_wide-3d53f8cd4704e5d9401c4110ea884e7d00a23f7a-1.jpg](ap19833005220_wide-3d53f8cd4704e5d9401c4110ea884e7d00a23f7a-1.jpg)
+![Shigeru Miyamoto](ap19833005220_wide-3d53f8cd4704e5d9401c4110ea884e7d00a23f7a-1.jpg)
 
-Perhaps why he is such a stand out person in the world of software development is because he was one of the first people to be employed in tech who had no actual computer experience. His talents and abilities were found in his great user centric games and his ability to create memorable and immersive experiences. 
+| | |
+| --- | --- |
+| **Born** | 16 November 1952, Sonobe, Japan |
+| **Field** | Game design |
+| **Known for** | Mario, Donkey Kong and The Legend of Zelda |
+| **Key work** | *Super Mario Bros.* (1985); *The Legend of Zelda* (1986) |
 
-He emphasized the importance of gameplay and player engagement, focusing on creating games that were fun, intuitive, and accessible to a wide audience.
+## Who they are
 
-Furthermore, Miyamoto's attention to detail and storytelling elevated the medium of video games. Miyamoto's emphasis on exploration and discovery also became a defining characteristic of his games, allowing players to uncover hidden secrets and surprises.
+Miyamoto is a Japanese game designer who joined Nintendo in 1977 as an artist, without a background in programming. He went on to create some of the most influential games ever made.
 
-Overall, Shigeru Miyamoto's unique perspective, creativity, and dedication to creating enjoyable and immersive gaming experiences have made him a legendary figure in the industry.
+## Key contributions
 
-Furthermore, he was one of the first designers to work in computers who did not know how to code.
+- **Learning by playing:** the first level of *Super Mario Bros.* teaches the rules without a single instruction.
+- **Exploration and discovery:** games full of secrets that reward curiosity.
+- **Feel first:** he obsesses over how controls respond, so movement feels natural and fun.
 
-Field: **Product Design**
+## Why it matters for UX
 
-Major Contribution: Mario 
-
-Worked: Nintendo
-
-Era: 1985
-
-Best Quote: "I think a lot about creating user-friendly experiences.”
+Miyamoto's games are UX lessons: they onboard players through design rather than text, give instant feedback, and make the first minutes easy and rewarding. Think of his first levels when you design an onboarding flow.

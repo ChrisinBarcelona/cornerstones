@@ -1,25 +1,27 @@
 # Key Figures: Taiichi Ohno
 
-Taiichi Ohno was a Japanese industrial engineer and businessman who is widely regarded as the father of the Toyota Production System (TPS). 
+> The engineer behind the Toyota Production System and the roots of Lean.
 
-![Taiichi Ohno.jpg](Taiichi_Ohno.jpg)
+![Taiichi Ohno](Taiichi_Ohno.jpg)
 
-Ohno joined Toyota Motor Corporation in 1932 and played a pivotal role in revolutionizing the company's manufacturing processes. He developed the Toyota Production System, also known as Just-In-Time (JIT) production, which became a model for lean manufacturing and revolutionized the global manufacturing industry.
+| | |
+| --- | --- |
+| **Born** | 29 February 1912, Dalian, China (died 1990) |
+| **Field** | Industrial engineering |
+| **Known for** | The Toyota Production System, Just-in-Time, the 5 Whys |
+| **Key work** | *Toyota Production System: Beyond Large-Scale Production* (1978) |
 
-Ohno's key contributions include:
+## Who they are
 
-1. Just-In-Time (JIT) Production: Ohno emphasized the importance of producing only what is needed, when it is needed, and in the required quantity. By eliminating waste, reducing inventory, and focusing on flow efficiency, Ohno aimed to improve productivity, quality, and responsiveness.
-2. Waste Reduction: Ohno identified various forms of waste, known as "muda," including overproduction, waiting time, transportation, excess inventory, and unnecessary motion. 
-3. Kanban System: Ohno introduced the kanban system, also referred to as backlog, a visual signaling mechanism, to facilitate the flow of materials and information within the production system. 
+Ohno was a Japanese industrial engineer who joined Toyota in 1932. Instead of producing as much as possible, he built a system that produced only what was needed, when it was needed, and kept improving it with the people who did the work.
 
-His principles and philosophies continue to shape lean manufacturing and serve as an inspiration for organizations seeking to improve efficiency, quality, and customer value.
+## Key contributions
 
-Field: **Organisational Structure** 
+- **Just-in-Time production:** make only what is needed, when it is needed, in the amount needed.
+- **Eliminating waste (*muda*):** overproduction, waiting, transport, excess stock, unnecessary motion and more.
+- **The 5 Whys:** ask "why?" repeatedly to find the root cause of a problem.
+- **Kanban:** simple visual signals to manage the flow of work.
 
-Major Contribution: Lean Manufacturing
+## Why it matters for UX
 
-Worked: Toyota Motor Corporation
-
-Era: 1950
-
-Best Quote: "All we are doing is looking at the time line from the moment the customer gives us an order to the point when we collect the cash. And we are reducing the time line by reducing the non-value-added wastes.”
+Ohno's ideas became **Lean**, which led directly to the Lean Startup and Lean UX you use in your sprints: build small, learn fast, cut waste. Kanban boards and the 5 Whys are everyday UX tools, and you use the 5 Whys in Wicked Problem Mapping.
