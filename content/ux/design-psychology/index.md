@@ -1,4 +1,4 @@
-# Design Psychology
+# Gestalt and Perception
 
 **Gestalt Psychology**
 

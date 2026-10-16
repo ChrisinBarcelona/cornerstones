@@ -166,7 +166,7 @@ def milestone_item(track, cat, size):
 
 # The suggested route on the home page: (step, why, section id, page slug).
 ROUTE = [
-    ("Understand UX", "Start with the foundations: where UX comes from and what it really is.", "ux", "design-origins"),
+    ("Understand UX", "Start with the foundations: what UX really is and where it comes from.", "ux", "what-is-ux-design"),
     ("Learn Figma", "Work through Figma Basics in order, then Figma Advanced.", "figma", "choose-your-frame"),
     ("Practise every day", "Pick a Daily UI brief each session, starting with Sidebar.", "exercises", "sidebar"),
     ("Run a sprint", "Pick from the method bank whatever your sprint's problem needs. Many teams start with a Lean UX Canvas.", "methods", "lean-ux-canvas"),
@@ -177,6 +177,13 @@ TRACK = {t["id"]: t for t in TRACKS}
 # Order and categories for tracks fed by more than one source, or sharing content with another track
 # ("content" in TRACKS). Every page in a content source must be listed by exactly one track.
 ORDER = {
+    "ux": {
+        "Foundations": ["what-is-ux-design", "design-origins", "the-father-of-ux", "key-figures", "key-roles"],
+        "Psychology": ["design-psychology", "mental-models", "bias", "the-bias-of-beauty", "laws-of-ux", "neilson-heuristics"],
+        "Process": ["starting-point", "what-is-design-thinking", "wicked-problem", "data", "target-mvp", "stages-of-wireframes"],
+        "Business Case Studies": ["bad-user-experience", "the-death-of-kodak", "a-case-of-genius"],
+        "Interface": ["gestures", "haptics"],
+    },
     "ui": {
         "UI Theory": ["colour-values", "atomic-design-methodology", "file-types", "spacing-grids", "typeface",
                       "style-guides", "icons", "paper-wireframes"],

@@ -34,12 +34,10 @@ IMAGE_EXT = (".avif", ".webp", ".png", ".jpg", ".jpeg", ".gif", ".heic")
 
 # UX lectures, grouped for the index sidebar.
 UX_CATEGORIES = {
-    "Foundations": ["design-origins", "starting-point", "what-is-ux-design", "the-father-of-ux",
-                    "key-figures", "key-roles"],
-    "Psychology": ["the-bias-of-beauty", "bias", "mental-models", "design-psychology", "laws-of-ux",
-                   "neilson-heuristics"],
-    "Process": ["data", "what-is-design-thinking", "wicked-problem", "stages-of-wireframes", "target-mvp"],
-    "Business Case Studies": ["bad-user-experience", "a-case-of-genius", "the-death-of-kodak"],
+    "Foundations": ["what-is-ux-design", "design-origins", "the-father-of-ux", "key-figures", "key-roles"],
+    "Psychology": ["design-psychology", "mental-models", "bias", "the-bias-of-beauty", "laws-of-ux", "neilson-heuristics"],
+    "Process": ["starting-point", "what-is-design-thinking", "wicked-problem", "data", "target-mvp", "stages-of-wireframes"],
+    "Business Case Studies": ["bad-user-experience", "the-death-of-kodak", "a-case-of-genius"],
     "Interface": ["gestures", "haptics"],
 }
 # UX lectures taken off the site: What is UI Design (now in UI Lectures and Figma), the interviewing lectures
