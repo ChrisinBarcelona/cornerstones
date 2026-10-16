@@ -1,6 +1,18 @@
 # Beginner’s Guide to Nesting
 
-The technique of nesting containers is closely correlated to grids and so to go over the absolute basics, we are going to do a simple exercise on how to make to nest one container inside another. This technique relies upon a basic understanding of margins which was covered in the [previous chapter](https://app.notion.com/p/a011633d75af4f31b8f8fe5be53d550c?pvs=21). let’s get started! 
+## What you'll build
+
+A product card built from an outer and an inner container, with a background image, a gradient, a logo and a button, all aligned by nested margins. Nesting is how you give content room to breathe.
+
+## Before you start
+
+- You've finished [Beginner’s Guide to Grids](beginners-guide-to-grids.html)
+- An image to use as a background, and a small logo PNG
+- About 45 minutes
+
+## Let's go
+
+The technique of nesting containers is closely correlated to grids and so to go over the absolute basics, we are going to do a simple exercise on how to nest one container inside another. This technique relies upon a basic understanding of margins which was covered in the previous lesson, [Beginner’s Guide to Grids](beginners-guide-to-grids.html). let’s get started! 
 
 ## 1. Make a Frame
 
@@ -112,7 +124,7 @@ Now you need to add some assets. Let’s do that now!
 
 ## 7. Create Frame
 
-Create a Frame and put line it up over the outer container. 
+Create a Frame and line it up over the outer container. 
 
 ![Screenshot 2023-05-26 at 10.42.13.png](Screenshot_2023-05-26_at_10.42.13.png)
 
@@ -120,7 +132,7 @@ Notice; total layer size = 342 x 342px
 
 ## 8. Send Layer to Back
 
-Lovely, and just send to back but right clicking on the layer and scrolling down to **Send to back**;
+Lovely, and just send it to the back by right-clicking on the layer and scrolling down to **Send to back**;
 
 ![Screenshot 2023-05-26 at 10.42.22.png](Screenshot_2023-05-26_at_10.42.22.png)
 
@@ -224,7 +236,7 @@ Using the same alignment method, add the follow text to the button;
 
 **Button Text** 
 
-- Font: Product Sans Regular; 20px
+- Font: Inter Medium; 20px
 
 You should have something that looks like this;
 
@@ -234,7 +246,7 @@ Nice Job! And We’re all done!
 
 ![Screenshot 2023-05-26 at 13.43.55.png](Screenshot_2023-05-26_at_13.43.55.png)
 
-The purpose of this exercise is to simply get you to become familiar and used to the notion of inner content areas. When we create negative space, it really allows our text and buttons to breath. New designers tend to never allow enough space for the to this should give you a hint about what way to go to create great UI designs.  
+The purpose of this exercise is to simply get you to become familiar and used to the notion of inner content areas. When we create negative space, it really allows our text and buttons to breath. New designers rarely allow enough space, so this should give you a hint about how to create great UI designs.  
 
 If you want to **learn how to make gradients**, please continue, otherwise, you’re all done!
 
@@ -330,14 +342,22 @@ Copy it and into the Frame. You’re all done, nice job! Well done! Let’s just
 
 ![Screenshot 2023-05-26 at 13.41.30.png](Screenshot_2023-05-26_at_13.41.30.png)
 
-## 21. Well Done! Job Completed!
+## Well done!
 
 Nesting containers is a great method to achieve beautiful alignment. The content just looks more crisp, the parameters are so perfect that the symmetry speaks for itself! 
 
  
 
-Now why not get creative! **Go have some fun 🤗.** Change make some cool nested containers
+Now why not get creative! **Go have some fun 🤗.** Make some cool nested containers
 
 - Make loads of nested containers inside one container
 - Makes grids, galleries and rows!
 - Always preserve the margin and the inner container
+
+You can now:
+
+- Use layout grids to create outer and inner content areas
+- Align several layers at once and send layers back
+- Add image fills and gradients, and turn the result into a component
+
+**Next:** [Beginner’s Guide to Auto Layout](beginners-guide-auto-layout.html)

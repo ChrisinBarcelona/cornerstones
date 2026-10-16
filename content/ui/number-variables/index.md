@@ -1,6 +1,19 @@
 # Number Variables
 
-So for this exercise, it's important that you download the **Figma app from the app store** and you get used to exclusively working in Frames as oppose to shape layers. The reason for this is because you **cannot add auto-layout** to shape layers. So things begin by setting up a frame that fits perfectly onto your phone. Let’s go! 
+## What you'll build
+
+A full set of number variables (page sizes, content areas, buttons, gaps and radius) measured from a frame that fits your own phone, so your layouts are built from tokens, not guesses.
+
+## Before you start
+
+- You've finished [Color Variables](color-variables.html)
+- The Figma app on your phone, to test
+- A spreadsheet or note to record your measurements
+- About 1 hour
+
+## Let's go
+
+So for this exercise, it's important that you download the **Figma app from the app store** and you get used to exclusively working in Frames as opposed to shape layers. The reason for this is because you **cannot add auto-layout** to shape layers. So things begin by setting up a frame that fits perfectly onto your phone. Let’s go! 
 
 1. Create a new frame that will fit your own phone! 
 
@@ -16,9 +29,9 @@ So for this exercise, it's important that you download the **Figma app from the 
 
 1. Input **Full Width** and **Full Height** values
 
-![As of 2026, Figma doesn’t allow you to create and switch Height and Width modes on the same variable. Hoping this to changing moving forward.](Screenshot_2025-12-15_at_04.57.25.png)
+![As of 2026, Figma doesn’t allow you to create and switch Height and Width modes on the same variable. Hopefully this will change.](Screenshot_2025-12-15_at_04.57.25.png)
 
-As of 2026, Figma doesn’t allow you to create and switch Height and Width modes on the same variable. Hoping this to changing moving forward. 
+As of 2026, Figma doesn’t allow you to create and switch Height and Width modes on the same variable. Hopefully this will change. 
 
 1. Apply a one column grid to that frame with the following measurements applied: `16px Gutter / 16px Margin`
     
@@ -29,9 +42,9 @@ As of 2026, Figma doesn’t allow you to create and switch Height and Width mode
 
 1. Measure the inner content area using a perfect square. This will be your **first Content Area**
     
-    ![Now we will need to record that value in the spreadsheet.](Screenshot_2025-12-16_at_10.26.06.png)
+    ![Now we will need to record that value in a spreadsheet (or a note).](Screenshot_2025-12-16_at_10.26.06.png)
     
-    Now we will need to record that value in the spreadsheet.
+    Now we will need to record that value in a spreadsheet (or a note).
     
 
 1. Enter those variables into the spreadsheet.
@@ -90,3 +103,13 @@ As of 2026, Figma doesn’t allow you to create and switch Height and Width mode
 1. Lastly, run some tests on the mobile, add some variables
 
 ![Screenshot 2025-12-16 at 12.48.28.png](Screenshot_2025-12-16_at_12.48.28.png)
+
+## Well done!
+
+You can now:
+
+- Create number variables for sizes, gaps and radius
+- Measure content areas on a grid and record them
+- Apply number variables to frames and test them on your phone
+
+**Next:** [String Variables](string-variables.html)

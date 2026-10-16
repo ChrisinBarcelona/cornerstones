@@ -1,10 +1,22 @@
 # Choose your Frame
 
+## What you'll build
+
+Before you draw anything you choose a frame, the artboard that stands for a device's screen. In this short lesson you'll learn how frame sizes, logical pixels and aspect ratios work, so your designs fit the phone you'll test on perfectly.
+
+## Before you start
+
+- Figma installed, or open in your browser, with a free account
+- Your phone, so you can look up its screen size
+- About 10 minutes
+
+## Let's go
+
 ![Screenshot 2023-05-26 at 15.07.04.png](Screenshot_2023-05-26_at_15.07.04.png)
 
 Before we jump into everything, just a little note;
 
-## In Figma, we have the option to create many types of frames for different devises.
+In Figma, we have the option to create many types of frames for different devices.
 
 Measured in pixels, some popular frame sizes include;
 
@@ -13,6 +25,7 @@ Measured in pixels, some popular frame sizes include;
 - 2160px x 3840px = 4K TV
 - 3024px x 1984px = MacBook Pro 14”
 - 1170px x 2532px = iPhone 14
+- 1179px x 2556px = iPhone 16 (393 × 852 in Figma, the frame we use for the replica challenges)
 - 2688px x 1242px = iPhone 11 Pro Max
 
 ---
@@ -27,7 +40,7 @@ But always remember;
 
 For Example;
 
-I personally own an **iPhone 11 Pro Max** and so, for me, I know whatever I want to prototype, I will be using my own phone to conduct sessions on and so I will chose that frame in Figma for all of my screens. 
+I personally own an **iPhone 11 Pro Max** and so, for me, I know whatever I want to prototype, I will be using my own phone to conduct sessions on and so I will choose that frame in Figma for all of my screens. 
 
 Figma gives us the iPhone 11 Pro Max as a screen width of **414px**. This represents the logical pixels (points) rather than the actual resolution which is 2688px x 1242px. 
 
@@ -54,3 +67,13 @@ And equally in real world we have this;
 ![iPhone 11 ProMax.jpeg](iPhone_11_ProMax.jpeg)
 
 So we can have complete confidence in our Figma screen provided we are using the correct aspect ratio!
+
+## Well done!
+
+You can now:
+
+- Choose a frame for the device you're designing for and testing on
+- Explain the difference between real pixels and Figma's logical pixels (points)
+- Check that two sizes share the same aspect ratio
+
+**Next:** [Starting in Figma](starting-in-figma.html)

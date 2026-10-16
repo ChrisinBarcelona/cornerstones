@@ -1,8 +1,18 @@
 # Dynamic Buttons Part One
 
-### Intro:
+## What you'll build
 
-This is an easy lesson but **the first thing** is that it requires understanding three key principals. 
+One button component that can become any button in your app: its label is a text property, its icons can be shown or hidden with boolean properties, and swapped with instance swap properties.
+
+## Before you start
+
+- You've finished [Navbar](navbar.html)
+- The Phosphor Icons plugin
+- About 45 minutes
+
+## Let's go
+
+This is an easy lesson but **the first thing** is that it requires understanding three key principles. 
 
 - **Text Property**
 - **Appearance Booleans**
@@ -10,15 +20,15 @@ This is an easy lesson but **the first thing** is that it requires understanding
 
 **The second thing** you have to understand is that the parent component and the child component are very different. The rule is that the parent is where you load in the properties and the child is what you use. 
 
-On the right hand panel of Figma you will see two very different CSM’s: for all parents and children 
+On the right hand panel of Figma you will see two very different panels, one for parents and one for children 
 
 ![This is the parent](Parent.jpg)
 
 This is the parent
 
-![The is the child](Child.jpg)
+![This is the child](Child.jpg)
 
-The is the child
+This is the child
 
 That being said, let’s get into it. 
 
@@ -38,7 +48,7 @@ That being said, let’s get into it.
     ![Screenshot 2026-01-06 at 16.01.59.png](Screenshot_2026-01-06_at_16.01.59.png)
     
 
-4. Open the actions panel from the bottom of Figma and run **Phosphors Icons**
+4. Open the actions panel from the bottom of Figma and run **Phosphor Icons**
 
 ![Screenshot 2026-01-06 at 16.02.47.png](Screenshot_2026-01-06_at_16.02.47.png)
 
@@ -166,6 +176,14 @@ Order on child element should look like this:
 
 ![Screenshot 2026-01-06 at 16.42.34.png](Screenshot_2026-01-06_at_16.42.34.png)
 
-## All Done!
+## Well done!
 
 ![Screenshot 2026-01-06 at 16.43.54.png](Screenshot_2026-01-06_at_16.43.54.png)
+
+You can now:
+
+- Tell a parent (main) component from a child (instance)
+- Add text, boolean and instance swap properties
+- Order properties so the button is easy for others to use
+
+**Next:** [Dynamic Buttons Part Deux](dynamic-buttons-part-deux.html)

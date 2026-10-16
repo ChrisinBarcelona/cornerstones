@@ -1,5 +1,17 @@
 # Variable Modes
 
+## What you'll build
+
+An interactive product page where hovering over a colour swatch switches the shoe to that colour, using variable modes and a Set variable mode interaction.
+
+## Before you start
+
+- You've finished [String Variables](string-variables.html)
+- The shoe images (download them in step 1)
+- About 45 minutes
+
+## Let's go
+
 1. Create a component set with 5 product images inside
     
     ![Screenshot 2025-12-22 at 12.54.08.png](Screenshot_2025-12-22_at_12.54.08.png)
@@ -34,7 +46,7 @@
 
 7. Create a variable collection with the following modes. **Make sure it is a string!** 
 
-| **Name** | **Shoe Colour (Default)** | **Shoe Colour (Orange)** | **Shoe Colour (Black)** | **Shoe Colour (Lime)** | **Show Colour (Blue)** |
+| **Name** | **Shoe Colour (Default)** | **Shoe Colour (Orange)** | **Shoe Colour (Black)** | **Shoe Colour (Lime)** | **Shoe Colour (Blue)** |
 | --- | --- | --- | --- | --- | --- |
 | Shoe Color | Pink | Orange | Black | Lime  | Blue |
 
@@ -53,7 +65,7 @@ While hovering →
 
 Action: **Set variable mode**
 Collection: **Variable Collection**
-Mode: Show **Colour (*Insert correct colour*)**
+Mode: **Shoe Colour (*insert the correct colour*)**
 
 1. IMPORTANT! Attach the child instance to the variable to get them talking 
     
@@ -62,6 +74,14 @@ Mode: Show **Colour (*Insert correct colour*)**
 
 ![Screenshot 2025-12-22 at 14.21.45.png](Screenshot_2025-12-22_at_14.21.45.png)
 
-All done
-
 [https://embed.figma.com/proto/pi4ilR8QSufcObFDMI60UU/Untitled?node-id=9-92&t=pO67wR4NyYRGOZMj-1&embed-host=notion&footer=false&theme=system](https://embed.figma.com/proto/pi4ilR8QSufcObFDMI60UU/Untitled?node-id=9-92&t=pO67wR4NyYRGOZMj-1&embed-host=notion&footer=false&theme=system)
+
+## Well done!
+
+You can now:
+
+- Create a variable collection with several modes
+- Link component variants to a string variable
+- Switch modes in a prototype with the Set variable mode action
+
+That's the last Figma lesson. Mark it complete to reach the Figma Advanced milestone.

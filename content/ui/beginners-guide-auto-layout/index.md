@@ -1,6 +1,18 @@
 # Beginner’s Guide Auto Layout
 
-Auto Layout is arguably the most best thing you can do if you want to engage in rapid prototyping. 
+## What you'll build
+
+A "Share" button with an icon and a label that resizes itself around its content, built with Auto Layout and saved as a component. Auto Layout is what makes Figma designs behave like real code.
+
+## Before you start
+
+- You've finished [Beginner’s Guide to Nesting](beginners-guide-to-nesting.html)
+- The Phosphor Icons plugin (step 5 shows you how to find it)
+- About 30 minutes
+
+## Let's go
+
+Auto Layout is arguably the best thing you can do if you want to engage in rapid prototyping. 
 
 It’s a major step in understanding how to create amazing uniformity.
 
@@ -100,7 +112,7 @@ But it can be anything;
 
 We need to access the plugins library, Phosphor Icons;
 
-## 5. Add Plugin: Phosphors Icons
+## 5. Add Plugin: Phosphor Icons
 
 Right Click to access options panel;
 
@@ -162,7 +174,7 @@ We don’t need it! Well done!
 
 ![Screenshot 2023-05-27 at 11.07.50.png](Screenshot_2023-05-27_at_11.07.50.png)
 
-Voilà! You’re are nearly there; let’s change the alignment from **horizontal** to **vertical**;
+Voilà! You’re nearly there; let’s change the direction from **vertical** to **horizontal**;
 
 Make sure your button layer is active;
 
@@ -182,7 +194,7 @@ Well Done! Let’s change some properties;
 
 Change to;
 
-1. ‘Share’ Icon color: White: **#FFFFF**
+1. ‘Share’ Icon color: White: **#FFFFFF**
 2. ‘Share’ Icon size: **w15px x h17px**
 3. Text weight: **Semi Bold**
 4. Button corner radius: **3px**
@@ -203,13 +215,13 @@ and **drag your mouse away from centre** to reduce to **12px**;
 
 ![Screenshot 2023-05-27 at 11.29.34.png](Screenshot_2023-05-27_at_11.29.34.png)
 
-That’s better! As you can see, you have just reset the left and right padding which are are now set to **12px**;
+That’s better! As you can see, you have just reset the left and right padding which are now set to **12px**;
 
 ![Screenshot 2023-05-27 at 11.32.04.png](Screenshot_2023-05-27_at_11.32.04.png)
 
 Optionally, you could have used the **Auto layout inputs.** Both work!
 
-## 7. Convert Button to Component
+## 8. Convert Button to Component
 
 For best practise, let’s just change our button to a component 
 
@@ -239,10 +251,18 @@ One last thing; On the left hand panel change from Layers Mode
 
 **Always preserve the original master component** and edit copied versions only;
 
-## 0. Well Done! Job Completed!
+## Well done!
 
-Auto layout is a great lessons to learn in Figma. It will speed up your workflow by months and ensure  great crisp symmetry for all your assets  
+Auto layout is a great lesson to learn in Figma. It will speed up your workflow by months and ensure  great crisp symmetry for all your assets  
 
  
 
-Now why not get creative! **Go have some fun 🤗.** Change make some cool components using auto layout!
+Now why not get creative! **Go have some fun 🤗.** Make some cool components using auto layout!
+
+You can now:
+
+- Add Auto Layout to a frame and set its padding and direction
+- Add icons with a plugin and nest them inside the button
+- Convert a button to a component and use instances of it
+
+**Next:** [Beginner’s Guide to the 8 Point Grid System](beginners-guide-to-8-point-grid-system.html)

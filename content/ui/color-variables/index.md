@@ -1,5 +1,17 @@
 # Color Variables
 
+## What you'll build
+
+A Colors variable collection with three colours taken from a gradient, the start of your design tokens. Variables let you change a colour once and update it everywhere.
+
+## Before you start
+
+- You've finished [Dynamic Buttons Part Deux](dynamic-buttons-part-deux.html)
+- A browser tab open on Grabient
+- About 20 minutes
+
+## Let's go
+
 1. On a totally blank page, without anything selected, click on **Variables** on the right hand side
 
 ![Screenshot 2025-12-15 at 04.28.24.png](Screenshot_2025-12-15_at_04.28.24.png)
@@ -61,3 +73,13 @@
 1. Click on the **plus icon +** Name new collection **Numbers**
     
     ![Screenshot 2025-12-15 at 04.44.22.png](Screenshot_2025-12-15_at_04.44.22.png)
+
+## Well done!
+
+You can now:
+
+- Create colour variables and organise them in collections
+- Extract HEX values from a CSS gradient
+- Prepare a Numbers collection for the next lesson
+
+**Next:** [Number Variables](number-variables.html)

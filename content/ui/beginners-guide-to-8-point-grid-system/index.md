@@ -1,8 +1,19 @@
 # Beginner’s Guide to 8 Point Grid System
 
+## What you'll build
+
+A small type, icon and button scale in which every size and space is a multiple of 8. The 8-point system makes spacing decisions fast and your designs consistent and easy to build.
+
+## Before you start
+
+- You've finished [Beginner’s Guide to Auto Layout](beginners-guide-auto-layout.html)
+- About 40 minutes, including the timed exercise
+
+## Let's go
+
 Let’s look at another guideline which helps to achieve great structural layout. I know it sounds really complicated but believe me, it couldn’t be easier! It’s called the 8 Point Grid System and the cornerstone philosophy behind it is that you just use numbers (pixels) which are a multiple of 8! 
 
-It isn’t an absolute, set in stone rule but why the 8 Point Grid System is commonly used in UI design is because it helps to establish consistent spacing and alignment between elements. Also developers use 8/ for responsive web. 
+It isn’t an absolute, set in stone rule but why the 8 Point Grid System is commonly used in UI design is because it helps to establish consistent spacing and alignment between elements. Developers like it too, because most screen sizes divide neatly by 8. 
 
 ### 1pt = 1px
 
@@ -15,11 +26,11 @@ The key principles of the 8-point grid system are:
 3. Flexibility: The 8-point grid system allows for flexibility in adjusting and scaling designs across different screen sizes and resolutions.
 4. Alignment: Elements are aligned to the grid, ensuring a clean and organised layout. This improves readability and establishes visual hierarchy.
 
-In graphic design, we are always interested in observing the **aesthetic usability principal** and this system helps to create visual balance. Remember, we are always using multiples of 8 so let’s take a look some components which observe these guidelines. 
+In graphic design, we are always interested in observing the **aesthetic-usability effect** and this system helps to create visual balance. Remember, we are always using multiples of 8 so let’s take a look some components which observe these guidelines. 
 
 ⚠️ Remember! I have used these specific pixel sizes in reference to an iPhone 11 Pro Max with a canvas frame of 414px x 896px. Therefore, when I say these icons are small, medium or large, this is in reference to that specific frame size. For a desktop, you would naturally have to use substantially larger factors of 8 instead.
 
-⛔️ While Designers don’t need anything other measurement apparatus apart from pixels, developers will use a variety of techniques to realise your UI. Front End Developers can use 100% of total screen size, REM, EM or PX. Check out the section of CSS: Responsive Web to understand more. For now, back to 8 Point Grids. 
+⛔️ While designers don’t need any measurement other than pixels, developers will use a variety of techniques to realise your UI. Front End Developers can use 100% of total screen size, REM, EM or PX. For now, back to 8 Point Grids. 
 
 Let’s evaluate how the 8 Point Grid System can be used to create consistency across these elements: 
 
@@ -61,3 +72,13 @@ Let’s evaluate how the 8 Point Grid System can be used to create consistency a
 ## Exercise (Time Sensitive)
 
 Using 8pt Grid System, Create Typography Headline H1-H6, Paragraph & Overline x3 Buttons, Baseline 8px = Medium and x3 Icon Baseline 32px
+
+## Well done!
+
+You can now:
+
+- Explain why designers and developers use an 8-point system
+- Size type, icons and buttons in multiples of 8
+- Build a mini type, icon and button scale on the 8-point grid
+
+**Next:** [Beginner’s Guide to Components](beginners-guide-to-components.html)

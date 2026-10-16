@@ -1,5 +1,16 @@
 # Dynamic Buttons Part Deux
 
+## What you'll build
+
+Seven variants of your dynamic button (Default, Hover, Pressed, noStroke, withStroke, Disabled and Glass) in one component set, ready to use in any state.
+
+## Before you start
+
+- You've finished [Dynamic Buttons Part One](dynamic-buttons-part-one.html) and have its button component
+- About 30 minutes
+
+## Let's go
+
 **Contents** 
 
 - Create component set with x7 variants
@@ -19,7 +30,7 @@
     ![Screenshot 2025-12-09 at 12.44.40.png](Screenshot_2025-12-09_at_12.44.40.png)
     
 
-1. Colorise **Buttons** using the following colours following HSL Colours 
+1. Colorise **Buttons** using HSL colours (one hue, different lightness for each state) 
 
 ![Screenshot 2025-12-09 at 18.38.25.png](Screenshot_2025-12-09_at_18.38.25.png)
 
@@ -72,3 +83,13 @@
 All Done!
 
 ![Screenshot 2025-12-09 at 18.42.53.png](Screenshot_2025-12-09_at_18.42.53.png)
+
+## Well done!
+
+You can now:
+
+- Create a component set with several variants
+- Colour states consistently using HSL
+- Name variants clearly and test them on an instance
+
+**Next:** [Color Variables](color-variables.html)

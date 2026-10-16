@@ -1,6 +1,18 @@
 # Starting in Figma
 
-So to go over the absolute basics, we are going to do a simple exercise on how to make an animated button. This exercise covers about 99.9% of everything you would actually need to know in order to create a full prototype in Figma, so if your an absolute beginner, let’s get started! 
+## What you'll build
+
+Your first Figma prototype: two frames and a button that grows and changes colour with Smart Animate when you tap it. On the way you'll learn frames, shapes, fills, strokes, shadows, radius and prototype connections, the basics of almost everything you'll do in Figma.
+
+## Before you start
+
+- A free Figma account (step 1 shows you how)
+- You've read [Choose your Frame](choose-your-frame.html). The screenshots use the iPhone 14 frame; any recent iPhone frame, such as iPhone 16, works the same way
+- About 45 minutes
+
+## Let's go
+
+So to go over the absolute basics, we are going to do a simple exercise on how to make an animated button. This exercise covers about 99.9% of everything you would actually need to know in order to create a full prototype in Figma, so if you’re an absolute beginner, let’s get started! 
 
 In this tutorial you will learn how to:
 
@@ -49,7 +61,7 @@ You’ll see a panel has opened up on the right hand side;
 
 ## 2. Select Canvas: iPhone 14
 
-For this demonstration we will be using an iPhone 14. For more information on choosing the right frame see here
+For this demonstration we will be using an iPhone 14. For more information on choosing the right frame, see [Choose your Frame](choose-your-frame.html).
 
 ![Screenshot 2023-05-25 at 09.54.18.png](Screenshot_2023-05-25_at_09.54.18.png)
 
@@ -473,7 +485,7 @@ And here we are;
 
 [https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fx2npExG9KVKjYzrYN84qku%2FBeginners-Guide%3Ftype%3Ddesign%26node-id%3D2-2%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D25%253A21](https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fx2npExG9KVKjYzrYN84qku%2FBeginners-Guide%3Ftype%3Ddesign%26node-id%3D2-2%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D25%253A21)
 
-## 21. Well Done! Job Completed!
+## Well done!
 
  
 
@@ -481,8 +493,14 @@ Now why not get creative! **Go have some fun 🤗.** Change some properties from
 
 - Change the radius on the first screen, watch how it shifts to the next!
 - Change the color, alignment, change the shadows and strokes!
-- Get comfortable with these basic principals and you will be off to a great start!
+- Get comfortable with these basic principles and you will be off to a great start!
 - Always remember when animating, you must keep **same name on all layers**!
 - 99.99% of everything you need to know to produce great prototypes, you have just completed!
 
-##
+You can now:
+
+- Create, name and copy frames
+- Style shapes with fills, strokes, shadows and corner radius
+- Connect frames in Prototype mode and animate between them with Smart Animate
+
+**Next:** [Beginner’s Guide to Grids](beginners-guide-to-grids.html)
