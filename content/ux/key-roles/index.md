@@ -101,3 +101,32 @@ Product Designers, often referred to as visual designers or industrial designers
 ![jeroen-den-otter-pLpO8kr6q9E-unsplash.jpg](jeroen-den-otter-pLpO8kr6q9E-unsplash.jpg)
 
 The father of the UI Designer, this responsibility was the **original job description for a User Interface designer**. Today, however there are vast differences between graphic designers and UX designs. Where Graphic designers are given free range to develop artistry for large format printing, apparel, logo design and packaging, UI design refers specifically to products for the digital space. A good UI Designer will usually have amazing graphic design skills but it isn’t the case that every graphic designer will make great UI Designs as the latter requires working within a large inter disciplinary team being able to interpret complete customer journeys and include important data points into their design decisions.
+
+---
+
+## Why it matters for UX
+
+Design is a team sport. Knowing who does what helps you speak the language of the people you will work with, hand off work cleanly and see where your own strengths could take your career.
+
+## Try it: map a real team (20 minutes)
+
+1. Find a UX or product design job advert from a company you would like to work for.
+2. List every role it mentions, or that you can infer the designer will work with.
+3. Match each to a role on this page, and note who you would hand work to and receive work from.
+4. Circle the role you would most like to grow into, and write one skill you need to get there.
+
+## Media
+
+[https://www.youtube.com/watch?v=bCG2KzfoUL0](https://www.youtube.com/watch?v=bCG2KzfoUL0)
+
+## Resources
+
+[What is UX Research? – Interaction Design Foundation](https://www.interaction-design.org/literature/topics/ux-research)
+
+[What is User Experience (UX) Design? – Interaction Design Foundation](https://www.interaction-design.org/literature/topics/ux-design)
+
+## Key takeaways
+
+- UX design is an umbrella term; in practice designers settle into specific roles.
+- Researchers, information architects, writers and UI designers each own a part of the experience.
+- Engineers build what you design, so learn to hand off work they can use.

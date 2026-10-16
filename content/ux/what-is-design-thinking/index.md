@@ -83,3 +83,33 @@ Through this process you will learn how to design without assumption. You will c
 You will repeat this process and test it further to create the most accurate creative product you possibly can.
 
 ![365437937_1224465644902183_8839005102448325658_n.jpg](365437937_1224465644902183_8839005102448325658_n.jpg)
+
+---
+
+## Why it matters for UX
+
+Design Thinking is the framework your whole sprint runs on. It keeps you from jumping to solutions: you understand people first, define the right problem, then build and test cheaply, and you loop back whenever you learn something new.
+
+## Try it: a five-stage mini sprint (45 minutes)
+
+1. Empathise: interview a classmate for 5 minutes about their morning routine.
+2. Define: write one problem statement: "[Name] needs a way to … because …".
+3. Ideate: sketch five different solutions in 10 minutes.
+4. Prototype: make the best one on paper.
+5. Test: show it to your classmate, and write down one thing to change.
+
+## Media
+
+[https://www.youtube.com/watch?v=sN_g8FnziLw](https://www.youtube.com/watch?v=sN_g8FnziLw)
+
+## Resources
+
+[Design Thinking 101 – Nielsen Norman Group](https://www.nngroup.com/articles/design-thinking/)
+
+[IDEO Design Thinking](https://designthinking.ideo.com/)
+
+## Key takeaways
+
+- Design Thinking runs through five stages: empathise, define, ideate, prototype and test.
+- The stages are a loop, not a line: go back whenever you learn something.
+- Design Thinking is a problem-solving method; UX is the discipline you apply inside it.

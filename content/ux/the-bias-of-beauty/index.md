@@ -5,7 +5,7 @@
 
 Plato
 
-**Symmetry and Beauty in Nature**
+## Symmetry and Beauty in Nature
 
 Beauty is synonymous with symmetry and symmetry is an extension of the physical world. Your work must achieve a cadence and consistency which gives the user a pattern they can predict. 
 
@@ -15,7 +15,7 @@ Beauty is synonymous with symmetry and symmetry is an extension of the physical 
 
 It’s important too that our work is beautiful in order that it it is **perceived** as good and beneficial.
 
-**Beautiful People are Treated Better**
+## Beautiful People are Treated Better
 
 It’s a fact that naturally beautiful people receive a range of social benefits that the rest of us don’t enjoy.
 
@@ -34,7 +34,7 @@ What this means is that your work must be attractive in order for it to be trust
 
 ---
 
-**The Beauty Heuristic 8** 
+## The Beauty Heuristic (Heuristic 8)
 
 Aesthetically pleasing designs can provide memorable experiences that differentiate a brand. However, interfaces should only include necessary elements, with high informational value. Clarity will always win over visual flourish.
 
@@ -47,7 +47,7 @@ Interfaces should not contain information which is irrelevant or rarely needed. 
 
 ---
 
-**Balancing Form with Function**
+## Balancing Form with Function
 
 > Form follows function.
 > 
@@ -64,7 +64,7 @@ Balance is key.
 
 ---
 
-**Emotional Design**
+## Emotional Design
 
 > **Design is not a product, it's a feeling.**
 > 
@@ -75,7 +75,7 @@ Don Norman, Father of UX
 
 ---
 
-**Emotion and Decision making** 
+## Emotion and Decision Making
 
 Markets behave irrationally because most people make decisions emotionally. We’ll discuss further later but the reason why we must appeal to the user’s emotion is because we want them to feel strongly whilst using our service or product. Ultimately we want them to frequently engage with our service again and again and again. Whether it is in their interests or otherwise.
 
@@ -87,7 +87,7 @@ A good User Experience designer is getting people to the point where they don’
 
 
 
-**Some Beautiful Design Waves 🏞️** 
+## Some Beautiful Design Waves
 
 Bauhaus
 
@@ -108,7 +108,7 @@ German artistic movement preaching the gospel of functionalism, the principle th
 
 Fred R. Barnard
 
-**Brutalism**
+### Brutalism
 
 ![2022_3_blog_What-Is-Brutalism-in-Web-Design_1200_630.jpg](2022_3_blog_What-Is-Brutalism-in-Web-Design_1200_630.jpg)
 
@@ -116,7 +116,7 @@ An architectural movement that leaked its way into web design in 2010, character
 
 ---
 
-**Neobrutalism**
+### Neobrutalism
 
 ![neo-brutalism-image2-cbde41e9.jpg](neo-brutalism-image2-cbde41e9.jpg)
 
@@ -124,7 +124,7 @@ An extension of Brutalism, characterised by its high contrast and vibrancy. Neo-
 
 ---
 
-**Neumorphism** 
+### Neumorphism
 
 ![6284f53eb0d6580347ec27dc_V2 (1).jpg](6284f53eb0d6580347ec27dc_V2_-1-.jpg)
 
@@ -132,7 +132,7 @@ Otherwise referred to as soft UI, is a design trend that emerged in the early 20
 
 ---
 
-**Glassmorphism**
+### Glassmorphism
 
 ![Glassmorphism.jpg](Glassmorphism.jpg)
 
@@ -141,7 +141,7 @@ semi-transparent modular panels.
 
 ---
 
-**Skeuomorphism** 
+### Skeuomorphism
 
 Essentially the bedrock of many modern UI designs, skeuomorphism meets the criteria of a core heuristic that there should be a match between the system and the real world. 
 
@@ -170,7 +170,7 @@ Dieter Rams
 
 ---
 
-**Summary** 
+## Summary
 
 Use aesthetics, beauty and art to create attractive layouts but do not under estimate the value of substance. Art is not necessarily design and design is not necessarily art. Good user experience design should be moral and not abuse users or eventually catastrophe will strike. We haven’t seen a mass exodus away from technology yet but if things are allowed to remain the same and if unethical design practises continue, eventually, everything will be lost. Balance between style and substance is key. 
 
@@ -188,3 +188,30 @@ Disclaimer: Here is real beauty.
 ![](https://images.unsplash.com/photo-1593100126453-19b562a800c1?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb)
 
 ---
+
+## Why it matters for UX
+
+Users judge beautiful interfaces as easier to use and more trustworthy, even when they aren't (the aesthetic-usability effect). That gives good visual design real power: it buys patience and trust. It also means beauty can hide usability problems, so test with users rather than trusting first impressions.
+
+## Try it: beauty versus usability (25 minutes)
+
+1. Find two apps that do the same job, one you find beautiful and one you find plain.
+2. Complete the same task in both and time yourself.
+3. Note where the beautiful one was harder to use than it looked, and where the plain one was easier.
+4. Choose one of the design waves on this page and restyle one screen of the plain app in it, keeping every function.
+
+## Media
+
+[https://www.youtube.com/watch?v=NG7MINxqVE0](https://www.youtube.com/watch?v=NG7MINxqVE0)
+
+## Resources
+
+[The Aesthetic-Usability Effect – Nielsen Norman Group](https://www.nngroup.com/articles/aesthetic-usability-effect/)
+
+[10 Usability Heuristics for User Interface Design – Nielsen Norman Group](https://www.nngroup.com/articles/ten-usability-heuristics/)
+
+## Key takeaways
+
+- People perceive beautiful designs as more usable and more trustworthy.
+- Beauty buys patience, but it can also hide usability problems; test, don't assume.
+- Design styles come and go; form should always serve function.

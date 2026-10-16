@@ -1401,7 +1401,10 @@ def check_templates(data):
     pending = set(json.loads(pending_file.read_text(encoding="utf-8"))["pages"]) if pending_file.exists() else set()
     broken, now_pass, tally = [], [], {}
     for track, d in data.items():
+        hubs = {p.get("parent") for p in d["every"]}
         for p in d["every"]:
+            if p["slug"] in hubs:
+                continue  # a hub page only lists its children
             key, name = f"{track}/{p['slug']}", page_template(track, p)
             problems = template_problems(name, p["text"])
             ok, total = tally.get(name, (0, 0))

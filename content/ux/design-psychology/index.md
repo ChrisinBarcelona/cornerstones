@@ -1,6 +1,6 @@
 # Gestalt and Perception
 
-**Gestalt Psychology**
+## Gestalt Psychology
 
 Let’s begin in 1903 with a young psychology student called Max Wertheimer who is very busy writing his pHD at the University of Würzburg, the subject of which is visual perception.
 
@@ -30,7 +30,7 @@ You must also accept that people perceive and interpret visual information diffe
 
 ---
 
-**Perception Manipulation**
+## Perception Manipulation
 It is the case that in UI design, we bend the laws of perception to mimic the natural world and primarily utilise contrast, shadow and gradient to do so. 
 
 ![Screenshot 2024-05-28 at 10.52.13.png](Screenshot_2024-05-28_at_10.52.13.png)
@@ -43,7 +43,7 @@ The above is a still image Google’s Material Design team as they played with d
 
 ---
 
-**Negative Space**
+## Negative Space
 
 Negative space, also known as white space, is the empty or unused areas in a design. It surrounds and defines the main elements, enhancing visual clarity, balance, and focus, ultimately contributing to a cleaner and more effective composition.
 
@@ -71,7 +71,7 @@ Less is more.
 
 ---
 
-**Color** 
+## Color
 Color psychology examines how different colors influence human emotions, behaviors, and perceptions. Each color can evoke specific responses; for example, red can stimulate excitement or urgency, while blue often promotes calmness and trust. Understanding these associations helps designers create effective and emotionally resonant visuals. 
 
 ![1644136645815.jpg](1644136645815.jpg)
@@ -80,7 +80,7 @@ McDonalds, for example, use red and yellow extensively in their branding. Red is
 
 ---
 
-**Typography**
+## Typography
 Typography is the art and technique of arranging type to make written language legible, readable, and visually appealing. It encompasses font selection, point size, line length, spacing, and alignment. Effective typography ensures clear communication and can significantly impact the mood and tone of a design. Different fonts convey different emotions; for instance, serif fonts often suggest tradition and reliability, while sans-serif fonts appear modern and clean. Good typography enhances user experience by improving readability and establishing a visual hierarchy in the text.
 
 ![SF_Typographica_01.png](SF_Typographica_01.png)
@@ -91,7 +91,7 @@ Apple’s use of the San Francisco typeface across its products and marketing ma
 
 ---
 
-**Visual Hierarchy**
+## Visual Hierarchy
 As discussed previously, Visual hierarchy is the arrangement of design elements to guide the viewer's eye and emphasize the most important information first. It uses size, color, contrast, alignment, and spacing to create a sense of order and priority. 
 
 ![Screenshot 2024-05-28 at 12.46.32.png](Screenshot_2024-05-28_at_12.46.32.png)
@@ -100,7 +100,7 @@ On the New York Times website, visual hierarchy is used effectively to guide rea
 
 ---
 
-**Branding and Identity**
+## Branding and Identity
 Branding and identity involve creating a distinct image and personality for a company or product through design elements such as logos, colors, typography, and messaging. A strong brand identity fosters recognition, builds trust, and creates emotional connections with the audience. 
 
 ![original-swoosh-design-by-carolyn-davidson-1-1670514865.jpg](original-swoosh-design-by-carolyn-davidson-1-1670514865.jpg)
@@ -109,7 +109,7 @@ Nike’s "swoosh" logo and the slogan "Just Do It" are powerful elements of its 
 
 ---
 
-**User Coercion**  
+## User Coercion
 
 User coercion in design refers to tactics that manipulate or pressure users into taking specific actions, often benefiting the designer or organization more than the user. These can include deceptive patterns like hidden fees, forced continuity, or misleading user interfaces, ultimately undermining user trust and autonomy.
 
@@ -129,7 +129,7 @@ Secondly, you should be aware of ethics. The human brain becomes sickened by pat
 
 ---
 
-**Coercive Design** 
+## Coercive Design
 
 Did you know that the New York Times wrote an article last year stating that the average screen time on social media for ages 8-12 in the US went up from 4.4 hours in 2022 to 5.3 hrs in 2023. 
 
@@ -155,7 +155,7 @@ Here may be why they can get away with it
 
  
 
-**Fast and Slow Thinking**
+## Fast and Slow Thinking
 
 Let’s finish and talk about another another psychologist, Daniel Kahneman who in 2002 was awarded a Nobel prize by the Royal Swedish Academy of Sciences for discovering a new field of science called Behavioural Economics. 
 
@@ -197,3 +197,32 @@ It also means that we as designers should never rush into Figma but rather slow 
 ![chriskellylive_depressed_teenager_scrolling_on_a_phone_in_her_b_ee833fd7-e762-4f45-81a0-b9140ca3c02d.png](chriskellylive_depressed_teenager_scrolling_on_a_phone_in_her_b_ee833fd7-e762-4f45-81a0-b9140ca3c02d.jpg)
 
 It also means that we should build ethically because the negative impacts of mobile phone addiction are real and has direct correlations from as discussed hyper addiction for kids to lower academic performance in high school, increased anxiety levels amongst teenagers, and reduced satisfaction with life among young people in general.
+
+---
+
+## Why it matters for UX
+
+People don't read interfaces, they perceive them. Gestalt principles, contrast, colour and hierarchy decide what users see first and what they think belongs together, long before they read a word. Use them deliberately, and ethically, and your layouts explain themselves.
+
+## Try it: a perception audit (20 minutes)
+
+1. Take a screenshot of the home screen of an app you use every day.
+2. Draw boxes around every group you see, and label which Gestalt principle makes it a group (proximity, similarity, common region or closure).
+3. Number the first five things your eye lands on. Is that the order the designer intended?
+4. Find one element that pushes you to act against your interest (coercive design) and describe how you would make it honest.
+
+## Media
+
+[https://www.youtube.com/watch?v=DwR0SZTBMTU](https://www.youtube.com/watch?v=DwR0SZTBMTU)
+
+## Resources
+
+[Proximity Principle in Visual Design – Nielsen Norman Group](https://www.nngroup.com/articles/gestalt-proximity/)
+
+[Visual Hierarchy in UX: Definition – Nielsen Norman Group](https://www.nngroup.com/articles/visual-hierarchy-ux-definition/)
+
+## Key takeaways
+
+- Gestalt principles describe how the brain groups what it sees; use them to group related elements.
+- Colour, type, negative space and hierarchy decide what users notice first.
+- Perception can be used to coerce; design for people's real interests, not just engagement.

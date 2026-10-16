@@ -18,6 +18,8 @@ UX Design and design in general comes from controlling the natural world around 
 
 ---
 
+## The first designer
+
 Good UX design is a story, so let's tell one. Really the very first UX designer was probably Homo Habilis. Let's cast our minds back about 3.3 million years ago to the early Pleistocene. Here we have him coming up with a solution to a problem. Homo Habilis wants to kills deer. He can’t. he needs a tool. He is going to build a hafted spear so he is sharpening a stone. 
 
 ![chriskellylive_close_up_of_a_cavemans_hands_as_he_is_sharpening_12c8858e-13aa-426d-b37a-d97bff5b5e3f.png](chriskellylive_close_up_of_a_cavemans_hands_as_he_is_sharpening_12c8858e-13aa-426d-b37a-d97bff5b5e3f.jpg)
@@ -46,7 +48,9 @@ Our ancient relative must have engaged in some **advanced thinking and planning*
 
 ---
 
-Let's March on. User experience has always been linked to human creation. Let's move forward to the 5th century BC to Greek antiquity. Here human creation joins art and science to better produce the user experience of the Greek amphitheaters. 
+## Ancient Greece
+
+Let's march on. User experience has always been linked to human creation. Let's move forward to the 5th century BC to Greek antiquity. Here human creation joins art and science to better produce the user experience of the Greek amphitheaters. 
 
 ---
 
@@ -86,7 +90,7 @@ Using hammer and anvil, he wields into existence the first ever pocket watch. Go
 
 ## Industrial Revolution
 
-Let's shift forward to 1829 in North America. Whilst the United States was experiencing the opening acts of the Industrial Revolution, William Burt, an American inventor, patented the first ever typewriter which he called a ‘typographer’. It’s helpful here to accept that engineering is a large part of what UX Designers indirectly are responsible for and it’s important you develop your engineering abilities. Being comportment at Information Arcitecture is a must. 
+Let's shift forward to 1829 in North America. Whilst the United States was experiencing the opening acts of the Industrial Revolution, William Burt, an American inventor, patented the first ever typewriter which he called a ‘typographer’. It’s helpful here to accept that engineering is a large part of what UX Designers indirectly are responsible for and it’s important you develop your engineering abilities. Being competent at Information Architecture is a must. 
 
 ![chriskellylive_cinematic_hyper_realistic_rich_saturated_colors__7e1d130d-0f3a-49ca-bd2e-26490cb8d453.png](chriskellylive_cinematic_hyper_realistic_rich_saturated_colors__7e1d130d-0f3a-49ca-bd2e-26490cb8d453.jpg)
 
@@ -138,7 +142,7 @@ Same year, A young Stanford graduate by the name of Jim Yurchenco has just joine
 
 ---
 
-Fresh out of Apple, where we helped design the original mouse, Jim would would go on to join an illustrious group of design pioneers such as David Kelly and Tim Brown with some brand approaches to product strategy which has in essence shaped the future that we, as UX designers live in today.
+Fresh out of Apple, where he helped design the original mouse, Jim would would go on to join an illustrious group of design pioneers such as David Kelley and Tim Brown with some brand new approaches to product strategy which has in essence shaped the future that we, as UX designers live in today.
 
 ![1366_2000.jpg](1366_2000.jpg)
 
@@ -150,6 +154,33 @@ And really to be perfectly honest with you, this is where the technology industr
 
 ![chriskellylive_cinematic_gen_z_type_person_apple_watch_VR_heads_51c317a0-6385-4dd6-9643-a818362e1f3f.png](chriskellylive_cinematic_gen_z_type_person_apple_watch_VR_heads_51c317a0-6385-4dd6-9643-a818362e1f3f.jpg)
 
-Now UX is formalised and transformed into a major part of technology development. Designers and developers work in totally specialised fields of technology which has been highly specialised and diversified into specific departments.  
+Now UX is formalised and transformed into a major part of technology development. Designers and developers work in totally specialised fields of technology which has been highly specialised and diversified into specific departments.
 
-[Key Roles](key-roles.html)
+---
+
+## Why it matters for UX
+
+Knowing where UX comes from shows you that it is not a fashion or a job title but the oldest kind of design: making tools that fit people. The same three questions the first toolmakers faced, functionality, accessibility and consistency, are the ones you will ask of every screen you design.
+
+## Try it: the history of one object (20 minutes)
+
+1. Pick an everyday object, such as a chair, a phone or a pair of scissors.
+2. Find two earlier versions of it (an image search is fine).
+3. For each version, write what problem it solved better than the one before.
+4. Rate each version for functionality, accessibility and consistency, and share the object's story with a classmate in two minutes.
+
+## Media
+
+[https://www.youtube.com/watch?v=zKK1I2n53pk](https://www.youtube.com/watch?v=zKK1I2n53pk)
+
+## Resources
+
+[A 100-Year View of User Experience – Nielsen Norman Group](https://www.nngroup.com/articles/100-years-ux/)
+
+[What is User Experience (UX) Design? – Interaction Design Foundation](https://www.interaction-design.org/literature/topics/ux-design)
+
+## Key takeaways
+
+- All design is user experience design; it is just a good or a bad experience.
+- Functionality, accessibility and consistency have shaped tools since the first spear.
+- UX became a profession with personal computers and the web, and the term with Don Norman at Apple in 1993.

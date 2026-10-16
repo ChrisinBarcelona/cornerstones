@@ -23,13 +23,17 @@ So what did he know, he knew:
 
 ---
 
-He also capably demonstrated an intimate knowledge of the mindset of the kid and whether on purpose or otherwise, he followed a key principal from Don Norman which is to make the product more pleasurable to use! Today, Rob Law has continued to expand and innovate within the company, adding many innovative and successful products to the market. 
+He also capably demonstrated an intimate knowledge of the mindset of the kid and whether on purpose or otherwise, he followed a key principle from Don Norman which is to make the product more pleasurable to use! Today, Rob Law has continued to expand and innovate within the company, adding many innovative and successful products to the market. 
 
 ![Unknown-4-scaled-e1593529717557.jpg](Unknown-4-scaled-e1593529717557.jpg)
 
 ---
 
-## Exercise
+## Why it matters for UX
+
+Trunki succeeded because Rob Law understood the whole journey, the busy airport, the tired child and the parent with full hands, and designed for all of it. Great products come from understanding context and making the experience enjoyable, not just functional.
+
+## Try it: analyse a product you love (30 minutes)
 
 Now, please, I would like you to choose a product which you think exemplifies excellent product design. This could be anything from a tech gadget, kitchen tool, app, or piece of furniture.
 
@@ -43,6 +47,20 @@ Now, please, I would like you to choose a product which you think exemplifies ex
 
 - **Functionality and Enjoyment**: Explain how the product is designed to be both functional and enjoyable to use.
 
-**Outcome**
+**Outcome:** a one-page analysis you can share with the class. It trains you to think about the user and the whole journey, not just the object.
 
-This will help prepare the students consideration upon the notion of user-centric thinking and the user journey.
+## Media
+
+[https://www.youtube.com/watch?v=oQTEwIz6Ehg](https://www.youtube.com/watch?v=oQTEwIz6Ehg)
+
+## Resources
+
+[Trunki – Wikipedia](https://en.wikipedia.org/wiki/Trunki)
+
+[Principles of Human-Centered Design – Don Norman (video)](https://www.youtube.com/watch?v=rmM0kRf8Dbk)
+
+## Key takeaways
+
+- Understand the full context of use: where, when and who the customer is.
+- Functional and enjoyable together beats functional alone.
+- Rejection is feedback; Trunki was turned down on TV and still succeeded.

@@ -1,6 +1,6 @@
 # Wicked Problem
 
-Often in Design Thinking, we are meet with the term, Wicked Problem. A wicked problem is a problem that is difficult or impossible to solve because of incomplete, contradictory, and changing requirements that are often difficult to recognise. It is a systemic problem. The effort to solve one aspect of it may reveal or create others. Design Thinking was born out of a desire to solve these types of impossible challenges.  
+Often in Design Thinking, we are met with the term, Wicked Problem. A wicked problem is a problem that is difficult or impossible to solve because of incomplete, contradictory, and changing requirements that are often difficult to recognise. It is a systemic problem. The effort to solve one aspect of it may reveal or create others. Design Thinking was born out of a desire to solve these types of impossible challenges.  
 
 ---
 
@@ -63,3 +63,32 @@ If dealing with a wicked problem for your case study, it is important at as earl
 ---
 
 It is important recognise that we never actually solve wicked problems but rather put a little dent in the issue and help a little bit.
+
+---
+
+## Why it matters for UX
+
+Many of the briefs worth doing touch wicked problems: climate, health, inequality. You can't solve them, but good design can make a real dent. Knowing a problem is wicked tells you to narrow the scope early and to expect your solution to change behaviour, and to have side effects.
+
+## Try it: map and narrow a wicked problem (30 minutes)
+
+1. Pick one wicked problem from the list on this page.
+2. Ask "why?" five times to map its causes, and draw them as a web, not a line.
+3. Circle one cause small enough that a single app or service could help.
+4. Write a one-sentence brief for that small dent, including who it is for.
+
+## Media
+
+[https://www.youtube.com/watch?v=_vS_b7cJn2A](https://www.youtube.com/watch?v=_vS_b7cJn2A)
+
+## Resources
+
+[What are Wicked Problems? – Interaction Design Foundation](https://www.interaction-design.org/literature/topics/wicked-problems)
+
+[Wicked problem – Wikipedia](https://en.wikipedia.org/wiki/Wicked_problem)
+
+## Key takeaways
+
+- A wicked problem is systemic: complex, interdependent and without a single solution.
+- You never solve a wicked problem; you make a small, focused dent in it.
+- Narrow your scope early and spend extra time in discovery.

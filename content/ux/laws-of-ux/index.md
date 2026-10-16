@@ -34,7 +34,7 @@ Use the established language of the internet. Take credibility from established 
 
 ![maxresdefault.jpg](maxresdefault.jpg)
 
-Law of Common Region
+## Law of Common Region
 
 ![law-of-common-region_poster_page-0001.jpg](law-of-common-region_poster_page-0001.jpg)
 
@@ -116,7 +116,7 @@ Onboarding, Landing and exiting is of paramount importance to your task flow. Pa
 
 ![teslers-law_poster.jpg](teslers-law_poster.jpg)
 
-Teslar’s law will frequently come into play when we accept that there are a certain number of complexities which will be encountered. What we should always aim to do is remove all auxiliary and peripheral issues to arrive at the minimal complexity. The MVP. 
+Tesler’s law will frequently come into play when we accept that there are a certain number of complexities which will be encountered. What we should always aim to do is remove all auxiliary and peripheral issues to arrive at the minimal complexity. The MVP. 
 
 ---
 
@@ -138,6 +138,39 @@ Look at these UI below. What stands out to you?
 
 Finish on a half note. The above shape is frequently found in most UI designs. 
 
-The laws of UX go beyond the examples presented here and I encourage you to explore the various ways that human perception impacts the ways in which UI is created. We should rigidly adhere to these principals because being aware of perception is vital when we are dealing with design which is within itself something which is sensory and based on the interactions between the human and the computer.   
+The laws of UX go beyond the examples presented here and I encourage you to explore the various ways that human perception impacts the ways in which UI is created. We should rigidly adhere to these principles because being aware of perception is vital when we are dealing with design which is within itself something which is sensory and based on the interactions between the human and the computer.   
 
 ![Web 1920 – 16.png](Web_1920__16.png)
+
+---
+
+## Why it matters for UX
+
+The Laws of UX turn decades of psychology research into rules you can apply on every screen. They help you justify design decisions to your team with evidence instead of taste, and they catch problems such as too many choices or a forgettable ending before users do.
+
+## Try it: apply three laws (30 minutes)
+
+1. Open the checkout or sign-up flow of an app you use.
+2. Count the choices on each screen (Hick's Law) and measure how far your thumb travels to the main button (Fitts's Law).
+3. Find what stands out on each screen (Von Restorff Effect). Is it the most important thing?
+4. Write three recommendations, each naming the law it is based on.
+
+## Media
+
+[https://www.youtube.com/watch?v=pbbTOzArcWQ](https://www.youtube.com/watch?v=pbbTOzArcWQ)
+
+[https://www.youtube.com/watch?v=M-9FbUJk6tI](https://www.youtube.com/watch?v=M-9FbUJk6tI)
+
+## Resources
+
+[Laws of UX – Jon Yablonski](https://lawsofux.com/)
+
+[Fitts's Law and Its Applications in UX – Nielsen Norman Group](https://www.nngroup.com/articles/fitts-law/)
+
+[The Peak–End Rule – Nielsen Norman Group](https://www.nngroup.com/articles/peak-end-rule/)
+
+## Key takeaways
+
+- The Laws of UX are psychology principles you can apply directly to interfaces.
+- Fewer choices, familiar patterns and chunked information lower cognitive load.
+- Use the laws to explain design decisions with evidence, not taste.

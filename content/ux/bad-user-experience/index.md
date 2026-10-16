@@ -92,3 +92,32 @@ When its so bad, its good.
 [LINGsCARS - Cheap Car Leasing](https://www.lingscars.com/)
 
 ![200w.gif](200w-1.gif)
+
+---
+
+## Why it matters for UX
+
+Studying failure is one of the fastest ways to learn what good looks like. Broken promises, waiting, confusing signs and coercive patterns all show up in real products, and most of them could have been caught by talking to users and watching how they behave.
+
+## Try it: a bad-UX hunt (30 minutes)
+
+1. Find three bad experiences this week: one online, one in a shop or service, one on a sign or object.
+2. Photograph or screenshot each.
+3. For each, write which problem it shows: broken expectations, waiting, unclear signs, no system status or coercive design.
+4. Redesign the worst one in a quick sketch and share it with the class.
+
+## Media
+
+[https://www.youtube.com/watch?v=lJUW0iZzAaQ](https://www.youtube.com/watch?v=lJUW0iZzAaQ)
+
+## Resources
+
+[Deceptive Patterns](https://www.deceptive.design/)
+
+[Deceptive Patterns in UX: How They Work and Why They Hurt – Nielsen Norman Group](https://www.nngroup.com/articles/deceptive-patterns/)
+
+## Key takeaways
+
+- Expectations are part of the experience: never promise more than you deliver.
+- How a wait feels matters as much as how long it is.
+- Coercive patterns may work in the short term, but they cost trust; design honestly.

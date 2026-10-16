@@ -25,7 +25,6 @@ Charles Barkley is a former American professional basketball player, 11-time NBA
 
 So is data false? Not exactly. The plot thickens.
 
-[](https://c.pxhere.com/photos/07/7b/city_crossing_pedestrian_crossing_pedestrians_people_road_street-915416.jpg!d)
 
 No one can predict the future. What is the future! Well, Einstein mentioned that time is space and as a construct that's all quite abstract but for sure, we are all experiencing the same thing at the same moment, I hope. We are moving through space time and this is not something that any market or market force can predict. We really don't know. The universe may invert in a heartbeat and some distant galaxy may have just collapsed setting off a chain reaction resulting in the end of our own universe within the next ten minutes, probably not, but nothing is 100% certain.
 
@@ -45,7 +44,7 @@ So we can't predict the future but we can prepare for it. *if* we carefully meas
 
 ## What is Research
 
-In all testing, in order to conduct effective research you must first know what you seek to learn. This is called epistemic pursuit. From the Greek, the pursuit of knowledge. We are all epistemologists! So we have to ask ourselves, what questions do we want answered? What do we want to know about are users? What is it we don't know about them?
+In all testing, in order to conduct effective research you must first know what you seek to learn. This is called epistemic pursuit. From the Greek, the pursuit of knowledge. We are all epistemologists! So we have to ask ourselves, what questions do we want answered? What do we want to know about our users? What is it we don't know about them?
 
 This is the foundation for choosing your research methods, creating a problem statement or forming a research question. **A research question is simply an extension of what we wish to learn**. So all research methods are an extension of that one thing. That one question. What we want to know.
 
@@ -97,7 +96,7 @@ The ads were viewed billions of times, according to the The Guardian newspaper w
 
 ---
 
-# Paradox of Humanity
+## Paradox of Humanity
 
 So, we spend all our time asking ourselves who is the user, what type of user do we have, what is their demographic, what are their tastes, their habits, when is the user and we hopefully now know this is negotiated space. But I want to tease it out because I feel we should be aware of it and just answer the following question; What really is a human being?
 
@@ -117,7 +116,6 @@ This is a **one fixed truth** but after that things become variable and needs be
 
 As UX Designers we often find ourselves within this negotiated space quite a bit. We can never really say for sure we know how a user will use our product but we can say, if we measure the market what, they will probably do. People make billions of different choices everyday which separates us from one another. People in general a pretty complex but basically the same and given similar sets of circumstances, people will behave in the same way. We should account for both outcomes. Expect your users to use your products in the same way, for the same reason, but don't be surprised if they don't. Here's how.
 
-[](https://cdn.boldomatic.com/content/post/0-y2NQ/in-2021-the-most-popular-baby-names-will-be-CORONA?size=800)
 
 Did you know in 1975, the majority of people in every single US state, named their daughter Jennifer. How is it possible that in a country like the United State of America, with a population of 329.5 million people, most people could, year after year, give their children the same name?
 
@@ -188,3 +186,34 @@ Remember even as far back as 300,000 years our ancient ancestors engaged in soph
 In Summary, when dealing with data, you will be dealing with both qualitative and quantitative data. It’s important to try and interpret your data correctly and try not to taint the sample with bias. 
 
 Ultimatley, you will learn where best to look for the type of information you need and most importantly, what you will know starts off by figuring out what you want to know, then what we need to know and refining and sharpening that understanding until you have a body of understanding from which you can build. Good Luck!
+
+---
+
+## Why it matters for UX
+
+Data is what separates design thinking from guesswork. Quantitative data tells you what is happening; qualitative data tells you why. Knowing the difference, and knowing how data can be biased or misused, lets you make decisions you can defend.
+
+## Try it: what and why (25 minutes)
+
+1. Pick a question about your users, for example "Why do people abandon our sign-up?"
+2. List two quantitative sources that would tell you what is happening (analytics, surveys with numbers).
+3. List two qualitative sources that would tell you why (interviews, usability tests).
+4. Write down one way each source could be biased, and how you would reduce it.
+
+## Media
+
+[https://www.youtube.com/watch?v=LmWPygSxMms](https://www.youtube.com/watch?v=LmWPygSxMms)
+
+[https://www.youtube.com/watch?v=-bn2euyKhJo](https://www.youtube.com/watch?v=-bn2euyKhJo)
+
+## Resources
+
+[When to Use Which User-Experience Research Methods / Quant vs. Qual – Nielsen Norman Group](https://www.nngroup.com/articles/quant-vs-qual/)
+
+[Data vs. Findings vs. Insights in UX – Nielsen Norman Group](https://www.nngroup.com/articles/data-findings-insights-differences/)
+
+## Key takeaways
+
+- Start every piece of research with what you want to know.
+- Quantitative data shows what is happening; qualitative data shows why. You need both.
+- Data can be biased or misused: be rigorous, talk to real users and never work in a silo.

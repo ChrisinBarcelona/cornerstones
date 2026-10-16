@@ -25,6 +25,33 @@
 
 ![toptal-blog-image-1526372235282-e2603b8e99b7ccc00e9c70348cf5b04f.jpg](toptal-blog-image-1526372235282-e2603b8e99b7ccc00e9c70348cf5b04f.jpg)
 
-In most instances, the stored expectation will, to a certain extent, resemble the real-life model or prior UI experience. This is important because users will plan and predict future actions within a system based on their mental models. It's also why **consistency is so important in UI design**. 
+In most instances, the stored expectation will, to a certain extent, resemble the real-life model or prior UI experience. This is important because users will plan and predict future actions within a system based on their mental models. It's also why **consistency is so important in UI design**.
 
-[Data](data.html)
+---
+
+## Why it matters for UX
+
+Users bring a model of how things work to every screen. When your design matches it, the product feels intuitive; when it doesn't, users make mistakes and blame themselves. Consistency with familiar patterns (Jakob's Law) is the cheapest usability win there is.
+
+## Try it: spot the broken model (20 minutes)
+
+1. Pick an app or website that confused you the first time you used it.
+2. Write down what you expected to happen, and what actually happened.
+3. Name the mental model you brought with you, and where it came from (another app, the physical world).
+4. Sketch a change that would match the design to that model.
+
+## Media
+
+[https://www.youtube.com/watch?v=nAgXISssAws](https://www.youtube.com/watch?v=nAgXISssAws)
+
+## Resources
+
+[Mental Models and User Experience Design – Nielsen Norman Group](https://www.nngroup.com/articles/mental-models/)
+
+[What are Mental Models? – Interaction Design Foundation](https://www.interaction-design.org/literature/topics/mental-models)
+
+## Key takeaways
+
+- A mental model is what users believe about how a system works, based on past experience.
+- Biases are flawed mental models; confirmation bias filters what we notice.
+- Design for recognition rather than recall, and stay consistent with patterns users already know.

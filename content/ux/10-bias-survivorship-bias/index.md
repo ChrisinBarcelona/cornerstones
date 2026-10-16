@@ -2,11 +2,7 @@
 
 Survivorship bias is a cognitive bias that occurs when we focus only on the individuals or things that have "survived" or succeeded while overlooking those that have not. It arises from the natural tendency to pay more attention to visible and successful examples rather than considering the complete set of data, including failures or those that have dropped out of the sample.
 
----
-
-[https://www.youtube.com/watch?v=ZyLVIvBidIA](https://www.youtube.com/watch?v=ZyLVIvBidIA)
-
----
+## How it works
 
 The term "survivorship bias" originally gained prominence during World War II when the U.S. military analyzed the patterns of damage on returning aircraft. Initially, they examined the areas that sustained the most damage, assuming those were the most critical areas to reinforce. However, the statistician Abraham Wald pointed out that the analysis was flawed because the data only came from the planes that survived. The focus should have been on the areas where the surviving planes were least damaged since the planes that were hit in those areas did not make it back
 
@@ -21,3 +17,33 @@ This bias can affect various domains, including business, investing, career choi
 ---
 
 To mitigate survivorship bias, it is important to gather a complete and representative sample of data, including both successful and unsuccessful outcomes. By considering the full range of data, one can gain a more accurate understanding of the factors contributing to success or failure and make more informed decisions.
+
+---
+
+## Why it matters for UX
+
+In UX we mostly hear from users who stayed. The ones who gave up during sign-up, or never came back, are invisible in our feedback, yet they hold the most important lessons. Look for the missing data: drop-off points, churned users and people who never tried your product.
+
+## Try it: spot it in the wild (20 minutes)
+
+1. Pick a product you know and list who you would usually ask for feedback.
+2. List who is missing: people who dropped off, cancelled or never signed up.
+3. Plan one way to reach each missing group (exit survey, analytics, recruiting non-users).
+
+## Media
+
+[https://www.youtube.com/watch?v=ZyLVIvBidIA](https://www.youtube.com/watch?v=ZyLVIvBidIA)
+
+[https://www.youtube.com/watch?v=P9WFpVsRtQg](https://www.youtube.com/watch?v=P9WFpVsRtQg)
+
+## Resources
+
+[Survivorship Bias – The Decision Lab](https://thedecisionlab.com/biases/survivorship-bias)
+
+[Survivorship bias – Wikipedia](https://en.wikipedia.org/wiki/Survivorship_bias)
+
+## Key takeaways
+
+- We study the successes and miss the failures that didn't make it.
+- Your current users are survivors; the ones who left hold key lessons.
+- Look for missing data: drop-offs, churn and non-users.
