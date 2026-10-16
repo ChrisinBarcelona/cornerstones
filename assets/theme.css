@@ -626,3 +626,12 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 @media (max-width: 1100px) { .sprint-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 760px) { .sprint-feature { padding: 28px 22px; border-radius: var(--r-lg); } .sprint-head { flex-direction: column; align-items: flex-start; } }
 @media (max-width: 560px) { .sprint-grid { grid-template-columns: 1fr; } }
+
+/* Mark as complete on contents cards */
+.card-complete { position: relative; z-index: 1; display: inline-flex; align-items: center; height: 36px; padding: 0 16px; margin-top: 14px; font: 600 14px var(--font); cursor: pointer; }
+.row:has(.card-complete) .row-done { display: none; }
+@media (max-width: 560px) { .card-complete { width: auto; } }
+.rows.grid .row:has(.card-complete) { grid-template-rows: auto 1fr; align-content: stretch; }
+.rows.grid .row:has(.card-complete) .row-body { display: flex; flex-direction: column; align-self: stretch; }
+.rows.grid .row-body > .card-complete { margin-top: auto; align-self: flex-start; }
+.rows.grid .row:has(.card-complete) .row-desc { margin-bottom: 14px; }

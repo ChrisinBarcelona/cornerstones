@@ -339,7 +339,8 @@
     renderCertificate();
     // This page's buttons, beside the title and at the end
     document.querySelectorAll('[data-complete]').forEach(function (btn) {
-      var on = !!done[btn.dataset.complete];
+      var item = btn.dataset.with && findItem(btn.dataset.complete);
+      var on = item ? itemDone(item) : !!done[btn.dataset.complete];
       btn.classList.toggle('is-complete', on);
       btn.setAttribute('aria-pressed', String(on));
     });
@@ -586,7 +587,13 @@
   }
 
   document.querySelectorAll('[data-complete]').forEach(function (btn) {
-    btn.addEventListener('click', function () { toggle(btn.dataset.complete); });
+    btn.addEventListener('click', function () {
+      if (!btn.dataset.with) return toggle(btn.dataset.complete);
+      // A card with parts marks the page and every part together
+      var on = !itemDone(findItem(btn.dataset.complete));
+      btn.dataset.with.split(' ').forEach(function (k) { if (on) done[k] = 1; else delete done[k]; });
+      toggle(btn.dataset.complete, on);
+    });
   });
   render();
   // Badges already earned before this page loaded shouldn't pop up on load.

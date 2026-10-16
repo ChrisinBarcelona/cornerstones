@@ -817,12 +817,18 @@ def build_track(t, data):
             stats = f'<span>{meter(l["difficulty"]) if l["difficulty"] else "<span class=tag>Project</span>"}</span>'
         else:
             stats = ""
+        card_btn = ""
+        if t["id"] in PROGRESS:  # Methods are a reference bank, so they have no completion
+            parts = " ".join(f"{t['id']}/{s}" for s in l["children"])
+            card_btn = (f'\n    <button type="button" class="complete-btn card-complete" data-complete="{t["id"]}/{l["slug"]}"'
+                        + (f' data-with="{parts}"' if parts else "") + ' aria-pressed="false">'
+                        '<span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>')
         rows.append(f"""<li class="row{' no-stats' if not stats else ''}" data-key="{t['id']}/{l['slug']}" data-cat="{esc(l['category'])}"{parent_attr} data-search="{esc(search)}">
   {f'<span class="row-icon" title="{t["noun"]} {l["number"]}">{row_icon(t["id"], l["slug"])}</span>' if row_icon(t["id"], l["slug"]) else f'<span class="row-num">{l["number"]}</span>'}
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="{t['out']}/{l['slug']}.html">{esc(l['title'])}</a>{f'<span class="pill" data-parts-of="{len(l["children"])}">{len(l["children"])} parts</span>' if l["children"] else ''}<span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">{esc(l['description'])}</p>
-    {subs}
+    {subs}{card_btn}
   </div>
   {f'<div class="row-stats">{stats}</div>' if stats else ''}
 </li>""")
