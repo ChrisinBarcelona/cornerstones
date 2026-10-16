@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Stage Play · Cornerstones</title>
-<meta name="description" content="As a team, build the Stage Play app in Figma from a component schema, using master components, nesting, auto layout and properties.">
+<meta name="description" content="As a team, build the Stage Play app from a schema: a design system, master components, eight screens and a clickable flow in five days.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2238%2040%20739%20739%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M221%2090H590L777%20409H38Z%22%20fill%3D%22%23004ecd%22/%3E%3Cpath%20d%3D%22M38%20409H777L590%20728H221Z%22%20fill%3D%22%230062ff%22/%3E%3Cpath%20d%3D%22M374%20254H688L777%20409H286Z%22%20fill%3D%22%23002b71%22/%3E%3Cpath%20d%3D%22M286%20409H777L688%20564H374Z%22%20fill%3D%22%23003ea2%22/%3E%3C/svg%3E">
 <script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=4eb25905c1">
-<link rel="stylesheet" href="../assets/theme.css?v=4eb25905c1">
+<link rel="stylesheet" href="../assets/style.css?v=38118e1d47">
+<link rel="stylesheet" href="../assets/theme.css?v=38118e1d47">
 </head>
 <body class="t-exercises">
 <header class="nav">
@@ -36,32 +36,93 @@
     <header class="lecture-head">
       <div class="eyebrow">Exercise 19 · UI Team Projects</div>
       <div class="title-row"><h1>Stage Play</h1><button type="button" class="complete-btn head-complete" data-complete="exercises/stage-play" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button></div>
-      <p class="lede">As a team, build the Stage Play app in Figma from a component schema, using master components, nesting, auto layout and properties.</p>
-      <div class="meta"><span>Multi-session project</span><span>Takes 5 days in Figma</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 min read</span></div>
+      <p class="lede">As a team, build the Stage Play app from a schema: a design system, master components, eight screens and a clickable flow in five days.</p>
+      <div class="meta"><span>Multi-session project</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 min read</span></div>
     </header>
     <div class="lecture-grid">
-      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#directives">Directives</a></li><li class="lvl2"><a href="#parameters">Parameters</a></li><li class="lvl2"><a href="#duration">Duration</a></li><li class="lvl2"><a href="#schema">Schema</a></li></ol></div></div></div></aside>
+      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#the-brief">The brief</a></li><li class="lvl2"><a href="#team-roles">Team roles</a></li><li class="lvl2"><a href="#directives">Directives</a></li><li class="lvl2"><a href="#deliverables">Deliverables</a></li><li class="lvl2"><a href="#day-by-day-plan">Day-by-day plan</a></li><li class="lvl2"><a href="#schema">Schema</a></li><li class="lvl2"><a href="#checklist">Checklist</a></li><li class="lvl2"><a href="#assessment">Assessment</a></li></ol></div></div></div></aside>
       <article class="prose">
-<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#directives">Directives</a></li><li class="lvl2"><a href="#parameters">Parameters</a></li><li class="lvl2"><a href="#duration">Duration</a></li><li class="lvl2"><a href="#schema">Schema</a></li></ol></details>
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#the-brief">The brief</a></li><li class="lvl2"><a href="#team-roles">Team roles</a></li><li class="lvl2"><a href="#directives">Directives</a></li><li class="lvl2"><a href="#deliverables">Deliverables</a></li><li class="lvl2"><a href="#day-by-day-plan">Day-by-day plan</a></li><li class="lvl2"><a href="#schema">Schema</a></li><li class="lvl2"><a href="#checklist">Checklist</a></li><li class="lvl2"><a href="#assessment">Assessment</a></li></ol></details>
+<h2 id="the-brief">The brief</h2>
+<p><strong>Stage Play</strong> is an app for amateur actors and theatre lovers. People browse plays that are about to start, pick a character, download the script and perform together live on video, while others watch. As a team, you will design the Stage Play interface from the schema below: the navigation, sign-in, lists, modular cards, messages and live-video screens.</p>
+<p>This is a <strong>UI team project</strong>. The UX is decided for you; the challenge is to build a consistent, component-driven interface as a team, the way design teams work on real products.</p>
+<h2 id="team-roles">Team roles</h2>
+<p>Work in teams of three or four. Agree these roles on day 1 (one person can hold two):</p>
+<ul>
+<li><strong>Design system lead:</strong> owns the colour and type styles, the grid and the master components. Every change to a component goes through them.</li>
+<li><strong>Screen designers (2):</strong> build the screens from the components, split by section of the schema.</li>
+<li><strong>Prototype and QA lead:</strong> links the screens into a clickable flow and checks every screen against the parameters before the presentation.</li>
+</ul>
 <h2 id="directives">Directives</h2>
-<p>Working as a team, produce a UI from the schema provided.</p>
-<h2 id="parameters">Parameters</h2>
+<p>Working as a team, produce a UI from the schema provided. Follow these parameters:</p>
 <ul>
-<li>Use Master Components</li>
-<li>Use the iPhone 17 canvas provided</li>
-<li>Use the 8 Pt Grid system</li>
-<li>Use Nested Containment</li>
+<li>Use master components</li>
+<li>Use the canvas provided (416 × 986 px)</li>
+<li>Use the 8-point grid system</li>
+<li>Use nested containment</li>
 <li>Use Auto Layout</li>
-<li>Use Text Properties</li>
-<li>Use Swap Properties</li>
+<li>Use text properties</li>
+<li>Use swap properties</li>
 </ul>
-<h2 id="duration">Duration</h2>
-<ul>
-<li>5 days in Figma</li>
-</ul>
+<h2 id="deliverables">Deliverables</h2>
+<ol>
+<li><strong>One shared Figma file</strong> with pages for the design system, the components and the screens.</li>
+<li><strong>A design system page:</strong> colour styles, text styles, grid and spacing tokens.</li>
+<li><strong>Master components</strong> for every element in the schema, with variants and properties.</li>
+<li><strong>At least eight screens</strong>, covering every section of the schema: navigation, log in, lists, modular cards, messages and AV video.</li>
+<li><strong>A clickable prototype</strong> of one flow: sign in → find a play → pick a character → join the live performance.</li>
+<li><strong>A five-minute team presentation</strong> of the system and the flow.</li>
+</ol>
+<h2 id="day-by-day-plan">Day-by-day plan</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Agree roles, read the schema together, set up the file, styles and grid</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Build the master components: navigation, buttons, inputs, list items, cards</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Build the screens from the components: log in, lists, modular cards</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Messages and AV video screens; link the prototype</td>
+</tr>
+<tr>
+<td>5</td>
+<td>QA against the parameters, polish, and present</td>
+</tr>
+</tbody>
+</table></div>
 <h2 id="schema">Schema</h2>
-<p>The reference below sets out the canvas and grid (416 × 986 px, 8 pt grid) and the components to build: navigation, log in, lists, modular cards, messages and AV video. Click it to open it full size.</p>
+<p>The reference below sets out the canvas and grid (416 × 986 px, 8-point grid) and the components to build: navigation, log in, lists, modular cards, messages and AV video. Click it to open it full size.</p>
 <figure class="media"><img alt="Stage Play UI schema: canvas, grid and component reference" src="../content/exercises/stage-play/reference.png" loading="lazy" decoding="async"></figure>
+<h2 id="checklist">Checklist</h2>
+<p>☐ Roles agreed and written at the top of the file</p>
+<p>☐ Colour and text styles defined, and nothing on any screen is unstyled</p>
+<p>☐ Every repeated element is an instance of a master component</p>
+<p>☐ Components use Auto Layout, text properties and swap properties</p>
+<p>☐ All screens use the 416 × 986 canvas and the 8-point grid</p>
+<p>☐ The prototype flow works end to end</p>
+<p>☐ Layers and pages are named so another team could pick up the file</p>
+<h2 id="assessment">Assessment</h2>
+<p>Your team is assessed on:</p>
+<ul>
+<li><strong>System quality (40%):</strong> clean styles, well-built components with properties and variants, consistent spacing.</li>
+<li><strong>Fidelity to the schema (30%):</strong> every section covered, matching the canvas, grid and parameters.</li>
+<li><strong>Prototype (15%):</strong> the core flow works and feels like one product.</li>
+<li><strong>Teamwork and presentation (15%):</strong> clear roles, a tidy shared file and a confident five-minute presentation.</li>
+</ul>
 <section class="complete" data-key="exercises/stage-play">
   <div class="complete-text"><b>Finished this exercise?</b></div>
   <button type="button" class="complete-btn" data-complete="exercises/stage-play" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
@@ -80,7 +141,7 @@
   <div class="celebrate-actions"><a class="login-submit celebrate-link" href="../certificate.html" hidden>See your certificate</a>
   <button type="button" class="login-submit" id="celebrate-close">Nice!</button></div></div>
 </div>
-<script src="../assets/progress-data.js?v=4eb25905c1"></script>
-<script src="../assets/app.js?v=4eb25905c1"></script>
+<script src="../assets/progress-data.js?v=38118e1d47"></script>
+<script src="../assets/app.js?v=38118e1d47"></script>
 </body>
 </html>

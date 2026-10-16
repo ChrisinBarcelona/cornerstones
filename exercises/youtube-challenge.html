@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>YouTube Challenge · Cornerstones</title>
-<meta name="description" content="Recreate the YouTube app screen by screen in Figma: by hand first, then rebuilt with Auto Layout and components.">
+<title>YouTube Replica Challenge · Cornerstones</title>
+<meta name="description" content="Trace real YouTube screens on phone and desktop, from search to the watch page: by hand first, then with Auto Layout and components.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2238%2040%20739%20739%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M221%2090H590L777%20409H38Z%22%20fill%3D%22%23004ecd%22/%3E%3Cpath%20d%3D%22M38%20409H777L590%20728H221Z%22%20fill%3D%22%230062ff%22/%3E%3Cpath%20d%3D%22M374%20254H688L777%20409H286Z%22%20fill%3D%22%23002b71%22/%3E%3Cpath%20d%3D%22M286%20409H777L688%20564H374Z%22%20fill%3D%22%23003ea2%22/%3E%3C/svg%3E">
 <script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=4eb25905c1">
-<link rel="stylesheet" href="../assets/theme.css?v=4eb25905c1">
+<link rel="stylesheet" href="../assets/style.css?v=38118e1d47">
+<link rel="stylesheet" href="../assets/theme.css?v=38118e1d47">
 </head>
 <body class="t-exercises">
 <header class="nav">
@@ -32,32 +32,54 @@
 
 <main class="lecture track-exercises" data-key="exercises/youtube-challenge">
   <div class="wrap">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="../exercises.html">Exercises</a> <span class="sep">/</span> <a href="../exercises.html#category=Replica Challenges">Replica Challenges</a> <span class="sep">/</span> <span>YouTube Challenge</span></nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../exercises.html">Exercises</a> <span class="sep">/</span> <a href="../exercises.html#category=Replica Challenges">Replica Challenges</a> <span class="sep">/</span> <span>YouTube Replica Challenge</span></nav>
     <header class="lecture-head">
       <div class="eyebrow">Exercise 16 · Replica Challenges</div>
-      <div class="title-row"><h1>YouTube Challenge</h1><button type="button" class="complete-btn head-complete" data-complete="exercises/youtube-challenge" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button></div>
-      <p class="lede">Recreate the YouTube app screen by screen in Figma: by hand first, then rebuilt with Auto Layout and components.</p>
-      <div class="meta"><span>Multi-session project</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>2 min read</span></div>
+      <div class="title-row"><h1>YouTube Replica Challenge</h1><button type="button" class="complete-btn head-complete" data-complete="exercises/youtube-challenge" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button></div>
+      <p class="lede">Trace real YouTube screens on phone and desktop, from search to the watch page: by hand first, then with Auto Layout and components.</p>
+      <div class="meta"><span>Multi-session project</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>4 min read</span></div>
     </header>
     <div class="lecture-grid">
-      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl3"><a href="#the-journey-ahead-manual-replication-step-1">The Journey Ahead: Manual Replication (Step 1)</a></li><li class="lvl3"><a href="#elevating-your-skills-with-auto-layout-step-2">Elevating Your Skills with Auto Layout (Step 2)</a></li><li class="lvl3"><a href="#conclusion">Conclusion</a></li></ol></div><div class="rail-block"><div class="rail-label">Replica Challenges</div><ol class="toc family"><li><a href="glovo-replica-challenge.html">Glovo Replica Challenge</a></li><li><a href="youtube-challenge.html" aria-current=page>YouTube Challenge</a></li><li><a href="airbnb-replica-challenge.html">Airbnb Replica Challenge</a></li><li><a href="balenciaga-replica-challenge.html">Balenciaga Replica Challenge</a></li></ol></div></div></div></aside>
+      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#the-screens">The Screens</a></li><li class="lvl3"><a href="#1-search-results-phone">1. Search results (phone)</a></li><li class="lvl3"><a href="#2-watch-page-phone-stitched">2. Watch page (phone, stitched)</a></li><li class="lvl3"><a href="#3-home-desktop">3. Home (desktop)</a></li><li class="lvl3"><a href="#4-watch-page-desktop">4. Watch page (desktop)</a></li><li class="lvl2"><a href="#the-journey-ahead-manual-replication-step-1">The Journey Ahead: Manual Replication (Step 1)</a></li><li class="lvl2"><a href="#elevating-your-skills-with-auto-layout-step-2">Elevating Your Skills with Auto Layout (Step 2)</a></li><li class="lvl2"><a href="#conclusion">Conclusion</a></li></ol></div><div class="rail-block"><div class="rail-label">Replica Challenges</div><ol class="toc family"><li><a href="glovo-replica-challenge.html">Glovo Replica Challenge</a></li><li><a href="youtube-challenge.html" aria-current=page>YouTube Replica Challenge</a></li><li><a href="airbnb-replica-challenge.html">Airbnb Replica Challenge</a></li><li><a href="balenciaga-replica-challenge.html">Balenciaga Replica Challenge</a></li></ol></div></div></div></aside>
       <article class="prose">
-<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl3"><a href="#the-journey-ahead-manual-replication-step-1">The Journey Ahead: Manual Replication (Step 1)</a></li><li class="lvl3"><a href="#elevating-your-skills-with-auto-layout-step-2">Elevating Your Skills with Auto Layout (Step 2)</a></li><li class="lvl3"><a href="#conclusion">Conclusion</a></li></ol></details>
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#the-screens">The Screens</a></li><li class="lvl3"><a href="#1-search-results-phone">1. Search results (phone)</a></li><li class="lvl3"><a href="#2-watch-page-phone-stitched">2. Watch page (phone, stitched)</a></li><li class="lvl3"><a href="#3-home-desktop">3. Home (desktop)</a></li><li class="lvl3"><a href="#4-watch-page-desktop">4. Watch page (desktop)</a></li><li class="lvl2"><a href="#the-journey-ahead-manual-replication-step-1">The Journey Ahead: Manual Replication (Step 1)</a></li><li class="lvl2"><a href="#elevating-your-skills-with-auto-layout-step-2">Elevating Your Skills with Auto Layout (Step 2)</a></li><li class="lvl2"><a href="#conclusion">Conclusion</a></li></ol></details>
 <div class="callout">
-<p><span class="callout-icon">📝</span>Welcome to the YouTube Replica Challenge! Your Destiny Awaits you!</p>
+<p><span class="callout-icon">📝</span>Welcome to the YouTube Replica Challenge! Your destiny awaits you!</p>
 </div>
 <div class="callout">
-<p><span class="callout-icon">🧠</span>This is a powerful challenge that gets you used to micro-detailing.</p>
+<p><span class="callout-icon">🧠</span>This is a powerful challenge that gets you used to micro-detailing: thumbnails, metadata lines and a lot of tiny icons.</p>
 </div>
 <div class="callout">
 <p><span class="callout-icon">🔥</span>Some of this will hurt and feel repetitive but like learning scales on a musical instrument, you must become fluent.</p>
 </div>
 <div class="callout">
-<p><span class="callout-icon">♻️</span>Recycle elements often.</p>
+<p><span class="callout-icon">♻️</span>Recycle elements often. One video card, built well, becomes the whole feed.</p>
 </div>
 <p><strong>Lesson Title: The UI Replica Project:</strong></p>
-<p><strong>This exercise is to be completed in tandem with your UX curriculum. Please take you time and copy as many screen as you can until you are competent with Figma tools.</strong> </p>
-<h3 id="the-journey-ahead-manual-replication-step-1">The Journey Ahead: Manual Replication (Step 1)</h3>
+<p><strong>This exercise is to be completed in tandem with your UX curriculum. Please take your time and copy as many screens as you can until you are competent with Figma tools.</strong></p>
+<p><em>Unlocking Figma Mastery through Perfect Replication</em></p>
+<p>Welcome to the "UI Replica Project," a detailed creative lesson designed to help you gain valuable experience with Figma. In this exercise you replicate <strong>YouTube</strong> on a phone and on desktop. YouTube is a lesson in density: hundreds of pieces of information on one screen, kept readable by a strict grid, consistent cards and very careful type.</p>
+<p>As the saying goes, "practice makes perfect," and this lesson exemplifies that principle. The key objective here is not just to create a replica but to create a perfect replica.</p>
+<h2 id="the-screens">The Screens</h2>
+<p>Four real YouTube screens, two on a phone and two on desktop. The phone watch page is captured top to bottom as one tall image.</p>
+<p><strong>How to trace:</strong>
+- <strong>Phone screens:</strong> create an <strong>iPhone 16</strong> frame (393 × 852); for the tall screen, make the frame as tall as the image. Drag the screenshot in and scale it to <strong>390 px wide</strong>.
+- <strong>Desktop screens:</strong> create a <strong>Desktop</strong> frame <strong>1440 px wide</strong> and drop the screenshot in at 100%.
+- Lock the screenshot, lower its opacity to about 40% and build on top of it. Hide it when you're done and compare.</p>
+<h3 id="1-search-results-phone">1. Search results (phone)</h3>
+<p>The search bar with filters and voice input, video cards with a duration badge, channel avatar, title and metadata line, and the bottom tab bar.</p>
+<figure class="media"><img alt="YouTube search results on a phone" src="../content/exercises/youtube-challenge/1-search-mobile.webp" loading="lazy" decoding="async"></figure>
+<h3 id="2-watch-page-phone-stitched">2. Watch page (phone, stitched)</h3>
+<p>The player, title, channel row with Subscribe, the action buttons (like, dislike, share, save), comments and the list of up-next videos.</p>
+<figure class="media tall"><div class="tall-frame" tabindex="0"><img alt="YouTube watch page on a phone, top to bottom" src="../content/exercises/youtube-challenge/2-watch-mobile.tall.webp" loading="lazy" decoding="async"></div><figcaption>Scroll inside the screen to see all of it</figcaption></figure>
+<h3 id="3-home-desktop">3. Home (desktop)</h3>
+<p>The top bar with search, the left navigation rail, category chips and a grid of video cards.</p>
+<figure class="media"><img alt="YouTube home page on desktop" src="../content/exercises/youtube-challenge/3-home-desktop.webp" loading="lazy" decoding="async"></figure>
+<h3 id="4-watch-page-desktop">4. Watch page (desktop)</h3>
+<p>The large player with its controls, the title and channel row, the description box and the up-next column on the right.</p>
+<figure class="media"><img alt="YouTube watch page on desktop" src="../content/exercises/youtube-challenge/4-watch-desktop.webp" loading="lazy" decoding="async"></figure>
+<p><em>Screenshots of youtube.com, signed out, used for teaching only.</em></p>
+<h2 id="the-journey-ahead-manual-replication-step-1">The Journey Ahead: Manual Replication (Step 1)</h2>
 <p><strong>Step 1:</strong> <strong>Basic Replication</strong></p>
 <ul>
 <li>Start <strong>without</strong> utilizing Figma's auto layout or components.</li>
@@ -75,15 +97,15 @@
 <p><strong>Step 3:</strong> <strong>Typography and Color</strong></p>
 <ul>
 <li>Focus on replicating the typography and color schemes accurately.</li>
-<li>Match font sizes, styles, and colors precisely.</li>
+<li>Match font sizes, styles, and colors precisely. Notice how few colours YouTube uses: almost everything is black, grey and white, with red only for the logo and the progress bar.</li>
 <li>Ensure that text and graphics align perfectly.</li>
 </ul>
 <p><strong>Step 4:</strong> <strong>Responsive Design</strong></p>
 <ul>
-<li>Explore how the original design responds to various screen sizes.</li>
-<li>Make your manually replicated screens responsive by adjusting layouts accordingly.</li>
+<li>Compare the phone and desktop versions of the same page. What moves, what disappears, what grows?</li>
+<li>Make your replica work at both sizes, using the same components.</li>
 </ul>
-<h3 id="elevating-your-skills-with-auto-layout-step-2">Elevating Your Skills with Auto Layout (Step 2)</h3>
+<h2 id="elevating-your-skills-with-auto-layout-step-2">Elevating Your Skills with Auto Layout (Step 2)</h2>
 <p><strong>Step 5:</strong> <strong>Introduction to Auto Layout</strong></p>
 <ul>
 <li>Learn about Figma's Auto Layout feature and its benefits.</li>
@@ -97,18 +119,18 @@
 <p><strong>Step 7:</strong> <strong>Auto Layout Best Practices</strong></p>
 <ul>
 <li>Implement best practices for using Auto Layout effectively.</li>
-<li>Experiment with nested Auto Layout frames for complex designs.</li>
+<li>Experiment with nested Auto Layout frames for complex designs: the video card (thumbnail, then avatar beside a title and metadata stack) is perfect practice. Build it once as a component with a vertical (phone) and horizontal (up next) variant.</li>
 </ul>
-<p>Navigate here: </p>
-<figure class="video figma"><iframe src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FPve52w8J7RiM5jOnvF1Pth%2FGlovo-Challenge%3Fnode-id%3D197-63%26t%3DZrKw8SoteZmlv93V-0" title="Figma file" loading="lazy" allowfullscreen></iframe></figure><a class="embed-link" href="https://www.figma.com/design/Pve52w8J7RiM5jOnvF1Pth/Glovo-Challenge?node-id=197-63&amp;t=ZrKw8SoteZmlv93V-0" target="_blank" rel="noopener">Open in Figma <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></svg></a>
-<h3 id="conclusion">Conclusion</h3>
-<p>By following these structured steps, you'll have perfected the art of replicating UI screens in Figma, honed your attention to detail, and harnessed the power of Auto Layout. Remember, practice is the key to mastery, and this lesson provides you with the perfect opportunity to apply this principle. So, let's dive in together, where precision and Figma prowess are the ultimate goals. Good Luck 🍀 !</p>
-<p>Glovo Font Available Here: </p>
+<h2 id="conclusion">Conclusion</h2>
+<p>By following these structured steps, you'll have perfected the art of replicating UI screens in Figma, honed your attention to detail, and harnessed the power of Auto Layout. Remember, practice is the key to mastery, and this lesson provides you with the perfect opportunity to apply this principle. Good Luck 🍀 !</p>
+<p>YouTube font available here:</p>
 <p><a href="https://fonts.google.com/specimen/Roboto">Roboto - Google Fonts</a></p>
-<p>Images Available Here: </p>
+<p>Images available here:</p>
 <p><a href="https://unsplash.com">Beautiful Free Images &amp; Pictures | Unsplash</a></p>
-<p>Logo Available Here: </p>
-<figure class="media"><img alt="" src="../content/exercises/youtube-challenge/YouTube_Logo_2017.svg.png" loading="lazy" decoding="async"></figure>
+<p>Icons available here:</p>
+<p><a href="https://fonts.google.com/icons">Material Symbols - Google Fonts</a></p>
+<p>Logo available here:</p>
+<figure class="media"><img alt="YouTube logo" src="../content/exercises/youtube-challenge/YouTube_Logo_2017.svg.png" loading="lazy" decoding="async"></figure>
 <section class="complete" data-key="exercises/youtube-challenge">
   <div class="complete-text"><b>Finished this exercise?</b></div>
   <button type="button" class="complete-btn" data-complete="exercises/youtube-challenge" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
@@ -127,7 +149,7 @@
   <div class="celebrate-actions"><a class="login-submit celebrate-link" href="../certificate.html" hidden>See your certificate</a>
   <button type="button" class="login-submit" id="celebrate-close">Nice!</button></div></div>
 </div>
-<script src="../assets/progress-data.js?v=4eb25905c1"></script>
-<script src="../assets/app.js?v=4eb25905c1"></script>
+<script src="../assets/progress-data.js?v=38118e1d47"></script>
+<script src="../assets/app.js?v=38118e1d47"></script>
 </body>
 </html>

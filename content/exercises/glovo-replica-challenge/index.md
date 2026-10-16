@@ -1,7 +1,7 @@
 # Glovo Replica Challenge
 
 <aside>
-📝 Welcome to the Glovo Replica Challenge! Your Destiny Awaits you!
+📝 Welcome to the Glovo Replica Challenge! Your destiny awaits you!
 
 </aside>
 
@@ -16,21 +16,36 @@
 </aside>
 
 <aside>
-♻️ Recycle elements often.
+♻️ Recycle elements often. One restaurant card, built well, becomes every restaurant card.
 
 </aside>
 
 **Lesson Title: The UI Replica Project:**
 
-**This exercise is to be completed in tandem with your UX curriculum. Please take you time and copy as many screen as you can until you are competent with Figma tools.** 
+**This exercise is to be completed in tandem with your UX curriculum. Please take your time and copy as many screens as you can until you are competent with Figma tools.**
 
 *Unlocking Figma Mastery through Perfect Replication*
 
-Welcome to the "UI Replica Project," a detailed creative lesson designed to help you gain valuable experience with Figma, one of the industry's leading design tools. In this engaging exercise, you will embark on a journey to replicate various screens with meticulous precision. This lesson is crafted to sharpen your UI design skills, encouraging you to pay close attention to detail while fostering an intuitive understanding of Figma's capabilities.
+Welcome to the "UI Replica Project," a detailed creative lesson designed to help you gain valuable experience with Figma, one of the industry's leading design tools. In this exercise you replicate the **Glovo** food-delivery app, screen by screen, with meticulous precision. Glovo is a Barcelona favourite and a great teacher: bright yellow, rounded shapes, playful category bubbles and a clear ordering flow.
 
-As the saying goes, "practice makes perfect," and this lesson exemplifies that principle. Through practice, you will not only become proficient with Figma but also refine your eye for detail and layout. The key objective here is not just to create a replica but to create a perfect replica.
+As the saying goes, "practice makes perfect," and this lesson exemplifies that principle. The key objective here is not just to create a replica but to create a perfect replica.
 
-### The Journey Ahead: Manual Replication (Step 1)
+## The Screens
+
+The reference screens live in the Cornerstone Figma file below, about 25 real Glovo screens in the order you meet them when you order food. **Pick a screen and get going**, then work through the rest.
+
+1. **Splash and home:** the yellow splash screen and the home screen with its circle of category bubbles.
+2. **Account and Prime:** the account menu and the purple Glovo Prime subscription screens.
+3. **Restaurants:** restaurant lists ("Because you ordered…") and a restaurant's own page with its menu.
+4. **Product:** a dish's detail page with options and the add-to-basket button.
+5. **Checkout:** the upsell ("Do you want anything else?") and the order summary.
+6. **Rate your order:** the rating screens after delivery.
+
+**How to trace:** in Figma, duplicate the file to your drafts. Next to each reference screen, create an **iPhone 16** frame (393 × 852), place the screen beside it at the same width and rebuild it on top. Lower the reference's opacity to about 40% to check your work. The file also holds the Glovo buttons and components to match.
+
+[https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FSCeC2LZ5gDAcPd5HoXuc1p%2FCornerstone--Draft-%3Fnode-id%3D7-2%26p%3Df%26t%3DiTID60LXjZQi0fd1-0](https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FSCeC2LZ5gDAcPd5HoXuc1p%2FCornerstone--Draft-%3Fnode-id%3D7-2%26p%3Df%26t%3DiTID60LXjZQi0fd1-0)
+
+## The Journey Ahead: Manual Replication (Step 1)
 
 **Step 1:** **Basic Replication**
 
@@ -57,7 +72,7 @@ As the saying goes, "practice makes perfect," and this lesson exemplifies that p
 - Explore how the original design responds to various screen sizes.
 - Make your manually replicated screens responsive by adjusting layouts accordingly.
 
-### Elevating Your Skills with Auto Layout (Step 2)
+## Elevating Your Skills with Auto Layout (Step 2)
 
 **Step 5:** **Introduction to Auto Layout**
 
@@ -72,24 +87,24 @@ As the saying goes, "practice makes perfect," and this lesson exemplifies that p
 **Step 7:** **Auto Layout Best Practices**
 
 - Implement best practices for using Auto Layout effectively.
-- Experiment with nested Auto Layout frames for complex designs.
+- Experiment with nested Auto Layout frames for complex designs: the restaurant card (image, then a text stack with rating and delivery time) and the basket bar are perfect practice.
 
-Navigate here: 
+## Conclusion
 
-[https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FSCeC2LZ5gDAcPd5HoXuc1p%2FCornerstone--Draft-%3Fnode-id%3D7-2%26p%3Df%26t%3DiTID60LXjZQi0fd1-0](https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FSCeC2LZ5gDAcPd5HoXuc1p%2FCornerstone--Draft-%3Fnode-id%3D7-2%26p%3Df%26t%3DiTID60LXjZQi0fd1-0)
+By following these structured steps, you'll have perfected the art of replicating UI screens in Figma, honed your attention to detail, and harnessed the power of Auto Layout. Remember, practice is the key to mastery, and this lesson provides you with the perfect opportunity to apply this principle. Good Luck 🍀 !
 
-### Conclusion
-
-By following these structured steps, you'll have perfected the art of replicating UI screens in Figma, honed your attention to detail, and harnessed the power of Auto Layout. Remember, practice is the key to mastery, and this lesson provides you with the perfect opportunity to apply this principle. So, let's dive in together, where precision and Figma prowess are the ultimate goals. Good Luck 🍀 !
-
-Glovo Font Available Here: 
+Glovo font available here:
 
 [Montserrat - Google Fonts](https://fonts.google.com/specimen/Montserrat)
 
-Images Available Here: 
+Images available here:
 
-[Enjoy these Food Png Images for free](https://www.freepik.com/free-photos-vectors/food-png)
+[Free food PNG images - Freepik](https://www.freepik.com/free-photos-vectors/food-png)
 
-Logo Available Here: 
+Icons available here:
 
-![pngwing.com.png](pngwing.com.png)
+[Phosphor Icons](https://phosphoricons.com)
+
+Logo available here:
+
+![Glovo logo](pngwing.com.png)

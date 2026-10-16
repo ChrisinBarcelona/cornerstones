@@ -68,8 +68,8 @@
   "exercises/balenciaga-replica-challenge": "Trace Balenciaga's Le City pages on phone and desktop: a minimal, responsive luxury e-commerce site, by hand first, then with Auto Layout and components.",
   "exercises/airbnb-replica-challenge": "Trace seven real Airbnb screens in Figma, from the first notification prompt to Confirm and pay: by hand first, then with Auto Layout and components.",
   "exercises/glovo-replica-challenge": "Recreate the Glovo app screen by screen in Figma: by hand first, then rebuilt with Auto Layout and components.",
-  "exercises/youtube-challenge": "Recreate the YouTube app screen by screen in Figma: by hand first, then rebuilt with Auto Layout and components.",
-  "exercises/stage-play": "As a team, build the Stage Play app in Figma from a component schema, using master components, nesting, auto layout and properties.",
+  "exercises/youtube-challenge": "Trace real YouTube screens on phone and desktop, from search to the watch page: by hand first, then with Auto Layout and components.",
+  "exercises/stage-play": "As a team, build the Stage Play app from a schema: a design system, master components, eight screens and a clickable flow in five days.",
 
   "methods/lean-ux-canvas": "Frame the problem as a team: the business outcome, the users and the value they'll get.",
   "methods/long-term-goal": "Agree the best-case future for your users, so every sprint decision has a direction.",

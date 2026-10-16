@@ -1,9 +1,6 @@
 {
  "_note": "Pages still waiting to be converted to their template (see TEMPLATES in tools/build.py). Remove a page once it complies; the build says when.",
  "pages": [
-  "exercises/glovo-replica-challenge",
-  "exercises/stage-play",
-  "exercises/youtube-challenge",
   "figma/beginners-guide-auto-layout",
   "figma/beginners-guide-to-8-point-grid-system",
   "figma/beginners-guide-to-components",
