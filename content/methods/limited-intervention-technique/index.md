@@ -1,44 +1,82 @@
 # Limited Intervention Technique
 
-Throughout the process of discovery, we have spent some time trying to identify and understand the user and the problem space and from a test angle, we should become aware of the specific criteria which we want to know.
+# 🪜 Stage: Validation
 
-Subjects often ask about the criteria you are measuring but a word of caution. When we tell them, the problem is, they will often try their best to give it to you and in a sense, you have already introduced a type of bias.  
+Say as little as possible, so what you hear is the participant's, not yours.
 
-You can of course tell them for instance, we are looking to see how you feel about the over all user experience or we are trying to find out if the prototype is intuitive enough but I would avoid being too specific.  
+# 👋 Context
 
-With a limited interventional or non directive interview techniques, we avoid specifics. We don’t want to tell people what we are looking for exactly. We are **not trying to intervene** in the interview. We should be able to see this of our own accord.  
+Throughout discovery you've learned a lot about the problem, so you know exactly what you want to find out in a test. That is the danger. Participants often ask what you're looking for, and once you tell them, they try their best to give it to you. You have introduced bias.
 
-Because phrases like, 
+A question like *"What did you think of the colour?"* is a type of bias: if you hadn't mentioned colour, the participant might never have commented on it. Now you've put colour on the agenda.
 
-*“what did you think of the colour?”* 
+The **limited intervention** (or non-directive) technique means we don't intervene. We let the session shape itself, and we notice what the participant raises on their own, which is usually the more truthful data. The trade-off: if they don't raise something, you don't learn about it. That's why you follow up on what *they* bring up, rather than steering them towards what *you* want.
 
-Is actually a type of bias. You see, if you didn’t bring up the issue of colour, the subject wouldn’t never have commented on it and in fact you have now demanded that colour is on the agenda. Non directive technique means that you allow the interview to shape itself into itself own realty and often this reveals the more truthful data. 
+It's like a game of Cluedo: we're not allowed to give the answer, only a clue. Good task instructions are clues; it's no fun, and not useful, if you're told where to go and what to do.
 
-With a non directive method, the optimal data, is subject raises issues conceived by themselves as oppose to those which we think they should be revealing issues - the trade off here is that - if they don’t reveal anything at all, on the surface, we don’t have any data. In brief try to 
+# 🎯 Goal / Learning Outcome
 
-- Let the interview environment become its own reality tell them what you are looking out for but intervene on a limited basis intervention.
+- Recognise when a question or comment introduces bias.
+- Answer participants' questions with open, neutral responses.
+- Follow up on what participants raise instead of steering them.
+- Know when it's acceptable to step in.
 
-If and / or when a subject says something which touches upon the subject you are researching. Rather than steer, introduce a follow up question.
+# 🛠️ Main Exercise
 
-*“Maybe, you could expand on that.”*
+1. **Spot the bias (10 min).** In pairs, go through your test script and mark every question that names a feature, suggests an answer or can be answered with yes or no.
+2. **Rewrite them neutrally (10 min).** For example:
+    - *"Did you like the map?"* → *"What did you think of this screen?"*
+    - *"Was that easy?"* → *"How was that?"*
+3. **Learn the deflections.** Memorise neutral replies for when you're cornered:
+    - *"How do you think you might proceed?"*
+    - *"What would you expect to happen?"*
+    - *"Maybe you could expand on that?"*
+4. **Role-play (15 min).** One person plays a participant who keeps asking for help; the other practises responding without giving the answer. Swap.
+5. **Agree your rescue rule.** Decide in advance when you will step in: for example, after two minutes stuck, or if the participant is clearly distressed. Then note that the task failed.
 
-Because as a facilitator, you should never try to drive an interview towards a conclusion.
+# ⏱️ Estimated Duration
 
-- Do not have any expectations.
-- If the subject corners you, give an open ended response;
+- ~40 min
 
-*“How do you think you might proceed?”*
+# 🏞️ Template
 
-It’s like a game of Cluedo where we are not aloud to give the answer. We are only aloud to give a clue. 
+| Leading (avoid) | Neutral (use) |
+| --- | --- |
+| "Did you see the button?" | "What are you looking for?" |
+| "Was that confusing?" | "How was that?" |
+| "Do you like the colours?" | "What's your impression of this page?" |
+| "Click on Bookings." | "How would you check your booking?" |
 
-*Good task instructions are like clues in a board game. it’s no fun (and not useful) if you’re told where to go and what to do.*
+# ⚡ Tips
 
-If you answer a direct question from a subject during a usability session or interview, you have probably fallen victim to a type of bias known as, as mentioned researcher bias.
+- Have no expectations. Let the session become its own reality.
+- Explain the general aim if asked ("we want to see if it feels intuitive"), but never the specific thing you're measuring.
+- When they mention something you care about, don't pounce: ask them to expand.
+- If you answer a direct question, note it: that task's result is no longer clean.
+- It is fine to help someone who is upset or completely stuck. People come first.
 
-- Stay Neutral
+# 🎥 Media
 
-![](https://images.unsplash.com/photo-1611996575749-79a3a250f948?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb)
+[https://www.youtube.com/watch?v=tXJqAYDbRzI](https://www.youtube.com/watch?v=tXJqAYDbRzI)
 
-*Good task instructions are like clues in a board game. it’s no fun (and not useful) if you’re told where to go and what to do.*
+[https://www.youtube.com/watch?v=LpV3tMy_WZ0](https://www.youtube.com/watch?v=LpV3tMy_WZ0)
 
-If it is rationallly appropriate to answer a question, you can but be aware about introducing your own bias into the session, which can impact the objectivity and validity of the data you collect.
+# 📚 Resources
+
+[Talking with Participants During a Usability Test – Nielsen Norman Group](https://www.nngroup.com/articles/talking-to-users/)
+
+[Open-Ended vs. Closed Questions in User Research – Nielsen Norman Group](https://www.nngroup.com/articles/open-ended-questions/)
+
+# ✅ Checklist
+
+☐ Marked and rewrote the leading questions in your script
+
+☐ Learned three neutral deflections
+
+☐ Practised with a participant who asks for help
+
+☐ Agreed when you will step in
+
+# 📝 Summary
+
+The **limited intervention technique** keeps your own ideas out of the session. By staying neutral, answering questions with questions and following up only on what participants raise themselves, you collect feedback that is genuinely theirs.

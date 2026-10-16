@@ -10,10 +10,6 @@ Now you have completed your high level user journey, let’s jump into the low l
 
 The best way to think about making a task flow is just imagine that your mom called you and asked you to help her download instagram onto her phone. We would just give her the steps, making things as straight forward as possible for her. Nothing more, nothing less. 
 
-# 🏞️ Template
-
-Unlock phone 👉  Open App Store 👉  Tap search bar 👉  Type “Instagram” 👉  Select Instagram from results 👉  Tap “Get” 👉  Wait for download 👉  Tap “Open” 👉  Log in 👉  **End**
-
 # 🎯 Goal / Learning Outcome
 
 By the end of this activity you should have, students will have created a clear task flow diagram for their main use case.
@@ -36,6 +32,10 @@ By the end of this activity you should have, students will have created a clear 
 - Avoid too much detail (keep it readable).
 - Do the minimum steps
 - Test your flow by walking through it with a friend to see if it is straight forward.
+
+# 🏞️ Template
+
+Unlock phone 👉  Open App Store 👉  Tap search bar 👉  Type “Instagram” 👉  Select Instagram from results 👉  Tap “Get” 👉  Wait for download 👉  Tap “Open” 👉  Log in 👉  **End**
 
 # ⚡ Tips
 

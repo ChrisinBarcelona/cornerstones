@@ -62,14 +62,18 @@ The same principles apply, only more so: spatial gestures are even less visible,
 - **Pinch to zoom** on maps and photos.
 - **Long press** an app icon for quick actions.
 
-## Exercise: a gesture audit (15 minutes)
+## Why it matters for UX
+
+Every gesture you add is a promise that people will discover it, remember it and perform it. Get it right and the interface feels effortless and physical; get it wrong and features stay hidden, mistakes go unnoticed and some users are locked out. Gestures sit right at the meeting point of usability, accessibility and delight.
+
+## Try it: a gesture audit (15 minutes)
 
 1. Choose an app you use every day and list every gesture it supports.
 2. For each one, ask: is there a visible signifier? Is there a visible alternative? What happens if I do it by mistake?
 3. Find one gesture you never knew existed. How could the design have told you about it?
 4. In your current project, list the gestures you plan to use, their visible alternatives and the feedback for each.
 
-## 🎥 Media
+## Media
 
 [https://www.youtube.com/watch?v=bTrxDPG6WP4](https://www.youtube.com/watch?v=bTrxDPG6WP4)
 
@@ -77,7 +81,7 @@ The same principles apply, only more so: spatial gestures are even less visible,
 
 [https://www.youtube.com/watch?v=_Kc57XAE_V4](https://www.youtube.com/watch?v=_Kc57XAE_V4)
 
-## 📚 Resources
+## Resources
 
 [Gestures – Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/gestures)
 
@@ -85,6 +89,8 @@ The same principles apply, only more so: spatial gestures are even less visible,
 
 [Contextual Menus – Nielsen Norman Group](https://www.nngroup.com/articles/contextual-menus/)
 
-## Summary
+## Key takeaways
 
-Gestures make interfaces feel direct and physical, but they are invisible, so they must be learned and remembered. Use the standard gestures for their standard meanings, give every gesture a visible alternative and a clear signifier, respond instantly, make it easy to undo, size targets for real fingers, and remember that in spatial computing all of this matters even more.
+- Gestures feel direct, but they are invisible: people have to discover and remember them.
+- Use standard gestures for their standard meanings, and give every gesture a visible alternative, a signifier, instant feedback and an undo.
+- Size targets for real fingers (44 pt / 48 dp) and design for thumbs; in spatial computing, all of this matters even more.

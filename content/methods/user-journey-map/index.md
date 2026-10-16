@@ -1,6 +1,6 @@
 # User Journey Map
 
-# 🪜 **Stage: Define**
+# 🪜 Stage: Define
 
 Knowing the journey of the user.
 
@@ -8,13 +8,13 @@ Disclaimer:
 
 [https://www.youtube.com/watch?v=sSZEVLG4Vp0](https://www.youtube.com/watch?v=sSZEVLG4Vp0)
 
-# 👋 **Context**
+# 👋 Context
 
 Let commit to a very common formative research method known as the journey map. A journey map is a visual narrative that outlines how a user goes through a process to accomplish a goal. It paints a clear, step-by-step story of their experience—including what they do, think, and feel—as they interact with a product, service, or system. Whilst your goal should be your main user goal, you can create journey maps for a number of functions. Journey maps can be used as both a forecast model and a benchmark model.  
 
 By weaving together actions, thoughts, emotions, and pain points through a visual chart, we create a **shared perspective** that invites empathy, clarity, and a structure to our product design.
 
-# 🎯 **Goal**
+# 🎯 Goal / Learning Outcome
 
 By the end of this activity you should:
 
@@ -23,7 +23,7 @@ By the end of this activity you should:
 - Practice **defining** a scenario, breaking the journey into phases, capturing actions and emotions, and identifying opportunities for improvement.
 - Develop empathy for customers and learn how to translate research into design insights
 
-# 🛠️ **Main Exercise**
+# 🛠️ Main Exercise
 
 1. **Watch the Tutorial**
     - Watch videos in this page.
@@ -36,9 +36,16 @@ By the end of this activity you should:
         - Pain points (where things go wrong)
         - Opportunities for improvement
 
-# ⏱️ **Estimated Duration**
+# ⏱️ Estimated Duration
 
 - 55 minutes
+
+# ⚡ Tips
+
+- Keep your journey map simple — 5 stages is enough.
+- Use emojis or icons to represent user emotions.
+- Think from the **user’s perspective**, not your own.
+- Don’t worry about “perfect”—journey maps are iterative.
 
 # 🎥 Media
 
@@ -53,13 +60,6 @@ By the end of this activity you should:
 [Journey Mapping 101](https://www.nngroup.com/articles/journey-mapping-101/)
 
 [What is a Customer Journey Map? + How To Create One | Figma](https://www.figma.com/resource-library/what-is-a-customer-journey-map/)
-
-# ⚡ Tips
-
-- Keep your journey map simple — 5 stages is enough.
-- Use emojis or icons to represent user emotions.
-- Think from the **user’s perspective**, not your own.
-- Don’t worry about “perfect”—journey maps are iterative.
 
 # ✅ Checklist
 

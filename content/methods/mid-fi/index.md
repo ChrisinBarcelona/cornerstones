@@ -1,6 +1,6 @@
 # Medium Fidelity (Mid-Fi)
 
-# 🪜 Stage:  Ideation
+# 🪜 Stage: Ideation
 
 From paper wireframes to medium-fidelity wireframes.
 
@@ -55,7 +55,7 @@ By the end of this activity, students will have:
 - Keep everything **simple and greyscale**, so feedback is about structure, not style.
 - Use **real words** wherever you can; use consistent placeholders (e.g. “Image”) only for images.
 
-# ✨ **AI Assist**
+# ✨ AI Assist
 
 You can upload your paper wireframes and ask an AI tool: ‘Make medium-fidelity screens’ (in beta). Then rebuild what works using the Mid-Fi kit, so the result is consistent and editable.
 

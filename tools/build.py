@@ -1334,9 +1334,93 @@ def write_redirects(data):
             f'<p>This page has moved to <a href="{target}">{target}</a>.</p>\n', encoding="utf-8")
 
 
+
+# ---- Page templates -------------------------------------------------------------------------------
+# One format per content type, so students meet the same structure on every page of a kind. Each template
+# lists its section headings in order ("keys" match the start of a heading, ignoring emoji and markup);
+# "optional" sections may be left out but, when present, sit in their place. check_templates() fails the
+# build when a page breaks its template, except pages listed in content/template-pending.json, which are
+# still waiting to be converted. That list may only shrink: the build tells you when a pending page passes.
+TEMPLATES = {
+    "Method": {"level": 1, "keys": ["stage", "context", "goal / learning outcome", "main exercise", "estimated duration",
+                                    "extra notes", "template", "tips", "ai assist", "media", "resources", "checklist", "summary"],
+               "optional": ["extra notes", "template", "ai assist"]},
+    "Sprint brief": {"level": 2, "keys": ["the brief", "the problem", "your challenge", "sprint goals", "scope", "deliverables",
+                                          "how the sprint runs", "constraints and tips", "success looks like"], "optional": []},
+    "Daily UI": {"level": 2, "keys": ["the brief", "deliverable", "must include", "nice to have", "inspiration", "time box",
+                                      "before you submit"], "optional": []},
+    "Replica challenge": {"level": 2, "keys": ["the screens", "the journey ahead", "elevating your skills", "conclusion"], "optional": []},
+    "Team project": {"level": 2, "keys": ["the brief", "team roles", "directives", "deliverables", "day-by-day plan", "schema",
+                                          "checklist", "assessment"], "optional": []},
+    "Lecture": {"level": 2, "keys": ["why it matters for ux", "try it", "media", "resources", "key takeaways"], "optional": []},
+    "Key figure": {"level": 2, "keys": ["who they are", "key contributions", "why it matters for ux"], "optional": []},
+    "Figma lesson": {"level": 2, "keys": ["what you'll build", "before you start", "well done"], "optional": []},
+}
+
+
+def page_template(track, page):
+    """Which template a page follows."""
+    cat = page.get("category") or ""
+    if track == "methods":
+        return "Method"
+    if track == "sprints":
+        return "Sprint brief"
+    if track == "exercises":
+        return {"Daily UI": "Daily UI", "Replica Challenges": "Replica challenge"}.get(cat, "Team project")
+    if track == "figma":
+        return "Figma lesson"
+    if page.get("parent") == "key-figures":
+        return "Key figure"
+    return "Lecture"
+
+
+def template_problems(name, text):
+    """What is missing or out of order on a page, compared with its template ([] if it complies)."""
+    tpl = TEMPLATES[name]
+    heads = []
+    for hashes, h in re.findall(r"^(#{1,3}) (.+)$", text, re.M)[1:]:
+        if len(hashes) > tpl["level"]:
+            continue
+        h = re.sub(r"[*_`~]", "", h)
+        heads.append(re.sub(r"^[^\w]+", "", h).strip(" :").lower())
+    found = []
+    for h in heads:
+        k = next((k for k in tpl["keys"] if h.startswith(k)), None)
+        if k and k not in found:
+            found.append(k)
+    problems = [f"missing '{k}'" for k in tpl["keys"] if k not in found and k not in tpl["optional"]]
+    order = [tpl["keys"].index(k) for k in found]
+    if order != sorted(order):
+        problems.append("sections out of order: " + ", ".join(found))
+    return problems
+
+
+def check_templates(data):
+    pending_file = CONTENT / "template-pending.json"
+    pending = set(json.loads(pending_file.read_text(encoding="utf-8"))["pages"]) if pending_file.exists() else set()
+    broken, now_pass, tally = [], [], {}
+    for track, d in data.items():
+        for p in d["every"]:
+            key, name = f"{track}/{p['slug']}", page_template(track, p)
+            problems = template_problems(name, p["text"])
+            ok, total = tally.get(name, (0, 0))
+            tally[name] = (ok + (not problems), total + 1)
+            if problems and key not in pending:
+                broken.append(f"  {key} ({name}): " + "; ".join(problems))
+            elif not problems and key in pending:
+                now_pass.append(key)
+    print("templates: " + ", ".join(f"{n} {ok}/{tot}" for n, (ok, tot) in tally.items()))
+    if now_pass:
+        print("templates: these pending pages now follow their template; remove them from content/template-pending.json:\n  "
+              + "\n  ".join(now_pass))
+    if broken:
+        raise SystemExit("Pages that break their template (fix them, or list them in content/template-pending.json):\n"
+                         + "\n".join(broken))
+
 def main():
     global ASSET_V
     data = load()
+    check_templates(data)
     write_progress_data(data)
     ASSET_V = hashlib.sha1(b"".join((ROOT / "assets" / f).read_bytes()
                                     for f in ("style.css", "theme.css", "app.js", "progress-data.js"))).hexdigest()[:10]

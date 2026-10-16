@@ -1,7 +1,6 @@
 # Design Iteration
 
 # 🪜 Stage: Validation
-
 # 👋 Context
 
 So now we’ve competed 5 **usability tests**, we’ll have a collection of notes, recordings, and patterns that reveal where users struggle or succeed. The next step is to turn those insights into **design changes**.
@@ -61,22 +60,12 @@ By the end of this activity, students will have **translated usability findings 
 3. **Tell the Story:**
     - Link the evidence (“3 out of 5 users missed the checkout button”) → to the decision (“We moved and relabeled it”).
 
----
 
-### **~~Step 4 – Plan for the Next Test~~**
-
-**~~Instructions:~~**
-
-1. **~~Integrate Changes into Prototype:~~**
-    - ~~Update your design with the new iteration.~~
-
-**~~Outcome:** A refined design backed by evidence, captured in before/after snapshots, and ready for the next round of user validation.~~
-
-# ⏱️ Duration
+# ⏱️ Estimated Duration
 
 - ~1 hour
 
-# 👉 **Extra Notes**
+# 👉 Extra Notes
 
 - DO NOT introduce these changes into your prototype
 - Link each change to a reoccurring theme, reoccurring statement or **pain point.**

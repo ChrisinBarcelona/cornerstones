@@ -1,14 +1,14 @@
 # User Persona
 
-# 🪜 **Stage: Define**
+# 🪜 Stage: Define
 
 Persona Creation 
 
-# 👋 **Context**
+# 👋 Context
 
 Students have gathered discovery data (surveys, interviews, research goals, problem statement). Now they will **translate insights into a humanised representation of their target users**. Personas help teams empathise and keep design decisions grounded in user reality.
 
-# 🎯 **Goal / Learning outcome**
+# 🎯 Goal / Learning Outcome
 
 By the end of this activity you should have:
 
@@ -16,7 +16,7 @@ By the end of this activity you should have:
 - Created a persona that reflects motivations, needs, frustrations, and goals
 - Practiced synthesising qualitative/quantitative data into a design piece
 
-# 🛠️ **Main Exercise**
+# 🛠️ Main Exercise
 
 1. **Cluster Insights** 
     - Review past interview/survey notes and problem statements.
@@ -34,22 +34,16 @@ By the end of this activity you should have:
 4. **Present Back**
     - Each team shares their persona with the class.
 
-# ⏱️ **Estimated Duration**
+# ⏱️ Estimated Duration
 
 - 55 minutes
 
-# 👉 **Extra Notes**
+# 👉 Extra Notes
 
 - Stress that personas are **not stereotypes** but **evidence-based composites**.
 - Encourage diversity of perspective, but ensure personas remain tied to research data (not guesses).
 
-# 📚 **Resources**
-
-- [User Persona Guide](https://www.nngroup.com/articles/persona/) (Nielsen Norman Group)
-- [User Persona Examples](https://xd.adobe.com/ideas/process/user-research/user-persona/)
-- Miro / MURAL persona templates (if digital)
-
-# 🏞️ **Template**
+# 🏞️ Template
 
 ![1600w-cDud_x79Dt4.webp](1600w-cDud_x79Dt4.webp)
 
@@ -73,13 +67,13 @@ In the above template example, we have:
 - **Favorite Brand** (set of brand-like icons shown visually)
 - Technology usage - Instagram or Tik Tok, iOS or Andriod
 
-# ⚡ **Tips**
+# ⚡ Tips
 
 - Give your persona a name and photo to make them feel real.
 - Use direct quotes from interviews wherever possible.
 - Keep it concise — it should be quick for others to grasp.
 
-# ✨ **AI Assist**
+# ✨ AI Assist
 
 Students can use AI to:
 
@@ -87,11 +81,17 @@ Students can use AI to:
 - Suggest persona names, demographics, or phrasing for goals/pain points
 - Generate stock-style persona photos (with caution not to stereotype)
 
-# 🎥 **Media**
+# 🎥 Media
 
 [https://www.youtube.com/watch?v=rv9yfrV-EAs](https://www.youtube.com/watch?v=rv9yfrV-EAs)
 
-# ✅ **Checklist**
+# 📚 Resources
+
+- [User Persona Guide](https://www.nngroup.com/articles/persona/) (Nielsen Norman Group)
+- [User Persona Examples](https://xd.adobe.com/ideas/process/user-research/user-persona/)
+- Miro / MURAL persona templates (if digital)
+
+# ✅ Checklist
 
 - [ ]  Reviewed discovery research
 - [ ]  Grouped insights into clusters
@@ -99,6 +99,6 @@ Students can use AI to:
 - [ ]  Completed persona template
 - [ ]  Presented to peers
 
-# 📝 **Summary**
+# 📝 Summary
 
 Students synthesise research insights into clear, relatable personas. These personas will guide upcoming design decisions, ensuring the product aligns with real user needs.

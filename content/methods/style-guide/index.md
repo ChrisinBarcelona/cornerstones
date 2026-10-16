@@ -8,16 +8,6 @@ Styling a technical guide
 
 Now that we have established a visual direction with a **mood board**, it’s time to **formalise that style** into a structured **style guide**. Mood boards are inspirational, but a style guide is practical. It documents rules for typography, colours, and components so that design work stays consistent across screens, pages, or products. In this exercise, students will create their own digital style guide in **Figma**.
 
-# ✅ Total Style Guide **Checklist**
-
-- [ ]  Logo
-- [ ]  Typography
-- [ ]  Colours
-- [ ]  Icons
-- [ ]  Buttons
-- [ ]  Textures (Optional)
-- [ ]  [Components (Advanced)](https://m3.material.io/components)
-
 # 🎯 Goal / Learning Outcome
 
 By the end of this activity you should have, students will have developed a robust style guide that can be used as the basis for a design system. 
@@ -160,25 +150,13 @@ Defines reusable [UI elements](https://m3.material.io/components) that ensure co
 
 [Components – Material Design 3](https://m3.material.io/components)
 
-# ⏱ Estimated Duration
+# ⏱️ Estimated Duration
 
 - ~2 hours
 
 # 👉 Extra Notes
 
 Students can expand their style guide over time by adding grids, spacing, do nots, iconography, or interaction rules. This exercise focuses on the essentials: **typography, colour, and basic components**.
-
-# 📚 Resources
-
-[](https://dribbble.com/search/styleguide)
-
-[Colorable](https://colorable.jxnblk.com/)
-
-[Browse Fonts - Google Fonts](https://fonts.google.com/)
-
-[Shapes 2.0 — Fresh SVG Shapes and a Refreshed Website — Framer Blog](https://www.framer.com/blog/shapes-2/)
-
-[Phosphor Icons](https://phosphoricons.com/)
 
 # 🏞️ Template
 
@@ -193,6 +171,28 @@ Students can expand their style guide over time by adding grids, spacing, do not
 # 🎥 Media
 
 [https://www.youtube.com/watch?v=an9_EvwOMNc&t=267s](https://www.youtube.com/watch?v=an9_EvwOMNc&t=267s)
+
+# 📚 Resources
+
+[](https://dribbble.com/search/styleguide)
+
+[Colorable](https://colorable.jxnblk.com/)
+
+[Browse Fonts - Google Fonts](https://fonts.google.com/)
+
+[Shapes 2.0 — Fresh SVG Shapes and a Refreshed Website — Framer Blog](https://www.framer.com/blog/shapes-2/)
+
+[Phosphor Icons](https://phosphoricons.com/)
+
+# ✅ Checklist
+
+- [ ]  Logo
+- [ ]  Typography
+- [ ]  Colours
+- [ ]  Icons
+- [ ]  Buttons
+- [ ]  Textures (Optional)
+- [ ]  [Components (Advanced)](https://m3.material.io/components)
 
 # 📝 Summary
 

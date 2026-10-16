@@ -1,12 +1,14 @@
 # Sprint Retrospective
 
-# 🎉 Congratulations! You have completed the sprint!
+# 🪜 Stage: Retrospective
 
-## 👋 Context
+# 👋 Context
+
+**🎉 Congratulations! You have completed the sprint!**
 
 You’ve completed your usability tests, distilled findings, and iterated on your design. Now it’s time to **reflect on the sprint as a whole**. This is the **Sprint Retrospective** — a structured reflection that helps you capture what went well, what was challenging, and what you’ll do differently next time.
 
-Although this is **the last step in the bootcamp**, think of it as **the first step in your independent design practice**. The retrospective is the **first page you will create for your case study**, summarising your process and insights in a way that sets up the story of your work for future viewers. Please publish your case study in ~~Medium and send it to the school when it’s finished!~~
+Although this is **the last step in the bootcamp**, think of it as **the first step in your independent design practice**. The retrospective is the **first page you will create for your case study**, summarising your process and insights in a way that sets up the story of your work for future viewers.
 
 | Aspect | Sprint Retrospective | Usability Test / Design Iteration |
 | --- | --- | --- |
@@ -90,7 +92,14 @@ By the end of this activity, students will have:
     - **Share on LinkedIn:** Post a short summary highlighting your process and key insights, linking to your full case study.
     - **Optional Portfolio:** Add it to your personal design portfolio website
 
-# ⚡ **Tips**
+# ⏱️ Estimated Duration
+
+- **Sprint Retrospective:** 45 min
+- **Case Study Creation**: ~5 Hours
+
+---
+
+# ⚡ Tips
 
 - The case study is more important than the prototype
 - Do not try to demonstrate the perfect product.
@@ -98,12 +107,23 @@ By the end of this activity, students will have:
 - Remember a case study should be like a really good story! Tell the story of your sprint
 - A Case study should include many parts of your sprint but keep it concise readable.
 
-# ⏱️ Duration
+# ✨ AI Assist
 
-- **Sprint Retrospective:** 45 min
-- **Case Study Creation**: ~5 Hours
+You can ask an AI tool:
 
----
+“Take the best parts of my material and craft a great case study template”
+
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=jt1WroGHvBs](https://www.youtube.com/watch?v=jt1WroGHvBs)
+
+[https://www.youtube.com/watch?v=YW7a9jdhPGw&t=3s](https://www.youtube.com/watch?v=YW7a9jdhPGw&t=3s)
+
+# 📚 Resources
+
+[Sprint Retrospective: How to Hold an Effective Meeting | Atlassian](https://www.atlassian.com/team-playbook/plays/retrospective)
+
+[Medium: Read and write stories.](https://medium.com/)
 
 # ✅ Checklist
 
@@ -122,24 +142,6 @@ By the end of this activity, students will have:
 - [ ]  Draft your sprint retrospective
 - [ ]  Build up your Case Study
 - [ ]  Published Case study to Medium
-
-# 📚 Resources
-
-[Sprint Retrospective: How to Hold an Effective Meeting | Atlassian](https://www.atlassian.com/team-playbook/plays/retrospective)
-
-[Medium: Read and write stories.](https://medium.com/)
-
-# ✨ AI Assist
-
-You can ask an AI tool:
-
-“Take the best parts of my material and craft a great case study template”
-
-# 🎥 Media
-
-[https://www.youtube.com/watch?v=jt1WroGHvBs](https://www.youtube.com/watch?v=jt1WroGHvBs)
-
-[https://www.youtube.com/watch?v=YW7a9jdhPGw&t=3s](https://www.youtube.com/watch?v=YW7a9jdhPGw&t=3s)
 
 # 📝 Summary
 

@@ -1,18 +1,18 @@
 # User Survey
 
-# 🪜 **Stage: Discovery**
+# 🪜 Stage: Discovery
 
 User Survey.
 
-# 👋 **Context**
+# 👋 Context
 
 You’ve set your **research goal** (your destination), and you’ve written **research questions** (your map). Now it’s time to go out into the world and gather evidence directly from people’s lived experiences. To do that, you’ll design a **survey**.
 
-# 🎯 **Goal / Learning outcome**
+# 🎯 Goal / Learning Outcome
 
 By the end of this activity, you will design a clear, unbiased survey using [Google Forms](http://forms.google.com/) gathering real insights connected to your research questions.
 
-# 🛠️ **Main Exercise**
+# 🛠️ Main Exercise
 
 1. Revisit your **research goal** and **research questions**. Which ones could be explored by asking people about their own experiences?
 2. Draft survey questions that:
@@ -27,30 +27,22 @@ By the end of this activity, you will design a clear, unbiased survey using [Goo
 5. Review in a 4 days and distill insights
 6. Write down noticeable insights and things that are surprising
 
-# ⏱️ **Estimated Duration**
+# ⏱️ Estimated Duration
 
 - 50–80 minutes (including time to set up Google Form).
 
-# 👉 **Extra Notes**
+# 👉 Extra Notes
 
 - Your survey is not about what *you* think should happen, but about learning from the **lived experience** of your respondents.
 - Ask yourself: *Will this question give me insight I can connect back to my research goal?*
 
-# 📚 **Resources**
-
-[](http://forms.google.com/)
-
-# 🎥 Media
-
-[https://www.youtube.com/watch?v=jYJgsbOe3gQ](https://www.youtube.com/watch?v=jYJgsbOe3gQ)
-
-# ⚡ **Tips**
+# ⚡ Tips
 
 - Pilot your survey: Ask a friend to take it and tell you if anything is confusing.
 - Limit open-ended responses (too hard to analyse at scale).
 - Use “Other (please specify)” sparingly — but it can capture unexpected insights.
 
-# ✨ **AI Assist**
+# ✨ AI Assist
 
 You can ask an AI tool:
 
@@ -60,7 +52,15 @@ Once the survey has responses, you can ask an AI tool:
 
 - Distill my survey for key insights
 
-# ✅ **Checklist**
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=jYJgsbOe3gQ](https://www.youtube.com/watch?v=jYJgsbOe3gQ)
+
+# 📚 Resources
+
+[](http://forms.google.com/)
+
+# ✅ Checklist
 
 - [ ]  My survey connects to my research questions.
 - [ ]  My survey focuses on the lived experiences of the user
@@ -71,6 +71,6 @@ Once the survey has responses, you can ask an AI tool:
 - [ ]  I published my survey in Google Forms and shared it with my network.
 - [ ]  I reviewed my survey looking for patterns and pain points
 
-# 📝 **Summary**
+# 📝 Summary
 
 Your **research goal** is the destination, your **research questions** are the map, and your **survey** is the compass you use to check in with real people along the way and understand them. Well-crafted survey questions give you reliable, unbiased insights into **lived experience** — and that’s what makes your research grounded and meaningful.

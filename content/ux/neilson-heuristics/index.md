@@ -110,12 +110,20 @@ It's best if the system doesn't need any extra explanation. But it may be necess
 
 ---
 
-## Exercise: a quick heuristic evaluation (20 minutes)
+## Why it matters for UX
+
+The heuristics are the fastest way to catch common usability problems before users ever see them, and they give you a shared vocabulary for design reviews: "this breaks error prevention" is a clearer critique than "I don't like it". They don't replace testing with real users, but they make every test you run more useful.
+
+## Try it: a quick heuristic evaluation (20 minutes)
 
 1. Pick one app you use every day and one key task in it (for example, booking, paying or searching).
 2. Go through the task screen by screen, checking it against all ten heuristics.
 3. For each problem, write: the screen, the heuristic it breaks, and how severe it is (cosmetic, minor, major or critical).
 4. Pick the two most severe problems and sketch a fix for each.
+
+## Media
+
+[https://www.youtube.com/watch?v=6Bw0n6Jvwxk](https://www.youtube.com/watch?v=6Bw0n6Jvwxk)
 
 ## Resources
 
@@ -123,6 +131,8 @@ It's best if the system doesn't need any extra explanation. But it may be necess
 
 [How to Conduct a Heuristic Evaluation – Nielsen Norman Group](https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/)
 
-## Summary
+## Key takeaways
 
-The 10 usability heuristics are the quickest checklist in UX: keep people informed, speak their language, let them back out, be consistent, prevent errors, show rather than make them remember, offer shortcuts, cut the clutter, write helpful errors and provide help where it's needed. Use them while you design and when you review, then test with real users.
+- The 10 heuristics are the quickest checklist in UX: informed, familiar, reversible, consistent, error-proof, visible, efficient, minimal, recoverable and helpful.
+- Use them while you design and when you review, with a severity for every problem you find.
+- They complement usability testing with real users; they never replace it.

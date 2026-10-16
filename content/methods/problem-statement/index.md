@@ -1,10 +1,10 @@
 # Problem Statement
 
-# 🪜 **Stage: Define**
+# 🪜 Stage: Define
 
 Defining the problem 
 
-# 👋 **Context**
+# 👋 Context
 
 Let’s begin the formative part of our sprint with a defined problem statement that’s built on the solid foundation of our earlier research. A problem statement is **a clear, concise description of the main issue or challenge that users face.** 
 
@@ -18,7 +18,7 @@ By the end of this exercise, students will be able to:
 - **Frame a clear, concise, and actionable problem statement**
 - **Communicate the problem effectively** to team members and stakeholders
 
-# 🛠️ **Main Exercise**
+# 🛠️ Main Exercise
 
 **Step 1: Review Research Insights** 
 

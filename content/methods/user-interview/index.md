@@ -1,8 +1,8 @@
 # User Interview
 
-# 🪜 **Stage: User Interviews**
+# 🪜 Stage: Discovery
 
-## 👋 Context
+# 👋 Context
 
 You’ve already launched a **survey** but sometimes you need to **go deeper** into someone’s story, to uncover the “why” behind their answers and observe how they think, feel, and act.
 
@@ -81,11 +81,31 @@ By the end of this activity, you will have identified real world reoccurring the
 
 **Outcome:** A set of rich, qualitative data ready for analysis.
 
-# ⏱️ Duration
+# ⏱️ Estimated Duration
 
 - **Preparation (guide)**: 30–40 min
 - **Each interview**: 20–30 min
 - **Insight gathering:** 60 mins
+
+# ✨ AI Assist
+
+You can record the interviews and use [Notta.ai](http://Notta.ai) to distill the main takeaways from the conversation.  
+
+[Convertir audio a texto - Transcripción rápida de IA](https://www.notta.ai/es/audio-to-text?utm_source=GoogleAds&utm_medium=cpc&utm_campaign={campaign_name}&utm_term=notta&gad_source=1&gad_campaignid=21235400838&gbraid=0AAAAABSsTG0cns119yCDoTVARyesQy0GB&gclid=Cj0KCQjwwsrFBhD6ARIsAPnUFD1uHM8VTVryfeiAIFkF09s6oiSnpGA1iPbZBDc0a1X1Axvbt2vEn_saAvt2EALw_wcB)
+
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=yBYd5USasXg](https://www.youtube.com/watch?v=yBYd5USasXg)
+
+[https://www.youtube.com/watch?v=1bionYPAPhg](https://www.youtube.com/watch?v=1bionYPAPhg)
+
+# 📚 Resources
+
+[Writing an Effective Guide for a UX Interview](https://www.nngroup.com/articles/interview-guide/)
+
+[User Interviews 101](https://www.nngroup.com/articles/user-interviews/)
+
+[What are User Interviews? — updated 2025](https://www.interaction-design.org/literature/topics/user-interviews#:~:text=User%20interviews%20are%20a%20qualitative,problems%2C%20talk%20to%20people.%E2%80%9D)
 
 # ✅ Checklist
 
@@ -114,26 +134,6 @@ By the end of this activity, you will have identified real world reoccurring the
 - [ ]  Review recordings/notes to **identify patterns and insights**.
 - [ ]  Summarise findings for design or research discussion.
 - [ ]  Optionally, use tools like [**Notta.ai**](http://notta.ai/) for transcription and analysis.
-
-# 📚 Further Resources
-
-[Writing an Effective Guide for a UX Interview](https://www.nngroup.com/articles/interview-guide/)
-
-[User Interviews 101](https://www.nngroup.com/articles/user-interviews/)
-
-[What are User Interviews? — updated 2025](https://www.interaction-design.org/literature/topics/user-interviews#:~:text=User%20interviews%20are%20a%20qualitative,problems%2C%20talk%20to%20people.%E2%80%9D)
-
-# ✨ AI Assist
-
-You can record the interviews and use [Notta.ai](http://Notta.ai) to distill the main takeaways from the conversation.  
-
-[Convertir audio a texto - Transcripción rápida de IA](https://www.notta.ai/es/audio-to-text?utm_source=GoogleAds&utm_medium=cpc&utm_campaign={campaign_name}&utm_term=notta&gad_source=1&gad_campaignid=21235400838&gbraid=0AAAAABSsTG0cns119yCDoTVARyesQy0GB&gclid=Cj0KCQjwwsrFBhD6ARIsAPnUFD1uHM8VTVryfeiAIFkF09s6oiSnpGA1iPbZBDc0a1X1Axvbt2vEn_saAvt2EALw_wcB)
-
-# 🎥 Media
-
-[https://www.youtube.com/watch?v=yBYd5USasXg](https://www.youtube.com/watch?v=yBYd5USasXg)
-
-[https://www.youtube.com/watch?v=1bionYPAPhg](https://www.youtube.com/watch?v=1bionYPAPhg)
 
 # 📝 Summary
 

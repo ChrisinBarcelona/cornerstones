@@ -22,19 +22,9 @@ Using a collaborative design tool (e.g., **Figma**, Miro, or Canva):
 2. Arrange **colors, typography samples, textures, icons, symbols, and imagery** into a single shared canvas.
 3. Experiment with different combinations to explore possible design directions.
 
-# ⏱ Estimated Duration
+# ⏱️ Estimated Duration
 
 - ~1 hour
-
-# 📚 Resources
-
-[Free Mood Board Creator - Make Mood Boards Online | Canva](https://www.canva.com/create/mood-boards/)
-
-[Pinterest](https://www.pinterest.com/)
-
-[Beautiful Free Images & Pictures | Unsplash](https://unsplash.com/)
-
-[Grabient | Gradient Generator & Palette Finder](https://www.grabient.com/)
 
 # 🏞️ Template
 
@@ -57,6 +47,16 @@ Sections:
 [https://www.youtube.com/watch?v=pF1BDc0tZ6w](https://www.youtube.com/watch?v=pF1BDc0tZ6w)
 
 [https://www.youtube.com/watch?v=AXpxZMRM1EY](https://www.youtube.com/watch?v=AXpxZMRM1EY)
+
+# 📚 Resources
+
+[Free Mood Board Creator - Make Mood Boards Online | Canva](https://www.canva.com/create/mood-boards/)
+
+[Pinterest](https://www.pinterest.com/)
+
+[Beautiful Free Images & Pictures | Unsplash](https://unsplash.com/)
+
+[Grabient | Gradient Generator & Palette Finder](https://www.grabient.com/)
 
 # ✅ Checklist
 

@@ -1,6 +1,6 @@
 # Lean UX Canvas
 
-# 🪜 Stage: Discovery
+# 🪜 Stage: Discovery
 
 First framing of the problem.
 
@@ -31,11 +31,6 @@ Students will be able to **complete the first 4 sections of a Lean UX Canvas** t
 - Keep it **concise and testable.**
 - You’ll revisit and revise later as you gather evidence.
 
-# 📚 Resources
-
-- [Jeff Gothelf’s Lean UX Canvas overview](https://jeffgothelf.com/blog/lean-ux-canvas/)
-- Sample completed canvases from real projects
-
 # 🏞️ Template
 
 [](https://www.figma.com/community/file/933128819691328645/lean-ux-canvas-2-0)
@@ -59,6 +54,11 @@ Use AI to:
 
 - Reframe your **Business Outcomes** as measurable metrics.
 - Suggest alternative **User Outcomes & Benefits** based on your draft.
+
+# 📚 Resources
+
+- [Jeff Gothelf’s Lean UX Canvas overview](https://jeffgothelf.com/blog/lean-ux-canvas/)
+- Sample completed canvases from real projects
 
 # ✅ Checklist
 

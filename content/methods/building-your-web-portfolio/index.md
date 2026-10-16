@@ -36,14 +36,6 @@ Work through the sprint plan below. Each phase lists the goal, the tasks and the
 
 - 5 days (Portfolio Week, with the Framer workshops)
 
-# 📚 Resources
-
-[Framer UI Kit and Design System — Kompa](https://www.kompa.design/)
-
-[Frameblox - Ultimate Framer UI kit; design system & components library](https://www.frameblox.com/)
-
-[Framer](https://www.framer.com/)
-
 # 🎥 Media
 
 The videos, grouped by the phase they belong to.
@@ -131,6 +123,14 @@ The videos, grouped by the phase they belong to.
 [https://www.youtube.com/watch?v=zDCbzaGvMmI](https://www.youtube.com/watch?v=zDCbzaGvMmI)
 
 [https://www.youtube.com/watch?v=QMcuA-kQOpQ&t=309s](https://www.youtube.com/watch?v=QMcuA-kQOpQ&t=309s)
+
+# 📚 Resources
+
+[Framer UI Kit and Design System — Kompa](https://www.kompa.design/)
+
+[Frameblox - Ultimate Framer UI kit; design system & components library](https://www.frameblox.com/)
+
+[Framer](https://www.framer.com/)
 
 # ✅ Checklist
 

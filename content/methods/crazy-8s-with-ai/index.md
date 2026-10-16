@@ -1,6 +1,6 @@
 # Crazy 8’s with AI
 
-# 🧠⚡ **Crazy 8’s with AI as a Sparring Partner**
+**🧠⚡ Crazy 8’s with AI as a Sparring Partner**
 
 *A rapid-fire ideation exercise where you sketch — and AI pushes your thinking.*
 
@@ -18,13 +18,13 @@ Let’s get into it.
 
 ---
 
-# 🪜 **Stage**
+# 🪜 Stage: Ideation
 
 Ideation – diverging on possible solutions before prototyping.
 
 ---
 
-# 👋 **Context**
+# 👋 Context
 
 You’ve completed the understanding phase of the sprint. Now you need breadth — not depth. Crazy 8’s helps break away from your “first solution” and explore more innovative, lateral ideas.
 
@@ -37,7 +37,7 @@ Using AI as a sparring partner gives you:
 
 ---
 
-# 🎯 **Goal / Learning Outcome**
+# 🎯 Goal / Learning Outcome
 
 - Push beyond your initial concept and generate a wide range of possibilities.
 - Use AI intelligently to widen creative thinking — without letting it do the design for you.
@@ -46,7 +46,7 @@ Using AI as a sparring partner gives you:
 
 ---
 
-# 🛠️ **Main Exercise: Crazy 8’s (AI-Enhanced)**
+# 🛠️ Main Exercise
 
 **Step 1 — Write your own design brief**
 
@@ -73,7 +73,7 @@ AI gives the idea.
 
 ---
 
-# ⏱️ **Estimated Duration**
+# ⏱️ Estimated Duration
 
 ~15 minutes
 
@@ -82,7 +82,7 @@ AI gives the idea.
 
 ---
 
-# 👉 **Extra Notes**
+# 👉 Extra Notes
 
 - It's normal for your “middle” ideas (4, 5, 6) to be the most surprising and useful.
 - Don’t let AI over-design — keep its prompts simple.
@@ -91,17 +91,7 @@ AI gives the idea.
 
 ---
 
-# 📚 **Resources**
-
-- Overview: *Crazy 8’s Method*
-- Timer or stopwatch
-- Blank A4 paper
-- ChatGPT (or similar LLM)
-- Pens/markers
-
----
-
-# 🏞️ **Template**
+# 🏞️ Template
 
 (Fold paper into 8 rectangles, one sketch per box.)
 
@@ -111,7 +101,7 @@ AI gives the idea.
 
 ---
 
-# ⚡ **Tips for Success**
+# ⚡ Tips
 
 - When in doubt, simplify.
 - Focus on big ideas — behaviour, layout, interactions, structure.
@@ -120,7 +110,17 @@ AI gives the idea.
 
 ---
 
-# 📝 **Checklist**
+# 📚 Resources
+
+- Overview: *Crazy 8’s Method*
+- Timer or stopwatch
+- Blank A4 paper
+- ChatGPT (or similar LLM)
+- Pens/markers
+
+---
+
+# ✅ Checklist
 
 - [ ]  Design brief written
 - [ ]  Paper folded into 8 sections
@@ -132,7 +132,7 @@ AI gives the idea.
 
 ---
 
-# 📌 **Summary**
+# 📝 Summary
 
 Crazy 8’s with AI as a Sparring Partner gives you **the best of both worlds**:
 

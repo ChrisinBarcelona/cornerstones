@@ -1,84 +1,106 @@
 # Create your Script
 
-Use the following criteria to make a script which you may reference during the interview. Once complete practise it out loud. 
+# 🪜 Stage: Validation
 
----
+Write the words you'll say, so every participant gets the same, neutral session.
 
-### Welcome the Subject
+# 👋 Context
 
-“*Thanks for coming in today!* 
+In a usability test, the facilitator's words shape what the participant does. If you improvise, every session is a little different, you're more likely to lead people towards answers, and nerves make you forget steps. A **script** fixes all three.
 
-*I’m … What’s your name? …* 
+The script follows the same five stages as the Design Sprint's "five-act interview": a friendly welcome, context questions, introducing the prototype, tasks, and a quick debrief. You don't read it like a robot; you use it as a guide you know well enough to sound natural. Practise it out loud before the first session.
 
-*Really appreciate your help here. What we have been doing over the past week is trying to come up with some new ideas for … and implementing them in this concept / prototype. And as you understand, getting actual user feedback is a super important part of that.* 
+# 🎯 Goal / Learning Outcome
 
-*This interview will be pretty informal. I’m not testing you – I’m actually testing the prototype. You know? If you get stuck or confused, it’s nothing to do with you. In fact, it actually helps us find problems we need to fix. So, yeah, let's just have a chat ... Where you from anyway?*
+- Write a complete test script in five stages.
+- Phrase tasks as goals, without telling people where to click.
+- Use neutral, open questions that don't lead the participant.
+- Rehearse the script until it sounds natural.
 
----
+# 🛠️ Main Exercise
 
-### Invite Them to Open Up
+1. **Copy the template below** into your team's document.
+2. **Write the welcome.** Make it warm, informal, and clear that you are testing the prototype, not the person.
+3. **Write 4–5 warm-up questions** about the participant's life, then **3–4 context questions** about the problem space (how they deal with it today).
+4. **Write the prototype introduction**, including permission to be negative and a request to think aloud.
+5. **Write your tasks** as scenarios: *"Imagine you want to… in order to… How would you go about it?"* One task per sprint question.
+6. **Write the debrief questions**, including the "three magic wishes" question.
+7. **Rehearse (15 min).** Run the script out loud on a teammate. Cut anything that sounds stiff or leading.
 
-- *Where you from anyway?*
-- *What do you do for a living?*
-- *Any Hobbies? … me too!*
-- *You live here?*
-- *What do you like to do?*
+# ⏱️ Estimated Duration
 
----
+- ~45 min
 
-### Discover the Context of the User
+# 🏞️ Template
 
-- So, introduce the subject matter
-- *Have you ever used this?*
-- *How often?*
-- *Do you hate it or love it or?*
+**1. Welcome the participant**
 
----
+*"Thanks for coming in today! I'm … What's your name? We've spent the past week coming up with new ideas for … and building them into a prototype, and getting real feedback is a really important part of that. This will be pretty informal. I'm not testing you, I'm testing the prototype. If you get stuck or confused, that's nothing to do with you; it actually helps us find problems we need to fix."*
 
-  
+**2. Invite them to open up**
 
-### Introduce the Prototype
+- *"Where are you from?"*
+- *"What do you do for a living?"*
+- *"What do you like to do in your free time?"*
 
-*“Do you mind if we take a look at the prototype now?”*
+**3. Discover their context**
 
-*“Oh, a prototype is like a test version of something that designers mock-up to try out ideas and before actually creating a final product.”*
+- Introduce the subject matter.
+- *"Have you ever used something like this? How often?"*
+- *"How do you do it today? What do you like or dislike about that?"*
 
-*“Listen I didn’t actually build this, so you won’t hurt my feelings if you say anything negative.”*
+**4. Introduce the prototype**
 
-*“I’m not gonna say much”*
+- *"Do you mind if we look at the prototype now?"*
+- *"A prototype is a test version that designers make to try out ideas before building the real thing, so some parts won't work."*
+- *"I didn't build this, so you won't hurt my feelings if you say anything negative."*
+- *"Please think out loud as you go: say what you're looking at, trying to do and thinking. I won't talk much."*
 
-*“I’m going to give you an objective shortly that I want you to carry out”*
+**5. Set the task**
 
-Yes exactly, like a goal 
+- *"Imagine you want to … in order to … How would you go about it?"*
+- *"Start wherever you think you might."*
 
-*“Just speak out loud.”*
+**6. Their impression and debrief**
 
-*“I’m not going to be talking much.*”
+- *"All done. What did you think?"*
+- *"Can you tell me more about that?"*
+- *"If you had three magic wishes to improve this, what would they be?"*
+- *"Thank you so much for your time. Have a great day!"*
 
-*“Can we start?”*
+# ⚡ Tips
 
-“What are we looking for? … oh, sure … yeah, we’re just trying to understand how you feel about the prototype, trying to capture your thoughts and see if the UX is good and if it feels intuitive enough and stuff! You get me?”
+- Tasks describe goals, never the interface: say "find a locker near you", not "tap the map icon".
+- Keep the same script and order for every participant, so results are comparable.
+- Leave room for silence; don't fill every pause.
+- Print the script or keep it on a second screen, out of the participant's view.
 
-Cool so… 
+# ✨ AI Assist
 
----
+Paste your draft into Claude and ask: "Which of these questions are leading or closed? Rewrite them as neutral, open questions." Keep the versions that still sound like you.
 
-### Set the Objective
+# 🎥 Media
 
-*“Imagine you want to … in order to … so that … how would you proceed?”*
+[https://www.youtube.com/watch?v=U9ZG19XTbd4](https://www.youtube.com/watch?v=U9ZG19XTbd4)
 
-“*Start where you are ready and where you think you might.*” 
+[https://www.youtube.com/watch?v=jEDGHcb1HF0](https://www.youtube.com/watch?v=jEDGHcb1HF0)
 
----
+# 📚 Resources
 
-### Their Impression and Direct Questioning
+[Checklist for Planning Usability Studies – Nielsen Norman Group](https://www.nngroup.com/articles/usability-test-checklist/)
 
-*”All done, so what did you think?”*
+[Write Better Qualitative Usability Tasks – Nielsen Norman Group](https://www.nngroup.com/articles/better-usability-tasks/)
 
-“Can you expand on that”
+# ✅ Checklist
 
-*“If you had three magic wishes to improve this, what would they be?”* 
+☐ Wrote all six parts of the script
 
-*“Thank you so so much”*
+☐ Wrote one goal-based task per sprint question
 
-“Have a great day!”
+☐ Checked every question for leading words
+
+☐ Rehearsed the script out loud
+
+# 📝 Summary
+
+A **test script** gives every participant the same warm, neutral session: welcome, warm-up, context, prototype, tasks and debrief. Writing and rehearsing it keeps you from leading people, forgetting steps or improvising differently each time.

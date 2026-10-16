@@ -1,10 +1,10 @@
 # Pick a Target
 
-# 🪜 **Stage: Define**
+# 🪜 Stage: Define
 
 Target the appropriate MVP
 
-# 👋 **Context**
+# 👋 Context
 
 At this stage of the design sprint, students must continue to move from exploring insights to **committing to specific sprint targets**. 
 
@@ -12,7 +12,7 @@ Based on your previous research, including your personas, and problem framing, n
 
 Choosing a target is about **focus**. It prevents wasted effort, aligns the team, and ensures that design and future prototyping - address the most important challenge.
 
-# 🎯 **Goal / Learning outcome**
+# 🎯 Goal / Learning Outcome
 
 By the end of this activity, students will:
 
@@ -20,7 +20,7 @@ By the end of this activity, students will:
 - Define the **Most Valuable Person**
 - Articulate their **Minimum Desirable Product**
 
-# 🛠️ **Main Exercise**
+# 🛠️ Main Exercise
 
 1. **Review Prior Research**
 2. **Create Target Statements**
@@ -34,15 +34,15 @@ By the end of this activity, students will:
 5. **Decide on Converge / Diverge**
     - As a class, decide if one idea should **converge** (merge elements) or **diverge** (commit to one MVP path)?
 
-# ⏱️ **Estimated Duration**
+# ⏱️ Estimated Duration
 
 40 minutes
 
-# 👉 **Extra Notes**
+# 👉 Extra Notes
 
 - Stress that the target must be **insight-driven**, not based on any assumptions or articles that seem to work well in the field but do not.
 
-# 🏞️ **Template**
+# 🏞️ Template
 
 | **Focus Area** | **Reminder** | **Value Proposition** | **Answer** |
 | --- | --- | --- | --- |
@@ -50,18 +50,18 @@ By the end of this activity, students will:
 | **Most Valuable Person (MVP)** | The key user group or persona to focus on. | Why is this group the most important to target? |  |
 | **Minimum Desirable Product (MDP)** | Extra features or refinements beyond the core. | How do these extras create additional value? |  |
 
-# ⚡ **Tips**
+# ⚡ Tips
 
 - Avoid overloading the MVP with “nice-to-haves.”
 - Encourage debate: sometimes merging targets makes a stronger focus.
 
-# 🎥 **Media**
+# 🎥 Media
 
 [https://www.youtube.com/watch?v=9Swz0LJAEdY](https://www.youtube.com/watch?v=9Swz0LJAEdY)
 
 [https://www.youtube.com/watch?v=HjOdNmpGaTw](https://www.youtube.com/watch?v=HjOdNmpGaTw)
 
-# ✅ **Checklist**
+# ✅ Checklist
 
 - [ ]  Reviewed research & personas
 - [ ]  Defined Most Valuable Player
@@ -70,7 +70,7 @@ By the end of this activity, students will:
 - [ ]  Pitched & posted target
 - [ ]  Made converge/diverge decision
 
-# 📝 **Summary**
+# 📝 Summary
 
 “Pick a Target” pushes students to make a critical sprint decision: **who to solve for, what task to prioritise, and what MVP to test.** By pitching, voting, and deciding, teams commit to a clear, research-driven sprint target that will guide prototyping and testing.
 

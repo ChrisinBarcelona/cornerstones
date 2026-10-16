@@ -1,53 +1,81 @@
 # Long Term Goal
 
-![](https://images.unsplash.com/photo-1617105488205-25f93b4aff36?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb)
+# 🪜 Stage: Discovery
 
-A long term goal refers to the ultimate vision or desired impact that the team aims to achieve with the product or solution they are developing. This goal provides broad direction and purpose that guides the sprint process and helps ensure that the immediate activities and decisions align with the broader objectives.
+Look into the future before you start: what is the best-case scenario for your users?
 
----
+# 👋 Context
 
-### **Characteristics of a Long Term Goal in a Sprint:**
+A **long-term goal** is the ultimate vision or impact your team wants to achieve with the product. It sits above the sprint: two years, five years from now, what will have changed for your users if everything goes right?
 
-1. **Vision-Oriented**: It outlines the future state or desired outcome that the team envisions for their users or the market.
-2. **Broad and Ambitious**: It goes beyond the immediate results of the sprint, encompassing larger strategic objectives.
-3. **Inspiring**: It motivates the team by providing a compelling reason for why the work is important and what it aims to change or improve.
-4. **User-Centered**: It focuses on the benefits and impacts for the end-users or stakeholders, ensuring that the solution addresses their needs and problems.
+In the Google Ventures Design Sprint, the long-term goal is the very first thing the team writes on Monday morning. It gives the sprint direction and purpose, and every later decision (which problem to target, which sketch to vote for, what to test) can be checked against it. A good long-term goal is:
 
----
+- **Vision-oriented:** it describes a future state, not a feature.
+- **Ambitious:** it reaches beyond what one sprint can deliver.
+- **Inspiring:** it gives the team a reason to care.
+- **User-centred:** it is about the impact on people, not on the company's dashboard.
 
-### **Examples of Long Term Goals in a Design Sprint:**
+**Examples**
 
-1. **For a Mental Health App**:
-    - **Goal**: "Enable young adults with severe mental health issues to live independently and improve their overall quality of life."
-    - **Vision**: Over the next five years, reduce the rate of hospital readmissions for young adults with severe mental health issues by 50% through continuous support and resources provided by the app.
-2. **For a Fitness Tracker**:
-    - **Goal**: "Promote healthier lifestyles and reduce the incidence of lifestyle-related diseases."
-    - **Vision**: In the next five years, achieve a 30% reduction in the prevalence of obesity and diabetes among users of the fitness tracker by promoting regular physical activity and healthy eating habits.
+- *Mental health app:* "Young adults with severe mental health issues live independently and with confidence." In five years: halve hospital readmissions for our users.
+- *Fitness tracker:* "Healthy habits feel effortless." In five years: a measurable drop in inactivity among our users.
 
----
+# 🎯 Goal / Learning Outcome
 
-### **Role of Long Term Goals in a Sprint:**
+- Understand what a long-term goal is and why a sprint starts with one.
+- Write an optimistic, user-centred long-term goal for your project.
+- Turn the goal into the sprint questions that could stop you reaching it.
+- Use the goal as a yardstick for decisions later in the sprint.
 
-- **Guidance and Focus**: The long-term goal helps keep the team focused on what ultimately matters, ensuring that the short-term experiments and prototypes developed during the sprint align with the broader vision.
-- **Decision-Making**: It serves as a benchmark against which decisions are made, ensuring that the chosen solutions and designs contribute to achieving the overarching objectives.
-- **Motivation**: A compelling long-term goal inspires the team, fostering a sense of purpose and commitment to the project.
+# 🛠️ Main Exercise
 
----
+1. **Assess the starting point (10 min).** As a team, write down: What is the problem? Who are the core users? What are the company's strategic objectives?
+2. **Look into the future (5 min, silently).** Each person completes the sentence: *"Looking into the future, what is the best-case scenario for our users?"* Write it on a sticky note.
+3. **Share and combine (10 min).** Read the notes aloud, cluster similar ones and agree on one sentence. Keep it optimistic and about users.
+4. **Ask how it could fail (10 min).** Now flip it: *"If we fail to reach this goal, why?"* Write every reason you can think of.
+5. **Turn fears into sprint questions (10 min).** Rewrite the biggest risks as questions, e.g. "Will tourists trust a locker with their phone?" These are what your research and testing must answer.
+6. **Make it visible.** Write the goal at the top of your board and keep it there for the whole sprint.
 
-### **Implementation in a Sprint:**
+# ⏱️ Estimated Duration
 
-During the initial stages of a design sprint, the team usually defines the long-term goal through collaborative discussions. This involves understanding the problem space, identifying user needs, and aligning with the strategic objectives of the organization. The long-term goal is revisited at various stages of the sprint to ensure alignment and to evaluate the progress made towards achieving it.
+- ~45 min
 
----
+# 🏞️ Template
 
-## Exercise.
+- 🎯 **Long-term goal:** "In [2–5] years, [users] will [change in their lives]."
+- ❓ **Sprint questions:** "Can we…?", "Will people…?" (3–5 of them)
 
-Please assess: 
+# ⚡ Tips
 
-1. What is the problem 
-2. Who are the core Users
-3. What are the strategic objectives of the company
+- Write for users, not the business: "people feel safe swimming" beats "10,000 bookings".
+- Be optimistic first, then pessimistic. Both halves matter.
+- If the team can't agree, the Decider (your instructor or team lead) chooses.
+- Revisit the goal at every checkpoint: does today's work move us towards it?
 
-Thereafter, please create a Long Term Goal with the help of your instructor starting with:
+# ✨ AI Assist
 
-**Looking into the future, what is the best case scenario for your users.**
+Paste your goal into Claude and ask: "Play a sceptical investor. Give me the five most likely reasons this goal will fail." Turn the strongest reasons into sprint questions.
+
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=OaeKpGJe2To](https://www.youtube.com/watch?v=OaeKpGJe2To)
+
+[https://www.youtube.com/watch?v=7zOBMxRYJ7I](https://www.youtube.com/watch?v=7zOBMxRYJ7I)
+
+# 📚 Resources
+
+[The Design Sprint – GV](https://www.gv.com/sprint/)
+
+# ✅ Checklist
+
+☐ Assessed the problem, users and company objectives
+
+☐ Wrote one optimistic, user-centred long-term goal
+
+☐ Listed the reasons it could fail
+
+☐ Turned the biggest risks into 3–5 sprint questions
+
+# 📝 Summary
+
+The **long-term goal** is the sprint's North Star: an optimistic picture of what will be better for users if everything goes right. Paired with the sprint questions (how it could fail), it keeps the team focused and gives every later decision a clear test.

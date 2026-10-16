@@ -87,14 +87,18 @@ You can't feel haptics in a Figma prototype, but you can still design them.
 | Wrong PIN | Third digit mismatch | iOS: notification error | Field shake, red message |
 | Choose a time | Picker value changes | iOS: selection | Picker wheel moves |
 
-## Exercise: a haptic audit (15 minutes)
+## Why it matters for UX
+
+Haptics are feedback you feel. Used well, they confirm actions without a glance, make flat glass feel physical and help people who can't rely on sight or sound. Used badly, they become noise that people switch off. Deciding where a haptic belongs, and specifying it so it gets built properly, is part of the designer's job.
+
+## Try it: a haptic audit (15 minutes)
 
 1. Open two apps you use every day and slowly use their main features.
 2. Every time you **feel** something, write down the moment, its job (notify, confirm or delight) and its quality (clear, rich or buzzy).
 3. Find one moment that **should** have a haptic but doesn't, and one that has a haptic it doesn't need.
 4. Write a haptics note (like the table above) for three key moments in your current project.
 
-## 🎥 Media
+## Media
 
 [https://www.youtube.com/watch?v=-hvClUdSlhA](https://www.youtube.com/watch?v=-hvClUdSlhA)
 
@@ -102,7 +106,7 @@ You can't feel haptics in a Figma prototype, but you can still design them.
 
 [https://www.youtube.com/watch?v=ZBLRzsmLy5w](https://www.youtube.com/watch?v=ZBLRzsmLy5w)
 
-## 📚 Resources
+## Resources
 
 [Playing haptics – Apple Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/playing-haptics)
 
@@ -110,6 +114,8 @@ You can't feel haptics in a Figma prototype, but you can still design them.
 
 [6 Types of Useful Smartwatch Interactions – Nielsen Norman Group](https://www.nngroup.com/articles/smartwatch-interactions/)
 
-## Summary
+## Key takeaways
 
-Haptics let people **feel** an interface. Done well, they are short, crisp and meaningful: they notify, confirm or delight, they match what you see and hear, and they are used sparingly. As a designer, you choose the moments, name the haptic in your specs, and always make sure the experience works without them.
+- Haptics let people feel an interface; every haptic should notify, confirm or delight.
+- Good haptics are short, crisp and in harmony with what people see and hear, and they are used sparingly.
+- Name the haptic in your specs, and make sure the experience still works with haptics turned off.

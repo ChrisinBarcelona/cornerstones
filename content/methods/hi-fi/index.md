@@ -45,7 +45,7 @@ By the end of this activity, students will have:
 
 - Don’t just make it “pretty” — ensure the task **flow remains strong**.
 
-# ✨ **AI Assist**
+# ✨ AI Assist
 
 You can upload your low fidelity screen and ask stitch to: ‘Make high fidelity screens’ and export into Figma (In Beta)
 

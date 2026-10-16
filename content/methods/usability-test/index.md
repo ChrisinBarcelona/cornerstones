@@ -1,7 +1,6 @@
 # Usability Test
 
 # 🪜 Stage: Validation
-
 # 👋 Context
 
 Now that you have completed your prototype, now it’s time to test it with users to get feedback. 
@@ -90,11 +89,31 @@ By the end of this activity, students will have facilitated five user interviews
 
 **Outcome:** A clear set of prioritised usability themes, backed by multiple data points, ready for the next step, the design iteration.
 
-# ⏱️ Duration
+# ⏱️ Estimated Duration
 
 - **Preparation (plan)**: 30–40 min
 - **Each test**: 30–45 min
 - **Analysis & synthesis**: 60–90 min
+
+# ✨ AI Assist
+
+You can synthesise the interviews with:
+
+[tl;dv.io | AI Meeting Note taker for Zoom, Google Meet & MS Teams](https://tldv.io/)
+
+# 🎥 Media
+
+[https://www.youtube.com/watch?v=nYCJTea1AUQ](https://www.youtube.com/watch?v=nYCJTea1AUQ)
+
+[https://www.youtube.com/watch?v=bcfqmx2hnUQ](https://www.youtube.com/watch?v=bcfqmx2hnUQ)
+
+[https://www.youtube.com/watch?v=0inVCwpbP3s&t=505s](https://www.youtube.com/watch?v=0inVCwpbP3s&t=505s)
+
+# 📚 Resources
+
+[Usability (User) Testing 101](https://www.nngroup.com/articles/usability-testing-101/)
+
+[10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/)
 
 # ✅ Checklist
 
@@ -125,26 +144,6 @@ By the end of this activity, students will have facilitated five user interviews
 - [ ]  Summarise into clear, actionable insights.
 
 ---
-
-# 📚 Resources
-
-[Usability (User) Testing 101](https://www.nngroup.com/articles/usability-testing-101/)
-
-[10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/)
-
-# ✨ AI Assist
-
-You can synthesise the interviews with:
-
-[tl;dv.io | AI Meeting Note taker for Zoom, Google Meet & MS Teams](https://tldv.io/)
-
-# 🎥 Media
-
-[https://www.youtube.com/watch?v=nYCJTea1AUQ](https://www.youtube.com/watch?v=nYCJTea1AUQ)
-
-[https://www.youtube.com/watch?v=bcfqmx2hnUQ](https://www.youtube.com/watch?v=bcfqmx2hnUQ)
-
-[https://www.youtube.com/watch?v=0inVCwpbP3s&t=505s](https://www.youtube.com/watch?v=0inVCwpbP3s&t=505s)
 
 # 📝 Summary
 
