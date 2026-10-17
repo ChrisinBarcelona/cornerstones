@@ -200,10 +200,49 @@
       toggle.setAttribute('aria-pressed', String(show));
       toggle.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
     });
+    function hex(bytes) {
+      return Array.prototype.map.call(bytes, function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+    }
+    // Browsers only offer crypto.subtle on https (and localhost), so plain http pages use this fallback.
+    function sha256js(bytes) {
+      var K = [], H = [], i, j, n = 2, k = 0;
+      function frac(x) { return (x - Math.floor(x)) * 4294967296 | 0; }
+      while (k < 64) {
+        for (j = 2; j * j <= n && n % j; j++);
+        if (j * j > n) { if (k < 8) H[k] = frac(Math.pow(n, 1 / 2)); K[k++] = frac(Math.pow(n, 1 / 3)); }
+        n++;
+      }
+      var len = bytes.length, words = [];
+      var padded = new Uint8Array(((len + 9 + 63) >> 6) << 6);
+      padded.set(bytes); padded[len] = 0x80;
+      var bits = len * 8, end = padded.length;
+      padded[end - 4] = bits >>> 24; padded[end - 3] = bits >>> 16; padded[end - 2] = bits >>> 8; padded[end - 1] = bits;
+      for (i = 0; i < end; i += 4) words.push(padded[i] << 24 | padded[i + 1] << 16 | padded[i + 2] << 8 | padded[i + 3]);
+      function rot(x, r) { return x >>> r | x << (32 - r); }
+      for (i = 0; i < words.length; i += 16) {
+        var w = words.slice(i, i + 16), a = H.slice();
+        for (j = 0; j < 64; j++) {
+          if (j >= 16) {
+            var s0 = rot(w[j - 15], 7) ^ rot(w[j - 15], 18) ^ w[j - 15] >>> 3;
+            var s1 = rot(w[j - 2], 17) ^ rot(w[j - 2], 19) ^ w[j - 2] >>> 10;
+            w[j] = w[j - 16] + s0 + w[j - 7] + s1 | 0;
+          }
+          var t1 = a[7] + (rot(a[4], 6) ^ rot(a[4], 11) ^ rot(a[4], 25)) + (a[4] & a[5] ^ ~a[4] & a[6]) + K[j] + w[j] | 0;
+          var t2 = (rot(a[0], 2) ^ rot(a[0], 13) ^ rot(a[0], 22)) + (a[0] & a[1] ^ a[0] & a[2] ^ a[1] & a[2]) | 0;
+          a = [t1 + t2 | 0, a[0], a[1], a[2], a[3] + t1 | 0, a[4], a[5], a[6]];
+        }
+        for (j = 0; j < 8; j++) H[j] = H[j] + a[j] | 0;
+      }
+      var out = new Uint8Array(32);
+      for (i = 0; i < 8; i++) { out[i * 4] = H[i] >>> 24; out[i * 4 + 1] = H[i] >>> 16; out[i * 4 + 2] = H[i] >>> 8; out[i * 4 + 3] = H[i]; }
+      return out;
+    }
     function sha256(text) {
-      return crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)).then(function (buf) {
-        return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
-      });
+      var bytes = new TextEncoder().encode(text);
+      if (window.crypto && crypto.subtle) {
+        return crypto.subtle.digest('SHA-256', bytes).then(function (buf) { return hex(new Uint8Array(buf)); });
+      }
+      return Promise.resolve(hex(sha256js(bytes)));
     }
     // Only return to a page on this site.
     function nextUrl() {
