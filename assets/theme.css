@@ -557,8 +557,7 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
   box-shadow: 0 30px 60px -30px rgba(60, 30, 0, .5); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 .cert-panel { position: absolute; inset: 15% 16% 16%; background: #f4e1c9; display: flex; flex-direction: column; align-items: center;
   justify-content: center; text-align: center; padding: 6% 6%; }
-.cert-bcs { font: 300 5.6cqw/1 Figtree, sans-serif; letter-spacing: .02em; color: #3a3430; display: flex; align-items: center; gap: .9cqw; }
-.cert-bcs i { display: inline-block; width: 1px; height: 5.4cqw; background: #3a3430; }
+.cert-bcs { width: 26cqw; height: auto; }
 .cert-title { margin: 3.5cqw 0 3.2cqw; font: 800 9.6cqw/1 "Bricolage Grotesque", sans-serif; letter-spacing: -.01em; color: #2b2622; }
 .cert-line { margin: 0; font: 400 2.3cqw/1.4 Figtree, sans-serif; color: #3a3430; }
 .cert-name { margin: 2.6cqw 0 3cqw; font: 500 4.4cqw/1.15 Figtree, sans-serif; color: #2b2622; }

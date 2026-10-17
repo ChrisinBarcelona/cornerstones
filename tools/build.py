@@ -1336,7 +1336,7 @@ def build_certificate():
       </div>
       <div class="cert-sheet" id="cert">
         <div class="cert-panel">
-          <div class="cert-bcs" aria-label="BCS">B<i></i>C<i></i>S</div>
+          <img class="cert-bcs" src="assets/cert/bcs-logo.png" alt="BCS, Barcelona Code School">
           <div class="cert-title">Certificate</div>
           <p class="cert-line">This certificate is awarded to</p>
           <div class="cert-name" id="cert-name">Your name</div>
