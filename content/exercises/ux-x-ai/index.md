@@ -14,7 +14,7 @@ You are not designing the app today. You are the judge.
 
 ## The tools
 
-Use at least **four** of these (your instructor will tell you which are available):
+Use at least **three** of these (your instructor will tell you which are available):
 
 - **[Google Stitch](https://stitch.withgoogle.com/):** generates mobile and web UI screens from a prompt, and exports to Figma.
 - **[Claude](https://claude.ai/):** builds working interactive prototypes as artifacts, from a prompt or a sketch.
@@ -50,7 +50,7 @@ Finish with one sentence each: *"I'd use ___ for ___, but never for ___."*
 
 ## Before you submit
 
-☐ Used the same prompt in at least four tools
+☐ Used the same prompt in at least three tools
 
 ☐ Screenshotted every first attempt and second attempt on one board, labelled by tool
 

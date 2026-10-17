@@ -34,7 +34,7 @@ LOGO_MARK = ('<svg class="logo-mark" viewBox="38 40 739 739" width="38" height="
 FAVICON = "data:image/svg+xml," + __import__("urllib.parse").parse.quote(
     LOGO_MARK.replace('class="logo-mark" ', 'xmlns="http://www.w3.org/2000/svg" ').replace(' aria-hidden="true"', ''))
 LOGO = (f'{LOGO_MARK}<span class="logo-text"><span class="logo-name">Cornerstones</span>'
-        f'<span class="logo-sub">UX/UI Design at {SCHOOL}</span></span>')
+        f'<span class="logo-sub">UX/UI at BCS</span></span>')
 ASSET_V = ""  # set in main(): a content hash appended to asset URLs so browsers never mix old and new files
 TAGLINE = "UX & UI learning resource for Barcelona Code School"
 
@@ -420,7 +420,7 @@ def page(title, description, body, depth, active):
     prefix = "../" * depth
     links = "".join(
         f'<a href="{prefix}{t["index"]}"{" aria-current=page" if t["id"] == active else ""}>{t["label"]}</a>'
-        for t in TRACKS)
+        for t in sorted(TRACKS, key=lambda t: t["id"] == "figma"))  # Figma sits last, just before Timetable
     return f"""<!doctype html>
 <html lang="en" data-theme="light">
 <head>
@@ -455,7 +455,7 @@ def page(title, description, body, depth, active):
     <a class="mini-badges" id="mini-badges" href="{prefix}index.html#badges-title" aria-label="Your badges"></a></div>
 </header>
 {body}
-<footer class="foot"><div class="foot-inner"><span>{SITE} · {TAGLINE}</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<footer class="foot"><div class="foot-inner"><span>{SITE} · {TAGLINE}</span><span class="mono">Author: <a href="https://chriskelly.it">Chris Kelly</a></span></div></footer>
 <div class="celebrate" id="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="celebrate-title">
   <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
   <h2 id="celebrate-title"></h2><p class="celebrate-text"></p>

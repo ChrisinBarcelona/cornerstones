@@ -719,3 +719,9 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .card-play { height: 36px; padding: 0 16px; font-size: 14px; }
 .rows.grid .row-body > .card-actions { margin-top: auto; }
 .lecture-head .play-btn { background: #fff; color: #141210; box-shadow: 0 6px 18px -10px rgba(0, 0, 0, .4); }
+
+/* Round nav icons: keep them 40 x 40 instead of letting the header squeeze them */
+.nav .icon-btn, .nav .logout-btn { flex: none; }
+/* Tracker milestone rows: inset the badge and count so the card's rounded edges don't clip them */
+.tk-ms { padding-left: 18px; padding-right: 16px; }
+.foot-inner a { color: inherit; }
