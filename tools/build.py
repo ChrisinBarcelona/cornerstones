@@ -390,6 +390,7 @@ def meter(level, out_of=5):
             + "".join(f'<i class="{"on" if i < level else ""}"></i>' for i in range(out_of)) + "</span>")
 
 
+ICON_RESOURCES = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="18" x="3" y="3" rx="1"/><path d="M7 3v18"/><path d="M20.4 18.9c.2.5-.1 1.1-.6 1.3l-1.9.7c-.5.2-1.1-.1-1.3-.6L11.1 5.1c-.2-.5.1-1.1.6-1.3l1.9-.7c.5-.2 1.1.1 1.3.6Z"/></svg>'
 ICON_TRACKER = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg>'
 ICON_LOGOUT = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg>'
 
@@ -436,6 +437,7 @@ def page(title, description, body, depth, active):
     <a class="brand logo" href="{prefix}index.html" aria-label="Cornerstones, UX/UI Design at {SCHOOL}, home">{LOGO}
     </a>
     <nav class="nav-links">{links}<a href="{prefix}timetable.html"{" aria-current=page" if active == "timetable" else ""}>Timetable</a></nav>
+    <a class="icon-btn res-btn" href="{prefix}resources.html" aria-label="Resources" title="Resources"{" aria-current=page" if active == "resources" else ""}>{ICON_RESOURCES}</a>
     <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker">{ICON_TRACKER}</button>
     <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme">{ICON_SUN}</button>
     <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="{prefix}login.html">{ICON_LOGOUT}<span>Log out</span></button>
@@ -1022,6 +1024,8 @@ def build_home(data):
 </li>""")
     index = [{"t": p["title"], "d": p["description"], "s": t["label"], "u": f"{t['out']}/{p['slug']}.html"}
              for t in TRACKS for p in data[t["id"]]["every"]]
+    index.append({"t": "Resources", "d": "Tools, fonts, photos, icons, colour, inspiration, templates and design systems.",
+                  "s": "Resources", "u": "resources.html"})
     badges = "".join(f"""<li class="award-card t-{k}">
   <div class="badge-item" data-track="{k}">{badge_svg(k, 72)}<span class="badge-name">{b['badge']} award</span><span class="badge-state">Locked</span></div>
   {'<ul class="milestones">' + "".join(milestone_item(k, c, 40) for c in b["milestones"]) + '</ul>' if b["milestones"]
@@ -1057,6 +1061,7 @@ def build_home(data):
       <p class="route-intro">Not sure where to start? This is one way through. Dip into the method bank whenever your sprint needs a method.</p>
       <ol class="route-steps">{''.join(steps)}</ol>
     </section>
+    {resources_preview()}
   </div>
 </main>
 <script type="application/json" id="search-index">{index_json}</script>"""
@@ -1215,6 +1220,73 @@ def build_timetable(data):
     (ROOT / "timetable.html").write_text(page(f"{SITE} · Timetable", "The nine-week UX/UI bootcamp, day by day.", body, 0, "timetable"),
                                          encoding="utf-8")
     print(f"timetable.html: {len(tt['weeks'])} weeks")
+
+
+def load_resources():
+    """content/resources/index.md: "## Group | intro", "### Card", "- [Name](url) | note"."""
+    groups = []
+    for line in (CONTENT / "resources" / "index.md").read_text(encoding="utf-8").splitlines():
+        if line.startswith("## "):
+            name, _, intro = line[3:].partition(" | ")
+            groups.append({"name": name.strip(), "intro": intro.strip(), "slug": re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-"), "cards": []})
+        elif line.startswith("### "):
+            groups[-1]["cards"].append({"name": line[4:].strip(), "links": []})
+        elif line.startswith("- ["):
+            m = re.match(r"- \[([^\]]+)\]\(([^)]+)\)(?:\s*\|\s*(.*))?$", line)
+            groups[-1]["cards"][-1]["links"].append({"name": m.group(1), "url": m.group(2), "note": (m.group(3) or "").strip()})
+    return groups
+
+
+RESOURCES = load_resources()
+
+
+def resource_link(r):
+    local = not r["url"].startswith("http")
+    host = "Download" if local else re.sub(r"^www\.", "", urlparse(r["url"]).netloc)
+    attrs = ' download' if local else ' target="_blank" rel="noopener"'
+    return (f'<li><a class="res-link" href="{esc(r["url"])}"{attrs}><span class="res-name">{esc(r["name"])}</span>'
+            + (f'<span class="res-note">{esc(r["note"])}</span>' if r["note"] else "") +
+            f'<span class="res-host">{esc(host)}</span></a></li>')
+
+
+def build_resources():
+    """resources.html: every student resource, grouped, with a jump list."""
+    total = sum(len(c["links"]) for g in RESOURCES for c in g["cards"])
+    jump = "".join(f'<a href="#{g["slug"]}">{esc(g["name"])}</a>' for g in RESOURCES)
+    sections = "".join(f"""<section class="res-group" id="{g['slug']}" aria-labelledby="{g['slug']}-h">
+      <div class="res-group-head"><h2 id="{g['slug']}-h">{esc(g['name'])}</h2><p>{esc(g['intro'])}</p></div>
+      <div class="res-grid">{''.join(f'<article class="res-card"><h3>{esc(c["name"])}</h3><ul>{"".join(resource_link(r) for r in c["links"])}</ul></article>' for c in g['cards'])}</div>
+    </section>""" for g in RESOURCES)
+    body = f"""
+<main class="resources-page">
+  <div class="wrap">
+    <header class="hero res-hero">
+      <div>
+        <div class="eyebrow">Student resources</div>
+        <h1>Resources</h1>
+        <p class="lede">{total} hand-picked tools, assets, inspiration and references for your sprints and your portfolio.</p>
+      </div>
+    </header>
+    <nav class="res-jump" aria-label="Resource groups">{jump}</nav>
+    {sections}
+  </div>
+</main>"""
+    (ROOT / "resources.html").write_text(page(f"{SITE} · Resources", "Tools, assets, inspiration and references for students.", body, 0, "resources"),
+                                         encoding="utf-8")
+
+
+def resources_preview():
+    """The home page's Resources section: one tile per group."""
+    tiles = "".join(f'<a class="res-tile" href="resources.html#{g["slug"]}"><span class="res-tile-name">{esc(g["name"])}</span>'
+                    f'<span class="res-tile-intro">{esc(g["intro"])}</span>'
+                    f'<span class="res-tile-count">{n} link{"s" if n != 1 else ""}</span></a>'
+                    for g in RESOURCES for n in [sum(len(c["links"]) for c in g["cards"])])
+    return f"""<section class="res-preview" aria-labelledby="res-title">
+      <div class="res-preview-head"><div><div class="eyebrow">Toolkit</div><h2 id="res-title">Resources</h2>
+      <p class="route-intro">Fonts, photos, icons, colour, inspiration, templates and more, all in one place.</p></div>
+      <a class="bank-go" href="resources.html">All resources {ICON_ARROW}</a></div>
+      <div class="res-tiles">{tiles}</div>
+    </section>"""
 
 
 def build_certificate():
@@ -1473,6 +1545,7 @@ def main():
     build_home(data)
     build_timetable(data)
     build_certificate()
+    build_resources()
     build_login()
     write_redirects(data)
 
