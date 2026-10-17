@@ -635,3 +635,27 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .rows.grid .row:has(.card-complete) .row-body { display: flex; flex-direction: column; align-self: stretch; }
 .rows.grid .row-body > .card-complete { margin-top: auto; align-self: flex-start; }
 .rows.grid .row:has(.card-complete) .row-desc { margin-bottom: 14px; }
+
+/* Quote of the day (home) */
+.qotd { margin: 4px 0 22px; max-width: 600px; padding: 2px 0 2px 16px; border-left: 3px solid var(--c-methods); }
+.qotd-label { font: 600 11px/1 var(--font); letter-spacing: .08em; text-transform: uppercase; opacity: .65; margin-bottom: 8px; }
+.qotd-text { margin: 0; font: 500 17px/1.45 var(--font); font-style: italic; }
+.qotd-by { display: block; margin-top: 6px; font: 600 13px var(--font); opacity: .75; }
+.qotd-by::before { content: "— "; }
+
+/* Course progress: one coloured tab per section */
+.course-row { gap: 14px; }
+.course-label { flex: none; }
+.course-chips { display: flex; gap: 6px; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.course-chips::-webkit-scrollbar { display: none; }
+.cp-chip { position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 6px; flex: none; height: 26px; padding: 0 10px; border-radius: var(--r-pill);
+  background: var(--paper-2); color: var(--ink-soft); font: 500 12.5px var(--font); text-decoration: none; }
+.cp-fill { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--tc); opacity: .22; transition: width .5s var(--ease); }
+.cp-chip::before { content: ""; position: relative; width: 8px; height: 8px; border-radius: 50%; background: var(--tc); }
+.cp-name, .cp-count { position: relative; }
+.cp-count { color: var(--tc-text); font-weight: 700; }
+.cp-chip:hover { color: var(--ink); box-shadow: inset 0 0 0 1px var(--tc); }
+.cp-chip.is-complete { background: var(--tc); color: var(--tc-ink); }
+.cp-chip.is-complete .cp-count { color: var(--tc-ink); }
+.cp-chip.is-complete::before { background: var(--tc-ink); }
+@media (max-width: 860px) { .course-chips { display: none; } }

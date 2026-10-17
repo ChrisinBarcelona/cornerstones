@@ -393,6 +393,14 @@ def gate(prefix):
             f"catch(e){{}}</script>")
 
 
+def course_chips(prefix):
+    """One small coloured tab per tracked section; app.js fills in the counts."""
+    return "".join(
+        f'<a class="cp-chip t-{k}" data-chip="{k}" href="{prefix}{TRACK[k]["index"]}" title="{esc(b["badge"])}">'
+        f'<span class="cp-fill"></span><span class="cp-name">{esc(TRACK[k]["label"])}</span><b class="cp-count">0/0</b></a>'
+        for k, b in PROGRESS.items())
+
+
 def page(title, description, body, depth, active):
     prefix = "../" * depth
     links = "".join(
@@ -425,7 +433,8 @@ def page(title, description, body, depth, active):
     <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="{prefix}login.html">{ICON_LOGOUT}<span>Log out</span></button>
   </div>
   <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
-  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete<span class="course-detail" id="course-detail"></span></button>
+  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete</button>
+    <nav class="course-chips" aria-label="Progress by section">{course_chips(prefix)}</nav>
     <a class="mini-badges" id="mini-badges" href="{prefix}index.html#badges-title" aria-label="Your badges"></a></div>
 </header>
 {body}
@@ -962,6 +971,18 @@ def sprint_feature(data):
     </section>"""
 
 
+QUOTES = json.loads((CONTENT / "quotes.json").read_text(encoding="utf-8"))["quotes"]
+
+
+def quote_of_the_day():
+    """A small quote above the welcome; app.js swaps in today's quote (one a day, looping)."""
+    q = QUOTES[0]
+    data = json.dumps(QUOTES, ensure_ascii=False).replace("</", "<\\/")
+    return (f'<figure class="qotd" id="qotd"><figcaption class="qotd-label">Quote of the day</figcaption>'
+            f'<blockquote class="qotd-text">“{esc(q["q"])}”</blockquote><span class="qotd-by">{esc(q["by"])}</span></figure>'
+            f'<script type="application/json" id="qotd-data">{data}</script>')
+
+
 def build_home(data):
     """index.html: what the course is, the method bank, the four sections, a suggested route and a search of every page."""
     cards = []
@@ -1005,6 +1026,7 @@ def build_home(data):
     <header class="hero hero-home">
       <div>
         <div class="eyebrow">Barcelona Code School · UX &amp; UI Bootcamp</div>
+        {quote_of_the_day()}
         <h1>Welcome, student</h1>
         <p class="lede">Lectures to read, Figma lessons and briefs to practise with, plus a bank of methods to pick from in your sprints. Follow the suggested route, or see <a href="timetable.html">the nine-week timetable</a>.</p>
       </div>

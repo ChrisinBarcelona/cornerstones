@@ -351,14 +351,19 @@
       if (parts) parts.textContent = partsDone(findItem(box.dataset.key));
     }
     // Header: whole-course bar, breakdown and mini badges
-    var detail = Object.keys(TRACKS).map(function (t) { var st = stats(t); return TRACKS[t].badge + ' ' + st.done + '/' + st.total; });
     var pct = courseStats();
     var bar = document.querySelector('.course-bar');
     if (bar) {
       bar.querySelector('span').style.width = pct + '%';
       bar.setAttribute('aria-valuenow', pct);
       document.getElementById('course-pct').textContent = pct + '%';
-      document.getElementById('course-detail').textContent = ' · ' + detail.join(' · ');
+      document.querySelectorAll('[data-chip]').forEach(function (chip) {
+        var st = stats(chip.dataset.chip);
+        chip.querySelector('.cp-count').textContent = st.done + '/' + st.total;
+        chip.querySelector('.cp-fill').style.width = st.pct + '%';
+        chip.classList.toggle('is-complete', st.full);
+        chip.setAttribute('aria-label', TRACKS[chip.dataset.chip].badge + ': ' + st.done + ' of ' + st.total + ' complete');
+      });
     }
     var minis = document.getElementById('mini-badges');
     if (minis) minis.innerHTML = Object.keys(TRACKS).map(function (t) {
@@ -601,4 +606,17 @@
   earnedNow().forEach(function (b) { if (b.full) seen[b.key] = 1; });
   write(SEEN, seen);
   if (certEarned() && !read(CERT_DATE).d) write(CERT_DATE, { d: new Date().toISOString() });
+})();
+
+// Quote of the day on the home page: one a day, in order, by the visitor's local date
+(function () {
+  var box = document.getElementById('qotd'), src = document.getElementById('qotd-data');
+  if (!box || !src) return;
+  try {
+    var quotes = JSON.parse(src.textContent), now = new Date();
+    var day = Math.floor((now.getTime() - now.getTimezoneOffset() * 60000) / 86400000);
+    var q = quotes[day % quotes.length];
+    box.querySelector('.qotd-text').textContent = '\u201c' + q.q + '\u201d';
+    box.querySelector('.qotd-by').textContent = q.by;
+  } catch (e) {}
 })();

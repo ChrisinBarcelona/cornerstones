@@ -1,0 +1,28 @@
+{
+  "_note": "Quote of the day on the home page: one quote a day, in order, looping. Keep them short and correctly attributed.",
+  "quotes": [
+    {"q": "Less, but better.", "by": "Dieter Rams"},
+    {"q": "Good design is as little design as possible.", "by": "Dieter Rams"},
+    {"q": "Good design is honest.", "by": "Dieter Rams"},
+    {"q": "Good design is actually a lot harder to notice than poor design, in part because good designs fit our needs so well that the design is invisible.", "by": "Don Norman"},
+    {"q": "Attractive things work better.", "by": "Don Norman"},
+    {"q": "Design is really an act of communication, which means having a deep understanding of the person with whom the designer is communicating.", "by": "Don Norman"},
+    {"q": "Users spend most of their time on other sites.", "by": "Jakob Nielsen"},
+    {"q": "Pay attention to what users do, not what they say.", "by": "Jakob Nielsen"},
+    {"q": "The best results come from testing no more than 5 users and running as many small tests as you can afford.", "by": "Jakob Nielsen"},
+    {"q": "Simplicity is not the absence of clutter, that's a consequence of simplicity.", "by": "Jony Ive"},
+    {"q": "Design is not just what it looks like and feels like. Design is how it works.", "by": "Steve Jobs"},
+    {"q": "Disneyland will never be completed. It will continue to grow as long as there is imagination left in the world.", "by": "Walt Disney"},
+    {"q": "Nothing in life is as important as you think it is, while you are thinking about it.", "by": "Daniel Kahneman"},
+    {"q": "Having no problems is the biggest problem of all.", "by": "Taiichi Ohno"},
+    {"q": "The whole is other than the sum of its parts.", "by": "Kurt Koffka"},
+    {"q": "Design thinking is a human-centered approach to innovation that draws from the designer's toolkit to integrate the needs of people, the possibilities of technology, and the requirements for business success.", "by": "Tim Brown"},
+    {"q": "The details are not the details. They make the design.", "by": "Charles Eames"},
+    {"q": "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.", "by": "Antoine de Saint-Exupéry"},
+    {"q": "If you think good design is expensive, you should look at the cost of bad design.", "by": "Ralf Speth"},
+    {"q": "Don't make me think!", "by": "Steve Krug"},
+    {"q": "The most expensive way to test your idea is to build production-quality software.", "by": "Erika Hall"},
+    {"q": "Getting the right design, and getting the design right.", "by": "Bill Buxton"},
+    {"q": "The life of a designer is a life of fight. Fight against the ugliness.", "by": "Massimo Vignelli"}
+  ]
+}

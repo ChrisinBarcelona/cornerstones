@@ -14,6 +14,8 @@ The people whose ideas shaped user experience design, roughly in the order their
 
 [Key Figures: Walt Disney](key-figures-walt-disney.html)
 
+[Key Figures: Dieter Rams](key-figures-dieter-rams.html)
+
 [Key Figures: Daniel Kahneman](key-figures-daniel-kahneman.html)
 
 [Key Figures: Don Norman](key-figures-don-norman.html)

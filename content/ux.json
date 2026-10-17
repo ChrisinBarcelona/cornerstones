@@ -166,6 +166,7 @@
         "key-figures-taiichi-ohno",
         "key-figures-max-wertheimer",
         "key-figures-walt-disney",
+        "key-figures-dieter-rams",
         "key-figures-daniel-kahneman",
         "key-figures-don-norman",
         "key-figures-jakob-neilson",
@@ -311,6 +312,12 @@
     {
       "slug": "key-figures-walt-disney",
       "title": "Key Figures: Walt Disney",
+      "parent": "key-figures",
+      "children": []
+    },
+    {
+      "slug": "key-figures-dieter-rams",
+      "title": "Key Figures: Dieter Rams",
       "parent": "key-figures",
       "children": []
     },
