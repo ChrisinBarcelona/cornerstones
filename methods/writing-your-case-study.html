@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Writing your Case Study · Cornerstones</title>
+<meta name="description" content="Tell the story of your sprint in five minutes: what you discovered, what testing changed and what you honestly learned.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2238%2040%20739%20739%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M221%2090H590L777%20409H38Z%22%20fill%3D%22%23004ecd%22/%3E%3Cpath%20d%3D%22M38%20409H777L590%20728H221Z%22%20fill%3D%22%230062ff%22/%3E%3Cpath%20d%3D%22M374%20254H688L777%20409H286Z%22%20fill%3D%22%23002b71%22/%3E%3Cpath%20d%3D%22M286%20409H777L688%20564H374Z%22%20fill%3D%22%23003ea2%22/%3E%3C/svg%3E">
+<script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
+<script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=bc9ff1ff13">
+<link rel="stylesheet" href="../assets/theme.css?v=bc9ff1ff13">
+</head>
+<body class="t-methods">
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand logo" href="../index.html" aria-label="Cornerstones, UX/UI Design at Barcelona Code School, home"><svg class="logo-mark" viewBox="38 40 739 739" width="38" height="38" aria-hidden="true"><path d="M221 90H590L777 409H38Z" fill="#004ecd"/><path d="M38 409H777L590 728H221Z" fill="#0062ff"/><path d="M374 254H688L777 409H286Z" fill="#002b71"/><path d="M286 409H777L688 564H374Z" fill="#003ea2"/></svg><span class="logo-text"><span class="logo-name">Cornerstones</span><span class="logo-sub">UX/UI Design at Barcelona Code School</span></span>
+    </a>
+    <nav class="nav-links"><a href="../sprints.html">Sprint Briefs</a><a href="../ux.html">UX Theory</a><a href="../methods.html" aria-current=page>UX Methods</a><a href="../ui.html">UI Theory</a><a href="../figma.html">Figma</a><a href="../exercises.html">Exercises</a><a href="../timetable.html">Timetable</a></nav>
+    <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg></button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="../login.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Log out</span></button>
+  </div>
+  <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete</button>
+    <nav class="course-chips" aria-label="Progress by section"><a class="cp-chip t-sprints" data-chip="sprints" href="../sprints.html" title="Sprints"><span class="cp-fill"></span><span class="cp-name">Sprint Briefs</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ux" data-chip="ux" href="../ux.html" title="UX Theory"><span class="cp-fill"></span><span class="cp-name">UX Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ui" data-chip="ui" href="../ui.html" title="UI Theory"><span class="cp-fill"></span><span class="cp-name">UI Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-figma" data-chip="figma" href="../figma.html" title="Figma"><span class="cp-fill"></span><span class="cp-name">Figma</span><b class="cp-count">0/0</b></a><a class="cp-chip t-exercises" data-chip="exercises" href="../exercises.html" title="Exercises"><span class="cp-fill"></span><span class="cp-name">Exercises</span><b class="cp-count">0/0</b></a></nav>
+    <a class="mini-badges" id="mini-badges" href="../index.html#badges-title" aria-label="Your badges"></a></div>
+</header>
+
+<main class="lecture track-methods" data-key="methods/writing-your-case-study">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../methods.html">UX Methods</a> <span class="sep">/</span> <a href="../methods.html#category=Retrospective">Retrospective</a> <span class="sep">/</span> <span>Writing your Case Study</span></nav>
+    <header class="lecture-head">
+      <div class="eyebrow">Method 47 · Retrospective</div>
+      <div class="title-row"><h1>Writing your Case Study</h1></div>
+      <p class="lede">Tell the story of your sprint in five minutes: what you discovered, what testing changed and what you honestly learned.</p>
+      <div class="meta"><span>Takes 3 hr</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>6 min read</span></div>
+    </header>
+    <div class="lecture-grid">
+      <aside class="rail"><div class="rail-sticky"><div class="definition"><div class="rail-label">Definition</div><p><b>What is a UX case study?</b> The story of a project told for others: the problem, what your research discovered, what testing changed and what you learned, honestly and in about five minutes.</p></div><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#context">Context</a></li><li class="lvl2"><a href="#it-starts-with-curiosity">It starts with curiosity</a></li><li class="lvl2"><a href="#the-rules-of-evidence">The rules of evidence</a></li><li class="lvl2"><a href="#short-and-only-what-you-learned">Short, and only what you learned</a></li><li class="lvl2"><a href="#goal-learning-outcome">Goal / Learning Outcome</a></li><li class="lvl2"><a href="#main-exercise">Main Exercise</a></li><li class="lvl2"><a href="#three-case-studies-to-learn-from">Three case studies to learn from</a></li><li class="lvl2"><a href="#media">Media</a></li></ol></div><div class="rail-block"><div class="rail-label">Retrospective</div><ol class="toc family"><li><a href="sprint-retrospective.html">Retrospective</a></li><li><a href="cataloguing-artifacts.html">Cataloguing Artifacts</a></li><li><a href="writing-your-case-study.html" aria-current=page>Writing your Case Study</a></li><li><a href="building-your-web-portfolio.html">Building your Web Portfolio</a></li></ol></div></div></div></aside>
+      <article class="prose">
+<div class="definition definition-mobile"><div class="rail-label">Definition</div><p><b>What is a UX case study?</b> The story of a project told for others: the problem, what your research discovered, what testing changed and what you learned, honestly and in about five minutes.</p></div><div class="quickref"><div class="qr-row"><div class="qr-label">When</div><div class="qr-value">Retrospective: Reflect on the sprint and capture the lessons for your case study.</div></div><div class="qr-row"><div class="qr-label">Time</div><div class="qr-value">3 hr</div></div><div class="qr-row"><div class="qr-label">Goal</div><div class="qr-value"><ul><li>Structure a case study as a story with a clear beginning, middle and end.</li><li>Show evidence at every phase: what discovery discovered, what the data defined, what testing validated.</li><li>Write an honest reflection, including what went wrong and how it felt.</li><li>Cut it down to a five-minute read that a hiring manager can scan.</li></ul></div></div></div>
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#context">Context</a></li><li class="lvl2"><a href="#it-starts-with-curiosity">It starts with curiosity</a></li><li class="lvl2"><a href="#the-rules-of-evidence">The rules of evidence</a></li><li class="lvl2"><a href="#short-and-only-what-you-learned">Short, and only what you learned</a></li><li class="lvl2"><a href="#goal-learning-outcome">Goal / Learning Outcome</a></li><li class="lvl2"><a href="#main-exercise">Main Exercise</a></li><li class="lvl2"><a href="#three-case-studies-to-learn-from">Three case studies to learn from</a></li><li class="lvl2"><a href="#media">Media</a></li></ol></details>
+<figure class="media"><img alt="Once upon a time" src="../content/methods/writing-your-case-study/story-19.jpg" loading="lazy" decoding="async"></figure>
+<h2 id="context"><span class="h-icon">👋</span>Context</h2>
+<p>Your case study matters more than your prototype. A hiring manager won't use your app; they'll read your case study, for about five minutes, to decide whether they can picture you on their team. Nielsen Norman Group's portfolio guidance says the same thing: they want to understand <strong>how you work</strong>.</p>
+<p>So a case study is not a list of methods ("I did a survey, then a persona, then wireframes"). It's a <strong>story</strong>, with a hero (you and your users), a goal, obstacles, a moment when things went wrong and an ending where something changed.</p>
+<h2 id="it-starts-with-curiosity">It starts with curiosity</h2>
+<p>The best case studies come from problems the designer was genuinely <strong>curious</strong> about. Curiosity is what makes you ask the extra "why?" in an interview, notice the odd thing in the data and keep going when the first idea fails. Readers can feel it. When you choose a project, especially your personal project, pick something you actually want to understand.</p>
+<h2 id="the-rules-of-evidence">The rules of evidence</h2>
+<p>Every phase of your case study has to earn its place:</p>
+<ul>
+<li><strong>Discovery must discover something.</strong> Show your <strong>initial problem statement</strong> next to what your research actually found. If nothing changed, you didn't discover anything.</li>
+<li><strong>Define must be based on data.</strong> Your <strong>validated problem statement</strong>, persona and priorities must point back to real research, not assumptions.</li>
+<li><strong>Ideation must be tested and validated.</strong> Show what you tested with users, what failed and what you changed because of it.</li>
+<li><strong>The retrospective must be honest.</strong> Never write "everything was amazing". Design is messy, and senior designers expect a non-linear, less-than-perfect journey. Showing what went wrong, and how you recovered, is what makes you credible.</li>
+</ul>
+<h2 id="short-and-only-what-you-learned">Short, and only what you learned</h2>
+<p>Aim for a case study someone can read in <strong>five minutes</strong>. Don't show every artifact you made: show the moments where you <strong>learned</strong> something. That includes the emotional side: the interview that changed your mind, the test that went badly, how you felt when the idea you loved didn't work. That's the part people remember.</p>
+<h2 id="goal-learning-outcome"><span class="h-icon">🎯</span>Goal / Learning Outcome</h2>
+<ul>
+<li>Structure a case study as a story with a clear beginning, middle and end.</li>
+<li>Show evidence at every phase: what discovery discovered, what the data defined, what testing validated.</li>
+<li>Write an honest reflection, including what went wrong and how it felt.</li>
+<li>Cut it down to a five-minute read that a hiring manager can scan.</li>
+</ul>
+<h2 id="main-exercise"><span class="h-icon">🛠️</span>Main Exercise</h2>
+<p>Use the artifacts you catalogued and your <strong>Retrospective</strong>, and write the story in four beats.</p>
+<p><strong>1. State a clear purpose.</strong></p>
+<figure class="media"><img alt="01 State a clear purpose" src="../content/methods/writing-your-case-study/story-15.jpg" loading="lazy" decoding="async"></figure>
+<p>What did you set out to achieve, for whom, and why does it matter? Include your <strong>role</strong> and the team, and why you were curious about this problem.</p>
+<p><strong>2. Show what you discovered.</strong></p>
+<figure class="media"><img alt="02 State key challenges" src="../content/methods/writing-your-case-study/story-16.jpg" loading="lazy" decoding="async"></figure>
+<p>Put your initial problem statement next to your validated one. Show the research that changed your mind, the real constraints you faced (time, access to users, a vague brief) and how you reached a direction.</p>
+<p><strong>3. Say when things got tough.</strong></p>
+<figure class="media"><img alt="03 Say when things got tough" src="../content/methods/writing-your-case-study/story-17.jpg" loading="lazy" decoding="async"></figure>
+<p>A film where the hero sails through is boring. Tell the reader about the test that failed, the idea you abandoned, the feedback that stung, and how you <strong>recovered</strong>, with before-and-after evidence of what changed.</p>
+<p><strong>4. Reflect honestly.</strong></p>
+<figure class="media"><img alt="04 Reflect on the journey" src="../content/methods/writing-your-case-study/story-18.jpg" loading="lazy" decoding="async"></figure>
+<p>What was the impact on users? What did you learn, about the problem and about yourself? What would you do differently? How did it feel? Take this straight from your retrospective.</p>
+<p><strong>Then build it:</strong></p>
+<ol>
+<li>Write a one-line hook and a three-sentence summary for the top of the page.</li>
+<li>Draft each beat in a few short paragraphs.</li>
+<li>Choose 2–3 artifacts per beat, only the ones where you learned something, each with a caption that says what it shows and why it mattered.</li>
+<li>Cut until it reads in five minutes. Use headings, short paragraphs and bold key points.</li>
+<li>Read it aloud to a classmate. Where they get lost, rewrite.</li>
+<li>Publish it on Medium (or your portfolio), share it with your instructor, then post a short summary on LinkedIn.</li>
+</ol>
+<h2 id="three-case-studies-to-learn-from">Three case studies to learn from</h2>
+<p>None of these is perfect, and that's the point. Read each one critically and ask: what did they learn, and how do they show it?</p>
+<ul>
+<li><strong><a href="https://medium.com/@kellyyspace/uxdi-project-3-pizza-hut-delivery-app-redesign-d49f93c94857">Case Study: Pizza Hut Delivery App Redesign</a></strong>, Kellyyspace (UX bootcamp team project). Closest to what you'll write: research, personas, usability tests with real numbers (satisfaction up from 3.8 to 7.9 out of 10 with six users), changes made because of the feedback, and an honest "what I learned".</li>
+<li><strong><a href="https://medium.com/spotify-insights/its-ok-to-be-human-in-a-machine-learned-world-4ad62a947a9e">It's OK to be Human in a Machine-Learned World</a></strong>, Spotify Insights. A researcher at Spotify on naming a feature when the A/B test "returned neutral". Proof that real design is messy, that data doesn't always decide for you, and that honest reflection is compelling.</li>
+<li><strong><a href="https://medium.com/@dustin/redesigning-medium-f665d2cc9c29">Redesigning Medium</a></strong>, Dustin Senos (Medium's head of design). A four-minute read built entirely around lessons learned, from a brainstorm that wasn't working to asking the right questions at the right fidelity. A model of "only highlight what you learned".</li>
+</ul>
+<details class="more"><summary>Template</summary>
+<ul>
+<li>🪝 Hook and three-sentence summary</li>
+<li>🎯 1. Purpose: problem, users, role, and why you were curious</li>
+<li>🔍 2. Discovery: initial vs validated problem statement, the evidence that changed your mind</li>
+<li>🌧️ 3. When things got tough: what failed, how you recovered, before and after</li>
+<li>🌅 4. Honest reflection: impact, lessons, what you'd do differently, how it felt</li>
+<li>⏱️ Five-minute read</li>
+</ul>
+</details>
+<details class="more"><summary>Tips</summary>
+<ul>
+<li>Lead with the problem, not the method.</li>
+<li>Use "I" for what you did and "we" for the team, and be honest about which is which.</li>
+<li>Every image needs a caption. An uncaptioned journey map is just decoration.</li>
+<li>Show abandoned ideas: they prove you explored before you decided.</li>
+<li>Only use numbers you can back up: "task time down from 3 min to 50 s with 5 users".</li>
+<li>If you used AI, say where and how you checked it.</li>
+</ul>
+</details>
+<details class="more"><summary>AI Assist</summary>
+<p>Paste your draft into Claude and ask: "Read this as a hiring manager with five minutes. What was the problem, what did my research discover, what did testing change, and what did I learn? Where did you get lost?" If its answers are wrong, your story isn't clear yet.</p>
+</details>
+<h2 id="media"><span class="h-icon">🎥</span>Media</h2>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/jt1WroGHvBs" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/88GQ6tXTYcg" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<details class="more"><summary>Resources</summary>
+<p><a href="https://www.nngroup.com/articles/ux-design-portfolios/">5 Steps to Creating a UX-Design Portfolio – Nielsen Norman Group</a></p>
+<p><a href="https://www.nngroup.com/articles/ux-stories/">UX Stories Communicate Designs – Nielsen Norman Group</a></p>
+<ul class="cards"><li><a class="card" href="sprint-retrospective.html"><span class="card-title">Retrospective</span><span class="card-desc">Look back honestly at the sprint: what you liked, learned and lacked, and how it felt.</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li></ul>
+</details>
+<details class="more"><summary>Checklist</summary>
+<p>☐ Chose a problem you're curious about, and said why</p>
+<p>☐ Showed what discovery discovered (initial vs validated problem statement)</p>
+<p>☐ Backed every decision with data, and showed what testing changed</p>
+<p>☐ Wrote an honest reflection, including what went wrong and how it felt</p>
+<p>☐ Cut it to a five-minute read with captioned artifacts</p>
+<p>☐ Published it and shared the link</p>
+</details>
+<details class="more"><summary>Summary</summary>
+<p>A <strong>case study</strong> is the story of how you think. Start from curiosity, make every phase earn its place (discovery that discovers, definitions based on data, ideas that were tested) and finish with an honest reflection. Keep it to five minutes and show only what you learned, including when things got messy.</p></details>
+
+<section class="related"><h2 id="related">Related</h2><ul class="cards"><li><a class="card" href="../methods/cataloguing-artifacts.html"><span class="card-title">Cataloguing Artifacts</span><span class="card-desc">UX Methods · Retrospective</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li><li><a class="card" href="../methods/building-your-web-portfolio.html"><span class="card-title">Building your Web Portfolio</span><span class="card-desc">UX Methods · Retrospective</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li><li><a class="card" href="../methods/sprint-retrospective.html"><span class="card-title">Retrospective</span><span class="card-desc">UX Methods · Retrospective</span><span class="card-go"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li></ul></section>
+      </article>
+    </div>
+    <nav class="pagers"><a class="pager prev" href="cataloguing-artifacts.html"><span class="pager-label">Previous</span><span class="pager-title">Cataloguing Artifacts</span></a><a class="pager next" href="building-your-web-portfolio.html"><span class="pager-label">Next</span><span class="pager-title">Building your Web Portfolio</span></a></nav>
+  </div>
+</main>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<footer class="foot"><div class="foot-inner"><span>Cornerstones · UX & UI learning resource for Barcelona Code School</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<div class="celebrate" id="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="celebrate-title">
+  <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
+  <h2 id="celebrate-title"></h2><p class="celebrate-text"></p>
+  <div class="celebrate-actions"><a class="login-submit celebrate-link" href="../certificate.html" hidden>See your certificate</a>
+  <button type="button" class="login-submit" id="celebrate-close">Nice!</button></div></div>
+</div>
+<script src="../assets/progress-data.js?v=bc9ff1ff13"></script>
+<script src="../assets/app.js?v=bc9ff1ff13"></script>
+</body>
+</html>

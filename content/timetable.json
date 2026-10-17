@@ -492,14 +492,14 @@
           "activities": [
             {
               "label": "Storyframing and outlining case studies",
-              "link": "methods/process-narrative"
+              "link": "methods/writing-your-case-study"
             },
             {
               "label": "Service design and lean startup projects",
               "link": "methods/cataloguing-artifacts"
             },
             {
-              "label": "Sprint retrospective",
+              "label": "Retrospective",
               "link": "methods/sprint-retrospective"
             }
           ]
@@ -519,8 +519,8 @@
               "link": "methods/problem-statement"
             },
             {
-              "label": "Process narratives",
-              "link": "methods/process-narrative"
+              "label": "Writing your case study",
+              "link": "methods/writing-your-case-study"
             },
             {
               "label": "Solution impact",
@@ -548,7 +548,7 @@
           "activities": [
             {
               "label": "Final case study polish",
-              "link": "methods/process-narrative"
+              "link": "methods/writing-your-case-study"
             },
             {
               "label": "Multi-project portfolio submission"
@@ -824,7 +824,7 @@
           "activities": [
             {
               "label": "Case study write-up review",
-              "link": "methods/process-narrative"
+              "link": "methods/writing-your-case-study"
             }
           ],
           "workshop": {

@@ -6,7 +6,7 @@ Turn your case studies into a live portfolio website, built in Framer.
 
 # 👋 Context
 
-Your case studies need a home. In Portfolio Week you design and build your own portfolio website in **Framer**, a no-code tool that turns designs into a live, responsive site. The case studies you wrote with the **Process Narrative** method, and the artifacts you gathered with **Cataloguing Artifacts**, go into a CMS (content management system), so every case study shares one consistent template.
+Your case studies need a home. In Portfolio Week you design and build your own portfolio website in **Framer**, a no-code tool that turns designs into a live, responsive site. The case studies you wrote with **[Writing your Case Study](writing-your-case-study.html)**, and the artifacts you gathered with **Cataloguing Artifacts**, go into a CMS (content management system), so every case study shares one consistent template.
 
 Work like a real product sprint: plan a backlog, set up styles and components first, then build the pages, then fill them with your case studies.
 

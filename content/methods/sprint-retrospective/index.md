@@ -1,152 +1,107 @@
-# Sprint Retrospective
+# Retrospective
 
 # 🪜 Stage: Retrospective
 
+An honest look back at the sprint: what you liked, what you learned and what you lacked.
+
 # 👋 Context
 
-**🎉 Congratulations! You have completed the sprint!**
+**🎉 Congratulations, you've finished the sprint!**
 
-You’ve completed your usability tests, distilled findings, and iterated on your design. Now it’s time to **reflect on the sprint as a whole**. This is the **Sprint Retrospective** — a structured reflection that helps you capture what went well, what was challenging, and what you’ll do differently next time.
+Before you move on, stop and look back. A **retrospective** is a short, structured reflection on the sprint as a whole: not just the product, but how you worked, what surprised you and what you'd do differently. Agile teams run one at the end of every sprint, because it's how teams (and designers) get better.
 
-Although this is **the last step in the bootcamp**, think of it as **the first step in your independent design practice**. The retrospective is the **first page you will create for your case study**, summarising your process and insights in a way that sets up the story of your work for future viewers.
+The most important rule is **honesty**. A retrospective that says "everything was amazing" is useless, and nobody believes it. Design is messy: interviews fall through, tests fail, ideas you loved don't work, teams disagree. Senior designers know this and expect to see it. What they want to know is what you **learned** from it.
 
-| Aspect | Sprint Retrospective | Usability Test / Design Iteration |
+Your retrospective is also the raw material for the most important part of your case study: the honest reflection at the end. See [Writing your Case Study](writing-your-case-study.html).
+
+| | Retrospective | Usability Test / Design Iteration |
 | --- | --- | --- |
-| **Purpose** | *Reflect on the sprint: celebrate successes, identify challenges, plan improvements* | Observe users, distill findings, iterate design |
-| **Focus** | Process and learning, not just product outcomes | Product performance and usability issues |
-| **Output** | Notes, summary reflections, actionable insights for next sprint | Updated designs, before/after snapshots, prioritized fixes |
-| **Position in case study** | First page (overview of process and reflection) | Mid-case study (evidence of testing and iteration) |
+| **Purpose** | Reflect on the sprint and how you worked | Observe users and improve the design |
+| **Focus** | Process, decisions, learning and feelings | Product performance and usability issues |
+| **Output** | Liked, Learned, Lacked notes and next steps | Updated designs and before/after evidence |
+| **In your case study** | The honest reflection at the end | The evidence in the middle |
 
 # 🎯 Goal / Learning Outcome
 
-By the end of this activity, students will have:
-
-- Reflected on their design process critically.
-- Documented insights, lessons learned, and next steps.
-- Created the **first page of their case study**, summarising their sprint journey.
+- Reflect honestly on the sprint, including what went wrong.
+- Use the 3Ls framework (Liked, Learned, Lacked) to capture lessons.
+- Record how it felt, not just what happened.
+- Turn the reflection into concrete next steps and notes for your case study.
 
 # 🛠️ Main Exercise
 
-### **Step 1 – Gather Inputs**
+**Step 1: Gather the evidence (10 min)**
 
-**Instructions:**
+Lay out your sprint artifacts: research notes, your initial and validated problem statements, test results, iterations. Mark the key moments:
 
-1. **Review your sprint artifacts:**
-    - Discovery research, user interviews and usability test notes etc.
-2. **Highlight Key Moments:**
-    - Wins: What went well? What worked for users or the team?
-    - Challenges: Where did users struggle? Where did you struggle? What was surprising?
-    - Decisions: What guided design choices or pivots?
+- **Wins:** what worked for users or the team?
+- **Low points:** where did users struggle? Where did *you* struggle? What surprised you?
+- **Turning points:** which decisions or findings changed your direction?
 
----
+**Step 2: Liked, Learned, Lacked (20 min)**
 
-### **Step 2 – Reflect Using the 3Ls Framework**
+Write sticky notes, alone first, then share with your team:
 
-**Instructions:**
+1. **Liked:** what worked well or exceeded expectations? *"Users understood the onboarding without help."*
+2. **Learned:** what did the sprint teach you about the problem, the users or yourself? *"Users kept missing the checkout button: our labels were the problem, not the layout."*
+3. **Lacked:** what was missing, and what would you do differently? *"We lacked time for edge-case testing, and we started designing before our research was finished."*
 
-1. **Liked:**
-    - What worked well or exceeded expectations?
-    - Examples: “Users understood the onboarding flow without guidance.”
-2. **Learned:**
-    - Key takeaways from testing, iteration, or any part of the process.
-    - Examples: “Users consistently missed the checkout button, indicating a labeling issue.”
-3. **Lacked / Longed For:**
-    - What could be improved next sprint?
-    - Examples: “We lacked time for edge-case testing” or “Need clearer error messages.”
+**Step 3: How did it feel? (5 min)**
 
-*Tip:* You can adapt this into a simple table or sticky-note layout to organize reflections visually.
+Write one or two honest sentences: the moment you were most frustrated, most proud or most surprised. These feelings make your case study human.
 
----
+**Step 4: Next steps (10 min)**
 
-### **Step 3 – Translate Reflection into Case Study Page**
-
-**Instructions:**
-
-1. **Highlight Next Steps:**
-    - Indicate how the reflections will guide future independent projects.
-    - Example: “In my next sprint, I will focus on improving navigation clarity based on recurring patterns.”
-
----
-
-### **Step 4 – Start your Case Study**
-
-**Instructions:**
-
-1. **Create a Case Study Page in Medium**
-    - **Title:** Use your sprint name (e.g., “Sprint 5: Onboarding Redesign”)
-    - **Phases:** 🌼 Discovery, 🌸 Define, 🏵️ Ideate, 💮 Validate, and Retrospective
-    - Insert your classroom activities. Not all may be necessary.
-    - **Include Visuals:** Add diagrams, screenshots, task flows and snapshots that tell your story visually:
-        - Research phase findings (survey results, interview highlights)
-        - Personas, user journeys, and task flows
-        - Low-fidelity and high-fidelity design iterations
-        - Testing results and patterns observed
-        - Any decision-making artifacts (whiteboards, sketches, etc.)
-2. **Insert you Sprint Retrospective:**
-    - End your case study with the retrospective lessons learned and next steps, showing growth and reflection from the sprint.
-3. **Get your Case Study Reviewed**
-    - Share your case study with trusted friends and colleagues for robust feedback
-4. **Publish and Share**
-    - **Publish on Medium:** Ensure the case study is polished and readable. Use headings, images, and clear text.
-    - **Share with Your School:** Send the link to your instructors or mentors for feedback.
-    - **Share on LinkedIn:** Post a short summary highlighting your process and key insights, linking to your full case study.
-    - **Optional Portfolio:** Add it to your personal design portfolio website
+Turn each "Lacked" into an action: *"Next sprint, I'll book interviews on day 1, not day 3."* Then note which two or three lessons belong in your case study.
 
 # ⏱️ Estimated Duration
 
-- **Sprint Retrospective:** 45 min
-- **Case Study Creation**: ~5 Hours
+- 45 minutes
 
----
+# 🏞️ Template
+
+- 👍 **Liked:** …
+- 💡 **Learned:** …
+- 🕳️ **Lacked:** …
+- ❤️ **How it felt:** …
+- ⏭️ **Next time I will:** …
+- 📖 **For my case study:** …
 
 # ⚡ Tips
 
-- The case study is more important than the prototype
-- Do not try to demonstrate the perfect product.
-- Never be afraid to show what you learned.
-- Remember a case study should be like a really good story! Tell the story of your sprint
-- A Case study should include many parts of your sprint but keep it concise readable.
+- No "everything was amazing". If you can't find anything that went wrong, look harder.
+- Talk about the process, not just the product.
+- Be kind to your team: discuss what happened, not whose fault it was.
+- Specific beats general: "We tested too late" is weak; "We tested on day 4, so we had no time to fix the checkout" is useful.
 
 # ✨ AI Assist
 
-You can ask an AI tool:
-
-“Take the best parts of my material and craft a great case study template”
+Paste your Liked, Learned, Lacked notes into Claude and ask: "Which of these lessons are too vague to be useful? Ask me one question about each to make it more specific." Then answer the questions yourself.
 
 # 🎥 Media
 
 [https://www.youtube.com/watch?v=jt1WroGHvBs](https://www.youtube.com/watch?v=jt1WroGHvBs)
 
-[https://www.youtube.com/watch?v=YW7a9jdhPGw&t=3s](https://www.youtube.com/watch?v=YW7a9jdhPGw&t=3s)
+[https://www.youtube.com/watch?v=YW7a9jdhPGw](https://www.youtube.com/watch?v=YW7a9jdhPGw)
 
 # 📚 Resources
 
-[Sprint Retrospective: How to Hold an Effective Meeting | Atlassian](https://www.atlassian.com/team-playbook/plays/retrospective)
+[Retrospectives – Atlassian Team Playbook](https://www.atlassian.com/team-playbook/plays/retrospective)
 
-[Medium: Read and write stories.](https://medium.com/)
+[Writing your Case Study](writing-your-case-study.html)
 
 # ✅ Checklist
 
-### **Preparation**
+☐ Gathered your sprint artifacts and marked the key moments
 
-☐ Collect all sprint artefacts (test notes, iteration snapshots).
+☐ Completed Liked, Learned and Lacked honestly, including what went wrong
 
-☐ Identify key moments and decisions.
+☐ Wrote down how it felt
 
-### **During Reflection**
+☐ Turned each "Lacked" into a next step
 
-☐ Complete the 3Ls framework: Liked, Learned, Lacked.
-
-☐ Highlight actionable next steps.
-
-### **After Reflection**
-
-☐ Draft your sprint retrospective
-
-☐ Build up your Case Study
-
-☐ Published Case study to Medium
+☐ Picked the lessons for your case study
 
 # 📝 Summary
 
-**Sprint Retrospectives** are more than a “wrap-up”: they are **the bridge from guided learning to independent practice**. By reflecting on wins, lessons, and opportunities, students create **the first page of their case study**, which incidentally will be featured last, capturing their process and decisions. This reflection not only consolidates learning but also sets a clear foundation for **future design sprints and independent projects**. And so a big congratulations and best wishes in your chosen future career.
+A **retrospective** is an honest look back at the sprint: what you liked, what you learned, what you lacked and how it felt. It's how designers get better, and it gives your case study its most valuable part, a real reflection on a messy, non-linear process.

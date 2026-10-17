@@ -204,7 +204,7 @@ ORDER = {
                      "brand-pack", "style-guide", "paper-wireframes", "mid-fi", "hi-fi"],
         "Validation": ["usability-test", "create-your-script", "facilitator-format",
                        "limited-intervention-technique", "notetaker-format", "ab-test", "design-iteration"],
-        "Retrospective": ["sprint-retrospective", "cataloguing-artifacts", "process-narrative", "building-your-web-portfolio"],
+        "Retrospective": ["sprint-retrospective", "cataloguing-artifacts", "writing-your-case-study", "building-your-web-portfolio"],
         "AI Workflows": ["ai-guidelines", "mcp", "skills-in-claude", "connectors-in-claude", "avoiding-ai-slop", "token-economics"],
     },
     "sprints": {
@@ -285,10 +285,10 @@ RELATED = [
     ("methods/mood-board", "methods/brand-pack"),
     ("methods/brand-pack", "methods/style-guide"),
     ("methods/ab-test", "methods/usability-test"),
-    ("methods/cataloguing-artifacts", "methods/process-narrative"),
-    ("methods/process-narrative", "methods/building-your-web-portfolio"),
+    ("methods/cataloguing-artifacts", "methods/writing-your-case-study"),
+    ("methods/writing-your-case-study", "methods/building-your-web-portfolio"),
     ("methods/sitemap", "methods/building-your-web-portfolio"),
-    ("methods/sprint-retrospective", "methods/process-narrative"),
+    ("methods/sprint-retrospective", "methods/writing-your-case-study"),
     ("methods/hi-fi", "ux/stages-of-wireframes"),
     ("methods/research-goal", "methods/research-questions"),
     ("methods/crazy-8s", "methods/crazy-8s-with-ai"),
@@ -919,7 +919,7 @@ METHOD_BANK = [
     ("Validation", "I need to know whether my design actually works.",
      ["usability-test", "ab-test", "design-iteration"]),
     ("Retrospective", "I need to look back and tell the story of my project.",
-     ["sprint-retrospective", "cataloguing-artifacts", "process-narrative"]),
+     ["sprint-retrospective", "cataloguing-artifacts", "writing-your-case-study"]),
     ("AI Workflows", "I want AI to help, without it taking over or making my work generic.",
      ["ai-guidelines", "avoiding-ai-slop", "skills-in-claude", "token-economics"]),
 ]
@@ -1354,7 +1354,8 @@ REMOVED.update({
     "lectures/portfolio.html": "../methods/building-your-web-portfolio.html",
     "lectures/scripts.html": "../methods/building-your-web-portfolio.html",
 })
-REMOVED["ui/case-studies-and-how-to-tell-a-good-story.html"] = "../methods/process-narrative.html"
+REMOVED["ui/case-studies-and-how-to-tell-a-good-story.html"] = "../methods/writing-your-case-study.html"
+REMOVED["methods/process-narrative.html"] = "writing-your-case-study.html"
 
 
 def write_redirects(data):
