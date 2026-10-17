@@ -1371,6 +1371,8 @@ def render_slide(track, slug, layout, text):
             src = f"../../content/{track}/{slug}/{src}"
         return f'<img alt="{alt}" src="{src}" decoding="async">'
     html_ = IMG_RE.sub(fix, html_)
+    if layout in ("exercise", "answers") and "<img" in html_:
+        layout = "split"  # an exercise with a picture: text beside the image
     if layout in ("split", "image"):  # pull the first image out into its own column or frame
         m = re.search(r"<p>\s*(<img [^>]*>)\s*</p>|(<img [^>]*>)", html_)
         if m:

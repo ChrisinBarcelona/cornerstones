@@ -87,25 +87,23 @@ Change an atom once, and every molecule, organism and page that uses it updates.
 That's why design systems are fast, and why consistency comes for free.
 ---
 @exercise
-## Sort the parts
+## Take YouTube apart
 
-A food delivery app. Is each one an **atom**, **molecule**, **organism**, **template** or **page**?
+![YouTube's home page on desktop](youtube-home.webp)
 
-1. The search icon
-2. A search bar: icon + input + button
-3. A restaurant card: photo, name, rating and delivery time
-4. The brand orange `#FF6100`
-5. A scrolling list of restaurant cards with a heading
-6. The home screen layout with placeholder boxes
-7. The home screen with real restaurants near you
+Find at least:
+
+- **3 atoms**
+- **3 molecules**
+- **3 organisms**
+
+Then: what's the **template**, and what makes this a **page**?
 ---
 @answers
 ## Check yourself
 
-1. Search icon: **atom**
-2. Search bar: **molecule**
-3. Restaurant card: **molecule**
-4. Brand orange: **atom** (a style)
-5. List of cards with a heading: **organism**
-6. Layout with placeholders: **template**
-7. Home screen with real content: **page**
+- **Atoms:** the logo, search and mic icons, a duration badge (`2:37`), a channel avatar, the verified tick, the ⋮ menu icon
+- **Molecules:** the search bar (input + button), a category chip, a nav item (icon + label), the Sign in button, a video's details (avatar, title, channel, views)
+- **Organisms:** the top bar, the left navigation rail, the chip bar, the grid of videos. A video card sits on the line: some teams call it a molecule, some an organism
+- **Template:** top bar + rail + chip bar + a three-column grid of video cards
+- **Page:** that template filled with real videos, chosen for you
