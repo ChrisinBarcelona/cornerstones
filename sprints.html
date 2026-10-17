@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=26feded173">
-<link rel="stylesheet" href="assets/theme.css?v=26feded173">
+<link rel="stylesheet" href="assets/style.css?v=cf00b14d94">
+<link rel="stylesheet" href="assets/theme.css?v=cf00b14d94">
 </head>
 <body class="t-sprints">
 <header class="nav">
@@ -27,7 +27,7 @@
   </div>
   <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
   <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete</button>
-    <nav class="course-chips" aria-label="Progress by section"><a class="cp-chip t-ux" data-chip="ux" href="ux.html" title="UX Theory"><span class="cp-fill"></span><span class="cp-name">UX Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ui" data-chip="ui" href="ui.html" title="UI Theory"><span class="cp-fill"></span><span class="cp-name">UI Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-figma" data-chip="figma" href="figma.html" title="Figma"><span class="cp-fill"></span><span class="cp-name">Figma</span><b class="cp-count">0/0</b></a><a class="cp-chip t-exercises" data-chip="exercises" href="exercises.html" title="Exercises"><span class="cp-fill"></span><span class="cp-name">Exercises</span><b class="cp-count">0/0</b></a></nav>
+    <nav class="course-chips" aria-label="Progress by section"><a class="cp-chip t-sprints" data-chip="sprints" href="sprints.html" title="Sprints"><span class="cp-fill"></span><span class="cp-name">Sprint Briefs</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ux" data-chip="ux" href="ux.html" title="UX Theory"><span class="cp-fill"></span><span class="cp-name">UX Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ui" data-chip="ui" href="ui.html" title="UI Theory"><span class="cp-fill"></span><span class="cp-name">UI Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-figma" data-chip="figma" href="figma.html" title="Figma"><span class="cp-fill"></span><span class="cp-name">Figma</span><b class="cp-count">0/0</b></a><a class="cp-chip t-exercises" data-chip="exercises" href="exercises.html" title="Exercises"><span class="cp-fill"></span><span class="cp-name">Exercises</span><b class="cp-count">0/0</b></a></nav>
     <a class="mini-badges" id="mini-badges" href="index.html#badges-title" aria-label="Your badges"></a></div>
 </header>
 
@@ -42,7 +42,17 @@
       </div>
       <a class="hero-link" href="sprints/honest-greens.html">Start with Sprint 01: Honest Greens <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </header>
-    
+    <div class="progress" data-track="sprints">
+  <div class="progress-row"><span class="progress-label">Your progress</span><span class="progress-count">–</span></div>
+  <div class="progress-bar" role="progressbar" aria-label="Sprints progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+  <div class="progress-badge"><svg class="badge-art" viewBox="0 0 96 112" width="44" height="51" aria-hidden="true">
+  <path d="M30 70 18 108l16-8 10 12 8-34z" fill="#ff3d8b" opacity=".75"/><path d="M66 70l12 38-16-8-10 12-8-34z" fill="#ff3d8b" opacity=".75"/>
+  <circle cx="48" cy="46" r="40" fill="#ff3d8b"/><circle cx="48" cy="46" r="32" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2" stroke-dasharray="3 4"/>
+  <circle cx="48" cy="46" r="26" fill="#fff" fill-opacity=".16"/>
+  <text x="48" y="54" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="24" fill="#fff">SP</text>
+</svg><span class="progress-badge-text">Finish them all to earn the Sprints award.</span></div>
+  
+</div>
     <div class="layout">
       <aside class="sidebar">
         <div class="side-label">Category</div>
@@ -64,35 +74,39 @@
         
         <ol class="rows" id="rows">
 <li class="chapter" data-cat="Sprint Briefs"><h2 class="chapter-name">Sprint Briefs</h2><p class="chapter-blurb">Service design, a startup, a wicked problem and a project of your own.</p></li><li class="row no-stats" data-key="sprints/honest-greens" data-cat="Sprint Briefs" data-search="sprint 01: honest greens sprint briefs service design: map how a busy barcelona restaurant really works at lunchtime, find where it breaks, and redesign the service.">
-  <span class="row-num">1</span>
+  <span class="row-icon" title="Brief 1"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.496 12a2.5 2.5 0 00.399-2.214A2 2 0 0020.32 6.5 2 2 0 0019 3a2 2 0 00-1.5.68 2 2 0 00-3.287.424 2.5 2.5 0 00-3.189 2.06A3 3 0 0012 12l4-4" /> <path d="M4 12a1 1 0 00-.99 1.133A9 9 0 0012 21a9 9 0 008.99-7.867A1 1 0 0020 12z" /> <path d="M7 21h10" /> <path d="M9.85 6.907A3.5 3.5 0 005.05 12" /></svg></span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="sprints/honest-greens.html">Sprint 01: Honest Greens</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">Service design: map how a busy Barcelona restaurant really works at lunchtime, find where it breaks, and redesign the service.</p>
     
+    <button type="button" class="complete-btn card-complete" data-complete="sprints/honest-greens" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
   </div>
   
 </li><li class="row no-stats" data-key="sprints/locker-room" data-cat="Sprint Briefs" data-search="sprint 02: locker room sprint briefs lean startup: test whether secure, app-booked beach lockers in barceloneta should exist, build the business model and design the app.">
-  <span class="row-num">2</span>
+  <span class="row-icon" title="Brief 2"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="16" r="1" /> <rect x="3" y="10" width="18" height="12" rx="2" /> <path d="M7 10V7a5 5 0 0 1 10 0v3" /></svg></span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="sprints/locker-room.html">Sprint 02: Locker Room</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">Lean Startup: test whether secure, app-booked beach lockers in Barceloneta should exist, build the business model and design the app.</p>
     
+    <button type="button" class="complete-btn card-complete" data-complete="sprints/locker-room" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
   </div>
   
 </li><li class="row no-stats" data-key="sprints/wicked-project" data-cat="Sprint Briefs" data-search="sprint 03: the wicked project sprint briefs a one-week, high-stakes sprint: map a wicked problem, find one leverage point and pitch a working concept.">
-  <span class="row-num">3</span>
+  <span class="row-icon" title="Brief 3"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54" /> <path d="M7 3.34V5a3 3 0 0 0 3 3a2 2 0 0 1 2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2c0-1.1.9-2 2-2h3.17" /> <path d="M11 21.95V18a2 2 0 0 0-2-2a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05" /> <circle cx="12" cy="12" r="10" /></svg></span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="sprints/wicked-project.html">Sprint 03: The Wicked Project</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">A one-week, high-stakes sprint: map a wicked problem, find one leverage point and pitch a working concept.</p>
     
+    <button type="button" class="complete-btn card-complete" data-complete="sprints/wicked-project" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
   </div>
   
 </li><li class="row no-stats" data-key="sprints/personal-project" data-cat="Sprint Briefs" data-search="sprint 04: the personal project sprint briefs two weeks on a problem of your own, from field research to a tested hi-fi product and your flagship case study.">
-  <span class="row-num">4</span>
+  <span class="row-icon" title="Brief 4"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 13-.654-4.736a4 4 0 00-2.756-3.266l-9.163-2.9a2 2 0 00-2.017.493l-.82.819a2 2 0 00-.492 2.017l2.9 9.163a4 4 0 003.266 2.756L13 18" /> <path d="M18.648 12.352a1.205 1.205 0 011.704 0l1.296 1.296a1.205 1.205 0 010 1.704l-6.296 6.296a1.205 1.205 0 01-1.704 0l-1.296-1.296a1.205 1.205 0 010-1.704z" /> <path d="m3 3 6.586 6.586" /> <circle cx="11" cy="11" r="2" /></svg></span>
   <div class="row-body">
     <div class="row-head"><a class="row-title" href="sprints/personal-project.html">Sprint 04: The Personal Project</a><span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">Two weeks on a problem of your own, from field research to a tested hi-fi product and your flagship case study.</p>
     
+    <button type="button" class="complete-btn card-complete" data-complete="sprints/personal-project" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
   </div>
   
 </li>
@@ -109,7 +123,7 @@
   <div class="celebrate-actions"><a class="login-submit celebrate-link" href="certificate.html" hidden>See your certificate</a>
   <button type="button" class="login-submit" id="celebrate-close">Nice!</button></div></div>
 </div>
-<script src="assets/progress-data.js?v=26feded173"></script>
-<script src="assets/app.js?v=26feded173"></script>
+<script src="assets/progress-data.js?v=cf00b14d94"></script>
+<script src="assets/app.js?v=cf00b14d94"></script>
 </body>
 </html>

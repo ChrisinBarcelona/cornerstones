@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=26feded173">
-<link rel="stylesheet" href="assets/theme.css?v=26feded173">
+<link rel="stylesheet" href="assets/style.css?v=cf00b14d94">
+<link rel="stylesheet" href="assets/theme.css?v=cf00b14d94">
 </head>
 <body class="t-home">
 <header class="nav">
@@ -27,7 +27,7 @@
   </div>
   <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
   <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete</button>
-    <nav class="course-chips" aria-label="Progress by section"><a class="cp-chip t-ux" data-chip="ux" href="ux.html" title="UX Theory"><span class="cp-fill"></span><span class="cp-name">UX Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ui" data-chip="ui" href="ui.html" title="UI Theory"><span class="cp-fill"></span><span class="cp-name">UI Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-figma" data-chip="figma" href="figma.html" title="Figma"><span class="cp-fill"></span><span class="cp-name">Figma</span><b class="cp-count">0/0</b></a><a class="cp-chip t-exercises" data-chip="exercises" href="exercises.html" title="Exercises"><span class="cp-fill"></span><span class="cp-name">Exercises</span><b class="cp-count">0/0</b></a></nav>
+    <nav class="course-chips" aria-label="Progress by section"><a class="cp-chip t-sprints" data-chip="sprints" href="sprints.html" title="Sprints"><span class="cp-fill"></span><span class="cp-name">Sprint Briefs</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ux" data-chip="ux" href="ux.html" title="UX Theory"><span class="cp-fill"></span><span class="cp-name">UX Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ui" data-chip="ui" href="ui.html" title="UI Theory"><span class="cp-fill"></span><span class="cp-name">UI Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-figma" data-chip="figma" href="figma.html" title="Figma"><span class="cp-fill"></span><span class="cp-name">Figma</span><b class="cp-count">0/0</b></a><a class="cp-chip t-exercises" data-chip="exercises" href="exercises.html" title="Exercises"><span class="cp-fill"></span><span class="cp-name">Exercises</span><b class="cp-count">0/0</b></a></nav>
     <a class="mini-badges" id="mini-badges" href="index.html#badges-title" aria-label="Your badges"></a></div>
 </header>
 
@@ -63,7 +63,7 @@
   <span class="sprint-name">The Wicked Project</span><span class="sprint-desc">A one-week, high-stakes sprint: map a wicked problem, find one leverage point and pitch a working concept.</span>
   <span class="sprint-go">Read the brief <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
 </a><a class="sprint-card" href="sprints/personal-project.html">
-  <span class="sprint-art"><span class="sprint-icon" aria-hidden="true">🧭</span><span class="sprint-num">Sprint 04</span></span>
+  <span class="sprint-art"><img src="content/sprints/personal-project/personal-project.jpg" alt="" loading="lazy"><span class="sprint-num">Sprint 04</span></span>
   <span class="sprint-body"><span class="sprint-kind">Personal project · Weeks 7 &amp; 8</span>
   <span class="sprint-name">The Personal Project</span><span class="sprint-desc">Two weeks on a problem of your own, from field research to a tested hi-fi product and your flagship case study.</span>
   <span class="sprint-go">Read the brief <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
@@ -159,8 +159,16 @@
 </a></section>
     <section class="badges" aria-labelledby="badges-title">
       <h2 id="badges-title">Your badges</h2>
-      <p class="route-intro">Celebrate every step. Finish every page in a sub-section to reach its <b>milestone</b>. Reach every milestone in a section to win its <b>award</b>. Win all four awards and Barcelona Code School awards you a <b>certificate</b> in the UX/UI Design Bootcamp. Lectures with parts count once you've done all of their parts. Progress is saved in this browser.</p>
-      <ul class="badge-shelf"><li class="award-card t-ux">
+      <p class="route-intro">Celebrate every step. Finish every page in a sub-section to reach its <b>milestone</b>. Reach every milestone in a section to win its <b>award</b>. Win all five awards (for Sprints, two of the four sprints are enough) and Barcelona Code School awards you a <b>certificate</b> in the UX/UI Design Bootcamp. Lectures with parts count once you've done all of their parts. Progress is saved in this browser.</p>
+      <ul class="badge-shelf"><li class="award-card t-sprints">
+  <div class="badge-item" data-track="sprints"><svg class="badge-art" viewBox="0 0 96 112" width="72" height="84" aria-hidden="true">
+  <path d="M30 70 18 108l16-8 10 12 8-34z" fill="#ff3d8b" opacity=".75"/><path d="M66 70l12 38-16-8-10 12-8-34z" fill="#ff3d8b" opacity=".75"/>
+  <circle cx="48" cy="46" r="40" fill="#ff3d8b"/><circle cx="48" cy="46" r="32" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2" stroke-dasharray="3 4"/>
+  <circle cx="48" cy="46" r="26" fill="#fff" fill-opacity=".16"/>
+  <text x="48" y="54" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="24" fill="#fff">SP</text>
+</svg><span class="badge-name">Sprints award</span><span class="badge-state">Locked</span></div>
+  <p class="award-note">Complete any 2 of the 4 sprints to win it. You need it to pass.</p>
+</li><li class="award-card t-ux">
   <div class="badge-item" data-track="ux"><svg class="badge-art" viewBox="0 0 96 112" width="72" height="84" aria-hidden="true">
   <path d="M30 70 18 108l16-8 10 12 8-34z" fill="#0072e3" opacity=".75"/><path d="M66 70l12 38-16-8-10 12-8-34z" fill="#0072e3" opacity=".75"/>
   <circle cx="48" cy="46" r="40" fill="#0072e3"/><circle cx="48" cy="46" r="32" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2" stroke-dasharray="3 4"/>
@@ -275,7 +283,7 @@
   <div class="celebrate-actions"><a class="login-submit celebrate-link" href="certificate.html" hidden>See your certificate</a>
   <button type="button" class="login-submit" id="celebrate-close">Nice!</button></div></div>
 </div>
-<script src="assets/progress-data.js?v=26feded173"></script>
-<script src="assets/app.js?v=26feded173"></script>
+<script src="assets/progress-data.js?v=cf00b14d94"></script>
+<script src="assets/app.js?v=cf00b14d94"></script>
 </body>
 </html>

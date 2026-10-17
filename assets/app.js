@@ -263,7 +263,8 @@
   function stats(track, milestone) {
     var items = TRACKS[track].items.filter(function (i) { return !milestone || i.category === milestone; }), share = 0, n = 0;
     items.forEach(function (i) { share += itemShare(i); if (itemDone(i)) n++; });
-    var full = n === items.length;
+    var need = !milestone && TRACKS[track].need;
+    var full = need ? n >= need : n === items.length;
     return { done: n, total: items.length, share: share, pct: percent(share, items.length, full), full: full };
   }
   // Milestones are a section's sub-sections; awards are whole sections; the certificate needs every award.
@@ -469,7 +470,7 @@
     return keys;
   }
   function markAll(on) {
-    var msg = on ? 'Mark every UX Theory and UI Theory lecture, Figma lesson and exercise as complete?'
+    var msg = on ? 'Mark every sprint brief, UX Theory and UI Theory lecture, Figma lesson and exercise as complete?'
                  : 'Unmark everything? This clears all of your progress in this browser.';
     if (!window.confirm(msg)) return;
     allKeys().forEach(function (k) { if (on) done[k] = 1; else delete done[k]; });

@@ -2,6 +2,10 @@
 
 > Your problem, your users, your methodology.
 
+![Hand-drawn mobile wireframes spread across a table, a designer pointing at one with a pen](personal-project.jpg)
+
+*Photo: Amélie Mourichon, via Unsplash*
+
 ## The brief
 
 For two weeks, you are the lead designer. Choose a problem that matters to you, something entirely your own or a continuation of an earlier sprint, and take it from research to a tested, high-fidelity product. This is your first chance to choose and defend your own UX methodology, and it will become the flagship case study in your portfolio.

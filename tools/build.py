@@ -100,9 +100,12 @@ TRACKS = [
      }},
 ]
 # Sections with progress tracking. Finishing every page of a sub-section earns its milestone badge; finishing every
-# milestone (every page) earns the section's award; all four awards unlock the certificate. A page with sub-lessons
+# milestone (every page) earns the section's award; all five awards unlock the certificate. Sprints have no
+# milestones: completing `need` of the four sprints wins their award, as two sprints are needed to pass. A page with sub-lessons
 # counts as one item, complete only when the page and every sub-lesson are done.
 PROGRESS = {
+    "sprints": {"badge": "Sprints", "short": "SP", "colour": "#ff3d8b", "need": 2,
+                "done": "You've completed two sprints, enough to pass. Keep going for all four!", "milestones": {}},
     "ux": {"badge": "UX Theory", "short": "UX", "colour": "#0072e3", "done": "You've finished every UX Theory lecture.",
            "milestones": {"Foundations": "🏛️", "Psychology": "🧠", "Process": "🔁", "Business Case Studies": "🔍", "Interface": "👆"}},
     "ui": {"badge": "UI Theory", "short": "UI", "colour": "#ff6100", "done": "You've finished every UI Theory lecture.",
@@ -1015,6 +1018,7 @@ def build_home(data):
     badges = "".join(f"""<li class="award-card t-{k}">
   <div class="badge-item" data-track="{k}">{badge_svg(k, 72)}<span class="badge-name">{b['badge']} award</span><span class="badge-state">Locked</span></div>
   {'<ul class="milestones">' + "".join(milestone_item(k, c, 40) for c in b["milestones"]) + '</ul>' if b["milestones"]
+   else f'<p class="award-note">Complete any {b["need"]} of the {len(data[k]["lectures"])} sprints to win it. You need it to pass.</p>' if b.get("need")
    else '<p class="award-note">One award for the whole section.</p>'}
 </li>""" for k, b in PROGRESS.items())
     badges += f"""<li class="award-card cert-card"><a class="badge-item" data-cert href="certificate.html">{certificate_svg(72)}
@@ -1038,7 +1042,7 @@ def build_home(data):
     <section class="sections" aria-label="Sections">{''.join(cards)}</section>
     <section class="badges" aria-labelledby="badges-title">
       <h2 id="badges-title">Your badges</h2>
-      <p class="route-intro">Celebrate every step. Finish every page in a sub-section to reach its <b>milestone</b>. Reach every milestone in a section to win its <b>award</b>. Win all four awards and {SCHOOL} awards you a <b>certificate</b> in the {CERTIFICATE}. Lectures with parts count once you've done all of their parts. Progress is saved in this browser.</p>
+      <p class="route-intro">Celebrate every step. Finish every page in a sub-section to reach its <b>milestone</b>. Reach every milestone in a section to win its <b>award</b>. Win all five awards (for Sprints, two of the four sprints are enough) and {SCHOOL} awards you a <b>certificate</b> in the {CERTIFICATE}. Lectures with parts count once you've done all of their parts. Progress is saved in this browser.</p>
       <ul class="badge-shelf">{badges}</ul>
     </section>
     <section class="route">
@@ -1218,7 +1222,7 @@ def build_certificate():
       <div class="cert-lock-art">{certificate_svg(110)}</div>
       <div class="eyebrow">{SCHOOL}</div>
       <h1>Your certificate</h1>
-      <p class="lede">Win all four awards to unlock your certificate in the {CERTIFICATE}. Each award comes from reaching every milestone in its section.</p>
+      <p class="lede">Win all five awards to unlock your certificate in the {CERTIFICATE}. Each award comes from reaching every milestone in its section; for Sprints, complete at least two of the four sprints.</p>
       <ul class="badge-shelf cert-awards">{awards}</ul>
       <p class="cert-back"><a href="index.html#badges-title">See your milestones and awards</a></p>
     </section>
@@ -1238,7 +1242,7 @@ def build_certificate():
           <p class="cert-line">This certifies that</p>
           <div class="cert-name" id="cert-name">Your name</div>
           <p class="cert-line">has completed every UX Theory and UI Theory lecture, Figma lesson and exercise of the
-            <b>{CERTIFICATE}</b> learning path, earning all four awards.</p>
+            <b>{CERTIFICATE}</b> learning path, earning all five awards.</p>
           <ul class="cert-seals">{seals}</ul>
           <div class="cert-foot">
             <div><span class="cert-date" data-cert-date></span><span class="cert-caption">Date</span></div>
@@ -1306,7 +1310,7 @@ def write_progress_data(data):
             raise SystemExit(f"PROGRESS[{k!r}] milestones {list(b['milestones'])} don't match its sub-sections {data[k]['categories']}")
     def entry(k, page):
         return {"key": f"{k}/{page['slug']}", "title": page["title"], "url": f"{TRACK[k]['out']}/{page['slug']}.html"}
-    tracks = {k: {"badge": b["badge"], "done": b["done"], "short": b["short"], "label": TRACK[k]["label"],
+    tracks = {k: {"badge": b["badge"], "done": b["done"], "short": b["short"], "label": TRACK[k]["label"], "need": b.get("need"),
                   "index": TRACK[k]["index"], "svg": badge_svg(k, 120),
                   "milestones": [{"name": c, "svg": milestone_svg(k, c, 96)} for c in b["milestones"]],
                   "items": [{**entry(k, l), "category": l["category"],
