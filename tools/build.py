@@ -414,7 +414,7 @@ def page(title, description, body, depth, active):
     prefix = "../" * depth
     links = "".join(
         f'<a href="{prefix}{t["index"]}"{" aria-current=page" if t["id"] == active else ""}>{t["label"]}</a>'
-        for t in TRACKS if t["id"] not in PROGRESS or t["id"] == "sprints")  # the rest are the coloured tabs below
+        for t in TRACKS)
     return f"""<!doctype html>
 <html lang="en" data-theme="light">
 <head>
