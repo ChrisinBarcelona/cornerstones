@@ -398,6 +398,8 @@ def meter(level, out_of=5):
 
 ICON_RESOURCES = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="18" x="3" y="3" rx="1"/><path d="M7 3v18"/><path d="M20.4 18.9c.2.5-.1 1.1-.6 1.3l-1.9.7c-.5.2-1.1-.1-1.3-.6L11.1 5.1c-.2-.5.1-1.1.6-1.3l1.9-.7c.5-.2 1.1.1 1.3.6Z"/></svg>'
 ICON_TRACKER = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg>'
+ICON_METHODS = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>'
+ICON_CALENDAR = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>'
 ICON_LOGOUT = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg>'
 
 
@@ -408,19 +410,23 @@ def gate(prefix):
             f"catch(e){{}}</script>")
 
 
-def course_chips(prefix):
-    """One small coloured tab per tracked section; app.js fills in the counts."""
+def course_chips(prefix, active=""):
+    """One small coloured tab per tracked section; app.js fills in the counts. The current section is outlined."""
     return "".join(
-        f'<a class="cp-chip t-{k}" data-chip="{k}" href="{prefix}{TRACK[k]["index"]}" title="{esc(b["badge"])}">'
+        f'<a class="cp-chip t-{k}" data-chip="{k}" href="{prefix}{TRACK[k]["index"]}" title="{esc(b["badge"])}"'
+        f'{" aria-current=true" if k == active else ""}>'
         f'<span class="cp-fill"></span><span class="cp-name">{esc(TRACK[k]["label"])}</span><b class="cp-count">0/0</b></a>'
         for k, b in PROGRESS.items())
 
 
 def page(title, description, body, depth, active):
     prefix = "../" * depth
+    # The other sections are reached from the progress chips underneath; these two have no chip.
     links = "".join(
-        f'<a href="{prefix}{t["index"]}"{" aria-current=page" if t["id"] == active else ""}>{t["label"]}</a>'
-        for t in sorted(TRACKS, key=lambda t: t["id"] == "figma"))  # Figma sits last, just before Timetable
+        f'<a class="icon-btn pill-btn" href="{prefix}{href}" aria-label="{label}" title="{label}"'
+        f'{" aria-current=page" if key == active else ""}>{icon}<span>{label}</span></a>'
+        for key, href, label, icon in (("methods", "methods.html", "UX Method Bank", ICON_METHODS),
+                                       ("timetable", "timetable.html", "Timetable", ICON_CALENDAR)))
     return f"""<!doctype html>
 <html lang="en" data-theme="light">
 <head>
@@ -443,7 +449,7 @@ def page(title, description, body, depth, active):
   <div class="nav-inner">
     <a class="brand logo" href="{prefix}index.html" aria-label="Cornerstones, UX/UI Design at {SCHOOL}, home">{LOGO}
     </a>
-    <nav class="nav-links">{links}<a href="{prefix}timetable.html"{" aria-current=page" if active == "timetable" else ""}>Timetable</a></nav>
+    <nav class="nav-pills" aria-label="Main">{links}</nav>
     <a class="icon-btn res-btn" href="{prefix}resources.html" aria-label="Resources" title="Resources"{" aria-current=page" if active == "resources" else ""}>{ICON_RESOURCES}</a>
     <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker">{ICON_TRACKER}</button>
     <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme">{ICON_SUN}</button>
@@ -451,7 +457,7 @@ def page(title, description, body, depth, active):
   </div>
   <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
   <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete</button>
-    <nav class="course-chips" aria-label="Progress by section">{course_chips(prefix)}</nav>
+    <nav class="course-chips" aria-label="Progress by section">{course_chips(prefix, active)}</nav>
     <a class="mini-badges" id="mini-badges" href="{prefix}index.html#badges-title" aria-label="Your badges"></a></div>
 </header>
 {body}
