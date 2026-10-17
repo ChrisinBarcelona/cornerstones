@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Ethics and User Coercion · Cornerstones</title>
+<meta name="description" content="Deceptive patterns, addictive design and data misuse, and how to design honestly instead.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2238%2040%20739%20739%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M221%2090H590L777%20409H38Z%22%20fill%3D%22%23004ecd%22/%3E%3Cpath%20d%3D%22M38%20409H777L590%20728H221Z%22%20fill%3D%22%230062ff%22/%3E%3Cpath%20d%3D%22M374%20254H688L777%20409H286Z%22%20fill%3D%22%23002b71%22/%3E%3Cpath%20d%3D%22M286%20409H777L688%20564H374Z%22%20fill%3D%22%23003ea2%22/%3E%3C/svg%3E">
+<script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
+<script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=838c6bba21">
+<link rel="stylesheet" href="../assets/theme.css?v=838c6bba21">
+</head>
+<body class="t-ux">
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand logo" href="../index.html" aria-label="Cornerstones, UX/UI Design at Barcelona Code School, home"><svg class="logo-mark" viewBox="38 40 739 739" width="38" height="38" aria-hidden="true"><path d="M221 90H590L777 409H38Z" fill="#004ecd"/><path d="M38 409H777L590 728H221Z" fill="#0062ff"/><path d="M374 254H688L777 409H286Z" fill="#002b71"/><path d="M286 409H777L688 564H374Z" fill="#003ea2"/></svg><span class="logo-text"><span class="logo-name">Cornerstones</span><span class="logo-sub">UX/UI Design at Barcelona Code School</span></span>
+    </a>
+    <nav class="nav-links"><a href="../sprints.html">Sprint Briefs</a><a href="../ux.html" aria-current=page>UX Theory</a><a href="../methods.html">UX Methods</a><a href="../ui.html">UI Theory</a><a href="../figma.html">Figma</a><a href="../exercises.html">Exercises</a><a href="../timetable.html">Timetable</a></nav>
+    <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg></button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="../login.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Log out</span></button>
+  </div>
+  <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete</button>
+    <nav class="course-chips" aria-label="Progress by section"><a class="cp-chip t-sprints" data-chip="sprints" href="../sprints.html" title="Sprints"><span class="cp-fill"></span><span class="cp-name">Sprint Briefs</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ux" data-chip="ux" href="../ux.html" title="UX Theory"><span class="cp-fill"></span><span class="cp-name">UX Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ui" data-chip="ui" href="../ui.html" title="UI Theory"><span class="cp-fill"></span><span class="cp-name">UI Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-figma" data-chip="figma" href="../figma.html" title="Figma"><span class="cp-fill"></span><span class="cp-name">Figma</span><b class="cp-count">0/0</b></a><a class="cp-chip t-exercises" data-chip="exercises" href="../exercises.html" title="Exercises"><span class="cp-fill"></span><span class="cp-name">Exercises</span><b class="cp-count">0/0</b></a></nav>
+    <a class="mini-badges" id="mini-badges" href="../index.html#badges-title" aria-label="Your badges"></a></div>
+</header>
+
+<main class="lecture track-ux" data-key="ux/design-ethics">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../ux.html">UX Theory</a> <span class="sep">/</span> <a href="../ux.html#category=Psychology">Psychology</a> <span class="sep">/</span> <span>Design Ethics and User Coercion</span></nav>
+    <header class="lecture-head">
+      <div class="eyebrow">Lecture 15 · Psychology</div>
+      <div class="title-row"><h1>Design Ethics and User Coercion</h1><button type="button" class="complete-btn head-complete" data-complete="ux/design-ethics" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button></div>
+      <p class="lede">Deceptive patterns, addictive design and data misuse, and how to design honestly instead.</p>
+      <div class="meta"><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>4 min read</span></div>
+    </header>
+    <div class="lecture-grid">
+      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#two-pressures">Two pressures</a></li><li class="lvl2"><a href="#user-coercion">User coercion</a></li><li class="lvl2"><a href="#the-cost-real-people">The cost: real people</a></li><li class="lvl2"><a href="#why-companies-get-away-with-it-and-increasingly-don-t">Why companies get away with it (and increasingly don&#x27;t)</a></li><li class="lvl2"><a href="#designing-ethically">Designing ethically</a></li><li class="lvl2"><a href="#why-it-matters-for-ux">Why it matters for UX</a></li><li class="lvl2"><a href="#try-it-an-ethics-audit-25-minutes">Try it: an ethics audit (25 minutes)</a></li><li class="lvl2"><a href="#media">Media</a></li><li class="lvl2"><a href="#resources">Resources</a></li><li class="lvl2"><a href="#key-takeaways">Key takeaways</a></li></ol></div><div class="rail-block"><div class="rail-label">Psychology</div><ol class="toc family"><li><a href="design-psychology.html">Gestalt and Perception</a></li><li><a href="emotional-design.html">Emotional Design: Colour, Type and Brand</a></li><li><a href="fast-and-slow-thinking.html">Fast and Slow Thinking</a></li><li><a href="mental-models.html">Mental Models</a></li><li><a href="bias.html">Bias</a></li><li><a href="the-bias-of-beauty.html">The Bias of Beauty</a></li><li><a href="laws-of-ux.html">Laws of UX</a></li><li><a href="neilson-heuristics.html">Nielsen Heuristics</a></li><li><a href="design-ethics.html" aria-current=page>Design Ethics and User Coercion</a></li></ol></div></div></div></aside>
+      <article class="prose">
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#two-pressures">Two pressures</a></li><li class="lvl2"><a href="#user-coercion">User coercion</a></li><li class="lvl2"><a href="#the-cost-real-people">The cost: real people</a></li><li class="lvl2"><a href="#why-companies-get-away-with-it-and-increasingly-don-t">Why companies get away with it (and increasingly don&#x27;t)</a></li><li class="lvl2"><a href="#designing-ethically">Designing ethically</a></li><li class="lvl2"><a href="#why-it-matters-for-ux">Why it matters for UX</a></li><li class="lvl2"><a href="#try-it-an-ethics-audit-25-minutes">Try it: an ethics audit (25 minutes)</a></li><li class="lvl2"><a href="#media">Media</a></li><li class="lvl2"><a href="#resources">Resources</a></li><li class="lvl2"><a href="#key-takeaways">Key takeaways</a></li></ol></details>
+<p>Everything you learn in this course, from Gestalt and colour to bias and fast thinking, is a way of influencing people. That power can make a product easier, calmer and fairer to use. It can also be used to push people into things they never meant to do. This lecture is about knowing the difference, and choosing the right side of it.</p>
+<hr />
+<h2 id="two-pressures">Two pressures</h2>
+<p>Be aware of two things from your first day in the job.</p>
+<p>One: your future employer will pay you to produce a great user experience, so that their customers <strong>keep using their product</strong>. Engagement, retention and conversion will be the numbers you're judged on.</p>
+<figure class="media"><img alt="A slot machine paying out cherries and dollars" src="../content/ux/design-ethics/chriskellylive_a_slot_machine_with_three_cherries_wcash_dollars_40d0e7df-4b55-40e6-a9f7-0b4280aaf3ca.jpg" loading="lazy" decoding="async"></figure>
+<p>Two: the people on the other side of the screen are human. Our brains respond to patterns, to rewards and to small hits of validation. Likes, streaks, notifications and infinite scroll are designed to keep us coming back, and those design decisions have real-world consequences.</p>
+<figure class="media"><img alt="A crowd of people looking down at their phones" src="../content/ux/design-ethics/iStock-883005738.jpg" loading="lazy" decoding="async"></figure>
+<p>When those two pressures meet, designers have to make choices.</p>
+<hr />
+<h2 id="user-coercion">User coercion</h2>
+<p><strong>User coercion</strong> means design tactics that manipulate or pressure people into actions that benefit the business more than the user. These are often called <strong>deceptive patterns</strong> (or "dark patterns"). Common ones include:</p>
+<ul>
+<li><strong>Forced continuity:</strong> a free trial that quietly turns into a paid subscription, with no clear warning.</li>
+<li><strong>Hard to cancel (the "roach motel"):</strong> easy to sign up, deliberately difficult to leave.</li>
+<li><strong>Hidden costs:</strong> fees that only appear at the last step of checkout.</li>
+<li><strong>Confirmshaming:</strong> guilt-tripping copy on the "no" button: "No thanks, I don't like saving money."</li>
+<li><strong>False urgency and scarcity:</strong> fake countdowns and "only 2 left!" messages that aren't true.</li>
+<li><strong>Sneaking into the basket:</strong> extras added to an order without asking.</li>
+<li><strong>Nagging:</strong> asking again and again until people give in.</li>
+</ul>
+<figure class="media"><img alt="A subscription screen designed to make cancelling difficult" src="../content/ux/design-ethics/IMG_0310.jpg" loading="lazy" decoding="async"></figure>
+<p><strong>Forced continuity</strong> is particularly bad. Users are enrolled in a subscription after a free trial, often without clear notice, and then find the cancel option hidden behind cumbersome steps. It traps people into payments they never really agreed to, and it destroys trust.</p>
+<hr />
+<h2 id="the-cost-real-people">The cost: real people</h2>
+<p>Deceptive and addictive design isn't abstract. Common Sense Media's 2021 census found that children aged 8 to 12 in the US spent an average of <strong>5 hours 33 minutes a day</strong> on screen media for entertainment, up from 4 hours 44 minutes in 2019.</p>
+<figure class="media"><img alt="A ten-year-old scrolling on a phone in the dark" src="../content/ux/design-ethics/chriskellylive_depressed_ten_year_old_scrolling_on_a_phone_in_h_a62cd305-2584-4cfd-9dd2-6b332c16d5e2.jpg" loading="lazy" decoding="async"></figure>
+<p>Heavy, compulsive phone use has been linked with poorer sleep, lower academic performance, higher anxiety and lower life satisfaction among young people. Designers didn't create every one of those problems, but our patterns are part of the system.</p>
+<figure class="media"><img alt="A teenager scrolling on a phone in bed" src="../content/ux/design-ethics/chriskellylive_depressed_teenager_scrolling_on_a_phone_in_her_b_ee833fd7-e762-4f45-81a0-b9140ca3c02d.jpg" loading="lazy" decoding="async"></figure>
+<p>Data can be used against people too. In 2018, a whistleblower, Christopher Wylie, revealed that the political consultancy <strong>Cambridge Analytica</strong> had harvested data from millions of Facebook profiles without their consent and used it to target political advertising, including in the 2016 US presidential election. It's a reminder that what we collect about users is a responsibility, not just a resource. <a href="https://www.theguardian.com/uk-news/2018/mar/23/leaked-cambridge-analyticas-blueprint-for-trump-victory">Further reading – The Guardian</a></p>
+<hr />
+<h2 id="why-companies-get-away-with-it-and-increasingly-don-t">Why companies get away with it (and increasingly don't)</h2>
+<figure class="media"><img alt="An older woman sitting at a slot machine" src="../content/ux/design-ethics/chriskellylive_an_old_american_granny_sitting_at_a_slot_machine_c9ac9866-e868-4005-8d4c-4ae1475ba034.jpg" loading="lazy" decoding="async"></figure>
+<p>Deceptive patterns work in the short term: they lift the numbers on a dashboard. But the law is catching up. In the EU, the <strong>Digital Services Act</strong> bans online platforms from designing their interfaces to deceive or manipulate users. In the US, the Federal Trade Commission sued Amazon in 2023 over how it enrolled people in Prime and made it hard to cancel; in September 2025 Amazon agreed to pay <strong>$2.5 billion</strong> to settle the case, and to make declining and cancelling Prime clear and simple.</p>
+<p>Can you think of other coercive tactics used by tech companies?</p>
+<hr />
+<h2 id="designing-ethically">Designing ethically</h2>
+<p>You won't always control the business goals, but you do control the design. Ask these questions of every screen:</p>
+<ul>
+<li><strong>Would the user make the same choice if they fully understood it?</strong></li>
+<li><strong>Is saying no as easy as saying yes?</strong> Cancelling as easy as signing up?</li>
+<li><strong>Is anything hidden, pre-ticked or deliberately confusing?</strong></li>
+<li><strong>Would I be comfortable if this design was explained on the news?</strong></li>
+<li><strong>Does this serve the user's interests, or only the metric?</strong></li>
+</ul>
+<p>Dieter Rams put it in four words: <strong>good design is honest</strong>.</p>
+<hr />
+<h2 id="why-it-matters-for-ux">Why it matters for UX</h2>
+<p>UX designers hold real power over people's attention, money and data. Deceptive patterns can lift short-term numbers, but they erode trust, harm vulnerable users and, increasingly, break the law. Designing honestly is part of the job, not an optional extra.</p>
+<h2 id="try-it-an-ethics-audit-25-minutes">Try it: an ethics audit (25 minutes)</h2>
+<ol>
+<li>Pick an app or website you use often, and try to cancel, unsubscribe or delete your account (stop before you actually do it).</li>
+<li>Count the steps and screenshot every screen on the way.</li>
+<li>Name every deceptive pattern you find, using the list in this lecture.</li>
+<li>Redesign the flow so that leaving is as easy as joining, and present it in two minutes.</li>
+</ol>
+<h2 id="media">Media</h2>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/lJUW0iZzAaQ" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/kxkrdLI6e6M" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<h2 id="resources">Resources</h2>
+<p><a href="https://www.deceptive.design/">Deceptive Patterns – types and examples</a></p>
+<p><a href="https://www.nngroup.com/articles/deceptive-patterns/">Deceptive Patterns in UX – Nielsen Norman Group</a></p>
+<p><a href="https://humanetech.com/">Center for Humane Technology</a></p>
+<h2 id="key-takeaways">Key takeaways</h2>
+<ul>
+<li>Every design technique can help or manipulate; ethics is choosing to help.</li>
+<li>Learn to name deceptive patterns: forced continuity, hard to cancel, hidden costs, confirmshaming, false urgency.</li>
+<li>Make saying no as easy as saying yes. Good design is honest.</li>
+</ul>
+<section class="complete" data-key="ux/design-ethics">
+  <div class="complete-text"><b>Finished this lecture?</b></div>
+  <button type="button" class="complete-btn" data-complete="ux/design-ethics" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
+</section>
+      </article>
+    </div>
+    <nav class="pagers"><a class="pager prev" href="neilson-heuristics.html"><span class="pager-label">Previous</span><span class="pager-title">Nielsen Heuristics</span></a><a class="pager next" href="starting-point.html"><span class="pager-label">Next</span><span class="pager-title">Starting Point</span></a></nav>
+  </div>
+</main>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<footer class="foot"><div class="foot-inner"><span>Cornerstones · UX & UI learning resource for Barcelona Code School</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<div class="celebrate" id="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="celebrate-title">
+  <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
+  <h2 id="celebrate-title"></h2><p class="celebrate-text"></p>
+  <div class="celebrate-actions"><a class="login-submit celebrate-link" href="../certificate.html" hidden>See your certificate</a>
+  <button type="button" class="login-submit" id="celebrate-close">Nice!</button></div></div>
+</div>
+<script src="../assets/progress-data.js?v=838c6bba21"></script>
+<script src="../assets/app.js?v=838c6bba21"></script>
+</body>
+</html>

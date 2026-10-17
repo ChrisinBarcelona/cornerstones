@@ -58,6 +58,8 @@ Disclaimer: Regular consumption of soft drinks is associated with higher mortali
 
 Dieter Rams
 
+Norman wrote a whole book on how design makes us feel: see [Emotional Design](emotional-design.html).
+
 ---
 
 ## Why it matters for UX

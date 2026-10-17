@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fast and Slow Thinking · Cornerstones</title>
+<meta name="description" content="Kahneman&#x27;s System 1 and System 2, and how to design for the way people really decide.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2238%2040%20739%20739%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M221%2090H590L777%20409H38Z%22%20fill%3D%22%23004ecd%22/%3E%3Cpath%20d%3D%22M38%20409H777L590%20728H221Z%22%20fill%3D%22%230062ff%22/%3E%3Cpath%20d%3D%22M374%20254H688L777%20409H286Z%22%20fill%3D%22%23002b71%22/%3E%3Cpath%20d%3D%22M286%20409H777L688%20564H374Z%22%20fill%3D%22%23003ea2%22/%3E%3C/svg%3E">
+<script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
+<script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=838c6bba21">
+<link rel="stylesheet" href="../assets/theme.css?v=838c6bba21">
+</head>
+<body class="t-ux">
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand logo" href="../index.html" aria-label="Cornerstones, UX/UI Design at Barcelona Code School, home"><svg class="logo-mark" viewBox="38 40 739 739" width="38" height="38" aria-hidden="true"><path d="M221 90H590L777 409H38Z" fill="#004ecd"/><path d="M38 409H777L590 728H221Z" fill="#0062ff"/><path d="M374 254H688L777 409H286Z" fill="#002b71"/><path d="M286 409H777L688 564H374Z" fill="#003ea2"/></svg><span class="logo-text"><span class="logo-name">Cornerstones</span><span class="logo-sub">UX/UI Design at Barcelona Code School</span></span>
+    </a>
+    <nav class="nav-links"><a href="../sprints.html">Sprint Briefs</a><a href="../ux.html" aria-current=page>UX Theory</a><a href="../methods.html">UX Methods</a><a href="../ui.html">UI Theory</a><a href="../figma.html">Figma</a><a href="../exercises.html">Exercises</a><a href="../timetable.html">Timetable</a></nav>
+    <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg></button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="../login.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Log out</span></button>
+  </div>
+  <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete</button>
+    <nav class="course-chips" aria-label="Progress by section"><a class="cp-chip t-sprints" data-chip="sprints" href="../sprints.html" title="Sprints"><span class="cp-fill"></span><span class="cp-name">Sprint Briefs</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ux" data-chip="ux" href="../ux.html" title="UX Theory"><span class="cp-fill"></span><span class="cp-name">UX Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ui" data-chip="ui" href="../ui.html" title="UI Theory"><span class="cp-fill"></span><span class="cp-name">UI Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-figma" data-chip="figma" href="../figma.html" title="Figma"><span class="cp-fill"></span><span class="cp-name">Figma</span><b class="cp-count">0/0</b></a><a class="cp-chip t-exercises" data-chip="exercises" href="../exercises.html" title="Exercises"><span class="cp-fill"></span><span class="cp-name">Exercises</span><b class="cp-count">0/0</b></a></nav>
+    <a class="mini-badges" id="mini-badges" href="../index.html#badges-title" aria-label="Your badges"></a></div>
+</header>
+
+<main class="lecture track-ux" data-key="ux/fast-and-slow-thinking">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../ux.html">UX Theory</a> <span class="sep">/</span> <a href="../ux.html#category=Psychology">Psychology</a> <span class="sep">/</span> <span>Fast and Slow Thinking</span></nav>
+    <header class="lecture-head">
+      <div class="eyebrow">Lecture 09 · Psychology</div>
+      <div class="title-row"><h1>Fast and Slow Thinking</h1><button type="button" class="complete-btn head-complete" data-complete="ux/fast-and-slow-thinking" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button></div>
+      <p class="lede">Kahneman&#x27;s System 1 and System 2, and how to design for the way people really decide.</p>
+      <div class="meta"><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 min read</span></div>
+    </header>
+    <div class="lecture-grid">
+      <aside class="rail"><div class="rail-sticky"><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#kahneman-and-behavioural-economics">Kahneman and behavioural economics</a></li><li class="lvl2"><a href="#system-1-fast-thinking">System 1: fast thinking</a></li><li class="lvl2"><a href="#system-2-slow-thinking">System 2: slow thinking</a></li><li class="lvl2"><a href="#test-yourself">Test yourself</a></li><li class="lvl2"><a href="#what-it-means-for-design">What it means for design</a></li><li class="lvl2"><a href="#why-it-matters-for-ux">Why it matters for UX</a></li><li class="lvl2"><a href="#try-it-fast-or-slow-20-minutes">Try it: fast or slow? (20 minutes)</a></li><li class="lvl2"><a href="#media">Media</a></li><li class="lvl2"><a href="#resources">Resources</a></li><li class="lvl2"><a href="#key-takeaways">Key takeaways</a></li></ol></div><div class="rail-block"><div class="rail-label">Psychology</div><ol class="toc family"><li><a href="design-psychology.html">Gestalt and Perception</a></li><li><a href="emotional-design.html">Emotional Design: Colour, Type and Brand</a></li><li><a href="fast-and-slow-thinking.html" aria-current=page>Fast and Slow Thinking</a></li><li><a href="mental-models.html">Mental Models</a></li><li><a href="bias.html">Bias</a></li><li><a href="the-bias-of-beauty.html">The Bias of Beauty</a></li><li><a href="laws-of-ux.html">Laws of UX</a></li><li><a href="neilson-heuristics.html">Nielsen Heuristics</a></li><li><a href="design-ethics.html">Design Ethics and User Coercion</a></li></ol></div></div></div></aside>
+      <article class="prose">
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#kahneman-and-behavioural-economics">Kahneman and behavioural economics</a></li><li class="lvl2"><a href="#system-1-fast-thinking">System 1: fast thinking</a></li><li class="lvl2"><a href="#system-2-slow-thinking">System 2: slow thinking</a></li><li class="lvl2"><a href="#test-yourself">Test yourself</a></li><li class="lvl2"><a href="#what-it-means-for-design">What it means for design</a></li><li class="lvl2"><a href="#why-it-matters-for-ux">Why it matters for UX</a></li><li class="lvl2"><a href="#try-it-fast-or-slow-20-minutes">Try it: fast or slow? (20 minutes)</a></li><li class="lvl2"><a href="#media">Media</a></li><li class="lvl2"><a href="#resources">Resources</a></li><li class="lvl2"><a href="#key-takeaways">Key takeaways</a></li></ol></details>
+<p>How people really make decisions, and why it changes how you design.</p>
+<hr />
+<h2 id="kahneman-and-behavioural-economics">Kahneman and behavioural economics</h2>
+<p>In 2002, the psychologist <strong>Daniel Kahneman</strong> was awarded the Nobel Memorial Prize in Economic Sciences for his work, much of it with Amos Tversky, on how people make judgements and decisions under uncertainty. Their work helped found <strong>behavioural economics</strong>.</p>
+<figure class="media"><img alt="An awards ceremony" src="../content/ux/fast-and-slow-thinking/chriskellylive_an_awards_ceremony_in_the_swiss_alps_fantastic_l_8cd04db0-65af-4d49-8bf5-38cbe740f765.jpg" loading="lazy" decoding="async"></figure>
+<p>His central finding was that people don't make decisions the way classical economics assumed. We are not perfectly rational. Years of experiments showed that our minds use two modes of thinking, which Kahneman called <strong>System 1</strong> and <strong>System 2</strong> and described in his book <em>Thinking, Fast and Slow</em> (2011).</p>
+<hr />
+<h2 id="system-1-fast-thinking">System 1: fast thinking</h2>
+<p>System 1 works automatically and quickly, with little or no effort. It recognises patterns, recalls memories and jumps to conclusions. Try these:</p>
+<ol>
+<li>Complete the phrase: bread and …</li>
+<li>What's 2 + 2?</li>
+<li>What's the first letter of the word "Bing"?</li>
+</ol>
+<p>You didn't have to try. That's System 1: quick, intuitive and effortless, but prone to bias and error.</p>
+<hr />
+<h2 id="system-2-slow-thinking">System 2: slow thinking</h2>
+<p>System 2 is deliberate. It allocates attention to effortful mental work: calculations, comparisons and careful reasoning. Try these:</p>
+<ol>
+<li>What is 17 × 24?</li>
+<li>Tell me about the last time you heard a surprising sound.</li>
+<li>How many i's are in the word "indivisibilities"?</li>
+</ol>
+<p>You felt the effort. System 2 is slow, tiring and easily overloaded, but it's more accurate.</p>
+<hr />
+<h2 id="test-yourself">Test yourself</h2>
+<ol>
+<li><a href="https://xd.adobe.com/view/709c742f-081c-44f7-9a65-2a9a233b116e-25cf/?fullscreen">Presentation on judgement</a></li>
+<li><a href="https://xd.adobe.com/view/01087389-edda-4564-83a5-319e76d1c6e9-545b/?fullscreen">Personality test</a></li>
+</ol>
+<hr />
+<h2 id="what-it-means-for-design">What it means for design</h2>
+<p>Kahneman gave designers something close to a manual for how people decide. Two lessons follow:</p>
+<ul>
+<li><strong>For your users: design for System 1.</strong> Most of the time, people use products on autopilot. Familiar patterns, clear hierarchy and low cognitive load let them act without thinking hard. Don't make users think. When a decision genuinely matters (a payment, a deletion, sharing personal data), deliberately slow them down and let System 2 check it.</li>
+<li><strong>For you: use System 2.</strong> Designers fall for System 1 too: first ideas, gut feelings and "it looks good". Don't rush into Figma. Slow the process down, question your assumptions and let research and testing lead to accurate, evidence-based results.</li>
+</ul>
+<p>The same knowledge can be misused: designing to keep people on autopilot so they agree to things they'd reject if they stopped to think. See <a href="design-ethics.html">Design Ethics and User Coercion</a>.</p>
+<hr />
+<h2 id="why-it-matters-for-ux">Why it matters for UX</h2>
+<p>Users make most decisions quickly and intuitively, so the easiest design to use is one that works with fast thinking: familiar, clear and low effort. Knowing when to slow people down, and slowing yourself down as a designer, is what separates thoughtful design from guesswork.</p>
+<h2 id="try-it-fast-or-slow-20-minutes">Try it: fast or slow? (20 minutes)</h2>
+<ol>
+<li>Pick a checkout or sign-up flow in an app you use.</li>
+<li>Mark every step as System 1 (automatic) or System 2 (needs thought).</li>
+<li>Find one step that makes people think when it shouldn't, and redesign it to be effortless.</li>
+<li>Find one step that should slow people down (a payment, a deletion, a consent) and check that it does.</li>
+</ol>
+<h2 id="media">Media</h2>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/tyDQFmA1SpU" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/OgwlV-vQNYk" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<h2 id="resources">Resources</h2>
+<p><a href="https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/">Daniel Kahneman – Nobel Prize facts</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow">Thinking, Fast and Slow – Wikipedia</a></p>
+<h2 id="key-takeaways">Key takeaways</h2>
+<ul>
+<li>System 1 is fast, automatic and biased; System 2 is slow, effortful and accurate.</li>
+<li>Design everyday tasks for fast thinking, and slow users down only for decisions that matter.</li>
+<li>As a designer, use slow thinking: research and test instead of trusting your first idea.</li>
+</ul>
+<section class="complete" data-key="ux/fast-and-slow-thinking">
+  <div class="complete-text"><b>Finished this lecture?</b></div>
+  <button type="button" class="complete-btn" data-complete="ux/fast-and-slow-thinking" aria-pressed="false"><span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>
+</section>
+      </article>
+    </div>
+    <nav class="pagers"><a class="pager prev" href="emotional-design.html"><span class="pager-label">Previous</span><span class="pager-title">Emotional Design: Colour, Type and Brand</span></a><a class="pager next" href="mental-models.html"><span class="pager-label">Next</span><span class="pager-title">Mental Models</span></a></nav>
+  </div>
+</main>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<footer class="foot"><div class="foot-inner"><span>Cornerstones · UX & UI learning resource for Barcelona Code School</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<div class="celebrate" id="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="celebrate-title">
+  <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
+  <h2 id="celebrate-title"></h2><p class="celebrate-text"></p>
+  <div class="celebrate-actions"><a class="login-submit celebrate-link" href="../certificate.html" hidden>See your certificate</a>
+  <button type="button" class="login-submit" id="celebrate-close">Nice!</button></div></div>
+</div>
+<script src="../assets/progress-data.js?v=838c6bba21"></script>
+<script src="../assets/app.js?v=838c6bba21"></script>
+</body>
+</html>

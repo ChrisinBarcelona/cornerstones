@@ -210,6 +210,46 @@
       "children": [],
       "number": 23,
       "category": "Interface"
+    },
+    {
+      "slug": "design-vs-art",
+      "title": "Critical Thinking over Artistry",
+      "parent": null,
+      "children": [],
+      "number": 24,
+      "category": "Foundations"
+    },
+    {
+      "slug": "emotional-design",
+      "title": "Emotional Design: Colour, Type and Brand",
+      "parent": null,
+      "children": [],
+      "number": 25,
+      "category": "Psychology"
+    },
+    {
+      "slug": "fast-and-slow-thinking",
+      "title": "Fast and Slow Thinking",
+      "parent": null,
+      "children": [],
+      "number": 26,
+      "category": "Psychology"
+    },
+    {
+      "slug": "design-ethics",
+      "title": "Design Ethics and User Coercion",
+      "parent": null,
+      "children": [],
+      "number": 27,
+      "category": "Psychology"
+    },
+    {
+      "slug": "agile-and-lean",
+      "title": "Agile, Lean and the Toyota Way",
+      "parent": null,
+      "children": [],
+      "number": 28,
+      "category": "Process"
     }
   ],
   "subpages": [

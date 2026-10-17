@@ -183,15 +183,16 @@ TRACK = {t["id"]: t for t in TRACKS}
 # ("content" in TRACKS). Every page in a content source must be listed by exactly one track.
 ORDER = {
     "ux": {
-        "Foundations": ["what-is-ux-design", "design-origins", "the-father-of-ux", "key-figures", "key-roles"],
-        "Psychology": ["design-psychology", "mental-models", "bias", "the-bias-of-beauty", "laws-of-ux", "neilson-heuristics"],
-        "Process": ["starting-point", "what-is-design-thinking", "wicked-problem", "data", "target-mvp", "stages-of-wireframes"],
+        "Foundations": ["what-is-ux-design", "design-origins", "the-father-of-ux", "design-vs-art", "key-figures", "key-roles"],
+        "Psychology": ["design-psychology", "emotional-design", "fast-and-slow-thinking", "mental-models", "bias", "the-bias-of-beauty",
+                       "laws-of-ux", "neilson-heuristics", "design-ethics"],
+        "Process": ["starting-point", "what-is-design-thinking", "agile-and-lean", "wicked-problem", "data", "target-mvp", "stages-of-wireframes"],
         "Business Case Studies": ["bad-user-experience", "the-death-of-kodak", "a-case-of-genius"],
         "Interface": ["gestures", "haptics"],
     },
     "ui": {
         "UI Theory": ["colour-values", "atomic-design-methodology", "file-types", "spacing-grids", "typeface",
-                      "style-guides", "icons", "paper-wireframes"],
+                      "style-guides", "design-styles", "icons", "paper-wireframes"],
     },
     "methods": {
         "Discovery": ["lean-ux-canvas", "long-term-goal", "initial-problem-statement", "solution-hypothesis", "research-goal", "research-questions", "desk-research", "site-visit", "user-survey", "user-interview", "discovery-summary"],

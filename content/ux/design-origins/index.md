@@ -2,29 +2,23 @@
 
 ## Origins of UX and The Birth of The Internet.
 
-Whilst there is a very formal understanding of UX as a series of applied methods that designers use to make software easy, accessible and fun to use, what UX Design actually is, is a massive combination of factors. UX is a discipline, a philosophy, a natural attention to detail, it’s emotional design, an entire service journey, it’s an in depth understanding the user but in truth, it’s all these things and more.
+UX is often described as a set of methods that make software easy, accessible and enjoyable to use. But user experience is much older than software. It's as old as the first tool: every object people have ever made gives someone an experience, good or bad.
 
----
+This lecture tells that story, from the first tools to the birth of the internet and the moment "user experience" became a job.
 
-We’ll start with a super brief introduction into where UX started (sort of) thereafter discuss the internet as much of our work takes place there these days.
-
----
-
-UX Design and design in general comes from controlling the natural world around us so we are in the process of invention. of inventing tools. Tools to solve problems and hopefully this first example will really drive home that sense of necessity to crisis that is usually at the heart of innovation. In the modern world, it’s easy to create for the sake of creating. Now, more than ever, with the advent of AI. However, it’s vital to create for purpose. This is a concept that not only lies at the heart of technology but at the heart of good design. just need to know that all design is user experience design, just if it’s either a good experience or a bad experience.  
+All design is user experience design. The only question is whether it's a good experience or a bad one. And the best design has always come from necessity: from a real problem that needed solving, not from making things for the sake of it. That matters more than ever now that AI makes it easy to create endlessly.
 
 ![0_2.webp](0_2.webp)
 
 ---
 
----
-
 ## The first designer
 
-Good UX design is a story, so let's tell one. Really the very first UX designer was probably Homo Habilis. Let's cast our minds back about 3.3 million years ago to the early Pleistocene. Here we have him coming up with a solution to a problem. Homo Habilis wants to kills deer. He can’t. he needs a tool. He is going to build a hafted spear so he is sharpening a stone. 
+Good UX design is a story, so let's tell one. The very first UX designers were our distant ancestors: the oldest stone tools ever found are around 3.3 million years old. Imagine one of those early humans with a problem. They want to hunt a deer. They can't, not with bare hands. They need a tool, so they start sharpening a stone to make the tip of a spear.
 
 ![chriskellylive_close_up_of_a_cavemans_hands_as_he_is_sharpening_12c8858e-13aa-426d-b37a-d97bff5b5e3f.png](chriskellylive_close_up_of_a_cavemans_hands_as_he_is_sharpening_12c8858e-13aa-426d-b37a-d97bff5b5e3f.jpg)
 
-Homo Habilis is now engaged with balancing three primal ideas concerning the tip of the spear which he wants to make.
+Our designer now has to balance three requirements for the tip of the spear:
 
 - Stone has to be **sharp enough**
 - Stone has to be **light enough to carry**
@@ -42,7 +36,7 @@ This is essential. Without these three properties. The spear would not work. The
 
 ---
 
-Our ancient relative must have engaged in some **advanced thinking and planning** to make that spear! More over, archeologists recognise the fact that, since these spears were so widely found throughout the Middle Palaeolithic era, early hominids must have talked to each other. Unfortunately it didn’t work out for him. The spear lacked functionality. Homo Habilis is hearing feedback from his family but he’s finding the news a little hard to accept. You on the other hand must learn to take design critic well. 
+Our ancient relative must have engaged in some **advanced thinking and planning** to make that spear! Moreover, because hafted spears are found so widely across the Middle Palaeolithic, archaeologists believe their makers must have shared knowledge and talked to each other. Imagine the first attempt didn't work: the spear lacked functionality, and the family is giving feedback our designer finds hard to accept. You, on the other hand, must learn to take design critique well. 
 
 ![Artboard – 4.png](Artboard__4.png)
 

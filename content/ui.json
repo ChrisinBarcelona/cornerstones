@@ -115,6 +115,14 @@
       "children": [],
       "number": 14,
       "category": "UI Theory"
+    },
+    {
+      "slug": "design-styles",
+      "title": "Design Styles: From Bauhaus to Glassmorphism",
+      "parent": null,
+      "children": [],
+      "number": 15,
+      "category": "UI Theory"
     }
   ],
   "subpages": []

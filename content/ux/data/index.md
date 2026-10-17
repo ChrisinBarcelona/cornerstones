@@ -21,16 +21,9 @@ Charles Barkley is a former American professional basketball player, 11-time NBA
 
 ---
 
-## False Data
+## Data can't predict the future
 
-So is data false? Not exactly. The plot thickens.
-
-
-No one can predict the future. What is the future! Well, Einstein mentioned that time is space and as a construct that's all quite abstract but for sure, we are all experiencing the same thing at the same moment, I hope. We are moving through space time and this is not something that any market or market force can predict. We really don't know. The universe may invert in a heartbeat and some distant galaxy may have just collapsed setting off a chain reaction resulting in the end of our own universe within the next ten minutes, probably not, but nothing is 100% certain.
-
-Everything that we experience is part of a much older system of course and we are essentially part of a system, billions and billions of years old. As we say, yesterday is history. Tomorrow is a mystery. 
-
-So we can't predict the future but we can prepare for it. *if* we carefully measure the market and recognize patterns, if have your finger on the pulse of a behavioural economics and truly understand your customer and your products, we can postulate with a **greater degree of accuracy** what *may* happen in the future and this backs up that fact that design thinking is all about mitigating risk or possibly keeping an eye out for a giant extinction event asteroid.
+No data can tell you for certain what will happen next. But if you measure carefully, look for patterns and truly understand your users and your market, you can predict what *may* happen with a **greater degree of accuracy**. That's the point of design thinking: not certainty, but less risk.
 
 ---
 
@@ -82,17 +75,7 @@ Where quantitative analysis presents a single version of truth, qualitative data
 
 ---
 
-## Big Data
-
-In 2016, Cambridge Analytica finessed the technique of **data harvesting** by targeting specific users from information collected in Facebook. Intensive survey research, data modeling and performance-optimizing algorithms were used to target 10,000 different ads to different audiences in the months leading up to the 2016 Donald Trump election campaign. 
-
-The ads were viewed billions of times, according to the The Guardian newspaper which claims this contributed to the rise of populism resulting in the UK leaving the EU that same year. [Further reading](https://www.theguardian.com/uk-news/2018/mar/23/leaked-cambridge-analyticas-blueprint-for-trump-victory)
-
-![](https://www.aljazeera.com/wp-content/uploads/2021/06/2021-06-30_3_USA-CAPITOL-PLEA.jpg?resize=770%2C513)
-
-![](https://www.politico.eu/wp-content/uploads/2018/05/GettyImages-959155886-1200x628.jpg)
-
-*Christopher Wylie: a Canadian data consultant who released a cache of documents to The Guardian he obtained while he worked at Cambridge Analytica*
+Data can also be misused: see how Cambridge Analytica harvested Facebook data in [Design Ethics and User Coercion](design-ethics.html).
 
 ---
 
@@ -135,7 +118,7 @@ It's not so much that most people in 1975 loved the name Jennifer, Or that in 20
 
 Again, this should act as a reminder of that it's not just about who our user is but when is the user.
 
-Also, this may helps to highlight why Elon Musk can afford to call his son, X Æ A-Xii. He could afford to! And now let's take the Pepsi Challenge;
+Now let's take the Pepsi Challenge.
 
 ---
 
@@ -147,13 +130,13 @@ When we display an arrogant approach to data and believe that we somehow are imp
 
 This is just about as wrong as we can be;
 
-Playing on just about every available stereotype - from an Asian guy playing cello to black guys dancing hip hop, the 2017 'Live For Now' Pepsi Campaign was was a total fail which which resulted in mass losses for PepsiCo and marked the end of Pepsi's in-house marketing tradition.
+Playing on just about every available stereotype - from an Asian guy playing cello to black guys dancing hip hop, Pepsi's 2017 'Live for Now' advert, starring Kendall Jenner, was a total failure. It was attacked for trivialising protest movements such as Black Lives Matter, and Pepsi withdrew it and apologised within a day.
 
 ---
 
 ### A loose synopsis
 
-One day in some unnamed non specific North American capital city, there is a protest featuring just about every stereotypical ethnicity under the sun. From The reason for the protest is unclear and unspecified. At some point during demonstrations, the high profile public figure and model, Kendell Jenner notices whats happening, she's invited to join the movement and does so accordingly becoming just another citizen of humanity.
+One day in some unnamed non specific North American capital city, there is a protest featuring just about every stereotypical ethnicity under the sun. From The reason for the protest is unclear and unspecified. At some point during demonstrations, the high profile public figure and model, Kendall Jenner notices whats happening, she's invited to join the movement and does so accordingly becoming just another citizen of humanity.
 
 Eventually she reaches an intense stand off between demonstrators and law enforcement. Cleverly she reaches for a Pepsi and hands it to a police officer.
 
@@ -161,9 +144,8 @@ This breaks the intense stand off, the moment is snapped up by a photographer in
 
 Unmistakably beautiful, gorgeously composed and dangerously polarizing, the 'Live For Now' advert exploits real world inequality, plays on a orchestra of emotions and glamorizes themes of oppression all in the name of profit and corporate objectives.
 
-For a campaign which aimed so hard to side with non-discrimination and inclusivity, I'm particularly unsettled by the moment when the young, white, millionaire model Kendell Jenner thrusts into the hands of a black assistant her white wig. It's all strangely Aryan and tone deaf and a total mess. The advert was seen as even more ignorant than it already was given it surrounded the time of the Black Lives Matter Movement.
+For a campaign which aimed so hard to side with non-discrimination and inclusivity, I'm particularly unsettled by the moment when the young, white, millionaire model Kendall Jenner thrusts into the hands of a black assistant her white wig. It's all strangely Aryan and tone deaf and a total mess. 
 
-A movement where 25 people were killed in the United States by their fellow citizens while participating in political demonstrations.
 
 Let's watch.
 
@@ -171,11 +153,9 @@ Let's watch.
 
 ![Monday – 12.png](Monday__12.png)
 
-PepsiCo global beverage group president Brad Jakeman, who was head of its in-house content creation division, was responsible for the advert and replaced by Eugene Willemsen in 2016. Example of why we should never work in a silo. UX is about contact and peer review.
+The advert was made by Pepsi's own in-house content studio, and nobody stopped it before launch: an example of why we should never work in a silo. UX is about contact, testing and peer review.
 
-[further reading](https://www.theverge.com/2018/5/31/17377964/coca-cola-water-sustainability-recycling-controversy-investigation)
 
-*Pepsi must work so tirelessly to create a clean brand image because the reality is that Coca-Cola, Nestle and Pepsi trample on the right to life in places like, Pakistan, Tamil Nadu, India and even Detroit where the price of water is directly correlated to the amount of use by these companies. Coca-Cola and Pepsi are among the 12 companies said to be responsible for 70% of branded packaging litter in the UK.*
 
 In summary,
 
@@ -185,7 +165,7 @@ Remember even as far back as 300,000 years our ancient ancestors engaged in soph
 
 In Summary, when dealing with data, you will be dealing with both qualitative and quantitative data. It’s important to try and interpret your data correctly and try not to taint the sample with bias. 
 
-Ultimatley, you will learn where best to look for the type of information you need and most importantly, what you will know starts off by figuring out what you want to know, then what we need to know and refining and sharpening that understanding until you have a body of understanding from which you can build. Good Luck!
+Ultimately, you will learn where best to look for the type of information you need and most importantly, what you will know starts off by figuring out what you want to know, then what we need to know and refining and sharpening that understanding until you have a body of understanding from which you can build. Good Luck!
 
 ---
 
