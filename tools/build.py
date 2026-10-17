@@ -784,7 +784,8 @@ def build_track(t, data):
         head_btn = (f'<button type="button" class="complete-btn head-complete" data-complete="{t["id"]}/{p["slug"]}" aria-pressed="false">'
                     '<span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>') if t["id"] in PROGRESS else ""
         if deck_file(t.get("content", t["id"]), p["slug"]).exists():
-            head_btn = f'<a class="play-btn" href="slides/{p["slug"]}.html">{ICON_PLAY}<span>Play presentation</span></a>' + head_btn
+            head_btn = (f'<div class="head-actions"><a class="play-btn" href="slides/{p["slug"]}.html">{ICON_PLAY}<span>Play presentation</span></a>'
+                        f'{head_btn}</div>')
         body_html = f"""
 <main class="lecture track-{t['id']}" data-key="{t['id']}/{p['slug']}">
   <div class="wrap">
