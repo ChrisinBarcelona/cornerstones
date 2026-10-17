@@ -61,8 +61,8 @@ TRACKS = [
          "Business Case Studies": "Real products and businesses that got UX very right, or very wrong.",
          "Interface": "UI basics, and how people physically interact: gestures and haptics.",
      }},
-    {"id": "methods", "out": "methods", "index": "methods.html", "label": "UX Methods", "noun": "Method",
-     "eyebrow": "Sprint Toolkit", "h1": "UX Methods",
+    {"id": "methods", "out": "methods", "index": "methods.html", "label": "UX Method Bank", "noun": "Method",
+     "eyebrow": "Sprint Toolkit", "h1": "UX Method Bank",
      "blurb": "Your bank of methods for different types of problems.",
      "intro": "Your bank of {n} methods for different types of problems. Pick and choose: there's nothing to complete here, and no sprint uses them all. Find the stage you're at, then the method that fits your problem. Each one opens with what it's for and how long it takes.",
      "chapters": {
@@ -413,7 +413,8 @@ def course_chips(prefix):
 def page(title, description, body, depth, active):
     prefix = "../" * depth
     links = "".join(
-        f'<a href="{prefix}{t["index"]}"{" aria-current=page" if t["id"] == active else ""}>{t["label"]}</a>' for t in TRACKS)
+        f'<a href="{prefix}{t["index"]}"{" aria-current=page" if t["id"] == active else ""}>{t["label"]}</a>'
+        for t in TRACKS if t["id"] not in PROGRESS or t["id"] == "sprints")  # the rest are the coloured tabs below
     return f"""<!doctype html>
 <html lang="en" data-theme="light">
 <head>
@@ -1223,14 +1224,16 @@ def build_timetable(data):
 
 
 def load_resources():
-    """content/resources/index.md: "## Group | intro", "### Card", "- [Name](url) | note"."""
+    """content/resources/index.md: "## Group | icon | colour | intro", "### Card | icon", "- [Name](url) | note"."""
     groups = []
     for line in (CONTENT / "resources" / "index.md").read_text(encoding="utf-8").splitlines():
         if line.startswith("## "):
-            name, _, intro = line[3:].partition(" | ")
-            groups.append({"name": name.strip(), "intro": intro.strip(), "slug": re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-"), "cards": []})
+            name, icon, colour, intro = [x.strip() for x in line[3:].split(" | ", 3)]
+            groups.append({"name": name, "icon": icon, "colour": colour, "intro": intro,
+                           "slug": re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-"), "cards": []})
         elif line.startswith("### "):
-            groups[-1]["cards"].append({"name": line[4:].strip(), "links": []})
+            name, _, icon = line[4:].partition(" | ")
+            groups[-1]["cards"].append({"name": name.strip(), "icon": icon.strip(), "links": []})
         elif line.startswith("- ["):
             m = re.match(r"- \[([^\]]+)\]\(([^)]+)\)(?:\s*\|\s*(.*))?$", line)
             groups[-1]["cards"][-1]["links"].append({"name": m.group(1), "url": m.group(2), "note": (m.group(3) or "").strip()})
@@ -1238,24 +1241,43 @@ def load_resources():
 
 
 RESOURCES = load_resources()
+RES_ICONS = TRACK_ICONS.get("resources", {})
+
+
+def res_icon(name, size=20):
+    svg = RES_ICONS.get(name, {}).get("svg", "")
+    return (f'<svg viewBox="0 0 24 24" width="{size}" height="{size}" fill="none" stroke="currentColor" stroke-width="2" '
+            f'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{svg}</svg>')
 
 
 def resource_link(r):
     local = not r["url"].startswith("http")
-    host = "Download" if local else re.sub(r"^www\.", "", urlparse(r["url"]).netloc)
+    host = re.sub(r"^www\.", "", urlparse(r["url"]).netloc)
+    fav = ROOT / "assets" / "favicons" / f"{host}.png"
+    if local:
+        mark = f'<span class="res-fav res-fav-dl">{res_icon("grid-3x3", 16)}</span>'
+    elif fav.exists():
+        mark = f'<img class="res-fav" src="assets/favicons/{host}.png" alt="" width="28" height="28" loading="lazy">'
+    else:
+        mark = f'<span class="res-fav res-fav-letter">{esc(r["name"][0].upper())}</span>'
     attrs = ' download' if local else ' target="_blank" rel="noopener"'
-    return (f'<li><a class="res-link" href="{esc(r["url"])}"{attrs}><span class="res-name">{esc(r["name"])}</span>'
-            + (f'<span class="res-note">{esc(r["note"])}</span>' if r["note"] else "") +
-            f'<span class="res-host">{esc(host)}</span></a></li>')
+    return (f'<li><a class="res-link" href="{esc(r["url"])}"{attrs}>{mark}<span class="res-text"><span class="res-name">{esc(r["name"])}</span>'
+            + (f'<span class="res-note">{esc(r["note"])}</span>' if r["note"] else "")
+            + f'</span><span class="res-host">{"Download" if local else esc(host)}</span></a></li>')
 
 
 def build_resources():
-    """resources.html: every student resource, grouped, with a jump list."""
+    """resources.html: every student resource, grouped by colour and icon, with a jump list."""
     total = sum(len(c["links"]) for g in RESOURCES for c in g["cards"])
-    jump = "".join(f'<a href="#{g["slug"]}">{esc(g["name"])}</a>' for g in RESOURCES)
-    sections = "".join(f"""<section class="res-group" id="{g['slug']}" aria-labelledby="{g['slug']}-h">
-      <div class="res-group-head"><h2 id="{g['slug']}-h">{esc(g['name'])}</h2><p>{esc(g['intro'])}</p></div>
-      <div class="res-grid">{''.join(f'<article class="res-card"><h3>{esc(c["name"])}</h3><ul>{"".join(resource_link(r) for r in c["links"])}</ul></article>' for c in g['cards'])}</div>
+    jump = "".join(f'<a class="t-{g["colour"]}" href="#{g["slug"]}">{res_icon(g["icon"], 16)}{esc(g["name"])}</a>' for g in RESOURCES)
+    def card(c):
+        return (f'<article class="res-card"><h3><span class="res-card-icon">{res_icon(c["icon"], 18)}</span>{esc(c["name"])}</h3>'
+                f'<ul>{"".join(resource_link(r) for r in c["links"])}</ul></article>')
+    sections = "".join(f"""<section class="res-group t-{g['colour']}" id="{g['slug']}" aria-labelledby="{g['slug']}-h">
+      <div class="res-group-head"><span class="res-group-icon">{res_icon(g['icon'], 28)}</span>
+        <div><h2 id="{g['slug']}-h">{esc(g['name'])}</h2><p>{esc(g['intro'])}</p></div>
+        <span class="res-group-count">{sum(len(c['links']) for c in g['cards'])}</span></div>
+      <div class="res-grid">{''.join(card(c) for c in g['cards'])}</div>
     </section>""" for g in RESOURCES)
     body = f"""
 <main class="resources-page">
@@ -1276,9 +1298,9 @@ def build_resources():
 
 
 def resources_preview():
-    """The home page's Resources section: one tile per group."""
-    tiles = "".join(f'<a class="res-tile" href="resources.html#{g["slug"]}"><span class="res-tile-name">{esc(g["name"])}</span>'
-                    f'<span class="res-tile-intro">{esc(g["intro"])}</span>'
+    """The home page's Resources section: one coloured tile per group."""
+    tiles = "".join(f'<a class="res-tile t-{g["colour"]}" href="resources.html#{g["slug"]}"><span class="res-tile-icon">{res_icon(g["icon"], 22)}</span>'
+                    f'<span class="res-tile-name">{esc(g["name"])}</span><span class="res-tile-intro">{esc(g["intro"])}</span>'
                     f'<span class="res-tile-count">{n} link{"s" if n != 1 else ""}</span></a>'
                     for g in RESOURCES for n in [sum(len(c["links"]) for c in g["cards"])])
     return f"""<section class="res-preview" aria-labelledby="res-title">
@@ -1293,7 +1315,6 @@ def build_certificate():
     """certificate.html: locked until every award is earned, then a printable certificate with the student's name."""
     awards = "".join(f"""<li class="badge-item" data-track="{k}">{badge_svg(k, 64)}<span class="badge-name">{b['badge']}</span>
   <span class="badge-state">Locked</span></li>""" for k, b in PROGRESS.items())
-    seals = "".join(f'<li>{badge_svg(k, 54)}<span>{b["badge"]}</span></li>' for k, b in PROGRESS.items())
     body = f"""
 <main class="certificate-page" data-cert-page data-state="locked">
   <div class="wrap">
@@ -1314,19 +1335,19 @@ def build_certificate():
         <button type="button" class="login-submit" id="cert-print">Print or save as PDF</button>
       </div>
       <div class="cert-sheet" id="cert">
-        <div class="cert-frame">
-          <div class="cert-head">{LOGO_MARK.replace('width="38" height="38"', 'width="64" height="64"')}
-            <div><div class="cert-school">{SCHOOL}</div><div class="cert-programme">{CERTIFICATE}</div></div></div>
-          <div class="cert-kicker">Certificate of completion</div>
-          <p class="cert-line">This certifies that</p>
+        <div class="cert-panel">
+          <div class="cert-bcs" aria-label="BCS">B<i></i>C<i></i>S</div>
+          <div class="cert-title">Certificate</div>
+          <p class="cert-line">This certificate is awarded to</p>
           <div class="cert-name" id="cert-name">Your name</div>
-          <p class="cert-line">has completed every UX Theory and UI Theory lecture, Figma lesson and exercise of the
-            <b>{CERTIFICATE}</b> learning path, earning all five awards.</p>
-          <ul class="cert-seals">{seals}</ul>
-          <div class="cert-foot">
-            <div><span class="cert-date" data-cert-date></span><span class="cert-caption">Date</span></div>
-            <div class="cert-seal">{certificate_svg(70)}</div>
-            <div><span class="cert-sign">{SCHOOL}</span><span class="cert-caption">{CERTIFICATE}</span></div>
+          <p class="cert-line">for the successful completion of the</p>
+          <p class="cert-programme">{CERTIFICATE}</p>
+          <div class="cert-ux" aria-hidden="true">UX</div>
+          <p class="cert-line">at {SCHOOL}</p>
+          <div class="cert-date" data-cert-date></div>
+          <div class="cert-signs">
+            <figure><figcaption>Christopher John Kelly</figcaption><img src="assets/cert/sign-chris-kelly.png" alt="Signature of Christopher John Kelly"></figure>
+            <figure><figcaption>George Kovalev</figcaption><img src="assets/cert/sign-george-kovalev.png" alt="Signature of George Kovalev"></figure>
           </div>
         </div>
       </div>
