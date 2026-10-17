@@ -318,6 +318,13 @@
               "link": "methods/hi-fi"
             }
           ],
+          "workshop": {
+            "title": "Figma Workshop: Prototyping",
+            "tag": "Prototyping",
+            "lessons": [
+              "figma/beginners-guide-to-prototyping"
+            ]
+          },
           "lectures": [
             "ux/laws-of-ux"
           ],
@@ -395,7 +402,8 @@
           ],
           "lectures": [
             "ux/target-mvp"
-          ]
+          ],
+          "daily": "exercises/onboarding"
         },
         {
           "activities": [
@@ -436,6 +444,9 @@
           ],
           "lectures": [
             "ux/the-bias-of-beauty"
+          ],
+          "ui": [
+            "ui/accessibility"
           ]
         },
         {
