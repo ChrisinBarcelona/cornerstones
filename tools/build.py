@@ -72,6 +72,7 @@ TRACKS = [
          "Ideation": "Diverge on many ideas, decide on one, then design it from paper to high fidelity.",
          "Validation": "Test the prototype with real users and iterate on what you learn.",
          "Retrospective": "Reflect on the sprint and capture the lessons for your case study.",
+         "AI Workflows": "Use AI across the sprint with you in charge: prompting, connecting tools, context and quality.",
      },
      "parent": {"Information Architecture": "Define"}},
     {"id": "ui", "out": "ui", "index": "ui.html", "label": "UI Theory", "noun": "Lecture",
@@ -97,6 +98,7 @@ TRACKS = [
          "Daily UI": "Single-screen briefs for one session, rated for difficulty.",
          "Replica Challenges": "Copy real apps pixel for pixel to build fluency in Figma.",
          "UI Team Projects": "Multi-day team UI builds from a schema.",
+         "AI Outputting": "Give the same brief to several AI tools, screenshot the results and judge the pros and cons.",
      }},
 ]
 # Sections with progress tracking. Finishing every page of a sub-section earns its milestone badge; finishing every
@@ -113,7 +115,7 @@ PROGRESS = {
     "figma": {"badge": "Figma", "short": "FG", "colour": "#ab54f7", "done": "You've finished every Figma lesson.",
               "milestones": {"Figma Basics": "🧱", "Figma Advanced": "🚀"}},
     "exercises": {"badge": "Exercises", "short": "EX", "colour": "#00aa3c", "done": "You've completed every exercise.",
-                  "milestones": {"Daily UI": "✏️", "Replica Challenges": "🪞", "UI Team Projects": "🤝"}},
+                  "milestones": {"Daily UI": "✏️", "Replica Challenges": "🪞", "UI Team Projects": "🤝", "AI Outputting": "🤖"}},
 }
 CERTIFICATE = "UX/UI Design Bootcamp"
 
@@ -203,6 +205,7 @@ ORDER = {
         "Validation": ["usability-test", "create-your-script", "facilitator-format",
                        "limited-intervention-technique", "notetaker-format", "ab-test", "design-iteration"],
         "Retrospective": ["sprint-retrospective", "cataloguing-artifacts", "process-narrative", "building-your-web-portfolio"],
+        "AI Workflows": ["ai-guidelines", "mcp", "skills-in-claude", "connectors-in-claude", "avoiding-ai-slop", "token-economics"],
     },
     "sprints": {
         "Sprint Briefs": ["honest-greens", "locker-room", "wicked-project", "personal-project"],
@@ -218,9 +221,10 @@ ORDER = {
     "exercises": {
         "Daily UI": ["sidebar", "friends-list", "new-notification", "bottom-sheet", "sign-in", "cc-checkout",
                      "video-player", "choose-a-movie", "music-player", "home-monitor-dash", "user-profile-page",
-                     "make-an-ai-interface", "product-card", "ux-x-ai"],
+                     "make-an-ai-interface", "product-card"],
         "Replica Challenges": ["glovo-replica-challenge", "youtube-challenge", "airbnb-replica-challenge", "balenciaga-replica-challenge"],
         "UI Team Projects": ["stage-play"],
+        "AI Outputting": ["ux-x-ai"],
     },
 }
 
@@ -916,6 +920,8 @@ METHOD_BANK = [
      ["usability-test", "ab-test", "design-iteration"]),
     ("Retrospective", "I need to look back and tell the story of my project.",
      ["sprint-retrospective", "cataloguing-artifacts", "process-narrative"]),
+    ("AI Workflows", "I want AI to help, without it taking over or making my work generic.",
+     ["ai-guidelines", "avoiding-ai-slop", "skills-in-claude", "token-economics"]),
 ]
 
 
@@ -1166,7 +1172,7 @@ def build_timetable(data):
             if day.get("daily"):
                 track, slug = day["daily"].split("/")
                 level = data[track]["by_slug"][slug]["difficulty"]
-                cards.append(tt_card(f"{cid}-daily", "daily", "Daily UI", time=f"{level}/5" if level else "",
+                cards.append(tt_card(f"{cid}-daily", "daily", data[track]["by_slug"][slug]["category"] if track == "exercises" else "Daily UI", time=f"{level}/5" if level else "",
                                      tags=page_tags([day["daily"]], data)))
             cards.append(tt_card(f"{cid}-lunch", "routine", "Lunch", time=r["lunch"]["time"], icon_key="routine-lunch"))
             if day.get("presentation"):
@@ -1386,6 +1392,7 @@ TEMPLATES = {
                                           "checklist", "assessment"], "optional": []},
     "Lecture": {"level": 2, "keys": ["why it matters for ux", "try it", "media", "resources", "key takeaways"], "optional": []},
     "Key figure": {"level": 2, "keys": ["who they are", "key contributions", "why it matters for ux"], "optional": []},
+    "AI outputting": {"level": 2, "keys": ["the brief", "the tools", "how to run it", "pros and cons", "before you submit"], "optional": []},
     "Figma lesson": {"level": 2, "keys": ["what you'll build", "before you start", "well done"], "optional": []},
 }
 
@@ -1398,7 +1405,7 @@ def page_template(track, page):
     if track == "sprints":
         return "Sprint brief"
     if track == "exercises":
-        return {"Daily UI": "Daily UI", "Replica Challenges": "Replica challenge"}.get(cat, "Team project")
+        return {"Daily UI": "Daily UI", "Replica Challenges": "Replica challenge", "AI Outputting": "AI outputting"}.get(cat, "Team project")
     if track == "figma":
         return "Figma lesson"
     if page.get("parent") == "key-figures":

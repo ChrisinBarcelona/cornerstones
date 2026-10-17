@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Economics and Context · Cornerstones</title>
+<meta name="description" content="Understand tokens and context windows, and feed AI only what each task needs.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2238%2040%20739%20739%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M221%2090H590L777%20409H38Z%22%20fill%3D%22%23004ecd%22/%3E%3Cpath%20d%3D%22M38%20409H777L590%20728H221Z%22%20fill%3D%22%230062ff%22/%3E%3Cpath%20d%3D%22M374%20254H688L777%20409H286Z%22%20fill%3D%22%23002b71%22/%3E%3Cpath%20d%3D%22M286%20409H777L688%20564H374Z%22%20fill%3D%22%23003ea2%22/%3E%3C/svg%3E">
+<script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
+<script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=bc9ff1ff13">
+<link rel="stylesheet" href="../assets/theme.css?v=bc9ff1ff13">
+</head>
+<body class="t-methods">
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand logo" href="../index.html" aria-label="Cornerstones, UX/UI Design at Barcelona Code School, home"><svg class="logo-mark" viewBox="38 40 739 739" width="38" height="38" aria-hidden="true"><path d="M221 90H590L777 409H38Z" fill="#004ecd"/><path d="M38 409H777L590 728H221Z" fill="#0062ff"/><path d="M374 254H688L777 409H286Z" fill="#002b71"/><path d="M286 409H777L688 564H374Z" fill="#003ea2"/></svg><span class="logo-text"><span class="logo-name">Cornerstones</span><span class="logo-sub">UX/UI Design at Barcelona Code School</span></span>
+    </a>
+    <nav class="nav-links"><a href="../sprints.html">Sprint Briefs</a><a href="../ux.html">UX Theory</a><a href="../methods.html" aria-current=page>UX Methods</a><a href="../ui.html">UI Theory</a><a href="../figma.html">Figma</a><a href="../exercises.html">Exercises</a><a href="../timetable.html">Timetable</a></nav>
+    <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 20h8M5 20h2"/></svg></button>
+    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="../login.html"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Log out</span></button>
+  </div>
+  <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+  <div class="course-row"><button type="button" class="course-label" id="course-open" aria-controls="tracker" aria-label="Open your progress tracker">Course progress · <b id="course-pct">0%</b> complete</button>
+    <nav class="course-chips" aria-label="Progress by section"><a class="cp-chip t-sprints" data-chip="sprints" href="../sprints.html" title="Sprints"><span class="cp-fill"></span><span class="cp-name">Sprint Briefs</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ux" data-chip="ux" href="../ux.html" title="UX Theory"><span class="cp-fill"></span><span class="cp-name">UX Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-ui" data-chip="ui" href="../ui.html" title="UI Theory"><span class="cp-fill"></span><span class="cp-name">UI Theory</span><b class="cp-count">0/0</b></a><a class="cp-chip t-figma" data-chip="figma" href="../figma.html" title="Figma"><span class="cp-fill"></span><span class="cp-name">Figma</span><b class="cp-count">0/0</b></a><a class="cp-chip t-exercises" data-chip="exercises" href="../exercises.html" title="Exercises"><span class="cp-fill"></span><span class="cp-name">Exercises</span><b class="cp-count">0/0</b></a></nav>
+    <a class="mini-badges" id="mini-badges" href="../index.html#badges-title" aria-label="Your badges"></a></div>
+</header>
+
+<main class="lecture track-methods" data-key="methods/token-economics">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../methods.html">UX Methods</a> <span class="sep">/</span> <a href="../methods.html#category=AI Workflows">AI Workflows</a> <span class="sep">/</span> <span>Token Economics and Context</span></nav>
+    <header class="lecture-head">
+      <div class="eyebrow">Method 54 · AI Workflows</div>
+      <div class="title-row"><h1>Token Economics and Context</h1></div>
+      <p class="lede">Understand tokens and context windows, and feed AI only what each task needs.</p>
+      <div class="meta"><span>Takes 45 min</span><span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>3 min read</span></div>
+    </header>
+    <div class="lecture-grid">
+      <aside class="rail"><div class="rail-sticky"><div class="definition"><div class="rail-label">Definition</div><p><b>What is a context window?</b> Everything a model can take into account in one conversation, measured in tokens: your messages, its replies and attached files. Too much context makes answers worse.</p></div><div class="rail-box"><div class="rail-block"><div class="rail-label">On this page</div><ol class="toc"><li class="lvl2"><a href="#context">Context</a></li><li class="lvl2"><a href="#goal-learning-outcome">Goal / Learning Outcome</a></li><li class="lvl2"><a href="#main-exercise">Main Exercise</a></li><li class="lvl2"><a href="#media">Media</a></li></ol></div><div class="rail-block"><div class="rail-label">AI Workflows</div><ol class="toc family"><li><a href="ai-guidelines.html">AI Guidelines: Human in the Loop</a></li><li><a href="mcp.html">MCP: Model Context Protocol</a></li><li><a href="skills-in-claude.html">Skills in Claude (SKILL.md)</a></li><li><a href="connectors-in-claude.html">Connectors in Claude</a></li><li><a href="avoiding-ai-slop.html">Avoiding AI Slop: Rules and Quality Rubrics</a></li><li><a href="token-economics.html" aria-current=page>Token Economics and Context</a></li></ol></div></div></div></aside>
+      <article class="prose">
+<div class="definition definition-mobile"><div class="rail-label">Definition</div><p><b>What is a context window?</b> Everything a model can take into account in one conversation, measured in tokens: your messages, its replies and attached files. Too much context makes answers worse.</p></div><div class="quickref"><div class="qr-row"><div class="qr-label">When</div><div class="qr-value">AI Workflows: Use AI across the sprint with you in charge: prompting, connecting tools, context and quality.</div></div><div class="qr-row"><div class="qr-label">Time</div><div class="qr-value">45 min</div></div><div class="qr-row"><div class="qr-label">Goal</div><div class="qr-value"><ul><li>Explain tokens, context windows and context rot in plain language.</li><li>Recognise when a conversation has grown too long to be useful.</li><li>Write a hand-over summary and restart with focused context.</li><li>Choose what to include (and leave out) for a design task.</li></ul></div></div></div>
+<details class="toc-mobile"><summary>On this page</summary><ol class="toc"><li class="lvl2"><a href="#context">Context</a></li><li class="lvl2"><a href="#goal-learning-outcome">Goal / Learning Outcome</a></li><li class="lvl2"><a href="#main-exercise">Main Exercise</a></li><li class="lvl2"><a href="#media">Media</a></li></ol></details>
+<h2 id="context"><span class="h-icon">👋</span>Context</h2>
+<p>AI models don't read words, they read <strong>tokens</strong>: small chunks of text (in English, a token is roughly three-quarters of a word). Images and files are turned into tokens too. Everything in a conversation, your messages, the AI's replies and every file you've attached, takes up space in the model's <strong>context window</strong>, its working memory for that conversation.</p>
+<p>Two things follow from that:</p>
+<ul>
+<li><strong>Tokens cost.</strong> Paid plans and APIs are limited or billed by tokens, and the model's replies (output) usually cost more than what you send (input). Big files and long chats use up your allowance faster.</li>
+<li><strong>More context isn't always better.</strong> As a conversation grows, the model's accuracy and recall drop, which Anthropic calls <strong>context rot</strong>. A two-hour chat full of old drafts often gives worse answers than a fresh one with a good summary.</li>
+</ul>
+<p><strong>Context engineering</strong> is the skill of curating what goes into that window: the right information, in the right amount, at the right time. For designers, that means clean briefs, short summaries and starting fresh at the right moment.</p>
+<h2 id="goal-learning-outcome"><span class="h-icon">🎯</span>Goal / Learning Outcome</h2>
+<ul>
+<li>Explain tokens, context windows and context rot in plain language.</li>
+<li>Recognise when a conversation has grown too long to be useful.</li>
+<li>Write a hand-over summary and restart with focused context.</li>
+<li>Choose what to include (and leave out) for a design task.</li>
+</ul>
+<h2 id="main-exercise"><span class="h-icon">🛠️</span>Main Exercise</h2>
+<ol>
+<li><strong>Look at a long chat.</strong> Open one of your longest AI conversations from the sprint. Find the point where the answers got worse or started ignoring earlier instructions.</li>
+<li><strong>Write a hand-over summary.</strong> In under 200 words: the goal, the decisions made so far, the constraints and what's left to do.</li>
+<li><strong>Start fresh.</strong> Open a new conversation with only your summary and the one file you need now.</li>
+<li><strong>Compare.</strong> Ask the same question in the old chat and the new one. Which answer is sharper?</li>
+<li><strong>Make a context checklist</strong> for your project: what every AI task needs (goal, user, constraints, style guide) and what it never needs (old drafts, whole transcripts when a summary will do).</li>
+<li><strong>Use a Project.</strong> Put the stable material (brief, personas, style guide) in a Claude Project's knowledge, so each new chat starts with it.</li>
+</ol>
+<details class="more"><summary>Template</summary>
+<p><strong>Hand-over summary</strong></p>
+<ul>
+<li>🎯 <strong>Goal:</strong> …</li>
+<li>✅ <strong>Decided so far:</strong> …</li>
+<li>📏 <strong>Constraints:</strong> …</li>
+<li>⏭️ <strong>Next step:</strong> …</li>
+<li>📎 <strong>Attached:</strong> only what this step needs</li>
+</ul>
+</details>
+<details class="more"><summary>Tips</summary>
+<ul>
+<li>New task, new chat. Keep each conversation to one job.</li>
+<li>Summarise, don't paste: a 10-line summary of six interviews beats six full transcripts for most tasks.</li>
+<li>Crop screenshots to what matters; large images use many tokens.</li>
+<li>Put long-lived material in Project knowledge or a Skill, not in every message.</li>
+<li>When the AI starts forgetting your rules, that's your cue to restart with a summary.</li>
+</ul>
+</details>
+<h2 id="media"><span class="h-icon">🎥</span>Media</h2>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/-QVoIxEpFkM" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<figure class="video"><iframe src="https://www.youtube-nocookie.com/embed/TeQDr4DkLYo" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></figure>
+<details class="more"><summary>Resources</summary>
+<p><a href="https://docs.claude.com/en/docs/build-with-claude/context-windows">Context windows – Claude Docs</a></p>
+<p><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Effective context engineering for AI agents – Anthropic</a></p>
+<p><a href="https://www.anthropic.com/pricing">Plans and pricing – Anthropic</a></p>
+</details>
+<details class="more"><summary>Checklist</summary>
+<p>☐ Can explain tokens, context windows and context rot</p>
+<p>☐ Wrote a hand-over summary of a long conversation</p>
+<p>☐ Restarted with focused context and compared the results</p>
+<p>☐ Made a context checklist for your project</p>
+</details>
+<details class="more"><summary>Summary</summary>
+<p>Everything in a conversation costs <strong>tokens</strong> and takes space in the <strong>context window</strong>, and too much context makes answers worse (<strong>context rot</strong>). Good <strong>context engineering</strong> means giving AI only what the task needs: one job per chat, short summaries instead of long pastes, and stable material in a Project or a Skill.</p></details>
+
+      </article>
+    </div>
+    <nav class="pagers"><a class="pager prev" href="avoiding-ai-slop.html"><span class="pager-label">Previous</span><span class="pager-title">Avoiding AI Slop: Rules and Quality Rubrics</span></a><span></span></nav>
+  </div>
+</main>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<footer class="foot"><div class="foot-inner"><span>Cornerstones · UX & UI learning resource for Barcelona Code School</span><span class="mono">Notes by Chris Kelly</span></div></footer>
+<div class="celebrate" id="celebrate" hidden role="dialog" aria-modal="true" aria-labelledby="celebrate-title">
+  <div class="celebrate-card"><div class="celebrate-badge"></div><div class="eyebrow">Badge unlocked</div>
+  <h2 id="celebrate-title"></h2><p class="celebrate-text"></p>
+  <div class="celebrate-actions"><a class="login-submit celebrate-link" href="../certificate.html" hidden>See your certificate</a>
+  <button type="button" class="login-submit" id="celebrate-close">Nice!</button></div></div>
+</div>
+<script src="../assets/progress-data.js?v=bc9ff1ff13"></script>
+<script src="../assets/app.js?v=bc9ff1ff13"></script>
+</body>
+</html>

@@ -1,7 +1,8 @@
 {
   "categories": [
     "Replica Challenges",
-    "Daily UI"
+    "Daily UI",
+    "AI Outputting"
   ],
   "lectures": [
     {
@@ -22,11 +23,11 @@
     },
     {
       "slug": "ux-x-ai",
-      "title": "UX x AI",
+      "title": "UX x AI: One Brief, Many Tools",
       "parent": null,
       "children": [],
       "number": 3,
-      "category": "Daily UI"
+      "category": "AI Outputting"
     },
     {
       "slug": "sidebar",

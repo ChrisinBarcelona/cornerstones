@@ -191,5 +191,29 @@
   "methods/solution-hypothesis": {
     "q": "What is a Solution Hypothesis?",
     "a": "An early, unproven statement of what you think will solve the problem, for whom, and how you'll know it worked. It needs evidence before it becomes a design decision."
+  },
+  "methods/ai-guidelines": {
+    "q": "What does human in the loop mean?",
+    "a": "Keeping a person inside an AI-assisted process: setting the goal, checking every output and making the decisions that matter. In UX, the designer commands and AI assists."
+  },
+  "methods/mcp": {
+    "q": "What is MCP?",
+    "a": "The Model Context Protocol: an open standard that lets AI applications connect to tools and data, such as Figma files, through MCP servers."
+  },
+  "methods/skills-in-claude": {
+    "q": "What is a Skill?",
+    "a": "A folder with a SKILL.md file (a name, a description of when to use it and instructions) that Claude loads only when a task needs it."
+  },
+  "methods/connectors-in-claude": {
+    "q": "What is a connector?",
+    "a": "An integration, built on MCP, that lets Claude access an app such as Google Drive or Notion with your permissions, to search your files or take actions."
+  },
+  "methods/avoiding-ai-slop": {
+    "q": "What is AI slop?",
+    "a": "Generic AI-generated work that could belong to anyone: default styles, filler copy and clichéd layouts, produced when the AI has nothing specific to work from."
+  },
+  "methods/token-economics": {
+    "q": "What is a context window?",
+    "a": "Everything a model can take into account in one conversation, measured in tokens: your messages, its replies and attached files. Too much context makes answers worse."
   }
 }

@@ -144,6 +144,54 @@
       "children": [],
       "number": 0,
       "category": "Discovery"
+    },
+    {
+      "slug": "ai-guidelines",
+      "title": "AI Guidelines: Human in the Loop",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "AI Workflows"
+    },
+    {
+      "slug": "mcp",
+      "title": "MCP: Model Context Protocol",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "AI Workflows"
+    },
+    {
+      "slug": "skills-in-claude",
+      "title": "Skills in Claude (SKILL.md)",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "AI Workflows"
+    },
+    {
+      "slug": "connectors-in-claude",
+      "title": "Connectors in Claude",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "AI Workflows"
+    },
+    {
+      "slug": "avoiding-ai-slop",
+      "title": "Avoiding AI Slop: Rules and Quality Rubrics",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "AI Workflows"
+    },
+    {
+      "slug": "token-economics",
+      "title": "Token Economics and Context",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "AI Workflows"
     }
   ],
   "subpages": []

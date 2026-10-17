@@ -61,7 +61,7 @@
   "exercises/user-profile-page": "Design a profile page for Crew, a network for freelance creatives, with personal and professional details in a clean layout.",
   "exercises/make-an-ai-interface": "Design Ada, an AI study assistant that feels smart and human but still matches what users expect from chat apps.",
   "exercises/product-card": "Design a product card for Papel, an online wallpaper shop, that feels tactile, desirable and easy to use.",
-  "exercises/ux-x-ai": "Use AI tools to help you design, prototype and test an app idea in one afternoon.",
+  "exercises/ux-x-ai": "Give one brief to Stitch, Claude, Gemini, Codex and more, screenshot what each makes, and debate the pros and cons.",
   "exercises/balenciaga-replica-challenge": "Trace Balenciaga's Le City pages on phone and desktop: a minimal, responsive luxury e-commerce site, by hand first, then with Auto Layout and components.",
   "exercises/airbnb-replica-challenge": "Trace seven real Airbnb screens in Figma, from the first notification prompt to Confirm and pay: by hand first, then with Auto Layout and components.",
   "exercises/glovo-replica-challenge": "Recreate the Glovo app screen by screen in Figma: by hand first, then rebuilt with Auto Layout and components.",
@@ -114,5 +114,11 @@
   "methods/design-iteration": "Turn test findings into 2–3 design changes, shown as before-and-after snapshots.",
   "methods/sprint-retrospective": "Reflect on what worked, what didn't and what you learned. It becomes the first page of your case study.",
   "methods/initial-problem-statement": "Write your starting hunch about the problem as one unproven sentence, and list the assumptions research must test.",
-  "methods/solution-hypothesis": "Write your early solution idea as a testable bet, then let the research support, change or drop it."
+  "methods/solution-hypothesis": "Write your early solution idea as a testable bet, then let the research support, change or drop it.",
+  "methods/ai-guidelines": "Prompt with the CARE and T.C.R.E.I. frameworks, and keep a human in charge of every decision.",
+  "methods/mcp": "Connect AI tools to Figma and other apps through MCP, so they read real design context.",
+  "methods/skills-in-claude": "Write a SKILL.md so Claude follows your team's process the same way every time.",
+  "methods/connectors-in-claude": "Let Claude search and act in the apps where your sprint lives, with you approving every action.",
+  "methods/avoiding-ai-slop": "Stop AI-assisted work looking generic with clear rules up front and a quality rubric afterwards.",
+  "methods/token-economics": "Understand tokens and context windows, and feed AI only what each task needs."
 }
