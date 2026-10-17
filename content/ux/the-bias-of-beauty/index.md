@@ -56,7 +56,7 @@ Whilst the aesthetic will earn you initial trust from the user, without substanc
 
 Balance is key.
 
-For how design creates feelings, see [Emotional Design](emotional-design.html). For the visual styles designers have used, from Bauhaus to glassmorphism, see [Design Styles](../ui/design-styles.html) in UI Theory.
+For how design creates feelings, see [Emotional Design](emotional-design.html). For the visual styles designers have used, from Bauhaus to glassmorphism, see [Design Styles](../ui/design-styles.html) in the UI Deck.
 
 ---
 

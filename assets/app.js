@@ -261,7 +261,7 @@
     return Math.max(1, Math.min(99, Math.round(part / whole * 100)));
   }
   function stats(track, milestone) {
-    var items = TRACKS[track].items.filter(function (i) { return !milestone || i.category === milestone; }), share = 0, n = 0;
+    var items = TRACKS[track].items.filter(function (i) { return !milestone || (i.milestone || i.category) === milestone; }), share = 0, n = 0;
     items.forEach(function (i) { share += itemShare(i); if (itemDone(i)) n++; });
     var need = !milestone && TRACKS[track].need;
     var full = need ? n >= need : n === items.length;
@@ -395,11 +395,11 @@
       var lastCat = null;
       var items = tr.items.map(function (i) {
         var head = '';
-        if (milestones(t).length && i.category !== lastCat) {
-          lastCat = i.category;
-          var ms = milestones(t).filter(function (m) { return m.name === i.category; })[0], mst = stats(t, i.category);
+        if (milestones(t).length && (i.milestone || i.category) !== lastCat) {
+          lastCat = i.milestone || i.category;
+          var ms = milestones(t).filter(function (m) { return m.name === lastCat; })[0], mst = stats(t, lastCat);
           if (ms) head = '<li class="tk-ms' + (mst.full ? ' earned' : '') + '"><span class="tk-ms-badge">' + ms.svg + '</span>' +
-            '<a class="tk-ms-name" href="' + ROOT + tr.index + '#category=' + encodeURIComponent(ms.name) + '">' + esc(ms.name) + '</a><span class="tk-ms-count">' + (mst.full ? 'Milestone earned' : mst.done + ' / ' + mst.total) + '</span></li>';
+            '<a class="tk-ms-name" href="' + ROOT + (i.milestone && i.milestone !== i.category ? i.url : tr.index + '#category=' + encodeURIComponent(ms.name)) + '">' + esc(ms.name) + '</a><span class="tk-ms-count">' + (mst.full ? 'Milestone earned' : mst.done + ' / ' + mst.total) + '</span></li>';
         }
         var row = head + check(i.key, i.title, i.url, 'tk-item' + (itemDone(i) ? ' item-complete' : ''));
         if (!i.children.length) return row;
@@ -470,7 +470,7 @@
     return keys;
   }
   function markAll(on) {
-    var msg = on ? 'Mark every sprint brief, UX Theory and UI Theory lecture, Figma lesson and exercise as complete?'
+    var msg = on ? 'Mark every sprint brief, UX Deck and UI Deck lecture, Figma lesson and UI Practical as complete?'
                  : 'Unmark everything? This clears all of your progress in this browser.';
     if (!window.confirm(msg)) return;
     allKeys().forEach(function (k) { if (on) done[k] = 1; else delete done[k]; });

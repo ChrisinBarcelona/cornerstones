@@ -114,3 +114,40 @@
 .layout-exercise .slide-inner:has(.slide-fig) { display: grid; grid-template-columns: .62fr 1.38fr; align-items: center; gap: 3.5cqw; }
 .layout-exercise .slide-fig img { width: 100%; height: auto; max-height: 78cqh; object-fit: contain; border-radius: 12px; box-shadow: 0 1cqh 4cqh rgba(0, 0, 0, .25); }
 .layout-answers li { font-size: 3.6cqh; }
+
+/* ---- Polish: shared by every deck ---- */
+.slide { background: var(--raised); }
+.layout-text, .layout-split, .layout-cards, .layout-image {
+  background-image: radial-gradient(color-mix(in srgb, var(--ink) 9%, transparent) 1px, transparent 1.2px); background-size: 3.2cqh 3.2cqh; }
+.layout-text .slide-inner, .layout-split .slide-inner, .layout-cards .slide-inner, .layout-image .slide-inner { position: relative; }
+.layout-text h2::before, .layout-split h2::before, .layout-cards h2::before, .layout-image h2::before, .layout-statement p:first-child::before {
+  content: ""; display: block; width: 7cqh; height: 1cqh; margin-bottom: 2.4cqh; border-radius: 99px; background: var(--tc); }
+.layout-statement p:first-child::before { margin: 0 auto 3.4cqh; }
+.slide-foot { position: absolute; left: 7cqw; right: 7cqw; bottom: 3.2cqh; display: flex; justify-content: space-between;
+  font: 600 2.1cqh var(--font); letter-spacing: .02em; color: var(--muted); pointer-events: none; }
+.layout-title .slide-foot, .layout-section .slide-foot, .layout-exercise .slide-foot { color: currentColor; opacity: .6; }
+.layout-title .slide-foot { color: var(--tc-ink); }
+.layout-section .slide-foot { color: #f6f1ea; }
+.layout-exercise .slide-foot { color: var(--tc-ink); }
+/* Title: bold colour field with soft circles */
+.layout-title { overflow: hidden; }
+.layout-title .slide-inner { position: relative; overflow: hidden; }
+.layout-title .slide-inner::before, .layout-title .slide-inner::after { content: ""; position: absolute; border-radius: 50%; background: rgba(255, 255, 255, .14); }
+.layout-title .slide-inner::before { width: 70cqh; height: 70cqh; right: -12cqh; top: -18cqh; }
+.layout-title .slide-inner::after { width: 38cqh; height: 38cqh; right: 30cqh; bottom: -16cqh; background: rgba(0, 0, 0, .08); }
+.layout-title h1, .layout-title p { position: relative; }
+.layout-title h1::before { content: "Presentation"; display: block; width: max-content; margin-bottom: 3cqh; padding: .9cqh 2.2cqh; border-radius: 99px;
+  border: .3cqh solid currentColor; font: 700 2.4cqh var(--font); letter-spacing: .06em; text-transform: uppercase; }
+/* Section dividers: dark with a coloured rule */
+.layout-section .slide-inner { border-left: 2.4cqw solid var(--tc); }
+/* Split images and figures: framed */
+.layout-split .slide-fig img, .layout-image .slide-fig img { border-radius: 2cqh; box-shadow: 0 2cqh 5cqh -2cqh rgba(40, 20, 0, .35); background: #fff; }
+/* Cards: numbered tiles */
+.layout-cards ul { counter-reset: card; }
+.layout-cards li { position: relative; counter-increment: card; background: var(--raised); box-shadow: 0 1.2cqh 3cqh -2cqh rgba(40, 20, 0, .3); border-top: 0; border-left: .9cqh solid var(--tc); }
+.layout-cards li::after { content: counter(card, decimal-leading-zero); position: absolute; top: 2.2cqh; right: 2.6cqh; font: 800 2.6cqh "Bricolage Grotesque", sans-serif; color: color-mix(in srgb, var(--tc) 55%, transparent); }
+/* Quote: big mark */
+.layout-quote .slide-inner { background: color-mix(in srgb, var(--tc) 10%, var(--raised)); }
+/* Exercise: a timer chip and white answer area feel */
+.layout-exercise ol li, .layout-exercise ul li { padding-left: .4em; }
+.layout-answers .slide-inner { border-top: 1.2cqh solid var(--tc); }

@@ -14,6 +14,8 @@ The **Desirability, Viability, Feasibility (DVF)** scorecard was developed by ID
 - **Viability:** Is it good for the business? What does it cost, and is it sustainable over time?
 - **Feasibility:** Can we build it? Do the skills, time and technology exist?
 
+![Three overlapping circles: desirability (do they want this?), viability (should we do this?) and feasibility (can we do this?), with the most valuable design where all three meet](dvf-venn.png)
+
 The best ideas sit where all three overlap. The score is a starting point for discussion, not the final answer.
 
 # 🎯 Goal / Learning Outcome

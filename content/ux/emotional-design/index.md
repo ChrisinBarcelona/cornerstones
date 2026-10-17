@@ -42,7 +42,7 @@ McDonald's uses red and yellow throughout its branding. Red is energetic and att
 
 ## Typography
 
-Typography is the art of arranging type so that it's legible, readable and appealing. It covers the choice of typeface, size, line length, spacing and alignment, and it sets the tone of a design before anyone reads a word. Serif typefaces often feel traditional and reliable; sans-serif typefaces feel modern and clean. (You'll go deeper in the UI Theory lecture on [Typeface](../ui/typeface.html).)
+Typography is the art of arranging type so that it's legible, readable and appealing. It covers the choice of typeface, size, line length, spacing and alignment, and it sets the tone of a design before anyone reads a word. Serif typefaces often feel traditional and reliable; sans-serif typefaces feel modern and clean. (You'll go deeper in the UI Deck lecture on [Typeface](../ui/typeface.html).)
 
 ![San Francisco typeface specimen](SF_Typographica_01.png)
 

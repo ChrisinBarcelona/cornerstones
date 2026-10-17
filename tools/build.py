@@ -2,11 +2,11 @@
 
     index.html      Course home: the four sections, a suggested route and a search of everything
     timetable.html  The 9-week timetable board (content/timetable.json)
-    ux.html         UX Theory          -> lectures/<slug>.html
+    ux.html         UX Deck            -> lectures/<slug>.html
     methods.html    UX methods         -> methods/<slug>.html
-    ui.html         UI Theory          -> ui/<slug>.html
+    ui.html         UI Deck            -> ui/<slug>.html
     figma.html      Figma tutorials    -> figma/<slug>.html   (content shared with UI: content/ui/)
-    exercises.html  Exercises          -> exercises/<slug>.html
+    exercises.html  UI Practicals      -> exercises/<slug>.html
 
 Usage:
     pip install markdown
@@ -50,8 +50,8 @@ TRACKS = [
      "blurb": "The four sprints at the heart of the bootcamp, from real-world service design to your own project.",
      "intro": "The {n} sprints at the heart of the bootcamp. Each brief sets out the problem, your challenge, the goals, the scope, what to deliver and how the sprint runs day by day.",
      "chapters": {"Sprint Briefs": "Service design, a startup, a wicked problem and a project of your own."}},
-    {"id": "ux", "out": "lectures", "index": "ux.html", "label": "UX Theory", "noun": "Lecture",
-     "eyebrow": "UX Learning Resource", "h1": "UX Theory",
+    {"id": "ux", "out": "lectures", "index": "ux.html", "label": "UX Deck", "noun": "Lecture",
+     "eyebrow": "UX Learning Resource", "h1": "UX Deck",
      "blurb": "The history, psychology and practice of user experience design.",
      "intro": "{n} lectures on the history, psychology and practice of UX, grouped by topic.",
      "chapters": {
@@ -75,12 +75,13 @@ TRACKS = [
          "AI Workflows": "Use AI across the sprint with you in charge: prompting, connecting tools, context and quality.",
      },
      "parent": {"Information Architecture": "Define"}},
-    {"id": "ui", "out": "ui", "index": "ui.html", "label": "UI Theory", "noun": "Lecture",
-     "eyebrow": "UI Learning Resource", "h1": "UI Theory",
+    {"id": "ui", "out": "ui", "index": "ui.html", "label": "UI Deck", "noun": "Lecture",
+     "eyebrow": "UI Learning Resource", "h1": "UI Deck",
      "blurb": "The theory behind good interfaces: colour, type, spacing, icons and systems.",
      "intro": "{n} lectures on the theory behind interfaces. For hands-on tutorials, see <a href=\"figma.html\">Figma</a>.",
      "chapters": {
-         "UI Theory": "The concepts behind interfaces: colour, type, spacing, icons and systems.",
+         "Visual Language": "How interfaces look and speak: colour, type, icons and visual styles.",
+         "Building Interfaces": "How interfaces are built: grids, file types, design systems, style guides and wireframes.",
      }},
     {"id": "figma", "content": "ui", "out": "figma", "index": "figma.html", "label": "Figma", "noun": "Lesson",
      "eyebrow": "Hands-on Tutorials", "h1": "Figma",
@@ -90,8 +91,8 @@ TRACKS = [
          "Figma Basics": "Start here: frames, grids, nesting, Auto Layout, the 8 point grid and your first components.",
          "Figma Advanced": "Component properties and variables, the building blocks of a design system.",
      }},
-    {"id": "exercises", "out": "exercises", "index": "exercises.html", "label": "Exercises", "noun": "Exercise",
-     "eyebrow": "Practice", "h1": "Exercises",
+    {"id": "exercises", "out": "exercises", "index": "exercises.html", "label": "UI Practicals", "noun": "Exercise",
+     "eyebrow": "Practice", "h1": "UI Practicals",
      "blurb": "Briefs to practise in Figma, from one-session Daily UIs to multi-day projects.",
      "intro": "{n} briefs to practise in Figma, from one-session Daily UIs to multi-day projects.",
      "chapters": {
@@ -106,15 +107,18 @@ TRACKS = [
 # milestones: completing `need` of the four sprints wins their award, as two sprints are needed to pass. A page with sub-lessons
 # counts as one item, complete only when the page and every sub-lesson are done.
 PROGRESS = {
-    "sprints": {"badge": "Sprints", "short": "SP", "colour": "#ff3d8b", "need": 2,
-                "done": "You've completed two sprints, enough to pass. Keep going for all four!", "milestones": {}},
-    "ux": {"badge": "UX Theory", "short": "UX", "colour": "#0072e3", "done": "You've finished every UX Theory lecture.",
+    "sprints": {"badge": "Sprints", "short": "SP", "colour": "#ff3d8b", "done": "You've completed all four sprints.",
+                "milestones": {"Honest Greens": "🥗", "Locker Room": "🏖️", "Wicked Project": "🌍", "Personal Project": "🎯"},
+                # each sprint is its own milestone, so milestones follow the page, not the sub-section
+                "milestone_of": {"honest-greens": "Honest Greens", "locker-room": "Locker Room",
+                                 "wicked-project": "Wicked Project", "personal-project": "Personal Project"}},
+    "ux": {"badge": "UX Deck", "short": "UX", "colour": "#0072e3", "done": "You've finished every UX Deck lecture.",
            "milestones": {"Foundations": "🏛️", "Psychology": "🧠", "Process": "🔁", "Business Case Studies": "🔍", "Interface": "👆"}},
-    "ui": {"badge": "UI Theory", "short": "UI", "colour": "#ff6100", "done": "You've finished every UI Theory lecture.",
-           "milestones": {}},
+    "ui": {"badge": "UI Deck", "short": "UI", "colour": "#ff6100", "done": "You've finished every UI Deck lecture.",
+           "milestones": {"Visual Language": "🎨", "Building Interfaces": "📐"}},
     "figma": {"badge": "Figma", "short": "FG", "colour": "#ab54f7", "done": "You've finished every Figma lesson.",
               "milestones": {"Figma Basics": "🧱", "Figma Advanced": "🚀"}},
-    "exercises": {"badge": "Exercises", "short": "EX", "colour": "#00aa3c", "done": "You've completed every exercise.",
+    "exercises": {"badge": "UI Practicals", "short": "EX", "colour": "#00aa3c", "done": "You've completed every exercise.",
                   "milestones": {"Daily UI": "✏️", "Replica Challenges": "🪞", "UI Team Projects": "🤝", "AI Outputting": "🤖"}},
 }
 CERTIFICATE = "UX/UI Design Bootcamp"
@@ -164,8 +168,10 @@ def progress_panel(track, compact=False):
 
 def milestone_item(track, cat, size):
     """A milestone badge with its name and count, linking to just that sub-section; app.js marks it earned."""
+    page = next((slug for slug, name in PROGRESS[track].get("milestone_of", {}).items() if name == cat), None)
+    href = f'{TRACK[track]["out"]}/{page}.html' if page else f'{TRACK[track]["index"]}#category={quote(cat)}'
     return (f'<li class="milestone" data-milestone="{track}:{esc(cat)}"><a class="milestone-link" '
-            f'href="{TRACK[track]["index"]}#category={quote(cat)}" title="Show the {esc(cat)} pages">{milestone_svg(track, cat, size)}'
+            f'href="{href}" title="Show the {esc(cat)} pages">{milestone_svg(track, cat, size)}'
             f'<span class="milestone-name">{esc(cat)}</span><span class="milestone-state">–</span></a></li>')
 
 
@@ -191,8 +197,8 @@ ORDER = {
         "Interface": ["gestures", "haptics"],
     },
     "ui": {
-        "UI Theory": ["colour-values", "atomic-design-methodology", "file-types", "spacing-grids", "typeface",
-                      "style-guides", "design-styles", "icons", "paper-wireframes"],
+        "Visual Language": ["colour-values", "typeface", "icons", "design-styles"],
+        "Building Interfaces": ["spacing-grids", "file-types", "atomic-design-methodology", "style-guides", "paper-wireframes"],
     },
     "methods": {
         "Discovery": ["lean-ux-canvas", "long-term-goal", "initial-problem-statement", "solution-hypothesis", "research-goal", "research-questions", "desk-research", "site-visit", "user-survey", "user-interview", "discovery-summary"],
@@ -1060,7 +1066,7 @@ def build_home(data):
     <section class="sections" aria-label="Sections">{''.join(cards)}</section>
     <section class="badges" aria-labelledby="badges-title">
       <h2 id="badges-title">Your badges</h2>
-      <p class="route-intro">Celebrate every step. Finish every page in a sub-section to reach its <b>milestone</b>. Reach every milestone in a section to win its <b>award</b>. Win all five awards (for Sprints, two of the four sprints are enough) and {SCHOOL} awards you a <b>certificate</b> in the {CERTIFICATE}. Lectures with parts count once you've done all of their parts. Progress is saved in this browser.</p>
+      <p class="route-intro">Celebrate every step. Finish every page in a sub-section to reach its <b>milestone</b>. Reach every milestone in a section to win its <b>award</b>. Win all five awards and {SCHOOL} awards you a <b>certificate</b> in the {CERTIFICATE}. Lectures with parts count once you've done all of their parts. Progress is saved in this browser.</p>
       <ul class="badge-shelf">{badges}</ul>
     </section>
     <section class="route">
@@ -1403,7 +1409,8 @@ def build_decks(data):
             topics = "".join(f"<li>{esc(x)}</li>" for x in meta["topics"])
             sections = "".join(
                 f'<section class="slide layout-{layout}" data-i="{i}" aria-roledescription="slide" aria-label="{i + 1} of {total}">'
-                f'<div class="slide-inner">{render_slide(src, p["slug"], layout, text)}</div></section>'
+                f'<div class="slide-inner">{render_slide(src, p["slug"], layout, text)}</div>'
+                f'<footer class="slide-foot"><span>{esc(t["label"])} · {esc(meta.get("title", p["title"]))}</span><span>{i + 1} / {total}</span></footer></section>'
                 for i, (layout, text) in enumerate(slides))
             prefix = "../../"
             html_ = f"""<!doctype html>
@@ -1472,7 +1479,7 @@ def build_certificate():
       <div class="cert-lock-art">{certificate_svg(110)}</div>
       <div class="eyebrow">{SCHOOL}</div>
       <h1>Your certificate</h1>
-      <p class="lede">Win all five awards to unlock your certificate in the {CERTIFICATE}. Each award comes from reaching every milestone in its section; for Sprints, complete at least two of the four sprints.</p>
+      <p class="lede">Win all five awards to unlock your certificate in the {CERTIFICATE}. Each award comes from reaching every milestone in its section.</p>
       <ul class="badge-shelf cert-awards">{awards}</ul>
       <p class="cert-back"><a href="index.html#badges-title">See your milestones and awards</a></p>
     </section>
@@ -1556,14 +1563,14 @@ if(localStorage.getItem('cs-auth')==='{LOGIN_HASH}')location.replace('index.html
 
 def write_progress_data(data):
     for k, b in PROGRESS.items():
-        if b["milestones"] and list(b["milestones"]) != data[k]["categories"]:
+        if b["milestones"] and not b.get("milestone_of") and list(b["milestones"]) != data[k]["categories"]:
             raise SystemExit(f"PROGRESS[{k!r}] milestones {list(b['milestones'])} don't match its sub-sections {data[k]['categories']}")
     def entry(k, page):
         return {"key": f"{k}/{page['slug']}", "title": page["title"], "url": f"{TRACK[k]['out']}/{page['slug']}.html"}
     tracks = {k: {"badge": b["badge"], "done": b["done"], "short": b["short"], "label": TRACK[k]["label"], "need": b.get("need"),
                   "index": TRACK[k]["index"], "svg": badge_svg(k, 120),
                   "milestones": [{"name": c, "svg": milestone_svg(k, c, 96)} for c in b["milestones"]],
-                  "items": [{**entry(k, l), "category": l["category"],
+                  "items": [{**entry(k, l), "category": l["category"], "milestone": b.get("milestone_of", {}).get(l["slug"], l["category"]),
                              "children": [{**entry(k, data[k]["by_slug"][c]), "title": short(data[k]["by_slug"][c]["title"])}
                                           for c in l["children"]]}
                             for l in data[k]["lectures"]]} for k, b in PROGRESS.items()}

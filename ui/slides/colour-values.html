@@ -11,9 +11,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="../../assets/style.css?v=dc4601eb77">
-<link rel="stylesheet" href="../../assets/theme.css?v=dc4601eb77">
-<link rel="stylesheet" href="../../assets/deck.css?v=dc4601eb77">
+<link rel="stylesheet" href="../../assets/style.css?v=8e8e91a197">
+<link rel="stylesheet" href="../../assets/theme.css?v=8e8e91a197">
+<link rel="stylesheet" href="../../assets/deck.css?v=8e8e91a197">
 </head>
 <body class="deck-body t-ui">
 <div class="deck" id="deck" data-total="13" data-state="intro">
@@ -26,7 +26,7 @@
   <div class="deck-progress" role="progressbar" aria-label="Presentation progress" aria-valuemin="0" aria-valuemax="13" aria-valuenow="0"><span id="deck-bar"></span></div>
   <section class="deck-intro" aria-labelledby="deck-intro-title">
     <div class="deck-intro-card">
-      <div class="eyebrow">UI Theory · Presentation</div>
+      <div class="eyebrow">UI Deck · Presentation</div>
       <h1 id="deck-intro-title">Colour Values</h1>
       <p class="lede">How screens make colour, and the formats you&#x27;ll use to hand colour from Figma to code.</p>
       <div class="deck-meta"><span>⏱ About 15 minutes</span><span>13 slides</span><span>Ends with an exercise</span></div>
@@ -38,22 +38,22 @@
   </section>
   <div class="deck-viewport" id="deck-viewport">
     <div class="deck-stage" id="deck-stage"><section class="slide layout-title" data-i="0" aria-roledescription="slide" aria-label="1 of 13"><div class="slide-inner"><h1>Colour Values</h1>
-<p>How screens make colour, and the formats you'll use to hand colour from Figma to code.</p></div></section><section class="slide layout-split" data-i="1" aria-roledescription="slide" aria-label="2 of 13"><div class="slide-inner"><div class="slide-copy"><h2>Colour is light</h2>
+<p>How screens make colour, and the formats you'll use to hand colour from Figma to code.</p></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>1 / 13</span></footer></section><section class="slide layout-split" data-i="1" aria-roledescription="slide" aria-label="2 of 13"><div class="slide-inner"><div class="slide-copy"><h2>Colour is light</h2>
 
 <p>Everything you design is seen as <strong>light</strong>.</p>
 <p>Screens make every colour by mixing three lights: <strong>red, green and blue</strong>.</p>
-<p>Colour values are just a precise way of writing down how much of each.</p></div><figure class="slide-fig"><img alt="The visible light spectrum, from violet at 400 nanometres to red at 700" src="../../content/ui/colour-values/Visible-Light-Spectrum.png" decoding="async"></figure></div></section><section class="slide layout-cards" data-i="2" aria-roledescription="slide" aria-label="3 of 13"><div class="slide-inner"><h2>Five formats you'll meet</h2>
+<p>Colour values are just a precise way of writing down how much of each.</p></div><figure class="slide-fig"><img alt="The visible light spectrum, from violet at 400 nanometres to red at 700" src="../../content/ui/colour-values/Visible-Light-Spectrum.png" decoding="async"></figure></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>2 / 13</span></footer></section><section class="slide layout-cards" data-i="2" aria-roledescription="slide" aria-label="3 of 13"><div class="slide-inner"><h2>Five formats you'll meet</h2>
 <ul>
 <li><strong>HEX</strong> <code>#FF0000</code>: the everyday format in Figma and CSS</li>
 <li><strong>RGB</strong> <code>rgb(255, 0, 0)</code>: red, green and blue from 0 to 255</li>
 <li><strong>HSL</strong> <code>hsl(0, 100%, 50%)</code>: hue, saturation, lightness</li>
 <li><strong>CMYK</strong> <code>0, 100, 100, 0</code>: ink for print only</li>
 <li><strong>Named</strong> <code>red</code>: handy in code, too limited for design</li>
-</ul></div></section><section class="slide layout-split" data-i="3" aria-roledescription="slide" aria-label="4 of 13"><div class="slide-inner"><div class="slide-copy"><h2>HEX</h2>
+</ul></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>3 / 13</span></footer></section><section class="slide layout-split" data-i="3" aria-roledescription="slide" aria-label="4 of 13"><div class="slide-inner"><div class="slide-copy"><h2>HEX</h2>
 
 <p>A hash and <strong>six characters</strong>: <code>#RRGGBB</code>.</p>
 <p>Each pair is one light, from <code>00</code> (off) to <code>FF</code> (full).</p>
-<p><code>#FF0000</code> = full red, no green, no blue.</p></div><figure class="slide-fig"><img alt="Pure red, green and blue as HEX: #FF0000, #00FF00, #0000FF" src="../../content/ui/colour-values/HEX_Values.png" decoding="async"></figure></div></section><section class="slide layout-split" data-i="4" aria-roledescription="slide" aria-label="5 of 13"><div class="slide-inner"><div class="slide-copy"><h2>Mixing light</h2>
+<p><code>#FF0000</code> = full red, no green, no blue.</p></div><figure class="slide-fig"><img alt="Pure red, green and blue as HEX: #FF0000, #00FF00, #0000FF" src="../../content/ui/colour-values/HEX_Values.png" decoding="async"></figure></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>4 / 13</span></footer></section><section class="slide layout-split" data-i="4" aria-roledescription="slide" aria-label="5 of 13"><div class="slide-inner"><div class="slide-copy"><h2>Mixing light</h2>
 
 <p>Light mixes <strong>additively</strong>: add lights together and you get brighter colours.</p>
 <ul>
@@ -61,49 +61,49 @@
 <li>Green + blue = <strong>cyan</strong> <code>#00FFFF</code></li>
 <li>Red + blue = <strong>magenta</strong> <code>#FF00FF</code></li>
 <li>All three = <strong>white</strong> <code>#FFFFFF</code></li>
-</ul></div><figure class="slide-fig"><img alt="Yellow, cyan and magenta made by mixing two lights at full strength" src="../../content/ui/colour-values/RGBValues-2.png" decoding="async"></figure></div></section><section class="slide layout-split" data-i="5" aria-roledescription="slide" aria-label="6 of 13"><div class="slide-inner"><div class="slide-copy"><h2>RGB and RGBA</h2>
+</ul></div><figure class="slide-fig"><img alt="Yellow, cyan and magenta made by mixing two lights at full strength" src="../../content/ui/colour-values/RGBValues-2.png" decoding="async"></figure></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>5 / 13</span></footer></section><section class="slide layout-split" data-i="5" aria-roledescription="slide" aria-label="6 of 13"><div class="slide-inner"><div class="slide-copy"><h2>RGB and RGBA</h2>
 
 <p>The same three lights as numbers from <strong>0 to 255</strong>: <code>rgb(0, 255, 0)</code>.</p>
 <p>Add a fourth value, <strong>alpha</strong>, for transparency: <code>rgba(0, 255, 0, 0.5)</code> is 50% see-through.</p>
-<p>Figma's picker switches between formats from the dropdown.</p></div><figure class="slide-fig"><img alt="Figma's colour picker switched to RGB: 0, 255, 0" src="../../content/ui/colour-values/Screenshot_2024-05-18_at_10.40.50.png" decoding="async"></figure></div></section><section class="slide layout-split" data-i="6" aria-roledescription="slide" aria-label="7 of 13"><div class="slide-inner"><div class="slide-copy"><h2>HSL</h2>
+<p>Figma's picker switches between formats from the dropdown.</p></div><figure class="slide-fig"><img alt="Figma's colour picker switched to RGB: 0, 255, 0" src="../../content/ui/colour-values/Screenshot_2024-05-18_at_10.40.50.png" decoding="async"></figure></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>6 / 13</span></footer></section><section class="slide layout-split" data-i="6" aria-roledescription="slide" aria-label="7 of 13"><div class="slide-inner"><div class="slide-copy"><h2>HSL</h2>
 
 <p><strong>Hue</strong> (0–360° around the colour wheel), <strong>saturation</strong> (0–100%) and <strong>lightness</strong> (0–100%).</p>
 <p>Its superpower: change only the <strong>lightness</strong> to make tints and shades of one colour for a design system.</p>
-<p><code>hsl(24, 100%, 50%)</code> → <code>hsl(24, 100%, 85%)</code></p></div><figure class="slide-fig"><img alt="Pure red, green and blue written in HSL" src="../../content/ui/colour-values/HEX_Values-2.png" decoding="async"></figure></div></section><section class="slide layout-statement" data-i="7" aria-roledescription="slide" aria-label="8 of 13"><div class="slide-inner"><p>If your colours look dull, you're probably in CMYK.</p>
-<p>CMYK is for print: ink <strong>subtracts</strong> light from white paper, so it can't reach the brightest screen colours.</p></div></section><section class="slide layout-split" data-i="8" aria-roledescription="slide" aria-label="9 of 13"><div class="slide-inner"><div class="slide-copy"><h2>Grayscale</h2>
+<p><code>hsl(24, 100%, 50%)</code> → <code>hsl(24, 100%, 85%)</code></p></div><figure class="slide-fig"><img alt="Pure red, green and blue written in HSL" src="../../content/ui/colour-values/HEX_Values-2.png" decoding="async"></figure></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>7 / 13</span></footer></section><section class="slide layout-statement" data-i="7" aria-roledescription="slide" aria-label="8 of 13"><div class="slide-inner"><p>If your colours look dull, you're probably in CMYK.</p>
+<p>CMYK is for print: ink <strong>subtracts</strong> light from white paper, so it can't reach the brightest screen colours.</p></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>8 / 13</span></footer></section><section class="slide layout-split" data-i="8" aria-roledescription="slide" aria-label="9 of 13"><div class="slide-inner"><div class="slide-copy"><h2>Grayscale</h2>
 
 <p>When red, green and blue are <strong>equal</strong>, you get a grey.</p>
-<p>That's why mid-fi wireframes are grey: no colour to distract from layout and function.</p></div><figure class="slide-fig"><img alt="A grayscale ramp from black #000000 to white #FFFFFF" src="../../content/ui/colour-values/RGBValues-1.png" decoding="async"></figure></div></section><section class="slide layout-split" data-i="9" aria-roledescription="slide" aria-label="10 of 13"><div class="slide-inner"><div class="slide-copy"><h2>Gradients</h2>
+<p>That's why mid-fi wireframes are grey: no colour to distract from layout and function.</p></div><figure class="slide-fig"><img alt="A grayscale ramp from black #000000 to white #FFFFFF" src="../../content/ui/colour-values/RGBValues-1.png" decoding="async"></figure></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>9 / 13</span></footer></section><section class="slide layout-split" data-i="9" aria-roledescription="slide" aria-label="10 of 13"><div class="slide-inner"><div class="slide-copy"><h2>Gradients</h2>
 
 <p>A smooth blend between two or more colours.</p>
 <p>Every morning the artist <strong>Sho Shibuya</strong> paints the sunrise over the front page of <em>The New York Times</em>: a gradient as a diary.</p>
-<p>Figma offers linear, radial, angular and diamond gradients.</p></div><figure class="slide-fig"><img alt="Sho Shibuya's sunrise painted over a New York Times front page" src="../../content/ui/colour-values/sho-shibuya-nyt-sunrise_june-7-2020.jpg" decoding="async"></figure></div></section><section class="slide layout-text" data-i="10" aria-roledescription="slide" aria-label="11 of 13"><div class="slide-inner"><h2>Handing colour to a developer</h2>
+<p>Figma offers linear, radial, angular and diamond gradients.</p></div><figure class="slide-fig"><img alt="Sho Shibuya's sunrise painted over a New York Times front page" src="../../content/ui/colour-values/sho-shibuya-nyt-sunrise_june-7-2020.jpg" decoding="async"></figure></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>10 / 13</span></footer></section><section class="slide layout-text" data-i="10" aria-roledescription="slide" aria-label="11 of 13"><div class="slide-inner"><h2>Handing colour to a developer</h2>
 <p>Your developer can paste any of these straight into CSS:</p>
 <p><code>color: #FF6100;</code>
 <code>color: rgb(255, 97, 0);</code>
 <code>color: hsl(23, 100%, 50%);</code>
 <code>color: rgba(255, 97, 0, 0.5);</code></p>
-<p>Pick <strong>one format for the whole project</strong> and save every colour as a Figma style or variable.</p></div></section><section class="slide layout-exercise" data-i="11" aria-roledescription="slide" aria-label="12 of 13"><div class="slide-inner"><h2>Crack the code</h2>
+<p>Pick <strong>one format for the whole project</strong> and save every colour as a Figma style or variable.</p></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>11 / 13</span></footer></section><section class="slide layout-exercise" data-i="11" aria-roledescription="slide" aria-label="12 of 13"><div class="slide-inner"><h2>Crack the code</h2>
 <ol>
 <li>What colour is <code>#00FF00</code>?</li>
 <li>Write pure blue in RGB.</li>
 <li>Mix red and green light at full strength: what HEX do you get?</li>
 <li>Your brand orange is <code>hsl(24, 100%, 50%)</code>. Write a lighter tint.</li>
 <li>The client's printed poster looks duller than the screen. Why?</li>
-</ol></div></section><section class="slide layout-answers" data-i="12" aria-roledescription="slide" aria-label="13 of 13"><div class="slide-inner"><h2>Check yourself</h2>
+</ol></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>12 / 13</span></footer></section><section class="slide layout-answers" data-i="12" aria-roledescription="slide" aria-label="13 of 13"><div class="slide-inner"><h2>Check yourself</h2>
 <ol>
 <li>Pure <strong>green</strong>: no red, full green, no blue.</li>
 <li><code>rgb(0, 0, 255)</code></li>
 <li><code>#FFFF00</code>, <strong>yellow</strong>.</li>
 <li>Keep hue and saturation, raise lightness: for example <code>hsl(24, 100%, 80%)</code>.</li>
 <li>Print uses <strong>CMYK</strong> ink, which subtracts light and can't reach bright screen colours.</li>
-</ol></div></section></div>
+</ol></div><footer class="slide-foot"><span>UI Deck · Colour Values</span><span>13 / 13</span></footer></section></div>
   </div>
   <nav class="deck-nav" aria-label="Slide controls">
     <button type="button" id="deck-prev" aria-label="Previous slide">‹</button>
     <button type="button" id="deck-next" aria-label="Next slide">›</button>
   </nav>
 </div>
-<script src="../../assets/deck.js?v=dc4601eb77"></script>
+<script src="../../assets/deck.js?v=8e8e91a197"></script>
 </body>
 </html>
