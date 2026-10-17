@@ -1,0 +1,25 @@
+{
+  "categories": [
+    "UI Theory",
+    "Figma Guides"
+  ],
+  "lectures": [
+    {
+      "slug": "accessibility",
+      "title": "Accessibility",
+      "parent": null,
+      "children": [],
+      "number": 10,
+      "category": "UI Theory"
+    },
+    {
+      "slug": "beginners-guide-to-prototyping",
+      "title": "Beginner’s Guide to Prototyping",
+      "parent": null,
+      "children": [],
+      "number": 8,
+      "category": "Figma Guides"
+    }
+  ],
+  "subpages": []
+}

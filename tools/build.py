@@ -198,7 +198,7 @@ ORDER = {
     },
     "ui": {
         "Visual Language": ["colour-values", "typeface", "icons", "design-styles"],
-        "Building Interfaces": ["spacing-grids", "file-types", "atomic-design-methodology", "style-guides", "paper-wireframes"],
+        "Building Interfaces": ["spacing-grids", "file-types", "atomic-design-methodology", "style-guides", "accessibility", "paper-wireframes"],
     },
     "methods": {
         "Discovery": ["lean-ux-canvas", "long-term-goal", "initial-problem-statement", "solution-hypothesis", "research-goal", "research-questions", "desk-research", "site-visit", "user-survey", "user-interview", "discovery-summary"],
@@ -220,7 +220,8 @@ ORDER = {
     "figma": {
         "Figma Basics": ["choose-your-frame", "starting-in-figma", "beginners-guide-to-grids",
                          "beginners-guide-to-nesting", "beginners-guide-auto-layout",
-                         "beginners-guide-to-8-point-grid-system", "beginners-guide-to-components"],
+                         "beginners-guide-to-8-point-grid-system", "beginners-guide-to-components",
+                         "beginners-guide-to-prototyping"],
         "Figma Advanced": ["navbar", "dynamic-buttons-part-one",
                            "dynamic-buttons-part-deux", "color-variables", "number-variables",
                            "string-variables", "variable-modes"],
@@ -228,7 +229,7 @@ ORDER = {
     "exercises": {
         "Daily UI": ["sidebar", "friends-list", "new-notification", "bottom-sheet", "sign-in", "cc-checkout",
                      "video-player", "choose-a-movie", "music-player", "home-monitor-dash", "user-profile-page",
-                     "make-an-ai-interface", "product-card"],
+                     "make-an-ai-interface", "product-card", "onboarding"],
         "Replica Challenges": ["glovo-replica-challenge", "youtube-challenge", "airbnb-replica-challenge", "balenciaga-replica-challenge"],
         "UI Team Projects": ["stage-play"],
         "AI Outputting": ["ux-x-ai"],
@@ -253,6 +254,11 @@ RELATED = [
     ("ui/spacing-grids", "figma/beginners-guide-to-8-point-grid-system"),
     ("ui/atomic-design-methodology", "figma/beginners-guide-to-components"),
     ("ui/paper-wireframes", "ux/stages-of-wireframes"),
+    ("ui/accessibility", "ui/colour-values"),
+    ("ui/accessibility", "ui/typeface"),
+    ("figma/beginners-guide-to-prototyping", "figma/beginners-guide-to-components"),
+    ("figma/beginners-guide-to-prototyping", "methods/usability-test"),
+    ("exercises/onboarding", "figma/beginners-guide-to-prototyping"),
     ("exercises/glovo-replica-challenge", "figma/beginners-guide-to-nesting"),
     ("exercises/glovo-replica-challenge", "figma/beginners-guide-auto-layout"),
     ("exercises/glovo-replica-challenge", "figma/beginners-guide-to-components"),
@@ -318,6 +324,7 @@ FIGMA_ICONS = {
     "beginners-guide-auto-layout": '<rect x="4" y="3" width="16" height="4.5" rx="1.5"/><rect x="4" y="16.5" width="16" height="4.5" rx="1.5"/><path d="M12 9.5v5M10 11l2-1.5 2 1.5M10 13l2 1.5 2-1.5"/>',
     "beginners-guide-to-8-point-grid-system": '<circle cx="5" cy="5" r="1.3"/><circle cx="12" cy="5" r="1.3"/><circle cx="19" cy="5" r="1.3"/><circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/><circle cx="5" cy="19" r="1.3"/><circle cx="12" cy="19" r="1.3"/><circle cx="19" cy="19" r="1.3"/>',
     "beginners-guide-to-components": '<path d="M12 2.5l3 3-3 3-3-3z"/><path d="M12 15.5l3 3-3 3-3-3z"/><path d="M5.5 9l3 3-3 3-3-3z"/><path d="M18.5 9l3 3-3 3-3-3z"/>',
+    "beginners-guide-to-prototyping": '<rect x="2.5" y="5" width="7" height="14" rx="1.5"/><rect x="14.5" y="5" width="7" height="14" rx="1.5"/><path d="M9.5 12h5M12.5 10l2 2-2 2"/>',
     "navbar": '<rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 16h18"/><circle cx="7.5" cy="18.5" r=".8"/><circle cx="12" cy="18.5" r=".8"/><circle cx="16.5" cy="18.5" r=".8"/>',
     "dynamic-buttons-part-one": '<rect x="2.5" y="6" width="16" height="7" rx="3.5"/><path d="M14 14l1.5 7 2-3 3 2.5 1-1.5-3-2.5 3-1.5z"/>',
     "dynamic-buttons-part-deux": '<rect x="3" y="3" width="18" height="5" rx="2.5"/><rect x="3" y="9.5" width="18" height="5" rx="2.5"/><rect x="3" y="16" width="18" height="5" rx="2.5"/>',

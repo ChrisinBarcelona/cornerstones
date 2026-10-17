@@ -146,6 +146,10 @@
     "design-styles": {
       "name": "swatch-book",
       "svg": "<path d=\"M11 17a4 4 0 0 1-8 0V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2Z\" /> <path d=\"M16.7 13H19a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H7\" /> <path d=\"M 7 17h.01\" /> <path d=\"m11 8 2.3-2.3a2.4 2.4 0 0 1 3.404.004L18.6 7.6a2.4 2.4 0 0 1 .026 3.434L9.9 19.8\" />"
+    },
+    "accessibility": {
+      "name": "accessibility",
+      "svg": "<circle cx=\"16\" cy=\"4\" r=\"1\" /> <path d=\"m18 19 1-7-6 1\" /> <path d=\"m5 8 3-3 5.5 3-2.36 3.5\" /> <path d=\"M4.24 14.5a5 5 0 0 0 6.88 6\" /> <path d=\"M13.76 17.5a5 5 0 0 0-6.88-6\" />"
     }
   },
   "methods": {
@@ -442,6 +446,10 @@
     "stage-play": {
       "name": "theater",
       "svg": "<path d=\"M2 10s3-3 3-8\" /> <path d=\"M22 10s-3-3-3-8\" /> <path d=\"M10 2c0 4.4-3.6 8-8 8\" /> <path d=\"M14 2c0 4.4 3.6 8 8 8\" /> <path d=\"M2 10s2 2 2 5\" /> <path d=\"M22 10s-2 2-2 5\" /> <path d=\"M8 15h8\" /> <path d=\"M2 22v-1a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1\" /> <path d=\"M14 22v-1a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1\" />"
+    },
+    "onboarding": {
+      "name": "door-open",
+      "svg": "<path d=\"M10 21H2\" /> <path d=\"M10 3H7a2 2 0 00-2 2v16\" /> <path d=\"M14 12h.01\" /> <path d=\"M19 21V5a2 2 0 00-1.675-1.974l-6.163-1.013A1 1 0 0010 3v18a1 1 0 001.124.992z\" /> <path d=\"M22 21h-3\" />"
     }
   },
   "sprints": {

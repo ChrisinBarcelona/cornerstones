@@ -36,4 +36,4 @@ You can now:
 - Group related components into variants
 - Publish components as a library and build screens from instances
 
-**Next:** [Navbar](navbar.html)
+**Next:** [Beginner’s Guide to Prototyping](beginners-guide-to-prototyping.html)
