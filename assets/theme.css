@@ -705,3 +705,15 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
   .res-group-head { padding: 18px; }
   .res-group-count { display: none; }
 }
+
+/* Lecture page: Play presentation button (presentations live in deck.css) */
+.play-btn { display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 20px; border-radius: var(--r-pill); background: var(--tc, var(--ink));
+  color: var(--tc-ink, var(--paper)); text-decoration: none; font: 700 15px var(--font); white-space: nowrap; }
+.play-btn:hover { filter: brightness(1.05); }
+
+.title-row .play-btn + .head-complete { margin-left: 8px; }
+.card-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 14px; }
+.card-actions .card-complete { margin-top: 0; }
+.card-play { height: 36px; padding: 0 16px; font-size: 14px; }
+.rows.grid .row-body > .card-actions { margin-top: auto; }
+.lecture-head .play-btn { background: #fff; color: #141210; box-shadow: 0 6px 18px -10px rgba(0, 0, 0, .4); }

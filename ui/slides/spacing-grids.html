@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spacing &amp; Grids · Presentation · Cornerstones</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2238%2040%20739%20739%22%20width%3D%2238%22%20height%3D%2238%22%3E%3Cpath%20d%3D%22M221%2090H590L777%20409H38Z%22%20fill%3D%22%23004ecd%22/%3E%3Cpath%20d%3D%22M38%20409H777L590%20728H221Z%22%20fill%3D%22%230062ff%22/%3E%3Cpath%20d%3D%22M374%20254H688L777%20409H286Z%22%20fill%3D%22%23002b71%22/%3E%3Cpath%20d%3D%22M286%20409H777L688%20564H374Z%22%20fill%3D%22%23003ea2%22/%3E%3C/svg%3E">
+<script>try{if(localStorage.getItem('cs-auth')!=='c5690f27953d06d990942488e4e6153a0e1116091995938ffa0bb366cda32202')location.replace('../../login.html?next='+encodeURIComponent(location.pathname+location.search+location.hash))}catch(e){}</script>
+<script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../../assets/style.css?v=62113dbca5">
+<link rel="stylesheet" href="../../assets/theme.css?v=62113dbca5">
+<link rel="stylesheet" href="../../assets/deck.css?v=62113dbca5">
+</head>
+<body class="deck-body t-ui">
+<div class="deck" id="deck" data-total="10" data-state="intro">
+  <header class="deck-bar">
+    <a class="deck-back" href="../spacing-grids.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Back to the lecture</span></a>
+    <span class="deck-name">Spacing &amp; Grids</span>
+    <span class="deck-count" id="deck-count" aria-live="polite"></span>
+    <button type="button" class="deck-icon" id="deck-full" aria-label="Full screen" title="Full screen (F)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+  </header>
+  <div class="deck-progress" role="progressbar" aria-label="Presentation progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><span id="deck-bar"></span></div>
+  <section class="deck-intro" aria-labelledby="deck-intro-title">
+    <div class="deck-intro-card">
+      <div class="eyebrow">UI Theory · Presentation</div>
+      <h1 id="deck-intro-title">Spacing &amp; Grids</h1>
+      <p class="lede">Where grids came from, how column grids work on screens, and why designers measure in multiples of 8.</p>
+      <div class="deck-meta"><span>⏱ About 15 minutes</span><span>10 slides</span><span>Ends with an exercise</span></div>
+      <h2>What we'll cover</h2>
+      <ol class="deck-topics"><li>A short history of grids</li><li>Why interfaces need grids</li><li>Grid anatomy: columns, gutters and margins</li><li>The 8-point system</li></ol>
+      <button type="button" class="deck-play" id="deck-play"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10.4-6.5a1 1 0 0 0 0-1.8L9.5 4.6A1 1 0 0 0 8 5.5Z"/></svg><span>Play presentation</span></button>
+      <p class="deck-help">Use the arrow keys, space or click to move through the slides. Press F for full screen and Esc to come back here.</p>
+    </div>
+  </section>
+  <div class="deck-viewport" id="deck-viewport">
+    <div class="deck-stage" id="deck-stage"><section class="slide layout-title" data-i="0" aria-roledescription="slide" aria-label="1 of 10"><div class="slide-inner"><h1>Spacing &amp; Grids</h1>
+<p>The invisible structure behind every clean layout.</p></div></section><section class="slide layout-cards" data-i="1" aria-roledescription="slide" aria-label="2 of 10"><div class="slide-inner"><h2>Grids are old</h2>
+<ul>
+<li><strong>Ancient scrolls</strong> Scribes drew guide lines to keep text straight, and the Dead Sea Scrolls already use columns</li>
+<li><strong>Around 1454</strong> The Gutenberg Bible, the first major book printed with movable type in Europe, uses a two-column grid</li>
+<li><strong>Newspapers</strong> Broadsheets use many narrow columns so small text stays easy to read</li>
+</ul></div></section><section class="slide layout-statement" data-i="2" aria-roledescription="slide" aria-label="3 of 10"><div class="slide-inner"><p>Grids give a layout structure, and give developers a framework to build it the same way on every device.</p></div></section><section class="slide layout-split" data-i="3" aria-roledescription="slide" aria-label="4 of 10"><div class="slide-inner"><div class="slide-copy"><h2>Columns make layouts responsive</h2>
+
+<p>Content snaps to <strong>columns</strong>, so the same design can reflow from desktop to tablet to phone.</p>
+<p>A common pattern: <strong>12 columns</strong> on desktop, <strong>8</strong> on tablet, <strong>4</strong> on mobile.</p></div><figure class="slide-fig"><img alt="A 12-column grid on a desktop frame" src="../../content/ui/spacing-grids/Untitled.png" decoding="async"></figure></div></section><section class="slide layout-split" data-i="4" aria-roledescription="slide" aria-label="5 of 10"><div class="slide-inner"><div class="slide-copy"><h2>Grid anatomy</h2>
+
+<ul>
+<li><strong>Columns:</strong> where content sits</li>
+<li><strong>Gutters:</strong> the gaps between columns</li>
+<li><strong>Margins:</strong> the space at the edges of the screen</li>
+</ul></div><figure class="slide-fig"><img alt="Margins at the edges, columns, and gutters between them" src="../../content/ui/spacing-grids/Untitled-1.png" decoding="async"></figure></div></section><section class="slide layout-split" data-i="5" aria-roledescription="slide" aria-label="6 of 10"><div class="slide-inner"><div class="slide-copy"><h2>The 8-point system</h2>
+
+<p>Use <strong>multiples of 8</strong> for every size, padding, margin and gap: 8, 16, 24, 32, 40, 48…</p>
+<p>Use 4 for the smallest adjustments, such as icon padding.</p></div><figure class="slide-fig"><img alt="Spacing values of 8, 16, 24, 32, 48, 64 and 80" src="../../content/ui/spacing-grids/Untitled-2.png" decoding="async"></figure></div></section><section class="slide layout-cards" data-i="6" aria-roledescription="slide" aria-label="7 of 10"><div class="slide-inner"><h2>Why 8?</h2>
+<ul>
+<li><strong>Consistent</strong> Everything follows the same rule, so the UI looks orderly</li>
+<li><strong>Faster decisions</strong> No more debating 12 or 13 pixels</li>
+<li><strong>Easy hand-off</strong> Developers can read and repeat the spacing</li>
+<li><strong>Fits screens</strong> Most screen sizes divide by 8 on at least one side</li>
+</ul></div></section><section class="slide layout-split" data-i="7" aria-roledescription="slide" aria-label="8 of 10"><div class="slide-inner"><div class="slide-copy"><h2>A spacing scale</h2>
+
+<p>Save your scale as <strong>number variables</strong> in Figma (<code>space-8</code>, <code>space-16</code>, <code>space-24</code>…) and use them everywhere.</p></div><figure class="slide-fig"><img alt="A scale of squares from 4 to 40 in steps of 4" src="../../content/ui/spacing-grids/1_SIQ-MUJ3-WBYBD8AMKd0eg.webp" decoding="async"></figure></div></section><section class="slide layout-exercise" data-i="8" aria-roledescription="slide" aria-label="9 of 10"><div class="slide-inner"><h2>Snap to the grid</h2>
+<ol>
+<li>A developer measured these gaps in your design: <strong>10, 13, 22, 30 and 45 px</strong>. Round each to the nearest multiple of 8.</li>
+<li>An iPhone 16 frame is <strong>393 px</strong> wide. You add a 4-column grid with <strong>16 px</strong> margins and <strong>16 px</strong> gutters. How wide is each column?</li>
+</ol></div></section><section class="slide layout-answers" data-i="9" aria-roledescription="slide" aria-label="10 of 10"><div class="slide-inner"><h2>Check yourself</h2>
+<ol>
+<li>10 → <strong>8</strong>, 13 → <strong>16</strong>, 22 → <strong>24</strong>, 30 → <strong>32</strong>, 45 → <strong>48</strong></li>
+<li>393 − 2 × 16 (margins) − 3 × 16 (gutters) = 313. Divided by 4 columns = <strong>78.25 px</strong>. Figma works this out for you when you set the grid to <em>Stretch</em>.</li>
+</ol></div></section></div>
+  </div>
+  <nav class="deck-nav" aria-label="Slide controls">
+    <button type="button" id="deck-prev" aria-label="Previous slide">‹</button>
+    <button type="button" id="deck-next" aria-label="Next slide">›</button>
+  </nav>
+</div>
+<script src="../../assets/deck.js?v=62113dbca5"></script>
+</body>
+</html>

@@ -783,6 +783,8 @@ def build_track(t, data):
 
         head_btn = (f'<button type="button" class="complete-btn head-complete" data-complete="{t["id"]}/{p["slug"]}" aria-pressed="false">'
                     '<span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>') if t["id"] in PROGRESS else ""
+        if deck_file(t.get("content", t["id"]), p["slug"]).exists():
+            head_btn = f'<a class="play-btn" href="slides/{p["slug"]}.html">{ICON_PLAY}<span>Play presentation</span></a>' + head_btn
         body_html = f"""
 <main class="lecture track-{t['id']}" data-key="{t['id']}/{p['slug']}">
   <div class="wrap">
@@ -842,6 +844,9 @@ def build_track(t, data):
             card_btn = (f'\n    <button type="button" class="complete-btn card-complete" data-complete="{t["id"]}/{l["slug"]}"'
                         + (f' data-with="{parts}"' if parts else "") + ' aria-pressed="false">'
                         '<span class="off">Mark as complete</span><span class="on">✓ Completed</span></button>')
+        if deck_file(t.get("content", t["id"]), l["slug"]).exists():
+            card_btn = (f'\n    <span class="card-actions"><a class="play-btn card-play" href="{t["out"]}/slides/{l["slug"]}.html">{ICON_PLAY}<span>Play</span></a>'
+                        f'{card_btn.strip()}</span>')
         rows.append(f"""<li class="row{' no-stats' if not stats else ''}" data-key="{t['id']}/{l['slug']}" data-cat="{esc(l['category'])}"{parent_attr} data-search="{esc(search)}">
   {f'<span class="row-icon" title="{t["noun"]} {l["number"]}">{row_icon(t["id"], l["slug"])}</span>' if row_icon(t["id"], l["slug"]) else f'<span class="row-num">{l["number"]}</span>'}
   <div class="row-body">
@@ -1311,6 +1316,148 @@ def resources_preview():
     </section>"""
 
 
+# ---- Presentations: content/<section>/<slug>/slides.md becomes <out>/slides/<slug>.html ----
+ICON_PLAY = '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10.4-6.5a1 1 0 0 0 0-1.8L9.5 4.6A1 1 0 0 0 8 5.5Z"/></svg>'
+SLIDE_LAYOUTS = {"title", "section", "statement", "quote", "split", "image", "cards", "exercise", "answers", "text"}
+
+
+def deck_file(track, slug):
+    return CONTENT / track / slug / "slides.md"
+
+
+def parse_deck(path):
+    """Front matter (title, promise, duration, topics) above the first '---'; then slides separated by '---' lines.
+    A slide may start with '@layout'."""
+    lines = path.read_text(encoding="utf-8").splitlines()
+    meta, topics, i = {}, [], 0
+    while i < len(lines) and lines[i].strip() != "---":
+        line = lines[i]
+        if line.startswith("- "):
+            topics.append(line[2:].strip())
+        elif ":" in line:
+            k, _, v = line.partition(":")
+            meta[k.strip()] = v.strip()
+        i += 1
+    slides, cur = [], []
+    for line in lines[i + 1:]:
+        if line.strip() == "---":
+            slides.append("\n".join(cur)); cur = []
+        else:
+            cur.append(line)
+    if "\n".join(cur).strip():
+        slides.append("\n".join(cur))
+    out = []
+    for sl in slides:
+        sl = sl.strip("\n")
+        layout = "text"
+        m = re.match(r"@(\w+)\s*\n?", sl)
+        if m:
+            layout = m.group(1); sl = sl[m.end():]
+            if layout not in SLIDE_LAYOUTS:
+                raise SystemExit(f"{path}: unknown slide layout @{layout}")
+        out.append((layout, sl))
+    meta["topics"] = topics
+    return meta, out
+
+
+def render_slide(track, slug, layout, text):
+    md = markdown.Markdown(extensions=["tables", "sane_lists", "md_in_html"])
+    html_ = md.convert(text)
+
+    def fix(m):
+        alt, src = m.groups()
+        if not re.match(r"[a-z]+:", src):
+            src = f"../../content/{track}/{slug}/{src}"
+        return f'<img alt="{alt}" src="{src}" decoding="async">'
+    html_ = IMG_RE.sub(fix, html_)
+    if layout in ("split", "image"):  # pull the first image out into its own column or frame
+        m = re.search(r"<p>\s*(<img [^>]*>)\s*</p>|(<img [^>]*>)", html_)
+        if m:
+            img = m.group(1) or m.group(2)
+            html_ = (html_[:m.start()] + html_[m.end():]).strip()
+            cap = re.search(r"<p><em>(.*?)</em></p>\s*$", html_, re.S)
+            caption = ""
+            if cap and layout == "image":
+                caption = f"<figcaption>{cap.group(1)}</figcaption>"; html_ = html_[:cap.start()]
+            fig = f'<figure class="slide-fig">{img}{caption}</figure>'
+            html_ = (f'<div class="slide-copy">{html_}</div>{fig}' if layout == "split" else f'{html_}{fig}')
+    return html_
+
+
+def build_decks(data):
+    n = 0
+    for t in TRACKS:
+        src = t.get("content", t["id"])
+        if t.get("content") and t["content"] != t["id"]:
+            continue
+        for p in data[t["id"]]["every"]:
+            f = deck_file(src, p["slug"])
+            if not f.exists():
+                continue
+            meta, slides = parse_deck(f)
+            n += 1
+            total = len(slides)
+            topics = "".join(f"<li>{esc(x)}</li>" for x in meta["topics"])
+            sections = "".join(
+                f'<section class="slide layout-{layout}" data-i="{i}" aria-roledescription="slide" aria-label="{i + 1} of {total}">'
+                f'<div class="slide-inner">{render_slide(src, p["slug"], layout, text)}</div></section>'
+                for i, (layout, text) in enumerate(slides))
+            prefix = "../../"
+            html_ = f"""<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{esc(meta.get("title", p["title"]))} · Presentation · {SITE}</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="{FAVICON}">
+{gate(prefix)}
+<script>try{{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t}}catch(e){{}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="{prefix}assets/style.css?v={ASSET_V}">
+<link rel="stylesheet" href="{prefix}assets/theme.css?v={ASSET_V}">
+<link rel="stylesheet" href="{prefix}assets/deck.css?v={ASSET_V}">
+</head>
+<body class="deck-body t-{t['id']}">
+<div class="deck" id="deck" data-total="{total}" data-state="intro">
+  <header class="deck-bar">
+    <a class="deck-back" href="../{p['slug']}.html">{ICON_ARROW}<span>Back to the lecture</span></a>
+    <span class="deck-name">{esc(meta.get("title", p["title"]))}</span>
+    <span class="deck-count" id="deck-count" aria-live="polite"></span>
+    <button type="button" class="deck-icon" id="deck-full" aria-label="Full screen" title="Full screen (F)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+  </header>
+  <div class="deck-progress" role="progressbar" aria-label="Presentation progress" aria-valuemin="0" aria-valuemax="{total}" aria-valuenow="0"><span id="deck-bar"></span></div>
+  <section class="deck-intro" aria-labelledby="deck-intro-title">
+    <div class="deck-intro-card">
+      <div class="eyebrow">{esc(t['label'])} · Presentation</div>
+      <h1 id="deck-intro-title">{esc(meta.get("title", p["title"]))}</h1>
+      <p class="lede">{esc(meta.get("promise", p.get("description", "")))}</p>
+      <div class="deck-meta"><span>⏱ About {esc(meta.get("duration", ""))}</span><span>{total} slides</span><span>Ends with an exercise</span></div>
+      <h2>What we'll cover</h2>
+      <ol class="deck-topics">{topics}</ol>
+      <button type="button" class="deck-play" id="deck-play">{ICON_PLAY}<span>Play presentation</span></button>
+      <p class="deck-help">Use the arrow keys, space or click to move through the slides. Press F for full screen and Esc to come back here.</p>
+    </div>
+  </section>
+  <div class="deck-viewport" id="deck-viewport">
+    <div class="deck-stage" id="deck-stage">{sections}</div>
+  </div>
+  <nav class="deck-nav" aria-label="Slide controls">
+    <button type="button" id="deck-prev" aria-label="Previous slide">‹</button>
+    <button type="button" id="deck-next" aria-label="Next slide">›</button>
+  </nav>
+</div>
+<script src="{prefix}assets/deck.js?v={ASSET_V}"></script>
+</body>
+</html>"""
+            out = ROOT / t["out"] / "slides"
+            out.mkdir(parents=True, exist_ok=True)
+            (out / f"{p['slug']}.html").write_text(html_, encoding="utf-8")
+    print(f"presentations: {n}")
+
+
 def build_certificate():
     """certificate.html: locked until every award is earned, then a printable certificate with the student's name."""
     awards = "".join(f"""<li class="badge-item" data-track="{k}">{badge_svg(k, 64)}<span class="badge-name">{b['badge']}</span>
@@ -1560,13 +1707,14 @@ def main():
     check_templates(data)
     write_progress_data(data)
     ASSET_V = hashlib.sha1(b"".join((ROOT / "assets" / f).read_bytes()
-                                    for f in ("style.css", "theme.css", "app.js", "progress-data.js"))).hexdigest()[:10]
+                                    for f in ("style.css", "theme.css", "app.js", "progress-data.js", "deck.css", "deck.js"))).hexdigest()[:10]
     for t in TRACKS:
         build_track(t, data)
     build_home(data)
     build_timetable(data)
     build_certificate()
     build_resources()
+    build_decks(data)
     build_login()
     write_redirects(data)
 

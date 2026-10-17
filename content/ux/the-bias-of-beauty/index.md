@@ -15,22 +15,16 @@ Beauty is synonymous with symmetry and symmetry is an extension of the physical 
 
 It's important that our work is beautiful, so that it is **perceived** as good and beneficial.
 
-## Beautiful People are Treated Better
+## The Attractiveness Halo
 
-It’s a fact that naturally beautiful people receive a range of social benefits that the rest of us don’t enjoy.
+"Beauty" is subjective and shaped by culture, so be careful with the idea of "beautiful people". What researchers can measure is how people are **rated**: and people who are *rated* as more attractive tend to be judged more favourably on unrelated qualities, such as competence, honesty or intelligence. Psychologists call this the **halo effect**.
 
-
-- **Employment**: Research has shown that attractive individuals tend to be more successful in job interviews and are more likely to be hired and promoted. Employers may unconsciously associate physical attractiveness with competence, intelligence, and social skills.
-- **Wages**: Studies have found that attractive individuals often earn higher wages compared to their less attractive counterparts.
-
----
+- **Judgements:** a large review of the research (Langlois and colleagues, 2000, covering more than 900 studies) found that people rated as attractive are judged and treated more positively, by strangers and by people who know them.
+- **Earnings:** in a well-known study of the labour market, the economists Hamermesh and Biddle (1994) found a measurable pay gap linked to how attractive people were rated.
 
 ![chriskellylive_Create_a_photorealistic_image_of_a_business_woma_52155577-c0ef-472c-9ba8-bf604a352f14.png](4073e146-235b-4150-bec8-321fda968575.png)
 
-- Attractive people are generally perceived more positively and may receive better treatment in social situations.
-- Some studies suggest that attractive individuals may receive more lenient treatment in legal proceedings, including sentencing.
-
-What this means is that your work must be attractive in order for it to be trusted and seen as credible. Aestheticism is so important that it forms a core heuristic.  
+None of this is fair, and it says more about our biases than about people. But it matters for design, because the same halo applies to things: what looks attractive is assumed to work better. That's why aesthetics forms a core usability heuristic.
 
 ---
 
@@ -94,6 +88,8 @@ Users judge beautiful interfaces as easier to use and more trustworthy, even whe
 ## Resources
 
 [The Aesthetic-Usability Effect – Nielsen Norman Group](https://www.nngroup.com/articles/aesthetic-usability-effect/)
+
+[Halo effect – Wikipedia](https://en.wikipedia.org/wiki/Halo_effect)
 
 [10 Usability Heuristics for User Interface Design – Nielsen Norman Group](https://www.nngroup.com/articles/ten-usability-heuristics/)
 
