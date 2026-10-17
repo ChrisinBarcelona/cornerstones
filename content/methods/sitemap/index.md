@@ -21,7 +21,7 @@ Sitemaps are planning tools for the team, not something users see. They are grea
 
 # 🛠️ Main Exercise
 
-Use **FigJam**, **Miro** or the **Figma** diagramming tools.
+We recommend **[Octopus.do](https://octopus.do/)**, a free visual sitemap builder: you add pages as cards, nest them into levels and even sketch the content blocks of each page, then export the result. FigJam or Miro work too.
 
 1. **List all the content.** Every page, section and piece of content your site needs. For a portfolio: home, about, each case study, contact, CV…
 2. **Group it.** Cluster similar content together (you can run a quick card sort with a classmate). Name each group with the label a user would expect.
@@ -55,7 +55,11 @@ Use **FigJam**, **Miro** or the **Figma** diagramming tools.
 
 [https://www.youtube.com/watch?v=B0IT9gJWpnw](https://www.youtube.com/watch?v=B0IT9gJWpnw)
 
+[https://www.youtube.com/watch?v=tCNqW1JmGq8](https://www.youtube.com/watch?v=tCNqW1JmGq8)
+
 # 📚 Resources
+
+[Octopus.do – visual sitemap builder](https://octopus.do/)
 
 [Information Architecture vs. Sitemaps – Nielsen Norman Group](https://www.nngroup.com/articles/information-architecture-sitemaps/)
 

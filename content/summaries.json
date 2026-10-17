@@ -4,7 +4,6 @@
   "sprints/wicked-project": "A one-week, high-stakes sprint: map a wicked problem, find one leverage point and pitch a working concept.",
   "sprints/personal-project": "Two weeks on a problem of your own, from field research to a tested hi-fi product and your flagship case study.",
   "_note": "One-line summaries shown in the contents lists and at the top of each page. Keyed by section/slug. Pages not listed fall back to their first paragraph.",
-
   "ux/design-origins": "A short history of UX, from the first stone tools and Greek theatres to the pocket watch, the industrial revolution and the internet.",
   "ux/starting-point": "Projects never start neatly. How to begin when the problem is still abstract and only fragments are visible.",
   "ux/what-is-ux-design": "UX as a philosophy built on empathy, with Walt Disney as an example of designing for how people feel.",
@@ -27,7 +26,6 @@
   "ux/bad-user-experience": "Real examples of bad UX, from the Willy Wonka Experience to coercive design, poor accessibility and unclear signs.",
   "ux/a-case-of-genius": "The Trunki ride-on suitcase as a case study in designing for a real user need.",
   "ux/the-death-of-kodak": "Why Kodak failed to adapt to digital, and what that teaches about rapid prototyping and design thinking.",
-
   "figma/choose-your-frame": "How to pick a Figma frame size for the device you'll design and prototype on, and why aspect ratio matters.",
   "figma/starting-in-figma": "Your first Figma walkthrough: set up frames, then build and style the shapes for an animated button.",
   "figma/beginners-guide-to-grids": "Set up columns, rows, gutters and margins in Figma to build a grid layout.",
@@ -50,7 +48,6 @@
   "ui/style-guides": "What a style tile or style guide is, and how it communicates colour, type and graphic styles.",
   "ui/icons": "Icon types, and how to use icons well: add labels, keep the geometry consistent and keep them simple.",
   "ui/paper-wireframes": "Sketch your UI on paper to think it through before you open Figma.",
-
   "exercises/sidebar": "Design a sidebar rail for Bubble, an app that helps people write film scripts.",
   "exercises/friends-list": "Design an accessible contacts list for Huddle, an app for people who meet up to play sport.",
   "exercises/new-notification": "Design a notifications panel for Fireballs, a social network for fantasy gamers.",
@@ -70,7 +67,6 @@
   "exercises/glovo-replica-challenge": "Recreate the Glovo app screen by screen in Figma: by hand first, then rebuilt with Auto Layout and components.",
   "exercises/youtube-challenge": "Trace real YouTube screens on phone and desktop, from search to the watch page: by hand first, then with Auto Layout and components.",
   "exercises/stage-play": "As a team, build the Stage Play app from a schema: a design system, master components, eight screens and a clickable flow in five days.",
-
   "methods/lean-ux-canvas": "Frame the problem as a team: the business outcome, the users and the value they'll get.",
   "methods/long-term-goal": "Agree the best-case future for your users, so every sprint decision has a direction.",
   "methods/research-goal": "Write down what you want to learn before you start researching.",
@@ -78,7 +74,7 @@
   "methods/user-survey": "Design an unbiased survey to gather evidence from people's real experiences.",
   "methods/user-interview": "Interview users to uncover the why behind what they do and need.",
   "methods/discovery-summary": "Pull your research together into key insights, surprises and next steps.",
-  "methods/problem-statement": "Write a short, solution-free description of the main problem users face.",
+  "methods/problem-statement": "Rewrite your initial hunch as a short, solution-free problem statement backed by research.",
   "methods/user-persona": "Turn your research into an evidence-based persona of your target user.",
   "methods/competitive-analysis": "Study 3–5 competitors to find gaps and ideas for your design.",
   "methods/how-might-we": "List the ways your project could fail, then flip them into 'How might we…' opportunities.",
@@ -116,5 +112,7 @@
   "methods/limited-intervention-technique": "Don't lead users during a test: give clues, not answers.",
   "methods/notetaker-format": "What the note-taker watches for: what users say and do, and what they think and feel.",
   "methods/design-iteration": "Turn test findings into 2–3 design changes, shown as before-and-after snapshots.",
-  "methods/sprint-retrospective": "Reflect on what worked, what didn't and what you learned. It becomes the first page of your case study."
+  "methods/sprint-retrospective": "Reflect on what worked, what didn't and what you learned. It becomes the first page of your case study.",
+  "methods/initial-problem-statement": "Write your starting hunch about the problem as one unproven sentence, and list the assumptions research must test.",
+  "methods/solution-hypothesis": "Write your early solution idea as a testable bet, then let the research support, change or drop it."
 }

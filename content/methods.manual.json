@@ -128,6 +128,22 @@
       "children": [],
       "number": 0,
       "category": "Retrospective"
+    },
+    {
+      "slug": "initial-problem-statement",
+      "title": "Initial Problem Statement",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Discovery"
+    },
+    {
+      "slug": "solution-hypothesis",
+      "title": "Solution Hypothesis",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Discovery"
     }
   ],
   "subpages": []

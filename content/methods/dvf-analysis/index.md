@@ -25,16 +25,38 @@ The best ideas sit where all three overlap. The score is a starting point for di
 
 # 🛠️ Main Exercise
 
-1. **List the ideas.** Take 5–10 ideas or features from your ideation or affinity map. Write each as a short phrase.
-2. **Build the scorecard.** A table with one row per idea and columns for **Desirability**, **Viability**, **Feasibility** and **Total**.
-3. **Score 1–10.** For each idea, score each criterion and write one line of evidence for the score (a research finding, a cost, a skill you do or don't have).
-4. **Add up and rank.** Sort from highest to lowest total.
-5. **Discuss and adjust.** Does the ranking feel right? Move items if the team can justify it. If one criterion matters more for your project, weight it (e.g. desirability ×2).
-6. **Decide.** Choose the top ideas to take into your prototype, and note which ones you are parking.
+1. **Answer the DVF questions.** Before you score anything, answer these questions about your product as a team, in writing. Mark every answer you can back with research, and every one that's still a guess.
+
+   **Desirability: do they want this?**
+   - Who are the target customers for our solution?
+   - What problem do our customers want solved?
+   - How do our customers solve this problem today?
+   - What is the outcome our customers want to achieve?
+   - Why will our customers stop using their current solution?
+
+   **Viability: should we do this?**
+   - What are our main channels for obtaining new customers?
+   - How will our customers repeatedly use our solution?
+   - Why will our customers refer us to new clients?
+   - Who are the primary competitors to our solution?
+   - How will our solution generate revenue?
+
+   **Feasibility: can we do this?**
+   - What are our biggest technical challenges?
+   - What are our biggest legal or regulatory risks?
+   - Does our team have the right skills to support this solution?
+   - Where does our funding come from?
+
+2. **List the ideas.** Take 5–10 ideas or features from your ideation or affinity map. Write each as a short phrase.
+3. **Build the scorecard.** A table with one row per idea and columns for **Desirability**, **Viability**, **Feasibility** and **Total**.
+4. **Score 1–10.** For each idea, score each criterion and write one line of evidence for the score, using your answers to the questions above.
+5. **Add up and rank.** Sort from highest to lowest total.
+6. **Discuss and adjust.** Does the ranking feel right? Move items if the team can justify it. If one criterion matters more for your project, weight it (e.g. desirability ×2).
+7. **Decide.** Choose the top ideas to take into your prototype, and note which ones you are parking.
 
 # ⏱️ Estimated Duration
 
-- ~45 min
+- ~1 hour
 
 # 🏞️ Template
 
@@ -67,6 +89,8 @@ Ask Claude to act as a sparring partner: "Score these ideas for desirability, vi
 [Design Thinking 101 – Nielsen Norman Group](https://www.nngroup.com/articles/design-thinking/)
 
 # ✅ Checklist
+
+☐ Answered all the desirability, viability and feasibility questions
 
 ☐ Listed 5–10 ideas
 

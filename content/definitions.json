@@ -1,56 +1,195 @@
 {
   "_note": "Quick definitions shown in the Definition box on each UX method page. Keyed by methods/slug. Keep each under about 50 words.",
-
-  "methods/lean-ux-canvas": {"q": "What is a Lean UX Canvas?", "a": "A one-page framework the team fills in together before designing anything, to agree on the business problem, who it affects, what success would look like and the value users stand to gain."},
-  "methods/long-term-goal": {"q": "What is a Long Term Goal?", "a": "An optimistic statement of the best-case future for your users, written at the start of a sprint so that every later decision can be checked against it."},
-  "methods/research-goal": {"q": "What is a Research Goal?", "a": "One broad statement of what the team wants to learn, and why, set before any data is gathered so the whole investigation has a clear purpose."},
-  "methods/research-questions": {"q": "What is a Research Question?", "a": "An evaluative query set at the beginning of a project sprint and revisited throughout, to keep the research focused and guide the investigation to completion."},
-  "methods/user-survey": {"q": "What is a User Survey?", "a": "A structured set of questions sent to many people at once, to gather quick, comparable evidence about their behaviour, needs and opinions."},
-  "methods/user-interview": {"q": "What is a User Interview?", "a": "A one-to-one conversation with a real or potential user early in a project, to understand their experiences, needs and pain points in their own words."},
-  "methods/discovery-summary": {"q": "What is a Discovery Summary?", "a": "A short write-up at the end of discovery that pulls all the research together into the key insights, patterns and surprises that will shape the design."},
-
-  "methods/problem-statement": {"q": "What is a Problem Statement?", "a": "A concise description of the main problem users face, written from their point of view and deliberately free of any solution."},
-  "methods/user-persona": {"q": "What is a User Persona?", "a": "A semi-fictional profile of a typical user, built from research, that keeps the team designing for real goals, needs and frustrations rather than its own assumptions."},
-  "methods/competitive-analysis": {"q": "What is a Competitive Analysis?", "a": "A structured review of how direct and indirect competitors already solve the problem, to spot common patterns, gaps and opportunities for your own design."},
-  "methods/how-might-we": {"q": "What is a How Might We?", "a": "A reframing technique that turns problems and fears into open questions starting 'How might we…', inviting ideas without prescribing a solution."},
-  "methods/pick-a-target": {"q": "What is Picking a Target?", "a": "The moment the team commits to a focus: the Minimum Viable Product, the Most Valuable Person it serves, and the Minimum Desirable Product that would delight them."},
-  "methods/user-journey-map": {"q": "What is a User Journey Map?", "a": "A visual timeline of the steps a user takes to reach a goal, showing what they do, think and feel at each stage, and where the pain points and opportunities lie."},
-  "methods/converge-diverge": {"q": "What is Converge / Diverge?", "a": "The team's decision on whether to combine the best ideas into one prototype (converge) or develop competing ideas and test them against each other (diverge)."},
-  "methods/vote": {"q": "What is a Vote?", "a": "A quick, structured way for the team to choose which sketches or features to take forward, so the decision is shared rather than argued."},
-
-  "methods/task-flows": {"q": "What is a Task Flow?", "a": "A simple diagram of the exact steps a user takes to complete one task in the product, from the entry point to the finish, with nothing extra."},
-
-  "methods/crazy-8s": {"q": "What is Crazy 8's?", "a": "A fast sketching exercise: fold a sheet into eight panels and sketch eight different ideas in eight minutes, to push past the obvious first idea."},
-  "methods/crazy-8s-with-ai": {"q": "What is Crazy 8's with AI?", "a": "Crazy 8's with an AI sparring partner: the AI suggests variations on your brief one at a time and you sketch each one, widening the range of ideas."},
-  "methods/solution-sketch": {"q": "What is a Solution Sketch?", "a": "A detailed sketch of one idea, clear enough to explain itself, presented to the team gallery-style so everyone can understand and critique it."},
-  "methods/mood-board": {"q": "What is a Mood Board?", "a": "A collage of colours, type, imagery and textures that captures the look and feel you are aiming for, before any interface is designed."},
-  "methods/style-guide": {"q": "What is a Style Guide?", "a": "A practical document that fixes a product's visual rules, its logo, typography, colours, icons and buttons, so every screen stays consistent."},
-  "methods/paper-wireframes": {"q": "What are Paper Wireframes?", "a": "Quick black-and-white sketches of the main screens on paper, used to work out layout and flow cheaply before moving into Figma."},
-  "methods/mid-fi": {"q": "What is a Mid-Fi Wireframe?", "a": "A greyscale digital wireframe with real layout, spacing, hierarchy and labels, and simple clickable links, but no colour, branding or final imagery: detailed enough to test the structure of a task flow."},
-  "methods/hi-fi": {"q": "What is a Hi-Fi Prototype?", "a": "A polished, interactive prototype that looks and behaves close to the final product, with real content, branding and clickable flows."},
-
-  "methods/usability-test": {"q": "What is a Usability Test?", "a": "A session in which real users try to complete tasks with your prototype while you observe, to find where the design works and where it fails."},
-  "methods/create-your-script": {"q": "What is a Test Script?", "a": "The written guide a facilitator follows during a test session, from welcome to wrap-up, so every participant gets the same neutral experience."},
-  "methods/facilitator-format": {"q": "What is the Facilitator Format?", "a": "The role and running order of the person leading a test: putting the participant at ease, setting the task and drawing out their thinking without leading them."},
-  "methods/limited-intervention-technique": {"q": "What is the Limited Intervention Technique?", "a": "A way of running interviews and tests in which the facilitator stays neutral and steps in as little as possible, offering clues rather than answers."},
-  "methods/notetaker-format": {"q": "What is the Notetaker Format?", "a": "The role of the second person in a test session, who silently records what the participant says and does, and the non-verbal signs of what they think and feel."},
-  "methods/design-iteration": {"q": "What is Design Iteration?", "a": "Turning what you learned in testing into a few targeted design changes, shown as before-and-after screens and backed by evidence."},
-
-  "methods/desk-research": {"q": "What is Desk Research?", "a": "Also called secondary research: gathering and critically reviewing existing studies, reports and data about a problem before starting your own research, to focus the scope and avoid starting from scratch."},
-  "methods/site-visit": {"q": "What is a Site Visit?", "a": "A short field visit to the place where your users live or work, to observe the environment, tools, workarounds and emotions first hand, before designing anything."},
-  "methods/affinity-mapping": {"q": "What is Affinity Mapping?", "a": "A team method for organising research findings, one per sticky note, into clusters of related notes, then naming those clusters as themes and prioritising them."},
-  "methods/data-synthesis-with-ai": {"q": "What is Data Synthesis with AI?", "a": "Using AI as an assistant for the first pass of research analysis, transcribing, summarising and suggesting codes, while the designer verifies every result and writes the final themes."},
-  "methods/business-model-canvas": {"q": "What is a Business Model Canvas?", "a": "A one-page template by Strategyzer that describes how a business creates, delivers and captures value in nine blocks, from customer segments to cost structure."},
-  "methods/wicked-problem-mapping": {"q": "What is Wicked Problem Mapping?", "a": "A way of making a complex, systemic problem visible by turning chains of '5 Whys' into a web of causes and actors, to find one leverage point small enough to design for."},
-  "methods/service-design-blueprint": {"q": "What is a Service Blueprint?", "a": "A diagram that maps one customer journey alongside the frontstage and backstage actions, support processes and evidence that deliver it, showing how people, props and processes connect."},
-  "methods/dvf-analysis": {"q": "What is DVF Analysis?", "a": "A prioritisation scorecard, developed by IDEO, that rates each idea for desirability (users want it), viability (it works for the business) and feasibility (it can be built)."},
-  "methods/sitemap": {"q": "What is a Sitemap?", "a": "A diagram of how a site's or app's pages are organised: a hierarchy of boxes joined by lines. It is the visible record of the information architecture, used for planning."},
-  "methods/mood-board-with-ai": {"q": "What is a Mood Board with AI?", "a": "A mood board built through AI-assisted visual loops: generating images from your mood words, reacting to them, refining the prompts and repeating, before curating the final board."},
-  "methods/brand-pack": {"q": "What is a Brand Pack?", "a": "A compact identity kit, name, logo, colour palette, typography, image style and tone of voice, that turns the mood of a project into decisions the whole team can use."},
-  "methods/ab-test": {"q": "What is an A/B Test?", "a": "A comparison of two versions of a design that differ in one way, to see which performs better. On live products it measures behaviour at scale; in a sprint, users compare prototypes."},
-  "methods/cataloguing-artifacts": {"q": "What is Cataloguing Artifacts?", "a": "Collecting, labelling and sorting every sketch, map, wireframe and test result from past projects into one archive, so you can choose the strongest evidence for your case studies."},
-  "methods/process-narrative": {"q": "What is a Process Narrative?", "a": "The story of a project told as a case study: its purpose, the challenges, when things got tough and how you recovered, and what changed, illustrated with real artifacts."},
-
-  "methods/building-your-web-portfolio": {"q": "What is a web portfolio?", "a": "Your own responsive website that presents your case studies to employers. Here you build it in Framer, with one CMS template so every case study looks and works the same."},
-  "methods/sprint-retrospective": {"q": "What is a Sprint Retrospective?", "a": "A structured look back at the sprint, what went well, what was hard and what you learned, which becomes the opening page of your case study."}
+  "methods/lean-ux-canvas": {
+    "q": "What is a Lean UX Canvas?",
+    "a": "A one-page framework the team fills in together before designing anything, to agree on the business problem, who it affects, what success would look like and the value users stand to gain."
+  },
+  "methods/long-term-goal": {
+    "q": "What is a Long Term Goal?",
+    "a": "An optimistic statement of the best-case future for your users, written at the start of a sprint so that every later decision can be checked against it."
+  },
+  "methods/research-goal": {
+    "q": "What is a Research Goal?",
+    "a": "One broad statement of what the team wants to learn, and why, set before any data is gathered so the whole investigation has a clear purpose."
+  },
+  "methods/research-questions": {
+    "q": "What is a Research Question?",
+    "a": "An evaluative query set at the beginning of a project sprint and revisited throughout, to keep the research focused and guide the investigation to completion."
+  },
+  "methods/user-survey": {
+    "q": "What is a User Survey?",
+    "a": "A structured set of questions sent to many people at once, to gather quick, comparable evidence about their behaviour, needs and opinions."
+  },
+  "methods/user-interview": {
+    "q": "What is a User Interview?",
+    "a": "A one-to-one conversation with a real or potential user early in a project, to understand their experiences, needs and pain points in their own words."
+  },
+  "methods/discovery-summary": {
+    "q": "What is a Discovery Summary?",
+    "a": "A short write-up at the end of discovery that pulls all the research together into the key insights, patterns and surprises that will shape the design."
+  },
+  "methods/problem-statement": {
+    "q": "What is a Validated Problem Statement?",
+    "a": "A concise description of the main problem users face, written from their point of view, free of any solution and backed by research evidence."
+  },
+  "methods/user-persona": {
+    "q": "What is a User Persona?",
+    "a": "A semi-fictional profile of a typical user, built from research, that keeps the team designing for real goals, needs and frustrations rather than its own assumptions."
+  },
+  "methods/competitive-analysis": {
+    "q": "What is a Competitive Analysis?",
+    "a": "A structured review of how direct and indirect competitors already solve the problem, to spot common patterns, gaps and opportunities for your own design."
+  },
+  "methods/how-might-we": {
+    "q": "What is a How Might We?",
+    "a": "A reframing technique that turns problems and fears into open questions starting 'How might we…', inviting ideas without prescribing a solution."
+  },
+  "methods/pick-a-target": {
+    "q": "What is Picking a Target?",
+    "a": "The moment the team commits to a focus: the Minimum Viable Product, the Most Valuable Person it serves, and the Minimum Desirable Product that would delight them."
+  },
+  "methods/user-journey-map": {
+    "q": "What is a User Journey Map?",
+    "a": "A visual timeline of the steps a user takes to reach a goal, showing what they do, think and feel at each stage, and where the pain points and opportunities lie."
+  },
+  "methods/converge-diverge": {
+    "q": "What is Converge / Diverge?",
+    "a": "The team's decision on whether to combine the best ideas into one prototype (converge) or develop competing ideas and test them against each other (diverge)."
+  },
+  "methods/vote": {
+    "q": "What is a Vote?",
+    "a": "A quick, structured way for the team to choose which sketches or features to take forward, so the decision is shared rather than argued."
+  },
+  "methods/task-flows": {
+    "q": "What is a Task Flow?",
+    "a": "A simple diagram of the exact steps a user takes to complete one task in the product, from the entry point to the finish, with nothing extra."
+  },
+  "methods/crazy-8s": {
+    "q": "What is Crazy 8's?",
+    "a": "A fast sketching exercise: fold a sheet into eight panels and sketch eight different ideas in eight minutes, to push past the obvious first idea."
+  },
+  "methods/crazy-8s-with-ai": {
+    "q": "What is Crazy 8's with AI?",
+    "a": "Crazy 8's with an AI sparring partner: the AI suggests variations on your brief one at a time and you sketch each one, widening the range of ideas."
+  },
+  "methods/solution-sketch": {
+    "q": "What is a Solution Sketch?",
+    "a": "A detailed sketch of one idea, clear enough to explain itself, presented to the team gallery-style so everyone can understand and critique it."
+  },
+  "methods/mood-board": {
+    "q": "What is a Mood Board?",
+    "a": "A collage of colours, type, imagery and textures that captures the look and feel you are aiming for, before any interface is designed."
+  },
+  "methods/style-guide": {
+    "q": "What is a Style Guide?",
+    "a": "A practical document that fixes a product's visual rules, its logo, typography, colours, icons and buttons, so every screen stays consistent."
+  },
+  "methods/paper-wireframes": {
+    "q": "What are Paper Wireframes?",
+    "a": "Quick black-and-white sketches of the main screens on paper, used to work out layout and flow cheaply before moving into Figma."
+  },
+  "methods/mid-fi": {
+    "q": "What is a Mid-Fi Wireframe?",
+    "a": "A greyscale digital wireframe with real layout, spacing, hierarchy and labels, and simple clickable links, but no colour, branding or final imagery: detailed enough to test the structure of a task flow."
+  },
+  "methods/hi-fi": {
+    "q": "What is a Hi-Fi Prototype?",
+    "a": "A polished, interactive prototype that looks and behaves close to the final product, with real content, branding and clickable flows."
+  },
+  "methods/usability-test": {
+    "q": "What is a Usability Test?",
+    "a": "A session in which real users try to complete tasks with your prototype while you observe, to find where the design works and where it fails."
+  },
+  "methods/create-your-script": {
+    "q": "What is a Test Script?",
+    "a": "The written guide a facilitator follows during a test session, from welcome to wrap-up, so every participant gets the same neutral experience."
+  },
+  "methods/facilitator-format": {
+    "q": "What is the Facilitator Format?",
+    "a": "The role and running order of the person leading a test: putting the participant at ease, setting the task and drawing out their thinking without leading them."
+  },
+  "methods/limited-intervention-technique": {
+    "q": "What is the Limited Intervention Technique?",
+    "a": "A way of running interviews and tests in which the facilitator stays neutral and steps in as little as possible, offering clues rather than answers."
+  },
+  "methods/notetaker-format": {
+    "q": "What is the Notetaker Format?",
+    "a": "The role of the second person in a test session, who silently records what the participant says and does, and the non-verbal signs of what they think and feel."
+  },
+  "methods/design-iteration": {
+    "q": "What is Design Iteration?",
+    "a": "Turning what you learned in testing into a few targeted design changes, shown as before-and-after screens and backed by evidence."
+  },
+  "methods/desk-research": {
+    "q": "What is Desk Research?",
+    "a": "Also called secondary research: gathering and critically reviewing existing studies, reports and data about a problem before starting your own research, to focus the scope and avoid starting from scratch."
+  },
+  "methods/site-visit": {
+    "q": "What is a Site Visit?",
+    "a": "A short field visit to the place where your users live or work, to observe the environment, tools, workarounds and emotions first hand, before designing anything."
+  },
+  "methods/affinity-mapping": {
+    "q": "What is Affinity Mapping?",
+    "a": "A team method for organising research findings, one per sticky note, into clusters of related notes, then naming those clusters as themes and prioritising them."
+  },
+  "methods/data-synthesis-with-ai": {
+    "q": "What is Data Synthesis with AI?",
+    "a": "Using AI as an assistant for the first pass of research analysis, transcribing, summarising and suggesting codes, while the designer verifies every result and writes the final themes."
+  },
+  "methods/business-model-canvas": {
+    "q": "What is a Business Model Canvas?",
+    "a": "A one-page template by Strategyzer that describes how a business creates, delivers and captures value in nine blocks, from customer segments to cost structure."
+  },
+  "methods/wicked-problem-mapping": {
+    "q": "What is Wicked Problem Mapping?",
+    "a": "A way of making a complex, systemic problem visible by turning chains of '5 Whys' into a web of causes and actors, to find one leverage point small enough to design for."
+  },
+  "methods/service-design-blueprint": {
+    "q": "What is a Service Blueprint?",
+    "a": "A diagram that maps one customer journey alongside the frontstage and backstage actions, support processes and evidence that deliver it, showing how people, props and processes connect."
+  },
+  "methods/dvf-analysis": {
+    "q": "What is DVF Analysis?",
+    "a": "A prioritisation scorecard, developed by IDEO, that rates each idea for desirability (users want it), viability (it works for the business) and feasibility (it can be built)."
+  },
+  "methods/sitemap": {
+    "q": "What is a Sitemap?",
+    "a": "A diagram of how a site's or app's pages are organised: a hierarchy of boxes joined by lines. It is the visible record of the information architecture, used for planning."
+  },
+  "methods/mood-board-with-ai": {
+    "q": "What is a Mood Board with AI?",
+    "a": "A mood board built through AI-assisted visual loops: generating images from your mood words, reacting to them, refining the prompts and repeating, before curating the final board."
+  },
+  "methods/brand-pack": {
+    "q": "What is a Brand Pack?",
+    "a": "A compact identity kit, name, logo, colour palette, typography, image style and tone of voice, that turns the mood of a project into decisions the whole team can use."
+  },
+  "methods/ab-test": {
+    "q": "What is an A/B Test?",
+    "a": "A comparison of two versions of a design that differ in one way, to see which performs better. On live products it measures behaviour at scale; in a sprint, users compare prototypes."
+  },
+  "methods/cataloguing-artifacts": {
+    "q": "What is Cataloguing Artifacts?",
+    "a": "Collecting, labelling and sorting every sketch, map, wireframe and test result from past projects into one archive, so you can choose the strongest evidence for your case studies."
+  },
+  "methods/process-narrative": {
+    "q": "What is a Process Narrative?",
+    "a": "The story of a project told as a case study: its purpose, the challenges, when things got tough and how you recovered, and what changed, illustrated with real artifacts."
+  },
+  "methods/building-your-web-portfolio": {
+    "q": "What is a web portfolio?",
+    "a": "Your own responsive website that presents your case studies to employers. Here you build it in Framer, with one CMS template so every case study looks and works the same."
+  },
+  "methods/sprint-retrospective": {
+    "q": "What is a Sprint Retrospective?",
+    "a": "A structured look back at the sprint, what went well, what was hard and what you learned, which becomes the opening page of your case study."
+  },
+  "methods/initial-problem-statement": {
+    "q": "What is an Initial Problem Statement?",
+    "a": "A one-sentence statement of what you believe the problem is before any research: an unproven assumption that focuses discovery and is later replaced by a validated problem statement."
+  },
+  "methods/solution-hypothesis": {
+    "q": "What is a Solution Hypothesis?",
+    "a": "An early, unproven statement of what you think will solve the problem, for whom, and how you'll know it worked. It needs evidence before it becomes a design decision."
+  }
 }
