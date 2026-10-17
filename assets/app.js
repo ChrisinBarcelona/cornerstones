@@ -5,11 +5,21 @@
 
   // Theme
   var toggle = document.getElementById('theme-toggle');
-  if (toggle) toggle.addEventListener('click', function () {
-    var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    root.dataset.theme = next;
-    store('cs-theme', next);
-  });
+  // The tooltip and label name what a click will do: "Switch to dark mode" or "Switch to light mode".
+  function labelToggle() {
+    var tip = 'Switch to ' + (root.dataset.theme === 'dark' ? 'light' : 'dark') + ' mode';
+    toggle.setAttribute('aria-label', tip);
+    toggle.dataset.tip = tip;
+  }
+  if (toggle) {
+    labelToggle();
+    toggle.addEventListener('click', function () {
+      var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      store('cs-theme', next);
+      labelToggle();
+    });
+  }
 
   // Index: category filter, search, list/grid
   var rows = document.getElementById('rows');

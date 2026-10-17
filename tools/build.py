@@ -450,9 +450,9 @@ def page(title, description, body, depth, active):
     <a class="brand logo" href="{prefix}index.html" aria-label="Cornerstones, UX/UI Design at {SCHOOL}, home">{LOGO}
     </a>
     <nav class="nav-pills" aria-label="Main">{links}</nav>
-    <a class="icon-btn res-btn" href="{prefix}resources.html" aria-label="Resources" title="Resources"{" aria-current=page" if active == "resources" else ""}>{ICON_RESOURCES}</a>
-    <button class="icon-btn" id="tracker-open" type="button" aria-label="Open your progress tracker" aria-expanded="false" aria-controls="tracker">{ICON_TRACKER}</button>
-    <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme">{ICON_SUN}</button>
+    <a class="icon-btn pill-btn res-btn" href="{prefix}resources.html" aria-label="Resources" title="Resources"{" aria-current=page" if active == "resources" else ""}>{ICON_RESOURCES}<span>Resources</span></a>
+    <button class="icon-btn pill-btn" id="tracker-open" type="button" aria-label="Open your progress checklist" title="Your progress checklist" aria-expanded="false" aria-controls="tracker">{ICON_TRACKER}<span>Checklist</span></button>
+    <button class="icon-btn theme-btn" id="theme-toggle" type="button" aria-label="Switch to dark mode" data-tip="Switch to dark mode">{ICON_SUN}</button>
     <button class="logout-btn" id="logout" type="button" aria-label="Log out" data-login="{prefix}login.html">{ICON_LOGOUT}<span>Log out</span></button>
   </div>
   <div class="course-bar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
