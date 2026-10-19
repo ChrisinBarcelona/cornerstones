@@ -766,7 +766,9 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 @media (hover: hover) { #logout.tip-btn:hover::after { transform: translate(0, 0); } }
 #logout.tip-btn:focus-visible::after { transform: translate(0, 0); }
 
-/* Every card shows its number in the section (UX Deck 01–27, Figma 01–14…) */
-.row-no { flex: none; display: inline-grid; place-items: center; min-width: 30px; height: 22px; padding: 0 7px; margin-right: 10px; border-radius: var(--r-pill);
-  background: color-mix(in srgb, var(--tc, var(--ink)) 16%, transparent); color: var(--tc-text, var(--ink)); font: 700 12px var(--font); letter-spacing: .02em; vertical-align: 3px; }
-.row.is-complete .row-no { background: var(--tc); color: var(--tc-ink); }
+/* Every card shows its number in the section, quietly, in the top-right corner */
+.row-no { position: absolute; top: 14px; right: 18px; z-index: 1; margin: 0; padding: 0; background: none; border-radius: 0;
+  font: 600 12px/1 var(--font); letter-spacing: .08em; color: var(--muted); pointer-events: none; }
+.row.is-complete .row-no { color: var(--tc-text); }
+.row-head { padding-right: 30px; }
+.row:not(.no-stats) .row-stats { padding-top: 18px; }
