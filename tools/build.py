@@ -870,7 +870,7 @@ def build_track(t, data):
         rows.append(f"""<li class="row{' no-stats' if not stats else ''}" data-key="{t['id']}/{l['slug']}" data-cat="{esc(l['category'])}"{parent_attr} data-search="{esc(search)}">
   {f'<span class="row-icon" title="{t["noun"]} {l["number"]}">{row_icon(t["id"], l["slug"])}</span>' if row_icon(t["id"], l["slug"]) else f'<span class="row-num">{l["number"]}</span>'}
   <div class="row-body">
-    <div class="row-head"><a class="row-title" href="{t['out']}/{l['slug']}.html">{esc(l['title'])}</a>{f'<span class="pill" data-parts-of="{len(l["children"])}">{len(l["children"])} parts</span>' if l["children"] else ''}<span class="row-done" aria-label="Completed">✓ Done</span></div>
+    <div class="row-head"><span class="row-no" aria-label="{t['noun']} {l['number']}">{l['number']:02d}</span><a class="row-title" href="{t['out']}/{l['slug']}.html">{esc(l['title'])}</a>{f'<span class="pill" data-parts-of="{len(l["children"])}">{len(l["children"])} parts</span>' if l["children"] else ''}<span class="row-done" aria-label="Completed">✓ Done</span></div>
     <p class="row-desc">{esc(l['description'])}</p>
     {subs}{card_btn}
   </div>
@@ -1423,7 +1423,7 @@ def build_decks(data):
             sections = "".join(
                 f'<section class="slide layout-{layout}" data-i="{i}" aria-roledescription="slide" aria-label="{i + 1} of {total}">'
                 f'<div class="slide-inner">{render_slide(src, p["slug"], layout, text)}</div>'
-                f'<footer class="slide-foot"><span>{esc(t["label"])} · {esc(meta.get("title", p["title"]))}</span><span>{i + 1} / {total}</span></footer></section>'
+                f'<footer class="slide-foot"><span>{esc(t["label"])} {p.get("number") or 0:02d} · {esc(meta.get("title", p["title"]))}</span><span>{i + 1} / {total}</span></footer></section>'
                 for i, (layout, text) in enumerate(slides))
             prefix = "../../"
             html_ = f"""<!doctype html>
@@ -1454,7 +1454,7 @@ def build_decks(data):
   <div class="deck-progress" role="progressbar" aria-label="Presentation progress" aria-valuemin="0" aria-valuemax="{total}" aria-valuenow="0"><span id="deck-bar"></span></div>
   <section class="deck-intro" aria-labelledby="deck-intro-title">
     <div class="deck-intro-card">
-      <div class="eyebrow">{esc(t['label'])} · Presentation</div>
+      <div class="eyebrow">{esc(t['label'])} · {t['noun']} {p.get('number') or 0:02d} · Presentation</div>
       <h1 id="deck-intro-title">{esc(meta.get("title", p["title"]))}</h1>
       <p class="lede">{esc(meta.get("promise", p.get("description", "")))}</p>
       <div class="deck-meta"><span>⏱ About {esc(meta.get("duration", ""))}</span><span>{total} slides</span><span>Ends with an exercise</span></div>
