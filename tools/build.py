@@ -201,7 +201,7 @@ ORDER = {
         "Building Interfaces": ["spacing-grids", "file-types", "atomic-design-methodology", "style-guides", "accessibility", "paper-wireframes"],
     },
     "methods": {
-        "Discovery": ["lean-ux-canvas", "long-term-goal", "initial-problem-statement", "solution-hypothesis", "research-goal", "research-questions", "desk-research", "site-visit", "user-survey", "user-interview", "discovery-summary"],
+        "Discovery": ["lean-ux-canvas", "long-term-goal", "initial-problem-statement", "solution-hypothesis", "research-goal", "research-questions", "desk-research", "site-visit", "user-survey", "user-interview", "emotional-journey-map", "discovery-summary"],
         "Define": ["affinity-mapping", "data-synthesis-with-ai", "problem-statement", "user-persona",
                    "competitive-analysis", "business-model-canvas", "wicked-problem-mapping", "how-might-we",
                    "pick-a-target", "user-journey-map", "service-design-blueprint", "dvf-analysis",

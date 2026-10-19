@@ -215,5 +215,9 @@
   "methods/token-economics": {
     "q": "What is a context window?",
     "a": "Everything a model can take into account in one conversation, measured in tokens: your messages, its replies and attached files. Too much context makes answers worse."
+  },
+  "methods/emotional-journey-map": {
+    "q": "What is an Emotional Journey Map?",
+    "a": "A map of one user's steps towards one goal, plotting how they feel at each moment, used to spot pain points and opportunities in the current experience."
   }
 }

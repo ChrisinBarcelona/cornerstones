@@ -192,6 +192,14 @@
       "children": [],
       "number": 0,
       "category": "AI Workflows"
+    },
+    {
+      "slug": "emotional-journey-map",
+      "title": "Emotional Journey Map",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Discovery"
     }
   ],
   "subpages": []
