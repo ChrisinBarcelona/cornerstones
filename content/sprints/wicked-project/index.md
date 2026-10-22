@@ -6,7 +6,7 @@
 
 ## The brief
 
-Choose a **wicked problem**: a systemic, messy problem with no single cause and no single solution, such as food waste, loneliness, over-tourism or plastic pollution. In one intense week, map the problem, find one place where design can make a real dent, and pitch a working concept.
+Choose a **wicked problem**: a systemic, messy problem with no single cause and no single solution, such as food waste, loneliness, over-tourism or plastic pollution. In one intense week, map the problem, find one place where design can make a real dent, and present a working concept.
 
 This is a **high-stakes, one-week sprint**. You will use Claude Code and Claude Design to build concept prototypes in hours, not weeks.
 
@@ -25,14 +25,14 @@ Choose your topic, then write your own: **How might we** make a meaningful dent 
 - Ground your understanding in credible desk research.
 - Define one focused, designable problem.
 - Generate many ideas, then converge on one.
-- Build, test and pitch a concept prototype.
+- Build, test and present a concept prototype.
 
 ## Scope
 
 **In scope**
 - One wicked problem, explored as a system.
 - One leverage point and one target group.
-- A concept-level prototype (it can be a product, a service or a campaign) that you can test and pitch.
+- A concept-level prototype (it can be a product, a service or a campaign) that you can test and present.
 
 **Out of scope**
 - Solving the whole problem.
@@ -46,7 +46,7 @@ Choose your topic, then write your own: **How might we** make a meaningful dent 
 3. **Problem statement** for your chosen leverage point.
 4. **Crazy 8's** sketches (with and without AI) and a **solution sketch**.
 5. **Concept prototype**, from paper to hi-fi, with quick usability tests.
-6. **Solution pitch** and concept design review.
+6. **A general-audience presentation** of your concept.
 
 ## How the sprint runs
 
@@ -56,15 +56,15 @@ Choose your topic, then write your own: **How might we** make a meaningful dent 
 | 6 | Tue | [Wicked Problem Mapping](../methods/wicked-problem-mapping.html) |
 | 6 | Wed | [Desk Research](../methods/desk-research.html), [Problem Statement](../methods/problem-statement.html), [Crazy 8's](../methods/crazy-8s.html), [Crazy 8's with AI](../methods/crazy-8s-with-ai.html), [Converge / Diverge](../methods/converge-diverge.html) |
 | 6 | Thu | [Paper Wireframes](../methods/paper-wireframes.html), [Mid-Fi](../methods/mid-fi.html), [Hi-Fi](../methods/hi-fi.html), [Usability Test](../methods/usability-test.html) |
-| 6 | Fri | [Solution Sketch](../methods/solution-sketch.html), [Vote](../methods/vote.html), solution pitch and concept design review |
+| 6 | Fri | [Solution Sketch](../methods/solution-sketch.html), [Vote](../methods/vote.html), general audience-style presentation |
 
 ## Constraints and tips
 
 - **Pick a topic with evidence.** If you can't find credible research on it, choose another.
 - **Zoom in fast.** By Wednesday you should have one leverage point and one target group.
 - **Let the AI build, you decide.** Use Claude Code and Claude Design to prototype quickly, but the thinking and the choices are yours.
-- **Pitch the dent, not the cure.** Be honest about what your concept can and can't change.
+- **Present the dent, not the cure.** Be honest about what your concept can and can't change.
 
 ## Success looks like
 
-A clear map of a messy system, a well-argued choice of where to intervene, and a tested concept that makes a believable dent, pitched with confidence in five minutes.
+A clear map of a messy system, a well-argued choice of where to intervene, and a tested concept that makes a believable dent, presented with confidence in five minutes.

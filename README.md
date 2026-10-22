@@ -17,7 +17,7 @@ A static website. `index.html` is the course home (the five sections, a suggeste
 - `content/<section>/<slug>/index.md` – page text and images
 - `content/<section>.json` (and `<section>.<part>.json` when a section has several sources) – the pages each import produced. `content/exercises.manual.json` lists hand-written pages such as Stage Play, which no import touches.
 - `tools/import_notion.py` – turns a Notion Markdown export into `content/` (UX categories, the UI/exercise split and the UX Methods chapter list are set at the top)
-- `content/timetable.json` – the 9-week timetable (`timetable.html`): each week's sprint, the activities for each day (from the bootcamp page on barcelonacodeschool.com), workshops and check points. Tags can link to a lesson or method.
+- `content/timetable.json` – the 9-week timetable (`timetable.html`): each week's sprint, the activities for each day (from the bootcamp page on barcelonacodeschool.com), workshops and presentations (a checkpoint at the end of a sprint's Part One, a general audience presentation at the end of a sprint). Tags can link to a lesson or method. Every activity has its own icon, used by no other activity, in the `timetable` group of `content/icons.json`; the build stops if one is missing or shared.
 - `content/summaries.json` – the one-line summary for each page, shown in the lists and at the top of the page. Edit freely.
 - `tools/build.py` – renders `content/` into the site. At the top: section intros and chapter descriptions, the home page's suggested route (`ROUTE`), page order and categories for UI Lectures, Figma and Exercises (`ORDER` – a new UI or Figma page must be added to one of them) and cross-links
 

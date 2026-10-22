@@ -479,7 +479,6 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
 .tt-card.kind-routine .tt-props { margin-top: 2px; padding-left: 28px; }
 .tt-card.kind-routine .tt-done { margin-top: 6px; }
 .tt-card.kind-sprint { border-color: var(--accent); }
-.tt-card.kind-checkpoint, .tt-card.kind-presentation { border-left: 3px solid var(--accent); }
 .timetable.hide-routine .kind-routine { display: none; }
 .tt-note { font-size: 13px; color: var(--muted); }
 

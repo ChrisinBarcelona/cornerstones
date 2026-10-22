@@ -328,7 +328,6 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .tt-card { border: 0; border-radius: var(--r-md); box-shadow: none; padding: 14px 14px 12px; }
 .tt-card.kind-routine { background: color-mix(in srgb, var(--raised) 55%, var(--paper)); }
 .tt-card.kind-sprint { box-shadow: inset 0 0 0 2px var(--c-timetable); }
-.tt-card.kind-checkpoint, .tt-card.kind-presentation { border-left: 0; box-shadow: inset 4px 0 0 var(--c-timetable); }
 .tt-card.kind-lecture { border-left: 0; box-shadow: inset 4px 0 0 var(--c-ux); }
 .tt-card.kind-workshop { box-shadow: inset 4px 0 0 var(--c-figma); }
 .tt-card.kind-daily { border-left: 0; box-shadow: inset 4px 0 0 var(--c-exercises); }
@@ -416,7 +415,7 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .tt-routine-line { margin: -8px 0 22px; font-size: 14px; color: var(--ink-soft); }
 .tt-grid { gap: 10px; }
 .tt-col { gap: 8px; }
-.tt-card, .tt-card.kind-sprint, .tt-card.kind-checkpoint, .tt-card.kind-presentation, .tt-card.kind-lecture,
+.tt-card, .tt-card.kind-sprint, .tt-card.kind-lecture,
 .tt-card.kind-workshop, .tt-card.kind-daily, .tt-card.kind-project {
   box-shadow: none; border: 0; border-left: 0; background: var(--raised); border-radius: var(--r-md); padding: 12px 14px;
 }
@@ -426,7 +425,7 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .tt-kind::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--k, var(--muted)); }
 .kind-lecture { --k: var(--c-ux); } .kind-ui { --k: var(--c-ui); } .kind-workshop { --k: var(--c-figma); }
 .kind-daily, .kind-project { --k: var(--c-exercises); } .kind-activities { --k: var(--c-methods); }
-.kind-sprint, .kind-checkpoint, .kind-presentation { --k: var(--c-timetable); } .kind-routine { --k: var(--hair-2); }
+.kind-sprint { --k: var(--c-timetable); } .kind-presentation { --k: var(--c-methods); } .kind-routine { --k: var(--hair-2); }
 .tt-time { font: 500 12.5px var(--font); color: var(--muted); }
 .tt-done { margin: 0 0 0 auto; cursor: pointer; display: inline-flex; }
 .tt-done input {
@@ -452,6 +451,12 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 /* One calm tag style on the timetable; linked ones underline on hover */
 .tt-tag[class*=" c"], [data-theme="dark"] .tt-tag[class*=" c"] { background: var(--paper); color: var(--ink); }
 .tt-tag.linked:hover { background: var(--paper-2); text-decoration: underline; text-underline-offset: 2px; }
+/* Activity tags start with the icon of the page they link to, in that section's colour */
+.tt-tag:has(svg) { display: inline-flex; align-items: center; gap: 5px; }
+.tt-tag svg { flex: none; color: var(--c-timetable-text); }
+.tt-tag.to-methods svg { color: var(--c-methods-text); }
+.tt-tag.to-sprints svg { color: var(--c-sprints-text); }
+.tt-tag.to-ux svg { color: var(--c-ux-text); }
 
 /* Timetable icons in place of the coloured dot */
 .tt-kind .tt-icon { font-size: 15px; line-height: 1; width: auto; }

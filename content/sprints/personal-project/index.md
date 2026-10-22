@@ -12,15 +12,15 @@ For two weeks, you are the lead designer. Choose a problem that matters to you, 
 
 ## The problem
 
-You define it. A good personal project starts from a real problem for real people that you can actually reach, not from an app idea. Your pitch on day one must convince us that the problem is real, that you can research it in time, and that design can help.
+You define it. A good personal project starts from a real problem for real people that you can actually reach, not from an app idea. By the end of day one, you must be able to show that the problem is real, that you can research it in time, and that design can help.
 
 ## Your challenge
 
-Write your own **How might we** question for your pitch, and refine it once your research is in.
+Write your own **How might we** question on day one, and refine it once your research is in.
 
 ## Sprint goals
 
-- Pitch a focused problem and choose the research methods that fit it.
+- Choose a focused problem and the research methods that fit it.
 - Collect primary data from real users in the field.
 - Synthesise your research and define the problem clearly.
 - Structure the product: information architecture and sitemap.
@@ -40,24 +40,23 @@ Write your own **How might we** question for your pitch, and refine it once your
 
 ## Deliverables
 
-1. **Pitch**: the problem, the users and your research plan.
-2. **Research plan** with your chosen methods, and why.
-3. **Field research and primary data** (interviews, observations, surveys).
-4. **Synthesis and problem definition** (affinity map, problem statement, persona).
-5. **Information architecture**: task flows and a sitemap.
-6. **Design system and brand**: style guide and components.
-7. **Hi-fi prototype**, usability-tested, with **before-and-after screens**.
-8. **A general-audience presentation**.
+1. **Research plan**: the problem, the users, your chosen methods and why.
+2. **Field research and primary data** (interviews, observations, surveys).
+3. **Synthesis and problem definition** (affinity map, problem statement, persona).
+4. **Information architecture**: task flows and a sitemap.
+5. **Design system and brand**: style guide and components.
+6. **Hi-fi prototype**, usability-tested, with **before-and-after screens**.
+7. **A general-audience presentation**.
 
 ## How the sprint runs
 
 | Week | Day | What you do |
 | --- | --- | --- |
-| 7 | Mon | Sprint brief, pitch, choose your research methods from the [method bank](../methods.html) |
+| 7 | Mon | Sprint brief, choose your research methods from the [method bank](../methods.html) |
 | 7 | Tue | Field research ([Site Visit](../methods/site-visit.html)), primary data collection ([User Interview](../methods/user-interview.html)) |
 | 7 | Wed | Synthesis ([Affinity Mapping](../methods/affinity-mapping.html), [Discovery Summary](../methods/discovery-summary.html)), definition ([Problem Statement](../methods/problem-statement.html)) |
 | 7 | Thu | [Task Flows](../methods/task-flows.html), [Sitemap](../methods/sitemap.html) |
-| 7 | Fri | Design system and branding ([Style Guide](../methods/style-guide.html)) |
+| 7 | Fri | Design system and branding ([Style Guide](../methods/style-guide.html)), checkpoint presentation |
 | 8 | Mon | [Paper Wireframes](../methods/paper-wireframes.html) |
 | 8 | Tue | [Hi-Fi](../methods/hi-fi.html) |
 | 8 | Wed | High-fidelity [Usability Test](../methods/usability-test.html) |

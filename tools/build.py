@@ -1101,25 +1101,36 @@ def build_home(data):
 TAG_COLOURS = 7
 
 
-def tag(label, link=None, data=None):
-    """A Notion-style coloured tag; linked tags point at a page on this site ("section/slug" or a section)."""
+def tag(label, link=None, data=None, icon=False):
+    """A Notion-style coloured tag; linked tags point at a page on this site ("section/slug" or a section).
+    With icon, an activity tag starts with its own icon (the timetable group in content/icons.json)."""
     colour = sum(map(ord, label.lower())) % TAG_COLOURS
+    track, _, slug = (link or "").partition("/")
+    svg = row_icon("timetable", label, 14) if icon else ""
+    to = f' to-{track or "none"}' if svg else ""
     if not link:
-        return f'<span class="tt-tag c{colour}">{esc(label)}</span>'
-    track, _, slug = link.partition("/")
+        return f'<span class="tt-tag c{colour}{to}">{svg}{esc(label)}</span>'
     if slug:
         if slug not in data[track]["by_slug"]:
             raise SystemExit(f"timetable.json links to missing page {link}")
         href = f'{TRACK[track]["out"]}/{slug}.html'
     else:
         href = TRACK[track]["index"]
-    return f'<a class="tt-tag c{colour} linked" href="{href}">{esc(label)}</a>'
+    return f'<a class="tt-tag c{colour}{to} linked" href="{href}">{svg}{esc(label)}</a>'
 
 
 # Icon for each kind of timetable card (a workshop's icon depends on the tool).
-TT_ICONS = {"routine-standup": "☀️", "sprint": "🚀", "project": "🧩", "checkpoint": "🏁", "lecture": "🏛️", "ui": "📐",
+TT_ICONS = {"routine-standup": "☀️", "sprint": "🚀", "project": "🧩", "lecture": "🏛️", "ui": "📐",
             "activities": "🤸", "workshop-figma": "🎨", "workshop-framer": "🖥️", "daily": "✏️", "routine-lunch": "🍔",
             "presentation": "🎤", "routine-checkout": "🌙"}
+
+
+# The two kinds of presentation (a day's "presentation" in timetable.json): a checkpoint ends a sprint's Part One,
+# a general audience presentation ends a sprint. Each is also one of that day's activities.
+PRESENTATIONS = {
+    "checkpoint": {"label": "Checkpoint presentation", "link": "methods/checkpoint-presentation", "time": "11:00"},
+    "general": {"label": "General audience-style presentation", "link": "methods/general-audience-presentation", "time": ""},
+}
 
 
 def tt_card(cid, kind, label, heading="", time="", tags="", sub="", more="", icon_key=""):
@@ -1144,6 +1155,18 @@ def page_tags(keys, data):
     return "".join(out)
 
 
+def check_timetable_activities(tt):
+    """Every activity has its own icon, no two activities share one, and presentations are a known kind."""
+    icons = TRACK_ICONS.get("timetable", {})
+    labels = {a["label"] for w in tt["weeks"] for d in w["days"] for a in d["activities"]}
+    missing = sorted(labels - set(icons))
+    names = [icons[l]["name"] for l in labels if l in icons]
+    shared = sorted({n for n in names if names.count(n) > 1})
+    kinds = sorted({d["presentation"] for w in tt["weeks"] for d in w["days"] if d.get("presentation")} - set(PRESENTATIONS))
+    if missing or shared or kinds:
+        raise SystemExit(f"timetable: activities without an icon: {missing}; icons used twice: {shared}; unknown presentations: {kinds}")
+
+
 def check_timetable_coverage(tt, data):
     """Every UX lecture, UI lecture, Figma lesson and exercise should be scheduled exactly once."""
     seen = []
@@ -1163,6 +1186,7 @@ def check_timetable_coverage(tt, data):
 
 def build_timetable(data):
     tt = json.loads((CONTENT / "timetable.json").read_text(encoding="utf-8"))
+    check_timetable_activities(tt)
     covered = check_timetable_coverage(tt, data)
     r = tt["routine"]
     days = tt["days"]
@@ -1181,15 +1205,18 @@ def build_timetable(data):
                 cards.append(tt_card(f"{cid}-sprint", "sprint", f'Sprint {w["code"][1:]}', heading=w["theme"], sub=name, more=about))
             if d_i == 1 and w.get("project_exercise"):
                 cards.append(tt_card(f"{cid}-project", "project", "Project this week", tags=page_tags([w["project_exercise"]], data)))
-            if day.get("checkpoint"):
-                cards.append(tt_card(f"{cid}-checkpoint", "checkpoint", "Check point", heading="Informal presentations", time="11:00"))
+            pres = PRESENTATIONS.get(day.get("presentation"))
+            pres_card = pres and tt_card(f'{cid}-{"checkpoint" if pres["time"] else "presentation"}', "presentation", "Presentation",
+                                         time=pres["time"], tags=tag(pres["label"], pres["link"], data, icon=True))
+            if pres_card and pres["time"]:
+                cards.append(pres_card)
             if day.get("lectures"):
                 cards.append(tt_card(f"{cid}-lecture", "lecture", "Lecture" + ("s" if len(day["lectures"]) > 1 else ""),
                                      tags=page_tags(day["lectures"], data)))
             if day.get("ui"):
                 cards.append(tt_card(f"{cid}-ui", "ui", "UI theory", tags=page_tags(day["ui"], data)))
             cards.append(tt_card(f"{cid}-activities", "activities", "Activities",
-                                 tags="".join(tag(a["label"], a.get("link"), data) for a in day["activities"])))
+                                 tags="".join(tag(a["label"], a.get("link"), data, icon=True) for a in day["activities"])))
             if day.get("workshop"):
                 ws = day["workshop"]
                 kind_label = "Figma workshop" if ws["title"].startswith("Figma") else "Framer workshop"
@@ -1210,8 +1237,8 @@ def build_timetable(data):
                 cards.append(tt_card(f"{cid}-daily", "daily", data[track]["by_slug"][slug]["category"] if track == "exercises" else "Daily UI", time=f"{level}/5" if level else "",
                                      tags=page_tags([day["daily"]], data)))
             cards.append(tt_card(f"{cid}-lunch", "routine", "Lunch", time=r["lunch"]["time"], icon_key="routine-lunch"))
-            if day.get("presentation"):
-                cards.append(tt_card(f"{cid}-presentation", "presentation", "Presentation", heading=day["presentation"]))
+            if pres_card and not pres["time"]:
+                cards.append(pres_card)
             cards.append(tt_card(f"{cid}-checkout", "routine", "Check out", time=r["checkout"]["time"], icon_key="routine-checkout"))
             cols.append(f'<div class="tt-col"><div class="tt-col-label">{days[d_i - 1]} <span>Day {d_i}</span></div>{"".join(cards)}</div>')
         weeks_html.append(f"""<section class="tt-week" id="week-{w_i}">

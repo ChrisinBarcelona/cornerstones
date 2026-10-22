@@ -1,5 +1,5 @@
 {
-  "_note": "The 9-week timetable. Week titles, summaries, daily activities, AI notes and tools come from barcelonacodeschool.com/ux-design-bootcamp-in-barcelona-code-school/. The daily routine, Figma/Framer workshops and Check Points come from the Notion 'UX Day by Day' board; each Figma workshop lists the Figma lessons it covers, and the Week 7 Variables workshop is a suggested placement. A tag's 'link' is a page on this site (section/slug). Cornerstone (UX) lectures, UI Theory lectures, Daily UI briefs, weekly projects and the extra method links on each day are a suggested schedule so every lecture and exercise is covered once across the nine weeks.",
+  "_note": "The 9-week timetable. Week titles, summaries, daily activities, AI notes and tools come from barcelonacodeschool.com/ux-design-bootcamp-in-barcelona-code-school/. The daily routine, Figma/Framer workshops and checkpoints come from the Notion 'UX Day by Day' board; each Figma workshop lists the Figma lessons it covers, and the Week 7 Variables workshop is a suggested placement. A tag's 'link' is a page on this site (section/slug). Cornerstone (UX) lectures, UI Theory lectures, Daily UI briefs, weekly projects and the extra method links on each day are a suggested schedule so every lecture and exercise is covered once across the nine weeks. A day's 'presentation' is either 'checkpoint' (at the end of a sprint's Part One) or 'general' (a general audience presentation at the end of a sprint).",
   "hours": "Monday to Friday, 10:00–17:00 CET",
   "days": [
     "Monday",
@@ -153,7 +153,7 @@
               "link": "methods/checkpoint-presentation"
             }
           ],
-          "checkpoint": true,
+          "presentation": "checkpoint",
           "workshop": {
             "title": "Figma Workshop (5)",
             "tag": "App Replica",
@@ -256,7 +256,7 @@
               "link": "methods/checkpoint-presentation"
             }
           ],
-          "checkpoint": true,
+          "presentation": "checkpoint",
           "lectures": [
             "ux/the-death-of-kodak",
             "ux/a-case-of-genius"
@@ -374,7 +374,7 @@
               "link": "methods/general-audience-presentation"
             }
           ],
-          "presentation": "General audience-style presentation"
+          "presentation": "general"
         }
       ],
       "project_exercise": "exercises/youtube-challenge"
@@ -482,7 +482,7 @@
               "link": "methods/general-audience-presentation"
             }
           ],
-          "presentation": "General audience-style presentation",
+          "presentation": "general",
           "lectures": [
             "ux/bad-user-experience"
           ]
@@ -659,21 +659,19 @@
         {
           "activities": [
             {
-              "label": "Solution pitch"
-            },
-            {
-              "label": "Concept design review"
-            },
-            {
               "label": "Solution sketch",
               "link": "methods/solution-sketch"
             },
             {
               "label": "Vote",
               "link": "methods/vote"
+            },
+            {
+              "label": "General audience-style presentation",
+              "link": "methods/general-audience-presentation"
             }
           ],
-          "presentation": "Solution pitch and concept design review"
+          "presentation": "general"
         }
       ]
     },
@@ -696,9 +694,6 @@
             {
               "label": "Sprint brief",
               "link": "sprints/personal-project"
-            },
-            {
-              "label": "Pitch"
             },
             {
               "label": "Choose your UX research methods",
@@ -747,8 +742,13 @@
             {
               "label": "Design system and branding",
               "link": "methods/style-guide"
+            },
+            {
+              "label": "Checkpoint presentation",
+              "link": "methods/checkpoint-presentation"
             }
           ],
+          "presentation": "checkpoint",
           "workshop": {
             "title": "Figma Workshop: Variables",
             "tag": "Variables",
@@ -818,7 +818,7 @@
               "link": "methods/general-audience-presentation"
             }
           ],
-          "presentation": "General audience-style presentation"
+          "presentation": "general"
         }
       ],
       "project_exercise": "exercises/balenciaga-replica-challenge"
@@ -891,10 +891,11 @@
         {
           "activities": [
             {
-              "label": "Final portfolio presentation"
+              "label": "General audience-style presentation",
+              "link": "methods/general-audience-presentation"
             }
           ],
-          "presentation": "Final Presentation",
+          "presentation": "general",
           "workshop": {
             "title": "Framer Workshop (5)",
             "link": "methods/building-your-web-portfolio"
