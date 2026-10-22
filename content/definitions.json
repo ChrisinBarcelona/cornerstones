@@ -219,5 +219,13 @@
   "methods/emotional-journey-map": {
     "q": "What is an Emotional Journey Map?",
     "a": "A map of one user's steps towards one goal, plotting how they feel at each moment, used to spot pain points and opportunities in the current experience."
+  },
+  "methods/checkpoint-presentation": {
+    "q": "What is a checkpoint presentation?",
+    "a": "A short, informal update in the middle of a sprint that brings the room up to speed on your key milestones and invites them to challenge your direction."
+  },
+  "methods/general-audience-presentation": {
+    "q": "What is a general audience presentation?",
+    "a": "An end-of-sprint presentation that tells the story of your research as a personal journey, in your own voice, for people who weren't in the room."
   }
 }

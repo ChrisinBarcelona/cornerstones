@@ -149,7 +149,8 @@
         {
           "activities": [
             {
-              "label": "Checkpoint presentation"
+              "label": "Checkpoint presentation",
+              "link": "methods/checkpoint-presentation"
             }
           ],
           "checkpoint": true,
@@ -251,7 +252,8 @@
         {
           "activities": [
             {
-              "label": "Checkpoint presentation"
+              "label": "Checkpoint presentation",
+              "link": "methods/checkpoint-presentation"
             }
           ],
           "checkpoint": true,
@@ -368,7 +370,8 @@
         {
           "activities": [
             {
-              "label": "General audience-style presentation"
+              "label": "General audience-style presentation",
+              "link": "methods/general-audience-presentation"
             }
           ],
           "presentation": "General audience-style presentation"
@@ -475,7 +478,8 @@
         {
           "activities": [
             {
-              "label": "General audience-style presentation"
+              "label": "General audience-style presentation",
+              "link": "methods/general-audience-presentation"
             }
           ],
           "presentation": "General audience-style presentation",
@@ -810,7 +814,8 @@
         {
           "activities": [
             {
-              "label": "General audience-style presentation"
+              "label": "General audience-style presentation",
+              "link": "methods/general-audience-presentation"
             }
           ],
           "presentation": "General audience-style presentation"

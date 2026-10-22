@@ -130,5 +130,7 @@
   "ux/design-ethics": "Deceptive patterns, addictive design and data misuse, and how to design honestly instead.",
   "ux/agile-and-lean": "Parkinson's Law, the Toyota Way and the Agile Manifesto: where working in sprints comes from.",
   "ui/design-styles": "Bauhaus, skeuomorphism, flat, brutalism, neumorphism and glassmorphism: their history and trade-offs.",
-  "methods/emotional-journey-map": "Follow one user towards one goal, step by step, and map how they feel at every moment to find the pain points."
+  "methods/emotional-journey-map": "Follow one user towards one goal, step by step, and map how they feel at every moment to find the pain points.",
+  "methods/checkpoint-presentation": "Five minutes on your key milestones: what you wanted to know, what you've learned and what's next, then take the challenge.",
+  "methods/general-audience-presentation": "Tell the story of your sprint in your own voice, thrills and spills included, in under five minutes."
 }

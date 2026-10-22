@@ -200,6 +200,22 @@
       "children": [],
       "number": 0,
       "category": "Discovery"
+    },
+    {
+      "slug": "checkpoint-presentation",
+      "title": "Checkpoint Presentation",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Retrospective"
+    },
+    {
+      "slug": "general-audience-presentation",
+      "title": "General Audience Presentation",
+      "parent": null,
+      "children": [],
+      "number": 0,
+      "category": "Retrospective"
     }
   ],
   "subpages": []

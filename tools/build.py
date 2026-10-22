@@ -211,7 +211,8 @@ ORDER = {
                      "brand-pack", "style-guide", "paper-wireframes", "mid-fi", "hi-fi"],
         "Validation": ["usability-test", "create-your-script", "facilitator-format",
                        "limited-intervention-technique", "notetaker-format", "ab-test", "design-iteration"],
-        "Retrospective": ["sprint-retrospective", "cataloguing-artifacts", "writing-your-case-study", "building-your-web-portfolio"],
+        "Retrospective": ["checkpoint-presentation", "general-audience-presentation", "sprint-retrospective", "cataloguing-artifacts",
+                          "writing-your-case-study", "building-your-web-portfolio"],
         "AI Workflows": ["ai-guidelines", "mcp", "skills-in-claude", "connectors-in-claude", "avoiding-ai-slop", "token-economics"],
     },
     "sprints": {
@@ -309,6 +310,8 @@ RELATED = [
     ("methods/user-journey-map", "methods/task-flows"),
     ("methods/usability-test", "methods/design-iteration"),
     ("methods/usability-test", "methods/facilitator-format"),
+    ("methods/checkpoint-presentation", "methods/general-audience-presentation"),
+    ("methods/general-audience-presentation", "methods/writing-your-case-study"),
 ]
 
 # Hand-written one-line summaries, keyed "section/slug" (edit content/summaries.json).
