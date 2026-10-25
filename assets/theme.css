@@ -463,6 +463,26 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .tt-kind:has(.tt-icon)::before { content: none; }
 .tt-kind { gap: 7px; color: var(--ink); }
 
+/* Diagrams drawn in the page (inline SVG): a white card; shapes and text take the section colours, so they follow the theme */
+.prose figure.diagram { margin: 1.6em 0; padding: 22px 20px 16px; background: var(--raised); border-radius: var(--r-lg); }
+.prose figure.diagram svg { display: block; width: 100%; max-width: 480px; height: auto; margin: 0 auto; }
+.prose figure.diagram figcaption { margin-top: 12px; font-size: 13px; line-height: 1.45; color: var(--muted); text-align: center; }
+.prose figure.diagram figcaption a { color: inherit; }
+@media (max-width: 600px) { .prose figure.diagram { padding: 16px 10px 12px; } }
+/* DVF Venn: desirable (pink), feasible (blue), viable (green), the sweet spot in the method bank's amber */
+.dvf-venn text { font-family: var(--font); text-anchor: middle; }
+.dvf-fill { stroke: none; }
+.dvf-fill.dvf-d { fill: color-mix(in srgb, var(--c-sprints) 15%, transparent); }
+.dvf-fill.dvf-f { fill: color-mix(in srgb, var(--c-ux) 15%, transparent); }
+.dvf-fill.dvf-v { fill: color-mix(in srgb, var(--c-exercises) 15%, transparent); }
+.dvf-line { fill: none; stroke-width: 2.5; }
+.dvf-line.dvf-d { stroke: var(--c-sprints); } .dvf-line.dvf-f { stroke: var(--c-ux); } .dvf-line.dvf-v { stroke: var(--c-exercises); }
+.dvf-sweet { fill: var(--c-methods); }
+.dvf-name { font-family: var(--display) !important; font-size: 28px; font-weight: 800; }
+.dvf-name.dvf-d { fill: var(--c-sprints-text); } .dvf-name.dvf-f { fill: var(--c-ux-text); } .dvf-name.dvf-v { fill: var(--c-exercises-text); }
+.dvf-q { font-size: 18px; font-weight: 500; fill: var(--ink-soft); }
+.dvf-centre { font-family: var(--display) !important; font-size: 18px; font-weight: 800; fill: var(--c-methods-ink); }
+
 /* Definition box above "On this page" (UX methods); the side column becomes two white cards */
 .rail-sticky { background: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
 .rail-box, .definition { background: var(--raised); border-radius: var(--r-lg); padding: 20px 18px 18px; }

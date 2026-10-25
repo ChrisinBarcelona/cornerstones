@@ -150,7 +150,7 @@
   },
   "methods/dvf-analysis": {
     "q": "What is DVF Analysis?",
-    "a": "A prioritisation scorecard, developed by IDEO, that rates each idea for desirability (users want it), viability (it works for the business) and feasibility (it can be built)."
+    "a": "IDEO's three lenses for any idea: desirable (people want it), feasible (we can build it) and viable (it makes business sense). The sweet spot is where all three meet; scoring each lens helps prioritise."
   },
   "methods/sitemap": {
     "q": "What is a Sitemap?",
