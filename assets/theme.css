@@ -483,6 +483,32 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .dvf-q { font-size: 18px; font-weight: 500; fill: var(--ink-soft); }
 .dvf-centre { font-family: var(--display) !important; font-size: 18px; font-weight: 800; fill: var(--c-methods-ink); }
 
+/* Lean UX Canvas: the eight boxes drawn as a grid; boxes 1–4 are done now, 5–8 are greyed out for later in the sprint */
+.prose figure.lux-canvas { padding: 20px; }
+.lux-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; margin-bottom: 14px; }
+.lux-title { font-family: var(--display); font-size: 20px; font-weight: 800; color: var(--ink); }
+.lux-key { display: flex; flex-wrap: wrap; gap: 6px; }
+.lux-key span { font-size: 12.5px; font-weight: 600; padding: 4px 10px; border-radius: var(--r-pill); }
+.lux-key .lux-key-now { background: var(--c-methods); color: var(--c-methods-ink); }
+.lux-key .lux-key-later { background: var(--paper-2); color: var(--muted); }
+.prose ol.lux-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-areas: "b1 b5 b2" "b3 b5 b4" "b6 b7 b8"; }
+.prose .lux-grid > li { margin: 0; padding: 12px 14px 14px; border-radius: var(--r-md); background: var(--paper); box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--c-methods) 55%, transparent); display: flex; flex-direction: column; gap: 4px; position: relative; min-height: 150px; }
+.lux-1 { grid-area: b1; } .lux-2 { grid-area: b2; } .lux-3 { grid-area: b3; } .lux-4 { grid-area: b4; }
+.lux-5 { grid-area: b5; } .lux-6 { grid-area: b6; } .lux-7 { grid-area: b7; } .lux-8 { grid-area: b8; }
+.lux-num { font-family: var(--display); font-size: 34px; font-weight: 800; line-height: 1; color: var(--c-methods-text); margin-bottom: 4px; }
+.lux-name { font-family: var(--display); font-size: 16px; font-weight: 800; line-height: 1.2; color: var(--ink); }
+.lux-q { font-size: 13.5px; line-height: 1.4; color: var(--ink-soft); }
+.lux-hint { font-size: 12.5px; line-height: 1.4; font-style: italic; color: var(--muted); }
+.prose .lux-grid > li.is-later { background: transparent; box-shadow: inset 0 0 0 1.5px var(--hair-2); }
+.is-later .lux-num, .is-later .lux-name, .is-later .lux-q { color: var(--muted); }
+.is-later .lux-hint { opacity: .8; }
+.lux-tag { position: absolute; top: 12px; right: 12px; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); background: var(--paper-2); padding: 3px 8px; border-radius: var(--r-pill); }
+@media (max-width: 640px) {
+  .prose figure.lux-canvas { padding: 16px 12px 12px; }
+  .prose ol.lux-grid { grid-template-columns: 1fr; grid-template-areas: "b1" "b2" "b3" "b4" "b5" "b6" "b7" "b8"; }
+  .prose .lux-grid > li { min-height: 0; }
+}
+
 /* Definition box above "On this page" (UX methods); the side column becomes two white cards */
 .rail-sticky { background: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
 .rail-box, .definition { background: var(--raised); border-radius: var(--r-lg); padding: 20px 18px 18px; }
