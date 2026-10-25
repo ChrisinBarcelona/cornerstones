@@ -482,8 +482,21 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .dvf-name.dvf-d { fill: var(--c-sprints-text); } .dvf-name.dvf-f { fill: var(--c-ux-text); } .dvf-name.dvf-v { fill: var(--c-exercises-text); }
 .dvf-q { font-size: 18px; font-weight: 500; fill: var(--ink-soft); }
 .dvf-centre { font-family: var(--display) !important; font-size: 18px; font-weight: 800; fill: var(--c-methods-ink); }
-.dvf-centre-label { font-size: 10.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; fill: var(--c-methods-ink); opacity: .7; }
-.dvf-gap { font-size: 13px; font-weight: 700; font-style: italic; fill: var(--ink-soft); opacity: .8; }
+
+/* MoSCoW: four cards in the section colours (green, amber, orange, red), each with a Lucide icon */
+.prose figure.moscow { padding: 20px; }
+.prose ul.moscow-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.prose .moscow-grid > li { --mc: var(--c-exercises); --mc-text: var(--c-exercises-text); margin: 0; padding: 18px 16px 20px; border-radius: var(--r-md); background: color-mix(in srgb, var(--mc) 16%, var(--raised)); display: flex; flex-direction: column; gap: 6px; }
+.prose .moscow-grid > li.moscow-s { --mc: var(--c-methods); --mc-text: var(--c-methods-text); }
+.prose .moscow-grid > li.moscow-c { --mc: var(--c-ui); --mc-text: var(--c-ui-text); }
+.prose .moscow-grid > li.moscow-w { --mc: var(--c-timetable); --mc-text: var(--c-timetable-text); }
+.prose figure.moscow svg.moscow-icon { width: 36px; height: 36px; max-width: none; margin: 0 0 8px; fill: none; stroke: var(--mc-text); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.moscow-name { font-family: var(--display); font-size: 21px; font-weight: 800; line-height: 1.1; color: var(--ink); }
+.moscow-name b { color: var(--mc-text); }
+.moscow-desc { font-size: 14px; line-height: 1.45; color: var(--ink-soft); }
+.moscow-mvp { margin-top: auto; padding-top: 10px; font-size: 12px; font-weight: 700; color: var(--mc-text); }
+@media (max-width: 900px) { .prose ul.moscow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .prose figure.moscow { padding: 16px 12px 12px; } .prose ul.moscow-grid { grid-template-columns: 1fr; } }
 
 /* Lean UX Canvas: the eight boxes drawn as a grid; boxes 1–4 are done now, 5–8 are greyed out for later in the sprint */
 .prose figure.lux-canvas { padding: 20px; }

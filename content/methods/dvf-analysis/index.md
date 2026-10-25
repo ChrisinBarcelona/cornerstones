@@ -13,7 +13,7 @@ You can look at any idea through **three lenses** to find the **innovation sweet
 <figure class="diagram dvf-venn">
 <svg viewBox="50 10 460 430" role="img" aria-labelledby="dvf-venn-title dvf-venn-desc">
 <title id="dvf-venn-title">The innovation sweet spot</title>
-<desc id="dvf-venn-desc">Three overlapping circles. Desirable: do people want it? Feasible: can we build it? Viable: should we build it? Where only two circles overlap, one question is still open: desirable and feasible, but will it pay? Desirable and viable, but can we build it? Feasible and viable, but does anyone want it? Where all three overlap is the sweet spot: great innovation is here.</desc>
+<desc id="dvf-venn-desc">Three overlapping circles. Desirable: do people want it? Feasible: can we build it? Viable: should we build it? Where all three overlap is the sweet spot: great innovation is here.</desc>
 <circle class="dvf-fill dvf-d" cx="280" cy="161" r="140"/>
 <circle class="dvf-fill dvf-v" cx="207.3" cy="287" r="140"/>
 <circle class="dvf-fill dvf-f" cx="352.7" cy="287" r="140"/>
@@ -29,18 +29,11 @@ You can look at any idea through **three lenses** to find the **innovation sweet
 <text class="dvf-name dvf-f" x="412" y="322">Feasible</text>
 <text class="dvf-q" x="412" y="347">Can we</text>
 <text class="dvf-q" x="412" y="369">build it?</text>
-<text class="dvf-gap" x="372" y="186">Will it</text>
-<text class="dvf-gap" x="372" y="202">pay?</text>
-<text class="dvf-gap" x="188" y="186">Can we</text>
-<text class="dvf-gap" x="188" y="202">build it?</text>
-<text class="dvf-gap" x="280" y="350">Does anyone</text>
-<text class="dvf-gap" x="280" y="366">want it?</text>
-<text class="dvf-centre-label" x="280" y="214">Sweet spot</text>
-<text class="dvf-centre" x="280" y="236">Great</text>
-<text class="dvf-centre" x="280" y="256">innovation</text>
-<text class="dvf-centre" x="280" y="276">is here</text>
+<text class="dvf-centre" x="280" y="226">Great</text>
+<text class="dvf-centre" x="280" y="248">innovation</text>
+<text class="dvf-centre" x="280" y="270">is here</text>
 </svg>
-<figcaption>The innovation sweet spot. Where only two circles overlap, the grey question is still open. Adapted from <a href="https://overnightstrategist.com">Overnight Strategist</a>, after IDEO’s DVF framework.</figcaption>
+<figcaption>The innovation sweet spot. Adapted from <a href="https://overnightstrategist.com">Overnight Strategist</a>, after IDEO’s DVF framework.</figcaption>
 </figure>
 
 1. **Desirable: do people want it?** The product needs to solve a real problem or meet a genuine need.

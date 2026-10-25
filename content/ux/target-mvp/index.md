@@ -37,6 +37,22 @@ Scope is where most projects fail. The MVP keeps you focused on the smallest thi
 3. Cross out every feature that person doesn't need on day one. What's left is your MVP.
 4. Add back the one feature that would make them love it. That's your Minimum Desirable Product.
 
+## Another way to prioritise: MoSCoW
+
+**MoSCoW** is an alternative way to prioritise your features. Instead of cutting the list down, sort every feature into one of four groups: **Must have**, **Should have**, **Could have** and **Won't have**.
+
+<figure class="diagram moscow">
+<ul class="moscow-grid">
+<li class="moscow-m"><svg class="moscow-icon" viewBox="0 0 24 24" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 10v4"/><path d="M12 18h.01"/></svg><strong class="moscow-name"><b>M</b>ust have</strong><span class="moscow-desc">Absolutely essential. These must be included, whatever it costs.</span><span class="moscow-mvp">Your MVP</span></li>
+<li class="moscow-s"><svg class="moscow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></svg><strong class="moscow-name"><b>S</b>hould have</strong><span class="moscow-desc">Important. Only leave these out after careful thought.</span><span class="moscow-mvp">Towards your Minimum Desirable Product</span></li>
+<li class="moscow-c"><svg class="moscow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg><strong class="moscow-name"><b>C</b>ould have</strong><span class="moscow-desc">Nice to have. Include them only if time and resources allow.</span><span class="moscow-mvp">If there’s room</span></li>
+<li class="moscow-w"><svg class="moscow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg><strong class="moscow-name"><b>W</b>on’t have</strong><span class="moscow-desc">Out of scope, not feasible or actively counterproductive. Park them for now.</span><span class="moscow-mvp">Not this time</span></li>
+</ul>
+<figcaption>The MoSCoW method of prioritisation. Adapted from BiteSize Learning.</figcaption>
+</figure>
+
+Your **Must haves** are your MVP. **Should haves** are the first candidates for your Minimum Desirable Product, and **Could haves** only go in if there's time. Writing the **Won't haves** down matters too: it shows the team what you've agreed to leave out.
+
 ## Media
 
 [https://www.youtube.com/watch?v=HjOdNmpGaTw](https://www.youtube.com/watch?v=HjOdNmpGaTw)
@@ -54,3 +70,4 @@ Scope is where most projects fail. The MVP keeps you focused on the smallest thi
 - The MVP is the leanest version of a product that answers your key questions.
 - The Most Valuable Person is the user group that brings the most value; design for them first.
 - The Minimum Desirable Product adds just enough delight that people want to use it.
+- MoSCoW (Must, Should, Could, Won't have) is an alternative way to prioritise your features.
