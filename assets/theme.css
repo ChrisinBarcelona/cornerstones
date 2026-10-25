@@ -482,6 +482,8 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .dvf-name.dvf-d { fill: var(--c-sprints-text); } .dvf-name.dvf-f { fill: var(--c-ux-text); } .dvf-name.dvf-v { fill: var(--c-exercises-text); }
 .dvf-q { font-size: 18px; font-weight: 500; fill: var(--ink-soft); }
 .dvf-centre { font-family: var(--display) !important; font-size: 18px; font-weight: 800; fill: var(--c-methods-ink); }
+.dvf-centre-label { font-size: 10.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; fill: var(--c-methods-ink); opacity: .7; }
+.dvf-gap { font-size: 13px; font-weight: 700; font-style: italic; fill: var(--ink-soft); opacity: .8; }
 
 /* Lean UX Canvas: the eight boxes drawn as a grid; boxes 1–4 are done now, 5–8 are greyed out for later in the sprint */
 .prose figure.lux-canvas { padding: 20px; }

@@ -73,7 +73,7 @@ Beachgoers, tourists and locals alike, have no safe, convenient way to leave the
 - **Talk to real people on the beach.** Your classmates are not your customers.
 - **Separate what people say from what they do.** Watch what they do with their bags before you ask.
 - **Be ready to kill the idea.** If the evidence says nobody would pay, that is a valid and valuable result. Show it.
-- **Speak business.** Back your design decisions with the Business Model Canvas and your DVF scores.
+- **Speak business.** Back your design decisions with the Business Model Canvas and your DVF analysis.
 
 ## Success looks like
 
