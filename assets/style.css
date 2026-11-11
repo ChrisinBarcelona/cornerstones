@@ -413,12 +413,23 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
 .timetable .wrap { max-width: 1480px; }
 .tt-hero { padding-bottom: 28px; }
 .tt-hero h1 { font-size: clamp(32px, 4.4vw, 46px); }
-.tt-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 10px 16px; }
-.tt-overall { font: 500 13px var(--mono); color: var(--ink-soft); }
-.tt-toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer; }
-.tt-toggle input { accent-color: var(--accent); width: 16px; height: 16px; }
-.tt-btn { font: 500 14px var(--font); padding: 8px 14px; border: 1px solid var(--hair-2); background: var(--paper); cursor: pointer; }
+/* The header controls, stacked in order of priority: the status line first, then the two actions,
+   then the things you set once. One rhythm throughout — 8px inside a tier, 14px between tiers — and
+   every control the same height, so nothing drifts out of line when a tier wraps. */
+.tt-tools { display: grid; justify-items: end; align-content: start; gap: 14px; }
+.tt-status { display: flex; align-items: center; gap: 9px; margin: 0; font-size: 17px; font-weight: 600; min-height: 22px; }
+.tt-status::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.tt-status:empty { display: none; }
+.tt-actions, .tt-settings { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; }
+.tt-settings { gap: 10px; font-size: 13.5px; }
+.tt-toggle { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
+.tt-toggle input { accent-color: var(--accent); width: 15px; height: 15px; margin: 0; }
+.tt-divider { width: 1px; height: 16px; background: currentColor; opacity: .35; }
+.tt-btn { display: inline-flex; align-items: center; height: 38px; padding: 0 18px; font: 500 14px var(--font);
+  border: 1px solid var(--hair-2); background: var(--paper); cursor: pointer; }
+.tt-btn[hidden] { display: none; }  /* an explicit display would otherwise beat the hidden attribute */
 .tt-btn:hover { border-color: var(--accent); }
+.tt-btn-ghost { background: transparent; border-color: currentColor; color: inherit; font-weight: 500; }
 .tt-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
 .tt-chip { display: flex; flex-direction: column; gap: 2px; padding: 8px 12px; border: 1px solid var(--hair-2); background: var(--raised); text-decoration: none; min-width: 120px; }
 .tt-chip b { font: 600 12px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent-ink); }
@@ -428,14 +439,15 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
 /* --accent-soft is mixed up at :root, before a section's own accent applies, so today's tint mixes here instead */
 .tt-chip.is-today { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
 
-/* The start-date field: sets Day 1, and every date on the board is counted on from it. */
-.tt-startbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 18px; }
-.tt-start { font-size: 14px; font-weight: 600; }
-.tt-start-input { font: 500 14px var(--mono); width: 11ch; padding: 7px 10px; border: 1px solid var(--hair-2);
-  border-radius: 6px; background: var(--paper); color: var(--ink); }
+/* The start-date field: sets Day 1, and every date on the board is counted on from it. Quiet by
+   design — it is set once a cohort, so it must not compete with the status line or Go to today. */
+.tt-start { font-weight: 600; }
+.tt-start-input { height: 30px; width: 11ch; padding: 0 9px; font: 500 13.5px var(--mono);
+  border: 1px solid var(--hair-2); border-radius: 6px; background: var(--paper); color: var(--ink); }
 .tt-start-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
-.tt-btn-small { padding: 6px 10px; font-size: 13px; border-radius: 6px; }
-.tt-start-msg { font-size: 13px; }
+.tt-btn-small { height: 30px; padding: 0 12px; font-size: 13px; }
+.tt-start-msg { margin: 0; font-size: 13px; text-align: right; }
+.tt-start-msg:empty { display: none; }
 .tt-start-msg.is-error { font-weight: 600; }
 
 /* Today: the day's date sits above its column, and the whole column is tinted. */
@@ -521,7 +533,11 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
   .tt-board { overflow: visible; }
   .tt-grid { grid-template-columns: 1fr; gap: 18px; }
   .tt-col-label { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink-soft); }
-  .tt-tools { justify-content: flex-start; }
+  .tt-tools { justify-items: start; width: 100%; }
+  .tt-actions, .tt-settings { justify-content: flex-start; }
+  .tt-actions { width: 100%; }
+  .tt-actions .tt-btn { flex: 1 1 0; justify-content: center; }
+  .tt-start-msg { text-align: left; }
   .tt-weekname span { display: block; font-size: 14px; }
   .tt-week > details > summary { flex-wrap: wrap; align-items: flex-start; }
   .tt-weekpill { white-space: nowrap; }

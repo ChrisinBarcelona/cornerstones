@@ -1306,20 +1306,23 @@ def build_timetable(data):
         <h1>Timetable</h1>
         <p class="lede">Nine weeks covering all {covered} lectures, lessons and exercises on this site, {esc(tt["hours"])}. Every week is a sprint: a brief on Monday, a presentation on Friday.</p>
       </div>
+      <!-- Three tiers, in the order they matter: where the cohort is, what you do about it, what you set once. -->
       <div class="tt-tools">
-        <span class="tt-overall" id="tt-overall"></span>
-        <span class="tt-when" id="tt-when"></span>
-        <label class="tt-toggle"><input type="checkbox" id="tt-routine"> Show daily routine</label>
-        <button type="button" class="tt-btn tt-btn-today" id="tt-today" hidden>Go to today</button>
-        <button type="button" class="tt-btn" id="tt-expand">Expand all</button>
-      </div>
-      <div class="tt-startbar">
-        <label class="tt-start" for="tt-start">Bootcamp start date</label>
-        <input class="tt-start-input" id="tt-start" type="text" inputmode="numeric" maxlength="10"
-               placeholder="DD/MM/YYYY" autocomplete="off" spellcheck="false"
-               aria-describedby="tt-start-msg">
-        <button type="button" class="tt-btn tt-btn-small" id="tt-start-reset" hidden>Reset</button>
-        <span class="tt-start-msg" id="tt-start-msg" role="status"></span>
+        <p class="tt-status" id="tt-when"></p>
+        <div class="tt-actions">
+          <button type="button" class="tt-btn" id="tt-today" hidden>Go to today</button>
+          <button type="button" class="tt-btn tt-btn-ghost" id="tt-expand">Expand all</button>
+        </div>
+        <div class="tt-settings">
+          <label class="tt-toggle"><input type="checkbox" id="tt-routine"> Daily routine</label>
+          <span class="tt-divider" aria-hidden="true"></span>
+          <label class="tt-start" for="tt-start">Start date</label>
+          <input class="tt-start-input" id="tt-start" type="text" inputmode="numeric" maxlength="10"
+                 placeholder="DD/MM/YYYY" autocomplete="off" spellcheck="false"
+                 aria-describedby="tt-start-msg">
+          <button type="button" class="tt-btn tt-btn-ghost tt-btn-small" id="tt-start-reset" hidden>Reset</button>
+        </div>
+        <p class="tt-start-msg" id="tt-start-msg" role="status"></p>
       </div>
     </header>
     <nav class="tt-chips" aria-label="Weeks">{"".join(chips)}</nav>

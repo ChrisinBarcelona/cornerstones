@@ -143,8 +143,8 @@
   function save() { try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) {} }
   var cards = board.querySelectorAll('.tt-card');
 
+  // Per-week counts only: overall course progress already sits in the header bar on every page.
   function progress() {
-    var total = 0, ticked = 0;
     board.querySelectorAll('.tt-week').forEach(function (week) {
       var cs = week.querySelectorAll('.tt-card');
       var n = 0;
@@ -152,9 +152,7 @@
       var el = week.querySelector('.tt-progress');
       el.textContent = n + ' / ' + cs.length + ' done';
       el.classList.toggle('full', n === cs.length);
-      total += cs.length; ticked += n;
     });
-    document.getElementById('tt-overall').textContent = ticked + ' of ' + total + ' complete';
   }
   cards.forEach(function (card) {
     var box = card.querySelector('.tt-done input');
@@ -319,7 +317,10 @@
     if (r.error) { msg.textContent = r.error; msg.classList.add('is-error'); return; }
     apply(r.iso, true);
     msg.textContent = 'Dates updated.';
+    clearTimeout(msgTimer);
+    msgTimer = setTimeout(function () { msg.textContent = ''; }, 4000);  // a confirmation, not a label
   }
+  var msgTimer;
   field.addEventListener('change', commit);
   field.addEventListener('blur', commit);
   field.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); commit(); } });
