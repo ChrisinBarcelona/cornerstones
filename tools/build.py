@@ -1304,7 +1304,11 @@ def build_timetable(data):
       <div>
         <div class="eyebrow">In-Person Bootcamp · UX Day by Day</div>
         <h1>Timetable</h1>
-        <p class="lede">Nine weeks covering all {covered} lectures, lessons and exercises on this site, {esc(tt["hours"])}. Every week is a sprint: a brief on Monday, a presentation on Friday.</p>
+        <!-- The three weekday names follow the start date, so an off-Monday cohort reads correctly. -->
+        <p class="lede">Nine weeks covering all {covered} lectures, lessons and exercises on this site,
+        <span data-day-name="1">{days[0]}</span> to <span data-day-name="5">{days[4]}</span>, {esc(tt["hours"])}.
+        Every week is a sprint: a brief on <span data-day-name="1">{days[0]}</span>,
+        a presentation on <span data-day-name="5">{days[4]}</span>.</p>
       </div>
       <!-- Three tiers, in the order they matter: where the cohort is, what you do about it, what you set once. -->
       <div class="tt-tools">

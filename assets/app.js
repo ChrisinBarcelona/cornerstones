@@ -265,6 +265,10 @@
     board.querySelectorAll('.tt-colhead').forEach(function (h) {
       h.childNodes[0].nodeValue = dayName(dayDate(startISO, 1, +h.dataset.day)) + ' ';
     });
+    // The weekdays named in the intro — "Monday to Friday", the brief, the presentation
+    board.querySelectorAll('[data-day-name]').forEach(function (el) {
+      el.textContent = dayName(dayDate(startISO, 1, +el.dataset.dayName));
+    });
     board.querySelectorAll('.tt-weekdates, .tt-chip time').forEach(function (el) {
       el.textContent = weekRange(startISO, +el.dataset.week);
     });
