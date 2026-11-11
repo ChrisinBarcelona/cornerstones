@@ -193,6 +193,46 @@
   }
   window.addEventListener('hashchange', openFromHash);
   openFromHash();
+
+  // Today: the day columns carry their real date (counted from startDate in timetable.json). Mark the one
+  // that is today, say where the course stands, and let the button jump straight to it.
+  var grid = board.querySelector('.tt-board');
+  if (!grid) return;
+  var todayBtn = document.getElementById('tt-today');
+  var when = document.getElementById('tt-when');
+
+  function localISO(d) {  // the browser's own day, not UTC: toISOString() can land on yesterday here
+    var m = d.getMonth() + 1, day = d.getDate();
+    return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (day < 10 ? '0' : '') + day;
+  }
+  function parseISO(s) { var p = s.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function days(from, to) { return Math.round((parseISO(to) - parseISO(from)) / 86400000); }
+
+  var today = localISO(new Date());
+  var col = grid.querySelector('.tt-col[data-date="' + today + '"]');
+  var start = grid.dataset.start, end = grid.dataset.end;
+
+  if (col) {
+    col.classList.add('is-today');
+    var section = col.closest('.tt-week');
+    section.classList.add('has-today');
+    section.querySelector('details').open = true;  // today's week starts open
+    var chip = board.querySelector('.tt-chip[href="#week-' + col.dataset.week + '"]');
+    if (chip) chip.classList.add('is-today');
+    when.textContent = 'Today · Week ' + col.dataset.week + ', Day ' + col.dataset.day;
+    todayBtn.hidden = false;
+    todayBtn.addEventListener('click', function () {
+      section.querySelector('details').open = true;
+      col.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'center' });
+    });
+  } else if (today < start) {
+    var n = days(today, start);
+    when.textContent = n === 1 ? 'Starts tomorrow' : 'Starts in ' + n + ' days';
+  } else if (today > end) {
+    when.textContent = 'Course finished';
+  } else {
+    when.textContent = 'Weekend · no classes today';  // between Friday and Monday
+  }
 })();
 
 // Course login (browser-side): sign in, show/hide password, log out

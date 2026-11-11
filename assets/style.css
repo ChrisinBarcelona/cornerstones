@@ -423,7 +423,26 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
 .tt-chip { display: flex; flex-direction: column; gap: 2px; padding: 8px 12px; border: 1px solid var(--hair-2); background: var(--raised); text-decoration: none; min-width: 120px; }
 .tt-chip b { font: 600 12px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent-ink); }
 .tt-chip span { font-size: 13.5px; color: var(--ink-soft); }
+.tt-chip time { font: 500 12px var(--mono); color: var(--muted); }
 .tt-chip:hover { border-color: var(--accent); }
+/* --accent-soft is mixed up at :root, before a section's own accent applies, so today's tint mixes here instead */
+.tt-chip.is-today { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
+
+/* Today: the day's date sits above its column, and the whole column is tinted. */
+.tt-when { font: 500 13px var(--mono); color: var(--accent-ink); }
+.tt-btn-today { border-color: var(--accent); color: var(--accent-ink); }
+.tt-weekdates { font: 500 12.5px var(--mono); color: var(--muted); }
+.tt-date { display: flex; align-items: baseline; gap: 8px; padding: 0 2px 2px; font: 500 12.5px var(--mono); color: var(--muted); }
+.tt-today-flag { display: none; font: 600 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent-ink); }
+.tt-col.is-today .tt-date { color: var(--accent-ink); }
+.tt-col.is-today .tt-today-flag { display: inline; }
+/* outline, not border: it tints and rings the column without taking part in the grid's sizing.
+   align-self stops the ring stretching to the tallest day of the week. */
+.tt-col.is-today { align-self: start; background: color-mix(in srgb, var(--accent) 9%, transparent);
+  border-radius: 10px; outline: 1px solid var(--accent); outline-offset: 5px; }
+.tt-col.is-today .tt-date { padding-top: 2px; }
+.tt-week.has-today > details > summary .tt-weekpill { background: var(--accent); color: #fff; }
+.tt-week.has-today > details > summary .tt-weekdates { color: var(--accent-ink); }
 
 .tt-board { padding-bottom: 24px; }
 .tt-head, .tt-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }

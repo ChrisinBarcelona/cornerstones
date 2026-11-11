@@ -16,6 +16,7 @@ import hashlib
 import html
 import json
 import re
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import parse_qs, quote, urlparse
 
@@ -1184,17 +1185,49 @@ def check_timetable_coverage(tt, data):
     return len(wanted) - len(missing)
 
 
+def course_start(tt):
+    """The cohort's first day, from "startDate" (DD/MM/YYYY) in timetable.json. It has to be a Monday."""
+    raw = (tt.get("startDate") or "").strip()
+    if not raw:
+        raise SystemExit('timetable: no "startDate". Add the cohort\'s first day as DD/MM/YYYY, e.g. "05/10/2026".')
+    try:
+        start = datetime.strptime(raw, "%d/%m/%Y").date()
+    except ValueError:
+        raise SystemExit(f'timetable: startDate "{raw}" is not a date in DD/MM/YYYY form, e.g. "05/10/2026".')
+    if start.weekday() != 0:
+        raise SystemExit(f'timetable: startDate {raw} is a {start.strftime("%A")}. The bootcamp starts on a Monday.')
+    return start
+
+
+def day_date(start, week, day):
+    """The real date of Week `week`, Day `day` (both 1-based): Monday to Friday, weekends skipped."""
+    return start + timedelta(days=(week - 1) * 7 + (day - 1))
+
+
+def short_date(d):
+    """5 Oct — the day and month, no leading zero."""
+    return f'{d.day} {d.strftime("%b")}'
+
+
+def week_range(start, week):
+    """5–9 Oct, or 28 Sep – 2 Oct when a week runs across two months."""
+    mon, fri = day_date(start, week, 1), day_date(start, week, 5)
+    return f"{mon.day}–{short_date(fri)}" if mon.month == fri.month else f"{short_date(mon)} – {short_date(fri)}"
+
+
 def build_timetable(data):
     tt = json.loads((CONTENT / "timetable.json").read_text(encoding="utf-8"))
     check_timetable_activities(tt)
     covered = check_timetable_coverage(tt, data)
+    start = course_start(tt)
     r = tt["routine"]
     days = tt["days"]
     head = "".join(f'<div class="tt-colhead">{d} <span>Day {i}</span></div>' for i, d in enumerate(days, 1))
     weeks_html, chips = [], []
     for w_i, w in enumerate(tt["weeks"], 1):
         name = f'{w["project"]}{" – " + w["part"] if w["part"] else ""}'
-        chips.append(f'<a class="tt-chip" href="#week-{w_i}"><b>Week {w_i}</b><span>{esc(w["theme"])}</span></a>')
+        chips.append(f'<a class="tt-chip" href="#week-{w_i}"><b>Week {w_i}</b><span>{esc(w["theme"])}</span>'
+                     f'<time>{week_range(start, w_i)}</time></a>')
         cols = []
         for d_i, day in enumerate(w["days"], 1):
             cid = f"w{w_i}d{d_i}"
@@ -1240,11 +1273,18 @@ def build_timetable(data):
             if pres_card and not pres["time"]:
                 cards.append(pres_card)
             cards.append(tt_card(f"{cid}-checkout", "routine", "Check out", time=r["checkout"]["time"], icon_key="routine-checkout"))
-            cols.append(f'<div class="tt-col"><div class="tt-col-label">{days[d_i - 1]} <span>Day {d_i}</span></div>{"".join(cards)}</div>')
+            # data-date is what the page's "today" check and the Go to today button match against.
+            d_date = day_date(start, w_i, d_i)
+            cols.append(f'<div class="tt-col" data-date="{d_date.isoformat()}" data-week="{w_i}" data-day="{d_i}">'
+                        f'<div class="tt-col-label">{days[d_i - 1]} <span>Day {d_i}</span></div>'
+                        f'<div class="tt-date"><time datetime="{d_date.isoformat()}">{short_date(d_date)}</time>'
+                        f'<span class="tt-today-flag">Today</span></div>'
+                        f'{"".join(cards)}</div>')
         weeks_html.append(f"""<section class="tt-week" id="week-{w_i}">
   <details{' open' if w_i == 1 else ''}>
     <summary><span class="tt-caret" aria-hidden="true"></span><span class="tt-weekpill">Week {w_i}</span>
       <span class="tt-weekname">{esc(w["theme"])} <span>· {esc(name)}</span></span>
+      <span class="tt-weekdates">{week_range(start, w_i)}</span>
       <span class="tt-progress" data-week="{w_i}"></span></summary>
     <div class="tt-grid">{"".join(cols)}</div>
   </details>
@@ -1260,17 +1300,19 @@ def build_timetable(data):
       </div>
       <div class="tt-tools">
         <span class="tt-overall" id="tt-overall"></span>
+        <span class="tt-when" id="tt-when"></span>
         <label class="tt-toggle"><input type="checkbox" id="tt-routine"> Show daily routine</label>
+        <button type="button" class="tt-btn tt-btn-today" id="tt-today" hidden>Go to today</button>
         <button type="button" class="tt-btn" id="tt-expand">Expand all</button>
       </div>
     </header>
     <nav class="tt-chips" aria-label="Weeks">{"".join(chips)}</nav>
     <p class="tt-routine-line"><b>Every day:</b> Stand up {r["standup"]["time"]} · Lunch {r["lunch"]["time"]} · Check out {r["checkout"]["time"]}</p>
-    <div class="tt-board">
+    <div class="tt-board" data-start="{start.isoformat()}" data-end="{day_date(start, len(tt["weeks"]), 5).isoformat()}">
       <div class="tt-head">{head}</div>
       {"".join(weeks_html)}
     </div>
-    <p class="tt-note">Ticks are saved in this browser only.</p>
+    <p class="tt-note">Starts {start.strftime("%A")} {start.day} {start.strftime("%B %Y")}, ends {day_date(start, len(tt["weeks"]), 5).strftime("%A")} {day_date(start, len(tt["weeks"]), 5).day} {day_date(start, len(tt["weeks"]), 5).strftime("%B %Y")}. Ticks are saved in this browser only.</p>
   </div>
 </main>"""
     (ROOT / "timetable.html").write_text(page(f"{SITE} · Timetable", "The nine-week UX/UI bootcamp, day by day.", body, 0, "timetable"),

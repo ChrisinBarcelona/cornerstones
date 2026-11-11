@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=6416352f48">
-<link rel="stylesheet" href="assets/theme.css?v=6416352f48">
+<link rel="stylesheet" href="assets/style.css?v=37003810e1">
+<link rel="stylesheet" href="assets/theme.css?v=37003810e1">
 </head>
 <body class="t-timetable">
 <header class="nav">
@@ -42,20 +42,23 @@
       </div>
       <div class="tt-tools">
         <span class="tt-overall" id="tt-overall"></span>
+        <span class="tt-when" id="tt-when"></span>
         <label class="tt-toggle"><input type="checkbox" id="tt-routine"> Show daily routine</label>
+        <button type="button" class="tt-btn tt-btn-today" id="tt-today" hidden>Go to today</button>
         <button type="button" class="tt-btn" id="tt-expand">Expand all</button>
       </div>
     </header>
-    <nav class="tt-chips" aria-label="Weeks"><a class="tt-chip" href="#week-1"><b>Week 1</b><span>Honest Greens</span></a><a class="tt-chip" href="#week-2"><b>Week 2</b><span>Business Week</span></a><a class="tt-chip" href="#week-3"><b>Week 3</b><span>Test the Design</span></a><a class="tt-chip" href="#week-4"><b>Week 4</b><span>App Design</span></a><a class="tt-chip" href="#week-5"><b>Week 5</b><span>Write-Up Week</span></a><a class="tt-chip" href="#week-6"><b>Week 6</b><span>The Wicked Project</span></a><a class="tt-chip" href="#week-7"><b>Week 7</b><span>Research and Definition</span></a><a class="tt-chip" href="#week-8"><b>Week 8</b><span>Build and Test</span></a><a class="tt-chip" href="#week-9"><b>Week 9</b><span>Portfolio Week</span></a></nav>
+    <nav class="tt-chips" aria-label="Weeks"><a class="tt-chip" href="#week-1"><b>Week 1</b><span>Honest Greens</span><time>5–9 Oct</time></a><a class="tt-chip" href="#week-2"><b>Week 2</b><span>Business Week</span><time>12–16 Oct</time></a><a class="tt-chip" href="#week-3"><b>Week 3</b><span>Test the Design</span><time>19–23 Oct</time></a><a class="tt-chip" href="#week-4"><b>Week 4</b><span>App Design</span><time>26–30 Oct</time></a><a class="tt-chip" href="#week-5"><b>Week 5</b><span>Write-Up Week</span><time>2–6 Nov</time></a><a class="tt-chip" href="#week-6"><b>Week 6</b><span>The Wicked Project</span><time>9–13 Nov</time></a><a class="tt-chip" href="#week-7"><b>Week 7</b><span>Research and Definition</span><time>16–20 Nov</time></a><a class="tt-chip" href="#week-8"><b>Week 8</b><span>Build and Test</span><time>23–27 Nov</time></a><a class="tt-chip" href="#week-9"><b>Week 9</b><span>Portfolio Week</span><time>30 Nov – 4 Dec</time></a></nav>
     <p class="tt-routine-line"><b>Every day:</b> Stand up 10:00 · Lunch 12:30–13:30 · Check out 16:00–16:30</p>
-    <div class="tt-board">
+    <div class="tt-board" data-start="2026-10-05" data-end="2026-12-04">
       <div class="tt-head"><div class="tt-colhead">Monday <span>Day 1</span></div><div class="tt-colhead">Tuesday <span>Day 2</span></div><div class="tt-colhead">Wednesday <span>Day 3</span></div><div class="tt-colhead">Thursday <span>Day 4</span></div><div class="tt-colhead">Friday <span>Day 5</span></div></div>
       <section class="tt-week" id="week-1">
   <details open>
     <summary><span class="tt-caret" aria-hidden="true"></span><span class="tt-weekpill">Week 1</span>
       <span class="tt-weekname">Honest Greens <span>· Service Design – Part One</span></span>
+      <span class="tt-weekdates">5–9 Oct</span>
       <span class="tt-progress" data-week="1"></span></summary>
-    <div class="tt-grid"><div class="tt-col"><div class="tt-col-label">Monday <span>Day 1</span></div><article class="tt-card kind-routine" data-id="w1d1-standup">
+    <div class="tt-grid"><div class="tt-col" data-date="2026-10-05" data-week="1" data-day="1"><div class="tt-col-label">Monday <span>Day 1</span></div><div class="tt-date"><time datetime="2026-10-05">5 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w1d1-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -111,7 +114,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Tuesday <span>Day 2</span></div><article class="tt-card kind-routine" data-id="w1d2-standup">
+</article></div><div class="tt-col" data-date="2026-10-06" data-week="1" data-day="2"><div class="tt-col-label">Tuesday <span>Day 2</span></div><div class="tt-date"><time datetime="2026-10-06">6 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w1d2-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -160,7 +163,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Wednesday <span>Day 3</span></div><article class="tt-card kind-routine" data-id="w1d3-standup">
+</article></div><div class="tt-col" data-date="2026-10-07" data-week="1" data-day="3"><div class="tt-col-label">Wednesday <span>Day 3</span></div><div class="tt-date"><time datetime="2026-10-07">7 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w1d3-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -209,7 +212,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Thursday <span>Day 4</span></div><article class="tt-card kind-routine" data-id="w1d4-standup">
+</article></div><div class="tt-col" data-date="2026-10-08" data-week="1" data-day="4"><div class="tt-col-label">Thursday <span>Day 4</span></div><div class="tt-date"><time datetime="2026-10-08">8 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w1d4-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -258,7 +261,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Friday <span>Day 5</span></div><article class="tt-card kind-routine" data-id="w1d5-standup">
+</article></div><div class="tt-col" data-date="2026-10-09" data-week="1" data-day="5"><div class="tt-col-label">Friday <span>Day 5</span></div><div class="tt-date"><time datetime="2026-10-09">9 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w1d5-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -320,8 +323,9 @@
   <details>
     <summary><span class="tt-caret" aria-hidden="true"></span><span class="tt-weekpill">Week 2</span>
       <span class="tt-weekname">Business Week <span>· Lean Startup Project – Part One</span></span>
+      <span class="tt-weekdates">12–16 Oct</span>
       <span class="tt-progress" data-week="2"></span></summary>
-    <div class="tt-grid"><div class="tt-col"><div class="tt-col-label">Monday <span>Day 1</span></div><article class="tt-card kind-routine" data-id="w2d1-standup">
+    <div class="tt-grid"><div class="tt-col" data-date="2026-10-12" data-week="2" data-day="1"><div class="tt-col-label">Monday <span>Day 1</span></div><div class="tt-date"><time datetime="2026-10-12">12 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w2d1-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -377,7 +381,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Tuesday <span>Day 2</span></div><article class="tt-card kind-routine" data-id="w2d2-standup">
+</article></div><div class="tt-col" data-date="2026-10-13" data-week="2" data-day="2"><div class="tt-col-label">Tuesday <span>Day 2</span></div><div class="tt-date"><time datetime="2026-10-13">13 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w2d2-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -419,7 +423,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Wednesday <span>Day 3</span></div><article class="tt-card kind-routine" data-id="w2d3-standup">
+</article></div><div class="tt-col" data-date="2026-10-14" data-week="2" data-day="3"><div class="tt-col-label">Wednesday <span>Day 3</span></div><div class="tt-date"><time datetime="2026-10-14">14 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w2d3-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -461,7 +465,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Thursday <span>Day 4</span></div><article class="tt-card kind-routine" data-id="w2d4-standup">
+</article></div><div class="tt-col" data-date="2026-10-15" data-week="2" data-day="4"><div class="tt-col-label">Thursday <span>Day 4</span></div><div class="tt-date"><time datetime="2026-10-15">15 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w2d4-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -496,7 +500,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Friday <span>Day 5</span></div><article class="tt-card kind-routine" data-id="w2d5-standup">
+</article></div><div class="tt-col" data-date="2026-10-16" data-week="2" data-day="5"><div class="tt-col-label">Friday <span>Day 5</span></div><div class="tt-date"><time datetime="2026-10-16">16 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w2d5-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -551,8 +555,9 @@
   <details>
     <summary><span class="tt-caret" aria-hidden="true"></span><span class="tt-weekpill">Week 3</span>
       <span class="tt-weekname">Test the Design <span>· Service Design – Part Two</span></span>
+      <span class="tt-weekdates">19–23 Oct</span>
       <span class="tt-progress" data-week="3"></span></summary>
-    <div class="tt-grid"><div class="tt-col"><div class="tt-col-label">Monday <span>Day 1</span></div><article class="tt-card kind-routine" data-id="w3d1-standup">
+    <div class="tt-grid"><div class="tt-col" data-date="2026-10-19" data-week="3" data-day="1"><div class="tt-col-label">Monday <span>Day 1</span></div><div class="tt-date"><time datetime="2026-10-19">19 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w3d1-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -615,7 +620,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Tuesday <span>Day 2</span></div><article class="tt-card kind-routine" data-id="w3d2-standup">
+</article></div><div class="tt-col" data-date="2026-10-20" data-week="3" data-day="2"><div class="tt-col-label">Tuesday <span>Day 2</span></div><div class="tt-date"><time datetime="2026-10-20">20 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w3d2-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -664,7 +669,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Wednesday <span>Day 3</span></div><article class="tt-card kind-routine" data-id="w3d3-standup">
+</article></div><div class="tt-col" data-date="2026-10-21" data-week="3" data-day="3"><div class="tt-col-label">Wednesday <span>Day 3</span></div><div class="tt-date"><time datetime="2026-10-21">21 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w3d3-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -720,7 +725,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Thursday <span>Day 4</span></div><article class="tt-card kind-routine" data-id="w3d4-standup">
+</article></div><div class="tt-col" data-date="2026-10-22" data-week="3" data-day="4"><div class="tt-col-label">Thursday <span>Day 4</span></div><div class="tt-date"><time datetime="2026-10-22">22 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w3d4-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -762,7 +767,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Friday <span>Day 5</span></div><article class="tt-card kind-routine" data-id="w3d5-standup">
+</article></div><div class="tt-col" data-date="2026-10-23" data-week="3" data-day="5"><div class="tt-col-label">Friday <span>Day 5</span></div><div class="tt-date"><time datetime="2026-10-23">23 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w3d5-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -803,8 +808,9 @@
   <details>
     <summary><span class="tt-caret" aria-hidden="true"></span><span class="tt-weekpill">Week 4</span>
       <span class="tt-weekname">App Design <span>· Lean Startup Project – Part Two</span></span>
+      <span class="tt-weekdates">26–30 Oct</span>
       <span class="tt-progress" data-week="4"></span></summary>
-    <div class="tt-grid"><div class="tt-col"><div class="tt-col-label">Monday <span>Day 1</span></div><article class="tt-card kind-routine" data-id="w4d1-standup">
+    <div class="tt-grid"><div class="tt-col" data-date="2026-10-26" data-week="4" data-day="1"><div class="tt-col-label">Monday <span>Day 1</span></div><div class="tt-date"><time datetime="2026-10-26">26 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w4d1-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -860,7 +866,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Tuesday <span>Day 2</span></div><article class="tt-card kind-routine" data-id="w4d2-standup">
+</article></div><div class="tt-col" data-date="2026-10-27" data-week="4" data-day="2"><div class="tt-col-label">Tuesday <span>Day 2</span></div><div class="tt-date"><time datetime="2026-10-27">27 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w4d2-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -902,7 +908,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Wednesday <span>Day 3</span></div><article class="tt-card kind-routine" data-id="w4d3-standup">
+</article></div><div class="tt-col" data-date="2026-10-28" data-week="4" data-day="3"><div class="tt-col-label">Wednesday <span>Day 3</span></div><div class="tt-date"><time datetime="2026-10-28">28 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w4d3-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -944,7 +950,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Thursday <span>Day 4</span></div><article class="tt-card kind-routine" data-id="w4d4-standup">
+</article></div><div class="tt-col" data-date="2026-10-29" data-week="4" data-day="4"><div class="tt-col-label">Thursday <span>Day 4</span></div><div class="tt-date"><time datetime="2026-10-29">29 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w4d4-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -986,7 +992,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Friday <span>Day 5</span></div><article class="tt-card kind-routine" data-id="w4d5-standup">
+</article></div><div class="tt-col" data-date="2026-10-30" data-week="4" data-day="5"><div class="tt-col-label">Friday <span>Day 5</span></div><div class="tt-date"><time datetime="2026-10-30">30 Oct</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w4d5-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1034,8 +1040,9 @@
   <details>
     <summary><span class="tt-caret" aria-hidden="true"></span><span class="tt-weekpill">Week 5</span>
       <span class="tt-weekname">Write-Up Week <span>· Case Study</span></span>
+      <span class="tt-weekdates">2–6 Nov</span>
       <span class="tt-progress" data-week="5"></span></summary>
-    <div class="tt-grid"><div class="tt-col"><div class="tt-col-label">Monday <span>Day 1</span></div><article class="tt-card kind-routine" data-id="w5d1-standup">
+    <div class="tt-grid"><div class="tt-col" data-date="2026-11-02" data-week="5" data-day="1"><div class="tt-col-label">Monday <span>Day 1</span></div><div class="tt-date"><time datetime="2026-11-02">2 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w5d1-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1077,7 +1084,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Tuesday <span>Day 2</span></div><article class="tt-card kind-routine" data-id="w5d2-standup">
+</article></div><div class="tt-col" data-date="2026-11-03" data-week="5" data-day="2"><div class="tt-col-label">Tuesday <span>Day 2</span></div><div class="tt-date"><time datetime="2026-11-03">3 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w5d2-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1105,7 +1112,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Wednesday <span>Day 3</span></div><article class="tt-card kind-routine" data-id="w5d3-standup">
+</article></div><div class="tt-col" data-date="2026-11-04" data-week="5" data-day="3"><div class="tt-col-label">Wednesday <span>Day 3</span></div><div class="tt-date"><time datetime="2026-11-04">4 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w5d3-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1133,7 +1140,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Thursday <span>Day 4</span></div><article class="tt-card kind-routine" data-id="w5d4-standup">
+</article></div><div class="tt-col" data-date="2026-11-05" data-week="5" data-day="4"><div class="tt-col-label">Thursday <span>Day 4</span></div><div class="tt-date"><time datetime="2026-11-05">5 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w5d4-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1161,7 +1168,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Friday <span>Day 5</span></div><article class="tt-card kind-routine" data-id="w5d5-standup">
+</article></div><div class="tt-col" data-date="2026-11-06" data-week="5" data-day="5"><div class="tt-col-label">Friday <span>Day 5</span></div><div class="tt-date"><time datetime="2026-11-06">6 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w5d5-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1195,8 +1202,9 @@
   <details>
     <summary><span class="tt-caret" aria-hidden="true"></span><span class="tt-weekpill">Week 6</span>
       <span class="tt-weekname">The Wicked Project <span>· High-Stakes Sprint</span></span>
+      <span class="tt-weekdates">9–13 Nov</span>
       <span class="tt-progress" data-week="6"></span></summary>
-    <div class="tt-grid"><div class="tt-col"><div class="tt-col-label">Monday <span>Day 1</span></div><article class="tt-card kind-routine" data-id="w6d1-standup">
+    <div class="tt-grid"><div class="tt-col" data-date="2026-11-09" data-week="6" data-day="1"><div class="tt-col-label">Monday <span>Day 1</span></div><div class="tt-date"><time datetime="2026-11-09">9 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w6d1-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1238,7 +1246,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Tuesday <span>Day 2</span></div><article class="tt-card kind-routine" data-id="w6d2-standup">
+</article></div><div class="tt-col" data-date="2026-11-10" data-week="6" data-day="2"><div class="tt-col-label">Tuesday <span>Day 2</span></div><div class="tt-date"><time datetime="2026-11-10">10 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w6d2-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1273,7 +1281,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Wednesday <span>Day 3</span></div><article class="tt-card kind-routine" data-id="w6d3-standup">
+</article></div><div class="tt-col" data-date="2026-11-11" data-week="6" data-day="3"><div class="tt-col-label">Wednesday <span>Day 3</span></div><div class="tt-date"><time datetime="2026-11-11">11 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w6d3-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1301,7 +1309,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Thursday <span>Day 4</span></div><article class="tt-card kind-routine" data-id="w6d4-standup">
+</article></div><div class="tt-col" data-date="2026-11-12" data-week="6" data-day="4"><div class="tt-col-label">Thursday <span>Day 4</span></div><div class="tt-date"><time datetime="2026-11-12">12 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w6d4-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1329,7 +1337,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Friday <span>Day 5</span></div><article class="tt-card kind-routine" data-id="w6d5-standup">
+</article></div><div class="tt-col" data-date="2026-11-13" data-week="6" data-day="5"><div class="tt-col-label">Friday <span>Day 5</span></div><div class="tt-date"><time datetime="2026-11-13">13 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w6d5-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1370,8 +1378,9 @@
   <details>
     <summary><span class="tt-caret" aria-hidden="true"></span><span class="tt-weekpill">Week 7</span>
       <span class="tt-weekname">Research and Definition <span>· Personal Project – Part One</span></span>
+      <span class="tt-weekdates">16–20 Nov</span>
       <span class="tt-progress" data-week="7"></span></summary>
-    <div class="tt-grid"><div class="tt-col"><div class="tt-col-label">Monday <span>Day 1</span></div><article class="tt-card kind-routine" data-id="w7d1-standup">
+    <div class="tt-grid"><div class="tt-col" data-date="2026-11-16" data-week="7" data-day="1"><div class="tt-col-label">Monday <span>Day 1</span></div><div class="tt-date"><time datetime="2026-11-16">16 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w7d1-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1406,7 +1415,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Tuesday <span>Day 2</span></div><article class="tt-card kind-routine" data-id="w7d2-standup">
+</article></div><div class="tt-col" data-date="2026-11-17" data-week="7" data-day="2"><div class="tt-col-label">Tuesday <span>Day 2</span></div><div class="tt-date"><time datetime="2026-11-17">17 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w7d2-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1434,7 +1443,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Wednesday <span>Day 3</span></div><article class="tt-card kind-routine" data-id="w7d3-standup">
+</article></div><div class="tt-col" data-date="2026-11-18" data-week="7" data-day="3"><div class="tt-col-label">Wednesday <span>Day 3</span></div><div class="tt-date"><time datetime="2026-11-18">18 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w7d3-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1462,7 +1471,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Thursday <span>Day 4</span></div><article class="tt-card kind-routine" data-id="w7d4-standup">
+</article></div><div class="tt-col" data-date="2026-11-19" data-week="7" data-day="4"><div class="tt-col-label">Thursday <span>Day 4</span></div><div class="tt-date"><time datetime="2026-11-19">19 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w7d4-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1490,7 +1499,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Friday <span>Day 5</span></div><article class="tt-card kind-routine" data-id="w7d5-standup">
+</article></div><div class="tt-col" data-date="2026-11-20" data-week="7" data-day="5"><div class="tt-col-label">Friday <span>Day 5</span></div><div class="tt-date"><time datetime="2026-11-20">20 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w7d5-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1545,8 +1554,9 @@
   <details>
     <summary><span class="tt-caret" aria-hidden="true"></span><span class="tt-weekpill">Week 8</span>
       <span class="tt-weekname">Build and Test <span>· Personal Project – Part Two</span></span>
+      <span class="tt-weekdates">23–27 Nov</span>
       <span class="tt-progress" data-week="8"></span></summary>
-    <div class="tt-grid"><div class="tt-col"><div class="tt-col-label">Monday <span>Day 1</span></div><article class="tt-card kind-routine" data-id="w8d1-standup">
+    <div class="tt-grid"><div class="tt-col" data-date="2026-11-23" data-week="8" data-day="1"><div class="tt-col-label">Monday <span>Day 1</span></div><div class="tt-date"><time datetime="2026-11-23">23 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w8d1-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1588,7 +1598,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Tuesday <span>Day 2</span></div><article class="tt-card kind-routine" data-id="w8d2-standup">
+</article></div><div class="tt-col" data-date="2026-11-24" data-week="8" data-day="2"><div class="tt-col-label">Tuesday <span>Day 2</span></div><div class="tt-date"><time datetime="2026-11-24">24 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w8d2-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1616,7 +1626,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Wednesday <span>Day 3</span></div><article class="tt-card kind-routine" data-id="w8d3-standup">
+</article></div><div class="tt-col" data-date="2026-11-25" data-week="8" data-day="3"><div class="tt-col-label">Wednesday <span>Day 3</span></div><div class="tt-date"><time datetime="2026-11-25">25 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w8d3-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1644,7 +1654,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Thursday <span>Day 4</span></div><article class="tt-card kind-routine" data-id="w8d4-standup">
+</article></div><div class="tt-col" data-date="2026-11-26" data-week="8" data-day="4"><div class="tt-col-label">Thursday <span>Day 4</span></div><div class="tt-date"><time datetime="2026-11-26">26 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w8d4-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1672,7 +1682,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Friday <span>Day 5</span></div><article class="tt-card kind-routine" data-id="w8d5-standup">
+</article></div><div class="tt-col" data-date="2026-11-27" data-week="8" data-day="5"><div class="tt-col-label">Friday <span>Day 5</span></div><div class="tt-date"><time datetime="2026-11-27">27 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w8d5-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1713,8 +1723,9 @@
   <details>
     <summary><span class="tt-caret" aria-hidden="true"></span><span class="tt-weekpill">Week 9</span>
       <span class="tt-weekname">Portfolio Week <span>· Ship It</span></span>
+      <span class="tt-weekdates">30 Nov – 4 Dec</span>
       <span class="tt-progress" data-week="9"></span></summary>
-    <div class="tt-grid"><div class="tt-col"><div class="tt-col-label">Monday <span>Day 1</span></div><article class="tt-card kind-routine" data-id="w9d1-standup">
+    <div class="tt-grid"><div class="tt-col" data-date="2026-11-30" data-week="9" data-day="1"><div class="tt-col-label">Monday <span>Day 1</span></div><div class="tt-date"><time datetime="2026-11-30">30 Nov</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w9d1-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1756,7 +1767,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Tuesday <span>Day 2</span></div><article class="tt-card kind-routine" data-id="w9d2-standup">
+</article></div><div class="tt-col" data-date="2026-12-01" data-week="9" data-day="2"><div class="tt-col-label">Tuesday <span>Day 2</span></div><div class="tt-date"><time datetime="2026-12-01">1 Dec</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w9d2-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1791,7 +1802,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Wednesday <span>Day 3</span></div><article class="tt-card kind-routine" data-id="w9d3-standup">
+</article></div><div class="tt-col" data-date="2026-12-02" data-week="9" data-day="3"><div class="tt-col-label">Wednesday <span>Day 3</span></div><div class="tt-date"><time datetime="2026-12-02">2 Dec</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w9d3-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1826,7 +1837,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Thursday <span>Day 4</span></div><article class="tt-card kind-routine" data-id="w9d4-standup">
+</article></div><div class="tt-col" data-date="2026-12-03" data-week="9" data-day="4"><div class="tt-col-label">Thursday <span>Day 4</span></div><div class="tt-date"><time datetime="2026-12-03">3 Dec</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w9d4-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1861,7 +1872,7 @@
   
   
   
-</article></div><div class="tt-col"><div class="tt-col-label">Friday <span>Day 5</span></div><article class="tt-card kind-routine" data-id="w9d5-standup">
+</article></div><div class="tt-col" data-date="2026-12-04" data-week="9" data-day="5"><div class="tt-col-label">Friday <span>Day 5</span></div><div class="tt-date"><time datetime="2026-12-04">4 Dec</time><span class="tt-today-flag">Today</span></div><article class="tt-card kind-routine" data-id="w9d5-standup">
   <div class="tt-top"><span class="tt-kind"><span class="tt-icon" aria-hidden="true">☀️</span>Stand up</span><span class="tt-time">10:00</span>
     <label class="tt-done" title="Mark as complete"><input type="checkbox" aria-label="Mark Stand up as complete"></label></div>
   
@@ -1907,7 +1918,7 @@
   </details>
 </section>
     </div>
-    <p class="tt-note">Ticks are saved in this browser only.</p>
+    <p class="tt-note">Starts Monday 5 October 2026, ends Friday 4 December 2026. Ticks are saved in this browser only.</p>
   </div>
 </main>
 <footer class="foot"><div class="foot-inner"><span>Cornerstones · UX & UI learning resource for Barcelona Code School</span><span class="mono">Author: <a href="https://chriskelly.it">Chris Kelly</a></span></div></footer>
@@ -1917,7 +1928,7 @@
   <div class="celebrate-actions"><a class="login-submit celebrate-link" href="certificate.html" hidden>See your certificate</a>
   <button type="button" class="login-submit" id="celebrate-close">Nice!</button></div></div>
 </div>
-<script src="assets/progress-data.js?v=6416352f48"></script>
-<script src="assets/app.js?v=6416352f48"></script>
+<script src="assets/progress-data.js?v=37003810e1"></script>
+<script src="assets/app.js?v=37003810e1"></script>
 </body>
 </html>
