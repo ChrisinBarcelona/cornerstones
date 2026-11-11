@@ -82,6 +82,15 @@ button { font: inherit; color: inherit; }
   transition: background .15s var(--ease);
 }
 .icon-btn:hover { background: var(--paper-2); }
+/* Icon plus a word, like the log out button. Narrow screens drop the word and keep the square icon. */
+.icon-btn.has-label {
+  display: inline-flex; align-items: center; gap: 8px; width: auto; padding: 0 12px;
+  font: 500 12px var(--mono); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink-soft); text-decoration: none;
+}
+.icon-btn.has-label:hover { color: var(--ink); }
+@media (max-width: 1100px) { .icon-btn.has-label { width: 36px; padding: 0; justify-content: center; }
+  .icon-btn.has-label span { display: none; } }
 
 /* Shared */
 .crumbs { padding: 20px 0 0; font-size: 14px; color: var(--ink-soft); }

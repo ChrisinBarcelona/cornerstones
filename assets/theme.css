@@ -835,6 +835,8 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 .tip-btn:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
 /* Log out shows its own label on wide screens, so its tooltip only appears once the text is hidden */
 @media (min-width: 1241px) { .logout-btn.tip-btn::after { display: none; } }
+/* While the word is visible beside the icon the tooltip would only repeat it. */
+@media (min-width: 1101px) { .icon-btn.has-label.tip-btn::after { display: none; } }
 /* The last tooltips sit against the right edge, so anchor them right instead of centring */
 #logout.tip-btn::after { left: auto; right: 0; transform: translate(0, -4px); }
 @media (hover: hover) { #logout.tip-btn:hover::after { transform: translate(0, 0); } }

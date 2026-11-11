@@ -433,11 +433,12 @@ def course_chips(prefix, active=""):
 def page(title, description, body, depth, active):
     prefix = "../" * depth
     # The other sections are reached from the progress chips underneath; these two have no chip.
+    # The label sits beside the icon on wide screens; below 1100px it drops away and the tooltip takes over.
     links = "".join(
-        f'<a class="icon-btn tip-btn t-{key}" href="{prefix}{href}" aria-label="{label}" data-tip="{label}"'
-        f'{" aria-current=page" if key == active else ""}>{icon}</a>'
-        for key, href, label, icon in (("methods", "methods.html", "UX Method Bank", ICON_METHODS),
-                                       ("timetable", "timetable.html", "Timetable", ICON_CALENDAR)))
+        f'<a class="icon-btn has-label tip-btn t-{key}" href="{prefix}{href}" aria-label="{text}" data-tip="{tip}"'
+        f'{" aria-current=page" if key == active else ""}>{icon}<span>{esc(text)}</span></a>'
+        for key, href, tip, text, icon in (("methods", "methods.html", "UX Method Bank", "Methods", ICON_METHODS),
+                                           ("timetable", "timetable.html", "Schedule", "Schedule", ICON_CALENDAR)))
     return f"""<!doctype html>
 <html lang="en" data-theme="light">
 <head>
@@ -461,7 +462,7 @@ def page(title, description, body, depth, active):
     <a class="brand logo" href="{prefix}index.html" aria-label="Cornerstones, UX/UI Design at {SCHOOL}, home">{LOGO}
     </a>
     <nav class="nav-pills" aria-label="Main">{links}</nav>
-    <a class="icon-btn tip-btn res-btn" href="{prefix}resources.html" aria-label="Resources" data-tip="Resources"{" aria-current=page" if active == "resources" else ""}>{ICON_RESOURCES}</a>
+    <a class="icon-btn has-label tip-btn res-btn" href="{prefix}resources.html" aria-label="Resources" data-tip="Resources"{" aria-current=page" if active == "resources" else ""}>{ICON_RESOURCES}<span>Resources</span></a>
     <button class="icon-btn tip-btn" id="tracker-open" type="button" aria-label="Open your progress checklist" data-tip="Your progress checklist" aria-expanded="false" aria-controls="tracker">{ICON_TRACKER}</button>
     <button class="icon-btn tip-btn" id="theme-toggle" type="button" aria-label="Switch to dark mode" data-tip="Switch to dark mode">{ICON_SUN}</button>
     <button class="logout-btn tip-btn" id="logout" type="button" aria-label="Log out" data-tip="Log out" data-login="{prefix}login.html">{ICON_LOGOUT}<span>Log out</span></button>
