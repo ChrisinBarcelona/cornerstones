@@ -194,45 +194,139 @@
   window.addEventListener('hashchange', openFromHash);
   openFromHash();
 
-  // Today: the day columns carry their real date (counted from startDate in timetable.json). Mark the one
-  // that is today, say where the course stands, and let the button jump straight to it.
+  // Dates: the board is re-dated from the bootcamp's start date — the one built into the page from
+  // timetable.json, or whatever the student types into the field, which is kept in this browser. Day 1 is
+  // the start date itself and every day after it is the next weekday, so five teaching days is always seven
+  // calendar days and each week keeps the same five weekdays. Today's column is then ringed, and the
+  // Go to today button jumps to it.
   var grid = board.querySelector('.tt-board');
   if (!grid) return;
   var todayBtn = document.getElementById('tt-today');
   var when = document.getElementById('tt-when');
+  var field = document.getElementById('tt-start');
+  var reset = document.getElementById('tt-start-reset');
+  var msg = document.getElementById('tt-start-msg');
+  var span = document.getElementById('tt-span');
+  var cols = board.querySelectorAll('.tt-col');
+  var START_KEY = 'cs-tt-start';
+  var BUILT_IN = grid.dataset.start;   // the cohort date from timetable.json
+  var MS = 86400000;
 
   function localISO(d) {  // the browser's own day, not UTC: toISOString() can land on yesterday here
     var m = d.getMonth() + 1, day = d.getDate();
     return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (day < 10 ? '0' : '') + day;
   }
   function parseISO(s) { var p = s.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
-  function days(from, to) { return Math.round((parseISO(to) - parseISO(from)) / 86400000); }
+  function toUK(iso) { var p = iso.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
 
-  var today = localISO(new Date());
-  var col = grid.querySelector('.tt-col[data-date="' + today + '"]');
-  var start = grid.dataset.start, end = grid.dataset.end;
-
-  if (col) {
-    col.classList.add('is-today');
-    var section = col.closest('.tt-week');
-    section.classList.add('has-today');
-    section.querySelector('details').open = true;  // today's week starts open
-    var chip = board.querySelector('.tt-chip[href="#week-' + col.dataset.week + '"]');
-    if (chip) chip.classList.add('is-today');
-    when.textContent = 'Today · Week ' + col.dataset.week + ', Day ' + col.dataset.day;
-    todayBtn.hidden = false;
-    todayBtn.addEventListener('click', function () {
-      section.querySelector('details').open = true;
-      col.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'center' });
-    });
-  } else if (today < start) {
-    var n = days(today, start);
-    when.textContent = n === 1 ? 'Starts tomorrow' : 'Starts in ' + n + ' days';
-  } else if (today > end) {
-    when.textContent = 'Course finished';
-  } else {
-    when.textContent = 'Weekend · no classes today';  // between Friday and Monday
+  // "19/05/2026" -> "2026-05-19", or null with a reason. Real dates only: 31/02 is not one.
+  function fromUK(text) {
+    var m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(text.trim());
+    if (!m) return { error: 'Write the date as DD/MM/YYYY.' };
+    var d = new Date(+m[3], +m[2] - 1, +m[1]);
+    if (d.getFullYear() !== +m[3] || d.getMonth() !== +m[2] - 1 || d.getDate() !== +m[1])
+      return { error: 'There is no such date.' };
+    if (d.getDay() === 0 || d.getDay() === 6)
+      return { error: 'That is a ' + dayName(d) + '. The bootcamp starts on a weekday.' };
+    return { iso: localISO(d) };
   }
+  function dayName(d) { return d.toLocaleDateString('en-GB', { weekday: 'long' }); }
+  function shortDate(d) { return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }); }
+  function longDate(d) {  // "Monday 19 October 2026" — assembled, since en-GB puts a comma after the weekday
+    return dayName(d) + ' ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  // Week and day are 1-based. Five teaching days span a weekend once the run passes Friday.
+  // Counted in calendar days, never in milliseconds: the clocks go back inside most cohorts, and a
+  // span of milliseconds across that night comes out an hour short and lands on the day before.
+  function dayDate(startISO, week, day) {
+    var p = startISO.split('-'), step = day - 1;
+    var w0 = new Date(+p[0], +p[1] - 1, +p[2]).getDay();   // getDay(): Sunday is 0, Monday 1
+    var weekend = (w0 - 1) + step > 4 ? 2 : 0;
+    return new Date(+p[0], +p[1] - 1, +p[2] + (week - 1) * 7 + step + weekend);
+  }
+  function weekRange(startISO, week) {
+    var a = dayDate(startISO, week, 1), b = dayDate(startISO, week, 5);
+    return a.getMonth() === b.getMonth() ? a.getDate() + '–' + shortDate(b) : shortDate(a) + ' – ' + shortDate(b);
+  }
+
+  function render(startISO) {
+    var weeks = board.querySelectorAll('.tt-week').length;
+    var endISO = localISO(dayDate(startISO, weeks, 5));
+    grid.dataset.start = startISO;
+    grid.dataset.end = endISO;
+
+    // Every column's date, and the weekday headings, which shift with the start date
+    cols.forEach(function (c) {
+      var d = dayDate(startISO, +c.dataset.week, +c.dataset.day);
+      c.dataset.date = localISO(d);
+      c.querySelector('.tt-date time').textContent = shortDate(d);
+      c.querySelector('.tt-date time').setAttribute('datetime', localISO(d));
+      c.querySelector('.tt-dayname').textContent = dayName(d);
+    });
+    board.querySelectorAll('.tt-colhead').forEach(function (h) {
+      h.childNodes[0].nodeValue = dayName(dayDate(startISO, 1, +h.dataset.day)) + ' ';
+    });
+    board.querySelectorAll('.tt-weekdates, .tt-chip time').forEach(function (el) {
+      el.textContent = weekRange(startISO, +el.dataset.week);
+    });
+    if (span) span.textContent = 'Starts ' + longDate(parseISO(startISO)) + ', ends ' + longDate(parseISO(endISO)) + '.';
+
+    // Today
+    board.querySelectorAll('.is-today').forEach(function (el) { el.classList.remove('is-today'); });
+    board.querySelectorAll('.has-today').forEach(function (el) { el.classList.remove('has-today'); });
+    var today = localISO(new Date());
+    var col = grid.querySelector('.tt-col[data-date="' + today + '"]');
+    todayBtn.hidden = !col;
+    if (col) {
+      col.classList.add('is-today');
+      var section = col.closest('.tt-week');
+      section.classList.add('has-today');
+      section.querySelector('details').open = true;   // today's week opens
+      var chip = board.querySelector('.tt-chip[href="#week-' + col.dataset.week + '"]');
+      if (chip) chip.classList.add('is-today');
+      when.textContent = 'Today · Week ' + col.dataset.week + ', Day ' + col.dataset.day;
+      todayBtn.onclick = function () {
+        section.querySelector('details').open = true;
+        col.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'center' });
+      };
+    } else if (today < startISO) {
+      var n = Math.round((parseISO(startISO) - parseISO(today)) / MS);
+      when.textContent = n === 1 ? 'Starts tomorrow' : 'Starts in ' + n + ' days';
+    } else if (today > endISO) {
+      when.textContent = 'Course finished';
+    } else {
+      when.textContent = 'Weekend · no classes today';
+    }
+    reset.hidden = startISO === BUILT_IN;
+  }
+
+  function apply(startISO, remember) {
+    if (remember) { try { localStorage.setItem(START_KEY, startISO); } catch (e) {} }
+    field.value = toUK(startISO);
+    msg.textContent = '';
+    msg.classList.remove('is-error');
+    render(startISO);
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem(START_KEY); } catch (e) {}
+  apply(saved && /^\d{4}-\d{2}-\d{2}$/.test(saved) ? saved : BUILT_IN, false);
+
+  function commit() {
+    if (field.value.trim() === toUK(grid.dataset.start)) { msg.textContent = ''; msg.classList.remove('is-error'); return; }
+    var r = fromUK(field.value);
+    if (r.error) { msg.textContent = r.error; msg.classList.add('is-error'); return; }
+    apply(r.iso, true);
+    msg.textContent = 'Dates updated.';
+  }
+  field.addEventListener('change', commit);
+  field.addEventListener('blur', commit);
+  field.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); commit(); } });
+  reset.addEventListener('click', function () {
+    try { localStorage.removeItem(START_KEY); } catch (e) {}
+    apply(BUILT_IN, false);
+  });
 })();
 
 // Course login (browser-side): sign in, show/hide password, log out

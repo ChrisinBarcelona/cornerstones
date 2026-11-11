@@ -311,8 +311,12 @@ h1 { font-weight: 800; letter-spacing: -.025em; }
 
 /* ---- Timetable ---- */
 .tt-hero { margin-top: 18px; padding: 40px 44px; border-radius: var(--r-xl); background: var(--tc); color: var(--tc-ink); }
-.tt-hero .lede, .tt-hero .eyebrow, .tt-hero .tt-overall, .tt-hero .tt-toggle, .tt-hero .tt-when { color: inherit; }
+.tt-hero .lede, .tt-hero .eyebrow, .tt-hero .tt-overall, .tt-hero .tt-toggle, .tt-hero .tt-when,
+.tt-hero .tt-start, .tt-hero .tt-start-msg { color: inherit; }
 .tt-when { font-family: var(--font); font-weight: 600; }
+.tt-hero .tt-start-msg { opacity: .9; }
+.tt-hero .tt-start-input { background: var(--paper); color: var(--ink); border-color: transparent; }
+.tt-hero .tt-start-input:focus-visible { outline-color: var(--paper); border-color: var(--paper); }
 .tt-hero .lede { opacity: .9; }
 .tt-overall { font-family: var(--font); font-weight: 600; }
 .tt-btn { border: 0; border-radius: var(--r-pill); background: var(--paper); color: var(--ink); font-weight: 600; padding: 10px 18px; }

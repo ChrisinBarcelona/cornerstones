@@ -428,6 +428,16 @@ h1 { font-weight: 700; letter-spacing: -.035em; line-height: 1.08; margin: 0; te
 /* --accent-soft is mixed up at :root, before a section's own accent applies, so today's tint mixes here instead */
 .tt-chip.is-today { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
 
+/* The start-date field: sets Day 1, and every date on the board is counted on from it. */
+.tt-startbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 18px; }
+.tt-start { font-size: 14px; font-weight: 600; }
+.tt-start-input { font: 500 14px var(--mono); width: 11ch; padding: 7px 10px; border: 1px solid var(--hair-2);
+  border-radius: 6px; background: var(--paper); color: var(--ink); }
+.tt-start-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+.tt-btn-small { padding: 6px 10px; font-size: 13px; border-radius: 6px; }
+.tt-start-msg { font-size: 13px; }
+.tt-start-msg.is-error { font-weight: 600; }
+
 /* Today: the day's date sits above its column, and the whole column is tinted. */
 .tt-when { font: 500 13px var(--mono); color: var(--accent-ink); }
 .tt-btn-today { border-color: var(--accent); color: var(--accent-ink); }

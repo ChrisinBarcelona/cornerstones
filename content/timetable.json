@@ -1,7 +1,7 @@
 {
   "_note": "The 9-week timetable. Week titles, summaries, daily activities, AI notes and tools come from barcelonacodeschool.com/ux-design-bootcamp-in-barcelona-code-school/. The daily routine, Figma/Framer workshops and checkpoints come from the Notion 'UX Day by Day' board; each Figma workshop lists the Figma lessons it covers, and the Week 7 Variables workshop is a suggested placement. A tag's 'link' is a page on this site (section/slug). Cornerstone (UX) lectures, UI Theory lectures, Daily UI briefs, weekly projects and the extra method links on each day are a suggested schedule so every lecture and exercise is covered once across the nine weeks. A day's 'presentation' is either 'checkpoint' (at the end of a sprint's Part One) or 'general' (a general audience presentation at the end of a sprint).",
-  "_startDate_note": "The cohort's first day, as DD/MM/YYYY. It must be a Monday: the build stops otherwise. Every day in the board gets its real date counted on from here, Monday to Friday, nine weeks straight through (weekends skipped, public holidays not). The timetable then highlights today and the 'Go to today' button jumps to it. Change this one line and rebuild for each new cohort.",
-  "startDate": "05/10/2026",
+  "_startDate_note": "The cohort's first day, as DD/MM/YYYY. Any weekday will do; the build stops on a weekend or a date it cannot read. Day 1 is this date, and every day after it is the next weekday, so a cohort starting on a Tuesday runs Tuesday to Monday each week (weekends skipped, public holidays not). The board shows each day's real date, highlights today and offers a 'Go to today' button. This is the default: anyone can set a different start date in the field on the timetable page, which is kept in their own browser. Change this line and rebuild to move the default for a new cohort.",
+  "startDate": "19/10/2026",
   "hours": "Monday to Friday, 10:00–17:00 CET",
   "days": [
     "Monday",
