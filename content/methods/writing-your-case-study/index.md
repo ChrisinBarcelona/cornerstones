@@ -29,6 +29,20 @@ Every phase of your case study has to earn its place:
 
 Aim for a case study someone can read in **five minutes**. Don't show every artifact you made: show the moments where you **learned** something. That includes the emotional side: the interview that changed your mind, the test that went badly, how you felt when the idea you loved didn't work. That's the part people remember.
 
+## The ideal structure of a UX case study
+
+The four beats below are how the story *moves*. This is what it *contains*. Most strong case studies hit these seven sections in this order:
+
+- **The hook and overview.** State the problem, your role, the timeline and the final impact or solution right at the beginning.
+- **The problem statement.** Define a real, specific user pain point. This is ultimately a problem-solving case study.
+- **Research and insights.** Summarise qualitative and quantitative findings; explain what you *learned* rather than listing every survey question.
+- **Decision stories: "why" over "what".** Explain critical trade-offs, pivots, rejected ideas and the rationale behind your design choices.
+- **Before and after / prototyping.** Show low-fidelity sketches moving into high-fidelity screens, highlighting the core functional evolution.
+- **Impact and results.** Use metrics, business outcomes or validated usability-testing feedback wherever possible.
+- **Reflections.** Discuss what went wrong, what you would do differently, and your key takeaways.
+
+Notice that the reader is told the outcome in the first paragraph. A case study is not a mystery novel: the hiring manager scanning it for five minutes should know the problem and the result before they decide how much of the middle to read.
+
 # 🎯 Goal / Learning Outcome
 
 - Structure a case study as a story with a clear beginning, middle and end.
@@ -87,7 +101,7 @@ None of these is perfect, and that's the point. Read each one critically and ask
 
 # 🏞️ Template
 
-- 🪝 Hook and three-sentence summary
+- 🪝 Hook and three-sentence summary: the problem, your role, the timeline and the impact
 - 🎯 1. Purpose: problem, users, role, and why you were curious
 - 🔍 2. Discovery: initial vs validated problem statement, the evidence that changed your mind
 - 🌧️ 3. When things got tough: what failed, how you recovered, before and after
