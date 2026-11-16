@@ -106,6 +106,7 @@
 - [Interface In Game](https://interfaceingame.com/) | Video game UI library
 
 ### AI prompt inspiration | wand-sparkles
+- [Refero Styles](https://styles.refero.design/) | 2,000+ real design systems as DESIGN.md files for AI tools
 - [21st.dev](https://21st.dev/) | React components and templates
 - [MotionSite](https://www.motionsite.ai/) | AI animation website prompts
 - [PromptSites](https://www.promptsites.co/) | Website prompts for AI builders
